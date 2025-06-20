@@ -22,7 +22,7 @@ def fetch_subscriptions():
             res = requests.get(url, timeout=10)
             content = res.text.strip()
             if not content.startswith("vmess") and not content.startswith("trojan"):
-                content = base64.b64decode(content + '===').decode('utf-8', errors='ignore')
+                continue  # Skip if not vmess or trojan
             lines = [line.strip() for line in content.splitlines() if line.strip()]
             all_nodes.extend(lines)
         except Exception as e:
@@ -32,13 +32,10 @@ def fetch_subscriptions():
 def filter_nodes(nodes):
     filtered = []
     for node in nodes:
-        if (node.startswith("vmess://") or node.startswith("trojan://")) and ('network' in node and 'ws' in node):
-            info = base64_decode_node_info(node)
-            if info:
-                # Check if port is 443 or 80
-                if re.search(r'("port":\s*(443|80))', info):
-                    filtered.append(node)
-    return filtered  # No limit on the number of nodes
+        info = base64_decode_node_info(node)
+        if info and ("443" in info or "80" in info) and "ws" in info:
+            filtered.append(node)
+    return filtered  # No limit
 
 def base64_decode_node_info(node):
     try:
@@ -54,7 +51,7 @@ def base64_decode_node_info(node):
 def save_v2ray_file(nodes, filename):
     with open(filename, 'w', encoding='utf-8') as f:
         for node in nodes:
-            f.write(node.strip() + '\n')
+            f.write(node.strip().replace("add", "$BUGCDN").replace("server", "$BUGCDN") + '\n')
 
 def convert_to_clash(nodes):
     proxies = []
@@ -66,7 +63,7 @@ def convert_to_clash(nodes):
                 proxies.append({
                     "name": config.get("ps", "Unnamed"),
                     "type": "vmess",
-                    "server": "$BUGCDN",  # Change server to $BUGCDN
+                    "server": "$BUGCDN",
                     "port": int(config["port"]),
                     "uuid": config["id"],
                     "alterId": int(config.get("aid", 0)),
@@ -80,20 +77,6 @@ def convert_to_clash(nodes):
                 })
             except Exception as e:
                 print(f"⚠️ vmess 解析失败: {e}")
-        elif node.startswith("trojan://"):
-            try:
-                trojan_config = node[9:]  # Skip 'trojan://'
-                proxies.append({
-                    "name": "Unnamed",
-                    "type": "trojan",
-                    "server": "$BUGCDN",  # Change server to $BUGCDN
-                    "port": int(re.search(r'(?<="port":)\s*\d+', trojan_config).group()),
-                    "password": trojan_config.split('"')[3],  # Extract password
-                    "tls": "tls" if "tls" in trojan_config else ""
-                })
-            except Exception as e:
-                print(f"⚠️ trojan 解析失败: {e}")
-
     clash_config = {
         "proxies": proxies,
         "proxy-groups": [{
