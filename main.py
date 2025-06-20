@@ -1,10 +1,9 @@
 import base64
 import requests
 import yaml
-import re
 import os
 
-# 节点订阅源（可以添加多个）
+# Daftar sumber langganan (bisa ditambahkan lebih banyak)
 SUB_LINKS = [
     "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
     "https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2",
@@ -13,49 +12,44 @@ SUB_LINKS = [
     "https://raw.githubusercontent.com/Leon406/SubCrawler/main/sub/share/v2ray.txt"
 ]
 
-# 优选地区关键词
-ALLOWED_KEYWORDS = ["香港", "HK", "Taiwan", "台湾", "Japan", "日本", "United States", "美国", "Germany", "France", "UK", "伦敦", "荷兰", "瑞士", "挪威", "芬兰", "丹麦", "波兰", "瑞典"]
-
-def fetch_subscriptions():
-    all_nodes = []
+def ambil_langganan():
+    semua_node = []
     for url in SUB_LINKS:
         try:
-            print(f"获取订阅：{url}")
+            print(f"Mengambil langganan: {url}")
             res = requests.get(url, timeout=10)
-            content = res.text.strip()
-            if not content.startswith("vmess") and not content.startswith("ss") and not content.startswith("trojan"):
-                content = base64.b64decode(content + '===').decode('utf-8', errors='ignore')
-            lines = [line.strip() for line in content.splitlines() if line.strip()]
-            all_nodes.extend(lines)
+            konten = res.text.strip()
+            if not konten.startswith("vmess") and not konten.startswith("trojan"):
+                konten = base64.b64decode(konten + '===').decode('utf-8', errors='ignore')
+            baris = [line.strip() for line in konten.splitlines() if line.strip()]
+            semua_node.extend(baris)
         except Exception as e:
-            print(f"❌ 订阅源错误: {url} -> {e}")
-    return all_nodes
+            print(f"❌ Kesalahan sumber langganan: {url} -> {e}")
+    return semua_node
 
-def filter_nodes(nodes):
-    filtered = []
+def saring_node(nodes):
+    terfilter = []
     for node in nodes:
-        info = base64_decode_node_info(node)
-        if info and any(k in info for k in ALLOWED_KEYWORDS):
-            filtered.append(node)
-    return filtered[:10]  # 只保留前 10 条
+        info = decode_node_info_base64(node)
+        if info:
+            if (node.startswith("vmess://") or node.startswith("trojan://")):
+                if (info.get("net") == "ws" and 
+                    (info.get("port") == "443" or info.get("port") == "80")):
+                    terfilter.append(node)
+    return terfilter  # Tidak ada batasan pada jumlah node
 
-def base64_decode_node_info(node):
+def decode_node_info_base64(node):
     try:
         if node.startswith("vmess://"):
             raw = node[8:]
             decoded = base64.b64decode(raw + '===').decode('utf-8', errors='ignore')
-            return decoded
-        elif node.startswith("ss://") or node.startswith("trojan://"):
-            return node
+            return eval(decoded.replace("false", "False").replace("true", "True"))
+        elif node.startswith("trojan://"):
+            return node  # Menangani trojan jika diperlukan
     except:
         return ""
 
-def save_v2ray_file(nodes, filename):
-    with open(filename, 'w', encoding='utf-8') as f:
-        for node in nodes:
-            f.write(node.strip() + '\n')
-
-def convert_to_clash(nodes):
+def konversi_ke_clash(nodes):
     proxies = []
     for node in nodes:
         if node.startswith("vmess://"):
@@ -63,9 +57,9 @@ def convert_to_clash(nodes):
                 vmess_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
                 config = eval(vmess_config.replace("false", "False").replace("true", "True"))
                 proxies.append({
-                    "name": config.get("ps", "Unnamed"),
+                    "name": config.get("ps", "Tanpa Nama"),
                     "type": "vmess",
-                    "server": config["add"],
+                    "server": "$BUGCDN",  # Ubah server menjadi $BUGCDN
                     "port": int(config["port"]),
                     "uuid": config["id"],
                     "alterId": int(config.get("aid", 0)),
@@ -78,28 +72,27 @@ def convert_to_clash(nodes):
                     } if config.get("net") == "ws" else {}
                 })
             except Exception as e:
-                print(f"⚠️ vmess 解析失败: {e}")
-    clash_config = {
+                print(f"⚠️ Gagal memparsing vmess: {e}")
+
+    config_clash = {
         "proxies": proxies,
         "proxy-groups": [{
-            "name": "🔰 节点选择",
+            "name": "🔰 Pilihan Node",
             "type": "select",
             "proxies": [p["name"] for p in proxies]
         }],
-        "rules": ["MATCH,🔰 节点选择"]
+        "rules": ["MATCH,🔰 Pilihan Node"]
     }
-    return yaml.dump(clash_config, allow_unicode=True)
+    return yaml.dump(config_clash, allow_unicode=True)
 
 def main():
-    nodes = fetch_subscriptions()
-    filtered_nodes = filter_nodes(nodes)
+    nodes = ambil_langganan()
+    filtered_nodes = saring_node(nodes)
     os.makedirs("docs", exist_ok=True)
-    save_v2ray_file(filtered_nodes, "docs/v2ray.txt")
-    save_v2ray_file([base64.b64encode(n.encode()).decode() for n in filtered_nodes], "docs/v2ray64.txt")
     with open("docs/clash.yaml", "w", encoding="utf-8") as f:
-        f.write(convert_to_clash(filtered_nodes))
+        f.write(konversi_ke_clash(filtered_nodes))
     with open("docs/index.html", "w", encoding="utf-8") as f:
-        f.write("<h2>订阅已生成</h2><ul><li><a href='clash.yaml'>clash.yaml</a></li><li><a href='v2ray.txt'>v2ray.txt</a></li><li><a href='v2ray64.txt'>v2ray64.txt</a></li></ul>")
+        f.write("<h2>Langganan Clash Telah Dihasilkan</h2><ul><li><a href='clash.yaml'>clash.yaml</a></li></ul>")
 
 if __name__ == "__main__":
     main()
