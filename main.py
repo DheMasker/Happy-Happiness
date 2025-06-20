@@ -6,6 +6,7 @@ import os
 # Daftar sumber langganan (bisa ditambahkan lebih banyak)
 SUB_LINKS = [
     "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
+    "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/networks/ws",    
     "https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2",
     "https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/v2ray",
     "https://raw.githubusercontent.com/iwxf/free-v2ray/master/v2",
@@ -76,25 +77,19 @@ def konversi_ke_clash(nodes):
             except Exception as e:
                 print(f"⚠️ Gagal memparsing vmess: {e}")
 
-    config_clash = {
+    proxies_clash = {
         "proxies": proxies,
-        "proxy-groups": [{
-            "name": "🔰 Pilihan Node",
-            "type": "select",
-            "proxies": [p["name"] for p in proxies]
-        }],
-        "rules": ["MATCH,🔰 Pilihan Node"]
     }
-    return yaml.dump(config_clash, allow_unicode=True)
+    return yaml.dump(proxies_clash, allow_unicode=True)
 
 def main():
     nodes = ambil_langganan()
     filtered_nodes = saring_node(nodes)
-    os.makedirs("docs", exist_ok=True)
-    with open("docs/clash.yaml", "w", encoding="utf-8") as f:
+    os.makedirs("proxies", exist_ok=True)
+    with open("proxies/trojanvmesswscdn443and80.yaml", "w", encoding="utf-8") as f:
         f.write(konversi_ke_clash(filtered_nodes))
-    with open("docs/index.html", "w", encoding="utf-8") as f:
-        f.write("<h2>Langganan Clash Telah Dihasilkan</h2><ul><li><a href='clash.yaml'>clash.yaml</a></li></ul>")
+    with open("proxies/index.html", "w", encoding="utf-8") as f:
+        f.write("<h2>Proxies Clash Telah Dihasilkan</h2><ul><li><a href='clash.yaml'>clash.yaml</a></li></ul>")
 
 if __name__ == "__main__":
     main()
