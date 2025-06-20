@@ -2,8 +2,9 @@ import base64
 import requests
 import yaml
 import os
+import json  # Menggunakan json untuk decode
 
-# Daftar sumber langganan (bisa ditambahkan lebih banyak)
+# Daftar sumber langganan
 SUB_LINKS = [
     "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/networks/ws",
     "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
@@ -12,6 +13,8 @@ SUB_LINKS = [
     "https://raw.githubusercontent.com/iwxf/free-v2ray/master/v2",
     "https://raw.githubusercontent.com/Leon406/SubCrawler/main/sub/share/v2ray.txt"
 ]
+
+BUGCDN = "104.22.5.240"
 
 def ambil_langganan():
     semua_node = []
@@ -32,25 +35,20 @@ def saring_node(nodes):
     terfilter = []
     for node in nodes:
         info = decode_node_info_base64(node)
-        if info:  # Pastikan info bukan None
-            if (node.startswith("vmess://") or node.startswith("trojan://")):
-                if (info.get("net") == "ws" and 
-                    (info.get("port") == 443 or info.get("port") == 80)):
-                    terfilter.append(node)
-    return terfilter  # Tidak ada batasan pada jumlah node
+        if info is not None:  # Pastikan info bukan None
+            if node.startswith(("vmess://", "trojan://")) and info.get("net") == "ws" and info.get("port") in {443, 80}:
+                terfilter.append(node)
+    return terfilter
 
 def decode_node_info_base64(node):
     try:
         if node.startswith("vmess://"):
             raw = node[8:]
             decoded = base64.b64decode(raw + '===').decode('utf-8', errors='ignore')
-            return eval(decoded.replace("false", "False").replace("true", "True"))
-        elif node.startswith("trojan://"):
-            # Kembalikan None jika tidak ada pengolahan untuk Trojan saat ini
-            return None
+            return json.loads(decoded.replace("false", "False").replace("true", "True"))
     except Exception as e:
         print(f"⚠️ Gagal mendecode node: {e}")
-        return None  # Kembalikan None jika terjadi kesalahan
+        return None
 
 def konversi_ke_clash(nodes):
     proxies = []
@@ -58,16 +56,16 @@ def konversi_ke_clash(nodes):
         if node.startswith("vmess://"):
             try:
                 vmess_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
-                config = eval(vmess_config.replace("false", "False").replace("true", "True"))
+                config = json.loads(vmess_config.replace("false", "False").replace("true", "True"))
                 proxies.append({
-                    "name": config.get("ps", "Tanpa Nama"),
+                    "alterId": int(config.get("aid", 0)),
                     "type": "vmess",
-                    "server": "$BUGCDN",  # Ubah server menjadi $BUGCDN
+                    "server": BUGCDN,  # Ubah server menjadi BUGCDN
                     "port": int(config["port"]),
                     "uuid": config["id"],
-                    "alterId": int(config.get("aid", 0)),
+                    "name": config.get("ps", "Tanpa Nama"),
                     "cipher": "auto",
-                    "tls": "tls" if config.get("tls") else "",
+                    "tls": "true" if config.get("tls") else "",
                     "network": config.get("net", "tcp"),
                     "ws-opts": {
                         "path": config.get("path", ""),
