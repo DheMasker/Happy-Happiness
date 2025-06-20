@@ -1,7 +1,10 @@
+
 import base64
 import requests
 import yaml
 import os
+
+BUGCDN = "104.22.5.240"
 
 # Daftar sumber langganan (bisa ditambahkan lebih banyak)
 SUB_LINKS = [
@@ -67,18 +70,19 @@ def konversi_ke_clash(nodes):
                 vmess_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
                 config = eval(vmess_config.replace("false", "False").replace("true", "True"))
                 proxies.append({
-                     "alterId": int(config.get("aid", 0)),
+                    "alterId": int(config.get("aid", 0)),
                     "type": "vmess",
-                    "server": "$BUGCDN",  # Ubah server menjadi $BUGCDN
+                    "server": BUGCDN,  # Ubah server menjadi BUGCDN
                     "port": int(config["port"]),
                     "uuid": config["id"],
                     "name": config.get("ps", "Tanpa Nama"),                    
                     "cipher": "auto",
-                    "tls": "tls" if config.get("tls") else "",
-                    "network": config.get("net", "tcp"),
+                    "tls": "true" if config.get("tls") else "",  # Memperbaiki akses ke 'tls'
+                    "network": config.get("net", "ws"),
                     "ws-opts": {
                         "path": config.get("path", ""),
-                        "headers": {"Host": config.get("host", "")}
+                        "headers": {"Host": config.get("host", "")},
+                    "udp": config.get("net", "true"),
                     } if config.get("net") == "ws" else {}
                 })
             except Exception as e:
@@ -89,13 +93,20 @@ def konversi_ke_clash(nodes):
                 password = trojan_config.split('#')[0]  # Ambil password
                 name = trojan_config.split('#')[1] if '#' in trojan_config else "Tanpa Nama"  # Ambil nama
                 proxies.append({
-                    "name": name,
                     "type": "trojan",
-                    "server": "$BUGCDN",  # Ubah server menjadi $BUGCDN
-                    "port": 443,  # Port untuk Trojan biasanya 443
+                    "server": BUGCDN,  # Ubah server menjadi BUGCDN
+                    "port": int(config["port"]),  # Mengakses port dari config yang benar
                     "password": password,
+                    "name": name,                    
                     "cipher": "auto",
-                    "tls": True  # Menggunakan TLS
+                    "skip-cert-verify": "true",  # Memperbaiki kunci
+                    "sni": config.get("sni", ""),
+                    "network": config.get("net", "ws"),
+                    "ws-opts": {
+                        "path": config.get("path", ""),
+                        "headers": {"Host": config.get("host", "")},
+                    "udp": config.get("net", "true"),
+                    } if config.get("net") == "ws" else {}
                 })
             except Exception as e:
                 print(f"⚠️ Gagal memparsing trojan: {e}")
