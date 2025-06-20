@@ -31,10 +31,10 @@ def saring_node(nodes):
     terfilter = []
     for node in nodes:
         info = decode_node_info_base64(node)
-        if info:
+        if info:  # Pastikan info bukan None
             if (node.startswith("vmess://") or node.startswith("trojan://")):
                 if (info.get("net") == "ws" and 
-                    (info.get("port") == "443" or info.get("port") == "80")):
+                    (info.get("port") == 443 or info.get("port") == 80)):
                     terfilter.append(node)
     return terfilter  # Tidak ada batasan pada jumlah node
 
@@ -45,9 +45,11 @@ def decode_node_info_base64(node):
             decoded = base64.b64decode(raw + '===').decode('utf-8', errors='ignore')
             return eval(decoded.replace("false", "False").replace("true", "True"))
         elif node.startswith("trojan://"):
-            return node  # Menangani trojan jika diperlukan
-    except:
-        return ""
+            # Kembalikan None jika tidak ada pengolahan untuk Trojan saat ini
+            return None
+    except Exception as e:
+        print(f"⚠️ Gagal mendecode node: {e}")
+        return None  # Kembalikan None jika terjadi kesalahan
 
 def konversi_ke_clash(nodes):
     proxies = []
