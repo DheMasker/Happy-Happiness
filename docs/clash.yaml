@@ -1,6 +1,39 @@
 proxies:
 - alterId: 0
   cipher: auto
+  name: "\uD83D\uDD12 VM-WS-NA \uD83C\uDFF4‍☠️ NA-172.67.149.202:80"
+  network: ws
+  port: 80
+  server: $BUGCDN
+  tls: ''
+  type: vmess
+  uuid: 393b1061-d615-459a-8616-3f9447bdff5a
+  ws-opts:
+    headers:
+      Host: sssssssw.222560.xyz
+    path: /iXfi0mMmPYp9UA6Y34zWUk6JUQ
+- alterId: 0
+  cipher: auto
+  name: "\uD83D\uDD12 VM-WS-TLS \uD83C\uDDE9\uD83C\uDDEA DE-57.129.25.22:443"
+  network: ws
+  port: 443
+  server: $BUGCDN
+  tls: tls
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: o.metuji.com
+    path: /linkvws
+- cipher: auto
+  name: Tanpa Nama
+  password: "\x1F\x1C{]^u\x1Dszƹw\x7FuNr \r-չY+.Wj)޷^v֥\bǜ"
+  port: 443
+  server: $BUGCDN
+  tls: true
+  type: trojan
+- alterId: 0
+  cipher: auto
   name: 2|🌀4-TH |  2.6MB/s|55%|Netflix|O...
   network: ws
   port: 443
@@ -12,10 +45,71 @@ proxies:
     headers:
       Host: th.lzj520hxw.dpdns.org
     path: /lzjjj
+- cipher: auto
+  name: Tanpa Nama
+  password: "\x7F<s\x1E\x7F]^\x7Fޜiszƹw]w\",.˩ڊwםe\x02'.,-wsg=[0~4\f+gg.Wj)޷n\x17\
+    OE@\x17OE|}-M0\x1F.:۞:j.\x19"
+  port: 443
+  server: $BUGCDN
+  tls: true
+  type: trojan
+- cipher: auto
+  name: Tanpa Nama
+  password: "ן׆\x1D]^s6s\\}zθ\"-꺗\a˩ڊwםe\x02'.l.9G:k0~4;\\\x1Fg.Wj)޷n\x17OE@\x17OE|덴-Mw0\x1F\
+    .:۞:j.\x19"
+  port: 443
+  server: $BUGCDN
+  tls: true
+  type: trojan
+- cipher: auto
+  name: bj
+  password: "_}g;u\\}]}μ4թe\x02'.l-vmo:]\v]\bO@D\x1F\0\x17~J⥪"
+  port: 443
+  server: $BUGCDN
+  tls: true
+  type: trojan
+- cipher: auto
+  name: bj
+  password: "_}g;u\\}]wx_84թe\x02'.l,0*G(]\v]\bO@D\x1F\0\x17J⥪"
+  port: 443
+  server: $BUGCDN
+  tls: true
+  type: trojan
+- cipher: auto
+  name: bj
+  password: "_}g;u\\}m7מ}v4թe\x02'.l,0*G(]\v]\bO}\x14\x0FDA\x0FnJ⥪"
+  port: 443
+  server: $BUGCDN
+  tls: true
+  type: trojan
+- cipher: auto
+  name: Tanpa Nama
+  password: "fy|׮x=|oN}ws]}m5]{e\x02'.l)7۝&׎\b)yg״m"
+  port: 443
+  server: $BUGCDN
+  tls: true
+  type: trojan
+- cipher: auto
+  name: Tanpa Nama
+  password: "WV\x04af~]׭߾jYhy˫{['1jx\x02j-㰂6^yu4"
+  port: 443
+  server: $BUGCDN
+  tls: true
+  type: trojan
 proxy-groups:
 - name: 🔰 Pilihan Node
   proxies:
+  - "\uD83D\uDD12 VM-WS-NA \uD83C\uDFF4‍☠️ NA-172.67.149.202:80"
+  - "\uD83D\uDD12 VM-WS-TLS \uD83C\uDDE9\uD83C\uDDEA DE-57.129.25.22:443"
+  - Tanpa Nama
   - 2|🌀4-TH |  2.6MB/s|55%|Netflix|O...
+  - Tanpa Nama
+  - Tanpa Nama
+  - bj
+  - bj
+  - bj
+  - Tanpa Nama
+  - Tanpa Nama
   type: select
 rules:
 - MATCH,🔰 Pilihan Node
