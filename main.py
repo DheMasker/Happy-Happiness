@@ -40,16 +40,24 @@ def decode_node_info_base64(node):
     try:
         if node.startswith("vmess://") or node.startswith("trojan://"):
             raw = node[8:]
+            # Cek apakah ada karakter non-ASCII
+            if not all(ord(char) < 128 for char in raw):
+                print(f"тЪая╕П Karakter non-ASCII ditemukan dalam node: {node}")
+                return None
+            
             # Tambahkan padding jika perlu
             padding = len(raw) % 4
             if padding:
                 raw += '=' * (4 - padding)
+
             # Dekode string
             decoded = base64.b64decode(raw, validate=True).decode('utf-8', errors='ignore')
             return json.loads(decoded.replace("false", "False").replace("true", "True"))
+    except json.JSONDecodeError as json_err:
+        print(f"тЪая╕П Gagal memparsing JSON dari node: {node} -> {json_err}")
     except Exception as e:
         print(f"тЪая╕П Gagal mendecode node: {e}")
-        return None
+    return None
 
 def konversi_ke_clash(nodes):
     proxies = []
