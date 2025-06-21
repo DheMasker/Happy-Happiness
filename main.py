@@ -1,10 +1,11 @@
 import base64
 import requests
+import yaml
 import os
 import json
 
 # Daftar sumber langganan
-SUB_LINKS = [ 
+SUB_LINKS = [
     "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
 ]
 
@@ -26,39 +27,41 @@ def ambil_langganan():
 def saring_node(nodes):
     terfilter = []
     for node in nodes:
-        if node.startswith("trojan://"):  # Memfilter hanya trojan
+        if node.startswith("trojan://"):
             terfilter.append(node)
     return terfilter
 
-def konversi_ke_trojan(nodes):
+def konversi_ke_clash(nodes):
     proxies = []
-
     for node in nodes:
         if node.startswith("trojan://"):
             try:
-                trojan_config = base64.b64decode(node[10:] + '===').decode('utf-8', errors='ignore')
+                trojan_config = base64.b64decode(node[9:] + '===').decode('utf-8', errors='ignore')
                 config = json.loads(trojan_config.replace("false", "False").replace("true", "True"))
                 proxies.append({
-                    "username": config.get("ps", "Tanpa Nama"),  # Memastikan 'username' di atas
-                    "hostname": config.get("host", ""),
-                    "port": int(config.get("port", 443)),  # Default ke port 443
-                    "params": {},  # Tambahkan parameter jika ada
-                    "hash": config.get("id", "")
+                    "name": config.get("ps", "Tanpa Nama"),
+                    "server": config["server"],
+                    "port": int(config["port"]),
+                    "type": "trojan",
+                    "uuid": config["id"],
+                    "cipher": "auto",
+                    "tls": True,
+                    "skip-cert-verify": True,
                 })
             except Exception as e:
                 print(f"⚠️ Gagal memparsing trojan: {e}")
 
-    return proxies
+    proxies_clash = {
+        "proxies": proxies
+    }
+    return yaml.dump(proxies_clash, allow_unicode=True, sort_keys=False)
 
 def main():
     nodes = ambil_langganan()
     filtered_nodes = saring_node(nodes)
-    proxies = konversi_ke_trojan(filtered_nodes)
-
     os.makedirs("proxies", exist_ok=True)
-    with open("proxies/trojan_proxies.txt", "w", encoding="utf-8") as f:
-        for proxy in proxies:
-            f.write(f"{proxy['username']}@{proxy['hostname']}:{proxy['port']}\n")
+    with open("proxies/trojan.yaml", "w", encoding="utf-8") as f:
+        f.write(konversi_ke_clash(filtered_nodes))
 
 if __name__ == "__main__":
     main()
