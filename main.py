@@ -8,8 +8,6 @@ SUB_LINKS = [
     "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
 ]
 
-BUGCDN = "104.22.5.240"
-
 def ambil_langganan():
     semua_node = []
     for url in SUB_LINKS:
@@ -39,10 +37,16 @@ def saring_node(nodes):
             if len(server_info) < 2:
                 continue
 
-            server, port_info = server_info[0], server_info[1]
-            port = int(port_info.split('?')[0])  # Ambil port sebelum tanda tanya
+            # Mengambil port sebelum tanda tanya atau karakter lainnya
+            server = server_info[0]
+            port_info = server_info[1].split('?')[0]  # Ambil bagian sebelum tanda tanya atau karakter lainnya
 
-            # Memeriksa apakah port adalah 80 atau 443 dan tipe adalah trojan dan network ws
+            try:
+                port = int(port_info)  # Convert port to integer
+            except ValueError:
+                continue  # Jika gagal, lewati node ini
+
+            # Memeriksa apakah port adalah 80 atau 443
             if port in [80, 443]:
                 terfilter.append(node)
     return terfilter
