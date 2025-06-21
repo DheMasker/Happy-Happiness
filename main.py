@@ -1,6 +1,3 @@
-#trojan meh
-
-
 import base64
 import requests
 import yaml
@@ -20,7 +17,6 @@ def ambil_langganan():
             print(f"Mengambil langganan: {url}")
             res = requests.get(url, timeout=60)
             konten = res.text.strip()
-            # Mendecode Base64 jika diperlukan
             if konten:
                 konten = base64.b64decode(konten + '===').decode('utf-8', errors='ignore')
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
@@ -33,7 +29,22 @@ def saring_node(nodes):
     terfilter = []
     for node in nodes:
         if node.startswith("trojan://"):
-            terfilter.append(node)
+            # Mendapatkan informasi server dan port
+            raw = node[10:]  # Menghapus 'trojan://'
+            parts = raw.split('@')
+            if len(parts) != 2:
+                continue
+
+            server_info = parts[1].split(':')
+            if len(server_info) < 2:
+                continue
+
+            server, port_info = server_info[0], server_info[1]
+            port = int(port_info.split('?')[0])  # Ambil port sebelum tanda tanya
+
+            # Memeriksa apakah port adalah 80 atau 443 dan tipe adalah trojan dan network ws
+            if port in [80, 443]:
+                terfilter.append(node)
     return terfilter
 
 def konversi_ke_clash(nodes):
@@ -51,23 +62,29 @@ def konversi_ke_clash(nodes):
 
                 credentials, server_info = parts
                 server_details = server_info.split(':')
-                if len(server_details) != 2:
+                if len(server_details) < 2:
                     print("⚠️ Format server info tidak valid")
                     continue
 
-                server, port = server_details
+                server_port = server_details[0]
+                additional_params = server_details[1].split('?')
+                server, port = server_port.split(':')
+                
+                # Memproses parameter tambahan
+                params = dict(param.split('=') for param in additional_params[1].split('&')) if len(additional_params) > 1 else {}
+                
                 proxies.append({
-                    "name": init("ps", "Tanpa Nama"),  # Memastikan 'name' di atas
-                    "server": BUGCDN,  # Menggunakan BUGCDN
-                    "port": init["port"],
+                    "name": params.get("name", "Tanpa Nama"),  # Mengambil nama dari parameter atau default
+                    "server": server,
+                    "port": int(port),
                     "type": "trojan",
-                    "password": init["password"],
+                    "password": credentials.split(':')[0],  # Mengambil password
                     "skip-cert-verify": True,
-                    "sni": init("host", ""),
-                    "network": init("net", "ws"),
+                    "sni": params.get("sni", ""),  # Menggunakan sni jika ada
+                    "network": "ws",  # Menggunakan network ws
                     "ws-opts": {
-                        "path": init("path", "/trojan-ws"),
-                        "headers": {"Host": init("host", "")}
+                        "path": params.get("path", "/trojan-ws"),  # Menggunakan path jika ada
+                        "headers": {"Host": params.get("host", "")}  # Menggunakan host jika ada
                     },
                     "udp": True
                 })
