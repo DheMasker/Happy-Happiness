@@ -35,13 +35,18 @@ def ambil_langganan():
 
 def saring_node(nodes):
     terfilter = []
+    tidak_terfilter = []
+    
     for node in nodes:
         info = decode_node_info_base64(node)
-        if info is not None:
-            # Memeriksa node dengan port 443 atau 80 dan network ws tanpa mengkondisikan konfigurasi
+        if info is not None:  # Pastikan info bukan None
+            # Memisahkan node berdasarkan kriteria
             if (node.startswith("vmess://") or node.startswith("trojan://")) and info.get("port") in {443, 80} and info.get("net") == "ws":
                 terfilter.append(node)
-    return terfilter
+            else:
+                tidak_terfilter.append(node)
+    
+    return terfilter, tidak_terfilter
 
 def decode_node_info_base64(node):
     try:
@@ -117,10 +122,17 @@ def konversi_ke_clash(nodes):
 
 def main():
     nodes = ambil_langganan()
-    filtered_nodes = saring_node(nodes)
+    filtered_nodes, unfiltered_nodes = saring_node(nodes)
+    
     os.makedirs("docs", exist_ok=True)
     with open("docs/clash.yaml", "w", encoding="utf-8") as f:
         f.write(konversi_ke_clash(filtered_nodes))
+    
+    # Menyimpan node yang tidak terfilter
+    if unfiltered_nodes:
+        with open("docs/unfiltered_nodes.txt", "w", encoding="utf-8") as f:
+            f.write("\n".join(unfiltered_nodes))
+    
     with open("docs/index.html", "w", encoding="utf-8") as f:
         f.write("<h2>Langganan Clash Telah Dihasilkan</h2><ul><li><a href='clash.yaml'>clash.yaml</a></li></ul>")
 
