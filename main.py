@@ -7,6 +7,8 @@ import json  # Menggunakan json untuk decode
 # Daftar sumber langganan
 SUB_LINKS = [
     "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/networks/ws",
+     "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/trojan",
+     "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/vmess",     
     "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
     "https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2",
     "https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/v2ray",
@@ -36,8 +38,8 @@ def saring_node(nodes):
     for node in nodes:
         info = decode_node_info_base64(node)
         if info is not None:  # Pastikan info bukan None
-            # Mengizinkan semua node dengan port 443 atau 80
-            if (node.startswith("vmess://") or node.startswith("trojan://")) and info.get("port") in {443, 80}:
+            # Mengizinkan semua node dengan port 443 atau 80 dan network ws
+            if (node.startswith("vmess://") or node.startswith("trojan://")) and info.get("port") in {443, 80} and info.get("net") == "ws":
                 terfilter.append(node)
     return terfilter
 
@@ -70,7 +72,7 @@ def konversi_ke_clash(nodes):
                     "tls": True,  # Mengatur tls menjadi True
                     "skip-cert-verify": True,
                     "servername": config.get("host", ""),
-                    "network": config.get("net", "tcp"),
+                    "network": config.get("net", "ws"),
                     "ws-opts": {
                         "path": config.get("path", "/vmess-ws"),
                         "headers": {"Host": config.get("host", "")}
@@ -92,7 +94,7 @@ def konversi_ke_clash(nodes):
                     "password": config["password"],
                     "skip-cert-verify": True,
                     "sni": config.get("host", ""),
-                    "network": config.get("net", "tcp"),
+                    "network": config.get("net", "ws"),
                     "ws-opts": {
                         "path": config.get("path", "/trojan-ws"),
                         "headers": {"Host": config.get("host", "")}
