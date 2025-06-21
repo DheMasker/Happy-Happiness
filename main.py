@@ -42,10 +42,10 @@ def decode_node_info_base64(node):
         if node.startswith("vmess://") or node.startswith("trojan://"):
             # Memisahkan bagian yang valid untuk dekode
             raw = node[8:].split('#')[0]  # Ambil hanya bagian sebelum '#'
-            # Pisahkan bagian yang valid sebelum dan setelah '@'
             parts = raw.split('@')
+            
             if len(parts) < 2:
-                print(f"тЪая╕П Gagal memisahkan bagian dari node: {node}")
+                print(f"тЪая╕П Gagal memisahkan bagian dari node: {node} - Tidak ada '@' yang ditemukan.")
                 return None
             
             # Ambil bagian sebelum '@' dan tambahkan bagian setelah '@' yang relevan
