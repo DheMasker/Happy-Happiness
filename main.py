@@ -78,7 +78,11 @@ def konversi_ke_clash(nodes):
                 params = {}
                 if '?' in server_info:
                     param_str = server_info.split('?')[1]
-                    params = dict(param.split('=') for param in param_str.split('&'))
+                    try:
+                        params = dict(param.split('=') for param in param_str.split('&') if '=' in param)
+                    except ValueError:
+                        print("⚠️ Format parameter tidak valid")
+                        continue
 
                 proxies.append({
                     "name": params.get("name", "Tanpa Nama"),  # Mengambil nama dari parameter atau default
