@@ -3,14 +3,21 @@ import requests
 import yaml
 import os
 import json
+import urllib.parse
 
 # Daftar sumber langganan
 SUB_LINKS = [
     "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
 ]
 
+# Contoh Trojan node
+EXAMPLE_TROJAN_NODE = "trojan://936c6853-6bbf-4e24-8667-ec5b2fc275b3@104.26.15.85:443/?type=ws&host=md1.safecdn.site&path=%2FChannel_vpnAndroid2-Channel_vpnAndroid2-Channel_vpnAndroid2-Channel_vpnAndroid2&security=tls&sni=md1.safecdn.site#%F0%9F%94%92%20TR-WS-TLS%20%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F%20NA-104.26.15.85%3A443"
+
 def ambil_langganan():
     semua_node = []
+    # Menambahkan contoh Trojan node
+    semua_node.append(EXAMPLE_TROJAN_NODE)
+    
     for url in SUB_LINKS:
         try:
             print(f"Mengambil langganan: {url}")
@@ -36,17 +43,30 @@ def konversi_ke_clash(nodes):
     for node in nodes:
         if node.startswith("trojan://"):
             try:
+                # Menggunakan node[9:] untuk mengabaikan prefix "trojan://"
                 trojan_config = base64.b64decode(node[9:] + '===').decode('utf-8', errors='ignore')
                 config = json.loads(trojan_config.replace("false", "False").replace("true", "True"))
+
+                # Mengambil nama dari parameter ps atau dari bagian setelah #
+                name = config.get("ps", "Tanpa Nama")
+                if "ps" not in config:
+                    name = urllib.parse.unquote(node.split("#")[-1])  # Dekode nama
+
                 proxies.append({
-                    "name": config.get("ps", "Tanpa Nama"),
+                    "name": name,
                     "server": config["server"],
                     "port": int(config["port"]),
                     "type": "trojan",
-                    "uuid": config["id"],
+                    "password": config["id"],
                     "cipher": "auto",
                     "tls": True,
                     "skip-cert-verify": True,
+                    "sni": config.get("host", ""),
+                    "network": config.get("type", "ws"),
+                    "ws-opts": {
+                        "path": config.get("path", ""),
+                        "headers": {"Host": config.get("host", "")}
+                    }
                 })
             except Exception as e:
                 print(f"⚠️ Gagal memparsing trojan: {e}")
