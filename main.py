@@ -2,80 +2,91 @@ import base64
 import requests
 import yaml
 import os
-import json
-import urllib.parse
 
-# List of subscription sources
-SUB_LINKS = [
+# Daftar sumber langganan
+SUB_LINKS = [ 
     "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
 ]
 
-def fetch_subscription():
-    all_nodes = []
-    
+BUGCDN = "104.22.5.240"
+
+def ambil_langganan():
+    semua_node = []
     for url in SUB_LINKS:
         try:
-            print(f"Retrieving subscription from: {url}")
-            response = requests.get(url, timeout=60)
-            content = response.text.strip()
-            # Utilizing utf-8 encoding to support all characters
-            if not content.startswith("trojan"):
-                content = base64.b64decode(content + '===').decode('utf-8', errors='ignore')
-            lines = [line.strip() for line in content.splitlines() if line.strip()]
-            all_nodes.extend(lines)
+            print(f"Mengambil langganan: {url}")
+            res = requests.get(url, timeout=60)
+            konten = res.text.strip()
+            # Mendecode Base64 jika diperlukan
+            if konten:
+                konten = base64.b64decode(konten + '===').decode('utf-8', errors='ignore')
+            baris = [line.strip() for line in konten.splitlines() if line.strip()]
+            semua_node.extend(baris)
         except Exception as e:
-            print(f"❌ Error while fetching subscription: {url} -> {e}")
-    return all_nodes
+            print(f"❌ Kesalahan sumber langganan: {url} -> {e}")
+    return semua_node
 
-def filter_nodes(nodes):
-    filtered = []
+def saring_node(nodes):
+    terfilter = []
     for node in nodes:
         if node.startswith("trojan://"):
-            filtered.append(node)
-    return filtered
+            terfilter.append(node)
+    return terfilter
 
-def convert_to_clash(nodes):
+def konversi_ke_clash(nodes):
     proxies = []
+
     for node in nodes:
         if node.startswith("trojan://"):
             try:
-                trojan_config = base64.b64decode(node[9:] + '===').decode('utf-8', errors='ignore')
-                config = json.loads(trojan_config.replace("false", "False").replace("true", "True"))
+                # Menghapus 'trojan://' dan memisahkan bagian
+                trimmed_node = node[9:]  # Menghapus 'trojan://'
+                at_index = trimmed_node.index('@')
+                password = trimmed_node[:at_index]  # Extracting password
+                server_info = trimmed_node[at_index + 1:]  # Everything after @
 
-                # Extracting the name from the 'ps' parameter or from the part after #
-                name = config.get("ps", "Unnamed")
-                if "ps" not in config:
-                    name = urllib.parse.unquote(node.split("#")[-1])  # Decode the name
+                # Extract server and port
+                colon_index = server_info.index(':')
+                server = server_info[:colon_index]  # Extracting server
+                port_info = server_info[colon_index + 1:]  # Everything after port
+                port = int(port_info.split('?')[0])  # Extracting port
 
+                # Extract additional parameters (sni, path, name)
+                name_index = server_info.index('#')
+                name = server_info[name_index + 1:] if name_index != -1 else "unknown"
+
+                # Append the proxy details
                 proxies.append({
                     "name": name,
-                    "server": config["server"],
-                    "port": int(config["port"]),
+                    "server": server,
+                    "port": port,
                     "type": "trojan",
-                    "password": config["id"],
+                    "password": password,
                     "skip-cert-verify": True,
-                    "sni": config.get("host", ""),
-                    "network": config.get("type", "ws"),
+                    "sni": server_info.split('sni=')[1].split('&')[0] if 'sni=' in server_info else '',
+                    "network": "ws",
                     "ws-opts": {
-                        "path": config.get("path", "/trojan-ws"),
-                        "headers": {"Host": config.get("host", "")}
+                        "path": server_info.split('path=')[1].split('&')[0] if 'path=' in server_info else '',
+                        "headers": {
+                            "Host": server
+                        }
                     },
                     "udp": True
                 })
             except Exception as e:
-                print(f"⚠️ Failed to parse trojan: {e} for node: {node}")
+                print(f"⚠️ Gagal memparsing trojan: {e}")
 
-    clash_proxies = {
+    proxies_clash = {
         "proxies": proxies
     }
-    return yaml.dump(clash_proxies, allow_unicode=True, sort_keys=False)
+    return yaml.dump(proxies_clash, allow_unicode=True, sort_keys=False)
 
 def main():
-    nodes = fetch_subscription()
-    filtered_nodes = filter_nodes(nodes)
+    nodes = ambil_langganan()
+    filtered_nodes = saring_node(nodes)
     os.makedirs("proxies", exist_ok=True)
     with open("proxies/trojan.yaml", "w", encoding="utf-8") as f:
-        f.write(convert_to_clash(filtered_nodes))
+        f.write(konversi_ke_clash(filtered_nodes))
 
 if __name__ == "__main__":
     main()
