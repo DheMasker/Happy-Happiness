@@ -57,9 +57,53 @@ def konversi_ke_clash(nodes):
 
                 server, port = server_info_parts
                 query_params = server_info.split('?')[1] if '?' in server_info else ''
-                sni = ''
-                host = ''
+                sni = ''  # Default to empty
+                host = ''  # Default to empty
                 path = '/trojan-ws'  # Default path
+
+                if query_params:
+                    params = dict(param.split('=') for param in query_params.split('&'))
+                    host = params.get('host', '')  # Get host, default to empty
+                    path = urllib.parse.unquote(params.get('path', path))  # Decode path
+                    sni = params.get('sni', '')  # Get sni, default to empty
+
+                # Decode name
+                decoded_name = urllib.parse.unquote(name)
+
+                proxies.append({
+                    "name": decoded_name,  
+                    "server": server,
+                    "port": int(port),
+                    "type": "trojan",
+                    "password": credentials,
+                    "skip-cert-verify": True,
+                    "sni": sni,  # Use extracted or empty string
+                    "network": "ws",
+                    "ws-opts": {
+                        "path": path,  # Use extracted or default path
+                        "headers": {
+                            "Host": host  # Use extracted or empty string
+                        }
+                    },
+                    "udp": True  # Use True instead of true
+                })
+            except Exception as e:
+                print(f"⚠️ Gagal memparsing trojan: {e}")
+
+    proxies_clash = {
+        "proxies": proxies
+    }
+    return yaml.dump(proxies_clash, allow_unicode=True, sort_keys=False)
+
+def main():
+    nodes = ambil_langganan()
+    filtered_nodes = saring_node(nodes)
+    os.makedirs("proxies", exist_ok=True)
+    with open("proxies/trojan.yaml", "w", encoding="utf-8") as f:
+        f.write(konversi_ke_clash(filtered_nodes))
+
+if __name__ == "__main__":
+    main()                path = '/trojan-ws'  # Default path
 
                 if query_params:
                     params = dict(param.split('=') for param in query_params.split('&'))
