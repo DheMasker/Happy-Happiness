@@ -53,18 +53,23 @@ def konversi_ke_clash(nodes):
 
                 server, port = server_details
                 port = int(port)
-                
-                # Filter hanya untuk port 80 dan 443
+
+                # Filter hanya untuk port 80 dan 443 dengan network ws
                 if port in [80, 443]:
                     proxies.append({
-                        "name": credentials,
-                        "server": BUGCDN,
-                        "port": port,
+                        "name": "Nama Proxy",  # Menggunakan nama tetap untuk proxy
+                        "server": BUGCDN,  # Menggunakan BUGCDN
+                        "port": port,  # Menggunakan port yang sudah difilter
                         "type": "trojan",
-                        "cipher": "auto",
-                        "tls": True,
+                        "password": "",  # Password bisa ditambahkan jika ada
                         "skip-cert-verify": True,
-                        "udp": True
+                        "sni": "",  # SNI opsional
+                        "network": "ws",  # Menggunakan WebSocket
+                        "ws-opts": {
+                            "path": "/trojan-ws",  # Path dari WebSocket
+                            "headers": {"Host": ""}  # Header opsional
+                        },
+                        "udp": True  # Menggunakan UDP
                     })
             except Exception as e:
                 print(f"⚠️ Gagal memparsing trojan: {e}")
