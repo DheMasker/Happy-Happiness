@@ -1,4 +1,3 @@
-import base64
 import requests
 import yaml
 import os
@@ -18,8 +17,6 @@ def ambil_langganan():
             print(f"Mengambil langganan: {url}")
             res = requests.get(url, timeout=60)
             konten = res.text.strip()
-            if not konten.startswith("trojan"):
-                konten = base64.b64decode(konten + '===').decode('utf-8', errors='ignore')
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
             semua_node.extend(baris)
         except Exception as e:
@@ -29,19 +26,30 @@ def ambil_langganan():
 def saring_node(nodes):
     terfilter = []
     for node in nodes:
-        info = decode_node_info_base64(node)
-        if info is not None:
-            # Mengizinkan semua node dengan port 443 atau 80
-            if (node.startswith("trojan://") and info.get("port") in {443, 80}): 
-                terfilter.append(node)
+        if node.startswith("trojan://"):
+            info = decode_node_info(node)
+            if info is not None:
+                if info.get("port") in {443, 80}:
+                    terfilter.append(node)
     return terfilter
 
-def decode_node_info_base64(node):
+def decode_node_info(node):
     try:
         if node.startswith("trojan://"):
-            raw = node[10:]
-            decoded = base64.b64decode(raw + '===').decode('utf-8', errors='ignore')
-            return json.loads(decoded.replace("false", "False").replace("true", "True"))
+            raw = node[10:]  # Menghapus 'trojan://'
+            # Pisahkan bagian-bagian node
+            parts = raw.split('@')
+            if len(parts) != 2:
+                return None
+            credentials, server_info = parts
+            server_details = server_info.split(':')
+            if len(server_details) != 2:
+                return None
+            return {
+                "id": credentials,  # ID dari node Trojan
+                "server": server_details[0],
+                "port": int(server_details[1]),
+            }
     except Exception as e:
         print(f"⚠️ Gagal mendecode node: {e}")
         return None
@@ -52,18 +60,16 @@ def konversi_ke_clash(nodes):
     for node in nodes:
         if node.startswith("trojan://"):
             try:
-                trojan_config = base64.b64decode(node[10:] + '===').decode('utf-8', errors='ignore')
-                config = json.loads(trojan_config.replace("false", "False").replace("true", "True"))
+                info = decode_node_info(node)
                 proxies.append({
-                    "name": config.get("ps", "Tanpa Nama"),
+                    "name": info["id"],  # Menggunakan ID sebagai nama
                     "server": BUGCDN,
-                    "port": int(config["port"]),
+                    "port": info["port"],
                     "type": "trojan",
-                    "uuid": config["id"],
+                    "uuid": info["id"],
                     "cipher": "auto",
                     "tls": True,
                     "skip-cert-verify": True,
-                    "servername": config.get("host", ""),
                     "udp": True
                 })
             except Exception as e:
