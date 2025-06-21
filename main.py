@@ -78,15 +78,15 @@ def konversi_ke_clash(nodes):
                     "type": "trojan",
                     "password": credentials,
                     "skip-cert-verify": True,
-                    "sni": host,
+                    "sni": int(sni),
                     "network": "ws",
                     "ws-opts": {
-                        "path": path,
+                        "path": int(path),
                         "headers": {
-                            "Host": host
+                            "Host": int(host)
                         }
                     },
-                    "udp": True
+                    "udp": true
                 })
             except Exception as e:
                 print(f"⚠️ Gagal memparsing trojan: {e}")
