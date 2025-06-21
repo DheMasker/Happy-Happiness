@@ -75,19 +75,16 @@ def konversi_ke_clash(nodes):
             except Exception as e:
                 print(f"⚠️ Gagal memparsing vmess: {e}")
 
-    config_clash = {
+    proxies_clash = {
         "proxies": proxies
     }
-    return yaml.dump(config_clash, allow_unicode=True, sort_keys=False)  # Menonaktifkan penyortiran kunci
+    return yaml.dump(proxies_clash, allow_unicode=True, sort_keys=False)  # Menonaktifkan penyortiran kunci
 
 def main():
     nodes = ambil_langganan()
     filtered_nodes = saring_node(nodes)
-    os.makedirs("docs", exist_ok=True)
+    os.makedirs("proxies", exist_ok=True)
     with open("proxies/vmesswscdn443and80.yaml", "w", encoding="utf-8") as f:
         f.write(konversi_ke_clash(filtered_nodes))
-    with open("proxies/index.html", "w", encoding="utf-8") as f:
-        f.write("<h2>Proxies Clash Telah Dihasilkan</h2><ul><li><a href='vmesswscdn443and80.yaml'>vmesswscdn443and80.yaml</a></li></ul>")
-
 if __name__ == "__main__":
     main()
