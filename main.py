@@ -103,48 +103,4 @@ def main():
         f.write(konversi_ke_clash(filtered_nodes))
 
 if __name__ == "__main__":
-    main()                path = '/trojan-ws'  # Default path
-
-                if query_params:
-                    params = dict(param.split('=') for param in query_params.split('&'))
-                    host = params.get('host', '')
-                    path = urllib.parse.unquote(params.get('path', path))  # Decode path
-                    sni = params.get('sni', '')  # Get sni directly
-
-                # Decode name
-                decoded_name = urllib.parse.unquote(name)
-
-                proxies.append({
-                    "name": decoded_name,  
-                    "server": server,
-                    "port": int(port),
-                    "type": "trojan",
-                    "password": credentials,
-                    "skip-cert-verify": True,
-                    "sni": sni,  # Keep it as string
-                    "network": "ws",
-                    "ws-opts": {
-                        "path": path,  # Keep it as string
-                        "headers": {
-                            "Host": host  # Keep it as string
-                        }
-                    },
-                    "udp": True  # Use True instead of true
-                })
-            except Exception as e:
-                print(f"⚠️ Gagal memparsing trojan: {e}")
-
-    proxies_clash = {
-        "proxies": proxies
-    }
-    return yaml.dump(proxies_clash, allow_unicode=True, sort_keys=False)
-
-def main():
-    nodes = ambil_langganan()
-    filtered_nodes = saring_node(nodes)
-    os.makedirs("proxies", exist_ok=True)
-    with open("proxies/trojan.yaml", "w", encoding="utf-8") as f:
-        f.write(konversi_ke_clash(filtered_nodes))
-
-if __name__ == "__main__":
     main()
