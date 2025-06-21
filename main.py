@@ -3,6 +3,7 @@ import requests
 import yaml
 import os
 import json
+import re
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
@@ -41,16 +42,21 @@ def decode_node_info_base64(node):
         if node.startswith("vmess://") or node.startswith("trojan://"):
             raw = node[8:]
 
-            # Hapus karakter non-ASCII dari raw
-            raw = ''.join(char for char in raw if ord(char) < 128)
+            # Pisahkan bagian valid dan tidak valid
+            valid_part = raw.split('#')[0]
+
+            # Validasi format Base64
+            if not re.match(r'^[A-Za-z0-9+/=]*$', valid_part):
+                print(f"тЪая╕П Karakter tidak valid ditemukan dalam Base64: {valid_part}")
+                return None
 
             # Tambahkan padding jika perlu
-            padding = len(raw) % 4
+            padding = len(valid_part) % 4
             if padding:
-                raw += '=' * (4 - padding)
+                valid_part += '=' * (4 - padding)
 
             # Dekode string
-            decoded = base64.b64decode(raw, validate=True).decode('utf-8', errors='ignore')
+            decoded = base64.b64decode(valid_part, validate=True).decode('utf-8', errors='ignore')
             return json.loads(decoded.replace("false", "False").replace("true", "True"))
     except json.JSONDecodeError as json_err:
         print(f"тЪая╕П Gagal memparsing JSON dari node: {node} -> {json_err}")
