@@ -1,3 +1,6 @@
+#trojan meh
+
+
 import base64
 import requests
 import yaml
@@ -8,6 +11,8 @@ SUB_LINKS = [
     "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
 ]
 
+BUGCDN = "104.22.5.240"
+
 def ambil_langganan():
     semua_node = []
     for url in SUB_LINKS:
@@ -15,6 +20,7 @@ def ambil_langganan():
             print(f"Mengambil langganan: {url}")
             res = requests.get(url, timeout=60)
             konten = res.text.strip()
+            # Mendecode Base64 jika diperlukan
             if konten:
                 konten = base64.b64decode(konten + '===').decode('utf-8', errors='ignore')
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
@@ -36,46 +42,29 @@ def konversi_ke_clash(nodes):
     for node in nodes:
         if node.startswith("trojan://"):
             try:
+                # Menghapus 'trojan://' dan memisahkan bagian
                 raw = node[10:]  # Menghapus 'trojan://'
                 parts = raw.split('@')
                 if len(parts) != 2:
                     print("⚠️ Format node Trojan tidak valid")
                     continue
 
-                password, server_info = parts
+                credentials, server_info = parts
                 server_details = server_info.split(':')
                 if len(server_details) != 2:
                     print("⚠️ Format server info tidak valid")
                     continue
 
-                server, port = server_details[0], server_details[1]  # server dan port
-                params = server_info.split('/?')[1] if '/?' in server_info else ''
-                param_parts = params.split('&')
-                
-                # Mengambil parameter yang diperlukan
-                network = param_parts[0].split('=')[1] if 'type=' in param_parts[0] else ''
-                host = next((p.split('=')[1] for p in param_parts if 'host=' in p), '')
-                path = next((p.split('=')[1] for p in param_parts if 'path=' in p), '/')
-                sni = next((p.split('=')[1] for p in param_parts if 'sni=' in p), '')
-                allow_insecure = next((p.split('=')[1] for p in param_parts if 'allowInsecure=' in p), '0')
-
+                server, port = server_details
                 proxies.append({
-                    "name": server_info.split("#")[1] if "#" in server_info else "Unknown",  # Nama
-                    "server": server,  # Server
-                    "port": int(port),  # Port
-                    "type": "trojan",  # Tipe
-                    "password": password,  # Password
-                    "network": network,  # Network
-                    "ws-opts": {
-                        "path": path,  # Path
-                        "headers": {
-                            "Host": host  # Host
-                        }
-                    },
-                    "skip-cert-verify": allow_insecure == '1',  # Mengubah 1/0 menjadi True/False
-                    "sni": sni,  # SNI
-                    "tls": True,  # TLS
-                    "udp": True  # UDP
+                    "name": credentials,  # Menggunakan credentials sebagai nama
+                    "server": server,
+                    "port": int(port),
+                    "type": "trojan",
+                    "cipher": "auto",
+                    "tls": True,
+                    "skip-cert-verify": True,
+                    "udp": True
                 })
             except Exception as e:
                 print(f"⚠️ Gagal memparsing trojan: {e}")
