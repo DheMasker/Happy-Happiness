@@ -47,6 +47,22 @@ proxies:
     headers:
       Host: th.lzj520hxw.dpdns.org
   udp: true
+- name: 2|🇩🇪5 |  1.4MB/s|0%|Youtube|Open...
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: ceaaf653-9874-58c6-b100-092c01a1f73d
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: ''
+  network: grpc
+  ws-opts:
+    path: vmess-grpc
+    headers:
+      Host: ''
+  udp: true
 proxy-groups:
 - name: 🔰 Pilihan Node
   type: select
@@ -54,5 +70,6 @@ proxy-groups:
   - 🔒 VM-WS-NA 🏴‍☠️ NA-172.67.149.202:80
   - 🔒 VM-WS-TLS 🇩🇪 DE-57.129.25.22:443
   - 2|🌀4-TH |  2.6MB/s|55%|Netflix|O...
+  - 2|🇩🇪5 |  1.4MB/s|0%|Youtube|Open...
 rules:
 - MATCH,🔰 Pilihan Node
