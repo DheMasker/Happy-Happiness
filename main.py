@@ -10,6 +10,11 @@ SUB_LINKS = [
 
 BUGCDN = "104.22.5.240"
 
+# Memuat konfigurasi dari file
+def load_config():
+    with open("config.yaml", "r") as f:
+        return yaml.safe_load(f)
+
 def ambil_langganan():
     semua_node = []
     for url in SUB_LINKS:
@@ -17,6 +22,7 @@ def ambil_langganan():
             print(f"Mengambil langganan: {url}")
             res = requests.get(url, timeout=60)
             konten = res.text.strip()
+            # Mendecode Base64 jika diperlukan
             if konten:
                 konten = base64.b64decode(konten + '===').decode('utf-8', errors='ignore')
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
@@ -32,19 +38,13 @@ def saring_node(nodes):
             terfilter.append(node)
     return terfilter
 
-def konversi_ke_clash(nodes):
+def konversi_ke_clash(nodes, config):
     proxies = []
-    config = {
-        "port": 443,  # Ganti dengan port yang sesuai
-        "password": "your_password",  # Ganti dengan password yang sesuai
-        "host": "your_host.com",  # Ganti dengan host yang sesuai
-        "path": "/trojan-ws",  # Ganti dengan path yang sesuai
-        "net": "ws"  # Ganti dengan network yang sesuai
-    }
 
     for node in nodes:
         if node.startswith("trojan://"):
             try:
+                # Menghapus 'trojan://' dan memisahkan bagian
                 raw = node[10:]  # Menghapus 'trojan://'
                 parts = raw.split('@')
                 if len(parts) != 2:
@@ -57,13 +57,13 @@ def konversi_ke_clash(nodes):
                     print("⚠️ Format server info tidak valid")
                     continue
 
-                # Menggunakan nilai dari config dan BUGCDN
+                server, port = server_details
                 proxies.append({
-                    "name": config.get("ps", "Tanpa Nama"),
-                    "server": BUGCDN,
-                    "port": config["port"],
+                    "name": config.get("ps", "Tanpa Nama"),  # Memastikan 'name' di atas
+                    "server": BUGCDN,  # Menggunakan BUGCDN
+                    "port": int(config["port"]),  # Pastikan port diambil dari config
                     "type": "trojan",
-                    "password": config["password"],
+                    "password": config["password"],  # Menggunakan password dari config
                     "skip-cert-verify": True,
                     "sni": config.get("host", ""),
                     "network": config.get("net", "ws"),
@@ -82,11 +82,12 @@ def konversi_ke_clash(nodes):
     return yaml.dump(proxies_clash, allow_unicode=True, sort_keys=False)
 
 def main():
+    config = load_config()
     nodes = ambil_langganan()
     filtered_nodes = saring_node(nodes)
     os.makedirs("proxies", exist_ok=True)
     with open("proxies/trojan.yaml", "w", encoding="utf-8") as f:
-        f.write(konversi_ke_clash(filtered_nodes))
+        f.write(konversi_ke_clash(filtered_nodes, config))
 
 if __name__ == "__main__":
     main()
