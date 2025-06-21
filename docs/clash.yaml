@@ -1,20 +1,4 @@
 proxies:
-- name: 2|🌀4-TH |  2.6MB/s|55%|Netflix|O...
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: 164a6ad0-476a-4bae-b78f-a3d37cf0f414
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: th.lzj520hxw.dpdns.org
-  network: ws
-  ws-opts:
-    path: /lzjjj
-    headers:
-      Host: th.lzj520hxw.dpdns.org
-  udp: true
 - name: 🔒 VM-WS-NA 🏴‍☠️ NA-172.67.149.202:80
   server: 104.22.5.240
   port: 80
@@ -115,7 +99,6 @@ proxy-groups:
 - name: ЁЯФ░ Pilihan Node
   type: select
   proxies:
-  - 2|🌀4-TH |  2.6MB/s|55%|Netflix|O...
   - 🔒 VM-WS-NA 🏴‍☠️ NA-172.67.149.202:80
   - 🔒 VM-WS-TLS 🇩🇪 DE-57.129.25.22:443
   - 🟣🔥+Channel+Server+Free+@Farah_VPN
