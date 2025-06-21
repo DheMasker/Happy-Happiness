@@ -1,7 +1,7 @@
 proxies:
-- alterId: 0
+- name: 🔒 VM-WS-NA 🏴‍☠️ NA-172.67.149.202:80
+  alterId: 0
   cipher: auto
-  name: 🔒 VM-WS-NA 🏴‍☠️ NA-172.67.149.202:80
   network: ws
   port: 80
   server: 104.22.5.240
@@ -12,9 +12,9 @@ proxies:
     headers:
       Host: sssssssw.222560.xyz
     path: /iXfi0mMmPYp9UA6Y34zWUk6JUQ
-- alterId: 0
+- name: 🔒 VM-WS-TLS 🇩🇪 DE-57.129.25.22:443
+  alterId: 0
   cipher: auto
-  name: 🔒 VM-WS-TLS 🇩🇪 DE-57.129.25.22:443
   network: ws
   port: 443
   server: 104.22.5.240
@@ -25,9 +25,9 @@ proxies:
     headers:
       Host: o.metuji.com
     path: /linkvws
-- alterId: 0
+- name: 2|🌀4-TH |  2.6MB/s|55%|Netflix|O...
+  alterId: 0
   cipher: auto
-  name: 2|🌀4-TH |  2.6MB/s|55%|Netflix|O...
   network: ws
   port: 443
   server: 104.22.5.240
@@ -40,10 +40,10 @@ proxies:
     path: /lzjjj
 proxy-groups:
 - name: 🔰 Pilihan Node
+  type: select
   proxies:
   - 🔒 VM-WS-NA 🏴‍☠️ NA-172.67.149.202:80
   - 🔒 VM-WS-TLS 🇩🇪 DE-57.129.25.22:443
   - 2|🌀4-TH |  2.6MB/s|55%|Netflix|O...
-  type: select
 rules:
 - MATCH,🔰 Pilihan Node
