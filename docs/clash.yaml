@@ -47,12 +47,80 @@ proxies:
     headers:
       Host: o.metuji.com
   udp: true
+- name: 🟣🔥+Channel+Server+Free+@Farah_VPN
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+  network: ws
+  ws-opts:
+    path: /azumase.ren
+    headers:
+      Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+  udp: true
+- name: 🟣🔥+Channel+Server+Free+@Farah_VPN
+  server: 104.22.5.240
+  port: 80
+  type: vmess
+  uuid: 58fe1542-5290-40ad-815a-77707a81afe5
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: ''
+  network: ws
+  ws-opts:
+    path: /IOebhLMhl1CTbFHbL95myfRX2
+    headers:
+      Host: ''
+  udp: true
+- name: 🟣🔥+Channel+Server+Free+@Farah_VPN
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: o.metuji.com
+  network: ws
+  ws-opts:
+    path: /linkvws
+    headers:
+      Host: o.metuji.com
+  udp: true
+- name: 🟣🔥+Channel+Server+Free+@Farah_VPN
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: f.khilei.com
+  network: ws
+  ws-opts:
+    path: /linkvws
+    headers:
+      Host: f.khilei.com
+  udp: true
 proxy-groups:
-- name: 🔰 Pilihan Node
+- name: ЁЯФ░ Pilihan Node
   type: select
   proxies:
   - 2|🌀4-TH |  2.6MB/s|55%|Netflix|O...
   - 🔒 VM-WS-NA 🏴‍☠️ NA-172.67.149.202:80
   - 🔒 VM-WS-TLS 🇩🇪 DE-57.129.25.22:443
+  - 🟣🔥+Channel+Server+Free+@Farah_VPN
+  - 🟣🔥+Channel+Server+Free+@Farah_VPN
+  - 🟣🔥+Channel+Server+Free+@Farah_VPN
+  - 🟣🔥+Channel+Server+Free+@Farah_VPN
 rules:
-- MATCH,🔰 Pilihan Node
+- MATCH,ЁЯФ░ Pilihan Node
