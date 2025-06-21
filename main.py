@@ -40,7 +40,7 @@ def konversi_ke_clash(nodes):
                 # Menghapus 'trojan://' dan memisahkan bagian
                 trimmed_node = node[9:]  # Menghapus 'trojan://'
                 at_index = trimmed_node.index('@')
-                password = trimmed_node[:at_index]  # Extracting password
+                password = trimmed_node[:at_index].strip()  # Extracting password
                 server_info = trimmed_node[at_index + 1:]  # Everything after @
 
                 # Extract server and port
@@ -50,20 +50,18 @@ def konversi_ke_clash(nodes):
                 port = int(port_info.split('?')[0])  # Extracting port
 
                 # Extract additional parameters (path, sni, host) from server_info
-                path = server_info.split('/')[1] if '/' in server_info else ''  # Path
                 query_params = port_info.split('?')[1] if '?' in port_info else ''
-
-                # Replace %2F with /
-                path = path.replace('%2F', '/')
-
                 sni = ''
                 host = ''
+                path = ''
 
                 for param in query_params.split('&'):
                     if param.startswith('sni='):
-                        sni = param.split('=')[1].strip()
+                        sni = param.split('=')[1].strip().split('#')[0]  # Clean up sni
                     elif param.startswith('host='):
-                        host = param.split('=')[1].strip()
+                        host = param.split('=')[1].strip().split('#')[0]  # Clean up host
+                    elif param.startswith('path='):
+                        path = param.split('=')[1].strip().split('#')[0].replace('%2F', '/')  # Decode path
 
                 # Set host and sni based on availability
                 if sni and not host:
@@ -81,12 +79,12 @@ def konversi_ke_clash(nodes):
                     "server": server,
                     "port": port,
                     "type": "trojan",
-                    "password": password.strip(),
+                    "password": password,  # Already stripped
                     "skip-cert-verify": True,
                     "sni": sni,  # Extracted correctly
                     "network": "ws",
                     "ws-opts": {
-                        "path": '/' + path.strip(),  # Include leading /
+                        "path": path.strip(),  # Cleaned up path
                         "headers": {
                             "Host": host  # Set based on availability
                         }
