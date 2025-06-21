@@ -2,18 +2,21 @@ import base64
 import requests
 import yaml
 import os
+import json  # Menggunakan json untuk decode
 
-# Daftar sumber langganan (bisa ditambahkan lebih banyak)
-SUB_LINKS = [
-    "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/networks/ws",
+# Daftar sumber langganan
+SUB_LINKS = [ 
     "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
     "https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2",
     "https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/v2ray",
     "https://raw.githubusercontent.com/iwxf/free-v2ray/master/v2",
+    "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/networks/ws",
+    "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/trojan",
+    "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/vmess",       
     "https://raw.githubusercontent.com/Leon406/SubCrawler/main/sub/share/v2ray.txt"
 ]
 
-BUGCDN="104.22.5.240"
+BUGCDN = "104.22.5.240"
 
 def ambil_langganan():
     semua_node = []
@@ -34,50 +37,72 @@ def saring_node(nodes):
     terfilter = []
     for node in nodes:
         info = decode_node_info_base64(node)
-        if info:  # Pastikan info bukan None
-            if (node.startswith("vmess://") or node.startswith("trojan://")):
-                if (info.get("net") == "ws" and 
-                    (info.get("port") == 443 or info.get("port") == 80)):
-                    terfilter.append(node)
-    return terfilter  # Tidak ada batasan pada jumlah node
+        if info is not None:  # Pastikan info bukan None
+            # Mengizinkan semua node dengan port 443 atau 80 dan network ws
+            if (node.startswith("vmess://") or node.startswith("trojan://")) and info.get("port") in {443, 80} and info.get("net") == "ws":
+                terfilter.append(node)
+    return terfilter
 
 def decode_node_info_base64(node):
     try:
-        if node.startswith("vmess://"):
+        if node.startswith("vmess://") or node.startswith("trojan://"):
             raw = node[8:]
             decoded = base64.b64decode(raw + '===').decode('utf-8', errors='ignore')
-            return eval(decoded.replace("false", "False").replace("true", "True"))
-        elif node.startswith("trojan://"):
-            # Kembalikan None jika tidak ada pengolahan untuk Trojan saat ini
-            return None
+            return json.loads(decoded.replace("false", "False").replace("true", "True"))
     except Exception as e:
         print(f"⚠️ Gagal mendecode node: {e}")
-        return None  # Kembalikan None jika terjadi kesalahan
+        return None
 
 def konversi_ke_clash(nodes):
     proxies = []
+
     for node in nodes:
         if node.startswith("vmess://"):
             try:
                 vmess_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
-                config = eval(vmess_config.replace("false", "False").replace("true", "True"))
+                config = json.loads(vmess_config.replace("false", "False").replace("true", "True"))
                 proxies.append({
-                    "alterId": int(config.get("aid", 0)),
-                    "type": "vmess",
-                    "server": "$BUGCDN",  # Ubah server menjadi $BUGCDN
+                    "name": config.get("ps", "Tanpa Nama"),  # Memastikan 'name' di atas
+                    "server": BUGCDN,  # Menggunakan BUGCDN
                     "port": int(config["port"]),
+                    "type": "vmess",
                     "uuid": config["id"],
-                    "name": config.get("ps", "Tanpa Nama"),
+                    "alterId": int(config.get("aid", 0)),
                     "cipher": "auto",
-                    "tls": "true" if config.get("true") else "",
-                    "network": config.get("net", "tcp"),
+                    "tls": True,  # Mengatur tls menjadi True
+                    "skip-cert-verify": True,
+                    "servername": config.get("host", ""),
+                    "network": config.get("net", "ws"),
                     "ws-opts": {
-                        "path": config.get("path", ""),
+                        "path": config.get("path", "/vmess-ws"),
                         "headers": {"Host": config.get("host", "")}
-                    } if config.get("net") == "ws" else {}
+                    },
+                    "udp": True
                 })
             except Exception as e:
                 print(f"⚠️ Gagal memparsing vmess: {e}")
+
+        elif node.startswith("trojan://"):
+            try:
+                trojan_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
+                config = json.loads(trojan_config.replace("false", "False").replace("true", "True"))
+                proxies.append({
+                    "name": config.get("ps", "Tanpa Nama"),  # Memastikan 'name' di atas
+                    "server": BUGCDN,  # Menggunakan BUGCDN
+                    "port": config["port"],
+                    "type": "trojan",
+                    "password": config["password"],
+                    "skip-cert-verify": True,
+                    "sni": config.get("host", ""),
+                    "network": config.get("net", "ws"),
+                    "ws-opts": {
+                        "path": config.get("path", "/trojan-ws"),
+                        "headers": {"Host": config.get("host", "")}
+                    },
+                    "udp": True
+                })
+            except Exception as e:
+                print(f"⚠️ Gagal memparsing trojan: {e}")
 
     config_clash = {
         "proxies": proxies,
@@ -88,7 +113,7 @@ def konversi_ke_clash(nodes):
         }],
         "rules": ["MATCH,🔰 Pilihan Node"]
     }
-    return yaml.dump(config_clash, allow_unicode=True)
+    return yaml.dump(config_clash, allow_unicode=True, sort_keys=False)  # Menonaktifkan penyortiran kunci
 
 def main():
     nodes = ambil_langganan()
