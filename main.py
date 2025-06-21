@@ -1,7 +1,3 @@
-import aiohttp
-import yaml
-from tqdm import tqdm
-import collections
 
 import base64
 import requests
