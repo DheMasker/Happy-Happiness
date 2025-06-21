@@ -8,8 +8,6 @@ SUB_LINKS = [
     "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
 ]
 
-BUGCDN = "104.22.5.240"
-
 def ambil_langganan():
     semua_node = []
     for url in SUB_LINKS:
@@ -51,9 +49,14 @@ def konversi_ke_clash(nodes):
                 port_info = server_info[colon_index + 1:]  # Everything after port
                 port = int(port_info.split('?')[0])  # Extracting port
 
-                # Extract additional parameters (sni, path, name)
+                # Extract additional parameters (sni, host, path, name)
                 name_index = server_info.index('#')
                 name = server_info[name_index + 1:] if name_index != -1 else "unknown"
+
+                # Extract path, sni, and host from the initial server_info
+                path = port_info.split('&path=')[1].split('&')[0] if 'path=' in port_info else ''
+                sni = port_info.split('&sni=')[1].split('&')[0] if 'sni=' in port_info else ''
+                host = port_info.split('&host=')[1].split('&')[0] if 'host=' in port_info else ''
 
                 # Append the proxy details
                 proxies.append({
@@ -63,12 +66,12 @@ def konversi_ke_clash(nodes):
                     "type": "trojan",
                     "password": password,
                     "skip-cert-verify": True,
-                    "sni": server_info.split('sni=')[1].split('&')[0] if 'sni=' in server_info else '',
+                    "sni": sni,
                     "network": "ws",
                     "ws-opts": {
-                        "path": server_info.split('path=')[1].split('&')[0] if 'path=' in server_info else '',
+                        "path": path,  # Directly extracted from the node
                         "headers": {
-                            "Host": server
+                            "Host": host  # Directly extracted from the node
                         }
                     },
                     "udp": True
