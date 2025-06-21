@@ -10,11 +10,6 @@ SUB_LINKS = [
 
 BUGCDN = "104.22.5.240"
 
-# Memuat konfigurasi dari file
-def load_config():
-    with open("config.yaml", "r") as f:
-        return yaml.safe_load(f)
-
 def ambil_langganan():
     semua_node = []
     for url in SUB_LINKS:
@@ -38,7 +33,7 @@ def saring_node(nodes):
             terfilter.append(node)
     return terfilter
 
-def konversi_ke_clash(nodes, config):
+def konversi_ke_clash(nodes):
     proxies = []
 
     for node in nodes:
@@ -59,18 +54,13 @@ def konversi_ke_clash(nodes, config):
 
                 server, port = server_details
                 proxies.append({
-                    "name": config.get("ps", "Tanpa Nama"),  # Memastikan 'name' di atas
-                    "server": BUGCDN,  # Menggunakan BUGCDN
-                    "port": int(config["port"]),  # Pastikan port diambil dari config
+                    "name": credentials,  # Menggunakan credentials sebagai nama
+                    "server": server,
+                    "port": int(port),
                     "type": "trojan",
-                    "password": config["password"],  # Menggunakan password dari config
+                    "cipher": "auto",
+                    "tls": True,
                     "skip-cert-verify": True,
-                    "sni": config.get("host", ""),
-                    "network": config.get("net", "ws"),
-                    "ws-opts": {
-                        "path": config.get("path", "/trojan-ws"),
-                        "headers": {"Host": config.get("host", "")}
-                    },
                     "udp": True
                 })
             except Exception as e:
@@ -82,12 +72,11 @@ def konversi_ke_clash(nodes, config):
     return yaml.dump(proxies_clash, allow_unicode=True, sort_keys=False)
 
 def main():
-    config = load_config()
     nodes = ambil_langganan()
     filtered_nodes = saring_node(nodes)
     os.makedirs("proxies", exist_ok=True)
     with open("proxies/trojan.yaml", "w", encoding="utf-8") as f:
-        f.write(konversi_ke_clash(filtered_nodes, config))
+        f.write(konversi_ke_clash(filtered_nodes))
 
 if __name__ == "__main__":
     main()
