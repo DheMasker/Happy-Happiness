@@ -1,58 +1,49 @@
 proxies:
-- name: 2|🌀4-TH |  2.6MB/s|55%|Netflix|O...
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: 164a6ad0-476a-4bae-b78f-a3d37cf0f414
-  alterId: 0
+- alterId: 0
   cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: th.lzj520hxw.dpdns.org
+  name: "\uD83D\uDD12 VM-WS-NA \uD83C\uDFF4‍☠️ NA-172.67.149.202:80"
   network: ws
-  ws-opts:
-    path: /lzjjj
-    headers:
-      Host: th.lzj520hxw.dpdns.org
-  udp: true
-- name: 🔒 VM-WS-NA 🏴‍☠️ NA-172.67.149.202:80
-  server: 104.22.5.240
   port: 80
+  server: $BUGCDN
+  tls: ''
   type: vmess
   uuid: 393b1061-d615-459a-8616-3f9447bdff5a
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: sssssssw.222560.xyz
-  network: ws
   ws-opts:
-    path: /iXfi0mMmPYp9UA6Y34zWUk6JUQ
     headers:
       Host: sssssssw.222560.xyz
-  udp: true
-- name: 🔒 VM-WS-TLS 🇩🇪 DE-57.129.25.22:443
-  server: 104.22.5.240
+    path: /iXfi0mMmPYp9UA6Y34zWUk6JUQ
+- alterId: 0
+  cipher: auto
+  name: "\uD83D\uDD12 VM-WS-TLS \uD83C\uDDE9\uD83C\uDDEA DE-57.129.25.22:443"
+  network: ws
   port: 443
+  server: $BUGCDN
+  tls: ''
   type: vmess
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: o.metuji.com
-  network: ws
   ws-opts:
-    path: /linkvws
     headers:
       Host: o.metuji.com
-  udp: true
+    path: /linkvws
+- alterId: 0
+  cipher: auto
+  name: 2|🌀4-TH |  2.6MB/s|55%|Netflix|O...
+  network: ws
+  port: 443
+  server: $BUGCDN
+  tls: ''
+  type: vmess
+  uuid: 164a6ad0-476a-4bae-b78f-a3d37cf0f414
+  ws-opts:
+    headers:
+      Host: th.lzj520hxw.dpdns.org
+    path: /lzjjj
 proxy-groups:
 - name: 🔰 Pilihan Node
-  type: select
   proxies:
+  - "\uD83D\uDD12 VM-WS-NA \uD83C\uDFF4‍☠️ NA-172.67.149.202:80"
+  - "\uD83D\uDD12 VM-WS-TLS \uD83C\uDDE9\uD83C\uDDEA DE-57.129.25.22:443"
   - 2|🌀4-TH |  2.6MB/s|55%|Netflix|O...
-  - 🔒 VM-WS-NA 🏴‍☠️ NA-172.67.149.202:80
-  - 🔒 VM-WS-TLS 🇩🇪 DE-57.129.25.22:443
+  type: select
 rules:
 - MATCH,🔰 Pilihan Node
