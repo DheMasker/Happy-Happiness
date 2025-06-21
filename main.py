@@ -45,7 +45,7 @@ def konversi_ke_clash(nodes):
 
                 # Extract server and port
                 colon_index = server_info.index(':')
-                server = server_info[:colon_index]  # Extracting server
+                server = server_info[:colon_index].strip()  # Extracting server
                 port_info = server_info[colon_index + 1:]  # Everything after port
                 port = int(port_info.split('?')[0])  # Extracting port
 
@@ -61,13 +61,19 @@ def konversi_ke_clash(nodes):
 
                 for param in query_params.split('&'):
                     if param.startswith('sni='):
-                        sni = param.split('=')[1]
+                        sni = param.split('=')[1].strip()
                     elif param.startswith('host='):
-                        host = param.split('=')[1]
+                        host = param.split('=')[1].strip()
+
+                # Set host and sni based on availability
+                if sni and not host:
+                    host = sni
+                elif host and not sni:
+                    sni = host
 
                 # Extract name from the node
                 name_index = server_info.index('#')
-                name = server_info[name_index + 1:] if name_index != -1 else "unknown"
+                name = server_info[name_index + 1:].strip() if name_index != -1 else "unknown"
 
                 # Append the proxy details
                 proxies.append({
@@ -75,14 +81,14 @@ def konversi_ke_clash(nodes):
                     "server": server,
                     "port": port,
                     "type": "trojan",
-                    "password": password,
+                    "password": password.strip(),
                     "skip-cert-verify": True,
                     "sni": sni,  # Extracted correctly
                     "network": "ws",
                     "ws-opts": {
-                        "path": '/' + path,  # Include leading /
+                        "path": '/' + path.strip(),  # Include leading /
                         "headers": {
-                            "Host": host  # Extracted correctly
+                            "Host": host  # Set based on availability
                         }
                     },
                     "udp": True
