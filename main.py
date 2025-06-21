@@ -12,7 +12,58 @@ SUB_LINKS = [
     "https://raw.githubusercontent.com/iwxf/free-v2ray/master/v2",
     "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/networks/ws",
     "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/trojan",
-    "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/vmess",       
+    "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/vmess",
+    "https://raw.githubusercontent.com/vxiaov/free_proxies/main/clash/clash.provider.yaml",
+    "https://raw.githubusercontent.com/V2RayRoot/V2RayConfig/refs/heads/main/Config/vmess.txt",
+    "https://raw.githubusercontent.com/devojony/collectSub/refs/heads/main/sub/sub_all_clash.txt",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
     "https://raw.githubusercontent.com/Leon406/SubCrawler/main/sub/share/v2ray.txt"
 ]
 
@@ -30,7 +81,7 @@ def ambil_langganan():
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
             semua_node.extend(baris)
         except Exception as e:
-            print(f"❌ Kesalahan sumber langganan: {url} -> {e}")
+            print(f"тЭМ Kesalahan sumber langganan: {url} -> {e}")
     return semua_node
 
 def saring_node(nodes):
@@ -50,7 +101,7 @@ def decode_node_info_base64(node):
             decoded = base64.b64decode(raw + '===').decode('utf-8', errors='ignore')
             return json.loads(decoded.replace("false", "False").replace("true", "True"))
     except Exception as e:
-        print(f"⚠️ Gagal mendecode node: {e}")
+        print(f"тЪая╕П Gagal mendecode node: {e}")
         return None
 
 def konversi_ke_clash(nodes):
@@ -80,7 +131,7 @@ def konversi_ke_clash(nodes):
                     "udp": True
                 })
             except Exception as e:
-                print(f"⚠️ Gagal memparsing vmess: {e}")
+                print(f"тЪая╕П Gagal memparsing vmess: {e}")
 
         elif node.startswith("trojan://"):
             try:
@@ -102,16 +153,16 @@ def konversi_ke_clash(nodes):
                     "udp": True
                 })
             except Exception as e:
-                print(f"⚠️ Gagal memparsing trojan: {e}")
+                print(f"тЪая╕П Gagal memparsing trojan: {e}")
 
     config_clash = {
         "proxies": proxies,
         "proxy-groups": [{
-            "name": "🔰 Pilihan Node",
+            "name": "ЁЯФ░ Pilihan Node",
             "type": "select",
             "proxies": [p["name"] for p in proxies]
         }],
-        "rules": ["MATCH,🔰 Pilihan Node"]
+        "rules": ["MATCH,ЁЯФ░ Pilihan Node"]
     }
     return yaml.dump(config_clash, allow_unicode=True, sort_keys=False)  # Menonaktifkan penyortiran kunci
 
