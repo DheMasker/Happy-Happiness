@@ -58,18 +58,18 @@ def konversi_ke_clash(nodes):
                 vmess_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
                 config = json.loads(vmess_config.replace("false", "False").replace("true", "True"))
                 proxies.append({
+                    "name": config.get("ps", "Tanpa Nama"),  # Memastikan 'name' di atas
                     "alterId": int(config.get("aid", 0)),
-                    "type": "vmess",
-                    "server": BUGCDN,  # Ubah server menjadi BUGCDN
-                    "port": int(config["port"]),
-                    "uuid": config["id"],
-                    "name": config.get("ps", "Tanpa Nama"),
                     "cipher": "auto",
-                    "tls": "true" if config.get("tls") else "",
                     "network": config.get("net", "tcp"),
+                    "port": int(config["port"]),
+                    "server": BUGCDN,  # Ubah server menjadi BUGCDN
+                    "tls": "true" if config.get("tls") else "",
+                    "type": "vmess",
+                    "uuid": config["id"],
                     "ws-opts": {
-                        "path": config.get("path", ""),
-                        "headers": {"Host": config.get("host", "")}
+                        "headers": {"Host": config.get("host", "")},
+                        "path": config.get("path", "")
                     } if config.get("net") == "ws" else {}
                 })
             except Exception as e:
@@ -84,6 +84,7 @@ def konversi_ke_clash(nodes):
         }],
         "rules": ["MATCH,🔰 Pilihan Node"]
     }
+    return yaml.dump(config_clash, allow_unicode=True, sort_keys=False)  # Menonaktifkan penyortiran kunci
     return yaml.dump(config_clash, allow_unicode=True)
 
 def main():
