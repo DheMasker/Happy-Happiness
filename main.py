@@ -1,6 +1,3 @@
-#trojan meh
-
-
 import base64
 import requests
 import yaml
@@ -10,8 +7,6 @@ import os
 SUB_LINKS = [ 
     "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
 ]
-
-BUGCDN = "104.22.5.240"
 
 def ambil_langganan():
     semua_node = []
@@ -50,20 +45,39 @@ def konversi_ke_clash(nodes):
                     continue
 
                 credentials, server_info = parts
-                server_details = server_info.split(':')
+                server_details = server_info.split('#')
                 if len(server_details) != 2:
                     print("⚠️ Format server info tidak valid")
                     continue
+                
+                server_port, name = server_details[0], server_details[1]
+                server_info_parts = server_port.split(':')
+                if len(server_info_parts) != 2:
+                    print("⚠️ Format server info tidak valid")
+                    continue
 
-                server, port = server_details
+                server, port = server_info_parts
+                query_params = server_info.split('?')[1] if '?' in server_info else ''
+                sni = ''
+                if query_params:
+                    params = dict(param.split('=') for param in query_params.split('&'))
+                    sni = params.get('sni', '')
+
                 proxies.append({
-                    "name": credentials,  # Menggunakan credentials sebagai nama
+                    "name": name,  
                     "server": server,
                     "port": int(port),
                     "type": "trojan",
-                    "cipher": "auto",
-                    "tls": True,
+                    "password": credentials,
                     "skip-cert-verify": True,
+                    "sni": sni,
+                    "network": "ws",
+                    "ws-opts": {
+                        "path": "/trojan-ws",
+                        "headers": {
+                            "Host": sni
+                        }
+                    },
                     "udp": True
                 })
             except Exception as e:
