@@ -64,7 +64,7 @@ def konversi_ke_clash(nodes):
                     "network": config.get("net", "tcp"),
                     "port": int(config["port"]),
                     "server": BUGCDN,  # Ubah server menjadi BUGCDN
-                    "tls": config.get("tls") == 'true',  # Mengonversi menjadi boolean
+                    "tls": True if config.get("tls") in ['', 'false'] else False,  # Mengatur menjadi True jika kosong atau 'false'
                     "type": "vmess",
                     "uuid": config["id"],
                     "ws-opts": {
