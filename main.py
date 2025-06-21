@@ -1,7 +1,6 @@
 import requests
 import yaml
 import os
-import json
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
@@ -27,32 +26,8 @@ def saring_node(nodes):
     terfilter = []
     for node in nodes:
         if node.startswith("trojan://"):
-            info = decode_node_info(node)
-            if info is not None:
-                if info.get("port") in {443, 80}:
-                    terfilter.append(node)
+            terfilter.append(node)
     return terfilter
-
-def decode_node_info(node):
-    try:
-        if node.startswith("trojan://"):
-            raw = node[10:]  # Menghapus 'trojan://'
-            # Pisahkan bagian-bagian node
-            parts = raw.split('@')
-            if len(parts) != 2:
-                return None
-            credentials, server_info = parts
-            server_details = server_info.split(':')
-            if len(server_details) != 2:
-                return None
-            return {
-                "id": credentials,  # ID dari node Trojan
-                "server": server_details[0],
-                "port": int(server_details[1]),
-            }
-    except Exception as e:
-        print(f"⚠️ Gagal mendecode node: {e}")
-        return None
 
 def konversi_ke_clash(nodes):
     proxies = []
@@ -60,13 +35,25 @@ def konversi_ke_clash(nodes):
     for node in nodes:
         if node.startswith("trojan://"):
             try:
-                info = decode_node_info(node)
+                # Menghapus 'trojan://' dan memisahkan bagian
+                raw = node[10:]  # Menghapus 'trojan://'
+                parts = raw.split('@')
+                if len(parts) != 2:
+                    print("⚠️ Format node Trojan tidak valid")
+                    continue
+
+                credentials, server_info = parts
+                server_details = server_info.split(':')
+                if len(server_details) != 2:
+                    print("⚠️ Format server info tidak valid")
+                    continue
+
+                server, port = server_details
                 proxies.append({
-                    "name": info["id"],  # Menggunakan ID sebagai nama
-                    "server": BUGCDN,
-                    "port": info["port"],
+                    "name": credentials,  # Menggunakan credentials sebagai nama
+                    "server": server,
+                    "port": int(port),
                     "type": "trojan",
-                    "uuid": info["id"],
                     "cipher": "auto",
                     "tls": True,
                     "skip-cert-verify": True,
@@ -84,7 +71,7 @@ def main():
     nodes = ambil_langganan()
     filtered_nodes = saring_node(nodes)
     os.makedirs("proxies", exist_ok=True)
-    with open("proxies/trojanwscdn443and80.yaml", "w", encoding="utf-8") as f:
+    with open("proxies/trojan.yaml", "w", encoding="utf-8") as f:
         f.write(konversi_ke_clash(filtered_nodes))
 
 if __name__ == "__main__":
