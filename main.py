@@ -15,6 +15,7 @@ def ambil_langganan():
             print(f"Mengambil langganan: {url}")
             res = requests.get(url, timeout=60)
             konten = res.text.strip()
+            # Mendecode Base64 jika diperlukan
             if konten:
                 konten = base64.b64decode(konten + '===').decode('utf-8', errors='ignore')
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
@@ -27,28 +28,7 @@ def saring_node(nodes):
     terfilter = []
     for node in nodes:
         if node.startswith("trojan://"):
-            # Mendapatkan informasi server dan port
-            raw = node[10:]  # Menghapus 'trojan://'
-            parts = raw.split('@')
-            if len(parts) != 2:
-                continue
-
-            server_info = parts[1].split(':')
-            if len(server_info) < 2:
-                continue
-
-            # Mengambil port sebelum tanda tanya atau karakter lainnya
-            server = server_info[0]
-            port_info = server_info[1].split('?')[0]  # Ambil bagian sebelum tanda tanya atau karakter lainnya
-
-            try:
-                port = int(port_info)  # Convert port to integer
-            except ValueError:
-                continue  # Jika gagal, lewati node ini
-
-            # Memeriksa apakah port adalah 80 atau 443
-            if port in [80, 443]:
-                terfilter.append(node)
+            terfilter.append(node)
     return terfilter
 
 def konversi_ke_clash(nodes):
@@ -66,36 +46,31 @@ def konversi_ke_clash(nodes):
 
                 credentials, server_info = parts
                 server_details = server_info.split(':')
-                if len(server_details) < 2:
+                if len(server_details) != 2:
                     print("⚠️ Format server info tidak valid")
                     continue
 
-                server = server_details[0]
-                port_info = server_details[1].split('?')[0]  # Ambil port sebelum tanda tanya
-                port = int(port_info)  # Convert port to integer
+                server, port = server_details
+                params = server_info.split('?')[1] if '?' in server_info else ''
+                param_dict = {key: value for key, value in (x.split('=') for x in params.split('&'))}
 
-                # Memproses parameter tambahan
-                params = {}
-                if '?' in server_info:
-                    param_str = server_info.split('?')[1]
-                    try:
-                        params = dict(param.split('=') for param in param_str.split('&') if '=' in param)
-                    except ValueError:
-                        print("⚠️ Format parameter tidak valid")
-                        continue
+                # Mengambil name dari bagian setelah '#'
+                name = param_dict.get('name', credentials.split(':')[0])  # Menggunakan username sebagai nama
 
                 proxies.append({
-                    "name": params.get("name", "Tanpa Nama"),  # Mengambil nama dari parameter atau default
+                    "name": name,
                     "server": server,
-                    "port": port,
+                    "port": int(port),
                     "type": "trojan",
-                    "password": credentials.split(':')[0],  # Mengambil password
+                    "password": credentials.split(':')[1],  # Mengambil password
                     "skip-cert-verify": True,
-                    "sni": params.get("sni", ""),  # Menggunakan sni jika ada
-                    "network": "ws",  # Menggunakan network ws
+                    "sni": param_dict.get('sni', ''),
+                    "network": param_dict.get('type', 'ws'),
                     "ws-opts": {
-                        "path": params.get("path", "/trojan-ws"),  # Menggunakan path jika ada
-                        "headers": {"Host": params.get("host", "")}  # Menggunakan host jika ada
+                        "path": param_dict.get('path', '/'),
+                        "headers": {
+                            "Host": param_dict.get('host', '')
+                        }
                     },
                     "udp": True
                 })
@@ -105,7 +80,10 @@ def konversi_ke_clash(nodes):
     proxies_clash = {
         "proxies": proxies
     }
-    return yaml.dump(proxies_clash, allow_unicode=True, sort_keys=False)
+    
+    # Menghasilkan YAML tanpa tanda kutip
+    yaml_output = yaml.dump(proxies_clash, allow_unicode=True, sort_keys=False, default_style=None)
+    return yaml_output.replace('"', '').replace("'", '')
 
 def main():
     nodes = ambil_langganan()
