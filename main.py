@@ -5,14 +5,14 @@ import os
 import json  # Menggunakan json untuk decode
 
 # Daftar sumber langganan
-SUB_LINKS = [
-    "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/networks/ws",
-     "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/trojan",
-     "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/vmess",     
+SUB_LINKS = [ 
     "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
     "https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2",
     "https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/v2ray",
     "https://raw.githubusercontent.com/iwxf/free-v2ray/master/v2",
+    "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/networks/ws",
+    "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/trojan",
+    "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/vmess",       
     "https://raw.githubusercontent.com/Leon406/SubCrawler/main/sub/share/v2ray.txt"
 ]
 
