@@ -40,11 +40,10 @@ def decode_node_info_base64(node):
     try:
         if node.startswith("vmess://") or node.startswith("trojan://"):
             raw = node[8:]
-            # Cek apakah ada karakter non-ASCII
-            if not all(ord(char) < 128 for char in raw):
-                print(f"тЪая╕П Karakter non-ASCII ditemukan dalam node: {node}")
-                return None
-            
+
+            # Hapus karakter non-ASCII dari raw
+            raw = ''.join(char for char in raw if ord(char) < 128)
+
             # Tambahkan padding jika perlu
             padding = len(raw) % 4
             if padding:
