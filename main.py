@@ -63,13 +63,12 @@ def konversi_ke_clash(nodes):
 
                 if query_params:
                     params = dict(param.split('=') for param in query_params.split('&'))
-                    sni = params.get('sni', '')
                     host = params.get('host', '')
-                    path = params.get('path', path)
+                    path = urllib.parse.unquote(params.get('path', path))  # Decode path
+                    sni = params.get('sni', '')  # Get sni directly
 
-                # Decode nama dan host
+                # Decode name
                 decoded_name = urllib.parse.unquote(name)
-                decoded_host = urllib.parse.unquote(host)
 
                 proxies.append({
                     "name": decoded_name,  
@@ -78,15 +77,15 @@ def konversi_ke_clash(nodes):
                     "type": "trojan",
                     "password": credentials,
                     "skip-cert-verify": True,
-                    "sni": int(sni),
+                    "sni": sni,  # Keep it as string
                     "network": "ws",
                     "ws-opts": {
-                        "path": int(path),
+                        "path": path,  # Keep it as string
                         "headers": {
-                            "Host": int(host)
+                            "Host": host  # Keep it as string
                         }
                     },
-                    "udp": true
+                    "udp": True  # Use True instead of true
                 })
             except Exception as e:
                 print(f"⚠️ Gagal memparsing trojan: {e}")
