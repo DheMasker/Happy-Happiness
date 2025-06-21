@@ -51,26 +51,26 @@ def konversi_ke_clash(nodes):
                     continue
 
                 server, port = server_details
-                params = server_info.split('?')[1] if '?' in server_info else ''
-                param_dict = {key: value for key, value in (x.split('=') for x in params.split('&'))}
+                password = credentials.split(':')[0]  # Mengambil username sebagai password
+                name = f"TR-WS-NA 🇰🇷 {server}:{port}"  # Format nama sesuai keinginan
+                sni = server_info.split('sni=')[1].split('&')[0] if 'sni=' in server_info else ''  # Mengambil SNI
 
-                # Mengambil name dari bagian setelah '#'
-                name = param_dict.get('name', credentials.split(':')[0])  # Menggunakan username sebagai nama
+                # Mengambil host dari query
+                query_params = {param.split('=')[0]: param.split('=')[1] for param in server_info.split('?')[1].split('&')}
+                host = query_params.get('host', '')
 
                 proxies.append({
-                    "name": name,
-                    "server": server,
-                    "port": int(port),
+                    "name": name,  # Menggunakan format nama yang diinginkan
                     "type": "trojan",
-                    "password": credentials.split(':')[1],  # Mengambil password
+                    "server": server,
+                    "port": int(port), 
+                    "password": password,
                     "skip-cert-verify": True,
-                    "sni": param_dict.get('sni', ''),
-                    "network": param_dict.get('type', 'ws'),
+                    "sni": sni,
+                    "network": "ws",
                     "ws-opts": {
-                        "path": param_dict.get('path', '/'),
-                        "headers": {
-                            "Host": param_dict.get('host', '')
-                        }
+                        "path": "",  # Dibiarkan kosong jika tidak ada path
+                        "headers": {"Host": host}
                     },
                     "udp": True
                 })
@@ -80,14 +80,13 @@ def konversi_ke_clash(nodes):
     proxies_clash = {
         "proxies": proxies
     }
-    
-    # Menghasilkan YAML tanpa tanda kutip
-    yaml_output = yaml.dump(proxies_clash, allow_unicode=True, sort_keys=False, default_style=None)
-    return yaml_output.replace('"', '').replace("'", '')
+    return yaml.dump(proxies_clash, allow_unicode=True, sort_keys=False)
 
 def main():
     nodes = ambil_langganan()
     filtered_nodes = saring_node(nodes)
+    
+    # Membuat direktori untuk menyimpan hasil
     os.makedirs("proxies", exist_ok=True)
     with open("proxies/trojan.yaml", "w", encoding="utf-8") as f:
         f.write(konversi_ke_clash(filtered_nodes))
