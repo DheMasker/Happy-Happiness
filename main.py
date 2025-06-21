@@ -1,119 +1,127 @@
 import base64
 import requests
 import yaml
-import re
 import os
-import urllib.parse
+import json
+import urllib.parse  # Pastikan mengimpor urllib.parse untuk URL encoding
 
-# 节点订阅源（可以添加多个）
+# Daftar sumber langganan
 SUB_LINKS = [
     "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
 ]
 
-# 优选地区关键词
-ALLOWED_KEYWORDS = ["香港", "HK", "Taiwan", "台湾", "Japan", "日本", "United States", "美国", "Germany", "France", "UK", "伦敦", "荷兰", "瑞士", "挪威", "芬兰", "丹麦", "波兰", "瑞典"]
+BUGCDN = "104.22.5.240"
 
-def fetch_subscriptions():
-    all_nodes = []
+def ambil_langganan():
+    semua_node = []
     for url in SUB_LINKS:
         try:
-            print(f"获取订阅：{url}")
+            print(f"Mengambil langganan: {url}")
             res = requests.get(url, timeout=10)
-            content = res.text.strip()
-            if not content.startswith("vmess") and not content.startswith("ss") and not content.startswith("trojan"):
-                content = base64.b64decode(content + '===').decode('utf-8', errors='ignore')
-            lines = [line.strip() for line in content.splitlines() if line.strip()]
-            all_nodes.extend(lines)
+            konten = res.text.strip()
+            if not konten.startswith("vmess") and not konten.startswith("trojan"):
+                konten = base64.b64decode(konten + '===').decode('utf-8', errors='ignore')
+            baris = [line.strip() for line in konten.splitlines() if line.strip()]
+            semua_node.extend(baris)
         except Exception as e:
-            print(f"❌ 订阅源错误: {url} -> {e}")
-    return all_nodes
+            print(f"❌ Kesalahan sumber langganan: {url} -> {e}")
+    return semua_node
 
-def filter_nodes(nodes):
-    filtered = []
+def saring_node(nodes):
+    terfilter = []
     for node in nodes:
-        info = base64_decode_node_info(node)
-        if info and any(k in info for k in ALLOWED_KEYWORDS):
-            filtered.append(node)
-    return filtered[:10]  # 只保留前 10 条
+        info = decode_node_info_base64(node)
+        if info is not None:
+            if (node.startswith("vmess://") or node.startswith("trojan://")) and info.get("port") in {443, 80} and info.get("net") == "ws":
+                terfilter.append(node)
+    return terfilter
 
-def base64_decode_node_info(node):
+def decode_node_info_base64(node):
     try:
-        if node.startswith("vmess://"):
+        if node.startswith("vmess://") or node.startswith("trojan://"):
             raw = node[8:]
             decoded = base64.b64decode(raw + '===').decode('utf-8', errors='ignore')
-            return decoded
-        elif node.startswith("ss://") or node.startswith("trojan://"):
-            return node
-    except:
-        return ""
+            return json.loads(decoded.replace("false", "False").replace("true", "True"))
+    except Exception as e:
+        print(f"⚠️ Gagal mendecode node: {e}")
+        return None
 
-def save_v2ray_file(nodes, filename):
-    with open(filename, 'w', encoding='utf-8') as f:
-        for node in nodes:
-            f.write(node.strip() + '\n')
-
-def convert_to_clash(nodes):
+def konversi_ke_clash(nodes):
     proxies = []
+
     for node in nodes:
         if node.startswith("vmess://"):
             try:
                 vmess_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
-                config = eval(vmess_config.replace("false", "False").replace("true", "True"))
+                config = json.loads(vmess_config.replace("false", "False").replace("true", "True"))
                 proxies.append({
-                    "name": config.get("ps", "Unnamed"),
-                    "type": "vmess",
-                    "server": config["add"],
+                    "name": config.get("ps", "Tanpa Nama"),
+                    "server": BUGCDN,
                     "port": int(config["port"]),
+                    "type": "vmess",
                     "uuid": config["id"],
                     "alterId": int(config.get("aid", 0)),
                     "cipher": "auto",
-                    "tls": "tls" if config.get("tls") else "",
-                    "network": config.get("net", "tcp"),
+                    "tls": True,
+                    "skip-cert-verify": True,
+                    "servername": config.get("host", ""),
+                    "network": config.get("net", "ws"),
                     "ws-opts": {
-                        "path": config.get("path", ""),
+                        "path": config.get("path", "/vmess-ws"),
                         "headers": {"Host": config.get("host", "")}
-                    } if config.get("net") == "ws" else {}
+                    },
+                    "udp": True
                 })
             except Exception as e:
-                print(f"⚠️ vmess 解析失败: {e}")
+                print(f"⚠️ Gagal memparsing vmess: {e}")
 
         elif node.startswith("trojan://"):
-            # Mengurai URL Trojan
             try:
-                trojan_parts = node[8:].split('@')
-                auth = trojan_parts[0].split(':')
-                server_port = trojan_parts[1].split(':')
-                server = server_port[0]
-                port = int(server_port[1])
-                password = auth[0]
-                name = urllib.parse.unquote(trojan_parts[1].split('#')[-1]) if '#' in trojan_parts[1] else ""
+                trojan_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
+                config = json.loads(trojan_config.replace("false", "False").replace("true", "True"))
+                trojan_go = '?allowInsecure=1'  # Default
+
+                if 'tls' in config and 'network' in config:
+                    if config['tls'] and config['network'] != 'tcp':
+                        network_type = config['network']
+                        trojan_go = f'?security=tls&type={network_type}&headerType=none'
+                    elif not config['tls'] and config['network'] != 'tcp':
+                        trojan_go = f'?allowInsecure=0&type={network_type}&headerType=none'
+
+                if 'sni' in config and config['sni']:
+                    trojan_go += f'&sni={config["sni"]}'
 
                 proxies.append({
-                    "name": name or "Unnamed",
+                    "name": config.get("ps", "Tanpa Nama"),
+                    "server": BUGCDN,
+                    "port": config["port"],
                     "type": "trojan",
-                    "server": server,
-                    "port": port,
-                    "password": password,
-                    "tls": "tls",  # Sesuaikan ini jika ada kondisi tls
+                    "password": config["password"],
+                    "skip-cert-verify": True,
+                    "sni": config.get("host", ""),
+                    "network": config.get("net", "ws"),
+                    "ws-opts": {
+                        "path": config.get("path", "/trojan-ws"),
+                        "headers": {"Host": config.get("host", "")}
+                    },
+                    "udp": True
                 })
             except Exception as e:
-                print(f"⚠️ trojan 解析失败: {e}")
+                print(f"⚠️ Gagal memparsing trojan: {e}")
 
-    clash_config = {
+    config_clash = {
         "proxies": proxies
     }
-    return yaml.dump(clash_config, allow_unicode=True)
+    return yaml.dump(config_clash, allow_unicode=True, sort_keys=False)
 
 def main():
-    nodes = fetch_subscriptions()
-    filtered_nodes = filter_nodes(nodes)
+    nodes = ambil_langganan()
+    filtered_nodes = saring_node(nodes)
     os.makedirs("docs", exist_ok=True)
-    save_v2ray_file(filtered_nodes, "docs/v2ray.txt")
-    save_v2ray_file([base64.b64encode(n.encode()).decode() for n in filtered_nodes], "docs/v2ray64.txt")
     with open("docs/clash.yaml", "w", encoding="utf-8") as f:
-        f.write(convert_to_clash(filtered_nodes))
+        f.write(konversi_ke_clash(filtered_nodes))
     with open("docs/index.html", "w", encoding="utf-8") as f:
-        f.write("<h2>订阅已生成</h2><ul><li><a href='clash.yaml'>clash.yaml</a></li><li><a href='v2ray.txt'>v2ray.txt</a></li><li><a href='v2ray64.txt'>v2ray64.txt</a></li></ul>")
+        f.write("<h2>Langganan Clash Telah Dihasilkan</h2><ul><li><a href='clash.yaml'>clash.yaml</a></li></ul>")
 
 if __name__ == "__main__":
     main()
