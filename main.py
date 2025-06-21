@@ -48,22 +48,32 @@ def konversi_ke_clash(nodes):
                     print("⚠️ Format server info tidak valid")
                     continue
 
-                server, port = server_details
+                server, port = server_details[0], server_details[1]  # server dan port
+                params = server_info.split('/?')[1] if '/?' in server_info else ''
+                param_parts = params.split('&')
+                
+                # Mengambil parameter yang diperlukan
+                network = param_parts[0].split('=')[1] if 'type=' in param_parts[0] else ''
+                host = next((p.split('=')[1] for p in param_parts if 'host=' in p), '')
+                path = next((p.split('=')[1] for p in param_parts if 'path=' in p), '/')
+                sni = next((p.split('=')[1] for p in param_parts if 'sni=' in p), '')
+                allow_insecure = next((p.split('=')[1] for p in param_parts if 'allowInsecure=' in p), '0')
+
                 proxies.append({
                     "name": server_info.split("#")[1] if "#" in server_info else "Unknown",  # Nama
                     "server": server,  # Server
                     "port": int(port),  # Port
                     "type": "trojan",  # Tipe
                     "password": password,  # Password
-                    "network": "ws",  # Network
+                    "network": network,  # Network
                     "ws-opts": {
-                        "path": "/trojan-ws",  # Path
+                        "path": path,  # Path
                         "headers": {
-                            "Host": server  # Host
+                            "Host": host  # Host
                         }
                     },
-                    "skip-cert-verify": True,  # Skip Cert Verify
-                    "sni": "",  # SNI
+                    "skip-cert-verify": allow_insecure == '1',  # Mengubah 1/0 menjadi True/False
+                    "sni": sni,  # SNI
                     "tls": True,  # TLS
                     "udp": True  # UDP
                 })
