@@ -57,7 +57,7 @@ def konversi_ke_clash(nodes):
 
                 server, port = server_details
                 proxies.append({
-                    "name": ini("ps", "Tanpa Nama"),  # Memastikan 'name' di atas
+                    "name": init("ps", "Tanpa Nama"),  # Memastikan 'name' di atas
                     "server": BUGCDN,  # Menggunakan BUGCDN
                     "port": init["port"],
                     "type": "trojan",
@@ -66,8 +66,8 @@ def konversi_ke_clash(nodes):
                     "sni": init("host", ""),
                     "network": init("net", "ws"),
                     "ws-opts": {
-                        "path": ini("path", "/trojan-ws"),
-                        "headers": {"Host": ghni("host", "")}
+                        "path": init("path", "/trojan-ws"),
+                        "headers": {"Host": init("host", "")}
                     },
                     "udp": True
                 })
