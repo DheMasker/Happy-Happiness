@@ -10,6 +10,11 @@ SUB_LINKS = [
 
 BUGCDN = "104.22.5.240"
 
+# Memuat konfigurasi dari file
+def load_config():
+    with open("config.yaml", "r") as f:
+        return yaml.safe_load(f)
+
 def ambil_langganan():
     semua_node = []
     for url in SUB_LINKS:
@@ -17,7 +22,7 @@ def ambil_langganan():
             print(f"Mengambil langganan: {url}")
             res = requests.get(url, timeout=60)
             konten = res.text.strip()
-            # Mendecode Base64
+            # Mendecode Base64 jika diperlukan
             if konten:
                 konten = base64.b64decode(konten + '===').decode('utf-8', errors='ignore')
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
@@ -33,7 +38,7 @@ def saring_node(nodes):
             terfilter.append(node)
     return terfilter
 
-def konversi_ke_clash(nodes):
+def konversi_ke_clash(nodes, config):
     proxies = []
 
     for node in nodes:
@@ -54,13 +59,18 @@ def konversi_ke_clash(nodes):
 
                 server, port = server_details
                 proxies.append({
-                    "name": credentials,  # Menggunakan credentials sebagai nama
-                    "server": server,
-                    "port": int(port),
+                    "name": config.get("ps", "Tanpa Nama"),  # Memastikan 'name' di atas
+                    "server": BUGCDN,  # Menggunakan BUGCDN
+                    "port": int(config["port"]),  # Pastikan port diambil dari config
                     "type": "trojan",
-                    "cipher": "auto",
-                    "tls": True,
+                    "password": config["password"],  # Menggunakan password dari config
                     "skip-cert-verify": True,
+                    "sni": config.get("host", ""),
+                    "network": config.get("net", "ws"),
+                    "ws-opts": {
+                        "path": config.get("path", "/trojan-ws"),
+                        "headers": {"Host": config.get("host", "")}
+                    },
                     "udp": True
                 })
             except Exception as e:
@@ -72,11 +82,12 @@ def konversi_ke_clash(nodes):
     return yaml.dump(proxies_clash, allow_unicode=True, sort_keys=False)
 
 def main():
+    config = load_config()
     nodes = ambil_langganan()
     filtered_nodes = saring_node(nodes)
     os.makedirs("proxies", exist_ok=True)
     with open("proxies/trojan.yaml", "w", encoding="utf-8") as f:
-        f.write(konversi_ke_clash(filtered_nodes))
+        f.write(konversi_ke_clash(filtered_nodes, config))
 
 if __name__ == "__main__":
     main()
