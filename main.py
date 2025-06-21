@@ -39,15 +39,20 @@ def saring_node(nodes):
 
 def decode_node_info_base64(node):
     try:
-        if not node:
-            print("тЪая╕П Node kosong diberikan.")
+        if not node or not isinstance(node, str):
+            print("тЪая╕П Node kosong atau bukan string diberikan.")
             return None
-        
+
+        print(f"Memproses node: {node}")  # Logging node yang sedang diproses
+
         if node.startswith("vmess://") or node.startswith("trojan://"):
             # Memisahkan bagian yang valid untuk dekode
             raw = node[8:].split('#')[0]  # Ambil hanya bagian sebelum '#'
             parts = raw.split('@')
             
+            # Logging untuk memeriksa bagian yang dipisahkan
+            print(f"Bagian yang dipisahkan: {parts}")
+
             if len(parts) < 2:
                 print(f"тЪая╕П Gagal memisahkan bagian dari node: {node} - Tidak ada '@' yang ditemukan.")
                 return None
