@@ -40,22 +40,29 @@ def saring_node(nodes):
 def decode_node_info_base64(node):
     try:
         if node.startswith("vmess://") or node.startswith("trojan://"):
-            # Memisahkan bagian valid dan tidak valid
+            # Memisahkan bagian yang valid untuk dekode
             raw = node[8:].split('#')[0]  # Ambil hanya bagian sebelum '#'
-            raw = raw.split('@')[0] + '@' + raw.split('@')[1]  # Memisahkan informasi server dan port
+            # Pisahkan bagian yang valid sebelum dan setelah '@'
+            parts = raw.split('@')
+            if len(parts) < 2:
+                print(f"тЪая╕П Gagal memisahkan bagian dari node: {node}")
+                return None
             
+            # Ambil bagian sebelum '@' dan tambahkan bagian setelah '@' yang relevan
+            base64_part = parts[0] + '@' + parts[1].split('?')[0]  # Ambil hanya bagian sebelum query string
+
             # Validasi format Base64
-            if not re.match(r'^[A-Za-z0-9+/=]*$', raw):
-                print(f"тЪая╕П Karakter tidak valid ditemukan dalam Base64: {raw}")
+            if not re.match(r'^[A-Za-z0-9+/=]*$', base64_part):
+                print(f"тЪая╕П Karakter tidak valid ditemukan dalam Base64: {base64_part}")
                 return None
             
             # Tambahkan padding jika perlu
-            padding = len(raw) % 4
+            padding = len(base64_part) % 4
             if padding:
-                raw += '=' * (4 - padding)
+                base64_part += '=' * (4 - padding)
 
             # Dekode string
-            decoded = base64.b64decode(raw, validate=True).decode('utf-8', errors='ignore')
+            decoded = base64.b64decode(base64_part, validate=True).decode('utf-8', errors='ignore')
             return json.loads(decoded.replace("false", "False").replace("true", "True"))
     except json.JSONDecodeError as json_err:
         print(f"тЪая╕П Gagal memparsing JSON dari node: {node} -> {json_err}")
