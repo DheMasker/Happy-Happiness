@@ -2,10 +2,10 @@ import base64
 import requests
 import yaml
 import os
-import urllib.parse  # Import ini untuk mendekode URL
+import urllib.parse
 
 # Daftar sumber langganan
-SUB_LINKS = [ 
+SUB_LINKS = [
     "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
 ]
 
@@ -57,36 +57,41 @@ def konversi_ke_clash(nodes):
 
                 server, port = server_info_parts
 
-                # Set sni, host, and path directly
-                sni = server  # Use server as SNI
-                host = server  # Use server as Host
+                # Memisahkan dan mencetak detail
+                server_parameters = server_info.split('&')  # Menggunakan '&' untuk memisahkan parameter
+                for detail in server_parameters:
+                    key, value = detail.split('=')
+                    print(f"{key}: {value}")
 
-                # Extract path from query parameters if present
-                path = ''
-                if '?' in server_info:
-                    query_params = server_info.split('?')[1]
-                    params = dict(param.split('=') for param in query_params.split('&'))
-                    path = params.get('path', '')  # Get path from query, default to empty
+                    # Logika tambahan untuk memeriksa format tertentu
+                    if key == 'host':
+                        host = value
+                    elif key == 'path':
+                        path = value
+                    elif key == 'security':
+                        security = value
+                    elif key == 'sni':
+                        sni = value
 
-                # Decode name
+                # Dekode nama
                 decoded_name = urllib.parse.unquote(name)
 
                 proxies.append({
-                    "name": decoded_name,  
+                    "name": decoded_name,
                     "server": server,
                     "port": int(port),
                     "type": "trojan",
                     "password": credentials,
                     "skip-cert-verify": True,
-                    "sni": sni,  # Use server as SNI
+                    "sni": sni,
                     "network": "ws",
                     "ws-opts": {
-                        "path": path,  # Use extracted path
+                        "path": path,
                         "headers": {
-                            "Host": host  # Use server as Host
+                            "Host": host
                         }
                     },
-                    "udp": True  # Use True instead of true
+                    "udp": True
                 })
             except Exception as e:
                 print(f"⚠️ Gagal memparsing trojan: {e}")
