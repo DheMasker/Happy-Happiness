@@ -64,7 +64,7 @@ def konversi_ke_clash(nodes):
                     "network": config.get("net", "tcp"),
                     "port": int(config["port"]),
                     "server": BUGCDN,  # Ubah server menjadi BUGCDN
-                    "tls": "true" if config.get("tls") else "",
+                    "tls": config.get("tls") == 'true',  # Mengonversi menjadi boolean
                     "type": "vmess",
                     "uuid": config["id"],
                     "ws-opts": {
@@ -85,7 +85,6 @@ def konversi_ke_clash(nodes):
         "rules": ["MATCH,🔰 Pilihan Node"]
     }
     return yaml.dump(config_clash, allow_unicode=True, sort_keys=False)  # Menonaktifkan penyortiran kunci
-    return yaml.dump(config_clash, allow_unicode=True)
 
 def main():
     nodes = ambil_langganan()
