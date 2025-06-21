@@ -36,7 +36,8 @@ def saring_node(nodes):
     for node in nodes:
         info = decode_node_info_base64(node)
         if info is not None:  # Pastikan info bukan None
-            if (node.startswith("vmess://") or node.startswith("trojan://")) and info.get("net") == "ws" and info.get("port") in {443, 80}:
+            # Mengizinkan semua node dengan port 443 atau 80
+            if (node.startswith("vmess://") or node.startswith("trojan://")) and info.get("port") in {443, 80}:
                 terfilter.append(node)
     return terfilter
 
