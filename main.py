@@ -39,7 +39,6 @@ def konversi_ke_clash(nodes):
     for node in nodes:
         if node.startswith("trojan://"):
             try:
-                # Menghapus 'trojan://' dan memisahkan bagian
                 raw = node[10:]  # Menghapus 'trojan://'
                 parts = raw.split('@')
                 if len(parts) != 2:
@@ -53,16 +52,20 @@ def konversi_ke_clash(nodes):
                     continue
 
                 server, port = server_details
-                proxies.append({
-                    "name": credentials,  # Menggunakan credentials sebagai nama
-                    "server": server,
-                    "port": int(port),
-                    "type": "trojan",
-                    "cipher": "auto",
-                    "tls": True,
-                    "skip-cert-verify": True,
-                    "udp": True
-                })
+                port = int(port)
+                
+                # Filter hanya untuk port 80 dan 443
+                if port in [80, 443]:
+                    proxies.append({
+                        "name": credentials,
+                        "server": BUGCDN,
+                        "port": port,
+                        "type": "trojan",
+                        "cipher": "auto",
+                        "tls": True,
+                        "skip-cert-verify": True,
+                        "udp": True
+                    })
             except Exception as e:
                 print(f"⚠️ Gagal memparsing trojan: {e}")
 
