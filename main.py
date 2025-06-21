@@ -2,13 +2,18 @@ import base64
 import requests
 import yaml
 import os
-import json
-import re
+import json  # Menggunakan json untuk decode
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
+    "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
+    "https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2",
+    "https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/v2ray",
+    "https://raw.githubusercontent.com/iwxf/free-v2ray/master/v2",
     "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/networks/ws",
-    "https://raw.githubusercontent.com/V2RayRoot/V2RayConfig/refs/heads/main/Config/vmess.txt"
+    "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/trojan",
+    "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/vmess",       
+    "https://raw.githubusercontent.com/Leon406/SubCrawler/main/sub/share/v2ray.txt"
 ]
 
 BUGCDN = "104.22.5.240"
@@ -25,59 +30,28 @@ def ambil_langganan():
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
             semua_node.extend(baris)
         except Exception as e:
-            print(f"тЭМ Kesalahan sumber langganan: {url} -> {e}")
+            print(f"❌ Kesalahan sumber langganan: {url} -> {e}")
     return semua_node
 
 def saring_node(nodes):
     terfilter = []
     for node in nodes:
         info = decode_node_info_base64(node)
-        if info is not None:
+        if info is not None:  # Pastikan info bukan None
+            # Mengizinkan semua node dengan port 443 atau 80 dan network ws
             if (node.startswith("vmess://") or node.startswith("trojan://")) and info.get("port") in {443, 80} and info.get("net") == "ws":
                 terfilter.append(node)
     return terfilter
 
 def decode_node_info_base64(node):
     try:
-        if not node or not isinstance(node, str):
-            print("тЪая╕П Node kosong atau bukan string diberikan.")
-            return None
-
-        print(f"Memproses node: {node}")  # Logging node yang sedang diproses
-
         if node.startswith("vmess://") or node.startswith("trojan://"):
-            # Memisahkan bagian yang valid untuk dekode
-            raw = node[8:].split('#')[0]  # Ambil hanya bagian sebelum '#'
-            parts = raw.split('@')
-            
-            # Logging untuk memeriksa bagian yang dipisahkan
-            print(f"Bagian yang dipisahkan: {parts}")
-
-            if len(parts) < 2:
-                print(f"тЪая╕П Gagal memisahkan bagian dari node: {node} - Tidak ada '@' yang ditemukan.")
-                return None
-            
-            # Ambil bagian sebelum '@' dan tambahkan bagian setelah '@' yang relevan
-            base64_part = parts[0] + '@' + parts[1].split('?')[0]  # Ambil hanya bagian sebelum query string
-
-            # Validasi format Base64
-            if not re.match(r'^[A-Za-z0-9+/=]*$', base64_part):
-                print(f"тЪая╕П Karakter tidak valid ditemukan dalam Base64: {base64_part}")
-                return None
-            
-            # Tambahkan padding jika perlu
-            padding = len(base64_part) % 4
-            if padding:
-                base64_part += '=' * (4 - padding)
-
-            # Dekode string
-            decoded = base64.b64decode(base64_part, validate=True).decode('utf-8', errors='ignore')
+            raw = node[8:]
+            decoded = base64.b64decode(raw + '===').decode('utf-8', errors='ignore')
             return json.loads(decoded.replace("false", "False").replace("true", "True"))
-    except json.JSONDecodeError as json_err:
-        print(f"тЪая╕П Gagal memparsing JSON dari node: {node} -> {json_err}")
     except Exception as e:
-        print(f"тЪая╕П Gagal mendecode node: {e}")
-    return None
+        print(f"⚠️ Gagal mendecode node: {e}")
+        return None
 
 def konversi_ke_clash(nodes):
     proxies = []
@@ -88,14 +62,14 @@ def konversi_ke_clash(nodes):
                 vmess_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
                 config = json.loads(vmess_config.replace("false", "False").replace("true", "True"))
                 proxies.append({
-                    "name": config.get("ps", "Tanpa Nama"),
-                    "server": BUGCDN,
+                    "name": config.get("ps", "Tanpa Nama"),  # Memastikan 'name' di atas
+                    "server": BUGCDN,  # Menggunakan BUGCDN
                     "port": int(config["port"]),
                     "type": "vmess",
                     "uuid": config["id"],
                     "alterId": int(config.get("aid", 0)),
                     "cipher": "auto",
-                    "tls": True,
+                    "tls": True,  # Mengatur tls menjadi True
                     "skip-cert-verify": True,
                     "servername": config.get("host", ""),
                     "network": config.get("net", "ws"),
@@ -106,15 +80,15 @@ def konversi_ke_clash(nodes):
                     "udp": True
                 })
             except Exception as e:
-                print(f"тЪая╕П Gagal memparsing vmess: {e}")
+                print(f"⚠️ Gagal memparsing vmess: {e}")
 
         elif node.startswith("trojan://"):
             try:
                 trojan_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
                 config = json.loads(trojan_config.replace("false", "False").replace("true", "True"))
                 proxies.append({
-                    "name": config.get("ps", "Tanpa Nama"),
-                    "server": BUGCDN,
+                    "name": config.get("ps", "Tanpa Nama"),  # Memastikan 'name' di atas
+                    "server": BUGCDN,  # Menggunakan BUGCDN
                     "port": config["port"],
                     "type": "trojan",
                     "password": config["password"],
@@ -128,18 +102,18 @@ def konversi_ke_clash(nodes):
                     "udp": True
                 })
             except Exception as e:
-                print(f"тЪая╕П Gagal memparsing trojan: {e}")
+                print(f"⚠️ Gagal memparsing trojan: {e}")
 
     config_clash = {
         "proxies": proxies,
         "proxy-groups": [{
-            "name": "ЁЯФ░ Pilihan Node",
+            "name": "🔰 Pilihan Node",
             "type": "select",
             "proxies": [p["name"] for p in proxies]
         }],
-        "rules": ["MATCH,ЁЯФ░ Pilihan Node"]
+        "rules": ["MATCH,🔰 Pilihan Node"]
     }
-    return yaml.dump(config_clash, allow_unicode=True, sort_keys=False)
+    return yaml.dump(config_clash, allow_unicode=True, sort_keys=False)  # Menonaktifkan penyortiran kunci
 
 def main():
     nodes = ambil_langganan()
