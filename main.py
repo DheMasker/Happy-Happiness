@@ -1,6 +1,8 @@
+import base64
 import requests
 import yaml
 import os
+import json
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
@@ -16,6 +18,9 @@ def ambil_langganan():
             print(f"Mengambil langganan: {url}")
             res = requests.get(url, timeout=60)
             konten = res.text.strip()
+            # Mendecode Base64 jika diperlukan
+            if konten:
+                konten = base64.b64decode(konten + '===').decode('utf-8', errors='ignore')
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
             semua_node.extend(baris)
         except Exception as e:
