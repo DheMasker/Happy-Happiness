@@ -2,6 +2,7 @@ import base64
 import requests
 import yaml
 import os
+import urllib.parse  # Import ini untuk mendekode URL
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
@@ -15,7 +16,6 @@ def ambil_langganan():
             print(f"Mengambil langganan: {url}")
             res = requests.get(url, timeout=60)
             konten = res.text.strip()
-            # Mendecode Base64 jika diperlukan
             if konten:
                 konten = base64.b64decode(konten + '===').decode('utf-8', errors='ignore')
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
@@ -37,7 +37,6 @@ def konversi_ke_clash(nodes):
     for node in nodes:
         if node.startswith("trojan://"):
             try:
-                # Menghapus 'trojan://' dan memisahkan bagian
                 raw = node[10:]  # Menghapus 'trojan://'
                 parts = raw.split('@')
                 if len(parts) != 2:
@@ -59,12 +58,21 @@ def konversi_ke_clash(nodes):
                 server, port = server_info_parts
                 query_params = server_info.split('?')[1] if '?' in server_info else ''
                 sni = ''
+                host = ''
+                path = '/trojan-ws'  # Default path
+
                 if query_params:
                     params = dict(param.split('=') for param in query_params.split('&'))
                     sni = params.get('sni', '')
+                    host = params.get('host', '')
+                    path = params.get('path', path)
+
+                # Decode nama dan host
+                decoded_name = urllib.parse.unquote(name)
+                decoded_host = urllib.parse.unquote(host)
 
                 proxies.append({
-                    "name": name,  
+                    "name": decoded_name,  
                     "server": server,
                     "port": int(port),
                     "type": "trojan",
@@ -73,9 +81,9 @@ def konversi_ke_clash(nodes):
                     "sni": sni,
                     "network": "ws",
                     "ws-opts": {
-                        "path": "/trojan-ws",
+                        "path": urllib.parse.unquote(path),
                         "headers": {
-                            "Host": sni
+                            "Host": decoded_host
                         }
                     },
                     "udp": True
