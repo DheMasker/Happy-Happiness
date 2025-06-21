@@ -49,14 +49,25 @@ def konversi_ke_clash(nodes):
                 port_info = server_info[colon_index + 1:]  # Everything after port
                 port = int(port_info.split('?')[0])  # Extracting port
 
-                # Extract additional parameters (sni, host, path, name)
+                # Extract additional parameters (path, sni, host) from server_info
+                path = server_info.split('/')[1] if '/' in server_info else ''  # Path
+                query_params = port_info.split('?')[1] if '?' in port_info else ''
+
+                # Replace %2F with /
+                path = path.replace('%2F', '/')
+
+                sni = ''
+                host = ''
+
+                for param in query_params.split('&'):
+                    if param.startswith('sni='):
+                        sni = param.split('=')[1]
+                    elif param.startswith('host='):
+                        host = param.split('=')[1]
+
+                # Extract name from the node
                 name_index = server_info.index('#')
                 name = server_info[name_index + 1:] if name_index != -1 else "unknown"
-
-                # Extract path, sni, and host from the initial server_info
-                path = port_info.split('&path=')[1].split('&')[0] if 'path=' in port_info else ''
-                sni = port_info.split('&sni=')[1].split('&')[0] if 'sni=' in port_info else ''
-                host = port_info.split('&host=')[1].split('&')[0] if 'host=' in port_info else ''
 
                 # Append the proxy details
                 proxies.append({
@@ -66,12 +77,12 @@ def konversi_ke_clash(nodes):
                     "type": "trojan",
                     "password": password,
                     "skip-cert-verify": True,
-                    "sni": sni,
+                    "sni": sni,  # Extracted correctly
                     "network": "ws",
                     "ws-opts": {
-                        "path": path,  # Directly extracted from the node
+                        "path": '/' + path,  # Include leading /
                         "headers": {
-                            "Host": host  # Directly extracted from the node
+                            "Host": host  # Extracted correctly
                         }
                     },
                     "udp": True
