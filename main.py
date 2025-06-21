@@ -3,7 +3,6 @@ import requests
 import yaml
 import os
 import json
-import urllib.parse  # Pastikan mengimpor urllib.parse untuk URL encoding
 
 # Daftar sumber langganan
 SUB_LINKS = [
@@ -30,25 +29,13 @@ def ambil_langganan():
 def saring_node(nodes):
     terfilter = []
     for node in nodes:
-        info = decode_node_info_base64(node)
-        if info is not None:
-            if (node.startswith("vmess://") or node.startswith("trojan://")) and info.get("port") in {443, 80} and info.get("net") == "ws":
-                terfilter.append(node)
+        if node.startswith("vmess://"):
+            terfilter.append(node)
     return terfilter
-
-def decode_node_info_base64(node):
-    try:
-        if node.startswith("vmess://") or node.startswith("trojan://"):
-            raw = node[8:]
-            decoded = base64.b64decode(raw + '===').decode('utf-8', errors='ignore')
-            return json.loads(decoded.replace("false", "False").replace("true", "True"))
-    except Exception as e:
-        print(f"⚠️ Gagal mendecode node: {e}")
-        return None
 
 def konversi_ke_clash(nodes):
     proxies = []
-
+    
     for node in nodes:
         if node.startswith("vmess://"):
             try:
@@ -74,40 +61,6 @@ def konversi_ke_clash(nodes):
                 })
             except Exception as e:
                 print(f"⚠️ Gagal memparsing vmess: {e}")
-
-        elif node.startswith("trojan://"):
-            try:
-                trojan_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
-                config = json.loads(trojan_config.replace("false", "False").replace("true", "True"))
-                trojan_go = '?allowInsecure=1'  # Default
-
-                if 'tls' in config and 'network' in config:
-                    if config['tls'] and config['network'] != 'tcp':
-                        network_type = config['network']
-                        trojan_go = f'?security=tls&type={network_type}&headerType=none'
-                    elif not config['tls'] and config['network'] != 'tcp':
-                        trojan_go = f'?allowInsecure=0&type={network_type}&headerType=none'
-
-                if 'sni' in config and config['sni']:
-                    trojan_go += f'&sni={config["sni"]}'
-
-                proxies.append({
-                    "name": config.get("ps", "Tanpa Nama"),
-                    "server": BUGCDN,
-                    "port": config["port"],
-                    "type": "trojan",
-                    "password": config["password"],
-                    "skip-cert-verify": True,
-                    "sni": config.get("host", ""),
-                    "network": config.get("net", "ws"),
-                    "ws-opts": {
-                        "path": config.get("path", "/trojan-ws"),
-                        "headers": {"Host": config.get("host", "")}
-                    },
-                    "udp": True
-                })
-            except Exception as e:
-                print(f"⚠️ Gagal memparsing trojan: {e}")
 
     config_clash = {
         "proxies": proxies
