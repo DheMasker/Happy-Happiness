@@ -1,3 +1,6 @@
+#trojan meh
+
+
 import base64
 import requests
 import yaml
@@ -39,6 +42,7 @@ def konversi_ke_clash(nodes):
     for node in nodes:
         if node.startswith("trojan://"):
             try:
+                # Menghapus 'trojan://' dan memisahkan bagian
                 raw = node[10:]  # Menghapus 'trojan://'
                 parts = raw.split('@')
                 if len(parts) != 2:
@@ -52,25 +56,21 @@ def konversi_ke_clash(nodes):
                     continue
 
                 server, port = server_details
-                port = int(port)
-
-                # Filter hanya untuk port 80 dan 443 dengan network ws
-                if port in [80, 443]:
-                    proxies.append({
-                        "name": "Nama Proxy",  # Menggunakan nama tetap untuk proxy
-                        "server": BUGCDN,  # Menggunakan BUGCDN
-                        "port": port,  # Menggunakan port yang sudah difilter
-                        "type": "trojan",
-                        "password": "",  # Password bisa ditambahkan jika ada
-                        "skip-cert-verify": True,
-                        "sni": "",  # SNI opsional
-                        "network": "ws",  # Menggunakan WebSocket
-                        "ws-opts": {
-                            "path": "/trojan-ws",  # Path dari WebSocket
-                            "headers": {"Host": ""}  # Header opsional
-                        },
-                        "udp": True  # Menggunakan UDP
-                    })
+                proxies.append({
+                    "name": ini("ps", "Tanpa Nama"),  # Memastikan 'name' di atas
+                    "server": BUGCDN,  # Menggunakan BUGCDN
+                    "port": init["port"],
+                    "type": "trojan",
+                    "password": init["password"],
+                    "skip-cert-verify": True,
+                    "sni": in("host", ""),
+                    "network": init("net", "ws"),
+                    "ws-opts": {
+                        "path": ini("path", "/trojan-ws"),
+                        "headers": {"Host": ghni("host", "")}
+                    },
+                    "udp": True
+                })
             except Exception as e:
                 print(f"⚠️ Gagal memparsing trojan: {e}")
 
