@@ -39,6 +39,10 @@ def saring_node(nodes):
 
 def decode_node_info_base64(node):
     try:
+        if not node:
+            print("тЪая╕П Node kosong diberikan.")
+            return None
+        
         if node.startswith("vmess://") or node.startswith("trojan://"):
             # Memisahkan bagian yang valid untuk dekode
             raw = node[8:].split('#')[0]  # Ambil hanya bagian sebelum '#'
