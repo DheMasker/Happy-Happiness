@@ -76,13 +76,7 @@ def konversi_ke_clash(nodes):
                 print(f"⚠️ Gagal memparsing vmess: {e}")
 
     config_clash = {
-        "proxies": proxies,
-        "proxy-groups": [{
-            "name": "🔰 Pilihan Node",
-            "type": "select",
-            "proxies": [p["name"] for p in proxies]
-        }],
-        "rules": ["MATCH,🔰 Pilihan Node"]
+        "proxies": proxies
     }
     return yaml.dump(config_clash, allow_unicode=True, sort_keys=False)  # Menonaktifkan penyortiran kunci
 
