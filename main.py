@@ -6,6 +6,7 @@ import json  # Menggunakan json untuk decode
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
+ 
  "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
 
 ]
@@ -99,13 +100,7 @@ def konversi_ke_clash(nodes):
                 print(f"⚠️ Gagal memparsing trojan: {e}")
 
     config_clash = {
-        "proxies": proxies,
-        "proxy-groups": [{
-            "name": "🔰 Pilihan Node",
-            "type": "select",
-            "proxies": [p["name"] for p in proxies]
-        }],
-        "rules": ["MATCH,🔰 Pilihan Node"]
+        "proxies": proxies
     }
     return yaml.dump(config_clash, allow_unicode=True, sort_keys=False)  # Menonaktifkan penyortiran kunci
 
