@@ -78,12 +78,12 @@ def konversi_ke_clash(nodes):
                     "type": "trojan",
                     "password": credentials,
                     "skip-cert-verify": True,
-                    "sni": sni,
+                    "sni": host,
                     "network": "ws",
                     "ws-opts": {
-                        "path": urllib.parse.unquote(path),
+                        "path": path,
                         "headers": {
-                            "Host": decoded_host
+                            "Host": host
                         }
                     },
                     "udp": True
