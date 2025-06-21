@@ -5,7 +5,7 @@ proxies:
   network: ws
   port: 80
   server: 104.22.5.240
-  tls: ''
+  tls: false
   type: vmess
   uuid: 393b1061-d615-459a-8616-3f9447bdff5a
   ws-opts:
@@ -18,7 +18,7 @@ proxies:
   network: ws
   port: 443
   server: 104.22.5.240
-  tls: 'true'
+  tls: false
   type: vmess
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   ws-opts:
@@ -31,7 +31,7 @@ proxies:
   network: ws
   port: 443
   server: 104.22.5.240
-  tls: 'true'
+  tls: false
   type: vmess
   uuid: 164a6ad0-476a-4bae-b78f-a3d37cf0f414
   ws-opts:
