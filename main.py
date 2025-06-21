@@ -2,7 +2,7 @@ import base64
 import requests
 import yaml
 import os
-import json
+import json  # Menggunakan json untuk decode
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
@@ -50,8 +50,8 @@ def decode_node_info_base64(node):
             decoded = base64.b64decode(raw + '===').decode('utf-8', errors='ignore')
             return json.loads(decoded.replace("false", "False").replace("true", "True"))
     except Exception as e:
-        print(f"⚠️ Gagal mendecode node: {e}")  # Menangani semua kesalahan
-    return None
+        print(f"⚠️ Gagal mendecode node: {e}")
+        return None
 
 def konversi_ke_clash(nodes):
     proxies = []
@@ -62,14 +62,14 @@ def konversi_ke_clash(nodes):
                 vmess_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
                 config = json.loads(vmess_config.replace("false", "False").replace("true", "True"))
                 proxies.append({
-                    "name": config.get("ps", "Tanpa Nama"),
-                    "server": BUGCDN,
+                    "name": config.get("ps", "Tanpa Nama"),  # Memastikan 'name' di atas
+                    "server": BUGCDN,  # Menggunakan BUGCDN
                     "port": int(config["port"]),
                     "type": "vmess",
                     "uuid": config["id"],
                     "alterId": int(config.get("aid", 0)),
                     "cipher": "auto",
-                    "tls": True,
+                    "tls": True,  # Mengatur tls menjadi True
                     "skip-cert-verify": True,
                     "servername": config.get("host", ""),
                     "network": config.get("net", "ws"),
@@ -87,8 +87,8 @@ def konversi_ke_clash(nodes):
                 trojan_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
                 config = json.loads(trojan_config.replace("false", "False").replace("true", "True"))
                 proxies.append({
-                    "name": config.get("ps", "Tanpa Nama"),
-                    "server": BUGCDN,
+                    "name": config.get("ps", "Tanpa Nama"),  # Memastikan 'name' di atas
+                    "server": BUGCDN,  # Menggunakan BUGCDN
                     "port": config["port"],
                     "type": "trojan",
                     "password": config["password"],
@@ -113,7 +113,7 @@ def konversi_ke_clash(nodes):
         }],
         "rules": ["MATCH,🔰 Pilihan Node"]
     }
-    return yaml.dump(config_clash, allow_unicode=True, sort_keys=False)
+    return yaml.dump(config_clash, allow_unicode=True, sort_keys=False)  # Menonaktifkan penyortiran kunci
 
 def main():
     nodes = ambil_langganan()
