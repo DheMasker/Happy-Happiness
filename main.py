@@ -70,17 +70,20 @@ def konversi_ke_clash(nodes):
                     print("⚠️ Format server info tidak valid")
                     continue
 
-                server_port = server_details[0]
-                additional_params = server_details[1].split('?')
-                server, port = server_port.split(':')
-                
+                server = server_details[0]
+                port_info = server_details[1].split('?')[0]  # Ambil port sebelum tanda tanya
+                port = int(port_info)  # Convert port to integer
+
                 # Memproses parameter tambahan
-                params = dict(param.split('=') for param in additional_params[1].split('&')) if len(additional_params) > 1 else {}
-                
+                params = {}
+                if '?' in server_info:
+                    param_str = server_info.split('?')[1]
+                    params = dict(param.split('=') for param in param_str.split('&'))
+
                 proxies.append({
                     "name": params.get("name", "Tanpa Nama"),  # Mengambil nama dari parameter atau default
                     "server": server,
-                    "port": int(port),
+                    "port": port,
                     "type": "trojan",
                     "password": credentials.split(':')[0],  # Mengambil password
                     "skip-cert-verify": True,
