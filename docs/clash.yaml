@@ -1,7 +1,24 @@
-proxies: []
+proxies:
+- name: 3|🌀4-TH |  2.6MB/s|55%|Netflix|O...
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 164a6ad0-476a-4bae-b78f-a3d37cf0f414
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: th.lzj520hxw.dpdns.org
+  network: ws
+  ws-opts:
+    path: /lzjjj
+    headers:
+      Host: th.lzj520hxw.dpdns.org
+  udp: true
 proxy-groups:
-- name: ЁЯФ░ Pilihan Node
+- name: 🔰 Pilihan Node
   type: select
-  proxies: []
+  proxies:
+  - 3|🌀4-TH |  2.6MB/s|55%|Netflix|O...
 rules:
-- MATCH,ЁЯФ░ Pilihan Node
+- MATCH,🔰 Pilihan Node
