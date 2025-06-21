@@ -56,16 +56,17 @@ def konversi_ke_clash(nodes):
                     continue
 
                 server, port = server_info_parts
-                query_params = server_info.split('?')[1] if '?' in server_info else ''
-                sni = ''  # Default to empty
-                host = ''  # Default to empty
-                path = '/trojan-ws'  # Default path
 
-                if query_params:
+                # Set sni, host, and path directly
+                sni = server  # Use server as SNI
+                host = server  # Use server as Host
+
+                # Extract path from query parameters if present
+                path = ''
+                if '?' in server_info:
+                    query_params = server_info.split('?')[1]
                     params = dict(param.split('=') for param in query_params.split('&'))
-                    host = params.get('host', '')  # Get host, default to empty
-                    path = urllib.parse.unquote(params.get('path', path))  # Decode path
-                    sni = params.get('sni', '')  # Get sni, default to empty
+                    path = params.get('path', '')  # Get path from query, default to empty
 
                 # Decode name
                 decoded_name = urllib.parse.unquote(name)
@@ -77,12 +78,12 @@ def konversi_ke_clash(nodes):
                     "type": "trojan",
                     "password": credentials,
                     "skip-cert-verify": True,
-                    "sni": sni,  # Use extracted or empty string
+                    "sni": sni,  # Use server as SNI
                     "network": "ws",
                     "ws-opts": {
-                        "path": path,  # Use extracted or default path
+                        "path": path,  # Use extracted path
                         "headers": {
-                            "Host": host  # Use extracted or empty string
+                            "Host": host  # Use server as Host
                         }
                     },
                     "udp": True  # Use True instead of true
