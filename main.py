@@ -2,6 +2,7 @@ import base64
 import requests
 import yaml
 import os
+import json
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
@@ -34,13 +35,6 @@ def saring_node(nodes):
 
 def konversi_ke_clash(nodes):
     proxies = []
-    config = {
-        "port": 443,  # Ganti dengan port yang sesuai
-        "password": "your_password",  # Ganti dengan password yang sesuai
-        "host": "your_host.com",  # Ganti dengan host yang sesuai
-        "path": "/trojan-ws",  # Ganti dengan path yang sesuai
-        "net": "ws"  # Ganti dengan network yang sesuai
-    }
 
     for node in nodes:
         if node.startswith("trojan://"):
@@ -57,19 +51,23 @@ def konversi_ke_clash(nodes):
                     print("⚠️ Format server info tidak valid")
                     continue
 
+                # Mengambil trojan_config dari credentials
+                trojan_config = credentials.split("#", 1)[0]  # Asumsi config ada di bagian ini
+                config = json.loads(trojan_config.replace("false", "False").replace("true", "True"))
+
                 # Menggunakan nilai dari config dan BUGCDN
                 proxies.append({
-                    "name": config.get("ps", "Tanpa Nama"),
-                    "server": BUGCDN,
-                    "port": config["port"],
+                    "name": config.get("ps", "Tanpa Nama"),  # Memastikan 'name' diambil dari config
+                    "server": BUGCDN,  # Menggunakan BUGCDN
+                    "port": config["port"],  # Menggunakan port dari config
                     "type": "trojan",
-                    "password": config["password"],
+                    "password": config["password"],  # Menggunakan password dari config
                     "skip-cert-verify": True,
-                    "sni": config.get("host", ""),
-                    "network": config.get("net", "ws"),
+                    "sni": config.get("host", ""),  # Menggunakan host dari config jika ada
+                    "network": config.get("net", "ws"),  # Menggunakan network dari config
                     "ws-opts": {
-                        "path": config.get("path", "/trojan-ws"),
-                        "headers": {"Host": config.get("host", "")}
+                        "path": config.get("path", "/trojan-ws"),  # Menggunakan path dari config
+                        "headers": {"Host": config.get("host", "")}  # Menggunakan host sebagai header
                     },
                     "udp": True
                 })
