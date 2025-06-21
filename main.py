@@ -1,5 +1,3 @@
-#jos
-
 import base64
 import requests
 import yaml
@@ -8,9 +6,7 @@ import json  # Menggunakan json untuk decode
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
- 
- "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
-
+    "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
 ]
 
 BUGCDN = "104.22.5.240"
@@ -36,7 +32,7 @@ def saring_node(nodes):
         info = decode_node_info_base64(node)
         if info is not None:  # Pastikan info bukan None
             # Mengizinkan semua node dengan port 443 atau 80 dan network ws
-            if (node.startswith("vmess://") and info.get("port") in {443, 80} and info.get("net") == "ws":
+            if (node.startswith("vmess://") and info.get("port") in {443, 80} and info.get("net") == "ws"):  # Perbaikan di sini
                 terfilter.append(node)
     return terfilter
 
