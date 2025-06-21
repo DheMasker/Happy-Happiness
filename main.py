@@ -63,7 +63,7 @@ def konversi_ke_clash(nodes):
                     "type": "trojan",
                     "password": init["password"],
                     "skip-cert-verify": True,
-                    "sni": in("host", ""),
+                    "sni": init("host", ""),
                     "network": init("net", "ws"),
                     "ws-opts": {
                         "path": ini("path", "/trojan-ws"),
