@@ -2,23 +2,26 @@ import base64
 import requests
 import yaml
 import os
-import urllib.parse  # Untuk dekoding
+import urllib.parse
+from concurrent.futures import ThreadPoolExecutor
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
-"https://raw.githubusercontent.com/Airuop/cross/refs/heads/master/sub/sub_merge_base64.txt",
-"https://raw.githubusercontent.com/peasoft/NoMoreWalls/refs/heads/master/list.txt",
-"https://raw.githubusercontent.com/mahdibland/V2RayAggregator/refs/heads/master/Eternity",
-"https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/refs/heads/master/list.txt",
-"https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/networks/ws", "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
-"https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2",
-"https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/v2ray",
-"https://raw.githubusercontent.com/iwxf/free-v2ray/master/v2",
-"https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
+    "https://raw.githubusercontent.com/Airuop/cross/refs/heads/master/sub/sub_merge_base64.txt",
+    "https://raw.githubusercontent.com/peasoft/NoMoreWalls/refs/heads/master/list.txt",
+    "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/refs/heads/master/Eternity",
+    "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/refs/heads/master/list.txt",
+    "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/networks/ws",
+    "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
+    "https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2",
+    "https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/v2ray",
+    "https://raw.githubusercontent.com/iwxf/free-v2ray/master/v2",
+    "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
 ]
 
 # Alamat server yang akan digunakan
 BUGCDN = "104.22.5.240"
+TEST_URL = "http://www.gstatic.com/generate_204"  # URL untuk pengujian koneksi
 
 def ambil_langganan():
     semua_node = []
@@ -119,12 +122,54 @@ def konversi_ke_clash(nodes):
     }
     return yaml.dump(proxies_clash, allow_unicode=True, sort_keys=False)
 
+def cek_node(proxy):
+    try:
+        # Membangun konfigurasi proxy
+        proxy_config = {
+            "http": f"http://{proxy['server']}:{proxy['port']}",
+            "https": f"http://{proxy['server']}:{proxy['port']}"
+        }
+        # Mengirim permintaan untuk memeriksa status
+        response = requests.get(TEST_URL, proxies=proxy_config, timeout=5)
+        return response.status_code == 204  # Mengembalikan True jika status 204
+    except Exception as e:
+        print(f"⚠️ Gagal memeriksa node untuk proxy {proxy['server']}:{proxy['port']}: {e}")
+        return False
+
+def uji_nodes(filtered_nodes):
+    active_proxies = []
+
+    # Menggunakan ThreadPoolExecutor untuk memeriksa node secara paralel
+    with ThreadPoolExecutor() as executor:
+        futures = {executor.submit(cek_node, proxy): proxy for proxy in filtered_nodes}
+
+        for future in futures:
+            proxy = futures[future]
+            try:
+                if future.result():
+                    active_proxies.append(proxy)
+                    print(f"✅ Node {proxy['server']}:{proxy['port']} aktif.")
+                else:
+                    print(f"❌ Node {proxy['server']}:{proxy['port']} tidak aktif.")
+            except Exception as e:
+                print(f"⚠️ Gagal memproses proxy {proxy['server']}:{proxy['port']}: {e}")
+
+    # Simpan node yang aktif ke dalam file
+    active_file_path = "proxies/active_nodes.yaml"
+    with open(active_file_path, 'w', encoding='utf-8') as f:
+        yaml.dump({'active_proxies': active_proxies}, f, allow_unicode=True, sort_keys=False)
+
 def main():
     nodes = ambil_langganan()
     filtered_nodes = saring_node(nodes)
     os.makedirs("proxies", exist_ok=True)
+    
+    # Buat file trojan.yaml
     with open("proxies/trojan.yaml", "w", encoding="utf-8") as f:
         f.write(konversi_ke_clash(filtered_nodes))
+
+    # Uji status node setelah file dibuat
+    uji_nodes(filtered_nodes)
 
 if __name__ == "__main__":
     main()
