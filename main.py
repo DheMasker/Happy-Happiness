@@ -21,8 +21,15 @@ def ambil_langganan():
             print(f"Mengambil langganan: {url}")
             res = requests.get(url, timeout=60)
             konten = res.text.strip()
+
+            # Periksa apakah konten hanya mengandung karakter ASCII
+            if not is_ascii(konten):
+                print(f"⚠️ Konten non-ASCII ditemukan di URL: {url}")
+                continue  # Lewati URL ini jika ada karakter non-ASCII
+
             if not konten.startswith("vmess"):
                 konten = base64.b64decode(konten + '===').decode('utf-8')
+                
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
             semua_node.extend(baris)
         except Exception as e:
@@ -44,7 +51,7 @@ def decode_node_info_base64(node):
             raw = node[8:]
             if not is_ascii(raw):
                 print(f"⚠️ Karakter non-ASCII ditemukan dalam node: {node}")
-                return None  # Lewati node ini jika ada karakter non-ASCII
+                return None
             
             decoded = base64.b64decode(raw + '===').decode('utf-8')
             return json.loads(decoded.replace("false", "False").replace("true", "True"))
