@@ -3,17 +3,15 @@ import requests
 import yaml
 import os
 import urllib.parse  # Untuk dekoding
-import subprocess  # Untuk menjalankan perintah ping
 from concurrent.futures import ThreadPoolExecutor  # Untuk pengujian paralel
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
-"https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
-    "https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2",
-    "https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/v2ray",
-    "https://raw.githubusercontent.com/iwxf/free-v2ray/master/v2",
-    "https://raw.githubusercontent.com/Leon406/SubCrawler/main/sub/share/v2ray.txt"
+    "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
 ]
+
+# URL untuk pengujian koneksi
+TEST_URL = "http://www.gstatic.com/generate_204"
 
 # Alamat server yang akan digunakan
 BUGCDN = "104.22.5.240"
@@ -40,20 +38,18 @@ def saring_node(nodes):
             terfilter.append(node)
     return terfilter
 
-def uji_koneksi(server):
+def uji_koneksi(proxy):
     try:
-        # Menggunakan perintah ping sistem
-        response = subprocess.run(["ping", "-c", "1", server], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        if response.returncode == 0:
-            # Mengambil waktu respons dari output ping
-            output = response.stdout.decode('utf-8')
-            time_line = [line for line in output.splitlines() if "time=" in line]
-            if time_line:
-                time = float(time_line[0].split("time=")[1].split(" ms")[0])
-                return time < 500  # Kembali True jika waktu respons kurang dari 500ms
-        return False  # Tidak ada koneksi atau ping gagal
+        # Membangun konfigurasi proxy
+        proxy_config = {
+            "http": f"http://{proxy['server']}:{proxy['port']}",
+            "https": f"http://{proxy['server']}:{proxy['port']}"
+        }
+        # Melakukan permintaan ke URL test
+        response = requests.get(TEST_URL, proxies=proxy_config, timeout=5)
+        return response.status_code == 204  # Mengembalikan True jika status 204
     except Exception as e:
-        print(f"⚠️ Gagal melakukan ping ke {server}: {e}")
+        print(f"⚠️ Gagal menguji koneksi untuk proxy {proxy['server']}:{proxy['port']}: {e}")
         return False
 
 def konversi_ke_clash(nodes):
@@ -142,7 +138,7 @@ def uji_proxies(file_path):
 
     # Menggunakan ThreadPoolExecutor untuk pengujian paralel
     with ThreadPoolExecutor() as executor:
-        futures = {executor.submit(uji_koneksi, proxy['server']): proxy for proxy in data['proxies']}
+        futures = {executor.submit(uji_koneksi, proxy): proxy for proxy in data['proxies']}
         
         for future in futures:
             proxy = futures[future]
@@ -150,9 +146,9 @@ def uji_proxies(file_path):
                 if future.result():
                     valid_proxies.append(proxy)
                 else:
-                    print(f"❌ Koneksi ke {proxy['server']} gagal atau waktu respons lebih dari 500 ms.")
+                    print(f"❌ Koneksi ke {proxy['server']}:{proxy['port']} gagal.")
             except Exception as e:
-                print(f"⚠️ Gagal memproses proxy {proxy['server']}: {e}")
+                print(f"⚠️ Gagal memproses proxy {proxy['server']}:{proxy['port']}: {e}")
 
     # Simpan proxies yang valid
     with open(file_path, 'w', encoding='utf-8') as f:
