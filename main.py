@@ -1,20 +1,10 @@
-from decimal import Decimal
 import logging
 import asyncio
-from datetime import datetime
-import sys
 import aiohttp
 import yaml
-import collections
 import os
-from tqdm import tqdm  # Include this for displaying a progress bar
 
-SubInfo = collections.namedtuple(
-    "SubInfo",
-    ['url', 'upload', 'download', 'total', 'expireSec']
-)
-
-# Configure logging settings
+# Konfigurasi pengaturan logging
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
@@ -22,150 +12,69 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-async def fetch_content(url):
-    logger.info(f"Initiating content retrieval from: {url}")
-    async with aiohttp.ClientSession() as session:
-        async with session.get(url) as response:
-            response.raise_for_status()
-            text = await response.text()
-            logger.info(f"Content fetched successfully, length: {len(text)}")
-            return text
-
-async def get_subscription_info(session, url) -> SubInfo | None:
+async def ambil_info_langganan(session, url):
     try:
-        logger.debug(f"Fetching subscription info from: {url}")
         async with session.get(url) as response:
             response.raise_for_status()
-            subscription_info = response.headers.get("subscription-userinfo")
-            if not subscription_info:
-                logger.warning(f"No subscription info found: {url}")
+            info_langganan = response.headers.get("subscription-userinfo")
+            if not info_langganan:
+                logger.warning(f"Tidak ditemukan informasi langganan: {url}")
                 return None
 
-            info_dict = {}
-            for item in subscription_info.split(";"):
+            # Parsing informasi langganan
+            dict_info = {}
+            for item in info_langganan.split(";"):
                 item = item.strip()
                 if not item:
                     continue
-                key, value = item.split("=")
-                info_dict[key.strip()] = value.strip()
+                kunci, nilai = item.split("=")
+                dict_info[kunci.strip()] = nilai.strip()
 
-            def safe_int(value):
-                try:
-                    if value.lower() == 'infinity':
-                        return 0
-                    if not value:
-                        return sys.maxsize
-                    return Decimal(value)
-                except ValueError:
-                    logger.error(f"Failed to parse data: <{value}>")
-                    return -1
-
-            return SubInfo(
-                url=url,
-                upload=safe_int(info_dict.get("upload")),
-                download=safe_int(info_dict.get("download")),
-                total=safe_int(info_dict.get("total")),
-                expireSec=safe_int(info_dict.get("expire"))
-            )
+            return dict_info
     except Exception as e:
-        logger.error(f"Failed to retrieve subscription info: {url}, error: {str(e)}")
+        logger.error(f"Gagal mengambil informasi langganan: {url}, kesalahan: {str(e)}")
         return None
 
-async def filter_valid_urls_concurrently(urls: list[str]) -> list[str]:
+async def filter_url_valid_konkuren(urls):
     valid_urls = []
-    connector = aiohttp.TCPConnector(limit=50, force_close=True)
-    start_time = datetime.now()
+    connector = aiohttp.TCPConnector(limit=50)
 
-    async with aiohttp.ClientSession(
-        connector=connector,
-        headers={"User-Agent": "clash.meta"}
-    ) as session:
-        tasks = [
-            asyncio.create_task(
-                get_subscription_info(session, url)
-            )
-            for url in urls
-        ]
-        now = datetime.now().timestamp()
+    async with aiohttp.ClientSession(connector=connector) as session:
+        tasks = [ambil_info_langganan(session, url) for url in urls]
+        for task in asyncio.as_completed(tasks):
+            info = await task
+            if info and (info.get("type") in ["trojan", "vmess"] and 
+                         info.get("network") == "ws" and 
+                         int(info.get("port", 0)) in [443, 80]):
+                valid_urls.append(info)  # Simpan informasi valid
 
-        with tqdm(total=len(urls), desc="Filtering URLs") as pbar:
-            for task in asyncio.as_completed(tasks):
-                try:
-                    info: SubInfo | None = await task
-                    if not info:
-                        continue
-
-                    usage = info.download + info.upload
-                    if info.total > 0 and usage >= info.total:
-                        logger.warning(f"Subscription quota exhausted ({usage / (1024**3):.2f} GB) - {info.url}")
-                        continue
-
-                    if info.expireSec <= now:
-                        logger.warning(f"Subscription expired - {info.url}")
-                        continue
-
-                    valid_urls.append(info.url)
-                    logger.info(f"Valid URL: {info.url}")
-
-                except asyncio.TimeoutError:
-                    logger.warning("Request timed out")
-                except Exception as e:
-                    logger.error(f"Error processing URL: {str(e)}")
-                finally:
-                    pbar.update(1)
-
-    end_time = datetime.now()
-    duration = (end_time - start_time).total_seconds()
-    logger.info(f"URL filtering completed - Total: {len(urls)}, Successful: {len(valid_urls)}, Duration: {duration:.2f} seconds")
     return valid_urls
 
-async def filter_valid_urls(urls: list[str]) -> list[str]:
-    logger.info(f"Starting URL filtering, total: {len(urls)}")
-    valid_urls = await filter_valid_urls_concurrently(urls)
-    logger.info(f"Filtering finished, number of valid URLs: {len(valid_urls)}")
-    return valid_urls
-
-async def save_proxies_yml(valid_proxies):
-    # Combine all valid URLs into a single proxy entry
-    if not valid_proxies:
-        logger.warning("No valid proxies to save.")
+async def simpan_proxies_yml(penyedia_proxy_valid):
+    if not penyedia_proxy_valid:
+        logger.warning("Tidak ada proxy valid untuk disimpan.")
         return
 
-    combined_urls = "\n".join(valid_proxies)
+    # Simpan hanya URL tanpa format tambahan
+    proxies = [f"{proxy['url']}" for proxy in penyedia_proxy_valid]
 
-    proxies = [{
-        "name": "Combined Proxy",
-        "type": "combined",
-        "server": "104.22.5.240",
-        "port": 443,
-        "network": "ws",
-        "urls": combined_urls  # Includes all valid original URLs
-    }]
-
-    # Ensure the 'proxies' directory exists
     os.makedirs("proxies", exist_ok=True)
 
-    # Save the file in the 'proxies' folder
+    # Simpan file di dalam folder 'proxies'
     with open("proxies/proxies.yaml", "w", encoding="utf-8") as file:
         yaml.dump({"proxies": proxies}, file, allow_unicode=True)
 
-    logger.info("File proxies.yaml successfully created with valid proxies.")
+    logger.info("File proxies.yaml berhasil dibuat dengan proxy yang valid.")
 
-async def main():
-    logger.info("Starting to load configuration file")
-    # Additional configurations can be handled here if needed
-
-    logger.info("Beginning to fetch remote subscription content")
+async def utama():
     remote_url = "https://raw.githubusercontent.com/devojony/collectSub/refs/heads/main/sub/sub_all_clash.txt"
-    content = await fetch_content(remote_url)
-    proxy_providers = [p for p in content.split("\n") if p.strip()]
-    logger.info(f"Initial number of URLs fetched: {len(proxy_providers)}")
-
-    logger.info("Starting to filter valid URLs")
-    valid_proxy_providers = await filter_valid_urls(proxy_providers)
-
-    # Save valid proxies to file
-    await save_proxies_yml(valid_proxy_providers)
+    async with aiohttp.ClientSession() as session:
+        async with session.get(remote_url) as response:
+            konten = await response.text()
+            penyedia_proxy = [p.strip() for p in konten.split("\n") if p.strip()]
+    
+    penyedia_proxy_valid = await filter_url_valid_konkuren(penyedia_proxy)
+    await simpan_proxies_yml(penyedia_proxy_valid)
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    asyncio.run(utama())
