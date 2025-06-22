@@ -49,11 +49,11 @@ def konversi_ke_clash(nodes):
                 port_info = server_info[colon_index + 1:]  # Everything after port
                 port = int(port_info.split('?')[0])  # Extracting port
 
-                # Extract additional parameters (path, sni, host) from server_info
+                # Extract additional parameters from server_info
                 query_params = port_info.split('?')[1] if '?' in port_info else ''
                 sni = ''
                 host = ''
-                path = ''
+                path = '/'
 
                 for param in query_params.split('&'):
                     if param.startswith('sni='):
@@ -64,10 +64,10 @@ def konversi_ke_clash(nodes):
                         path = param.split('=')[1].strip().split('#')[0].replace('%2F', '/')  # Decode path
 
                 # Set host and sni based on availability
-                if sni and not host:
-                    host = sni
-                elif host and not sni:
+                if not sni and host:
                     sni = host
+                elif not host and sni:
+                    host = sni
 
                 # Extract name from the node
                 name_index = server_info.index('#')
@@ -81,12 +81,12 @@ def konversi_ke_clash(nodes):
                     "type": "trojan",
                     "password": password,  # Already stripped
                     "skip-cert-verify": True,
-                    "sni": sni,  # Extracted correctly
+                    "sni": sni if sni else "",  # Use empty string if no sni
                     "network": "ws",
                     "ws-opts": {
-                        "path": path.strip(),  # Cleaned up path
+                        "path": path,  # Set the path (default to '/' if not set)
                         "headers": {
-                            "Host": host  # Set based on availability
+                            "Host": host if host else ""  # Use empty string if no host
                         }
                     },
                     "udp": True
