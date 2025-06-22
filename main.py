@@ -51,12 +51,12 @@ def konversi_ke_clash(nodes):
                 port_info = server_info[colon_index + 1:]  # Everything after port
                 port = int(port_info.split('?')[0])  # Extracting port
 
-                # Hanya proses jika port 443 atau 80 dan mengandung "ws"
+                # Hanya proses jika port 443 atau 80
                 if port not in [443, 80]:
                     continue
-
-                # Cek apakah "ws" ada di dalam server_info
-                if "ws" not in server_info:
+                
+                # Memastikan type ws
+                if "ws" not in node:
                     continue
 
                 # Extract additional parameters from server_info
@@ -92,7 +92,7 @@ def konversi_ke_clash(nodes):
                     "password": password,  # Already stripped
                     "skip-cert-verify": True,
                     "sni": sni if sni else "",  # Use empty string if no sni
-                    "network": "ws",  # Set to "ws" since we're filtering for "ws"
+                    "network": "ws",
                     "headers": {
                         "Host": host if host else ""  # Use empty string if no host
                     },
