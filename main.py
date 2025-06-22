@@ -7,7 +7,7 @@ from concurrent.futures import ThreadPoolExecutor  # Untuk pengujian paralel
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
-    "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
+    "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/protocols/tr.txt"
 ]
 
 # URL untuk pengujian koneksi
