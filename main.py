@@ -1,3 +1,4 @@
+import os
 import speedtest
 
 def test_proxy_speed(proxy):
@@ -45,8 +46,12 @@ proxies:
       host: "free.c-stuff.Web.id"
 """
 
-# Simpan konfigurasi ke file
-with open("clash_config.yaml", "w") as f:
+# Membuat folder jika belum ada
+os.makedirs("proxies", exist_ok=True)
+
+# Simpan konfigurasi ke file dalam folder proxies
+file_path = os.path.join("proxies", "clash_config.yaml")
+with open(file_path, "w") as f:
     f.write(clash_config)
 
-print("Konfigurasi Clash telah disimpan ke clash_config.yaml")
+print(f"Konfigurasi Clash telah disimpan ke {file_path}")
