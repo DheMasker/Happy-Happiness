@@ -2,6 +2,7 @@ import base64
 import requests
 import yaml
 import os
+import re
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
@@ -38,11 +39,14 @@ def saring_node(nodes):
             # Extract server and port
             colon_index = server_info.index(':')
             port_info = server_info[colon_index + 1:]  # Everything after port
-            port = int(port_info.split('?')[0])  # Extracting port
-
-            # Cek jika node memiliki "ws" dan port 443 atau 80
-            if ("ws" in port_info) and (port in [443, 80]):
-                terfilter.append(node)
+            
+            # Cek apakah port dalam format yang valid
+            port_match = re.match(r'(\[.*?\]|[^:]+):(\d+)', server_info)
+            if port_match:
+                port = int(port_match.group(2))  # Ambil port
+                # Cek jika node memiliki "/?type=ws" dan port 443 atau 80
+                if "/?type=ws" in port_info and port in [443, 80]:
+                    terfilter.append(node)
     return terfilter
 
 def konversi_ke_clash(nodes):
@@ -60,21 +64,31 @@ def konversi_ke_clash(nodes):
                 # Extract server and port
                 colon_index = server_info.index(':')
                 port_info = server_info[colon_index + 1:]  # Everything after port
-                port = int(port_info.split('?')[0])  # Extracting port
+                
+                # Extract port using regex
+                port_match = re.match(r'(\[.*?\]|[^:]+):(\d+)', server_info)
+                if port_match:
+                    port = int(port_match.group(2))  # Ambil port
+                else:
+                    continue  # Skip jika tidak ada port yang valid
 
                 # Extract additional parameters from server_info
                 query_params = port_info.split('?')[1] if '?' in port_info else ''
                 sni = ''
                 host = ''
                 path = None  # Set to None initially
+                network = None  # Initialize network variable
 
                 for param in query_params.split('&'):
+                    # Ambil nilai dari param "sni", "host", "path", dan "type"
                     if param.startswith('sni='):
                         sni = param.split('=')[1].strip().split('#')[0]  # Clean up sni
                     elif param.startswith('host='):
                         host = param.split('=')[1].strip().split('#')[0]  # Clean up host
                     elif param.startswith('path='):
                         path = param.split('=')[1].strip().split('#')[0].replace('%2F', '/')  # Decode path
+                    elif param.startswith('type='):
+                        network = param.split('=')[1].strip().split('#')[0]  # Ambil nilai type
 
                 # Set host and sni based on availability
                 if not sni and host:
@@ -95,7 +109,7 @@ def konversi_ke_clash(nodes):
                     "password": password,  # Already stripped
                     "skip-cert-verify": True,
                     "sni": sni if sni else "",  # Use empty string if no sni
-                    "network": "ws",
+                    "network": network if network else "",  # Set network to type
                     "headers": {
                         "Host": host if host else ""  # Use empty string if no host
                     },
