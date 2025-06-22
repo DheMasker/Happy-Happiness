@@ -1,3 +1,4 @@
+
 import base64
 import requests
 import yaml
@@ -41,72 +42,64 @@ def konversi_ke_clash(nodes):
         if node.startswith("trojan://"):
             try:
                 # Menghapus 'trojan://' dan memisahkan bagian
-                trimmed_node = node[9:]  
+                trimmed_node = node[9:]  # Menghapus 'trojan://'
                 at_index = trimmed_node.index('@')
-                password = trimmed_node[:at_index].strip()  
-                server_info = trimmed_node[at_index + 1:]  
+                password = trimmed_node[:at_index].strip()  # Extracting password
+                server_info = trimmed_node[at_index + 1:]  # Everything after @
 
                 # Extract server and port
                 colon_index = server_info.index(':')
-                port_info = server_info[colon_index + 1:]  
-                port = int(port_info.split('?')[0])  
+                port_info = server_info[colon_index + 1:]  # Everything after port
+                port = int(port_info.split('?')[0])  # Extracting port
 
                 # Hanya proses jika port 443 atau 80
                 if port not in [443, 80]:
                     continue
 
-                # Tentukan tipe jaringan jika ada di query parameters
-                query_params = port_info.split('?')[1] if '?' in port_info else ''
-                network_type = None
-
-                for param in query_params.split('&'):
-                    if param.startswith('type='):
-                        network_type = param.split('=')[1].strip()
-
-                # Hanya lanjutkan jika tipe jaringan adalah ws
-                if network_type != "ws":
-                    continue
-
                 # Extract additional parameters from server_info
+                query_params = port_info.split('?')[1] if '?' in port_info else ''
                 sni = ''
                 host = ''
-                path = None  
+                path = None  # Set to None initially
 
                 for param in query_params.split('&'):
                     if param.startswith('sni='):
-                        sni = param.split('=')[1].strip().split('#')[0]  
+                        sni = param.split('=')[1].strip().split('#')[0]  # Clean up sni
                     elif param.startswith('host='):
-                        host = param.split('=')[1].strip().split('#')[0]  
+                        host = param.split('=')[1].strip().split('#')[0]  # Clean up host
                     elif param.startswith('path='):
-                        path = param.split('=')[1].strip().split('#')[0].replace('%2F', '/')  
+                        path = param.split('=')[1].strip().split('#')[0].replace('%2F', '/')  # Decode path
 
+                # Set host and sni based on availability
                 if not sni and host:
                     sni = host
                 elif not host and sni:
                     host = sni
 
+                # Extract name from the node
                 name_index = server_info.index('#')
                 name = server_info[name_index + 1:].strip() if name_index != -1 else "unknown"
 
                 # Append the proxy details, set server to BUGCDN
                 proxy_detail = {
                     "name": name,
-                    "server": BUGCDN,
+                    "server": BUGCDN,  # Ganti server dengan BUGCDN
                     "port": port,
                     "type": "trojan",
-                    "password": password,
+                    "password": password,  # Already stripped
                     "skip-cert-verify": True,
-                    "sni": sni if sni else "",
-                    "network": network_type,  # Gunakan nilai network_type yang telah diperoleh
+                    "sni": sni if sni else "",  # Use empty string if no sni
+                    "network": "ws",
                     "headers": {
-                        "Host": host if host else ""
+                        "Host": host if host else ""  # Use empty string if no host
                     },
                     "udp": True
                 }
 
+                # Add path only if it's defined
                 if path is not None:
                     proxy_detail["ws-opts"] = {
-                        "path": path
+                        "path": path  # Set the path if available
                     }
 
                 proxies.append(proxy_detail)
