@@ -1,15 +1,12 @@
 import requests
 
-def cek_keaktifan_url(url):
-    try:
-        response = requests.get(url, timeout=5)
-        if response.status_code == 200:
-            print(f"{url} aktif.")
-        else:
-            print(f"{url} tidak aktif. Kode status: {response.status_code}")
-    except requests.RequestException:
-        print(f"{url} tidak aktif. Terjadi kesalahan saat menghubungi server.")
+proxy = {
+    "http": "http://ced307a2-af2c-4113-bebc-fb888c702b7d@104.22.5.240:443",
+    "https": "http://ced307a2-af2c-4113-bebc-fb888c702b7d@104.22.5.240:443",
+}
 
-# Ganti URL di bawah ini dengan yang ingin Anda periksa
-url_to_check = "http://premium.crazpayment.my.id:443/"
-cek_keaktifan_url(url_to_check)
+try:
+    response = requests.get("https://httpbin.org/ip", proxies=proxy, timeout=5)
+    print("Proxy aktif:", response.json())
+except requests.exceptions.RequestException as e:
+    print("Proxy tidak aktif:", e)
