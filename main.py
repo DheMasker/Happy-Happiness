@@ -2,6 +2,7 @@ import base64
 import requests
 import yaml
 import os
+import txt
 import urllib.parse  # Untuk dekoding
 from concurrent.futures import ThreadPoolExecutor  # Untuk pengujian paralel
 
