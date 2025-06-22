@@ -29,11 +29,14 @@ def ambil_langganan():
         try:
             print(f"Mengambil langganan: {url}")
             res = requests.get(url, timeout=60)
+            res.raise_for_status()  # Memicu kesalahan untuk status kode 4xx/5xx
             konten = res.text.strip()
             if konten:
                 konten = base64.b64decode(konten + '===').decode('utf-8', errors='ignore')
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
             semua_node.extend(baris)
+        except requests.exceptions.RequestException as e:
+            print(f"❌ Kesalahan dalam mengambil dari {url}: {e}")
         except Exception as e:
             print(f"❌ Kesalahan sumber langganan: {url} -> {e}")
     return semua_node
