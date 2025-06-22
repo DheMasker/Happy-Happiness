@@ -57,6 +57,8 @@ def saring_node(nodes):
             # Memfilter node berdasarkan kriteria yang diinginkan
             if (info.get("port") in {443, 80} and info.get("net") == "ws"):
                 terfilter.append(node)
+            else:
+                log_error(f"⚠️ Node tidak memenuhi kriteria: {node}")
     print(f"Jumlah node setelah disaring: {len(terfilter)}")  # Mencetak jumlah node setelah penyaringan
     return terfilter
 
@@ -126,10 +128,9 @@ def parse_trojan(node):
 
 def konversi_ke_clash(nodes):
     proxies = []
-
     for node in nodes:
-        if node.startswith("vmess://"):
-            try:
+        try:
+            if node.startswith("vmess://"):
                 vmess_config = base64.b64decode(node.split("://")[1] + '===').decode('utf-8', errors='ignore')
                 config = json.loads(vmess_config.replace("false", "False").replace("true", "True"))
                 proxies.append({
@@ -150,26 +151,23 @@ def konversi_ke_clash(nodes):
                     },
                     "udp": True
                 })
-            except Exception as e:
-                log_error(f"⚠️ Gagal memparsing vmess: {e}")
-
-        elif node.startswith("trojan://"):
-            try:
+            elif node.startswith("trojan://"):
                 info = parse_trojan(node)
-                proxies.append({
-                    "name": f"{info['sni']}-trojan_ws_cdn_turbovidio",
-                    "server": info["server"],
-                    "port": info["port"],
-                    "type": "trojan",
-                    "password": info["password"],
-                    "skip-cert-verify": info.get("skip-cert-verify"),
-                    "sni": info["sni"],
-                    "network": info["network"],
-                    "ws-opts": info["ws-opts"],
-                    "udp": info["udp"]
-                })
-            except Exception as e:
-                log_error(f"⚠️ Gagal memparsing trojan: {e}")
+                if info is not None:
+                    proxies.append({
+                        "name": f"{info['sni']}-trojan_ws_cdn_turbovidio",
+                        "server": info["server"],
+                        "port": info["port"],
+                        "type": "trojan",
+                        "password": info["password"],
+                        "skip-cert-verify": info.get("skip-cert-verify"),
+                        "sni": info["sni"],
+                        "network": info["network"],
+                        "ws-opts": info["ws-opts"],
+                        "udp": info["udp"]
+                    })
+        except Exception as e:
+            log_error(f"⚠️ Gagal memparsing node: {e} - Node: {node}")
 
     proxies_clash = {
         "proxies": proxies
