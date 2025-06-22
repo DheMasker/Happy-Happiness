@@ -36,7 +36,7 @@ def konversi_ke_clash(nodes):
     for node in nodes:
         if node.startswith("trojan://"):
             try:
-                raw = node[9:]  # Menghapus 'trojan://'
+                raw = node[10:]  # Menghapus 'trojan://'
                 parts = raw.split('@')
                 if len(parts) != 2:
                     print("⚠️ Format node Trojan tidak valid")
@@ -53,28 +53,28 @@ def konversi_ke_clash(nodes):
                 query = port_and_query.split('?')[1] if '?' in port_and_query else ''
                 params = {param.split('=')[0]: param.split('=')[1] for param in query.split('&') if '=' in param}
 
-                # Mengambil name dari bagian akhir URL setelah tanda '#'
-                name = params.get('host', 'default_name')  # Default jika tidak ada host
-                if '#' in node:
-                    name = node.split('#')[1]
+                # Hanya memproses jika tipe adalah ws dan port 443 atau 80
+                if params.get('type') == 'ws' and port in ['443', '80']:
+                    # Mengambil name dari bagian akhir URL setelah tanda '#'
+                    name = node.split('#')[1] if '#' in node else 'default_name'
 
-                proxies.append({
-                    "name": name,
-                    "server": server,
-                    "port": int(port),
-                    "type": "trojan",
-                    "password": credentials,
-                    "skip-cert-verify": True,
-                    "sni": params.get('sni', ''),
-                    "network": params.get('type', 'tcp'),
-                    "ws-opts": {
-                        "path": params.get('path', ''),
-                        "headers": {
-                            "Host": params.get('host', '')
-                        }
-                    },
-                    "udp": True
-                })
+                    proxies.append({
+                        "name": name,
+                        "server": server,
+                        "port": int(port),
+                        "type": "trojan",
+                        "password": credentials,
+                        "skip-cert-verify": True,
+                        "sni": params.get('sni', ''),
+                        "network": "ws",
+                        "ws-opts": {
+                            "path": params.get('path', ''),
+                            "headers": {
+                                "Host": params.get('host', '')
+                            }
+                        },
+                        "udp": True
+                    })
             except Exception as e:
                 print(f"⚠️ Gagal memparsing trojan: {e}")
 
