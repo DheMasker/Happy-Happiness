@@ -18,7 +18,8 @@ BUGCDN = "104.22.5.240"
 
 # Fungsi untuk mencatat kesalahan ke dalam file log
 def log_error(message):
-    with open("error_log.txt", "a", encoding="utf-8") as log_file:
+    os.makedirs("proxies", exist_ok=True)  # Pastikan folder proxies ada
+    with open("proxies/error_log.txt", "a", encoding="utf-8") as log_file:
         log_file.write(message + "\n")
 
 def ambil_langganan():
