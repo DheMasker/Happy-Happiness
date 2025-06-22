@@ -9,6 +9,9 @@ SUB_LINKS = [
     "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
 ]
 
+# Alamat server yang akan digunakan
+BUGCDN = "104.22.5.240"
+
 def ambil_langganan():
     semua_node = []
     for url in SUB_LINKS:
@@ -49,9 +52,10 @@ def konversi_ke_clash(nodes):
                     print("⚠️ Format server info tidak valid")
                     continue
 
-                server, port_and_query = server_details
-                port = port_and_query.split('?')[0]
-                query = port_and_query.split('?')[1] if '?' in port_and_query else ''
+                # Ganti server dengan BUGCDN
+                server = BUGCDN
+                port = server_details[1].split('?')[0]  # Ambil port dari server_info
+                query = server_details[1].split('?')[1] if '?' in server_details[1] else ''
                 params = {param.split('=')[0]: param.split('=')[1] for param in query.split('&') if '=' in param}
 
                 # Hanya memproses jika tipe adalah ws dan port 443 atau 80
@@ -84,7 +88,7 @@ def konversi_ke_clash(nodes):
 
                     proxies.append({
                         "name": name,
-                        "server": server,
+                        "server": server,  # Gunakan server yang telah ditentukan
                         "port": int(port),
                         "type": "trojan",
                         "password": urllib.parse.unquote(credentials),  # Dekode password
