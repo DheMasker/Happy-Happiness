@@ -48,6 +48,9 @@ def konversi_ke_clash(nodes):
                 password = trimmed_node[:at_index].strip()  # Extracting password
                 server_info = trimmed_node[at_index + 1:]  # Everything after @
 
+                # Memperbaiki format server dengan menghapus kurung siku jika ada
+                server_info = server_info.replace('[', '').replace(']', '')
+
                 # Extract server and port using regex for better handling
                 match = re.match(r'([^:]+):(\d+)(?:\?(.*))?(#.*)?', server_info)
                 if not match:
@@ -89,7 +92,7 @@ def konversi_ke_clash(nodes):
                 elif not host and sni:
                     host = sni
 
-                # Extract name from the node if available
+                # Extract name from the node after the `#` if available
                 name = name_fragment[1:].strip() if name_fragment else "unknown"
 
                 # Append the proxy details, set server to BUGCDN
