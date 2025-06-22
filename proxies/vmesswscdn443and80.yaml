@@ -1,1 +1,337 @@
-proxies: []
+proxies:
+- name: XX 🏳️ ┇ VMESS-WS-NTLS ┇ 104.26.13.9
+  server: 104.22.5.240
+  port: 80
+  type: vmess
+  uuid: e5b0b085-6235-42c4-a608-b1c41c3eee50
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: ''
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ''
+  udp: true
+- name: 🔒 VM-WS-TLS 🇩🇪 DE-57.129.25.25:443
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: f.khilei.com
+  network: ws
+  ws-opts:
+    path: /linkvws
+    headers:
+      Host: f.khilei.com
+  udp: true
+- name: 🌀4-TH |  2.6MB/s|55%|Netflix|O...
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 164a6ad0-476a-4bae-b78f-a3d37cf0f414
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: th.lzj520hxw.dpdns.org
+  network: ws
+  ws-opts:
+    path: /lzjjj
+    headers:
+      Host: th.lzj520hxw.dpdns.org
+  udp: true
+- name: 🇺🇸美国11 | ⬇️ 2.8MB/s
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 6796611b-260e-4d63-9016-20c27b12e420
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: u8.huvicloud.com
+  network: ws
+  ws-opts:
+    path: /6796611b-260e-4d63-9016-20c27b12e420
+    headers:
+      Host: u8.huvicloud.com
+  udp: true
+- name: 🇺🇸美国12 | ⬇️ 3.4MB/s
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 9ce4526a-c500-4c66-99b0-048e4b6b5663
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: xcf029.facai2024.com
+  network: ws
+  ws-opts:
+    path: /9ce4526a
+    headers:
+      Host: xcf029.facai2024.com
+  udp: true
+- name: 🇭🇰香港2 | ⬇️ 1.2MB/s
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: db69d5bc-d36c-4903-f471-74b98c5cefe5
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: hk2.lrzdx.uk
+  network: ws
+  ws-opts:
+    path: /register
+    headers:
+      Host: hk2.lrzdx.uk
+  udp: true
+- name: 🇺🇸美国13 | ⬇️ 1.8MB/s
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 6b95d340-30a5-47bd-ac53-49584e5d4ddf
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: xc125-1.meiziba5566.com
+  network: ws
+  ws-opts:
+    path: /6b95d340
+    headers:
+      Host: xc125-1.meiziba5566.com
+  udp: true
+- name: 🇫🇷法国1 | ⬇️ 2.3MB/s
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 93ea486a-bada-42a4-ac38-d088b320fa1e
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: xmivideo.cfd
+  network: ws
+  ws-opts:
+    path: /linkws
+    headers:
+      Host: xmivideo.cfd
+  udp: true
+- name: 🇺🇸美国14 | ⬇️ 2.2MB/s
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 0212fab5-e93c-4904-b7a8-187fd535f354
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: 3sdfgvcxxx.938.pp.ua
+  network: ws
+  ws-opts:
+    path: /P879mtCoHQqaWO67qEaMINZ1
+    headers:
+      Host: 3sdfgvcxxx.938.pp.ua
+  udp: true
+- name: 🇭🇰香港3 | ⬇️ 3.1MB/s
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 47eab0de-97f9-49be-f2f3-2e4eb17268e6
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: hk.niskakowski.ggff.net
+  network: ws
+  ws-opts:
+    path: /aa
+    headers:
+      Host: hk.niskakowski.ggff.net
+  udp: true
+- name: 🇺🇸美国17 | ⬇️ 4.4MB/s
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 42576a04-5a4d-4c7e-fcb4-a8582ab46031
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: xc011-2.meiziba5566.com
+  network: ws
+  ws-opts:
+    path: /xc1234
+    headers:
+      Host: xc011-2.meiziba5566.com
+  udp: true
+- name: 🇺🇸美国18 | ⬇️ 2.3MB/s
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: bc94f742-0e7b-4cf8-e897-6214f9bec8da
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: xcmg19.dtkj0328.com
+  network: ws
+  ws-opts:
+    path: /xcmg1234
+    headers:
+      Host: xcmg19.dtkj0328.com
+  udp: true
+- name: 🇫🇷法国2 | ⬇️ 4.1MB/s
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 93ea486a-bada-42a4-ac38-d088b320fa1e
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: xmivideo.cfd
+  network: ws
+  ws-opts:
+    path: /linkws
+    headers:
+      Host: xmivideo.cfd
+  udp: true
+- name: 🇭🇰香港4 | ⬇️ 1.1MB/s
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: db69d5bc-d36c-4903-f471-74b98c5cefe5
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: ''
+  network: ws
+  ws-opts:
+    path: /register
+    headers:
+      Host: ''
+  udp: true
+- name: 🇺🇸美国19 | ⬇️ 2.1MB/s
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 96c585de-c7e4-41cb-a232-9aba535ea9ac
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: ''
+  network: ws
+  ws-opts:
+    path: /96c585de
+    headers:
+      Host: ''
+  udp: true
+- name: 🇺🇸美国20 | ⬇️ 1.8MB/s
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: c99929e1-9c82-4a33-d11e-f177247b8f63
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: ''
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ''
+  udp: true
+- name: 🇺🇸美国21 | ⬇️ 2.2MB/s
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: f40a8d65-a9ac-42ce-ebcc-9e6447a9866d
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: ''
+  network: ws
+  ws-opts:
+    path: /f40a8d65
+    headers:
+      Host: ''
+  udp: true
+- name: 🇺🇸美国24 | ⬇️ 3.4MB/s
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: d9863037-0463-4615-e972-36ba9662d1e9
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: xcf037.facai2024.com
+  network: ws
+  ws-opts:
+    path: /d9863037
+    headers:
+      Host: xcf037.facai2024.com
+  udp: true
+- name: 🇺🇸美国26 | ⬇️ 3.2MB/s
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 82ff6d30-2920-4ebd-b95c-b016ede1a841
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: gs03-1.guoshi1520.com
+  network: ws
+  ws-opts:
+    path: /82ff6d30
+    headers:
+      Host: gs03-1.guoshi1520.com
+  udp: true
+- name: 🇺🇸美国27 | ⬇️ 1.4MB/s
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: b526926d-1474-4f41-985e-8b877cb840cd
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: shs111.kejixiaoqi666.store
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: shs111.kejixiaoqi666.store
+  udp: true
+- name: 🇺🇸美国104 | ⬇️ 3.3MB/s
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 5428dcc2-9950-4404-b8a5-9dac82acb210
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: maXNEtVIP-usA-VP3.nETKH3.SiTE
+  network: ws
+  ws-opts:
+    path: /linkws
+    headers:
+      Host: maXNEtVIP-usA-VP3.nETKH3.SiTE
+  udp: true
