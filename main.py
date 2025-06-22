@@ -51,8 +51,8 @@ def konversi_ke_clash(nodes):
                 port_info = server_info[colon_index + 1:]  # Everything after port
                 port = int(port_info.split('?')[0])  # Extracting port
 
-                # Hanya proses jika port 443, 80, atau jika menggunakan "ws"
-                if port not in [443, 80] and "ws" not in server_info:
+                # Hanya proses jika port 443 atau 80
+                if port not in [443, 80]:
                     continue
 
                 # Extract additional parameters from server_info
@@ -79,8 +79,12 @@ def konversi_ke_clash(nodes):
                 name_index = server_info.index('#')
                 name = server_info[name_index + 1:].strip() if name_index != -1 else "unknown"
 
-                # Tentukan network dari server_info jika ada
-                network = "ws" if "ws" in server_info else "tcp"  # Default ke "tcp" jika "ws" tidak ada
+                # Tentukan network dari server_info jika ada "ws"
+                network = ""
+                if "ws" in server_info:
+                    network = "ws"  # Ambil dari server_info jika ada "ws"
+                else:
+                    continue  # Jangan proses jika tidak ada "ws"
 
                 # Append the proxy details, set server to BUGCDN
                 proxy_detail = {
