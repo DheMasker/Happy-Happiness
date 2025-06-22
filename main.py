@@ -19,7 +19,7 @@ def ambil_langganan():
             res = requests.get(url, timeout=60)
             konten = res.text.strip()
             if not konten.startswith("vmess"):
-                konten = base64.b64decode(konten + '===').decode('utf-8', errors='ignore')
+                konten = base64.b64decode(konten).decode('utf-8', errors='ignore')
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
             semua_node.extend(baris)
         except Exception as e:
@@ -30,7 +30,7 @@ def decode_node_info_base64(node):
     try:
         if node.startswith("vmess://"):
             raw = node[8:]
-            decoded = base64.b64decode(raw + '===').decode('utf-8', errors='ignore')
+            decoded = base64.b64decode(raw).decode('utf-8', errors='ignore')
             return json.loads(decoded.replace("false", "False").replace("true", "True"))
         elif node.startswith("trojan://"):
             return None  # Tidak mendekode Trojan di sini
@@ -60,20 +60,18 @@ def konversi_ke_clash(nodes):
     for node in nodes:
         if node.startswith("vmess://"):
             try:
-                vmess_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
+                vmess_config = base64.b64decode(node[8:]).decode('utf-8', errors='ignore')
                 config = json.loads(vmess_config.replace("false", "False").replace("true", "True"))
-                proxies.append({
-                    "name": config.get("ps", "Tanpa Nama"),  # Memastikan 'name' di atas
                 
                 proxies.append({
-                    "name": proxy_name,
+                    "name": config.get("ps", "Tanpa Nama"),
                     "server": config["add"],
                     "port": int(config["port"]),
                     "type": "vmess",
                     "uuid": config["id"],
                     "alterId": int(config.get("aid", 0)),
                     "cipher": "auto",
-                    "tls": config.get("tls", False) == "tls",  # Mengonversi ke boolean
+                    "tls": config.get("tls", False) == "tls",
                     "skip-cert-verify": True,
                     "servername": config.get("host", ""),
                     "network": config.get("net", "ws"),
@@ -134,11 +132,11 @@ def main():
     os.makedirs("proxies", exist_ok=True)
     
     # Menyimpan konfigurasi VMess
-    with open("proxies/vmesswscdn443and80.yaml", "w", encoding="utf-8") as f:
+    with open(os.path.join("proxies", "vmesswscdn443and80.yaml"), "w", encoding="utf-8") as f:
         f.write(konversi_ke_clash(filtered_nodes))
     
     # Menyimpan konfigurasi Trojan
-    with open("proxies/trojancdn.yaml", "w", encoding="utf-8") as f:
+    with open(os.path.join("proxies", "trojancdn.yaml"), "w", encoding="utf-8") as f:
         f.write(konversi_ke_clash_trojan(filtered_trojan_nodes))
 
 if __name__ == "__main__":
