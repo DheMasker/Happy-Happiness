@@ -1,4 +1,5 @@
 import websocket
+import ssl
 import time
 
 # Konfigurasi WebSocket
@@ -14,8 +15,12 @@ url = f"wss://{server}:{port}{path}"
 start_time = time.time()
 
 try:
+    # Mengatur konteks SSL
+    ssl_context = ssl.create_default_context()
+    ssl_context.options |= ssl.OP_NO_SSLv3  # Menonaktifkan SSLv3 jika perlu
+
     # Membuat koneksi WebSocket
-    ws = websocket.create_connection(url, header={"Host": sni})
+    ws = websocket.create_connection(url, header={"Host": sni}, sslopt={"ssl_context": ssl_context})
     latency = time.time() - start_time
     ws.close()
     print("Proxy aktif, Latency:", latency, "detik")
