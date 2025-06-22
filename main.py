@@ -55,8 +55,8 @@ def konversi_ke_clash(nodes):
 
                 # Hanya memproses jika tipe adalah ws dan port 443 atau 80
                 if params.get('type') == 'ws' and port in ['443', '80']:
-                    # Mengambil name dari bagian akhir URL setelah tanda '#'
-                    name = node.split('#')[1] if '#' in node else 'default_name'
+                    # Mengambil name dari bagian akhir URL setelah tanda '#' dan menghapus spasi
+                    name = node.split('#')[1].strip() if '#' in node else 'default_name'
 
                     proxies.append({
                         "name": name,
