@@ -101,7 +101,13 @@ def konversi_ke_clash_trojan(nodes):
                 trojan_port = int(trojan_info[1])
                 trojan_password = trojan_parts[1].split("#")[0]
                 trojan_name = trojan_parts[1].split("#")[1]  # Nama dari bagian setelah '#'
-                
+
+                # Menambahkan informasi tambahan dari query string
+                query_params = dict(q.split('=') for q in trojan_parts[0].split('?')[1].split('&')) if '?' in trojan_parts[0] else {}
+                path = query_params.get('path', '/trojan-ws')  # Nilai default untuk path
+                network = "ws"  # Mengatur jenis jaringan sesuai kebutuhan
+                host = query_params.get('host', trojan_address)  # Mengambil host dari query atau menggunakan alamat server
+
                 proxies.append({
                     "name": trojan_name,
                     "server": trojan_address,
@@ -109,11 +115,11 @@ def konversi_ke_clash_trojan(nodes):
                     "type": "trojan",
                     "password": trojan_password,
                     "skip-cert-verify": True,
-                    "sni": trojan_address,
-                    "network": "ws",
+                    "sni": host,  # Menggunakan host sebagai SNI
+                    "network": network,
                     "ws-opts": {
-                        "path": "/trojan-ws",
-                        "headers": {"Host": trojan_address}
+                        "path": path,
+                        "headers": {"Host": host}  # Menggunakan host di dalam header
                     },
                     "udp": True
                 })
