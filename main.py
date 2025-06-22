@@ -1,59 +1,55 @@
-import os
-import requests
+import asyncio
+import aiohttp
 import speedtest
 import base64
 import yaml
-import re
 
-def get_proxy_links(url):
-    response = requests.get(url)
-    if response.status_code == 200:
-        content = response.text
-        # Ambil semua link yang mengandung 'vmess' atau 'trojan' dengan ws
-        proxy_links = re.findall(r'(https?://\S+)', content)
-        return [link for link in proxy_links if 'ws' in link]
-    return []
+async def fetch_remote_txt(url):
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url) as response:
+            return await response.text()
 
-def test_proxy(link):
+def parse_nodes(content):
+    nodes = []
+    lines = content.splitlines()
+    for line in lines:
+        if 'vmess' in line or 'trojan' in line:
+            try:
+                decoded_line = base64.b64decode(line).decode('utf-8')
+                if 'ws' in decoded_line:
+                    nodes.append(decoded_line)
+            except Exception:
+                continue
+    return nodes
+
+async def test_speed(node):
+    st = speedtest.Speedtest()
+    st.get_best_server()
     try:
-        # Menggunakan speedtest untuk menguji kecepatan
-        st = speedtest.Speedtest()
-        st.get_best_server()
-        download_speed = st.download() / 1_000_000  # dalam Mbps
-        upload_speed = st.upload() / 1_000_000  # dalam Mbps
+        download_speed = st.download() / 1_000_000  # Convert to Mbps
+        upload_speed = st.upload() / 1_000_000      # Convert to Mbps
         return download_speed, upload_speed
-    except Exception as e:
-        print(f"Failed to test proxy {link}: {e}")
+    except Exception:
         return None, None
 
-def convert_to_clash_format(proxies):
-    clash_format = {'proxies': []}
-    for proxy in proxies:
-        clash_format['proxies'].append(proxy)
-    return clash_format
+async def main():
+    remote_url = "https://raw.githubusercontent.com/devojony/collectSub/refs/heads/main/sub/sub_all_clash.txt"
+    content = await fetch_remote_txt(remote_url)
+    nodes = parse_nodes(content)
 
-def main():
-    url = "https://raw.githubusercontent.com/devojony/collectSub/refs/heads/main/sub/sub_all_clash.txt"
-    proxy_links = get_proxy_links(url)
-    valid_proxies = []
+    clash_nodes = []
+    for node in nodes:
+        download, upload = await test_speed(node)
+        if download and upload:
+            node_name = f"{node} - DL:{download:.2f} Mbps, UL:{upload:.2f} Mbps"
+            clash_nodes.append(node_name)
 
-    for link in proxy_links:
-        download_speed, upload_speed = test_proxy(link)
-        if download_speed and upload_speed:
-            proxy_name = f"{link} - Download: {download_speed:.2f} Mbps"
-            valid_proxies.append(proxy_name)
+    clash_yaml = {
+        'proxies': [node for node in clash_nodes]
+    }
 
-    clash_proxies = convert_to_clash_format(valid_proxies)
-    
-    # Pastikan folder 'proxies' ada
-    os.makedirs('proxies', exist_ok=True)
-    
-    # Simpan ke file YAML di dalam folder 'proxies'
-    yaml_file_path = os.path.join('proxies', 'proxies_clash.yaml')
-    with open(yaml_file_path, 'w') as yaml_file:
-        yaml.dump(clash_proxies, yaml_file)
-
-    print(f"Proxies have been saved to {yaml_file_path}")
+    with open('clash_config.yaml', 'w') as file:
+        yaml.dump(clash_yaml, file)
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())
