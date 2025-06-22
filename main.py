@@ -24,7 +24,12 @@ def ambil_langganan():
                 baris = [konten]
             else:
                 # Jika tidak, anggap sebagai Base64 dan dekode
-                konten = base64.b64decode(konten + '===').decode('utf-8', errors='ignore')
+                try:
+                    konten = base64.b64decode(konten + '===').decode('utf-8', errors='ignore')
+                except Exception as e:
+                    print(f"⚠️ Gagal mendekode Base64: {e}")
+                    continue
+                
                 baris = [line.strip() for line in konten.splitlines() if line.strip()]
             
             semua_node.extend(baris)
@@ -38,7 +43,7 @@ def saring_node(nodes):
         info = decode_node_info_base64(node)
         if info is not None:  # Pastikan info bukan None
             # Mengizinkan semua node dengan port 443 atau 80 dan network ws
-            if (node.startswith("vmess://") and info.get("port") in {443, 80} and info.get("net") == "ws"):  # Perbaikan di sini
+            if (node.startswith("vmess://") and info.get("port") in {443, 80} and info.get("net") == "ws"):
                 terfilter.append(node)
     return terfilter
 
