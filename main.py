@@ -33,13 +33,19 @@ def saring_node(nodes):
     for node in nodes:
         if node.startswith("trojan://"):
             trimmed_node = node[9:]  # Menghapus 'trojan://'
+            
+            # Pastikan format memiliki '@'
+            if '@' not in trimmed_node:
+                print(f"⚠️ Format tidak valid (tanpa '@'): {trimmed_node}")
+                continue
+            
             at_index = trimmed_node.index('@')
             # Ambil bagian setelah '@'
             server_port_info = trimmed_node[at_index + 1:]  # Everything after @
 
             # Pastikan ada ':' di server_port_info untuk mencegah ValueError
             if ':' not in server_port_info:
-                print(f"⚠️ Format tidak valid: {server_port_info}")
+                print(f"⚠️ Format tidak valid (tanpa ':'): {server_port_info}")
                 continue
 
             # Extract server dan port
@@ -70,7 +76,7 @@ def konversi_ke_clash(nodes):
 
                 # Pastikan ada ':' di server_port_info untuk mencegah ValueError
                 if ':' not in server_port_info:
-                    print(f"⚠️ Format tidak valid: {server_port_info}")
+                    print(f"⚠️ Format tidak valid (tanpa ':'): {server_port_info}")
                     continue
 
                 # Extract server dan port
