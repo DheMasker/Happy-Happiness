@@ -1,4 +1,3 @@
-
 import base64
 import requests
 import yaml
@@ -6,11 +5,8 @@ import os
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
-    "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/trojan"
+    "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
 ]
-
-# Ganti server dengan BUGCDN
-BUGCDN = "104.22.5.240"
 
 def ambil_langganan():
     semua_node = []
@@ -19,7 +15,6 @@ def ambil_langganan():
             print(f"Mengambil langganan: {url}")
             res = requests.get(url, timeout=60)
             konten = res.text.strip()
-            # Mendecode Base64 jika diperlukan
             if konten:
                 konten = base64.b64decode(konten + '===').decode('utf-8', errors='ignore')
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
@@ -41,69 +36,45 @@ def konversi_ke_clash(nodes):
     for node in nodes:
         if node.startswith("trojan://"):
             try:
-                # Menghapus 'trojan://' dan memisahkan bagian
-                trimmed_node = node[9:]  # Menghapus 'trojan://'
-                at_index = trimmed_node.index('@')
-                password = trimmed_node[:at_index].strip()  # Extracting password
-                server_info = trimmed_node[at_index + 1:]  # Everything after @
-
-                # Extract server and port
-                colon_index = server_info.index(':')
-                port_info = server_info[colon_index + 1:]  # Everything after port
-                port = int(port_info.split('?')[0])  # Extracting port
-
-                # Hanya proses jika port 443 atau 80
-                if port not in [443, 80]:
+                raw = node[9:]  # Menghapus 'trojan://'
+                parts = raw.split('@')
+                if len(parts) != 2:
+                    print("⚠️ Format node Trojan tidak valid")
                     continue
 
-                # Extract additional parameters from server_info
-                query_params = port_info.split('?')[1] if '?' in port_info else ''
-                sni = ''
-                host = ''
-                path = None  # Set to None initially
+                credentials, server_info = parts
+                server_details = server_info.split(':')
+                if len(server_details) != 2:
+                    print("⚠️ Format server info tidak valid")
+                    continue
 
-                for param in query_params.split('&'):
-                    if param.startswith('sni='):
-                        sni = param.split('=')[1].strip().split('#')[0]  # Clean up sni
-                    elif param.startswith('host='):
-                        host = param.split('=')[1].strip().split('#')[0]  # Clean up host
-                    elif param.startswith('path='):
-                        path = param.split('=')[1].strip().split('#')[0].replace('%2F', '/')  # Decode path
+                server, port_and_query = server_details
+                port = port_and_query.split('?')[0]
+                query = port_and_query.split('?')[1] if '?' in port_and_query else ''
+                params = {param.split('=')[0]: param.split('=')[1] for param in query.split('&') if '=' in param}
 
-                # Set host and sni based on availability
-                if not sni and host:
-                    sni = host
-                elif not host and sni:
-                    host = sni
+                # Mengambil name dari bagian akhir URL setelah tanda '#'
+                name = params.get('host', 'default_name')  # Default jika tidak ada host
+                if '#' in node:
+                    name = node.split('#')[1]
 
-                # Extract name from the node
-                name_index = server_info.index('#')
-                name = server_info[name_index + 1:].strip() if name_index != -1 else "unknown"
-
-                # Append the proxy details, set server to BUGCDN
-                proxy_detail = {
+                proxies.append({
                     "name": name,
-                    "server": BUGCDN,  # Ganti server dengan BUGCDN
-                    "port": port,
+                    "server": server,
+                    "port": int(port),
                     "type": "trojan",
-                    "password": password,  # Already stripped
+                    "password": credentials,
                     "skip-cert-verify": True,
-                    "sni": sni if sni else "",  # Use empty string if no sni
-                    "network": "ws",
-                    "headers": {
-                        "Host": host if host else ""  # Use empty string if no host
+                    "sni": params.get('sni', ''),
+                    "network": params.get('type', 'tcp'),
+                    "ws-opts": {
+                        "path": params.get('path', ''),
+                        "headers": {
+                            "Host": params.get('host', '')
+                        }
                     },
                     "udp": True
-                }
-
-                # Add path only if it's defined
-                if path is not None:
-                    proxy_detail["ws-opts"] = {
-                        "path": path  # Set the path if available
-                    }
-
-                proxies.append(proxy_detail)
-
+                })
             except Exception as e:
                 print(f"⚠️ Gagal memparsing trojan: {e}")
 
