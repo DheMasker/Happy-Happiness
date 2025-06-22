@@ -49,7 +49,11 @@ def konversi_ke_clash(nodes):
                 # Extract server and port
                 colon_index = server_info.index(':')
                 port_info = server_info[colon_index + 1:]  # Everything after port
-                port = int(port_info.split('?')[0])  # Extracting port
+                try:
+                    port = int(port_info.split('?')[0])  # Extracting port
+                except ValueError:
+                    print(f"⚠️ Port tidak valid: {port_info}")
+                    continue
 
                 # Hanya proses jika port 443 atau 80
                 if port not in [443, 80]:
