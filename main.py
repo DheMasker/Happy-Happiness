@@ -31,59 +31,74 @@ def ambil_langganan():
             print(f"❌ Kesalahan sumber langganan: {url} -> {e}")
     return semua_node
 
+def decode_base64(konten):
+    try:
+        konten = ''.join(filter(lambda x: x in string.printable, konten))
+        while len(konten) % 4 != 0:
+            konten += '='
+        decoded = base64.b64decode(konten).decode('utf-8', errors='ignore')
+        return [line.strip() for line in decoded.splitlines() if line.strip()]
+    except Exception as e:
+        print(f"⚠️ Gagal mendekode Base64: {e}. Menggunakan konten langsung.")
+        return [line.strip() for line in konten.splitlines() if line.strip()]
+
 def saring_node(nodes):
     terfilter = []
     for node in nodes:
-        if node.startswith("vmess://") or node.startswith("trojan://"):
-            terfilter.append(node)
+        info = decode_node_info(node)
+        if info is not None:
+            # Memfilter node berdasarkan kriteria yang diinginkan
+            if (info.get("port") in {443, 80} and info.get("net") == "ws"):
+                terfilter.append(node)
     print(f"Jumlah node setelah disaring: {len(terfilter)}")  # Mencetak jumlah node setelah penyaringan
     return terfilter
 
 def decode_node_info(node):
     try:
-        if node.startswith("vmess://"):
-            raw = node[8:]  # Menghapus 'vmess://'
+        if node.startswith("vmess://") or node.startswith("vless://"):
+            raw = node.split("://")[1]
             while len(raw) % 4 != 0:
                 raw += '='
             decoded = base64.b64decode(raw).decode('utf-8', errors='ignore')
             return json.loads(decoded.replace("false", "False").replace("true", "True"))
-        elif node.startswith("trojan://"):
-            # Memproses node trojan
-            return parse_trojan(node)
+        elif node.startswith("ss://"):
+            # Untuk ss, kita tidak mendecode JSON, tetapi kita bisa memisahkan informasi
+            return parse_ss(node)
     except Exception as e:
         print(f"⚠️ Gagal mendecode node: {e}")
         return None
 
-def parse_trojan(node):
+def parse_ss(node):
     try:
-        # Memisahkan informasi dari format trojan
+        # Mengambil informasi dari format ss
         parts = node.split("://")[1].split("@")
-        auth = parts[0]
+        auth = parts[0].split(":")
         server_info = parts[1].split(":")
         return {
-            "type": "trojan",
-            "password": auth,
+            "type": "ss",
+            "method": auth[0],
+            "password": auth[1],
             "server": server_info[0],
             "port": int(server_info[1]),
-            "net": "tcp"  # Default untuk Trojan
+            "net": "tcp"  # Default untuk SS
         }
     except Exception as e:
-        print(f"⚠️ Gagal memparse Trojan node: {e}")
+        print(f"⚠️ Gagal memparse SS node: {e}")
         return None
 
 def konversi_ke_clash(nodes):
     proxies = []
 
     for node in nodes:
-        if node.startswith("vmess://"):
+        if node.startswith("vmess://") or node.startswith("vless://"):
             try:
-                vmess_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
+                vmess_config = base64.b64decode(node.split("://")[1] + '===').decode('utf-8', errors='ignore')
                 config = json.loads(vmess_config.replace("false", "False").replace("true", "True"))
                 proxies.append({
                     "name": config.get("ps", "Tanpa Nama"),
                     "server": BUGCDN,
                     "port": int(config["port"]),
-                    "type": "vmess",
+                    "type": "vmess" if node.startswith("vmess://") else "vless",
                     "uuid": config["id"],
                     "alterId": int(config.get("aid", 0)),
                     "cipher": "auto",
@@ -100,19 +115,20 @@ def konversi_ke_clash(nodes):
             except Exception as e:
                 print(f"⚠️ Gagal memparsing vmess: {e}")
 
-        elif node.startswith("trojan://"):
+        elif node.startswith("ss://"):
             try:
-                info = parse_trojan(node)
+                info = parse_ss(node)
                 proxies.append({
-                    "name": f"trojan-{info['server']}",
+                    "name": f"ss-{info['server']}",
                     "server": info["server"],
                     "port": info["port"],
-                    "type": "trojan",
+                    "type": "ss",
+                    "cipher": info["method"],
                     "password": info["password"],
                     "udp": True
                 })
             except Exception as e:
-                print(f"⚠️ Gagal memparsing trojan: {e}")
+                print(f"⚠️ Gagal memparsing ss: {e}")
 
     proxies_clash = {
         "proxies": proxies
