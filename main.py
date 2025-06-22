@@ -1,80 +1,97 @@
-import logging
-import asyncio
-import aiohttp
+import base64
+import requests
 import yaml
 import os
+import json  # Menggunakan json untuk decode
 
-# Konfigurasi pengaturan logging
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[logging.StreamHandler()]
-)
-logger = logging.getLogger(__name__)
+# Daftar sumber langganan
+SUB_LINKS = [ 
+    "https://raw.githubusercontent.com/MhdiTaheri/V2rayCollector/refs/heads/main/sub/mix"
+]
 
-async def ambil_info_langganan(session, url):
+BUGCDN = "104.22.5.240"
+
+def ambil_langganan():
+    semua_node = []
+    for url in SUB_LINKS:
+        try:
+            print(f"Mengambil langganan: {url}")
+            res = requests.get(url, timeout=60)
+            konten = res.text.strip()
+            
+            # Jika konten dimulai dengan "vmess", tambahkan langsung
+            if konten.startswith("vmess"):
+                baris = [konten]
+            else:
+                # Jika tidak, anggap sebagai Base64 dan dekode
+                konten = base64.b64decode(konten + '===').decode('utf-8', errors='ignore')
+                baris = [line.strip() for line in konten.splitlines() if line.strip()]
+            
+            semua_node.extend(baris)
+        except Exception as e:
+            print(f"❌ Kesalahan sumber langganan: {url} -> {e}")
+    return semua_node
+
+def saring_node(nodes):
+    terfilter = []
+    for node in nodes:
+        info = decode_node_info_base64(node)
+        if info is not None:  # Pastikan info bukan None
+            # Mengizinkan semua node dengan port 443 atau 80 dan network ws
+            if (node.startswith("vmess://") and info.get("port") in {443, 80} and info.get("net") == "ws"):  # Perbaikan di sini
+                terfilter.append(node)
+    return terfilter
+
+def decode_node_info_base64(node):
     try:
-        async with session.get(url) as response:
-            response.raise_for_status()
-            info_langganan = response.headers.get("subscription-userinfo")
-            if not info_langganan:
-                logger.warning(f"Tidak ditemukan informasi langganan: {url}")
-                return None
-
-            # Parsing informasi langganan
-            dict_info = {}
-            for item in info_langganan.split(";"):
-                item = item.strip()
-                if not item:
-                    continue
-                kunci, nilai = item.split("=")
-                dict_info[kunci.strip()] = nilai.strip()
-
-            return dict_info
+        if node.startswith("vmess://"):
+            raw = node[8:]
+            decoded = base64.b64decode(raw + '===').decode('utf-8', errors='ignore')
+            return json.loads(decoded.replace("false", "False").replace("true", "True"))
     except Exception as e:
-        logger.error(f"Gagal mengambil informasi langganan: {url}, kesalahan: {str(e)}")
+        print(f"⚠️ Gagal mendecode node: {e}")
         return None
 
-async def filter_url_valid_konkuren(urls):
-    valid_urls = []
-    connector = aiohttp.TCPConnector(limit=50)
+def konversi_ke_clash(nodes):
+    proxies = []
 
-    async with aiohttp.ClientSession(connector=connector) as session:
-        tasks = [ambil_info_langganan(session, url) for url in urls]
-        for task in asyncio.as_completed(tasks):
-            info = await task
-            if info and (info.get("type") in ["trojan", "vmess"] and 
-                         info.get("network") == "ws" and 
-                         int(info.get("port", 0)) in [443, 80]):
-                valid_urls.append(info)  # Simpan informasi valid
+    for node in nodes:
+        if node.startswith("vmess://"):
+            try:
+                vmess_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
+                config = json.loads(vmess_config.replace("false", "False").replace("true", "True"))
+                proxies.append({
+                    "name": config.get("ps", "Tanpa Nama"),  # Memastikan 'name' di atas
+                    "server": BUGCDN,  # Menggunakan BUGCDN
+                    "port": int(config["port"]),
+                    "type": "vmess",
+                    "uuid": config["id"],
+                    "alterId": int(config.get("aid", 0)),
+                    "cipher": "auto",
+                    "tls": True,  # Mengatur tls menjadi True
+                    "skip-cert-verify": True,
+                    "servername": config.get("host", ""),
+                    "network": config.get("net", "ws"),
+                    "ws-opts": {
+                        "path": config.get("path", "/vmess-ws"),
+                        "headers": {"Host": config.get("host", "")}
+                    },
+                    "udp": True
+                })
+            except Exception as e:
+                print(f"⚠️ Gagal memparsing vmess: {e}")
 
-    return valid_urls
+    proxies_clash = {
+        "proxies": proxies
+    }
+    return yaml.dump(proxies_clash, allow_unicode=True, sort_keys=False)  # Menonaktifkan penyortiran kunci
 
-async def simpan_proxies_yml(penyedia_proxy_valid):
-    if not penyedia_proxy_valid:
-        logger.warning("Tidak ada proxy valid untuk disimpan.")
-        return
-
-    # Simpan hanya URL tanpa format tambahan
-    proxies = [f"{proxy['url']}" for proxy in penyedia_proxy_valid]
-
+def main():
+    nodes = ambil_langganan()
+    filtered_nodes = saring_node(nodes)
     os.makedirs("proxies", exist_ok=True)
-
-    # Simpan file di dalam folder 'proxies'
-    with open("proxies/proxies.yaml", "w", encoding="utf-8") as file:
-        yaml.dump({"proxies": proxies}, file, allow_unicode=True)
-
-    logger.info("File proxies.yaml berhasil dibuat dengan proxy yang valid.")
-
-async def utama():
-    remote_url = "https://raw.githubusercontent.com/devojony/collectSub/refs/heads/main/sub/sub_all_clash.txt"
-    async with aiohttp.ClientSession() as session:
-        async with session.get(remote_url) as response:
-            konten = await response.text()
-            penyedia_proxy = [p.strip() for p in konten.split("\n") if p.strip()]
-    
-    penyedia_proxy_valid = await filter_url_valid_konkuren(penyedia_proxy)
-    await simpan_proxies_yml(penyedia_proxy_valid)
+    with open("proxies/vmesswscdn443and80.yaml", "w", encoding="utf-8") as f:
+        f.write(konversi_ke_clash(filtered_nodes))
 
 if __name__ == "__main__":
-    asyncio.run(utama())
+    main()
