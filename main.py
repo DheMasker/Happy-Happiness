@@ -5,7 +5,7 @@ import os
 import json
 
 # Daftar sumber langganan
-SUB_LINKS = [ 
+SUB_LINKS = [
     "https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/All_Configs_Sub.txt"
 ]
 
@@ -18,11 +18,9 @@ def ambil_langganan():
             print(f"Mengambil langganan: {url}")
             res = requests.get(url, timeout=60)
             konten = res.text.strip()
-
-            # Mendecode konten dengan penggantian karakter non-ASCII
+            print(f"Konten yang diambil dari {url}: {konten[:100]}...")  # Mencetak sebagian konten
             if not konten.startswith("vmess"):
-                konten = base64.b64decode(konten + '===').decode('utf-8', errors='replace')
-                
+                konten = base64.b64decode(konten + '===').decode('utf-8', errors='ignore')
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
             semua_node.extend(baris)
         except Exception as e:
@@ -34,6 +32,7 @@ def saring_node(nodes):
     for node in nodes:
         info = decode_node_info_base64(node)
         if info is not None:
+            # Mengizinkan node dengan port 443 atau 80 dan network ws
             if (node.startswith("vmess://") and info.get("port") in {443, 80} and info.get("net") == "ws"):
                 terfilter.append(node)
     return terfilter
@@ -42,11 +41,8 @@ def decode_node_info_base64(node):
     try:
         if node.startswith("vmess://"):
             raw = node[8:]
-            decoded = base64.b64decode(raw + '===').decode('utf-8', errors='replace')
+            decoded = base64.b64decode(raw + '===').decode('utf-8', errors='ignore')
             return json.loads(decoded.replace("false", "False").replace("true", "True"))
-    except json.JSONDecodeError as e:
-        print(f"⚠️ Gagal mendecode JSON: {e}")
-        return None
     except Exception as e:
         print(f"⚠️ Gagal mendecode node: {e}")
         return None
@@ -56,7 +52,7 @@ def konversi_ke_clash(nodes):
     for node in nodes:
         if node.startswith("vmess://"):
             try:
-                vmess_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='replace')
+                vmess_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
                 config = json.loads(vmess_config.replace("false", "False").replace("true", "True"))
                 proxies.append({
                     "name": config.get("ps", "Tanpa Nama"),
