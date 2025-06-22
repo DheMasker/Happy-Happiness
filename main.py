@@ -11,10 +11,15 @@ SUB_LINKS = [
     "https://raw.githubusercontent.com/PlanAsli/configs-collector-v2ray/refs/heads/main/sub/all_configs.txt",
     "https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/All_Configs_Sub.txt",
     "https://raw.githubusercontent.com/MhdiTaheri/V2rayCollector/refs/heads/main/sub/mix",
-    "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"    
+    "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt",    
 ]
 
 BUGCDN = "104.22.5.240"
+
+# Fungsi untuk mencatat kesalahan ke dalam file log
+def log_error(message):
+    with open("error_log.txt", "a", encoding="utf-8") as log_file:
+        log_file.write(message + "\n")
 
 def ambil_langganan():
     semua_node = []
@@ -29,7 +34,7 @@ def ambil_langganan():
             baris = konten.splitlines()
             semua_node.extend(baris)
         except Exception as e:
-            print(f"❌ Kesalahan sumber langganan: {url} -> {e}")
+            log_error(f"❌ Kesalahan sumber langganan: {url} -> {e}")
     return semua_node
 
 def decode_base64(konten):
@@ -40,7 +45,7 @@ def decode_base64(konten):
         decoded = base64.b64decode(konten).decode('utf-8', errors='ignore')
         return [line.strip() for line in decoded.splitlines() if line.strip()]
     except Exception as e:
-        print(f"⚠️ Gagal mendekode Base64: {e}. Menggunakan konten langsung.")
+        log_error(f"⚠️ Gagal mendekode Base64: {e}. Menggunakan konten langsung.")
         return [line.strip() for line in konten.splitlines() if line.strip()]
 
 def saring_node(nodes):
@@ -65,37 +70,38 @@ def decode_node_info(node):
         elif node.startswith("trojan://"):
             return parse_trojan(node)
     except Exception as e:
-        print(f"⚠️ Gagal mendecode node: {e}")
+        log_error(f"⚠️ Gagal mendecode node: {e} - Node: {node}")
         return None
 
 def parse_trojan(node):
     try:
         print("🔍 Memproses node Trojan...")
-        # Memisahkan bagian node
         parts = node.split("://")[1].split("@")
         auth = parts[0]  # Mendapatkan autentikasi
-        server_info = parts[1].split(":")  # Memisahkan server dan port
+        server_info = parts[1].split(":")
         
-        # Mengambil query params
+        if len(server_info) != 2:
+            raise ValueError("Format server dan port tidak valid")
+
+        # Mengambil port
+        port = int(server_info[1])
+
         query_params = parts[1].split("/")[1] if len(parts[1].split("/")) > 1 else ""
         params = dict(param.split("=") for param in query_params.split("&") if "=" in param)
         
-        # Mengambil nilai dari query params
         sni = params.get("sni", "")
         path = params.get("path", "")
         host = params.get("host", "")
         security = params.get("security", "")
-        allow_insecure = params.get("allowInsecure", "0")  # Default ke 0 jika tidak ada
-        
-        # Menetapkan jenis jaringan dari query params
-        network_type = params.get("type", "ws")  # Mengambil dari query params, default ke "ws"
+        allow_insecure = params.get("allowInsecure", "0")
 
-        # Mengembalikan informasi dalam bentuk dictionary
+        network_type = params.get("type", "ws")
+
         result = {
             "type": "trojan",
             "password": auth,
             "server": server_info[0],
-            "port": int(server_info[1]),
+            "port": port,
             "sni": sni,
             "network": network_type,
             "skip-cert-verify": True,
@@ -111,7 +117,7 @@ def parse_trojan(node):
         print("✅ Node Trojan berhasil diparse:", result)
         return result
     except Exception as e:
-        print(f"⚠️ Gagal memparse Trojan node: {e}")
+        log_error(f"⚠️ Gagal memparse Trojan node: {e} - Node: {node}")
         return None
 
 def konversi_ke_clash(nodes):
@@ -141,13 +147,13 @@ def konversi_ke_clash(nodes):
                     "udp": True
                 })
             except Exception as e:
-                print(f"⚠️ Gagal memparsing vmess: {e}")
+                log_error(f"⚠️ Gagal memparsing vmess: {e}")
 
         elif node.startswith("trojan://"):
             try:
                 info = parse_trojan(node)
                 proxies.append({
-                    "name": f"{info['sni']}-trojan_ws_cdn_turbovidio",  # Format nama yang diinginkan
+                    "name": f"{info['sni']}-trojan_ws_cdn_turbovidio",
                     "server": info["server"],
                     "port": info["port"],
                     "type": "trojan",
@@ -159,7 +165,7 @@ def konversi_ke_clash(nodes):
                     "udp": info["udp"]
                 })
             except Exception as e:
-                print(f"⚠️ Gagal memparsing trojan: {e}")
+                log_error(f"⚠️ Gagal memparsing trojan: {e}")
 
     proxies_clash = {
         "proxies": proxies
@@ -168,9 +174,9 @@ def konversi_ke_clash(nodes):
 
 def main():
     nodes = ambil_langganan()
-    print(f"Total node yang berhasil diambil: {len(nodes)}")  # Mencetak total node
+    print(f"Total node yang berhasil diambil: {len(nodes)}")
     filtered_nodes = saring_node(nodes)
-    print(f"Total node setelah disaring: {len(filtered_nodes)}")  # Mencetak total node setelah penyaringan
+    print(f"Total node setelah disaring: {len(filtered_nodes)}")
     os.makedirs("proxies", exist_ok=True)
     with open("proxies/vmesswscdn443and80.yaml", "w", encoding="utf-8") as f:
         f.write(konversi_ke_clash(filtered_nodes))
