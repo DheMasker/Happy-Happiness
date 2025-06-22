@@ -7,11 +7,10 @@ import string
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
-   
-"https://raw.githubusercontent.com/roosterkid/openproxylist/refs/heads/main/V2RAY_RAW.txt",
-"https://raw.githubusercontent.com/PlanAsli/configs-collector-v2ray/refs/heads/main/sub/all_configs.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/All_Configs_Sub.txt", 
-"https://raw.githubusercontent.com/MhdiTaheri/V2rayCollector/refs/heads/main/sub/mix"
+    "https://raw.githubusercontent.com/roosterkid/openproxylist/refs/heads/main/V2RAY_RAW.txt",
+    "https://raw.githubusercontent.com/PlanAsli/configs-collector-v2ray/refs/heads/main/sub/all_configs.txt",
+    "https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/All_Configs_Sub.txt",
+    "https://raw.githubusercontent.com/MhdiTaheri/V2rayCollector/refs/heads/main/sub/mix"
 ]
 
 BUGCDN = "104.22.5.240"
@@ -24,29 +23,31 @@ def ambil_langganan():
             res = requests.get(url, timeout=60)
             konten = res.text.strip()
             
-            # Jika konten dimulai dengan "vmess", tambahkan langsung
+            # Memproses konten berdasarkan formatnya
             if konten.startswith("vmess"):
                 baris = [konten]
             else:
-                # Coba dekode Base64
-                try:
-                    # Hapus karakter yang tidak valid
-                    konten = ''.join(filter(lambda x: x in string.printable, konten))
-                    
-                    # Menambahkan padding '=' jika diperlukan
-                    while len(konten) % 4 != 0:
-                        konten += '='
-                    
-                    konten = base64.b64decode(konten).decode('utf-8', errors='ignore')
-                    baris = [line.strip() for line in konten.splitlines() if line.strip()]
-                except Exception as e:
-                    print(f"⚠️ Gagal mendekode Base64: {e}. Menggunakan konten langsung.")
-                    baris = [line.strip() for line in konten.splitlines() if line.strip()]
+                baris = decode_base64(konten)
             
             semua_node.extend(baris)
         except Exception as e:
             print(f"❌ Kesalahan sumber langganan: {url} -> {e}")
     return semua_node
+
+def decode_base64(konten):
+    try:
+        # Hapus karakter yang tidak valid
+        konten = ''.join(filter(lambda x: x in string.printable, konten))
+        
+        # Menambahkan padding '=' jika diperlukan
+        while len(konten) % 4 != 0:
+            konten += '='
+        
+        decoded = base64.b64decode(konten).decode('utf-8', errors='ignore')
+        return [line.strip() for line in decoded.splitlines() if line.strip()]
+    except Exception as e:
+        print(f"⚠️ Gagal mendekode Base64: {e}. Menggunakan konten langsung.")
+        return [line.strip() for line in konten.splitlines() if line.strip()]
 
 def saring_node(nodes):
     terfilter = []
