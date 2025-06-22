@@ -8,6 +8,9 @@ SUB_LINKS = [
     "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
 ]
 
+# Ganti server dengan BUGCDN
+BUGCDN = "104.22.5.240"
+
 def ambil_langganan():
     semua_node = []
     for url in SUB_LINKS:
@@ -45,9 +48,12 @@ def konversi_ke_clash(nodes):
 
                 # Extract server and port
                 colon_index = server_info.index(':')
-                server = server_info[:colon_index].strip()  # Extracting server
                 port_info = server_info[colon_index + 1:]  # Everything after port
                 port = int(port_info.split('?')[0])  # Extracting port
+
+                # Hanya proses jika port 443 atau 80
+                if port not in [443, 80]:
+                    continue
 
                 # Extract additional parameters from server_info
                 query_params = port_info.split('?')[1] if '?' in port_info else ''
@@ -73,10 +79,10 @@ def konversi_ke_clash(nodes):
                 name_index = server_info.index('#')
                 name = server_info[name_index + 1:].strip() if name_index != -1 else "unknown"
 
-                # Append the proxy details
+                # Append the proxy details, set server to BUGCDN
                 proxies.append({
                     "name": name,
-                    "server": server,
+                    "server": BUGCDN,  # Ganti server dengan BUGCDN
                     "port": port,
                     "type": "trojan",
                     "password": password,  # Already stripped
