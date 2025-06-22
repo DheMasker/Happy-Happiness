@@ -2,11 +2,12 @@ import base64
 import requests
 import yaml
 import os
-import urllib.parse  # Untuk dekoding
-from concurrent.futures import ThreadPoolExecutor  # Untuk pengujian paralel
+import urllib.parse
+import time
+from concurrent.futures import ThreadPoolExecutor
 
 # Daftar sumber langganan
-SUB_LINKS = [ 
+SUB_LINKS = [
     "https://raw.githubusercontent.com/Surfboardv2ray/v2ray-worker-sub/refs/heads/master/providers/providers64"
 ]
 
@@ -38,19 +39,21 @@ def saring_node(nodes):
             terfilter.append(node)
     return terfilter
 
-def uji_koneksi(proxy):
+def uji_latency(proxy):
     try:
         # Membangun konfigurasi proxy
         proxy_config = {
             "http": f"http://{proxy['server']}:{proxy['port']}",
             "https": f"http://{proxy['server']}:{proxy['port']}"
         }
-        # Melakukan permintaan ke URL test
+        # Mengukur waktu respons
+        start_time = time.time()
         response = requests.get(TEST_URL, proxies=proxy_config, timeout=5)
-        return response.status_code == 204  # Mengembalikan True jika status 204
+        latency = time.time() - start_time
+        return latency if response.status_code == 204 else None
     except Exception as e:
-        print(f"⚠️ Gagal menguji koneksi untuk proxy {proxy['server']}:{proxy['port']}: {e}")
-        return False
+        print(f"⚠️ Gagal menguji latency untuk proxy {proxy['server']}:{proxy['port']}: {e}")
+        return None
 
 def konversi_ke_clash(nodes):
     proxies = []
@@ -134,25 +137,29 @@ def uji_proxies(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
         data = yaml.safe_load(f)
 
-    valid_proxies = []
+    # Menyimpan latensi dari proxies
+    proxy_latencies = []
 
     # Menggunakan ThreadPoolExecutor untuk pengujian paralel
     with ThreadPoolExecutor() as executor:
-        futures = {executor.submit(uji_koneksi, proxy): proxy for proxy in data['proxies']}
+        futures = {executor.submit(uji_latency, proxy): proxy for proxy in data['proxies']}
         
         for future in futures:
             proxy = futures[future]
             try:
-                if future.result():
-                    valid_proxies.append(proxy)
+                latency = future.result()
+                if latency is not None:
+                    proxy_latencies.append({"proxy": proxy, "latency": latency})
+                    print(f"✅ Latency untuk {proxy['server']}:{proxy['port']} adalah {latency:.2f} detik.")
                 else:
                     print(f"❌ Koneksi ke {proxy['server']}:{proxy['port']} gagal.")
             except Exception as e:
                 print(f"⚠️ Gagal memproses proxy {proxy['server']}:{proxy['port']}: {e}")
 
-    # Simpan proxies yang valid
-    with open(file_path, 'w', encoding='utf-8') as f:
-        yaml.dump({'proxies': valid_proxies}, f, allow_unicode=True, sort_keys=False)
+    # Simpan latensi ke dalam file
+    latency_file_path = "proxies/latency_results.yaml"
+    with open(latency_file_path, 'w', encoding='utf-8') as f:
+        yaml.dump(proxy_latencies, f, allow_unicode=True, sort_keys=False)
 
 def main():
     nodes = ambil_langganan()
@@ -164,7 +171,7 @@ def main():
     with open(file_path, "w", encoding="utf-8") as f:
         f.write(konversi_ke_clash(filtered_nodes))
 
-    # Uji koneksi pada proxies setelah file dibuat
+    # Uji latency pada proxies setelah file dibuat
     uji_proxies(file_path)
 
 if __name__ == "__main__":
