@@ -6,10 +6,13 @@ import json
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
-    "https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/All_Configs_Sub.txt"
+    "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
 ]
 
 BUGCDN = "104.22.5.240"
+
+def is_ascii(s):
+    return all(ord(c) < 128 for c in s)
 
 def ambil_langganan():
     semua_node = []
@@ -19,7 +22,7 @@ def ambil_langganan():
             res = requests.get(url, timeout=60)
             konten = res.text.strip()
             if not konten.startswith("vmess"):
-                konten = base64.b64decode(konten + '===').decode('utf-8')  # Menggunakan UTF-8 tanpa mengganti atau mengabaikan
+                konten = base64.b64decode(konten + '===').decode('utf-8')
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
             semua_node.extend(baris)
         except Exception as e:
@@ -39,7 +42,11 @@ def decode_node_info_base64(node):
     try:
         if node.startswith("vmess://"):
             raw = node[8:]
-            decoded = base64.b64decode(raw + '===').decode('utf-8')  # Menggunakan UTF-8 tanpa mengganti atau mengabaikan
+            if not is_ascii(raw):
+                print(f"⚠️ Karakter non-ASCII ditemukan dalam node: {node}")
+                return None  # Lewati node ini jika ada karakter non-ASCII
+            
+            decoded = base64.b64decode(raw + '===').decode('utf-8')
             return json.loads(decoded.replace("false", "False").replace("true", "True"))
     except json.JSONDecodeError as e:
         print(f"⚠️ Gagal mendecode JSON: {e}")
@@ -53,7 +60,7 @@ def konversi_ke_clash(nodes):
     for node in nodes:
         if node.startswith("vmess://"):
             try:
-                vmess_config = base64.b64decode(node[8:] + '===').decode('utf-8')  # Menggunakan UTF-8 tanpa mengganti atau mengabaikan
+                vmess_config = base64.b64decode(node[8:] + '===').decode('utf-8')
                 config = json.loads(vmess_config.replace("false", "False").replace("true", "True"))
                 proxies.append({
                     "name": config.get("ps", "Tanpa Nama"),
