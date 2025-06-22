@@ -8,6 +8,12 @@ from concurrent.futures import ThreadPoolExecutor
 
 # Daftar sumber langganan
 SUB_LINKS = [
+    "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt",
+    "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
+    "https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2",
+    "https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/v2ray",
+    "https://raw.githubusercontent.com/iwxf/free-v2ray/master/v2",
+    "https://raw.githubusercontent.com/Leon406/SubCrawler/main/sub/share/v2ray.txt",
     "https://raw.githubusercontent.com/Surfboardv2ray/v2ray-worker-sub/refs/heads/master/providers/providers64"
 ]
 
