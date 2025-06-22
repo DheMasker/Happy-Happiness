@@ -3,6 +3,7 @@ import requests
 import yaml
 import os
 import urllib.parse  # Untuk dekoding
+from ping3 import ping  # Pastikan untuk menginstal package ini
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
@@ -33,6 +34,16 @@ def saring_node(nodes):
         if node.startswith("trojan://"):
             terfilter.append(node)
     return terfilter
+
+def uji_koneksi(server):
+    try:
+        response_time = ping(server, timeout=2)  # Timeout 2 detik
+        if response_time is None:
+            return False  # Tidak ada koneksi
+        return response_time < 0.5  # Kembali True jika waktu respons kurang dari 500ms
+    except Exception as e:
+        print(f"⚠️ Gagal melakukan ping ke {server}: {e}")
+        return False
 
 def konversi_ke_clash(nodes):
     proxies = []
@@ -86,6 +97,7 @@ def konversi_ke_clash(nodes):
                     if path.endswith('#'):
                         path = path[:-1]
 
+                    # Tambahkan proxy ke daftar
                     proxies.append({
                         "name": name,
                         "server": server,  # Gunakan server yang telah ditentukan
@@ -111,12 +123,33 @@ def konversi_ke_clash(nodes):
     }
     return yaml.dump(proxies_clash, allow_unicode=True, sort_keys=False)
 
+def uji_proxies(file_path):
+    with open(file_path, 'r', encoding='utf-8') as f:
+        data = yaml.safe_load(f)
+
+    valid_proxies = []
+    for proxy in data['proxies']:
+        if uji_koneksi(proxy['server']):
+            valid_proxies.append(proxy)
+        else:
+            print(f"❌ Koneksi ke {proxy['server']} gagal atau waktu respons lebih dari 500 ms.")
+
+    # Simpan proxies yang valid
+    with open(file_path, 'w', encoding='utf-8') as f:
+        yaml.dump({'proxies': valid_proxies}, f, allow_unicode=True, sort_keys=False)
+
 def main():
     nodes = ambil_langganan()
     filtered_nodes = saring_node(nodes)
     os.makedirs("proxies", exist_ok=True)
-    with open("proxies/trojan.yaml", "w", encoding="utf-8") as f:
+    file_path = "proxies/trojan.yaml"
+    
+    # Buat file trojan.yaml
+    with open(file_path, "w", encoding="utf-8") as f:
         f.write(konversi_ke_clash(filtered_nodes))
+
+    # Uji koneksi pada proxies setelah file dibuat
+    uji_proxies(file_path)
 
 if __name__ == "__main__":
     main()
