@@ -33,9 +33,7 @@ def decode_node_info_base64(node):
             decoded = base64.b64decode(raw + '===').decode('utf-8', errors='ignore')
             return json.loads(decoded.replace("false", "False").replace("true", "True"))
         elif node.startswith("trojan://"):
-            raw = node[9:]
-            decoded = base64.b64decode(raw + '===').decode('utf-8', errors='ignore')
-            return json.loads(decoded.replace("false", "False").replace("true", "True"))
+            return None  # Tidak mendekode Trojan di sini
     except Exception as e:
         print(f"⚠️ Gagal mendecode node: {e}")
         return None
@@ -52,8 +50,7 @@ def saring_node(nodes):
 def saring_trojan(nodes):
     terfilter = []
     for node in nodes:
-        info = decode_node_info_base64(node)
-        if info is not None and node.startswith("trojan://"):
+        if node.startswith("trojan://"):
             terfilter.append(node)
     return terfilter
 
@@ -66,14 +63,17 @@ def konversi_ke_clash(nodes):
                 vmess_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
                 config = json.loads(vmess_config.replace("false", "False").replace("true", "True"))
                 proxies.append({
-                    "name": config.get("ps", "Tanpa Nama"),
-                    "server": BUGCDN,
+                    "name": config.get("ps", "Tanpa Nama"),  # Memastikan 'name' di atas
+                
+                proxies.append({
+                    "name": proxy_name,
+                    "server": config["add"],
                     "port": int(config["port"]),
                     "type": "vmess",
                     "uuid": config["id"],
                     "alterId": int(config.get("aid", 0)),
                     "cipher": "auto",
-                    "tls": True,
+                    "tls": config.get("tls", False) == "tls",  # Mengonversi ke boolean
                     "skip-cert-verify": True,
                     "servername": config.get("host", ""),
                     "network": config.get("net", "ws"),
@@ -97,18 +97,27 @@ def konversi_ke_clash_trojan(nodes):
     for node in nodes:
         if node.startswith("trojan://"):
             try:
-                trojan_config = base64.b64decode(node[9:] + '===').decode('utf-8', errors='ignore')
-                config = json.loads(trojan_config.replace("false", "False").replace("true", "True"))
+                trojan_parts = node[9:].split("@")
+                trojan_info = trojan_parts[0].split(":")
+                trojan_address = trojan_info[0]
+                trojan_port = int(trojan_info[1])
+                trojan_password = trojan_parts[1].split("#")[0]
+                trojan_name = trojan_parts[1].split("#")[1]  # Nama dari bagian setelah '#'
+                
                 proxies.append({
-                    "name": config.get("ps", "Tanpa Nama"),
-                    "server": BUGCDN,
-                    "port": int(config["port"]),
+                    "name": trojan_name,
+                    "server": trojan_address,
+                    "port": trojan_port,
                     "type": "trojan",
-                    "uuid": config["id"],
-                    "cipher": "auto",
-                    "tls": True,
+                    "password": trojan_password,
                     "skip-cert-verify": True,
-                    "servername": config.get("host", ""),
+                    "sni": trojan_address,
+                    "network": "ws",
+                    "ws-opts": {
+                        "path": "/trojan-ws",
+                        "headers": {"Host": trojan_address}
+                    },
+                    "udp": True
                 })
             except Exception as e:
                 print(f"⚠️ Gagal memparsing trojan: {e}")
