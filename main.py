@@ -2,6 +2,7 @@ import base64
 import requests
 import yaml
 import os
+import urllib.parse  # Untuk dekoding
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
@@ -57,6 +58,11 @@ def konversi_ke_clash(nodes):
                 if params.get('type') == 'ws' and port in ['443', '80']:
                     # Mengambil name dari bagian akhir URL setelah tanda '#' dan menghapus spasi
                     name = node.split('#')[1].strip() if '#' in node else 'default_name'
+                    name = urllib.parse.unquote(name)  # Dekode nama yang di-encoded
+
+                    # Ambil host dan sni
+                    host = params.get('host', '')
+                    sni = params.get('sni', '')
 
                     proxies.append({
                         "name": name,
@@ -65,12 +71,12 @@ def konversi_ke_clash(nodes):
                         "type": "trojan",
                         "password": credentials,
                         "skip-cert-verify": True,
-                        "sni": params.get('sni', ''),
+                        "sni": urllib.parse.unquote(sni),  # Dekode SNI
                         "network": "ws",
                         "ws-opts": {
                             "path": params.get('path', ''),
                             "headers": {
-                                "Host": params.get('host', '')
+                                "Host": urllib.parse.unquote(host)  # Dekode Host
                             }
                         },
                         "udp": True
