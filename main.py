@@ -4,6 +4,7 @@ import yaml
 import os
 import urllib.parse  # Untuk dekoding
 import subprocess  # Untuk menjalankan perintah ping
+from concurrent.futures import ThreadPoolExecutor  # Untuk pengujian paralel
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
@@ -134,11 +135,20 @@ def uji_proxies(file_path):
         data = yaml.safe_load(f)
 
     valid_proxies = []
-    for proxy in data['proxies']:
-        if uji_koneksi(proxy['server']):
-            valid_proxies.append(proxy)
-        else:
-            print(f"❌ Koneksi ke {proxy['server']} gagal atau waktu respons lebih dari 500 ms.")
+
+    # Menggunakan ThreadPoolExecutor untuk pengujian paralel
+    with ThreadPoolExecutor() as executor:
+        futures = {executor.submit(uji_koneksi, proxy['server']): proxy for proxy in data['proxies']}
+        
+        for future in futures:
+            proxy = futures[future]
+            try:
+                if future.result():
+                    valid_proxies.append(proxy)
+                else:
+                    print(f"❌ Koneksi ke {proxy['server']} gagal atau waktu respons lebih dari 500 ms.")
+            except Exception as e:
+                print(f"⚠️ Gagal memproses proxy {proxy['server']}: {e}")
 
     # Simpan proxies yang valid
     with open(file_path, 'w', encoding='utf-8') as f:
