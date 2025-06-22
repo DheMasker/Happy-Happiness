@@ -85,9 +85,12 @@ def parse_trojan(node):
             raise ValueError("Format server dan port tidak valid")
 
         # Mengambil port
-        port = int(server_info[1])
+        try:
+            port = int(server_info[1].split("?")[0])  # Mengambil port dari bagian yang benar
+        except ValueError:
+            raise ValueError("Port tidak valid")
 
-        query_params = parts[1].split("/")[1] if len(parts[1].split("/")) > 1 else ""
+        query_params = server_info[1].split("/")[1] if len(server_info[1].split("/")) > 1 else ""
         params = dict(param.split("=") for param in query_params.split("&") if "=" in param)
         
         sni = params.get("sni", "")
