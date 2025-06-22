@@ -14,8 +14,6 @@ SUB_LINKS = [
     "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/networks/ws",
     "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
     "https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2",
-    "https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/v2ray",
-    "https://raw.githubusercontent.com/iwxf/free-v2ray/master/v2",
     "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
 ]
 
@@ -136,11 +134,14 @@ def cek_node(proxy):
         response = requests.get(TEST_URL, proxies=proxy_config, timeout=5)
         return response.status_code == 204  # Mengembalikan True jika status 204
     except Exception as e:
-        print(f"⚠️ Gagal memeriksa node untuk proxy {proxy['server']}:{proxy['port']}: {e}")
+        print(f"⚠️ Gagal memeriksa node untuk proxy {proxy}: {e}")
         return False
 
 def uji_nodes(filtered_nodes):
     active_proxies = []
+
+    # Menampilkan isi dari filtered_nodes untuk debugging
+    print(f"Filtered nodes sebelum diuji: {filtered_nodes}")
 
     # Menggunakan ThreadPoolExecutor untuk memeriksa node secara paralel
     with ThreadPoolExecutor() as executor:
@@ -155,7 +156,11 @@ def uji_nodes(filtered_nodes):
                 else:
                     print(f"❌ Node {proxy['server']}:{proxy['port']} tidak aktif.")
             except Exception as e:
-                print(f"⚠️ Gagal memproses proxy {proxy['server']}:{proxy['port']}: {e}")
+                # Pastikan proxy adalah dictionary
+                if isinstance(proxy, dict):
+                    print(f"⚠️ Gagal memproses proxy {proxy['server']}:{proxy['port']}: {e}")
+                else:
+                    print(f"⚠️ Gagal memproses proxy: {proxy} (bukan dictionary) - {e}")
 
     # Simpan node yang aktif ke dalam file
     active_file_path = "proxies/active_nodes.yaml"
