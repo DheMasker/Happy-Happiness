@@ -59,7 +59,7 @@ def konversi_ke_clash(nodes):
                 query_params = port_info.split('?')[1] if '?' in port_info else ''
                 sni = ''
                 host = ''
-                path = '/'
+                path = None  # Set to None initially
 
                 for param in query_params.split('&'):
                     if param.startswith('sni='):
@@ -80,7 +80,7 @@ def konversi_ke_clash(nodes):
                 name = server_info[name_index + 1:].strip() if name_index != -1 else "unknown"
 
                 # Append the proxy details, set server to BUGCDN
-                proxies.append({
+                proxy_detail = {
                     "name": name,
                     "server": BUGCDN,  # Ganti server dengan BUGCDN
                     "port": port,
@@ -89,14 +89,20 @@ def konversi_ke_clash(nodes):
                     "skip-cert-verify": True,
                     "sni": sni if sni else "",  # Use empty string if no sni
                     "network": "ws",
-                    "ws-opts": {
-                        "path": path,  # Set the path (default to '/' if not set)
-                        "headers": {
-                            "Host": host if host else ""  # Use empty string if no host
-                        }
+                    "headers": {
+                        "Host": host if host else ""  # Use empty string if no host
                     },
                     "udp": True
-                })
+                }
+
+                # Add path only if it's defined
+                if path is not None:
+                    proxy_detail["ws-opts"] = {
+                        "path": path  # Set the path if available
+                    }
+
+                proxies.append(proxy_detail)
+
             except Exception as e:
                 print(f"⚠️ Gagal memparsing trojan: {e}")
 
