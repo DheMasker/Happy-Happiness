@@ -1,1 +1,27 @@
-proxies: []
+proxies:
+- name: 🇺🇸 美国3|@ripaojiedian
+  server: 104.21.6.179
+  port: 443
+  type: trojan
+  password: 757b7d6-fa32-4708-b5d1-30e3cf928b51
+  skip-cert-verify: true
+  sni: ZZzzzZZ.890601.XYZ
+  network: ws
+  ws-opts:
+    path: /l96MZ8se5Kl2p8BiMhP42l#%F0%9F%87%BA%F0%9F%87%B8%20%E7%BE%8E%E5%9B%BD3%7C%40ripaojiedian
+    headers:
+      Host: ZZzzzZZ.890601.XYZ
+  udp: true
+- name: 美国3|@ripaojiedian
+  server: 104.21.6.179
+  port: 443
+  type: trojan
+  password: 757b7d6-fa32-4708-b5d1-30e3cf928b51
+  skip-cert-verify: true
+  sni: ZZzzzZZ.890601.XYZ
+  network: ws
+  ws-opts:
+    path: '%2Fl96MZ8se5Kl2p8BiMhP42l#%E7%BE%8E%E5%9B%BD3%7C%40ripaojiedian'
+    headers:
+      Host: ZZzzzZZ.890601.XYZ
+  udp: true
