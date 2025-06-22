@@ -7,7 +7,7 @@ from concurrent.futures import ThreadPoolExecutor  # Untuk pengujian paralel
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
-    "https://raw.githubusercontent.com/Surfboardv2ray/v2ray-worker-sub/refs/heads/master/Eternity"
+    "https://raw.githubusercontent.com/Surfboardv2ray/v2ray-worker-sub/refs/heads/master/providers/providers64"
 ]
 
 # URL untuk pengujian koneksi
