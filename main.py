@@ -2,7 +2,6 @@ import base64
 import requests
 import yaml
 import os
-import re
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
@@ -32,33 +31,7 @@ def saring_node(nodes):
     terfilter = []
     for node in nodes:
         if node.startswith("trojan://"):
-            trimmed_node = node[9:]  # Menghapus 'trojan://'
-            
-            # Pastikan format memiliki '@'
-            if '@' not in trimmed_node:
-                print(f"⚠️ Format tidak valid (tanpa '@'): {trimmed_node}")
-                continue
-            
-            at_index = trimmed_node.index('@')
-            # Ambil bagian setelah '@'
-            server_port_info = trimmed_node[at_index + 1:]  # Everything after @
-
-            # Pastikan ada ':' di server_port_info untuk mencegah ValueError
-            if ':' not in server_port_info:
-                print(f"⚠️ Format tidak valid (tanpa ':'): {server_port_info}")
-                continue
-
-            # Extract server dan port
-            colon_index = server_port_info.index(':')
-            port_info = server_port_info[colon_index + 1:]  # Everything after port
-            
-            # Cek apakah port dalam format yang valid
-            port_match = re.match(r'(\[.*?\]|[^:]+):(\d+)', server_port_info)
-            if port_match:
-                port = int(port_match.group(2))  # Ambil port
-                # Cek jika node memiliki "/?type=ws" dan port 443 atau 80
-                if "/?type=ws" in port_info and port in [443, 80]:
-                    terfilter.append(node)
+            terfilter.append(node)
     return terfilter
 
 def konversi_ke_clash(nodes):
@@ -71,54 +44,45 @@ def konversi_ke_clash(nodes):
                 trimmed_node = node[9:]  # Menghapus 'trojan://'
                 at_index = trimmed_node.index('@')
                 password = trimmed_node[:at_index].strip()  # Extracting password
-                # Ambil bagian setelah '@'
-                server_port_info = trimmed_node[at_index + 1:]  # Everything after @
+                server_info = trimmed_node[at_index + 1:]  # Everything after @
 
-                # Pastikan ada ':' di server_port_info untuk mencegah ValueError
-                if ':' not in server_port_info:
-                    print(f"⚠️ Format tidak valid (tanpa ':'): {server_port_info}")
+                # Extract server and port
+                colon_index = server_info.index(':')
+                port_info = server_info[colon_index + 1:]  # Everything after port
+                port = int(port_info.split('?')[0])  # Extracting port
+
+                # Hanya proses jika port 443, 80, atau jika menggunakan "ws"
+                if port not in [443, 80] and "ws" not in server_info:
                     continue
 
-                # Extract server dan port
-                colon_index = server_port_info.index(':')
-                port_info = server_port_info[colon_index + 1:]  # Everything after port
-                
-                # Extract port using regex
-                port_match = re.match(r'(\[.*?\]|[^:]+):(\d+)', server_port_info)
-                if port_match:
-                    port = int(port_match.group(2))  # Ambil port
-                else:
-                    continue  # Skip jika tidak ada port yang valid
-
-                # Extract additional parameters dari port_info
+                # Extract additional parameters from server_info
                 query_params = port_info.split('?')[1] if '?' in port_info else ''
                 sni = ''
                 host = ''
                 path = None  # Set to None initially
-                network = None  # Initialize network variable
 
                 for param in query_params.split('&'):
-                    # Ambil nilai dari param "sni", "host", "path", dan "type"
                     if param.startswith('sni='):
                         sni = param.split('=')[1].strip().split('#')[0]  # Clean up sni
                     elif param.startswith('host='):
                         host = param.split('=')[1].strip().split('#')[0]  # Clean up host
                     elif param.startswith('path='):
                         path = param.split('=')[1].strip().split('#')[0].replace('%2F', '/')  # Decode path
-                    elif param.startswith('type='):
-                        network = param.split('=')[1].strip().split('#')[0]  # Ambil nilai type
 
-                # Set host dan sni berdasarkan ketersediaan
+                # Set host and sni based on availability
                 if not sni and host:
                     sni = host
                 elif not host and sni:
                     host = sni
 
-                # Extract name dari node
-                name_index = server_port_info.index('#')
-                name = server_port_info[name_index + 1:].strip() if name_index != -1 else "unknown"
+                # Extract name from the node
+                name_index = server_info.index('#')
+                name = server_info[name_index + 1:].strip() if name_index != -1 else "unknown"
 
-                # Append detail proxy, set server ke BUGCDN
+                # Tentukan network dari server_info jika ada
+                network = "ws" if "ws" in server_info else "tcp"  # Default ke "tcp" jika "ws" tidak ada
+
+                # Append the proxy details, set server to BUGCDN
                 proxy_detail = {
                     "name": name,
                     "server": BUGCDN,  # Ganti server dengan BUGCDN
@@ -127,7 +91,7 @@ def konversi_ke_clash(nodes):
                     "password": password,  # Already stripped
                     "skip-cert-verify": True,
                     "sni": sni if sni else "",  # Use empty string if no sni
-                    "network": network if network else "",  # Set network to type
+                    "network": network,  # Ambil dari server_info
                     "headers": {
                         "Host": host if host else ""  # Use empty string if no host
                     },
