@@ -2,6 +2,7 @@ import base64
 import requests
 import yaml
 import os
+import re
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
@@ -36,6 +37,7 @@ def saring_node(nodes):
 
 def konversi_ke_clash(nodes):
     proxies = []
+    log_errors = []
 
     for node in nodes:
         if node.startswith("trojan://"):
@@ -46,36 +48,40 @@ def konversi_ke_clash(nodes):
                 password = trimmed_node[:at_index].strip()  # Extracting password
                 server_info = trimmed_node[at_index + 1:]  # Everything after @
 
-                # Extract server and port
-                colon_index = server_info.index(':')
-                port_info = server_info[colon_index + 1:]  # Everything after port
+                # Extract server and port using regex for better handling
+                match = re.match(r'([^:]+):(\d+)(?:\?(.*))?(#.*)?', server_info)
+                if not match:
+                    log_errors.append(f"⚠️ Format server tidak valid: {server_info}")
+                    continue
+
+                server, port_str, query_params, name_fragment = match.groups()
                 try:
-                    port = int(port_info.split('?')[0])  # Extracting port
+                    port = int(port_str)  # Extracting port
                 except ValueError:
-                    print(f"⚠️ Port tidak valid: {port_info}")
+                    log_errors.append(f"⚠️ Port tidak valid: {port_str}")
                     continue
 
                 # Hanya proses jika port 443 atau 80
                 if port not in [443, 80]:
                     continue
-                
+
                 # Memastikan type ws
                 if "ws" not in node:
                     continue
 
-                # Extract additional parameters from server_info
-                query_params = port_info.split('?')[1] if '?' in port_info else ''
+                # Initialize parameters
                 sni = ''
                 host = ''
                 path = None  # Set to None initially
 
-                for param in query_params.split('&'):
-                    if param.startswith('sni='):
-                        sni = param.split('=')[1].strip().split('#')[0]  # Clean up sni
-                    elif param.startswith('host='):
-                        host = param.split('=')[1].strip().split('#')[0]  # Clean up host
-                    elif param.startswith('path='):
-                        path = param.split('=')[1].strip().split('#')[0].replace('%2F', '/')  # Decode path
+                if query_params:
+                    for param in query_params.split('&'):
+                        if param.startswith('sni='):
+                            sni = param.split('=')[1].strip().split('#')[0]  # Clean up sni
+                        elif param.startswith('host='):
+                            host = param.split('=')[1].strip().split('#')[0]  # Clean up host
+                        elif param.startswith('path='):
+                            path = param.split('=')[1].strip().split('#')[0].replace('%2F', '/')  # Decode path
 
                 # Set host and sni based on availability
                 if not sni and host:
@@ -83,9 +89,8 @@ def konversi_ke_clash(nodes):
                 elif not host and sni:
                     host = sni
 
-                # Extract name from the node
-                name_index = server_info.index('#')
-                name = server_info[name_index + 1:].strip() if name_index != -1 else "unknown"
+                # Extract name from the node if available
+                name = name_fragment[1:].strip() if name_fragment else "unknown"
 
                 # Append the proxy details, set server to BUGCDN
                 proxy_detail = {
@@ -112,11 +117,18 @@ def konversi_ke_clash(nodes):
                 proxies.append(proxy_detail)
 
             except Exception as e:
-                print(f"⚠️ Gagal memparsing trojan: {e}")
+                log_errors.append(f"⚠️ Gagal memparsing trojan: {e}")
 
     proxies_clash = {
         "proxies": proxies
     }
+
+    # Simpan log kesalahan ke dalam file
+    if log_errors:
+        with open("proxies/error_log.txt", "w", encoding="utf-8") as log_file:
+            for error in log_errors:
+                log_file.write(error + "\n")
+    
     return yaml.dump(proxies_clash, allow_unicode=True, sort_keys=False)
 
 def main():
