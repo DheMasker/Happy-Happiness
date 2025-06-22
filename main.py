@@ -56,7 +56,7 @@ def konversi_ke_clash(nodes):
 
                 # Hanya memproses jika tipe adalah ws dan port 443 atau 80
                 if params.get('type') == 'ws' and port in ['443', '80']:
-                    # Mengambil name dan mendekode
+                    # Mengambil dan mendekode name
                     name = node.split('#')[1].strip() if '#' in node else 'default_name'
                     name = urllib.parse.unquote(name)  # Dekode nama
 
@@ -68,16 +68,18 @@ def konversi_ke_clash(nodes):
                     path = urllib.parse.unquote(params.get('path', ''))
                     if '#' in path:
                         path = path.split('#')[0]  # Hapus bagian setelah '#'
-
-                    # Ganti %2F dengan /
                     path = path.replace('%2F', '/')  # Ganti '%2F' dengan '/'
+
+                    # Pastikan tidak ada karakter '#' di akhir path
+                    if path.endswith('#'):
+                        path = path[:-1]
 
                     proxies.append({
                         "name": name,
                         "server": server,
                         "port": int(port),
                         "type": "trojan",
-                        "password": credentials,
+                        "password": urllib.parse.unquote(credentials),  # Dekode password
                         "skip-cert-verify": True,
                         "sni": sni,  # Set SNI yang telah dibersihkan
                         "network": "ws",
