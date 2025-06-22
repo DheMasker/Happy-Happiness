@@ -2,13 +2,12 @@ import base64
 import requests
 import yaml
 import os
-import txt
 import urllib.parse  # Untuk dekoding
 from concurrent.futures import ThreadPoolExecutor  # Untuk pengujian paralel
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
-    "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/protocols/tr.txt"
+    "https://raw.githubusercontent.com/Surfboardv2ray/v2ray-worker-sub/refs/heads/master/Eternity"
 ]
 
 # URL untuk pengujian koneksi
