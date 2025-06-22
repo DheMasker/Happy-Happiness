@@ -60,9 +60,17 @@ def konversi_ke_clash(nodes):
                     name = node.split('#')[1].strip() if '#' in node else 'default_name'
                     name = urllib.parse.unquote(name)  # Dekode nama
 
-                    # Ambil host dan sni
-                    host = urllib.parse.unquote(params.get('host', ''))
-                    sni = urllib.parse.unquote(params.get('sni', ''))
+                    # Ambil host dan hapus bagian setelah '#'
+                    host = params.get('host', '')
+                    if '#' in host:
+                        host = host.split('#')[0]  # Hapus bagian setelah '#'
+                    host = urllib.parse.unquote(host)  # Dekode host
+
+                    # Ambil sni dan hapus bagian setelah '#'
+                    sni = params.get('sni', '')
+                    if '#' in sni:
+                        sni = sni.split('#')[0]  # Hapus bagian setelah '#'
+                    sni = urllib.parse.unquote(sni)  # Dekode SNI
 
                     # Ambil path dan mendekode, pastikan tidak ada karakter '#' setelahnya
                     path = urllib.parse.unquote(params.get('path', ''))
