@@ -34,14 +34,20 @@ def saring_node(nodes):
         if node.startswith("trojan://"):
             trimmed_node = node[9:]  # Menghapus 'trojan://'
             at_index = trimmed_node.index('@')
-            server_info = trimmed_node[at_index + 1:]  # Everything after @
+            # Ambil bagian setelah '@'
+            server_port_info = trimmed_node[at_index + 1:]  # Everything after @
 
-            # Extract server and port
-            colon_index = server_info.index(':')
-            port_info = server_info[colon_index + 1:]  # Everything after port
+            # Pastikan ada ':' di server_port_info untuk mencegah ValueError
+            if ':' not in server_port_info:
+                print(f"⚠️ Format tidak valid: {server_port_info}")
+                continue
+
+            # Extract server dan port
+            colon_index = server_port_info.index(':')
+            port_info = server_port_info[colon_index + 1:]  # Everything after port
             
             # Cek apakah port dalam format yang valid
-            port_match = re.match(r'(\[.*?\]|[^:]+):(\d+)', server_info)
+            port_match = re.match(r'(\[.*?\]|[^:]+):(\d+)', server_port_info)
             if port_match:
                 port = int(port_match.group(2))  # Ambil port
                 # Cek jika node memiliki "/?type=ws" dan port 443 atau 80
@@ -59,20 +65,26 @@ def konversi_ke_clash(nodes):
                 trimmed_node = node[9:]  # Menghapus 'trojan://'
                 at_index = trimmed_node.index('@')
                 password = trimmed_node[:at_index].strip()  # Extracting password
-                server_info = trimmed_node[at_index + 1:]  # Everything after @
+                # Ambil bagian setelah '@'
+                server_port_info = trimmed_node[at_index + 1:]  # Everything after @
 
-                # Extract server and port
-                colon_index = server_info.index(':')
-                port_info = server_info[colon_index + 1:]  # Everything after port
+                # Pastikan ada ':' di server_port_info untuk mencegah ValueError
+                if ':' not in server_port_info:
+                    print(f"⚠️ Format tidak valid: {server_port_info}")
+                    continue
+
+                # Extract server dan port
+                colon_index = server_port_info.index(':')
+                port_info = server_port_info[colon_index + 1:]  # Everything after port
                 
                 # Extract port using regex
-                port_match = re.match(r'(\[.*?\]|[^:]+):(\d+)', server_info)
+                port_match = re.match(r'(\[.*?\]|[^:]+):(\d+)', server_port_info)
                 if port_match:
                     port = int(port_match.group(2))  # Ambil port
                 else:
                     continue  # Skip jika tidak ada port yang valid
 
-                # Extract additional parameters from server_info
+                # Extract additional parameters dari port_info
                 query_params = port_info.split('?')[1] if '?' in port_info else ''
                 sni = ''
                 host = ''
@@ -90,17 +102,17 @@ def konversi_ke_clash(nodes):
                     elif param.startswith('type='):
                         network = param.split('=')[1].strip().split('#')[0]  # Ambil nilai type
 
-                # Set host and sni based on availability
+                # Set host dan sni berdasarkan ketersediaan
                 if not sni and host:
                     sni = host
                 elif not host and sni:
                     host = sni
 
-                # Extract name from the node
-                name_index = server_info.index('#')
-                name = server_info[name_index + 1:].strip() if name_index != -1 else "unknown"
+                # Extract name dari node
+                name_index = server_port_info.index('#')
+                name = server_port_info[name_index + 1:].strip() if name_index != -1 else "unknown"
 
-                # Append the proxy details, set server ke BUGCDN
+                # Append detail proxy, set server ke BUGCDN
                 proxy_detail = {
                     "name": name,
                     "server": BUGCDN,  # Ganti server dengan BUGCDN
