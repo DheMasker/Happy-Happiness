@@ -1,57 +1,59 @@
 import os
+import requests
 import speedtest
+import base64
+import yaml
+import re
 
-def test_proxy_speed(proxy):
-    st = speedtest.Speedtest()
+def get_proxy_links(url):
+    response = requests.get(url)
+    if response.status_code == 200:
+        content = response.text
+        # Ambil semua link yang mengandung 'vmess' atau 'trojan' dengan ws
+        proxy_links = re.findall(r'(https?://\S+)', content)
+        return [link for link in proxy_links if 'ws' in link]
+    return []
+
+def test_proxy(link):
+    try:
+        # Menggunakan speedtest untuk menguji kecepatan
+        st = speedtest.Speedtest()
+        st.get_best_server()
+        download_speed = st.download() / 1_000_000  # dalam Mbps
+        upload_speed = st.upload() / 1_000_000  # dalam Mbps
+        return download_speed, upload_speed
+    except Exception as e:
+        print(f"Failed to test proxy {link}: {e}")
+        return None, None
+
+def convert_to_clash_format(proxies):
+    clash_format = {'proxies': []}
+    for proxy in proxies:
+        clash_format['proxies'].append(proxy)
+    return clash_format
+
+def main():
+    url = "https://raw.githubusercontent.com/devojony/collectSub/refs/heads/main/sub/sub_all_clash.txt"
+    proxy_links = get_proxy_links(url)
+    valid_proxies = []
+
+    for link in proxy_links:
+        download_speed, upload_speed = test_proxy(link)
+        if download_speed and upload_speed:
+            proxy_name = f"{link} - Download: {download_speed:.2f} Mbps"
+            valid_proxies.append(proxy_name)
+
+    clash_proxies = convert_to_clash_format(valid_proxies)
     
-    # Mengatur server dan proxy
-    st.get_best_server()
+    # Pastikan folder 'proxies' ada
+    os.makedirs('proxies', exist_ok=True)
     
-    # Setting proxy
-    st.proxy = proxy
+    # Simpan ke file YAML di dalam folder 'proxies'
+    yaml_file_path = os.path.join('proxies', 'proxies_clash.yaml')
+    with open(yaml_file_path, 'w') as yaml_file:
+        yaml.dump(clash_proxies, yaml_file)
 
-    print(f"Testing proxy: {proxy}")
-    download_speed = st.download() / 1_000_000  # Convert to Mbps
-    upload_speed = st.upload() / 1_000_000      # Convert to Mbps
-    return download_speed, upload_speed
+    print(f"Proxies have been saved to {yaml_file_path}")
 
-# Ganti dengan informasi proxy Anda
-proxy = "trojan://e9f0702f-c211-4b8e-a827-c0135962d805@104.22.5.240:443/?type=ws&host=free.c-stuff.Web.id&path=%2FFree%2FTG-at-BitzBlack%2F172.232.239.151-587&security=tls&sni=free.c-stuff.Web.id&allowInsecure=1"
-
-# Uji kecepatan
-download, upload = test_proxy_speed(proxy)
-print(f"Download speed: {download:.2f} Mbps")
-print(f"Upload speed: {upload:.2f} Mbps")
-
-# Nama proxy asli
-original_proxy_name = "Akamai Connected Cloud"
-
-# Menambahkan hasil ke dalam nama proxy
-proxy_name = f"{original_proxy_name} - {download:.2f} Mbps"
-
-# Konfigurasi Clash
-clash_config = f"""
-proxies:
-  - name: "{proxy_name}"
-    type: trojan
-    server: "104.22.5.240"
-    port: 443
-    password: "e9f0702f-c211-4b8e-a827-c0135962d805"
-    security: "tls"
-    sni: "free.c-stuff.Web.id"
-    skip-cert-verify: true
-    network: "ws"
-    ws-opts:
-      path: "/Free/TG-at-BitzBlack/172.232.239.151-587"
-      host: "free.c-stuff.Web.id"
-"""
-
-# Membuat folder jika belum ada
-os.makedirs("proxies", exist_ok=True)
-
-# Simpan konfigurasi ke file dalam folder proxies
-file_path = os.path.join("proxies", "clash_config.yaml")
-with open(file_path, "w") as f:
-    f.write(clash_config)
-
-print(f"Konfigurasi Clash telah disimpan ke {file_path}")
+if __name__ == "__main__":
+    main()
