@@ -1,6 +1,7 @@
 import base64
 import requests
 import json
+import re
 
 # Daftar sumber langganan
 SUB_LINKS = [
@@ -10,8 +11,9 @@ SUB_LINKS = [
     "https://raw.githubusercontent.com/MhdiTaheri/V2rayCollector/refs/heads/main/sub/mix"
 ]
 
-def is_ascii(s):
-    return all(ord(c) < 128 for c in s)
+def clean_non_ascii(s):
+    """Menghapus karakter non-ASCII dari string."""
+    return re.sub(r'[^\x00-\x7F]+', '', s)
 
 def ambil_langganan():
     semua_node = []
@@ -27,14 +29,15 @@ def ambil_langganan():
                     try:
                         # Decode base64
                         decoded = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
-                        # Validasi karakter ASCII
-                        if is_ascii(decoded):
+                        # Bersihkan karakter non-ASCII
+                        cleaned = clean_non_ascii(decoded)
+                        if cleaned:  # Pastikan ada konten setelah dibersihkan
                             semua_node.append(node)
                         else:
-                            print(f"⚠️ Konten tidak hanya mengandung karakter ASCII: {node}")
+                            print(f"⚠️ Node dibersihkan tidak memiliki konten valid: {node}")
                     except Exception as e:
                         print(f"⚠️ Gagal mendecode node: {e}")
-        except Exception as e:
+        except requests.RequestException as e:
             print(f"❌ Kesalahan sumber langganan: {url} -> {e}")
 
     return semua_node
