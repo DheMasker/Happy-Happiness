@@ -2,11 +2,12 @@ import base64
 import requests
 import yaml
 import os
-import json  # Menggunakan json untuk decode
+import json
+import string
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
-    "https://raw.githubusercontent.com/MhdiTaheri/V2rayCollector/refs/heads/main/sub/mix"
+    "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
 ]
 
 BUGCDN = "104.22.5.240"
@@ -23,14 +24,20 @@ def ambil_langganan():
             if konten.startswith("vmess"):
                 baris = [konten]
             else:
-                # Jika tidak, anggap sebagai Base64 dan dekode
+                # Coba dekode Base64
                 try:
-                    konten = base64.b64decode(konten + '===').decode('utf-8', errors='ignore')
+                    # Hapus karakter yang tidak valid
+                    konten = ''.join(filter(lambda x: x in string.printable, konten))
+                    
+                    # Menambahkan padding '=' jika diperlukan
+                    while len(konten) % 4 != 0:
+                        konten += '='
+                    
+                    konten = base64.b64decode(konten).decode('utf-8', errors='ignore')
+                    baris = [line.strip() for line in konten.splitlines() if line.strip()]
                 except Exception as e:
-                    print(f"⚠️ Gagal mendekode Base64: {e}")
-                    continue
-                
-                baris = [line.strip() for line in konten.splitlines() if line.strip()]
+                    print(f"⚠️ Gagal mendekode Base64: {e}. Menggunakan konten langsung.")
+                    baris = [line.strip() for line in konten.splitlines() if line.strip()]
             
             semua_node.extend(baris)
         except Exception as e:
@@ -40,18 +47,21 @@ def ambil_langganan():
 def saring_node(nodes):
     terfilter = []
     for node in nodes:
-        info = decode_node_info_base64(node)
-        if info is not None:  # Pastikan info bukan None
+        info = decode_node_info(node)
+        if info is not None:
             # Mengizinkan semua node dengan port 443 atau 80 dan network ws
-            if (node.startswith("vmess://") and info.get("port") in {443, 80} and info.get("net") == "ws"):
+            if (info.get("port") in {443, 80} and info.get("net") == "ws"):
                 terfilter.append(node)
     return terfilter
 
-def decode_node_info_base64(node):
+def decode_node_info(node):
     try:
         if node.startswith("vmess://"):
             raw = node[8:]
-            decoded = base64.b64decode(raw + '===').decode('utf-8', errors='ignore')
+            # Menambahkan padding '=' jika diperlukan
+            while len(raw) % 4 != 0:
+                raw += '='
+            decoded = base64.b64decode(raw).decode('utf-8', errors='ignore')
             return json.loads(decoded.replace("false", "False").replace("true", "True"))
     except Exception as e:
         print(f"⚠️ Gagal mendecode node: {e}")
@@ -66,14 +76,14 @@ def konversi_ke_clash(nodes):
                 vmess_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
                 config = json.loads(vmess_config.replace("false", "False").replace("true", "True"))
                 proxies.append({
-                    "name": config.get("ps", "Tanpa Nama"),  # Memastikan 'name' di atas
-                    "server": BUGCDN,  # Menggunakan BUGCDN
+                    "name": config.get("ps", "Tanpa Nama"),
+                    "server": BUGCDN,
                     "port": int(config["port"]),
                     "type": "vmess",
                     "uuid": config["id"],
                     "alterId": int(config.get("aid", 0)),
                     "cipher": "auto",
-                    "tls": True,  # Mengatur tls menjadi True
+                    "tls": True,
                     "skip-cert-verify": True,
                     "servername": config.get("host", ""),
                     "network": config.get("net", "ws"),
@@ -89,7 +99,7 @@ def konversi_ke_clash(nodes):
     proxies_clash = {
         "proxies": proxies
     }
-    return yaml.dump(proxies_clash, allow_unicode=True, sort_keys=False)  # Menonaktifkan penyortiran kunci
+    return yaml.dump(proxies_clash, allow_unicode=True, sort_keys=False)
 
 def main():
     nodes = ambil_langganan()
