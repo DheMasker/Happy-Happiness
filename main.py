@@ -3,7 +3,7 @@ import requests
 import yaml
 import os
 import urllib.parse  # Untuk dekoding
-from ping3 import ping  # Pastikan untuk menginstal package ini
+import subprocess  # Untuk menjalankan perintah ping
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
@@ -37,10 +37,16 @@ def saring_node(nodes):
 
 def uji_koneksi(server):
     try:
-        response_time = ping(server, timeout=2)  # Timeout 2 detik
-        if response_time is None:
-            return False  # Tidak ada koneksi
-        return response_time < 0.5  # Kembali True jika waktu respons kurang dari 500ms
+        # Menggunakan perintah ping sistem
+        response = subprocess.run(["ping", "-c", "1", server], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        if response.returncode == 0:
+            # Mengambil waktu respons dari output ping
+            output = response.stdout.decode('utf-8')
+            time_line = [line for line in output.splitlines() if "time=" in line]
+            if time_line:
+                time = float(time_line[0].split("time=")[1].split(" ms")[0])
+                return time < 500  # Kembali True jika waktu respons kurang dari 500ms
+        return False  # Tidak ada koneksi atau ping gagal
     except Exception as e:
         print(f"⚠️ Gagal melakukan ping ke {server}: {e}")
         return False
