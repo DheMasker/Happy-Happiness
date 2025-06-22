@@ -2,23 +2,20 @@ import base64
 import requests
 import yaml
 import os
-import urllib.parse
-import time
-from concurrent.futures import ThreadPoolExecutor
+import urllib.parse  # Untuk dekoding
 
 # Daftar sumber langganan
-SUB_LINKS = [
-    "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt",
-    "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
-    "https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2",
-    "https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/v2ray",
-    "https://raw.githubusercontent.com/iwxf/free-v2ray/master/v2",
-    "https://raw.githubusercontent.com/Leon406/SubCrawler/main/sub/share/v2ray.txt",
-    "https://raw.githubusercontent.com/Surfboardv2ray/v2ray-worker-sub/refs/heads/master/providers/providers64"
+SUB_LINKS = [ 
+"https://raw.githubusercontent.com/Airuop/cross/refs/heads/master/sub/sub_merge_base64.txt",
+"https://raw.githubusercontent.com/peasoft/NoMoreWalls/refs/heads/master/list.txt",
+"https://raw.githubusercontent.com/mahdibland/V2RayAggregator/refs/heads/master/Eternity",
+"https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/refs/heads/master/list.txt",
+"https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/networks/ws", "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
+"https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2",
+"https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/v2ray",
+"https://raw.githubusercontent.com/iwxf/free-v2ray/master/v2",
+"https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
 ]
-
-# URL untuk pengujian koneksi
-TEST_URL = "http://www.gstatic.com/generate_204"
 
 # Alamat server yang akan digunakan
 BUGCDN = "104.22.5.240"
@@ -44,22 +41,6 @@ def saring_node(nodes):
         if node.startswith("trojan://"):
             terfilter.append(node)
     return terfilter
-
-def uji_latency(proxy):
-    try:
-        # Membangun konfigurasi proxy
-        proxy_config = {
-            "http": f"http://{proxy['server']}:{proxy['port']}",
-            "https": f"http://{proxy['server']}:{proxy['port']}"
-        }
-        # Mengukur waktu respons
-        start_time = time.time()
-        response = requests.get(TEST_URL, proxies=proxy_config, timeout=5)
-        latency = time.time() - start_time
-        return latency if response.status_code == 204 else None
-    except Exception as e:
-        print(f"⚠️ Gagal menguji latency untuk proxy {proxy['server']}:{proxy['port']}: {e}")
-        return None
 
 def konversi_ke_clash(nodes):
     proxies = []
@@ -113,7 +94,6 @@ def konversi_ke_clash(nodes):
                     if path.endswith('#'):
                         path = path[:-1]
 
-                    # Tambahkan proxy ke daftar
                     proxies.append({
                         "name": name,
                         "server": server,  # Gunakan server yang telah ditentukan
@@ -139,46 +119,12 @@ def konversi_ke_clash(nodes):
     }
     return yaml.dump(proxies_clash, allow_unicode=True, sort_keys=False)
 
-def uji_proxies(file_path):
-    with open(file_path, 'r', encoding='utf-8') as f:
-        data = yaml.safe_load(f)
-
-    # Menyimpan latensi dari proxies
-    proxy_latencies = []
-
-    # Menggunakan ThreadPoolExecutor untuk pengujian paralel
-    with ThreadPoolExecutor() as executor:
-        futures = {executor.submit(uji_latency, proxy): proxy for proxy in data['proxies']}
-        
-        for future in futures:
-            proxy = futures[future]
-            try:
-                latency = future.result()
-                if latency is not None:
-                    proxy_latencies.append({"proxy": proxy, "latency": latency})
-                    print(f"✅ Latency untuk {proxy['server']}:{proxy['port']} adalah {latency:.2f} detik.")
-                else:
-                    print(f"❌ Koneksi ke {proxy['server']}:{proxy['port']} gagal.")
-            except Exception as e:
-                print(f"⚠️ Gagal memproses proxy {proxy['server']}:{proxy['port']}: {e}")
-
-    # Simpan latensi ke dalam file
-    latency_file_path = "proxies/latency_results.yaml"
-    with open(latency_file_path, 'w', encoding='utf-8') as f:
-        yaml.dump(proxy_latencies, f, allow_unicode=True, sort_keys=False)
-
 def main():
     nodes = ambil_langganan()
     filtered_nodes = saring_node(nodes)
     os.makedirs("proxies", exist_ok=True)
-    file_path = "proxies/trojan.yaml"
-    
-    # Buat file trojan.yaml
-    with open(file_path, "w", encoding="utf-8") as f:
+    with open("proxies/trojan.yaml", "w", encoding="utf-8") as f:
         f.write(konversi_ke_clash(filtered_nodes))
-
-    # Uji latency pada proxies setelah file dibuat
-    uji_proxies(file_path)
 
 if __name__ == "__main__":
     main()
