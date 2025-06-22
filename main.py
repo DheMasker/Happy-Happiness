@@ -5,12 +5,8 @@ import os
 import urllib.parse  # Untuk dekoding
 
 # Daftar sumber langganan
-SUB_LINKS = [
-    "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
-    "https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2",
-    "https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/v2ray",
-    "https://raw.githubusercontent.com/iwxf/free-v2ray/master/v2",
-    "https://raw.githubusercontent.com/Leon406/SubCrawler/main/sub/share/v2ray.txt"
+SUB_LINKS = [ 
+    "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
 ]
 
 def ambil_langganan():
@@ -60,13 +56,21 @@ def konversi_ke_clash(nodes):
 
                 # Hanya memproses jika tipe adalah ws dan port 443 atau 80
                 if params.get('type') == 'ws' and port in ['443', '80']:
-                    # Mengambil name dari bagian akhir URL setelah tanda '#' dan menghapus spasi
+                    # Mengambil name dan mendekode
                     name = node.split('#')[1].strip() if '#' in node else 'default_name'
-                    name = urllib.parse.unquote(name)  # Dekode nama yang di-encoded
+                    name = urllib.parse.unquote(name)  # Dekode nama
 
                     # Ambil host dan sni
-                    host = params.get('host', '')
-                    sni = params.get('sni', '')
+                    host = urllib.parse.unquote(params.get('host', ''))
+                    sni = urllib.parse.unquote(params.get('sni', ''))
+
+                    # Ambil path dan mendekode, pastikan tidak ada karakter '#' setelahnya
+                    path = urllib.parse.unquote(params.get('path', ''))
+                    if '#' in path:
+                        path = path.split('#')[0]  # Hapus bagian setelah '#'
+
+                    # Ganti %2F dengan /
+                    path = path.replace('%2F', '/')  # Ganti '%2F' dengan '/'
 
                     proxies.append({
                         "name": name,
@@ -75,12 +79,12 @@ def konversi_ke_clash(nodes):
                         "type": "trojan",
                         "password": credentials,
                         "skip-cert-verify": True,
-                        "sni": urllib.parse.unquote(sni),  # Dekode SNI
+                        "sni": sni,  # Set SNI yang telah dibersihkan
                         "network": "ws",
                         "ws-opts": {
-                            "path": params.get('path', ''),
+                            "path": path,  # Path yang sudah dibersihkan
                             "headers": {
-                                "Host": urllib.parse.unquote(host)  # Dekode Host
+                                "Host": host  # Set Host yang telah dibersihkan
                             }
                         },
                         "udp": True
