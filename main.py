@@ -31,7 +31,18 @@ def saring_node(nodes):
     terfilter = []
     for node in nodes:
         if node.startswith("trojan://"):
-            terfilter.append(node)
+            trimmed_node = node[9:]  # Menghapus 'trojan://'
+            at_index = trimmed_node.index('@')
+            server_info = trimmed_node[at_index + 1:]  # Everything after @
+
+            # Extract server and port
+            colon_index = server_info.index(':')
+            port_info = server_info[colon_index + 1:]  # Everything after port
+            port = int(port_info.split('?')[0])  # Extracting port
+
+            # Cek jika node memiliki "ws" dan port 443 atau 80
+            if ("ws" in port_info) and (port in [443, 80]):
+                terfilter.append(node)
     return terfilter
 
 def konversi_ke_clash(nodes):
@@ -50,10 +61,6 @@ def konversi_ke_clash(nodes):
                 colon_index = server_info.index(':')
                 port_info = server_info[colon_index + 1:]  # Everything after port
                 port = int(port_info.split('?')[0])  # Extracting port
-
-                # Hanya proses jika port 443 atau 80
-                if port not in [443, 80]:
-                    continue
 
                 # Extract additional parameters from server_info
                 query_params = port_info.split('?')[1] if '?' in port_info else ''
@@ -79,7 +86,7 @@ def konversi_ke_clash(nodes):
                 name_index = server_info.index('#')
                 name = server_info[name_index + 1:].strip() if name_index != -1 else "unknown"
 
-                # Append the proxy details, set server to BUGCDN
+                # Append the proxy details, set server ke BUGCDN
                 proxy_detail = {
                     "name": name,
                     "server": BUGCDN,  # Ganti server dengan BUGCDN
