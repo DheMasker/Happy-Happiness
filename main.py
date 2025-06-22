@@ -1,28 +1,52 @@
-import websocket
-import ssl
-import time
+import speedtest
 
-# Konfigurasi WebSocket
-server = "104.22.5.240"
-port = 443
-path = "/trhup"
-sni = "rs1.x-tls.my.id"
+def test_proxy_speed(proxy):
+    st = speedtest.Speedtest()
+    
+    # Mengatur server dan proxy
+    st.get_best_server()
+    
+    # Setting proxy
+    st.proxy = proxy
 
-# URL untuk koneksi WebSocket
-url = f"wss://{server}:{port}{path}"
+    print(f"Testing proxy: {proxy}")
+    download_speed = st.download() / 1_000_000  # Convert to Mbps
+    upload_speed = st.upload() / 1_000_000      # Convert to Mbps
+    return download_speed, upload_speed
 
-# Mengukur latency
-start_time = time.time()
+# Ganti dengan informasi proxy Anda
+proxy = "trojan://e9f0702f-c211-4b8e-a827-c0135962d805@104.22.5.240:443/?type=ws&host=free.c-stuff.Web.id&path=%2FFree%2FTG-at-BitzBlack%2F172.232.239.151-587&security=tls&sni=free.c-stuff.Web.id&allowInsecure=1"
 
-try:
-    # Mengatur konteks SSL
-    ssl_context = ssl.create_default_context()
-    ssl_context.options |= ssl.OP_NO_SSLv3  # Menonaktifkan SSLv3 jika perlu
+# Uji kecepatan
+download, upload = test_proxy_speed(proxy)
+print(f"Download speed: {download:.2f} Mbps")
+print(f"Upload speed: {upload:.2f} Mbps")
 
-    # Membuat koneksi WebSocket
-    ws = websocket.create_connection(url, header={"Host": sni}, sslopt={"ssl_context": ssl_context})
-    latency = time.time() - start_time
-    ws.close()
-    print("Proxy aktif, Latency:", latency, "detik")
-except Exception as e:
-    print("Proxy tidak aktif:", e)
+# Nama proxy asli
+original_proxy_name = "Akamai Connected Cloud"
+
+# Menambahkan hasil ke dalam nama proxy
+proxy_name = f"{original_proxy_name} - {download:.2f} Mbps"
+
+# Konfigurasi Clash
+clash_config = f"""
+proxies:
+  - name: "{proxy_name}"
+    type: trojan
+    server: "104.22.5.240"
+    port: 443
+    password: "e9f0702f-c211-4b8e-a827-c0135962d805"
+    security: "tls"
+    sni: "free.c-stuff.Web.id"
+    skip-cert-verify: true
+    network: "ws"
+    ws-opts:
+      path: "/Free/TG-at-BitzBlack/172.232.239.151-587"
+      host: "free.c-stuff.Web.id"
+"""
+
+# Simpan konfigurasi ke file
+with open("clash_config.yaml", "w") as f:
+    f.write(clash_config)
+
+print("Konfigurasi Clash telah disimpan ke clash_config.yaml")
