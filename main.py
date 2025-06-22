@@ -1,6 +1,5 @@
 import base64
 import requests
-import json
 import re
 
 # Daftar sumber langganan
@@ -27,16 +26,23 @@ def ambil_langganan():
             for node in baris:
                 if node.startswith("vmess://"):
                     try:
+                        base64_string = node[8:]  # Menghapus "vmess://"
+                        # Menambahkan padding jika perlu
+                        while len(base64_string) % 4 != 0:
+                            base64_string += '='
+
                         # Decode base64
-                        decoded = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
+                        decoded = base64.b64decode(base64_string, validate=True).decode('utf-8', errors='ignore')
                         # Bersihkan karakter non-ASCII
                         cleaned = clean_non_ascii(decoded)
                         if cleaned:  # Pastikan ada konten setelah dibersihkan
                             semua_node.append(node)
                         else:
                             print(f"⚠️ Node dibersihkan tidak memiliki konten valid: {node}")
+                    except (base64.binascii.Error, UnicodeDecodeError) as e:
+                        print(f"⚠️ Gagal mendecode node: {node} -> {e}")
                     except Exception as e:
-                        print(f"⚠️ Gagal mendecode node: {e}")
+                        print(f"⚠️ Kesalahan tidak terduga saat memproses node: {node} -> {e}")
         except requests.RequestException as e:
             print(f"❌ Kesalahan sumber langganan: {url} -> {e}")
 
