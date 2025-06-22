@@ -3,7 +3,7 @@ import requests
 import yaml
 import os
 import json
-import speedtest  # Menambahkan import untuk speedtest
+import speedtest
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
@@ -46,44 +46,49 @@ def decode_node_info_base64(node):
         print(f"⚠️ Gagal mendecode node: {e}")
         return None
 
-def lakukan_speedtest():
-    st = speedtest.Speedtest()
-    st.get_best_server()
-    download_speed = st.download() / 1_000_000  # Mengonversi ke Mbps
-    upload_speed = st.upload() / 1_000_000  # Mengonversi ke Mbps
-    return download_speed, upload_speed
+def lakukan_speedtest(node):
+    try:
+        st = speedtest.Speedtest()
+        st.get_best_server()
+        download_speed = st.download() / 1_000_000  # Mengonversi ke Mbps
+        upload_speed = st.upload() / 1_000_000  # Mengonversi ke Mbps
+        return download_speed, upload_speed
+    except Exception as e:
+        print(f"⚠️ Gagal melakukan speed test untuk node {node}: {e}")
+        return None, None
 
 def konversi_ke_clash(nodes):
     proxies = []
-    download_speed, upload_speed = lakukan_speedtest()  # Menjalankan speedtest
 
     for node in nodes:
         if node.startswith("vmess://"):
-            try:
-                vmess_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
-                config = json.loads(vmess_config.replace("false", "False").replace("true", "True"))
-                # Menggunakan hasil speed test untuk nama
-                name = f"{config.get('ps', 'Tanpa Nama')} - DL: {download_speed:.2f} Mbps, UL: {upload_speed:.2f} Mbps"
-                proxies.append({
-                    "name": name,
-                    "server": BUGCDN,
-                    "port": int(config["port"]),
-                    "type": "vmess",
-                    "uuid": config["id"],
-                    "alterId": int(config.get("aid", 0)),
-                    "cipher": "auto",
-                    "tls": True,
-                    "skip-cert-verify": True,
-                    "servername": config.get("host", ""),
-                    "network": config.get("net", "ws"),
-                    "ws-opts": {
-                        "path": config.get("path", "/vmess-ws"),
-                        "headers": {"Host": config.get("host", "")}
-                    },
-                    "udp": True
-                })
-            except Exception as e:
-                print(f"⚠️ Gagal memparsing vmess: {e}")
+            download_speed, upload_speed = lakukan_speedtest(node)  # Menjalankan speedtest untuk setiap node
+            if download_speed is not None and upload_speed is not None:  # Hanya jika speed test berhasil
+                try:
+                    vmess_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
+                    config = json.loads(vmess_config.replace("false", "False").replace("true", "True"))
+                    # Menggunakan hasil speed test untuk nama
+                    name = f"{config.get('ps', 'Tanpa Nama')} - DL: {download_speed:.2f} Mbps, UL: {upload_speed:.2f} Mbps"
+                    proxies.append({
+                        "name": name,
+                        "server": BUGCDN,
+                        "port": int(config["port"]),
+                        "type": "vmess",
+                        "uuid": config["id"],
+                        "alterId": int(config.get("aid", 0)),
+                        "cipher": "auto",
+                        "tls": True,
+                        "skip-cert-verify": True,
+                        "servername": config.get("host", ""),
+                        "network": config.get("net", "ws"),
+                        "ws-opts": {
+                            "path": config.get("path", "/vmess-ws"),
+                            "headers": {"Host": config.get("host", "")}
+                        },
+                        "udp": True
+                    })
+                except Exception as e:
+                    print(f"⚠️ Gagal memparsing vmess: {e}")
 
     proxies_clash = {
         "proxies": proxies
