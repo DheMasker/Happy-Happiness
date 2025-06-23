@@ -1,178 +1,92 @@
 import base64
-import requests
-import yaml
-import os
 import json
-import urllib.parse
-import subprocess  # Tambahkan import untuk subprocess
+import os
+import requests
+import subprocess
 
-# Daftar sumber langganan
-SUB_LINKS = [ 
-    "https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub38_base64.txt"
-]
-
-BUGCDN = "104.22.5.240"
-
-def ambil_langganan():
-    semua_node = []
-    for url in SUB_LINKS:
-        try:
-            print(f"Mengambil langganan: {url}")
-            res = requests.get(url, timeout=60)
-            konten = res.text.strip()
-            if not konten.startswith("vmess"):
-                konten = base64.b64decode(konten + '===').decode('utf-8', errors='ignore')
-            baris = [line.strip() for line in konten.splitlines() if line.strip()]
-            semua_node.extend(baris)
-        except Exception as e:
-            print(f"❌ Kesalahan sumber langganan: {url} -> {e}")
-    return semua_node
-
-def cek_aktivitas_node(node):
+# Fungsi untuk memeriksa apakah V2Ray terinstal
+def check_v2ray_installed():
     try:
-        # Mengambil informasi dari node
-        if node.startswith("vmess://"):
-            info = decode_node_info_base64(node)
-            server = info.get("add")
-            port = info.get("port")
-        elif node.startswith("trojan://"):
-            raw = node[10:]  
-            parts = raw.split('@')
-            server_info = parts[1].split(':')
-            server = server_info[0]
-            port = server_info[1].split('?')[0]
-
-        # Menggunakan ping untuk memeriksa keaktifan node
-        response = subprocess.run(['ping', '-c', '1', server], stdout=subprocess.PIPE)
-        return response.returncode == 0  # Kembali True jika ping berhasil
-    except Exception as e:
-        print(f"⚠️ Gagal mengecek node: {e}")
+        result = subprocess.run(['v2ray', 'version'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        return result.returncode == 0
+    except FileNotFoundError:
         return False
 
-def saring_node(nodes):
-    terfilter = []
-    for node in nodes:
-        if cek_aktivitas_node(node):  # Cek keaktifan node sebelum memasukkan ke daftar
-            if node.startswith("vmess://"):
-                info = decode_node_info_base64(node)
-                if info is not None:
-                    if (info.get("port") in {443, 80} and info.get("net") == "ws"):
-                        terfilter.append(node)
-            elif node.startswith("trojan://"):
-                raw = node[10:]  
-                parts = raw.split('@')
-                if len(parts) == 2:
-                    server_info = parts[1]
-                    server_details = server_info.split(':')
-                    if len(server_details) == 2:
-                        port = server_details[1].split('?')[0]
-                        query = server_details[1].split('?')[1] if '?' in server_details[1] else ''
-                        params = {param.split('=')[0]: param.split('=')[1] for param in query.split('&') if '=' in param}
-                        if port in {'443', '80'} and params.get('type') == 'ws':
-                            terfilter.append(node)
-    return terfilter
+# Fungsi untuk menginstal V2Ray
+def install_v2ray():
+    print("Menginstal V2Ray...")
+    subprocess.run(['bash', '-c', 'bash <(curl -s -L https://git.io/v2ray.sh)'])
+    print("V2Ray berhasil diinstal.")
 
-def decode_node_info_base64(node):
-    try:
-        if node.startswith("vmess://"):
-            raw = node[8:]
-            decoded = base64.b64decode(raw + '===').decode('utf-8', errors='ignore')
-            return json.loads(decoded.replace("false", "False").replace("true", "True"))
-    except Exception as e:
-        print(f"⚠️ Gagal mendecode node: {e}")
-        return None
+# URL Trojan yang ingin diuji
+trojan_url = "trojan://aaaaaaa1-bbbb-4ccc-accc-eeeeeeeeeee1@ava.game.naver.com:443?encryption=none&security=tls&sni=ava.game.naver.com.free.bansos4u.biz.id&fp=randomized&type=ws&host=ava.game.naver.com.free.bansos4u.biz.id&path=%2FFree%2FTG-at-BitzBlack%2F91.187.93.166-443#(AD)%20Andorra%20Telecom%20Sau%20%40BitzBlack"
 
-def konversi_ke_clash(nodes):
-    proxies = []
+# Memparsing URL Trojan
+url_parts = trojan_url.split('@')
+credentials = url_parts[0].split('://')[1]
+server_info = url_parts[1].split('?')[0]
+params = url_parts[1].split('?')[1]
 
-    for node in nodes:
-        if node.startswith("vmess://"):
-            try:
-                vmess_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
-                config = json.loads(vmess_config.replace("false", "False").replace("true", "True"))
-                proxies.append({
-                    "name": config.get("ps", "Tanpa Nama"),
-                    "server": BUGCDN,
-                    "port": int(config["port"]),
-                    "type": "vmess",
-                    "uuid": config["id"],
-                    "alterId": int(config.get("aid", 0)),
-                    "cipher": "auto",
-                    "tls": True,
-                    "skip-cert-verify": True,
-                    "servername": config.get("host", ""),
-                    "network": config.get("net", "ws"),
-                    "ws-opts": {
-                        "path": config.get("path", "/vmess-ws"),
-                        "headers": {"Host": config.get("host", "")}
-                    },
-                    "udp": True
-                })
-            except Exception as e:
-                print(f"⚠️ Gagal memparsing vmess: {e}")
-        
-        elif node.startswith("trojan://"):
-            try:
-                raw = node[10:]  
-                parts = raw.split('@')
-                credentials, server_info = parts
-                server_details = server_info.split(':')
-                
-                server = BUGCDN
-                port = server_details[1].split('?')[0]
-                query = server_details[1].split('?')[1] if '?' in server_details[1] else ''
-                params = {param.split('=')[0]: param.split('=')[1] for param in query.split('&') if '=' in param}
+# Menyiapkan file konfigurasi V2Ray untuk Trojan
+v2ray_config = {
+    "outbounds": [
+        {
+            "protocol": "trojan",
+            "settings": {
+                "servers": [
+                    {
+                        "address": server_info.split(':')[0],
+                        "port": int(server_info.split(':')[1]),
+                        "password": credentials,
+                        "email": ""
+                    }
+                ]
+            }
+        }
+    ],
+    "inbounds": [
+        {
+            "port": 1080,
+            "protocol": "socks",
+            "settings": {
+                "auth": "noauth",
+                "udp": True,
+                "ip": "127.0.0.1"
+            }
+        }
+    ]
+}
 
-                name = node.split('#')[1].strip() if '#' in node else 'default_name'
-                name = urllib.parse.unquote(name)
+# Menyimpan konfigurasi ke file config.json
+with open('config.json', 'w') as json_file:
+    json.dump(v2ray_config, json_file, indent=4)
 
-                host = params.get('host', '')
-                if '#' in host:
-                    host = host.split('#')[0]
-                host = urllib.parse.unquote(host)
+print("File konfigurasi V2Ray untuk Trojan telah dibuat.")
 
-                sni = params.get('sni', '')
-                if '#' in sni:
-                    sni = sni.split('#')[0]
-                sni = urllib.parse.unquote(sni)
+# Memeriksa apakah V2Ray terinstal
+if not check_v2ray_installed():
+    install_v2ray()
 
-                path = urllib.parse.unquote(params.get('path', ''))
-                if '#' in path:
-                    path = path.split('#')[0]
-                path = path.replace('%2F', '/')
+# Jalankan V2Ray (pastikan V2Ray berada dalam PATH)
+os.system("v2ray -config ./config.json &")
 
-                if port in ['443', '80'] and params.get('type') == 'ws':
-                    proxies.append({
-                        "name": name,
-                        "server": server,
-                        "port": int(port),
-                        "type": "trojan",
-                        "password": urllib.parse.unquote(credentials),
-                        "skip-cert-verify": True,
-                        "sni": sni,
-                        "network": params.get('type', 'ws'),
-                        "ws-opts": {
-                            "path": path,
-                            "headers": {
-                                "Host": host
-                            }
-                        },
-                        "udp": True
-                    })
-            except Exception as e:
-                print(f"⚠️ Gagal memparsing trojan: {e}")
+# Menguji koneksi
+url = "http://www.msftconnecttest.com/connecttest.txt"
 
-    proxies_clash = {
-        "proxies": proxies
-    }
-    return yaml.dump(proxies_clash, allow_unicode=True, sort_keys=False)
+proxies = {
+    "http": "socks5h://127.0.0.1:1080",
+    "https": "socks5h://127.0.0.1:1080",
+}
 
-def main():
-    nodes = ambil_langganan()
-    filtered_nodes = saring_node(nodes)
-    os.makedirs("proxies", exist_ok=True)
-    with open("proxies/proxy_combined.yaml", "w", encoding="utf-8") as f:
-        f.write(konversi_ke_clash(filtered_nodes))
+try:
+    # Mengirim permintaan GET melalui proxy
+    response = requests.get(url, proxies=proxies)
 
-if __name__ == "__main__":
-    main()
+    # Memeriksa status kode
+    if response.status_code == 200:
+        print("Koneksi berhasil!")
+        print(response.text)  # Menampilkan konten
+    else:
+        print("Koneksi gagal. Kode status:", response.status_code)
+except Exception as e:
+    print("Terjadi kesalahan:", e)
