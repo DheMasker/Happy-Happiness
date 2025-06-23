@@ -8,8 +8,13 @@ import subprocess
 def check_v2ray_installed():
     try:
         result = subprocess.run(['v2ray', 'version'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        return result.returncode == 0
-    except FileNotFoundError:
+        if result.returncode == 0:
+            return True
+        else:
+            print("V2Ray tidak ditemukan. Pesan kesalahan:", result.stderr.decode())
+            return False
+    except Exception as e:
+        print("Kesalahan saat memeriksa V2Ray:", str(e))
         return False
 
 # URL Trojan yang ingin diuji
