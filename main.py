@@ -57,7 +57,7 @@ def check_node_status(node):
     time.sleep(5)  # Tunggu beberapa detik untuk memastikan V2Ray terhubung
 
     # Menguji koneksi (misalnya menggunakan curl)
-    response = os.system("curl -s -o /dev/null -w '%{http_code}' http://example.com")  # Ubah URL sesuai kebutuhan
+    response = os.system("curl -s -o /dev/null -w '%{http_code}' http://google.com")  # Ubah URL sesuai kebutuhan
 
     process.terminate()  # Hentikan V2Ray
     
