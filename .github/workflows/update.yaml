@@ -18,11 +18,16 @@ jobs:
     - name: Download and Install Xray
       run: |
         # Dapatkan URL unduhan terbaru untuk Xray
-        XRAY_URL=$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases/latest | grep "browser_download_url.*zip" | cut -d '"' -f 4)
+        XRAY_URL=$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases/latest | grep "browser_download_url.*linux-amd64.zip" | cut -d '"' -f 4)
 
-        # Unduh dan instal Xray
+        # Unduh Xray
         wget $XRAY_URL
-        unzip xray-linux-amd64.zip
+        
+        # Ambil nama file dari URL
+        XRAY_FILE=$(basename $XRAY_URL)
+
+        # Ekstrak dan instal Xray
+        unzip $XRAY_FILE
         sudo mv xray /usr/local/bin/
         sudo chmod +x /usr/local/bin/xray
 
