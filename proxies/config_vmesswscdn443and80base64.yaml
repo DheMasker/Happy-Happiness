@@ -1,0 +1,100 @@
+log-level: silent
+unified-delay: true
+dns:
+  enable: true
+  nameserver:
+  - 8.8.8.8
+  - 8.8.4.4
+  default-nameserver:
+  - 8.8.8.8
+  - 8.8.4.4
+  proxy-server-nameserver:
+  - 108.138.141.88
+  - 172.67.5.14
+  - 112.215.198.254
+  - 112.215.198.248
+  - 112.215.203.248
+  - 202.152.254.245
+  - 202.152.254.246
+  - 202.152.254.10
+  - 202.152.254.11
+  - 202.152.254.12
+  - 202.152.254.13
+  - 104.18.213.235
+  - 104.18.214.235
+  - 112.215.198.254
+  - 112.215.198.248
+  - 112.215.203.246
+  - 112.215.203.247
+  - 112.215.203.254
+  - 172.67.5.14
+  - 104.22.5.240
+  - 13.225.4.107
+  - 104.22.4.240
+  - 104.22.5.240
+
+proxy-providers:
+  vmesswscdn443and80base64:
+    type: http
+    url: "https://raw.githubusercontent.com/DheMasker/Happy-Happiness/refs/heads/main/proxies/vmesswscdn443and80base64.yaml"
+    interval: 28800
+    path: ./proxy_provider/vmesswscdn443and80base64.yaml
+    # filter: 'a|b' # golang regex string
+    health-check:
+      enable: true
+      interval: 21600
+      # lazy: true
+      url: 'http://www.gstatic.com/generate_204'
+
+proxy-groups:
+- name: CRAZ--------GSSH
+  type: select
+  proxies:
+  - CRAZMIIXGSSH
+  - ROUTESSELECT
+
+- name: SWITCHADS
+  type: select
+  proxies:
+  - REJECT
+  - CRAZ--------GSSH
+
+- name: ROUTESSELECT
+  type: select
+  use:
+  - vmesswscdn443and80base64
+
+- name: CRAZMIIXGSSH
+  type: urltest
+  use:
+  - vmesswscdn443and80base64
+  url: 'http://www.gstatic.com/generate_204'
+  interval: 28
+
+rule-providers:
+  rule_basicads:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_basicads.yaml
+    path: "./rule_provider/rule_basicads.yaml"
+    interval: 43200
+  rule_personalads:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_personalads.yaml
+    path: "./rule_provider/rule_personalads.yaml"
+    interval: 43200
+  rule_nsfwn:
+    type: http
+    behavior: domain
+    url: https://dl.dropboxusercontent.com/s/uyjyar9dzpcbc4tnqemz6/rule_nsfwn.yaml?rlkey=igvrnp0edaj5g3385cv119xpi
+    path: "./rule_provider/rule_nsfwn.yaml"
+    interval: 43200
+
+rules:
+- DOMAIN-SUFFIX,googlesyndication.com,CRAZ--------GSSH
+- DOMAIN-KEYWORD,POIUYTREWQASD,SWITCHADS
+- RULE-SET,rule_basicads,SWITCHADS
+- RULE-SET,rule_personalads,SWITCHADS
+- RULE-SET,rule_nsfwn,REJECT
+- MATCH,CRAZ--------GSSH
