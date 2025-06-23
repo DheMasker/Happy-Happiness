@@ -1,40 +1,68 @@
-name: Update subscriptions
+name: V2Ray Test
 
-on:
-  schedule:
-    - cron: "0 */6 * * *"  # 每6小时运行一次
-  workflow_dispatch:
+on: [push]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
+    - name: Install Dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y unzip wget golang
 
-      - name: Install dependencies
-        run: pip install requests pyyaml
+    - name: Download and Install V2Ray
+      run: |
+        wget https://github.com/v2ray/v2ray-core/releases/latest/download/v2ray-linux-64.zip
+        unzip v2ray-linux-64.zip
+        sudo mv v2ray-linux-64/v2ray /usr/local/bin/
+        sudo mv v2ray-linux-64/v2ctl /usr/local/bin/
+        sudo mv v2ray-linux-64/geoip.dat /usr/local/bin/
+        sudo mv v2ray-linux-64/geosite.dat /usr/local/bin/
+        sudo chmod +x /usr/local/bin/v2ray
+        sudo chmod +x /usr/local/bin/v2ctl
 
-      - name: Install Xray
-        run: |
-          wget https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip
-          unzip Xray-linux-64.zip
-          sudo mv xray /usr/local/bin/
-          sudo chmod +x /usr/local/bin/xray
+    - name: Run V2Ray Configuration
+      run: |
+        # Buat file konfigurasi
+        echo '{
+          "outbounds": [
+            {
+              "protocol": "trojan",
+              "settings": {
+                "servers": [
+                  {
+                    "address": "ava.game.naver.com",
+                    "port": 443,
+                    "password": "aaaaaaa1-bbbb-4ccc-accc-eeeeeeeeeee1",
+                    "email": ""
+                  }
+                ]
+              }
+            }
+          ],
+          "inbounds": [
+            {
+              "port": 1080,
+              "protocol": "socks",
+              "settings": {
+                "auth": "noauth",
+                "udp": true,
+                "ip": "127.0.0.1"
+              }
+            }
+          ]
+        }' > config.json
 
-      - name: Run Python script
-        run: python3 main.py
+        # Jalankan V2Ray
+        v2ray -config ./config.json &
 
-      - name: Push changes
-        run: |
-          git config --global user.email "actions@github.com"
-          git config --global user.name "GitHub Actions"
-          git add proxies/
-          git commit -m "Update subscriptions" || echo "No changes to commit"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
+    - name: Test Connection
+      run: |
+        # Menguji koneksi
+        PROXY="socks5h://127.0.0.1:1080"
+        curl -x $PROXY http://www.msftconnecttest.com/connecttest.txt
