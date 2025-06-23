@@ -15,16 +15,28 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y unzip wget curl jq
 
-    - name: Download and Install Xray
+    - name: Get Latest Xray Release URL
+      id: get_url
       run: |
-        # Dapatkan URL unduhan terbaru untuk Xray
-        XRAY_URL=$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases/latest | jq -r ".assets[] | select(.name | test(\"linux-amd64.zip\")) | .browser_download_url")
+        # Dapatkan respons API
+        RESPONSE=$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases/latest)
+        echo "$RESPONSE"  # Tampilkan respons untuk debugging
+
+        # Dapatkan URL unduhan untuk linux-amd64.zip
+        XRAY_URL=$(echo "$RESPONSE" | jq -r '.assets[] | select(.name | contains("linux-amd64.zip")) | .browser_download_url')
 
         # Periksa apakah URL berhasil diambil
         if [ -z "$XRAY_URL" ]; then
           echo "URL unduhan tidak ditemukan. Pastikan nama file sudah benar."
           exit 1
         fi
+
+        echo "::set-output name=url::$XRAY_URL"  # Mengatur output URL
+
+    - name: Download and Install Xray
+      run: |
+        # Mengambil URL dari langkah sebelumnya
+        XRAY_URL=${{ steps.get_url.outputs.url }}
 
         # Unduh Xray
         wget $XRAY_URL
