@@ -18,14 +18,11 @@ jobs:
     - name: Get Latest Xray Release URL
       id: get_url
       run: |
-        ARCH="linux-amd64.zip"  # Ubah ini sesuai arsitektur Anda (linux-arm64.zip, linux-386.zip, dll.)
+        ARCH="linux-arm64.zip"  # Menggunakan arsitektur ARM64
         
         # Dapatkan respons API
         RESPONSE=$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases/latest)
         echo "$RESPONSE"  # Tampilkan respons untuk debugging
-
-        # Tampilkan semua nama file aset untuk melihat apa yang tersedia
-        echo "$RESPONSE" | jq -r '.assets[] | .name'
 
         # Dapatkan URL unduhan untuk arsitektur yang sesuai
         XRAY_URL=$(echo "$RESPONSE" | jq -r ".assets[] | select(.name | contains(\"$ARCH\")) | .browser_download_url")
