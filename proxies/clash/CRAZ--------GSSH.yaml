@@ -65,7 +65,7 @@ proxy-groups:
   - vmesswscdn443and80base64
 
 - name: CRAZMIIXGSSH
-  type: urltest
+  type: url-test
   use:
   - vmesswscdn443and80base64
   url: 'http://www.gstatic.com/generate_204'
