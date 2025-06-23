@@ -33,8 +33,8 @@ def saring_node(nodes):
         if node.startswith("vmess://"):
             info = decode_node_info_base64(node)
             if info is not None:  # Pastikan info bukan None
-                # Mengizinkan semua node dengan port 443 atau 80 dan network ws
-                if (info.get("port") in {443, 80} and info.get("net") == "ws"):
+                # Mengizinkan semua node dengan port 443 dan network ws
+                if info.get("port") == 443 and info.get("net") == "ws":
                     terfilter.append(node)
         elif node.startswith("trojan://"):
             # Memfilter node Trojan berdasarkan port dan tipe
@@ -47,7 +47,7 @@ def saring_node(nodes):
                     port = server_details[1].split('?')[0]
                     query = server_details[1].split('?')[1] if '?' in server_details[1] else ''
                     params = {param.split('=')[0]: param.split('=')[1] for param in query.split('&') if '=' in param}
-                    if port in {'443', '80'} and params.get('type') == 'ws':
+                    if port == '443' and params.get('type') == 'ws':
                         terfilter.append(node)
     return terfilter
 
@@ -72,7 +72,7 @@ def konversi_ke_clash(nodes):
                 proxies.append({
                     "name": config.get("ps", "Tanpa Nama"),
                     "server": BUGCDN,
-                    "port": int(config["port"]),
+                    "port": int(config["port"]),  # Ambil port dari parameter
                     "type": "vmess",
                     "uuid": config["id"],
                     "alterId": int(config.get("aid", 0)),
@@ -98,7 +98,7 @@ def konversi_ke_clash(nodes):
                 server_details = server_info.split(':')
                 
                 server = BUGCDN
-                port = server_details[1].split('?')[0]
+                port = server_details[1].split('?')[0]  # Ambil port dari parameter
                 query = server_details[1].split('?')[1] if '?' in server_details[1] else ''
                 params = {param.split('=')[0]: param.split('=')[1] for param in query.split('&') if '=' in param}
 
@@ -120,11 +120,11 @@ def konversi_ke_clash(nodes):
                     path = path.split('#')[0]
                 path = path.replace('%2F', '/')
 
-                if port in ['443', '80'] and params.get('type') == 'ws':
+                if port == '443' and params.get('type') == 'ws':
                     proxies.append({
                         "name": name,
                         "server": server,
-                        "port": int(port),
+                        "port": int(port),  # Ambil port dari parameter
                         "type": "trojan",
                         "password": urllib.parse.unquote(credentials),
                         "skip-cert-verify": True,
