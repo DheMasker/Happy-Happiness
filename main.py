@@ -18,6 +18,12 @@ def install_v2ray():
     subprocess.run(['bash', '-c', 'bash <(curl -s -L https://git.io/v2ray.sh)'])
     print("V2Ray berhasil diinstal.")
 
+# Fungsi untuk menginstal dependensi
+def install_dependencies():
+    print("Menginstal dependensi...")
+    subprocess.run(['sudo', 'apt-get', 'install', '-y', 'socat'])
+    print("Dependensi berhasil diinstal.")
+
 # URL Trojan yang ingin diuji
 trojan_url = "trojan://aaaaaaa1-bbbb-4ccc-accc-eeeeeeeeeee1@ava.game.naver.com:443?encryption=none&security=tls&sni=ava.game.naver.com.free.bansos4u.biz.id&fp=randomized&type=ws&host=ava.game.naver.com.free.bansos4u.biz.id&path=%2FFree%2FTG-at-BitzBlack%2F91.187.93.166-443#(AD)%20Andorra%20Telecom%20Sau%20%40BitzBlack"
 
@@ -66,6 +72,9 @@ print("File konfigurasi V2Ray untuk Trojan telah dibuat.")
 # Memeriksa apakah V2Ray terinstal
 if not check_v2ray_installed():
     install_v2ray()
+
+# Memastikan dependensi terinstal
+install_dependencies()
 
 # Jalankan V2Ray (pastikan V2Ray berada dalam PATH)
 os.system("v2ray -config ./config.json &")
