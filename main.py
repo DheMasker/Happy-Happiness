@@ -2,8 +2,9 @@ import base64
 import requests
 import yaml
 import os
-import json  # Menggunakan json untuk decode
-import urllib.parse  # Untuk dekoding
+import json
+import urllib.parse
+import subprocess  # Tambahkan import untuk subprocess
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
@@ -27,28 +28,48 @@ def ambil_langganan():
             print(f"❌ Kesalahan sumber langganan: {url} -> {e}")
     return semua_node
 
+def cek_aktivitas_node(node):
+    try:
+        # Mengambil informasi dari node
+        if node.startswith("vmess://"):
+            info = decode_node_info_base64(node)
+            server = info.get("add")
+            port = info.get("port")
+        elif node.startswith("trojan://"):
+            raw = node[10:]  
+            parts = raw.split('@')
+            server_info = parts[1].split(':')
+            server = server_info[0]
+            port = server_info[1].split('?')[0]
+
+        # Menggunakan ping untuk memeriksa keaktifan node
+        response = subprocess.run(['ping', '-c', '1', server], stdout=subprocess.PIPE)
+        return response.returncode == 0  # Kembali True jika ping berhasil
+    except Exception as e:
+        print(f"⚠️ Gagal mengecek node: {e}")
+        return False
+
 def saring_node(nodes):
     terfilter = []
     for node in nodes:
-        if node.startswith("vmess://"):
-            info = decode_node_info_base64(node)
-            if info is not None:  # Pastikan info bukan None
-                # Mengizinkan semua node dengan port 443 atau 80 dan network ws
-                if (info.get("port") in {443, 80} and info.get("net") == "ws"):
-                    terfilter.append(node)
-        elif node.startswith("trojan://"):
-            # Memfilter node Trojan berdasarkan port dan tipe
-            raw = node[10:]  # Menghapus 'trojan://'
-            parts = raw.split('@')
-            if len(parts) == 2:
-                server_info = parts[1]
-                server_details = server_info.split(':')
-                if len(server_details) == 2:
-                    port = server_details[1].split('?')[0]
-                    query = server_details[1].split('?')[1] if '?' in server_details[1] else ''
-                    params = {param.split('=')[0]: param.split('=')[1] for param in query.split('&') if '=' in param}
-                    if port in {'443', '80'} and params.get('type') == 'ws':
+        if cek_aktivitas_node(node):  # Cek keaktifan node sebelum memasukkan ke daftar
+            if node.startswith("vmess://"):
+                info = decode_node_info_base64(node)
+                if info is not None:
+                    if (info.get("port") in {443, 80} and info.get("net") == "ws"):
                         terfilter.append(node)
+            elif node.startswith("trojan://"):
+                raw = node[10:]  
+                parts = raw.split('@')
+                if len(parts) == 2:
+                    server_info = parts[1]
+                    server_details = server_info.split(':')
+                    if len(server_details) == 2:
+                        port = server_details[1].split('?')[0]
+                        query = server_details[1].split('?')[1] if '?' in server_details[1] else ''
+                        params = {param.split('=')[0]: param.split('=')[1] for param in query.split('&') if '=' in param}
+                        if port in {'443', '80'} and params.get('type') == 'ws':
+                            terfilter.append(node)
     return terfilter
 
 def decode_node_info_base64(node):
@@ -92,7 +113,7 @@ def konversi_ke_clash(nodes):
         
         elif node.startswith("trojan://"):
             try:
-                raw = node[10:]  # Menghapus 'trojan://'
+                raw = node[10:]  
                 parts = raw.split('@')
                 credentials, server_info = parts
                 server_details = server_info.split(':')
