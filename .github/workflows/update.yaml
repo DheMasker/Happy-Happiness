@@ -21,6 +21,13 @@ jobs:
       - name: Install dependencies
         run: pip install requests pyyaml
 
+      - name: Install Xray
+        run: |
+          wget https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip
+          unzip Xray-linux-64.zip
+          sudo mv xray /usr/local/bin/
+          sudo chmod +x /usr/local/bin/xray
+
       - name: Run Python script
         run: python3 main.py
 
