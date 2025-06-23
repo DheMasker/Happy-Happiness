@@ -13,12 +13,18 @@ jobs:
     - name: Install Dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y unzip wget curl
+        sudo apt-get install -y unzip wget curl jq
 
     - name: Download and Install Xray
       run: |
         # Dapatkan URL unduhan terbaru untuk Xray
-        XRAY_URL=$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases/latest | grep "browser_download_url.*linux-amd64.zip" | cut -d '"' -f 4)
+        XRAY_URL=$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases/latest | jq -r ".assets[] | select(.name | test(\"linux-amd64.zip\")) | .browser_download_url")
+
+        # Periksa apakah URL berhasil diambil
+        if [ -z "$XRAY_URL" ]; then
+          echo "URL unduhan tidak ditemukan. Pastikan nama file sudah benar."
+          exit 1
+        fi
 
         # Unduh Xray
         wget $XRAY_URL
