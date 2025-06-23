@@ -1,4 +1,4 @@
-name: V2Ray Test
+name: Xray Test
 
 on: [push]
 
@@ -13,20 +13,20 @@ jobs:
     - name: Install Dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y unzip wget golang
+        sudo apt-get install -y unzip wget curl
 
-    - name: Download and Install V2Ray
+    - name: Download and Install Xray
       run: |
-        wget https://github.com/v2ray/v2ray-core/releases/latest/download/v2ray-linux-64.zip
-        unzip v2ray-linux-64.zip
-        sudo mv v2ray-linux-64/v2ray /usr/local/bin/
-        sudo mv v2ray-linux-64/v2ctl /usr/local/bin/
-        sudo mv v2ray-linux-64/geoip.dat /usr/local/bin/
-        sudo mv v2ray-linux-64/geosite.dat /usr/local/bin/
-        sudo chmod +x /usr/local/bin/v2ray
-        sudo chmod +x /usr/local/bin/v2ctl
+        # Dapatkan URL unduhan terbaru untuk Xray
+        XRAY_URL=$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases/latest | grep "browser_download_url.*zip" | cut -d '"' -f 4)
 
-    - name: Run V2Ray Configuration
+        # Unduh dan instal Xray
+        wget $XRAY_URL
+        unzip xray-linux-amd64.zip
+        sudo mv xray /usr/local/bin/
+        sudo chmod +x /usr/local/bin/xray
+
+    - name: Run Xray Configuration
       run: |
         # Buat file konfigurasi
         echo '{
@@ -58,8 +58,8 @@ jobs:
           ]
         }' > config.json
 
-        # Jalankan V2Ray
-        v2ray -config ./config.json &
+        # Jalankan Xray
+        xray -config ./config.json &
 
     - name: Test Connection
       run: |
