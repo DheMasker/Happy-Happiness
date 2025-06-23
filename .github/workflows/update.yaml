@@ -67,6 +67,9 @@ jobs:
         # Jalankan Xray dari folder proxies
         ./proxies/xray -config ./config.json &
 
+    - name: Sleep for a few seconds
+      run: sleep 5  # Tunggu 5 detik sebelum menguji koneksi
+
     - name: Test Connection
       run: |
         # Menguji koneksi
