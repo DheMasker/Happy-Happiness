@@ -13,41 +13,20 @@ jobs:
     - name: Install Dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y unzip wget curl jq
-
-    - name: Get Latest Xray Release URL
-      id: get_url
-      run: |
-        ARCH="linux-arm64.zip"  # Menggunakan arsitektur ARM64
-        
-        # Dapatkan respons API
-        RESPONSE=$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases/latest)
-        echo "$RESPONSE"  # Tampilkan respons untuk debugging
-
-        # Dapatkan URL unduhan untuk arsitektur yang sesuai
-        XRAY_URL=$(echo "$RESPONSE" | jq -r ".assets[] | select(.name | contains(\"$ARCH\")) | .browser_download_url")
-
-        # Periksa apakah URL berhasil diambil
-        if [ -z "$XRAY_URL" ]; then
-          echo "URL unduhan tidak ditemukan. Pastikan nama file sudah benar."
-          exit 1
-        fi
-
-        echo "::set-output name=url::$XRAY_URL"  # Mengatur output URL
+        sudo apt-get install -y unzip wget curl
 
     - name: Download and Install Xray
       run: |
-        # Mengambil URL dari langkah sebelumnya
-        XRAY_URL=${{ steps.get_url.outputs.url }}
-
+        XRAY_URL="https://objects.githubusercontent.com/github-production-release-asset-2e65be/311315731/54bc89f3-dce6-4e70-aa8f-2bdeff5d8029?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250623%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250623T231140Z&X-Amz-Expires=1800&X-Amz-Signature=40613bc33f7f4d802d7451e73b88c18b5f6adb5a1c0e19c7885ffb17c0e938ec&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DXray-linux-arm64-v8a.zip&response-content-type=application%2Foctet-stream"
+        
         # Unduh Xray
-        wget $XRAY_URL
+        wget "$XRAY_URL"
         
         # Ambil nama file dari URL
-        XRAY_FILE=$(basename $XRAY_URL)
+        XRAY_FILE=$(basename "$XRAY_URL")
 
         # Ekstrak Xray
-        unzip $XRAY_FILE
+        unzip "$XRAY_FILE"
         
         # Buat direktori proxies jika belum ada
         mkdir -p proxies
