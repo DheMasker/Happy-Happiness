@@ -4,25 +4,13 @@ import os
 import requests
 import subprocess
 
-# Fungsi untuk memeriksa apakah V2Ray terinstal
+# Memastikan V2Ray berada dalam PATH
 def check_v2ray_installed():
     try:
         result = subprocess.run(['v2ray', 'version'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         return result.returncode == 0
     except FileNotFoundError:
         return False
-
-# Fungsi untuk menginstal V2Ray
-def install_v2ray():
-    print("Menginstal V2Ray...")
-    subprocess.run(['bash', '-c', 'bash <(curl -s -L https://git.io/v2ray.sh)'])
-    print("V2Ray berhasil diinstal.")
-
-# Fungsi untuk menginstal dependensi
-def install_dependencies():
-    print("Menginstal dependensi...")
-    subprocess.run(['sudo', 'apt-get', 'install', '-y', 'socat'])
-    print("Dependensi berhasil diinstal.")
 
 # URL Trojan yang ingin diuji
 trojan_url = "trojan://aaaaaaa1-bbbb-4ccc-accc-eeeeeeeeeee1@ava.game.naver.com:443?encryption=none&security=tls&sni=ava.game.naver.com.free.bansos4u.biz.id&fp=randomized&type=ws&host=ava.game.naver.com.free.bansos4u.biz.id&path=%2FFree%2FTG-at-BitzBlack%2F91.187.93.166-443#(AD)%20Andorra%20Telecom%20Sau%20%40BitzBlack"
@@ -31,7 +19,6 @@ trojan_url = "trojan://aaaaaaa1-bbbb-4ccc-accc-eeeeeeeeeee1@ava.game.naver.com:4
 url_parts = trojan_url.split('@')
 credentials = url_parts[0].split('://')[1]
 server_info = url_parts[1].split('?')[0]
-params = url_parts[1].split('?')[1]
 
 # Menyiapkan file konfigurasi V2Ray untuk Trojan
 v2ray_config = {
@@ -71,12 +58,10 @@ print("File konfigurasi V2Ray untuk Trojan telah dibuat.")
 
 # Memeriksa apakah V2Ray terinstal
 if not check_v2ray_installed():
-    install_v2ray()
+    print("V2Ray tidak ditemukan. Pastikan V2Ray terinstal dengan benar.")
+    exit(1)
 
-# Memastikan dependensi terinstal
-install_dependencies()
-
-# Jalankan V2Ray (pastikan V2Ray berada dalam PATH)
+# Jalankan V2Ray
 os.system("v2ray -config ./config.json &")
 
 # Menguji koneksi
