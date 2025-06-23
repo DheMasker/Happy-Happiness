@@ -23,7 +23,8 @@ jobs:
 
       - name: Install V2Ray
         run: |
-          wget https://github.com/v2ray/v2ray-core/releases/latest/download/v2ray-linux-64.zip
+          VERSION=$(curl -s https://api.github.com/repos/v2ray/v2ray-core/releases/latest | jq -r .tag_name)
+          wget "https://github.com/v2ray/v2ray-core/releases/download/$VERSION/v2ray-linux-64.zip"
           unzip v2ray-linux-64.zip
           sudo mv v2ray /usr/local/bin/
           sudo mv v2ctl /usr/local/bin/
