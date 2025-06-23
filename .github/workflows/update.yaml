@@ -21,15 +21,21 @@ jobs:
       - name: Install dependencies
         run: pip install requests pyyaml speedtest-cli aiohttp tqdm
 
-      - name: Install V2Ray
+      - name: Install jq
+        run: sudo apt-get install jq
+
+      - name: Get Xray Latest Release
+        id: get_xray
         run: |
-          VERSION=$(curl -s https://api.github.com/repos/v2ray/v2ray-core/releases/latest | jq -r .tag_name)
-          wget "https://github.com/v2ray/v2ray-core/releases/download/$VERSION/v2ray-linux-64.zip"
-          unzip v2ray-linux-64.zip
-          sudo mv v2ray /usr/local/bin/
-          sudo mv v2ctl /usr/local/bin/
-          sudo chmod +x /usr/local/bin/v2ray
-          sudo chmod +x /usr/local/bin/v2ctl
+          VERSION=$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases/latest | jq -r .tag_name)
+          echo "VERSION=${VERSION}" >> $GITHUB_ENV
+
+      - name: Install Xray
+        run: |
+          wget "https://github.com/XTLS/Xray-core/releases/download/${{ env.VERSION }}/xray-linux-64.zip"
+          unzip xray-linux-64.zip
+          sudo mv xray /usr/local/bin/
+          sudo chmod +x /usr/local/bin/xray
 
       - name: Run Python script
         run: |
