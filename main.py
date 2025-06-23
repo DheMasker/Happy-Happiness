@@ -18,10 +18,13 @@ def ambil_langganan():
             print(f"Mengambil langganan: {url}")
             res = requests.get(url, timeout=60)
             konten = res.text.strip()
+            print("Konten yang diterima:", konten)  # Debugging
             if not konten.startswith("vmess"):
                 konten = base64.b64decode(konten + '===').decode('utf-8', errors='ignore')
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
-            semua_node.extend(baris)
+            for line in baris:
+                print("Baris yang akan diproses:", line)  # Debugging
+                semua_node.append(line)
         except Exception as e:
             print(f"❌ Kesalahan sumber langganan: {url} -> {e}")
     return semua_node
@@ -40,7 +43,11 @@ def decode_node_info_base64(node):
         if node.startswith("vmess://"):
             raw = node[8:]
             decoded = base64.b64decode(raw + '===').decode('utf-8', errors='ignore')
-            return json.loads(decoded.replace("false", "False").replace("true", "True"))
+            try:
+                return json.loads(decoded.replace("false", "False").replace("true", "True"))
+            except json.JSONDecodeError as e:
+                print(f"⚠️ JSON Decode Error: {e} untuk node: {decoded}")
+                return None
     except Exception as e:
         print(f"⚠️ Gagal mendecode node: {e}")
         return None
@@ -51,7 +58,11 @@ def check_node_status(node):
         print(f"❌ Node tidak valid: {node}")
         return False
 
-    create_xray_config(config)
+    try:
+        create_xray_config(config)
+    except Exception as e:
+        print(f"⚠️ Gagal membuat konfigurasi Xray: {e}")
+        return False
 
     # Jalankan Xray
     process = subprocess.Popen(["xray", "-config", "config.json"])
@@ -130,13 +141,17 @@ def konversi_ke_clash(nodes):
     return yaml.dump(proxies_clash, allow_unicode=True, sort_keys=False)
 
 def main():
-    nodes = ambil_langganan()
-    filtered_nodes = saring_node(nodes)
-    os.makedirs("proxies", exist_ok=True)
-    output_file = "proxies/vmesswscdn443and80base64.yaml"
-    with open(output_file, "w", encoding="utf-8") as f:
-        f.write(konversi_ke_clash(filtered_nodes))
-    print(f"File berhasil disimpan di {output_file}")
+    try:
+        nodes = ambil_langganan()
+        filtered_nodes = saring_node(nodes)
+        os.makedirs("proxies", exist_ok=True)
+        output_file = "proxies/vmesswscdn443and80base64.yaml"
+        with open(output_file, "w", encoding="utf-8") as f:
+            f.write(konversi_ke_clash(filtered_nodes))
+        print(f"File berhasil disimpan di {output_file}")
+    except Exception as e:
+        print(f"Terjadi kesalahan: {e}")
+        exit(1)
 
 if __name__ == "__main__":
     main()
