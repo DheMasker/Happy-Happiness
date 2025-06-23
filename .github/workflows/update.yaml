@@ -46,10 +46,15 @@ jobs:
         # Ambil nama file dari URL
         XRAY_FILE=$(basename $XRAY_URL)
 
-        # Ekstrak dan instal Xray
+        # Ekstrak Xray
         unzip $XRAY_FILE
-        sudo mv xray /usr/local/bin/
-        sudo chmod +x /usr/local/bin/xray
+        
+        # Buat direktori proxies jika belum ada
+        mkdir -p proxies
+        
+        # Pindahkan biner Xray ke folder proxies
+        mv xray proxies/
+        chmod +x proxies/xray
 
     - name: Run Xray Configuration
       run: |
@@ -83,8 +88,8 @@ jobs:
           ]
         }' > config.json
 
-        # Jalankan Xray
-        xray -config ./config.json &
+        # Jalankan Xray dari folder proxies
+        ./proxies/xray -config ./config.json &
 
     - name: Test Connection
       run: |
