@@ -1,77 +1,33 @@
-name: Xray Test
+: Update subscriptions
 
-on: [push]
+on:
+  schedule:
+    - cron: "0 */6 * * *"  # 每6小时运行一次
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Install Dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y unzip wget curl
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
 
-    - name: Download and Install Xray
-      run: |
-        XRAY_URL="https://objects.githubusercontent.com/github-production-release-asset-2e65be/311315731/54bc89f3-dce6-4e70-aa8f-2bdeff5d8029?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250623%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250623T231140Z&X-Amz-Expires=1800&X-Amz-Signature=40613bc33f7f4d802d7451e73b88c18b5f6adb5a1c0e19c7885ffb17c0e938ec&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DXray-linux-arm64-v8a.zip&response-content-type=application%2Foctet-stream"
-        
-        # Unduh Xray dan simpan dengan nama yang benar
-        wget -O xray-linux-arm64-v8a.zip "$XRAY_URL"
-        
-        # Ekstrak Xray
-        unzip xray-linux-arm64-v8a.zip
-        
-        # Buat direktori proxies jika belum ada
-        mkdir -p proxies
-        
-        # Pindahkan biner Xray ke folder proxies
-        mv xray proxies/
-        chmod +x proxies/xray
+      - name: Install dependencies
+        run: pip install requests pyyaml
 
-    - name: Run Xray Configuration
-      run: |
-        # Buat file konfigurasi
-        echo '{
-          "outbounds": [
-            {
-              "protocol": "trojan",
-              "settings": {
-                "servers": [
-                  {
-                    "address": "ava.game.naver.com",
-                    "port": 443,
-                    "password": "aaaaaaa1-bbbb-4ccc-accc-eeeeeeeeeee1",
-                    "email": ""
-                  }
-                ]
-              }
-            }
-          ],
-          "inbounds": [
-            {
-              "port": 1080,
-              "protocol": "socks",
-              "settings": {
-                "auth": "noauth",
-                "udp": true,
-                "ip": "127.0.0.1"
-              }
-            }
-          ]
-        }' > config.json
+      - name: Run Python script
+        run: python3 main.py
 
-        # Jalankan Xray dari folder proxies
-        ./proxies/xray -config ./config.json &
-
-    - name: Sleep for a few seconds
-      run: sleep 5  # Tunggu 5 detik sebelum menguji koneksi
-
-    - name: Test Connection
-      run: |
-        # Menguji koneksi
-        PROXY="socks5h://127.0.0.1:1080"
-        curl -x $PROXY http://www.msftconnecttest.com/connecttest.txt
+      - name: Push changes
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git add docs/
+          git commit -m "Update subscriptions" || echo "No changes to commit"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
