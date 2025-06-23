@@ -48,23 +48,34 @@ def decode_node_info_base64(node):
 def check_node_status(node):
     config = decode_node_info_base64(node)
     if config is None:
+        print(f"❌ Node tidak valid: {node}")
         return False
 
-    create_v2ray_config(config)
+    create_xray_config(config)
 
-    # Jalankan V2Ray
-    process = subprocess.Popen(["v2ray", "-config", "config.json"])
-    time.sleep(5)  # Tunggu beberapa detik untuk memastikan V2Ray terhubung
+    # Jalankan Xray
+    process = subprocess.Popen(["xray", "-config", "config.json"])
+    time.sleep(5)  # Tunggu beberapa detik untuk memastikan Xray terhubung
 
-    # Menguji koneksi (misalnya menggunakan curl)
-    response = os.system("curl -s -o /dev/null -w '%{http_code}' http://google.com")  # Ubah URL sesuai kebutuhan
+    # Menguji koneksi dengan Google
+    response = os.system("curl -s -o /dev/null -w '%{http_code}' http://www.google.com")
 
-    process.terminate()  # Hentikan V2Ray
+    process.terminate()  # Hentikan Xray
     
-    return response == 200
+    if response == 200:
+        return True
+    else:
+        print(f"❌ Node tidak aktif: {node}")
+        return False
 
-def create_v2ray_config(config):
-    v2ray_config = {
+def create_xray_config(config):
+    required_keys = ["address", "port", "id"]
+    for key in required_keys:
+        if key not in config:
+            print(f"Config missing '{key}':", config)
+            raise ValueError(f"Key '{key}' not found in config")
+
+    xray_config = {
         "outbounds": [{
             "protocol": "vmess",
             "settings": {
@@ -81,7 +92,7 @@ def create_v2ray_config(config):
     }
     
     with open("config.json", "w") as f:
-        json.dump(v2ray_config, f)
+        json.dump(xray_config, f)
 
 def konversi_ke_clash(nodes):
     proxies = []
