@@ -22,6 +22,7 @@ def ambil_langganan():
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
 
             for line in baris:
+                # Tambahkan langsung jika line dimulai dengan vmess:// atau trojan://
                 if line.startswith("vmess://") or line.startswith("trojan://"):
                     semua_node.append(line)
                 else:
