@@ -6,15 +6,13 @@ import json
 import urllib.parse
 
 # Daftar sumber langganan tanpa duplikat
-SUB_LINKS = list(set([ 
+SUB_LINKS = [
     "https://raw.githubusercontent.com/Surfboardv2ray/Proxy-sorter/refs/heads/main/input/proxies.txt",
-    "https://raw.githubusercontent.com/Surfboardv2ray/Proxy-sorter/refs/heads/main/input/proxies.txt",
-    # Tambahkan URL lain yang unik di sini
+    # Tambahkan URL lain di sini, pastikan tidak ada yang sama
     "https://raw.githubusercontent.com/Pawdroid/Free-servers/refs/heads/main/sub",
     "https://raw.githubusercontent.com/Pawdroid/Free-servers/refs/heads/main/sub",
     "https://raw.githubusercontent.com/Pawdroid/Free-servers/refs/heads/main/sub",
-    "https://raw.githubusercontent.com/Pawdroid/Free-servers/refs/heads/main/sub",
-]))
+]
 
 def hapus_duplikat_dan_simpan():
     global SUB_LINKS
@@ -26,7 +24,8 @@ def hapus_duplikat_dan_simpan():
     with open(__file__, "w") as file:
         for line in lines:
             if "SUB_LINKS =" in line:
-                file.write(f"SUB_LINKS = {SUB_LINKS}\n")  # Menyimpan hasil yang sudah dihapus duplikat
+                # Hanya simpan URL yang unik
+                file.write(f"SUB_LINKS = {repr(SUB_LINKS)}\n")
             else:
                 file.write(line)
 
