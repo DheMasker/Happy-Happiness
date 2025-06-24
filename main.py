@@ -141,7 +141,8 @@ def decode_node_info_base64(node):
 
 def konversi_ke_clash(nodes):
     proxies = []
-    unique_proxies = set()  # Menggunakan set untuk menyimpan kombinasi unik
+    unique_vmess_ids = set()  # Set untuk menyimpan UUID unik vmess
+    unique_trojan_passwords = set()  # Set untuk menyimpan password unik trojan
 
     for node in nodes:
         if node.startswith("vmess://"):
@@ -153,15 +154,15 @@ def konversi_ke_clash(nodes):
                 if servername and '#' in servername:
                     servername = servername.split('#')[0]
 
-                proxy_id = (name, BUGCDN, int(config["port"]))
-                if proxy_id not in unique_proxies:  # Memeriksa keunikan
-                    unique_proxies.add(proxy_id)
+                uuid = config.get("id")
+                if uuid not in unique_vmess_ids:  # Memeriksa keunikan dengan UUID
+                    unique_vmess_ids.add(uuid)
                     proxies.append({
                         "name": name,
                         "server": BUGCDN,
                         "port": int(config["port"]),
                         "type": "vmess",
-                        "uuid": config["id"],
+                        "uuid": uuid,
                         "alterId": int(config.get("aid", 0)),
                         "cipher": "auto",
                         "tls": True,
@@ -211,15 +212,15 @@ def konversi_ke_clash(nodes):
 
                 # Hanya tambahkan jika ada nilai di host atau sni dan path
                 if port == '443' and params.get('type') == 'ws' and path and (host or sni):
-                    proxy_id = (name, server, int(port))
-                    if proxy_id not in unique_proxies:  # Memeriksa keunikan
-                        unique_proxies.add(proxy_id)
+                    password = urllib.parse.unquote(credentials)
+                    if password not in unique_trojan_passwords:  # Memeriksa keunikan dengan password
+                        unique_trojan_passwords.add(password)
                         proxies.append({
                             "name": name,  # Nama tanpa tanda kutip
                             "server": server,
                             "port": int(port),
                             "type": "trojan",
-                            "password": urllib.parse.unquote(credentials),
+                            "password": password,
                             "skip-cert-verify": True,
                             "sni": sni if sni else host,
                             "network": params.get('type') if 'type' in params and params['type'] == 'ws' else None,
