@@ -33,6 +33,8 @@ def ambil_langganan():
                         if decoded_line.startswith("vmess://") or decoded_line.startswith("trojan://"):
                             semua_node.append(decoded_line)
                             log_messages.append(f"Menambahkan node setelah decode: {decoded_line[:30]}...")  # Simpan potongan untuk log
+                        else:
+                            log_messages.append(f"Node tidak valid setelah decode: {decoded_line[:30]}...")  # Node tidak valid
                     except Exception as e:
                         error_message = f"⚠️ Gagal mendecode baris: {line} -> {e}"
                         log_messages.append(error_message)
