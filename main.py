@@ -5,15 +5,14 @@ import os
 import json
 import urllib.parse
 
-# Daftar sumber langganan tanpa duplikat
-# Base64 
-SUB_LINKS = list(set([ 
+# Daftar sumber langganan
+SUB_LINKS = [ 
 "https://raw.githubusercontent.com/Surfboardv2ray/Proxy-sorter/refs/heads/main/input/proxies.txt",
 "https://raw.githubusercontent.com/Surfboardv2ray/Proxy-sorter/refs/heads/main/input/proxies.txt",
 "https://raw.githubusercontent.com/Surfboardv2ray/Proxy-sorter/refs/heads/main/input/proxies.txt",
 "https://raw.githubusercontent.com/Surfboardv2ray/Proxy-sorter/refs/heads/main/input/proxies.txt",
 "https://raw.githubusercontent.com/Surfboardv2ray/Proxy-sorter/refs/heads/main/input/proxies.txt",
-"https://raw.githubusercontent.com/Surfboardv2ray/Proxy-sorter/refs/heads/main/input/proxies.txt",
+
 
 "https://raw.githubusercontent.com/4n0nymou3/multi-proxy-config-fetcher/refs/heads/main/configs/proxy_configs.txt",
 "https://raw.githubusercontent.com/PlanAsli/configs-collector-v2ray/refs/heads/main/sub/all_configs.txt",
@@ -74,9 +73,21 @@ SUB_LINKS = list(set([
 "https://raw.githubusercontent.com/mheidari98/.proxy/refs/heads/main/all",
 
 "https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/V2RAY_SUB/refs/heads/main/v2ray_configs.txt"
-]))
+]
 
-BUGCDN = "104.22.5.240"
+def hapus_duplikat_dan_simpan():
+    global SUB_LINKS
+    SUB_LINKS = list(set(SUB_LINKS))  # Menghapus duplikat
+    # Menyimpan kembali ke main.py
+    with open(__file__, "r") as file:
+        lines = file.readlines()
+    
+    with open(__file__, "w") as file:
+        for line in lines:
+            if "SUB_LINKS =" in line:
+                file.write(f"SUB_LINKS = {SUB_LINKS}\n")  # Menyimpan hasil yang sudah dihapus duplikat
+            else:
+                file.write(line)
 
 def ambil_langganan():
     semua_node = []
@@ -176,7 +187,7 @@ def konversi_ke_clash(nodes):
                     unique_vmess_ids.add(proxy_id)
                     proxies.append({
                         "name": name,
-                        "server": BUGCDN,
+                        "server": "104.22.5.240",  # Ganti dengan alamat server yang sesuai
                         "port": int(config["port"]),
                         "type": "vmess",
                         "uuid": uuid,
@@ -219,7 +230,7 @@ def konversi_ke_clash(nodes):
                     unique_trojan_ids.add(proxy_id)
                     proxies.append({
                         "name": node.split('#')[1].strip() if '#' in node else 'default_name',
-                        "server": BUGCDN,
+                        "server": "104.22.5.240",  # Ganti dengan alamat server yang sesuai
                         "port": port,
                         "type": "trojan",
                         "password": password,
@@ -243,6 +254,7 @@ def konversi_ke_clash(nodes):
     return yaml.dump(proxies_clash, allow_unicode=True, sort_keys=False).replace('"', '')  # Menghapus tanda kutip
 
 def main():
+    hapus_duplikat_dan_simpan()  # Hapus duplikat dan simpan
     nodes = ambil_langganan()
     filtered_nodes = saring_node(nodes)
     os.makedirs("proxies", exist_ok=True)
