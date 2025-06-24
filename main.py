@@ -17,8 +17,8 @@ def ambil_langganan():
     log_messages = []  # Untuk menyimpan log
 
     for url in SUB_LINKS:
+        log_messages.append(f"Mengambil langganan: {url}")
         try:
-            log_messages.append(f"Mengambil langganan: {url}")
             res = requests.get(url, timeout=60)
             konten = res.text.strip()
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
@@ -26,11 +26,13 @@ def ambil_langganan():
             for line in baris:
                 if line.startswith("vmess://") or line.startswith("trojan://"):
                     semua_node.append(line)
+                    log_messages.append(f"Menambahkan node langsung: {line[:30]}...")  # Simpan potongan untuk log
                 else:
                     try:
                         decoded_line = base64.b64decode(line + '===').decode('utf-8', errors='ignore')
                         if decoded_line.startswith("vmess://") or decoded_line.startswith("trojan://"):
                             semua_node.append(decoded_line)
+                            log_messages.append(f"Menambahkan node setelah decode: {decoded_line[:30]}...")  # Simpan potongan untuk log
                     except Exception as e:
                         error_message = f"⚠️ Gagal mendecode baris: {line} -> {e}"
                         log_messages.append(error_message)
