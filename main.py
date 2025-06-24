@@ -19,10 +19,10 @@ def ambil_langganan():
             print(f"Mengambil langganan: {url}")
             res = requests.get(url, timeout=60)
             konten = res.text.strip()
+            print(f"Konten yang diambil: {konten}")  # Menampilkan konten yang diambil
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
 
             for line in baris:
-                # Tambahkan langsung jika line dimulai dengan vmess:// atau trojan://
                 if line.startswith("vmess://") or line.startswith("trojan://"):
                     semua_node.append(line)
                 else:
