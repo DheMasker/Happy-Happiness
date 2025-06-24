@@ -1,5 +1,3 @@
-#vmess trojan sub bukan base4
-
 import base64
 import requests
 import yaml
@@ -8,9 +6,8 @@ import json
 import urllib.parse
 
 # Daftar sumber langganan
-SUB_LINKS = [ 
-   
-"https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
+SUB_LINKS = [
+    "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
 ]
 
 BUGCDN = "104.22.5.240"
@@ -65,7 +62,7 @@ def saring_node(nodes):
 def decode_node_info_base64(node):
     try:
         if node.startswith("vmess://"):
-            raw = node[8:]
+            raw = node[8:]  # Menghapus 'vmess://'
             decoded = base64.b64decode(raw + '===').decode('utf-8', errors='ignore')
             return json.loads(decoded.replace("false", "False").replace("true", "True"))
     except Exception as e:
@@ -100,14 +97,14 @@ def konversi_ke_clash(nodes):
                     })
             except Exception as e:
                 print(f"⚠️ Gagal memparsing vmess: {e}")
-        
+
         elif node.startswith("trojan://"):
             try:
-                raw = node[10:]  
+                raw = node[9:]  
                 parts = raw.split('@')
                 credentials, server_info = parts
                 server_details = server_info.split(':')
-                
+
                 server = BUGCDN
                 port = server_details[1].split('?')[0]
                 query = server_details[1].split('?')[1] if '?' in server_details[1] else ''
