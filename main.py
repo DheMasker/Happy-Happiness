@@ -7,7 +7,7 @@ import urllib.parse
 
 # Daftar sumber langganan
 SUB_LINKS = [
-    "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
+    "https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub1_base64.txt"
 ]
 
 BUGCDN = "104.22.5.240"
