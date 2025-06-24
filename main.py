@@ -1,5 +1,3 @@
-#vmess trojan 443 perfect
-
 import base64
 import requests
 import yaml
@@ -97,8 +95,8 @@ def saring_node(nodes):
     for node in nodes:
         if node.startswith("vmess://"):
             info = decode_node_info_base64(node)
-            if info is not None and "path" in info and "host" in info:
-                if info.get("port") in {443, 80} and info.get("net") == "ws":
+            if info is not None and "path" in info and "host" in info and info.get("net") == "ws" and info.get("port") == 443:
+                if "ps" in info and info["ps"]:  # Memeriksa apakah ada nama
                     terfilter.append(node)
         elif node.startswith("trojan://"):
             raw = node[9:]  
@@ -113,7 +111,8 @@ def saring_node(nodes):
                     
                     # Hanya tambahkan jika ada host dan path
                     if port == '443' and params.get('type') == 'ws' and 'path' in params and 'host' in params and params['host']:
-                        terfilter.append(node)
+                        if "ps" in params and params["ps"]:  # Memeriksa apakah ada nama
+                            terfilter.append(node)
     return terfilter
 
 def decode_node_info_base64(node):
@@ -134,8 +133,18 @@ def konversi_ke_clash(nodes):
             try:
                 vmess_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
                 config = json.loads(vmess_config.replace("false", "False").replace("true", "True"))
+                
+                name = config.get("ps", "Tanpa Nama").split('#')[0]  # Hapus # dan setelahnya
+                servername = config.get("host", "")
+                host = config.get("host", "")
+                
+                if servername and not host:
+                    host = servername
+                elif host and not servername:
+                    servername = host
+                    
                 proxies.append({
-                    "name": config.get("ps", "Tanpa Nama"),  # Memastikan 'name' di atas
+                    "name": name.replace('"', ''),  # Hapus tanda kutip
                     "server": BUGCDN,
                     "port": int(config["port"]),
                     "type": "vmess",
@@ -144,11 +153,11 @@ def konversi_ke_clash(nodes):
                     "cipher": "auto",
                     "tls": True,
                     "skip-cert-verify": True,
-                    "servername": config.get("host", ""),
-                    "network": config.get("net", "ws"),
+                    "servername": servername,
+                    "network": "ws",
                     "ws-opts": {
                         "path": config.get("path", "/vmess-ws"),
-                        "headers": {"Host": config.get("host", "")}
+                        "headers": {"Host": host}
                     },
                     "udp": True
                 })
@@ -168,7 +177,7 @@ def konversi_ke_clash(nodes):
                 params = {param.split('=')[0]: param.split('=')[1] for param in query.split('&') if '=' in param}
 
                 name = node.split('#')[1].strip() if '#' in node else 'default_name'
-                name = urllib.parse.unquote(name)
+                name = urllib.parse.unquote(name).split('#')[0]  # Hapus # dan setelahnya
 
                 host = params.get('host', '')
                 if '#' in host:
@@ -187,8 +196,13 @@ def konversi_ke_clash(nodes):
 
                 # Hanya tambahkan jika ada host dan path
                 if port == '443' and params.get('type') == 'ws' and path and host:
+                    if sni and not host:
+                        host = sni
+                    elif host and not sni:
+                        sni = host
+
                     proxies.append({
-                        "name": name,  # Nama tanpa tanda kutip
+                        "name": name.replace('"', ''),  # Hapus tanda kutip
                         "server": server,
                         "port": int(port),
                         "type": "trojan",
@@ -210,7 +224,7 @@ def konversi_ke_clash(nodes):
     proxies_clash = {
         "proxies": proxies
     }
-    return yaml.dump(proxies_clash, allow_unicode=True, sort_keys=False).replace('"', '')  # Menghapus tanda kutip
+    return yaml.dump(proxies_clash, allow_unicode=True, sort_keys=False).replace('"', '')
 
 def main():
     nodes = ambil_langganan()
