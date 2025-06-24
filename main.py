@@ -37,8 +37,12 @@ def saring_node(nodes):
     for node in nodes:
         info = decode_node_info_base64(node)
         if info is not None:  # Pastikan info bukan None
-            # Mengizinkan semua node dengan port 443 dan network ws
-            if (node.startswith("vmess://") and info.get("port") == 443 and info.get("net") == "ws"):
+            # Mengizinkan semua node dengan port 443 dan network ws serta memastikan ada host dan path
+            if (node.startswith("vmess://") and 
+                info.get("port") == 443 and 
+                info.get("net") == "ws" and 
+                info.get("host") and 
+                info.get("path")):
                 terfilter.append(node)
         elif node.startswith("trojan://"):
             raw = node[10:]  
@@ -50,7 +54,11 @@ def saring_node(nodes):
                     port = server_details[1].split('?')[0]
                     query = server_details[1].split('?')[1] if '?' in server_details[1] else ''
                     params = {param.split('=')[0]: param.split('=')[1] for param in query.split('&') if '=' in param}
-                    if port == '443' and params.get('type') == 'ws' and 'path' in params and 'host' in params and params['host']:
+                    # Memastikan ada host dan path
+                    if (port == '443' and 
+                        params.get('type') == 'ws' and 
+                        'path' in params and 
+                        params.get('host')):
                         terfilter.append(node)
     return terfilter
 
@@ -73,7 +81,7 @@ def konversi_ke_clash(nodes):
                 vmess_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
                 config = json.loads(vmess_config.replace("false", "False").replace("true", "True"))
                 proxies.append({
-                    "name": config.get("ps", "Tanpa Nama"),
+                    "name": config.get("ps", "Tanpa Nama"),  # Memastikan 'name' di atas
                     "server": BUGCDN,
                     "port": int(config["port"]),
                     "type": "vmess",
@@ -123,9 +131,10 @@ def konversi_ke_clash(nodes):
                     path = path.split('#')[0]
                 path = path.replace('%2F', '/')
 
+                # Memastikan ada host dan path
                 if port == '443' and params.get('type') == 'ws' and path and host:
                     proxies.append({
-                        "name": name,
+                        "name": name,  # Menghilangkan tanda petik
                         "server": server,
                         "port": int(port),
                         "type": "trojan",
