@@ -7,8 +7,9 @@ import urllib.parse  # Untuk dekoding
 
 # Daftar sumber langganan yang base64 aja mungkin ;)
 SUB_LINKS = [ 
-   
-
+   #nonebase64
+"https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/V2RAY_SUB/refs/heads/main/v2ray_configs.txt",
+   #base64
 "https://raw.githubusercontent.com/Surfboardv2ray/Proxy-sorter/refs/heads/main/submerge/converted.txt",
 "https://raw.githubusercontent.com/Surfboardv2ray/TGParse/refs/heads/main/splitted/vmess",
 "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/refs/heads/main/subscriptions/base64/all_sub.txt",
