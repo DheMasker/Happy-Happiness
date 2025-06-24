@@ -1,3 +1,5 @@
+#vmess trojan 443 perfect
+
 import base64
 import requests
 import yaml
@@ -95,13 +97,9 @@ def saring_node(nodes):
     for node in nodes:
         if node.startswith("vmess://"):
             info = decode_node_info_base64(node)
-            # Pastikan hanya memproses yang memiliki network ws, port 443, nama, dan path
-            if (info is not None and 
-                info.get("net") == "ws" and 
-                info.get("port") == 443 and 
-                "ps" in info and info["ps"] and 
-                "path" in info and info["path"]):
-                terfilter.append(node)
+            if info is not None and "path" in info and "host" in info:
+                if info.get("port") in {443, 80} and info.get("net") == "ws":
+                    terfilter.append(node)
         elif node.startswith("trojan://"):
             raw = node[9:]  
             parts = raw.split('@')
@@ -113,11 +111,8 @@ def saring_node(nodes):
                     query = server_details[1].split('?')[1] if '?' in server_details[1] else ''
                     params = {param.split('=')[0]: param.split('=')[1] for param in query.split('&') if '=' in param}
                     
-                    # Hanya tambahkan jika ada type ws, port 443, nama, dan path
-                    if (port == '443' and 
-                        params.get('type') == 'ws' and 
-                        "path" in params and params["path"] and 
-                        "name" in parts[0] and parts[0].split('#')[0].strip()):
+                    # Hanya tambahkan jika ada host dan path
+                    if port == '443' and params.get('type') == 'ws' and 'path' in params and 'host' in params and params['host']:
                         terfilter.append(node)
     return terfilter
 
@@ -139,38 +134,24 @@ def konversi_ke_clash(nodes):
             try:
                 vmess_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
                 config = json.loads(vmess_config.replace("false", "False").replace("true", "True"))
-
-                # Menghapus karakter # dan setelahnya dari host dan servername
-                host = config.get("host", "").split('#')[0].strip()
-                servername = config.get("servername", "").split('#')[0].strip()
-
-                # Mengisi servername atau host jika salah satu kosong
-                if not servername and host:
-                    servername = host
-                if not host and servername:
-                    host = servername
-
-                if config.get("path"):
-                    proxies.append({
-                        "name": config.get("ps", "Tanpa Nama").replace('"', '').split('#')[0].strip(),  # Menghapus tanda kutip dan # dari nama
-                        "server": BUGCDN,
-                        "port": int(config["port"]),
-                        "type": "vmess",
-                        "uuid": config["id"],
-                        "alterId": int(config.get("aid", 0)),
-                        "cipher": "auto",
-                        "tls": True,
-                        "skip-cert-verify": True,
-                        "servername": servername,
-                        "network": config.get("net", "ws"),
-                        "ws-opts": {
-                            "path": config.get("path", "/vmess-ws"),
-                            "headers": {
-                                "Host": host
-                            }
-                        },
-                        "udp": True
-                    })
+                proxies.append({
+                    "name": config.get("ps", "Tanpa Nama"),  # Memastikan 'name' di atas
+                    "server": BUGCDN,
+                    "port": int(config["port"]),
+                    "type": "vmess",
+                    "uuid": config["id"],
+                    "alterId": int(config.get("aid", 0)),
+                    "cipher": "auto",
+                    "tls": True,
+                    "skip-cert-verify": True,
+                    "servername": config.get("host", ""),
+                    "network": config.get("net", "ws"),
+                    "ws-opts": {
+                        "path": config.get("path", "/vmess-ws"),
+                        "headers": {"Host": config.get("host", "")}
+                    },
+                    "udp": True
+                })
             except Exception as e:
                 print(f"⚠️ Gagal memparsing vmess: {e}")
 
@@ -180,28 +161,32 @@ def konversi_ke_clash(nodes):
                 parts = raw.split('@')
                 credentials, server_info = parts
                 server_details = server_info.split(':')
-
+                
                 server = BUGCDN
                 port = server_details[1].split('?')[0]
                 query = server_details[1].split('?')[1] if '?' in server_details[1] else ''
                 params = {param.split('=')[0]: param.split('=')[1] for param in query.split('&') if '=' in param}
 
-                name = parts[0].split('#')[0].strip() if '#' in parts[0] else parts[0].strip()
-                name = urllib.parse.unquote(name).replace('"', '').strip()  # Menghapus tanda kutip dan # dari nama
+                name = node.split('#')[1].strip() if '#' in node else 'default_name'
+                name = urllib.parse.unquote(name)
 
-                host = params.get('host', '').split('#')[0].strip()
-                sni = params.get('sni', '').split('#')[0].strip()
+                host = params.get('host', '')
+                if '#' in host:
+                    host = host.split('#')[0]
+                host = urllib.parse.unquote(host)
 
-                # Mengisi sni atau host jika salah satu kosong
-                if not sni and host:
-                    sni = host
-                if not host and sni:
-                    host = sni
+                sni = params.get('sni', '')
+                if '#' in sni:
+                    sni = sni.split('#')[0]
+                sni = urllib.parse.unquote(sni)
 
                 path = urllib.parse.unquote(params.get('path', ''))
+                if '#' in path:
+                    path = path.split('#')[0]
+                path = path.replace('%2F', '/')
 
-                # Hanya tambahkan jika ada host, path, dan sni
-                if port == '443' and params.get('type') == 'ws' and path and (host or sni):
+                # Hanya tambahkan jika ada host dan path
+                if port == '443' and params.get('type') == 'ws' and path and host:
                     proxies.append({
                         "name": name,  # Nama tanpa tanda kutip
                         "server": server,
