@@ -6,13 +6,13 @@ import json
 import urllib.parse
 
 # Daftar sumber langganan tanpa duplikat
-SUB_LINKS = [
+SUB_LINKS = list(set([
     "https://raw.githubusercontent.com/Surfboardv2ray/Proxy-sorter/refs/heads/main/input/proxies.txt",
+    "https://raw.githubusercontent.com/Pawdroid/Free-servers/refs/heads/main/sub",
     # Tambahkan URL lain di sini, pastikan tidak ada yang sama
     "https://raw.githubusercontent.com/Pawdroid/Free-servers/refs/heads/main/sub",
     "https://raw.githubusercontent.com/Pawdroid/Free-servers/refs/heads/main/sub",
-    "https://raw.githubusercontent.com/Pawdroid/Free-servers/refs/heads/main/sub",
-]
+]))
 
 def hapus_duplikat_dan_simpan():
     global SUB_LINKS
