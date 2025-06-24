@@ -2,7 +2,7 @@ name: Update subscriptions
 
 on:
   schedule:
-    - cron: "0 */6 * * *"  # 每6小时运行一次
+    - cron: "0 */2 * * *"  # Setiap 2 Jam
   workflow_dispatch:
 
 jobs:
