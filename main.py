@@ -24,9 +24,10 @@ def ambil_langganan():
                 continue  # Lewati ke URL berikutnya jika tidak berhasil
 
             konten = res.text.strip()
-            print(f"Konten (500 karakter pertama): {konten[:500]}")  # Menampilkan 500 karakter pertama dari konten
+            print(f"Konten (9 karakter pertama): {konten[:9]}")  # Menampilkan 9 karakter pertama
             
-            baris = [line.strip() for line in konten.splitlines() if line.strip()]
+            baris = [line.strip() for line in konten.splitlines() if line.strip()]  # Memisahkan semua baris
+            print(f"Jumlah baris yang ditemukan: {len(baris)}")  # Menampilkan jumlah baris yang ditemukan
 
             for line in baris:
                 if line.startswith("vmess://") or line.startswith("trojan://"):
@@ -109,7 +110,7 @@ def konversi_ke_clash(nodes):
 
         elif node.startswith("trojan://"):
             try:
-                raw = node[10:]  
+                raw = node[9:]  
                 parts = raw.split('@')
                 credentials, server_info = parts
                 server_details = server_info.split(':')
@@ -166,6 +167,10 @@ def konversi_ke_clash(nodes):
 def main():
     nodes = ambil_langganan()
     filtered_nodes = saring_node(nodes)
+    
+    # Menambahkan debug untuk jumlah node yang terfilter
+    print(f"Jumlah node yang terfilter: {len(filtered_nodes)}")  
+
     os.makedirs("proxies", exist_ok=True)
     with open("proxies/vmesstrojanwscdn443.yaml", "w", encoding="utf-8") as f:
         f.write(konversi_ke_clash(filtered_nodes))
