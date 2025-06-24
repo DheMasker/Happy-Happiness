@@ -7,54 +7,7 @@ import urllib.parse
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
-   
-
-"https://raw.githubusercontent.com/Surfboardv2ray/Proxy-sorter/refs/heads/main/submerge/converted.txt",
-"https://raw.githubusercontent.com/Surfboardv2ray/TGParse/refs/heads/main/splitted/vmess",
-"https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/refs/heads/main/subscriptions/base64/all_sub.txt",
-"https://raw.githubusercontent.com/lagzian/SS-Collector/refs/heads/main/vmess_B64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub1_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub2_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub3_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub4_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub5_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub6_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub7_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub8_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub9_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub10_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub11_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub12_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub13_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub14_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub15_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub16_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub17_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub18_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub19_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub20_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub21_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub22_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub23_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub24_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub25_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub26_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub27_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub28_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub29_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub30_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub31_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub32_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub33_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub34_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub35_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub36_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub37_base64.txt",
-"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub38_base64.txt",
-"https://raw.githubusercontent.com/Pawdroid/Free-servers/refs/heads/main/sub",
-"https://raw.githubusercontent.com/roosterkid/openproxylist/refs/heads/main/V2RAY_BASE64.txt",
-"https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/vmess",
-"https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
+    "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
 ]
 
 BUGCDN = "104.22.5.240"
@@ -64,31 +17,29 @@ def ambil_langganan():
     for url in SUB_LINKS:
         try:
             print(f"Mengambil langganan: {url}")
-            res = requests.get(url, timeout=30)  # Mengurangi timeout menjadi 30 detik
-            print(f"Status Code: {res.status_code}")  # Menampilkan status kode
-            if res.status_code != 200:
-                print(f"❌ Kesalahan: Tidak dapat mengakses URL, status kode: {res.status_code}")
-                continue  # Lewati ke URL berikutnya jika tidak berhasil
-
+            res = requests.get(url, timeout=60)
             konten = res.text.strip()
-            print(f"Konten (9 karakter pertama): {konten[:9]}")  # Menampilkan 9 karakter pertama
-            
-            baris = [line.strip() for line in konten.splitlines() if line.strip()]  # Memisahkan semua baris
-            print(f"Jumlah baris yang ditemukan: {len(baris)}")  # Menampilkan jumlah baris yang ditemukan
+            baris = [line.strip() for line in konten.splitlines() if line.strip()]
 
             for line in baris:
                 if line.startswith("vmess://") or line.startswith("trojan://"):
                     semua_node.append(line)
-                    print(f"✅ Ditambahkan: {line}")
                 else:
                     # Coba decode jika konten adalah base64
                     try:
                         decoded_line = base64.b64decode(line + '===').decode('utf-8', errors='ignore')
                         if decoded_line.startswith("vmess://") or decoded_line.startswith("trojan://"):
                             semua_node.append(decoded_line)
-                            print(f"✅ Ditambahkan setelah decode: {decoded_line}")
                     except Exception as e:
                         print(f"⚠️ Gagal mendecode baris: {line} -> {e}")
+
+                # Memproses string base64 yang tidak langsung dikenali
+                try:
+                    decoded_base64 = base64.b64decode(line + '===').decode('utf-8', errors='ignore')
+                    if decoded_base64.startswith("vmess://") or decoded_base64.startswith("trojan://"):
+                        semua_node.append(decoded_base64)
+                except Exception as e:
+                    print(f"⚠️ Gagal mendecode base64: {line} -> {e}")
 
         except Exception as e:
             print(f"❌ Kesalahan sumber langganan: {url} -> {e}")
@@ -119,7 +70,7 @@ def saring_node(nodes):
 def decode_node_info_base64(node):
     try:
         if node.startswith("vmess://"):
-            raw = node[8:]  # Menghapus 'vmess://'
+            raw = node[8:]
             decoded = base64.b64decode(raw + '===').decode('utf-8', errors='ignore')
             return json.loads(decoded.replace("false", "False").replace("true", "True"))
     except Exception as e:
@@ -154,14 +105,14 @@ def konversi_ke_clash(nodes):
                     })
             except Exception as e:
                 print(f"⚠️ Gagal memparsing vmess: {e}")
-
+        
         elif node.startswith("trojan://"):
             try:
                 raw = node[9:]  
                 parts = raw.split('@')
                 credentials, server_info = parts
                 server_details = server_info.split(':')
-
+                
                 server = BUGCDN
                 port = server_details[1].split('?')[0]
                 query = server_details[1].split('?')[1] if '?' in server_details[1] else ''
@@ -214,10 +165,6 @@ def konversi_ke_clash(nodes):
 def main():
     nodes = ambil_langganan()
     filtered_nodes = saring_node(nodes)
-    
-    # Menambahkan debug untuk jumlah node yang terfilter
-    print(f"Jumlah node yang terfilter: {len(filtered_nodes)}")  
-
     os.makedirs("proxies", exist_ok=True)
     with open("proxies/vmesstrojanwscdn443.yaml", "w", encoding="utf-8") as f:
         f.write(konversi_ke_clash(filtered_nodes))
