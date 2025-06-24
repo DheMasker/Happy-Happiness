@@ -95,13 +95,16 @@ def saring_node(nodes):
     for node in nodes:
         if node.startswith("vmess://"):
             info = decode_node_info_base64(node)
-            if info is not None and "path" in info and "host" in info and "ps" in info:
+            if info is not None and "path" in info:
                 if info.get("port") == 443 and info.get("net") == "ws":
                     name = info.get("ps", "").replace('"', '')
                     servername = info.get("host", "").split('#')[0]
                     if not servername:
                         servername = info.get("servername", "").split('#')[0]
-                    terfilter.append(node)
+                    
+                    # Hanya tambahkan jika ada nilai di host atau servername
+                    if servername or info.get("host"):
+                        terfilter.append(node)
 
         elif node.startswith("trojan://"):
             raw = node[9:]  
@@ -121,8 +124,8 @@ def saring_node(nodes):
                     if not host:
                         host = params.get('sni', '').split('#')[0]
 
-                    path = urllib.parse.unquote(params.get('path', ''))
-                    if port == '443' and params.get('type') == 'ws' and path and (host or params.get('sni')):
+                    # Hanya tambahkan jika ada nilai di host atau sni
+                    if port == '443' and params.get('type') == 'ws' and (host or params.get('sni')):
                         terfilter.append(node)
     return terfilter
 
@@ -144,8 +147,13 @@ def konversi_ke_clash(nodes):
             try:
                 vmess_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
                 config = json.loads(vmess_config.replace("false", "False").replace("true", "True"))
+                name = config.get("ps", "Tanpa Nama").replace('"', '')  # Menghapus tanda kutip
+                servername = config.get("host", "") or config.get("servername", "")
+                if servername and '#' in servername:
+                    servername = servername.split('#')[0]
+
                 proxies.append({
-                    "name": config.get("ps", "Tanpa Nama"),  # Memastikan 'name' di atas
+                    "name": name,
                     "server": BUGCDN,
                     "port": int(config["port"]),
                     "type": "vmess",
@@ -154,11 +162,13 @@ def konversi_ke_clash(nodes):
                     "cipher": "auto",
                     "tls": True,
                     "skip-cert-verify": True,
-                    "servername": config.get("host", ""),
+                    "servername": servername.replace('"', ''),  # Menghapus tanda kutip
                     "network": config.get("net", "ws"),
                     "ws-opts": {
                         "path": config.get("path", "/vmess-ws"),
-                        "headers": {"Host": config.get("host", "")}
+                        "headers": {
+                            "Host": servername.replace('"', '')  # Mengisi Host dengan servername
+                        }
                     },
                     "udp": True
                 })
@@ -195,7 +205,7 @@ def konversi_ke_clash(nodes):
                     path = path.split('#')[0]
                 path = path.replace('%2F', '/')
 
-                # Hanya tambahkan jika ada host dan path
+                # Hanya tambahkan jika ada nilai di host atau sni
                 if port == '443' and params.get('type') == 'ws' and path and (host or sni):
                     proxies.append({
                         "name": name,  # Nama tanpa tanda kutip
@@ -209,7 +219,7 @@ def konversi_ke_clash(nodes):
                         "ws-opts": {
                             "path": path,
                             "headers": {
-                                "Host": host if host else sni
+                                "Host": host if host else sni  # Mengisi Host
                             }
                         },
                         "udp": True
