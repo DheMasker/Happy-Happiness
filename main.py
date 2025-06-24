@@ -2,13 +2,12 @@ import base64
 import requests
 import yaml
 import os
-import json  # Menggunakan json untuk decode
-import urllib.parse  # Untuk dekoding
+import json
+import urllib.parse
 
-# Daftar sumber langganan yang base64 aja mungkin ;)
+# Daftar sumber langganan
 SUB_LINKS = [ 
-   #nonebase64
-"https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/V2RAY_SUB/refs/heads/main/v2ray_configs.txt"
+    "https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/V2RAY_SUB/refs/heads/main/v2ray_configs.txt"
 ]
 
 BUGCDN = "104.22.5.240"
@@ -20,10 +19,19 @@ def ambil_langganan():
             print(f"Mengambil langganan: {url}")
             res = requests.get(url, timeout=60)
             konten = res.text.strip()
-            if not konten.startswith("vmess"):
-                konten = base64.b64decode(konten + '===').decode('utf-8', errors='ignore')
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
-            semua_node.extend(baris)
+
+            for line in baris:
+                if line.startswith("vmess://") or line.startswith("trojan://") or line.startswith("vless://"):
+                    semua_node.append(line)
+                else:
+                    # Coba decode jika konten adalah base64
+                    try:
+                        decoded_line = base64.b64decode(line + '===').decode('utf-8', errors='ignore')
+                        semua_node.append(decoded_line)
+                    except Exception as e:
+                        print(f"⚠️ Gagal mendecode baris: {line} -> {e}")
+
         except Exception as e:
             print(f"❌ Kesalahan sumber langganan: {url} -> {e}")
     return semua_node
@@ -33,13 +41,11 @@ def saring_node(nodes):
     for node in nodes:
         if node.startswith("vmess://"):
             info = decode_node_info_base64(node)
-            if info is not None:  # Pastikan info bukan None
-                # Mengizinkan semua node dengan port 443 dan network ws
+            if info is not None:
                 if info.get("port") == 443 and info.get("net") == "ws":
                     terfilter.append(node)
         elif node.startswith("trojan://"):
-            # Memfilter node Trojan berdasarkan port dan tipe
-            raw = node[10:]  # Menghapus 'trojan://'
+            raw = node[10:]  
             parts = raw.split('@')
             if len(parts) == 2:
                 server_info = parts[1]
@@ -64,7 +70,6 @@ def decode_node_info_base64(node):
 
 def konversi_ke_clash(nodes):
     proxies = []
-
     for node in nodes:
         if node.startswith("vmess://"):
             try:
@@ -73,7 +78,7 @@ def konversi_ke_clash(nodes):
                 proxies.append({
                     "name": config.get("ps", "Tanpa Nama"),
                     "server": BUGCDN,
-                    "port": int(config["port"]),  # Ambil port dari parameter
+                    "port": int(config["port"]),
                     "type": "vmess",
                     "uuid": config["id"],
                     "alterId": int(config.get("aid", 0)),
@@ -93,13 +98,13 @@ def konversi_ke_clash(nodes):
         
         elif node.startswith("trojan://"):
             try:
-                raw = node[10:]  # Menghapus 'trojan://'
+                raw = node[10:]  
                 parts = raw.split('@')
                 credentials, server_info = parts
                 server_details = server_info.split(':')
                 
                 server = BUGCDN
-                port = server_details[1].split('?')[0]  # Ambil port dari parameter
+                port = server_details[1].split('?')[0]
                 query = server_details[1].split('?')[1] if '?' in server_details[1] else ''
                 params = {param.split('=')[0]: param.split('=')[1] for param in query.split('&') if '=' in param}
 
@@ -125,7 +130,7 @@ def konversi_ke_clash(nodes):
                     proxies.append({
                         "name": name,
                         "server": server,
-                        "port": int(port),  # Ambil port dari parameter
+                        "port": int(port),
                         "type": "trojan",
                         "password": urllib.parse.unquote(credentials),
                         "skip-cert-verify": True,
