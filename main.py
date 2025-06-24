@@ -19,18 +19,14 @@ def ambil_langganan():
             print(f"Mengambil langganan: {url}")
             res = requests.get(url, timeout=60)
             konten = res.text.strip()
+            # Memproses konten jika tidak dimulai dengan vmess atau trojan
+            if not konten.startswith("vmess") and not konten.startswith("trojan"):
+                konten = base64.b64decode(konten + '===').decode('utf-8', errors='ignore')
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
-
+            
             for line in baris:
                 if line.startswith("vmess://") or line.startswith("trojan://"):
                     semua_node.append(line)
-                else:
-                    try:
-                        decoded_line = base64.b64decode(line + '===').decode('utf-8', errors='ignore')
-                        if decoded_line.startswith("vmess://") or decoded_line.startswith("trojan://"):
-                            semua_node.append(decoded_line)
-                    except Exception as e:
-                        print(f"⚠️ Gagal mendecode baris: {line} -> {e}")
 
         except Exception as e:
             print(f"❌ Kesalahan sumber langganan: {url} -> {e}")
@@ -41,8 +37,8 @@ def saring_node(nodes):
     for node in nodes:
         info = decode_node_info_base64(node)
         if info is not None:  # Pastikan info bukan None
-            # Mengizinkan semua node dengan port 443 atau 80 dan network ws
-            if (node.startswith("vmess://") and info.get("port") in {443, 80} and info.get("net") == "ws"):
+            # Mengizinkan semua node dengan port 443 dan network ws
+            if (node.startswith("vmess://") and info.get("port") == 443 and info.get("net") == "ws"):
                 terfilter.append(node)
         elif node.startswith("trojan://"):
             raw = node[10:]  
@@ -54,7 +50,7 @@ def saring_node(nodes):
                     port = server_details[1].split('?')[0]
                     query = server_details[1].split('?')[1] if '?' in server_details[1] else ''
                     params = {param.split('=')[0]: param.split('=')[1] for param in query.split('&') if '=' in param}
-                    if port in {'443', '80'} and params.get('type') == 'ws' and 'path' in params and 'host' in params and params['host']:
+                    if port == '443' and params.get('type') == 'ws' and 'path' in params and 'host' in params and params['host']:
                         terfilter.append(node)
     return terfilter
 
@@ -127,7 +123,7 @@ def konversi_ke_clash(nodes):
                     path = path.split('#')[0]
                 path = path.replace('%2F', '/')
 
-                if port in {'443', '80'} and params.get('type') == 'ws' and path and host:
+                if port == '443' and params.get('type') == 'ws' and path and host:
                     proxies.append({
                         "name": name,
                         "server": server,
@@ -157,7 +153,7 @@ def main():
     nodes = ambil_langganan()
     filtered_nodes = saring_node(nodes)
     os.makedirs("proxies", exist_ok=True)
-    with open("proxies/vmessdanTrojanWSCdn443dan80.yaml", "w", encoding="utf-8") as f:
+    with open("proxies/vmesstrojanwscdn443.yaml", "w", encoding="utf-8") as f:
         f.write(konversi_ke_clash(filtered_nodes))
 
 if __name__ == "__main__":
