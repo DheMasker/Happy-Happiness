@@ -39,8 +39,9 @@ def ambil_langganan():
                     except Exception as e:
                         print(f"⚠️ Gagal mendecode baris: {line} -> {e}")
 
-            # Simpan hasil decode ke file
-            filename = url.split('/')[-1].replace('.txt', '') + '.txt'
+            # Simpan hasil decode ke file dengan nama yang benar
+            filename = url.split('/')[-1].replace('.txt', '') + '.txt'  # Mengambil nama file dari URL
+            filename = 'sevcator.txt'  # Ganti nama file sesuai permintaan
             file_path = os.path.join(folder_path, filename)
             with open(file_path, "w", encoding="utf-8") as f:
                 for node in base64_decoded_content:
