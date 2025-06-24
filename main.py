@@ -95,7 +95,8 @@ def saring_node(nodes):
     for node in nodes:
         if node.startswith("vmess://"):
             info = decode_node_info_base64(node)
-            if info is not None and "path" in info and "host" in info:
+            # Pastikan ada path dan host
+            if info is not None and "path" in info and "host" in info and info["host"]:
                 if info.get("port") in {443, 80} and info.get("net") == "ws":
                     terfilter.append(node)
         elif node.startswith("trojan://"):
@@ -142,11 +143,13 @@ def konversi_ke_clash(nodes):
                     "cipher": "auto",
                     "tls": True,
                     "skip-cert-verify": True,
-                    "servername": config.get("host", ""),
+                    "servername": config.get("host", ""),  # Mengambil dari config
                     "network": config.get("net", "ws"),
                     "ws-opts": {
                         "path": config.get("path", "/vmess-ws"),
-                        "headers": {"Host": config.get("host", "")}
+                        "headers": {
+                            "Host": config.get("host", "")  # Mengambil dari config
+                        }
                     },
                     "udp": True
                 })
@@ -169,19 +172,7 @@ def konversi_ke_clash(nodes):
                 name = urllib.parse.unquote(name)
 
                 host = params.get('host', '')
-                if '#' in host:
-                    host = host.split('#')[0]
-                host = urllib.parse.unquote(host)
-
-                sni = params.get('sni', '')
-                if '#' in sni:
-                    sni = sni.split('#')[0]
-                sni = urllib.parse.unquote(sni)
-
                 path = urllib.parse.unquote(params.get('path', ''))
-                if '#' in path:
-                    path = path.split('#')[0]
-                path = path.replace('%2F', '/')
 
                 # Hanya tambahkan jika ada host dan path
                 if port == '443' and params.get('type') == 'ws' and path and host:
@@ -192,7 +183,7 @@ def konversi_ke_clash(nodes):
                         "type": "trojan",
                         "password": urllib.parse.unquote(credentials),
                         "skip-cert-verify": True,
-                        "sni": sni,
+                        "sni": params.get('sni', ''),
                         "network": params.get('type') if 'type' in params and params['type'] == 'ws' else None,
                         "ws-opts": {
                             "path": path,
