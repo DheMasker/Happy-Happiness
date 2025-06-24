@@ -19,35 +19,15 @@ def ambil_langganan():
             print(f"Mengambil langganan: {url}")
             res = requests.get(url, timeout=60)
             konten = res.text.strip()
+            print(f"Konten yang diambil:\n{konten}\n")  # Menampilkan konten yang diambil
+            
+            # Mendecode konten jika tidak dimulai dengan "vmess://"
+            if not konten.startswith("vmess://"):
+                konten = base64.b64decode(konten + '===').decode('utf-8', errors='ignore')
+                
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
-
-            # Mendecode dan menyimpan node
-            folder_path = "scbase64"
-            os.makedirs(folder_path, exist_ok=True)
-
-            base64_decoded_content = []
-            for line in baris:
-                if line.startswith("vmess://") or line.startswith("trojan://"):
-                    semua_node.append(line)
-                    base64_decoded_content.append(line)
-                else:
-                    try:
-                        decoded_line = base64.b64decode(line + '===').decode('utf-8', errors='ignore')
-                        if decoded_line.startswith("vmess://") or decoded_line.startswith("trojan://"):
-                            semua_node.append(decoded_line)
-                            base64_decoded_content.append(decoded_line)
-                    except Exception as e:
-                        print(f"⚠️ Gagal mendecode baris: {line} -> {e}")
-
-            # Simpan hasil decode ke file dengan nama yang benar
-            filename = url.split('/')[-1].replace('.txt', '') + '.txt'  # Mengambil nama file dari URL
-            filename = 'sevcator.txt'  # Ganti nama file sesuai permintaan
-            file_path = os.path.join(folder_path, filename)
-            with open(file_path, "w", encoding="utf-8") as f:
-                for node in base64_decoded_content:
-                    f.write(node + "\n")
-            print(f"✅ Hasil decode disimpan di: {file_path}")
-
+            semua_node.extend(baris)  # Menambahkan semua baris yang telah diproses
+            
         except Exception as e:
             print(f"❌ Kesalahan sumber langganan: {url} -> {e}")
     return semua_node
@@ -91,28 +71,27 @@ def konversi_ke_clash(nodes):
             try:
                 vmess_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
                 config = json.loads(vmess_config.replace("false", "False").replace("true", "True"))
-                if "path" in config and "host" in config and config["host"]:
-                    proxies.append({
-                        "name": config.get("ps", "Tanpa Nama"),
-                        "server": BUGCDN,
-                        "port": int(config["port"]),
-                        "type": "vmess",
-                        "uuid": config["id"],
-                        "alterId": int(config.get("aid", 0)),
-                        "cipher": "auto",
-                        "tls": True,
-                        "skip-cert-verify": True,
-                        "servername": config.get("host", ""),
-                        "network": config.get("net") if config.get("net") == "ws" else None,
-                        "ws-opts": {
-                            "path": config.get("path", "/vmess-ws"),
-                            "headers": {"Host": config.get("host", "")}
-                        },
-                        "udp": True
-                    })
+                proxies.append({
+                    "name": config.get("ps", "Tanpa Nama"),
+                    "server": BUGCDN,
+                    "port": int(config["port"]),
+                    "type": "vmess",
+                    "uuid": config["id"],
+                    "alterId": int(config.get("aid", 0)),
+                    "cipher": "auto",
+                    "tls": True,
+                    "skip-cert-verify": True,
+                    "servername": config.get("host", ""),
+                    "network": config.get("net", "ws"),
+                    "ws-opts": {
+                        "path": config.get("path", "/vmess-ws"),
+                        "headers": {"Host": config.get("host", "")}
+                    },
+                    "udp": True
+                })
             except Exception as e:
                 print(f"⚠️ Gagal memparsing vmess: {e}")
-        
+
         elif node.startswith("trojan://"):
             try:
                 raw = node[9:]  
