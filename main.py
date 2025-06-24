@@ -200,8 +200,8 @@ def konversi_ke_clash(nodes):
                 raw = node[9:]  
                 parts = raw.split('@')
                 credentials, server_info = parts
-                server_details = server_info.split(':')
                 
+                server_details = server_info.split(':')
                 port = int(server_details[1].split('?')[0])
                 query = server_details[1].split('?')[1] if '?' in server_details[1] else ''
                 params = {param.split('=')[0]: param.split('=')[1] for param in query.split('&') if '=' in param}
