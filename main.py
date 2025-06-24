@@ -141,7 +141,8 @@ def decode_node_info_base64(node):
 
 def konversi_ke_clash(nodes):
     proxies = []
-    unique_proxies = set()  # Set untuk menyimpan kombinasi unik dari server dan port
+    unique_vmess_ids = set()  # Set untuk menyimpan kombinasi unik dari uuid dan host untuk vmess
+    unique_trojan_ids = set()  # Set untuk menyimpan kombinasi unik dari password dan host untuk trojan
 
     for node in nodes:
         if node.startswith("vmess://"):
@@ -153,17 +154,17 @@ def konversi_ke_clash(nodes):
                 if servername and '#' in servername:
                     servername = servername.split('#')[0]
 
-                server = BUGCDN
-                port = int(config["port"])
-                proxy_id = (server, port)  # Kombinasi unik berdasarkan server dan port
-                if proxy_id not in unique_proxies:  # Memeriksa keunikan
-                    unique_proxies.add(proxy_id)
+                uuid = config.get("id")
+                host = config.get("host", "")
+                proxy_id = (uuid, host)  # Kombinasi unik berdasarkan uuid dan host
+                if proxy_id not in unique_vmess_ids:  # Memeriksa keunikan
+                    unique_vmess_ids.add(proxy_id)
                     proxies.append({
                         "name": name,
-                        "server": server,
-                        "port": port,
+                        "server": BUGCDN,
+                        "port": int(config["port"]),
                         "type": "vmess",
-                        "uuid": config["id"],
+                        "uuid": uuid,
                         "alterId": int(config.get("aid", 0)),
                         "cipher": "auto",
                         "tls": True,
@@ -188,51 +189,36 @@ def konversi_ke_clash(nodes):
                 credentials, server_info = parts
                 server_details = server_info.split(':')
                 
-                server = BUGCDN
                 port = int(server_details[1].split('?')[0])
                 query = server_details[1].split('?')[1] if '?' in server_details[1] else ''
                 params = {param.split('=')[0]: param.split('=')[1] for param in query.split('&') if '=' in param}
-
-                name = node.split('#')[1].strip() if '#' in node else 'default_name'
-                name = name.replace('"', '')
 
                 host = params.get('host', '')
                 if '#' in host:
                     host = host.split('#')[0]
                 host = urllib.parse.unquote(host)
 
-                sni = params.get('sni', '')
-                if '#' in sni:
-                    sni = sni.split('#')[0]
-                sni = urllib.parse.unquote(sni)
-
-                path = urllib.parse.unquote(params.get('path', ''))
-                if '#' in path:
-                    path = path.split('#')[0]
-                path = path.replace('%2F', '/')
-
-                # Hanya tambahkan jika ada nilai di host atau sni dan path
-                if port == 443 and params.get('type') == 'ws' and path and (host or sni):
-                    proxy_id = (server, port)  # Kombinasi unik berdasarkan server dan port
-                    if proxy_id not in unique_proxies:  # Memeriksa keunikan
-                        unique_proxies.add(proxy_id)
-                        proxies.append({
-                            "name": name,  # Nama tanpa tanda kutip
-                            "server": server,
-                            "port": port,
-                            "type": "trojan",
-                            "password": urllib.parse.unquote(credentials),
-                            "skip-cert-verify": True,
-                            "sni": sni if sni else host,
-                            "network": params.get('type') if 'type' in params and params['type'] == 'ws' else None,
-                            "ws-opts": {
-                                "path": path,
-                                "headers": {
-                                    "Host": host if host else sni  # Mengisi Host
-                                }
-                            },
-                            "udp": True
-                        })
+                password = urllib.parse.unquote(credentials)
+                proxy_id = (password, host)  # Kombinasi unik berdasarkan password dan host
+                if proxy_id not in unique_trojan_ids:  # Memeriksa keunikan
+                    unique_trojan_ids.add(proxy_id)
+                    proxies.append({
+                        "name": node.split('#')[1].strip() if '#' in node else 'default_name',
+                        "server": BUGCDN,
+                        "port": port,
+                        "type": "trojan",
+                        "password": password,
+                        "skip-cert-verify": True,
+                        "sni": params.get('sni', host),  # Mengisi SNI dengan host
+                        "network": params.get('type') if 'type' in params and params['type'] == 'ws' else None,
+                        "ws-opts": {
+                            "path": urllib.parse.unquote(params.get('path', '')),
+                            "headers": {
+                                "Host": host if host else params.get('sni', '')  # Mengisi Host
+                            }
+                        },
+                        "udp": True
+                    })
             except Exception as e:
                 print(f"⚠️ Gagal memparsing trojan: {e}")
 
