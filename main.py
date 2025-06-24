@@ -24,19 +24,21 @@ def ambil_langganan():
                 continue  # Lewati ke URL berikutnya jika tidak berhasil
 
             konten = res.text.strip()
-            print(f"Konten: {konten[:100]}")  # Menampilkan 100 karakter pertama dari konten
+            print(f"Konten: {konten}")  # Menampilkan seluruh konten
             
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
 
             for line in baris:
                 if line.startswith("vmess://") or line.startswith("trojan://"):
                     semua_node.append(line)
+                    print(f"✅ Ditambahkan: {line}")
                 else:
                     # Coba decode jika konten adalah base64
                     try:
                         decoded_line = base64.b64decode(line + '===').decode('utf-8', errors='ignore')
                         if decoded_line.startswith("vmess://") or decoded_line.startswith("trojan://"):
                             semua_node.append(decoded_line)
+                            print(f"✅ Ditambahkan setelah decode: {decoded_line}")
                     except Exception as e:
                         print(f"⚠️ Gagal mendecode baris: {line} -> {e}")
 
