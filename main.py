@@ -96,7 +96,7 @@ def saring_node(nodes):
         if node.startswith("vmess://"):
             info = decode_node_info_base64(node)
             # Pastikan ada host, path, dan servername
-            if info is not None and "path" in info and "host" in info and info["host"] and "servername" in info:
+            if info is not None and "path" in info and "host" in info and info["host"]:
                 if info.get("port") in {443, 80} and info.get("net") == "ws":
                     terfilter.append(node)
         elif node.startswith("trojan://"):
@@ -110,8 +110,8 @@ def saring_node(nodes):
                     query = server_details[1].split('?')[1] if '?' in server_details[1] else ''
                     params = {param.split('=')[0]: param.split('=')[1] for param in query.split('&') if '=' in param}
                     
-                    # Hanya tambahkan jika ada host, path dan sni
-                    if port == '443' and params.get('type') == 'ws' and 'path' in params and 'host' in params and params['host'] and 'sni' in params:
+                    # Hanya tambahkan jika ada host dan path
+                    if port == '443' and params.get('type') == 'ws' and 'path' in params and 'host' in params and params['host']:
                         terfilter.append(node)
     return terfilter
 
@@ -136,9 +136,13 @@ def konversi_ke_clash(nodes):
                 
                 # Menghapus karakter # dan setelahnya dari host dan servername
                 host = config.get("host", "").split('#')[0].strip()
-                servername = host.split('#')[0].strip()  # Menggunakan host sebagai servername
+                servername = config.get("servername", "").split('#')[0].strip()  # Menggunakan servername dari config
 
-                if host and config.get("path") and servername:
+                # Jika salah satu kosong, isikan dari yang ada
+                if not servername and host:
+                    servername = host
+
+                if host and config.get("path"):
                     proxies.append({
                         "name": config.get("ps", "Tanpa Nama").replace('"', '').split('#')[0].strip(),  # Menghapus tanda kutip dan # dari nama
                         "server": BUGCDN,
@@ -179,10 +183,15 @@ def konversi_ke_clash(nodes):
 
                 host = params.get('host', '').split('#')[0].strip()
                 sni = params.get('sni', '').split('#')[0].strip()
+
+                # Jika salah satu kosong, isikan dari yang ada
+                if not sni and host:
+                    sni = host
+
                 path = urllib.parse.unquote(params.get('path', ''))
 
                 # Hanya tambahkan jika ada host, path, dan sni
-                if port == '443' and params.get('type') == 'ws' and path and host and sni:
+                if port == '443' and params.get('type') == 'ws' and path and (host or sni):
                     proxies.append({
                         "name": name,  # Nama tanpa tanda kutip
                         "server": server,
