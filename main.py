@@ -141,6 +141,7 @@ def decode_node_info_base64(node):
 
 def konversi_ke_clash(nodes):
     proxies = []
+    unique_proxies = set()  # Menggunakan set untuk menyimpan kombinasi unik
 
     for node in nodes:
         if node.startswith("vmess://"):
@@ -152,26 +153,29 @@ def konversi_ke_clash(nodes):
                 if servername and '#' in servername:
                     servername = servername.split('#')[0]
 
-                proxies.append({
-                    "name": name,
-                    "server": BUGCDN,
-                    "port": int(config["port"]),
-                    "type": "vmess",
-                    "uuid": config["id"],
-                    "alterId": int(config.get("aid", 0)),
-                    "cipher": "auto",
-                    "tls": True,
-                    "skip-cert-verify": True,
-                    "servername": servername.replace('"', ''),  # Menghapus tanda kutip
-                    "network": config.get("net", "ws"),
-                    "ws-opts": {
-                        "path": config.get("path", "/vmess-ws"),
-                        "headers": {
-                            "Host": servername.replace('"', '')  # Mengisi Host dengan servername
-                        }
-                    },
-                    "udp": True
-                })
+                proxy_id = (name, BUGCDN, int(config["port"]))
+                if proxy_id not in unique_proxies:  # Memeriksa keunikan
+                    unique_proxies.add(proxy_id)
+                    proxies.append({
+                        "name": name,
+                        "server": BUGCDN,
+                        "port": int(config["port"]),
+                        "type": "vmess",
+                        "uuid": config["id"],
+                        "alterId": int(config.get("aid", 0)),
+                        "cipher": "auto",
+                        "tls": True,
+                        "skip-cert-verify": True,
+                        "servername": servername.replace('"', ''),  # Menghapus tanda kutip
+                        "network": config.get("net", "ws"),
+                        "ws-opts": {
+                            "path": config.get("path", "/vmess-ws"),
+                            "headers": {
+                                "Host": servername.replace('"', '')  # Mengisi Host dengan servername
+                            }
+                        },
+                        "udp": True
+                    })
             except Exception as e:
                 print(f"⚠️ Gagal memparsing vmess: {e}")
 
@@ -207,23 +211,26 @@ def konversi_ke_clash(nodes):
 
                 # Hanya tambahkan jika ada nilai di host atau sni dan path
                 if port == '443' and params.get('type') == 'ws' and path and (host or sni):
-                    proxies.append({
-                        "name": name,  # Nama tanpa tanda kutip
-                        "server": server,
-                        "port": int(port),
-                        "type": "trojan",
-                        "password": urllib.parse.unquote(credentials),
-                        "skip-cert-verify": True,
-                        "sni": sni if sni else host,
-                        "network": params.get('type') if 'type' in params and params['type'] == 'ws' else None,
-                        "ws-opts": {
-                            "path": path,
-                            "headers": {
-                                "Host": host if host else sni  # Mengisi Host
-                            }
-                        },
-                        "udp": True
-                    })
+                    proxy_id = (name, server, int(port))
+                    if proxy_id not in unique_proxies:  # Memeriksa keunikan
+                        unique_proxies.add(proxy_id)
+                        proxies.append({
+                            "name": name,  # Nama tanpa tanda kutip
+                            "server": server,
+                            "port": int(port),
+                            "type": "trojan",
+                            "password": urllib.parse.unquote(credentials),
+                            "skip-cert-verify": True,
+                            "sni": sni if sni else host,
+                            "network": params.get('type') if 'type' in params and params['type'] == 'ws' else None,
+                            "ws-opts": {
+                                "path": path,
+                                "headers": {
+                                    "Host": host if host else sni  # Mengisi Host
+                                }
+                            },
+                            "udp": True
+                        })
             except Exception as e:
                 print(f"⚠️ Gagal memparsing trojan: {e}")
 
