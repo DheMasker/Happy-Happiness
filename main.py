@@ -1,3 +1,5 @@
+#vmess trojan ws port 443 tanpa terganda uuid / password & host
+
 import base64
 import requests
 import yaml
@@ -5,29 +7,74 @@ import os
 import json
 import urllib.parse
 
-# Daftar sumber langganan tanpa duplikat
-SUB_LINKS = list(set([
-    "https://raw.githubusercontent.com/Surfboardv2ray/Proxy-sorter/refs/heads/main/input/proxies.txt",
-    "https://raw.githubusercontent.com/Pawdroid/Free-servers/refs/heads/main/sub",
-    # Tambahkan URL lain di sini, pastikan tidak ada yang sama
-    "https://raw.githubusercontent.com/Pawdroid/Free-servers/refs/heads/main/sub",
-    "https://raw.githubusercontent.com/Pawdroid/Free-servers/refs/heads/main/sub",
-]))
+# Daftar sumber langganan
+# Base64 & uri
+SUB_LINKS = [ 
+   
+"https://raw.githubusercontent.com/Surfboardv2ray/Proxy-sorter/refs/heads/main/input/proxies.txt",
 
-def hapus_duplikat_dan_simpan():
-    global SUB_LINKS
-    SUB_LINKS = list(set(SUB_LINKS))  # Menghapus duplikat
-    # Menyimpan kembali ke main.py
-    with open(__file__, "r") as file:
-        lines = file.readlines()
-    
-    with open(__file__, "w") as file:
-        for line in lines:
-            if "SUB_LINKS =" in line:
-                # Hanya simpan URL yang unik
-                file.write(f"SUB_LINKS = {repr(SUB_LINKS)}\n")
-            else:
-                file.write(line)
+"https://raw.githubusercontent.com/4n0nymou3/multi-proxy-config-fetcher/refs/heads/main/configs/proxy_configs.txt",
+"https://raw.githubusercontent.com/PlanAsli/configs-collector-v2ray/refs/heads/main/sub/all_configs.txt",
+"https://raw.githubusercontent.com/V2RayRoot/V2RayConfig/refs/heads/main/Config/vmess.txt",
+"https://raw.githubusercontent.com/gfpcom/free-proxy-list/refs/heads/main/list/trojan.txt",
+"https://raw.githubusercontent.com/gfpcom/free-proxy-list/refs/heads/main/list/vmess.txt",
+"https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/refs/heads/main/subscriptions/v2ray/all_sub.txt",
+"https://raw.githubusercontent.com/wuqb2i4f/xray-config-toolkit/refs/heads/main/output/base64/mix-uri",
+"https://raw.githubusercontent.com/T3stAcc/V2Ray/refs/heads/main/All_Configs_Sub.txt",
+"https://raw.githubusercontent.com/Surfboardv2ray/v2ray-worker-sub/refs/heads/master/providers/providers",
+"https://raw.githubusercontent.com/MhdiTaheri/V2rayCollector/refs/heads/main/sub/mix",
+"https://raw.githubusercontent.com/Surfboardv2ray/Proxy-sorter/refs/heads/main/submerge/converted.txt",
+"https://raw.githubusercontent.com/Surfboardv2ray/TGParse/refs/heads/main/splitted/vmess",
+"https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/refs/heads/main/subscriptions/base64/all_sub.txt",
+"https://raw.githubusercontent.com/lagzian/SS-Collector/refs/heads/main/vmess_B64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub1_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub2_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub3_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub4_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub5_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub6_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub7_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub8_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub9_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub10_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub11_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub12_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub13_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub14_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub15_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub16_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub17_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub18_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub19_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub20_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub21_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub22_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub23_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub24_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub25_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub26_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub27_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub28_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub29_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub30_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub31_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub32_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub33_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub34_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub35_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub36_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub37_base64.txt",
+"https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Base64/Sub38_base64.txt",
+"https://raw.githubusercontent.com/Pawdroid/Free-servers/refs/heads/main/sub",
+"https://raw.githubusercontent.com/roosterkid/openproxylist/refs/heads/main/V2RAY_BASE64.txt",
+"https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/vmess",
+"https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt",
+"https://raw.githubusercontent.com/mheidari98/.proxy/refs/heads/main/all",
+
+"https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/V2RAY_SUB/refs/heads/main/v2ray_configs.txt"
+]
+
+BUGCDN = "104.22.5.240"
 
 def ambil_langganan():
     semua_node = []
@@ -36,15 +83,8 @@ def ambil_langganan():
             print(f"Mengambil langganan: {url}")
             res = requests.get(url, timeout=60)
             konten = res.text.strip()
-            konten = konten.encode('utf-8').decode('utf-8', errors='ignore')
-
             if not konten.startswith(("vmess://", "trojan://")):
-                try:
-                    konten = base64.b64decode(konten + '===').decode('utf-8', errors='ignore')
-                except Exception as e:
-                    print(f"⚠️ Kesalahan saat mendekode base64: {e}")
-                    continue
-
+                konten = base64.b64decode(konten + '===').decode('utf-8', errors='ignore')
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
             semua_node.extend(baris)
         except Exception as e:
@@ -63,6 +103,7 @@ def saring_node(nodes):
                     if not servername:
                         servername = info.get("servername", "").split('#')[0]
                     
+                    # Hanya tambahkan jika ada nilai di host, servername, dan path
                     if (servername or info.get("host")) and info.get("path"):
                         terfilter.append(node)
 
@@ -84,6 +125,7 @@ def saring_node(nodes):
                     if not host:
                         host = params.get('sni', '').split('#')[0]
 
+                    # Hanya tambahkan jika ada nilai di host atau sni dan path
                     if port == '443' and params.get('type') == 'ws' and (host or params.get('sni')) and params.get('path'):
                         terfilter.append(node)
     return terfilter
@@ -100,27 +142,27 @@ def decode_node_info_base64(node):
 
 def konversi_ke_clash(nodes):
     proxies = []
-    unique_vmess_ids = set()
-    unique_trojan_ids = set()
+    unique_vmess_ids = set()  # Set untuk menyimpan kombinasi unik dari uuid dan host untuk vmess
+    unique_trojan_ids = set()  # Set untuk menyimpan kombinasi unik dari password dan host untuk trojan
 
     for node in nodes:
         if node.startswith("vmess://"):
             try:
                 vmess_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
                 config = json.loads(vmess_config.replace("false", "False").replace("true", "True"))
-                name = config.get("ps", "Tanpa Nama").replace('"', '')
+                name = config.get("ps", "Tanpa Nama").replace('"', '')  # Menghapus tanda kutip
                 servername = config.get("host", "") or config.get("servername", "")
                 if servername and '#' in servername:
                     servername = servername.split('#')[0]
 
                 uuid = config.get("id")
                 host = config.get("host", "")
-                proxy_id = (uuid, host)
-                if proxy_id not in unique_vmess_ids:
+                proxy_id = (uuid, host)  # Kombinasi unik berdasarkan uuid dan host
+                if proxy_id not in unique_vmess_ids:  # Memeriksa keunikan
                     unique_vmess_ids.add(proxy_id)
                     proxies.append({
                         "name": name,
-                        "server": "104.22.5.240",
+                        "server": BUGCDN,
                         "port": int(config["port"]),
                         "type": "vmess",
                         "uuid": uuid,
@@ -128,12 +170,12 @@ def konversi_ke_clash(nodes):
                         "cipher": "auto",
                         "tls": True,
                         "skip-cert-verify": True,
-                        "servername": servername.replace('"', ''),
+                        "servername": servername.replace('"', ''),  # Menghapus tanda kutip
                         "network": config.get("net", "ws"),
                         "ws-opts": {
                             "path": config.get("path", "/vmess-ws"),
                             "headers": {
-                                "Host": servername.replace('"', '')
+                                "Host": servername.replace('"', '')  # Mengisi Host dengan servername
                             }
                         },
                         "udp": True
@@ -146,8 +188,8 @@ def konversi_ke_clash(nodes):
                 raw = node[9:]  
                 parts = raw.split('@')
                 credentials, server_info = parts
-                
                 server_details = server_info.split(':')
+                
                 port = int(server_details[1].split('?')[0])
                 query = server_details[1].split('?')[1] if '?' in server_details[1] else ''
                 params = {param.split('=')[0]: param.split('=')[1] for param in query.split('&') if '=' in param}
@@ -158,22 +200,22 @@ def konversi_ke_clash(nodes):
                 host = urllib.parse.unquote(host)
 
                 password = urllib.parse.unquote(credentials)
-                proxy_id = (password, host)
-                if proxy_id not in unique_trojan_ids:
+                proxy_id = (password, host)  # Kombinasi unik berdasarkan password dan host
+                if proxy_id not in unique_trojan_ids:  # Memeriksa keunikan
                     unique_trojan_ids.add(proxy_id)
                     proxies.append({
                         "name": node.split('#')[1].strip() if '#' in node else 'default_name',
-                        "server": "104.22.5.240",
+                        "server": BUGCDN,
                         "port": port,
                         "type": "trojan",
                         "password": password,
                         "skip-cert-verify": True,
-                        "sni": params.get('sni', host),
+                        "sni": params.get('sni', host),  # Mengisi SNI dengan host
                         "network": params.get('type') if 'type' in params and params['type'] == 'ws' else None,
                         "ws-opts": {
                             "path": urllib.parse.unquote(params.get('path', '')),
                             "headers": {
-                                "Host": host if host else params.get('sni', '')
+                                "Host": host if host else params.get('sni', '')  # Mengisi Host
                             }
                         },
                         "udp": True
@@ -184,10 +226,9 @@ def konversi_ke_clash(nodes):
     proxies_clash = {
         "proxies": proxies
     }
-    return yaml.dump(proxies_clash, allow_unicode=True, sort_keys=False).replace('"', '')
+    return yaml.dump(proxies_clash, allow_unicode=True, sort_keys=False).replace('"', '')  # Menghapus tanda kutip
 
 def main():
-    hapus_duplikat_dan_simpan()  # Hapus duplikat dan simpan
     nodes = ambil_langganan()
     filtered_nodes = saring_node(nodes)
     os.makedirs("proxies", exist_ok=True)
