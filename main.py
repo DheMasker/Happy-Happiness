@@ -6,7 +6,7 @@ import json
 import urllib.parse
 
 # Daftar sumber langganan
-SUB_LINKS = [
+SUB_LINKS = [ 
     "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
 ]
 
@@ -16,26 +16,39 @@ def ambil_langganan():
     semua_node = []
     for url in SUB_LINKS:
         try:
-            print(f"Mengambil langganan dari: {url}")
+            print(f"Mengambil langganan: {url}")
             res = requests.get(url, timeout=60)
-            res.raise_for_status()  # Cek apakah permintaan berhasil
             konten = res.text.strip()
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
 
+            # Mendecode dan menyimpan node
+            folder_path = "scbase64"
+            os.makedirs(folder_path, exist_ok=True)
+
+            base64_decoded_content = []
             for line in baris:
                 if line.startswith("vmess://") or line.startswith("trojan://"):
                     semua_node.append(line)
+                    base64_decoded_content.append(line)
                 else:
-                    # Coba decode baris jika tidak diawali dengan vmess atau trojan
                     try:
                         decoded_line = base64.b64decode(line + '===').decode('utf-8', errors='ignore')
                         if decoded_line.startswith("vmess://") or decoded_line.startswith("trojan://"):
                             semua_node.append(decoded_line)
+                            base64_decoded_content.append(decoded_line)
                     except Exception as e:
-                        print(f"⚠️ Gagal mendecode: {line} -> {e}")
+                        print(f"⚠️ Gagal mendecode baris: {line} -> {e}")
+
+            # Simpan hasil decode ke file
+            filename = url.split('/')[-1].replace('.txt', '') + '.txt'
+            file_path = os.path.join(folder_path, filename)
+            with open(file_path, "w", encoding="utf-8") as f:
+                for node in base64_decoded_content:
+                    f.write(node + "\n")
+            print(f"✅ Hasil decode disimpan di: {file_path}")
 
         except Exception as e:
-            print(f"❌ Kesalahan saat mengakses: {url} -> {e}")
+            print(f"❌ Kesalahan sumber langganan: {url} -> {e}")
     return semua_node
 
 def saring_node(nodes):
@@ -43,10 +56,11 @@ def saring_node(nodes):
     for node in nodes:
         if node.startswith("vmess://"):
             info = decode_node_info_base64(node)
-            if info and info.get("port") in {443, 80} and info.get("net") == "ws":
-                terfilter.append(node)
+            if info is not None and "path" in info and "host" in info and info["host"]:
+                if info.get("port") == 443 and info.get("net") == "ws":
+                    terfilter.append(node)
         elif node.startswith("trojan://"):
-            raw = node[9:]  # Menghapus 'trojan://'
+            raw = node[9:]  
             parts = raw.split('@')
             if len(parts) == 2:
                 server_info = parts[1]
@@ -55,7 +69,7 @@ def saring_node(nodes):
                     port = server_details[1].split('?')[0]
                     query = server_details[1].split('?')[1] if '?' in server_details[1] else ''
                     params = {param.split('=')[0]: param.split('=')[1] for param in query.split('&') if '=' in param}
-                    if port in {'443', '80'} and params.get('type') == 'ws':
+                    if port == '443' and params.get('type') == 'ws' and 'path' in params and 'host' in params and params['host']:
                         terfilter.append(node)
     return terfilter
 
@@ -76,30 +90,31 @@ def konversi_ke_clash(nodes):
             try:
                 vmess_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
                 config = json.loads(vmess_config.replace("false", "False").replace("true", "True"))
-                proxies.append({
-                    "name": config.get("ps", "Tanpa Nama"),
-                    "server": BUGCDN,
-                    "port": int(config["port"]),
-                    "type": "vmess",
-                    "uuid": config["id"],
-                    "alterId": int(config.get("aid", 0)),
-                    "cipher": "auto",
-                    "tls": True,
-                    "skip-cert-verify": True,
-                    "servername": config.get("host", ""),
-                    "network": config.get("net", "ws"),
-                    "ws-opts": {
-                        "path": config.get("path", "/vmess-ws"),
-                        "headers": {"Host": config.get("host", "")}
-                    },
-                    "udp": True
-                })
+                if "path" in config and "host" in config and config["host"]:
+                    proxies.append({
+                        "name": config.get("ps", "Tanpa Nama"),
+                        "server": BUGCDN,
+                        "port": int(config["port"]),
+                        "type": "vmess",
+                        "uuid": config["id"],
+                        "alterId": int(config.get("aid", 0)),
+                        "cipher": "auto",
+                        "tls": True,
+                        "skip-cert-verify": True,
+                        "servername": config.get("host", ""),
+                        "network": config.get("net") if config.get("net") == "ws" else None,
+                        "ws-opts": {
+                            "path": config.get("path", "/vmess-ws"),
+                            "headers": {"Host": config.get("host", "")}
+                        },
+                        "udp": True
+                    })
             except Exception as e:
                 print(f"⚠️ Gagal memparsing vmess: {e}")
         
         elif node.startswith("trojan://"):
             try:
-                raw = node[9:]  # Menghapus 'trojan://'
+                raw = node[9:]  
                 parts = raw.split('@')
                 credentials, server_info = parts
                 server_details = server_info.split(':')
@@ -127,7 +142,7 @@ def konversi_ke_clash(nodes):
                     path = path.split('#')[0]
                 path = path.replace('%2F', '/')
 
-                if port in {'443', '80'} and params.get('type') == 'ws':
+                if port == '443' and params.get('type') == 'ws' and path and host:
                     proxies.append({
                         "name": name,
                         "server": server,
@@ -136,7 +151,7 @@ def konversi_ke_clash(nodes):
                         "password": urllib.parse.unquote(credentials),
                         "skip-cert-verify": True,
                         "sni": sni,
-                        "network": params.get('type', 'ws'),
+                        "network": params.get('type') if 'type' in params and params['type'] == 'ws' else None,
                         "ws-opts": {
                             "path": path,
                             "headers": {
@@ -157,7 +172,7 @@ def main():
     nodes = ambil_langganan()
     filtered_nodes = saring_node(nodes)
     os.makedirs("proxies", exist_ok=True)
-    with open("proxies/proxy_combined.yaml", "w", encoding="utf-8") as f:
+    with open("proxies/vmesstrojanwscdn443.yaml", "w", encoding="utf-8") as f:
         f.write(konversi_ke_clash(filtered_nodes))
 
 if __name__ == "__main__":
