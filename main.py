@@ -20,10 +20,10 @@ def saring_proxies(data):
     terfilter = []
     if 'proxies' in data:
         for proxy in data['proxies']:
-            # Cek apakah 'alterId' diawali dengan '-'
-            if 'alterId' in proxy and proxy['alterId'].startswith('-'):
+            # Cek apakah 'alterId' ada dan diawali dengan '-'
+            if 'alterId' in proxy and isinstance(proxy['alterId'], str) and proxy['alterId'].startswith('-'):
                 # Tukar nilai name dan alterId
-                proxy['name'], proxy['alterId'] = proxy['alterId'], proxy['name']
+                proxy['name'], proxy['alterId'] = proxy['alterId'][1:], proxy['name']  # Hapus tanda minus dari alterId
             terfilter.append(proxy)
     return terfilter
 
