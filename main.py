@@ -82,8 +82,21 @@ def ambil_langganan():
             print(f"Mengambil langganan: {url}")
             res = requests.get(url, timeout=60)
             konten = res.text.strip()
+            
+            # Mencoba mendekode konten dan menangani karakter non-ASCII
+            try:
+                # Menggunakan utf-8 decoding yang lebih toleran
+                konten = konten.encode('utf-8').decode('utf-8', errors='ignore')
+            except Exception as e:
+                print(f"⚠️ Kesalahan saat mendekode konten: {e}")
+
             if not konten.startswith(("vmess://", "trojan://")):
-                konten = base64.b64decode(konten + '===').decode('utf-8', errors='ignore')
+                try:
+                    konten = base64.b64decode(konten + '===').decode('utf-8', errors='ignore')
+                except Exception as e:
+                    print(f"⚠️ Kesalahan saat mendekode base64: {e}")
+                    continue  # Lanjutkan ke iterasi berikutnya jika ada kesalahan
+
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
             semua_node.extend(baris)
         except Exception as e:
