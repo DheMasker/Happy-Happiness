@@ -17,14 +17,14 @@ def ambil_langganan():
     for url in SUB_LINKS:
         try:
             print(f"Mengambil langganan: {url}")
-            res = requests.get(url, timeout=60)
+            res = requests.get(url, timeout=30)  # Mengurangi timeout menjadi 30 detik
             print(f"Status Code: {res.status_code}")  # Menampilkan status kode
             if res.status_code != 200:
                 print(f"❌ Kesalahan: Tidak dapat mengakses URL, status kode: {res.status_code}")
                 continue  # Lewati ke URL berikutnya jika tidak berhasil
 
             konten = res.text.strip()
-            print(f"Konten: {konten}")  # Menampilkan seluruh konten
+            print(f"Konten (500 karakter pertama): {konten[:500]}")  # Menampilkan 500 karakter pertama dari konten
             
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
 
