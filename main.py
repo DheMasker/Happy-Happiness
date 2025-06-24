@@ -22,10 +22,20 @@ def ambil_langganan():
             print(f"Mengambil langganan: {url}")
             res = requests.get(url, timeout=60)
             konten = res.text.strip()
+            # Memproses konten jika tidak dimulai dengan vmess atau trojan
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
 
             for line in baris:
                 line = filter_non_ascii(line)  # Filter karakter non-ASCII
+                
+                # Jika baris tidak dimulai dengan vmess atau trojan, kita coba decode base64
+                if not (line.startswith("vmess://") or line.startswith("trojan://")):
+                    try:
+                        line = base64.b64decode(line + '==').decode('utf-8', errors='ignore')
+                    except Exception as e:
+                        print(f"⚠️ Gagal mendecode base64: {e}")
+                        continue
+                
                 if line.startswith("vmess://") or line.startswith("trojan://"):
                     semua_node.append(line)
 
@@ -108,7 +118,7 @@ def konversi_ke_clash(nodes):
                 parts = raw.split('@')
                 credentials, server_info = parts
                 server_details = server_info.split(':')
-                
+
                 server = BUGCDN
                 port = server_details[1].split('?')[0]
                 query = server_details[1].split('?')[1] if '?' in server_details[1] else ''
