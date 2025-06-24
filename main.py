@@ -1,7 +1,3 @@
-## vmess
-
-
-
 import base64
 import requests
 import yaml
@@ -10,29 +6,7 @@ import json  # Menggunakan json untuk decode
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
-   
-"https://raw.githubusercontent.com/Surfboardv2ray/Proxy-sorter/refs/heads/main/input/proxies.txt",
-
-"https://raw.githubusercontent.com/4n0nymou3/multi-proxy-config-fetcher/refs/heads/main/configs/proxy_configs.txt",
-
-"https://raw.githubusercontent.com/PlanAsli/configs-collector-v2ray/refs/heads/main/sub/all_configs.txt",
-
-"https://raw.githubusercontent.com/V2RayRoot/V2RayConfig/refs/heads/main/Config/vmess.txt",
-
-"https://raw.githubusercontent.com/gfpcom/free-proxy-list/refs/heads/main/list/trojan.txt",
-
-"https://raw.githubusercontent.com/gfpcom/free-proxy-list/refs/heads/main/list/vmess.txt",
-
-"https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/refs/heads/main/subscriptions/v2ray/all_sub.txt",
-
-"https://raw.githubusercontent.com/wuqb2i4f/xray-config-toolkit/refs/heads/main/output/base64/mix-uri",
-
-"https://raw.githubusercontent.com/T3stAcc/V2Ray/refs/heads/main/All_Configs_Sub.txt",
-
-"https://raw.githubusercontent.com/Surfboardv2ray/v2ray-worker-sub/refs/heads/master/providers/providers",
-
-"https://raw.githubusercontent.com/MhdiTaheri/V2rayCollector/refs/heads/main/sub/mix",
-"https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/V2RAY_SUB/refs/heads/main/v2ray_configs.txt"
+    "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
 ]
 
 BUGCDN = "104.22.5.240"
@@ -68,6 +42,10 @@ def decode_node_info_base64(node):
             raw = node[8:]
             decoded = base64.b64decode(raw + '===').decode('utf-8', errors='ignore')
             return json.loads(decoded.replace("false", "False").replace("true", "True"))
+        elif node.startswith("trojan://"):
+            raw = node[8:]
+            decoded = base64.b64decode(raw + '===').decode('utf-8', errors='ignore')
+            return json.loads(decoded.replace("false", "False").replace("true", "True"))
     except Exception as e:
         print(f"⚠️ Gagal mendecode node: {e}")
         return None
@@ -81,14 +59,14 @@ def konversi_ke_clash(nodes):
                 vmess_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
                 config = json.loads(vmess_config.replace("false", "False").replace("true", "True"))
                 proxies.append({
-                    "name": config.get("ps", "Tanpa Nama"),  # Memastikan 'name' di atas
-                    "server": BUGCDN,  # Menggunakan BUGCDN
+                    "name": config.get("ps", "Tanpa Nama"),
+                    "server": BUGCDN,
                     "port": int(config["port"]),
                     "type": "vmess",
                     "uuid": config["id"],
                     "alterId": int(config.get("aid", 0)),
                     "cipher": "auto",
-                    "tls": True,  # Mengatur tls menjadi True
+                    "tls": True,
                     "skip-cert-verify": True,
                     "servername": config.get("host", ""),
                     "network": config.get("net", "ws"),
@@ -101,10 +79,32 @@ def konversi_ke_clash(nodes):
             except Exception as e:
                 print(f"⚠️ Gagal memparsing vmess: {e}")
 
+        elif node.startswith("trojan://"):  # Proses node Trojan
+            try:
+                trojan_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
+                trojan_info = json.loads(trojan_config.replace("false", "False").replace("true", "True"))
+                proxies.append({
+                    "name": trojan_info.get("ps", "Tanpa Nama"),
+                    "server": trojan_info["add"],
+                    "port": int(trojan_info["port"]),
+                    "type": "trojan",
+                    "password": trojan_info.get("psk", ""),  # Mengambil password dari trojan_info
+                    "skip-cert-verify": True,
+                    "sni": trojan_info.get("sni", ""),
+                    "network": trojan_info.get("net", "ws"),  # Ambil network dari trojan_info
+                    "ws-opts": {
+                        "path": trojan_info.get("path", "/trojan-hup"),  # Ambil path dari trojan_info
+                        "headers": {"Host": trojan_info.get("host", "")}
+                    },
+                    "udp": True
+                })
+            except Exception as e:
+                print(f"⚠️ Gagal memparsing trojan: {e}")
+
     proxies_clash = {
         "proxies": proxies
     }
-    return yaml.dump(proxies_clash, allow_unicode=True, sort_keys=False)  # Menonaktifkan penyortiran kunci
+    return yaml.dump(proxies_clash, allow_unicode=True, sort_keys=False)
 
 def main():
     nodes = ambil_langganan()
@@ -112,5 +112,6 @@ def main():
     os.makedirs("proxies", exist_ok=True)
     with open("proxies/vmesswscdn443and80.yaml", "w", encoding="utf-8") as f:
         f.write(konversi_ke_clash(filtered_nodes))
+
 if __name__ == "__main__":
     main()
