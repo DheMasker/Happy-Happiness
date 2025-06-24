@@ -102,8 +102,8 @@ def saring_node(nodes):
                     if not servername:
                         servername = info.get("servername", "").split('#')[0]
                     
-                    # Hanya tambahkan jika ada nilai di host atau servername
-                    if servername or info.get("host"):
+                    # Hanya tambahkan jika ada nilai di host, servername, dan path
+                    if (servername or info.get("host")) and info.get("path"):
                         terfilter.append(node)
 
         elif node.startswith("trojan://"):
@@ -124,8 +124,8 @@ def saring_node(nodes):
                     if not host:
                         host = params.get('sni', '').split('#')[0]
 
-                    # Hanya tambahkan jika ada nilai di host atau sni
-                    if port == '443' and params.get('type') == 'ws' and (host or params.get('sni')):
+                    # Hanya tambahkan jika ada nilai di host atau sni dan path
+                    if port == '443' and params.get('type') == 'ws' and (host or params.get('sni')) and params.get('path'):
                         terfilter.append(node)
     return terfilter
 
@@ -205,7 +205,7 @@ def konversi_ke_clash(nodes):
                     path = path.split('#')[0]
                 path = path.replace('%2F', '/')
 
-                # Hanya tambahkan jika ada nilai di host atau sni
+                # Hanya tambahkan jika ada nilai di host atau sni dan path
                 if port == '443' and params.get('type') == 'ws' and path and (host or sni):
                     proxies.append({
                         "name": name,  # Nama tanpa tanda kutip
