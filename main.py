@@ -20,11 +20,10 @@ def saring_proxies(data):
     terfilter = []
     if 'proxies' in data:
         for proxy in data['proxies']:
-            if proxy.get('type') in ['vmess', 'trojan']:
-                # Tukar posisi alterId dan name
-                if 'alterId' in proxy and 'name' in proxy:
-                    proxy['alterId'], proxy['name'] = proxy['name'], proxy['alterId']
-                terfilter.append(proxy)
+            # Menukarkan posisi alterId dan name
+            if 'alterId' in proxy and 'name' in proxy:
+                proxy['name'], proxy['alterId'] = proxy['alterId'], proxy['name']  # Tukar posisi
+            terfilter.append(proxy)
     return terfilter
 
 def main():
