@@ -22,20 +22,23 @@ def ambil_langganan():
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
 
             for line in baris:
+                # Langsung cek jika baris mulai dengan vmess:// atau trojan://
                 if line.startswith("vmess://") or line.startswith("trojan://"):
                     semua_node.append(line)
                 else:
                     # Coba decode jika konten adalah base64
                     try:
                         decoded_line = base64.b64decode(line + '===').decode('utf-8', errors='ignore')
+                        print(f"Decoded line: {decoded_line}")  # Debugging
                         if decoded_line.startswith("vmess://") or decoded_line.startswith("trojan://"):
                             semua_node.append(decoded_line)
                     except Exception as e:
                         print(f"⚠️ Gagal mendecode baris: {line} -> {e}")
 
-                # Memproses string base64 yang tidak langsung dikenali
+                # Memproses setiap baris tanpa syarat awalan
                 try:
                     decoded_base64 = base64.b64decode(line + '===').decode('utf-8', errors='ignore')
+                    print(f"Decoded base64: {decoded_base64}")  # Debugging
                     if decoded_base64.startswith("vmess://") or decoded_base64.startswith("trojan://"):
                         semua_node.append(decoded_base64)
                 except Exception as e:
@@ -166,8 +169,14 @@ def main():
     nodes = ambil_langganan()
     filtered_nodes = saring_node(nodes)
     os.makedirs("proxies", exist_ok=True)
-    with open("proxies/vmesstrojanwscdn443.yaml", "w", encoding="utf-8") as f:
-        f.write(konversi_ke_clash(filtered_nodes))
+    
+    # Simpan setiap node yang diproses ke dalam file terpisah di folder proxies
+    for index, node in enumerate(filtered_nodes):
+        filename = f"proxies/proxy_{index + 1}.yaml"
+        with open(filename, "w", encoding="utf-8") as f:
+            f.write(konversi_ke_clash([node]))  # Simpan satu node per file
+
+    print("Proses selesai! Semua proxy disimpan di folder 'proxies'.")
 
 if __name__ == "__main__":
     main()
