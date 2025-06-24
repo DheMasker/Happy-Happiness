@@ -6,7 +6,7 @@ import json
 import urllib.parse
 
 # Daftar sumber langganan
-SUB_LINKS = [ 
+SUB_LINKS = [
     "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
 ]
 
@@ -16,26 +16,26 @@ def ambil_langganan():
     semua_node = []
     for url in SUB_LINKS:
         try:
-            print(f"Mengambil langganan: {url}")
+            print(f"Mengambil langganan dari: {url}")
             res = requests.get(url, timeout=60)
+            res.raise_for_status()  # Cek apakah permintaan berhasil
             konten = res.text.strip()
-            # Memproses konten baik vmess maupun trojan
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
 
             for line in baris:
                 if line.startswith("vmess://") or line.startswith("trojan://"):
                     semua_node.append(line)
                 else:
-                    # Coba decode jika konten adalah base64
+                    # Coba decode baris jika tidak diawali dengan vmess atau trojan
                     try:
                         decoded_line = base64.b64decode(line + '===').decode('utf-8', errors='ignore')
                         if decoded_line.startswith("vmess://") or decoded_line.startswith("trojan://"):
                             semua_node.append(decoded_line)
                     except Exception as e:
-                        print(f"⚠️ Gagal mendecode baris: {line} -> {e}")
+                        print(f"⚠️ Gagal mendecode: {line} -> {e}")
 
         except Exception as e:
-            print(f"❌ Kesalahan sumber langganan: {url} -> {e}")
+            print(f"❌ Kesalahan saat mengakses: {url} -> {e}")
     return semua_node
 
 def saring_node(nodes):
@@ -43,10 +43,9 @@ def saring_node(nodes):
     for node in nodes:
         if node.startswith("vmess://"):
             info = decode_node_info_base64(node)
-            if info is not None and (info.get("port") in {443, 80} and info.get("net") == "ws"):
+            if info and info.get("port") in {443, 80} and info.get("net") == "ws":
                 terfilter.append(node)
         elif node.startswith("trojan://"):
-            # Memfilter node Trojan berdasarkan port dan tipe
             raw = node[9:]  # Menghapus 'trojan://'
             parts = raw.split('@')
             if len(parts) == 2:
@@ -72,7 +71,6 @@ def decode_node_info_base64(node):
 
 def konversi_ke_clash(nodes):
     proxies = []
-
     for node in nodes:
         if node.startswith("vmess://"):
             try:
@@ -129,7 +127,7 @@ def konversi_ke_clash(nodes):
                     path = path.split('#')[0]
                 path = path.replace('%2F', '/')
 
-                if port in ['443', '80'] and params.get('type') == 'ws':
+                if port in {'443', '80'} and params.get('type') == 'ws':
                     proxies.append({
                         "name": name,
                         "server": server,
