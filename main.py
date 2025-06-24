@@ -14,38 +14,37 @@ BUGCDN = "104.22.5.240"
 
 def ambil_langganan():
     semua_node = []
+    log_messages = []  # Untuk menyimpan log
+
     for url in SUB_LINKS:
         try:
-            print(f"Mengambil langganan: {url}")
+            log_messages.append(f"Mengambil langganan: {url}")
             res = requests.get(url, timeout=60)
             konten = res.text.strip()
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
 
             for line in baris:
-                # Langsung cek jika baris mulai dengan vmess:// atau trojan://
                 if line.startswith("vmess://") or line.startswith("trojan://"):
                     semua_node.append(line)
                 else:
-                    # Coba decode jika konten adalah base64
                     try:
                         decoded_line = base64.b64decode(line + '===').decode('utf-8', errors='ignore')
-                        print(f"Decoded line: {decoded_line}")  # Debugging
                         if decoded_line.startswith("vmess://") or decoded_line.startswith("trojan://"):
                             semua_node.append(decoded_line)
                     except Exception as e:
-                        print(f"⚠️ Gagal mendecode baris: {line} -> {e}")
-
-                # Memproses setiap baris tanpa syarat awalan
-                try:
-                    decoded_base64 = base64.b64decode(line + '===').decode('utf-8', errors='ignore')
-                    print(f"Decoded base64: {decoded_base64}")  # Debugging
-                    if decoded_base64.startswith("vmess://") or decoded_base64.startswith("trojan://"):
-                        semua_node.append(decoded_base64)
-                except Exception as e:
-                    print(f"⚠️ Gagal mendecode base64: {line} -> {e}")
+                        error_message = f"⚠️ Gagal mendecode baris: {line} -> {e}"
+                        log_messages.append(error_message)
 
         except Exception as e:
-            print(f"❌ Kesalahan sumber langganan: {url} -> {e}")
+            error_message = f"❌ Kesalahan sumber langganan: {url} -> {e}"
+            log_messages.append(error_message)
+
+    # Simpan log ke file
+    os.makedirs("proxies", exist_ok=True)  # Buat folder proxies jika belum ada
+    with open("proxies/log.txt", "w", encoding="utf-8") as log_file:
+        for message in log_messages:
+            log_file.write(message + "\n")
+
     return semua_node
 
 def saring_node(nodes):
@@ -77,7 +76,6 @@ def decode_node_info_base64(node):
             decoded = base64.b64decode(raw + '===').decode('utf-8', errors='ignore')
             return json.loads(decoded.replace("false", "False").replace("true", "True"))
     except Exception as e:
-        print(f"⚠️ Gagal mendecode node: {e}")
         return None
 
 def konversi_ke_clash(nodes):
@@ -107,7 +105,7 @@ def konversi_ke_clash(nodes):
                         "udp": True
                     })
             except Exception as e:
-                print(f"⚠️ Gagal memparsing vmess: {e}")
+                continue
         
         elif node.startswith("trojan://"):
             try:
@@ -122,23 +120,10 @@ def konversi_ke_clash(nodes):
                 params = {param.split('=')[0]: param.split('=')[1] for param in query.split('&') if '=' in param}
 
                 name = node.split('#')[1].strip() if '#' in node else 'default_name'
-                name = urllib.parse.unquote(name)
 
                 host = params.get('host', '')
-                if '#' in host:
-                    host = host.split('#')[0]
-                host = urllib.parse.unquote(host)
-
-                sni = params.get('sni', '')
-                if '#' in sni:
-                    sni = sni.split('#')[0]
-                sni = urllib.parse.unquote(sni)
-
                 path = urllib.parse.unquote(params.get('path', ''))
-                if '#' in path:
-                    path = path.split('#')[0]
-                path = path.replace('%2F', '/')
-
+                
                 if port == '443' and params.get('type') == 'ws' and path and host:
                     proxies.append({
                         "name": name,
@@ -147,7 +132,6 @@ def konversi_ke_clash(nodes):
                         "type": "trojan",
                         "password": urllib.parse.unquote(credentials),
                         "skip-cert-verify": True,
-                        "sni": sni,
                         "network": params.get('type') if 'type' in params and params['type'] == 'ws' else None,
                         "ws-opts": {
                             "path": path,
@@ -158,7 +142,7 @@ def konversi_ke_clash(nodes):
                         "udp": True
                     })
             except Exception as e:
-                print(f"⚠️ Gagal memparsing trojan: {e}")
+                continue
 
     proxies_clash = {
         "proxies": proxies
@@ -170,12 +154,10 @@ def main():
     filtered_nodes = saring_node(nodes)
     os.makedirs("proxies", exist_ok=True)
     
-    # Simpan setiap node yang diproses ke dalam file terpisah di folder proxies
-    for index, node in enumerate(filtered_nodes):
-        filename = f"proxies/proxy_{index + 1}.yaml"
-        with open(filename, "w", encoding="utf-8") as f:
-            f.write(konversi_ke_clash([node]))  # Simpan satu node per file
-
+    # Simpan semua node ke dalam satu file
+    with open("proxies/all_proxies.yaml", "w", encoding="utf-8") as f:
+        f.write(konversi_ke_clash(filtered_nodes))
+    
     print("Proses selesai! Semua proxy disimpan di folder 'proxies'.")
 
 if __name__ == "__main__":
