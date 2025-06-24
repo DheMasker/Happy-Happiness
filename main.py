@@ -19,15 +19,10 @@ def ambil_langganan():
             print(f"Mengambil langganan: {url}")
             res = requests.get(url, timeout=60)
             konten = res.text.strip()
-            print(f"Konten yang diambil:\n{konten}\n")  # Menampilkan konten yang diambil
-            
-            # Mendecode konten jika tidak dimulai dengan "vmess://"
-            if not konten.startswith("vmess://"):
+            if not konten.startswith(("vmess://", "trojan://")):
                 konten = base64.b64decode(konten + '===').decode('utf-8', errors='ignore')
-                
             baris = [line.strip() for line in konten.splitlines() if line.strip()]
-            semua_node.extend(baris)  # Menambahkan semua baris yang telah diproses
-            
+            semua_node.extend(baris)
         except Exception as e:
             print(f"❌ Kesalahan sumber langganan: {url} -> {e}")
     return semua_node
@@ -37,8 +32,8 @@ def saring_node(nodes):
     for node in nodes:
         if node.startswith("vmess://"):
             info = decode_node_info_base64(node)
-            if info is not None and "path" in info and "host" in info and info["host"]:
-                if info.get("port") == 443 and info.get("net") == "ws":
+            if info is not None:
+                if info.get("port") in {443, 80} and info.get("net") == "ws":
                     terfilter.append(node)
         elif node.startswith("trojan://"):
             raw = node[9:]  
@@ -66,6 +61,7 @@ def decode_node_info_base64(node):
 
 def konversi_ke_clash(nodes):
     proxies = []
+
     for node in nodes:
         if node.startswith("vmess://"):
             try:
