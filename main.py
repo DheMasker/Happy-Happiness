@@ -7,7 +7,8 @@ import urllib.parse
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
-    "https://raw.githubusercontent.com/Surfboardv2ray/Proxy-sorter/refs/heads/main/input/proxies.txt",
+   
+"https://raw.githubusercontent.com/Surfboardv2ray/Proxy-sorter/refs/heads/main/input/proxies.txt",
 
 "https://raw.githubusercontent.com/4n0nymou3/multi-proxy-config-fetcher/refs/heads/main/configs/proxy_configs.txt",
 
@@ -28,7 +29,7 @@ SUB_LINKS = [
 "https://raw.githubusercontent.com/Surfboardv2ray/v2ray-worker-sub/refs/heads/master/providers/providers",
 
 "https://raw.githubusercontent.com/MhdiTaheri/V2rayCollector/refs/heads/main/sub/mix",
-    "https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/V2RAY_SUB/refs/heads/main/v2ray_configs.txt"
+"https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/V2RAY_SUB/refs/heads/main/v2ray_configs.txt"
 ]
 
 BUGCDN = "104.22.5.240"
@@ -63,7 +64,7 @@ def saring_node(nodes):
     for node in nodes:
         if node.startswith("vmess://"):
             info = decode_node_info_base64(node)
-            if info is not None:
+            if info is not None and "path" in info:
                 if info.get("port") == 443 and info.get("net") == "ws":
                     terfilter.append(node)
         elif node.startswith("trojan://"):
@@ -76,7 +77,7 @@ def saring_node(nodes):
                     port = server_details[1].split('?')[0]
                     query = server_details[1].split('?')[1] if '?' in server_details[1] else ''
                     params = {param.split('=')[0]: param.split('=')[1] for param in query.split('&') if '=' in param}
-                    if port == '443' and params.get('type') == 'ws':
+                    if port == '443' and params.get('type') == 'ws' and 'path' in params:
                         terfilter.append(node)
     return terfilter
 
@@ -97,24 +98,25 @@ def konversi_ke_clash(nodes):
             try:
                 vmess_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
                 config = json.loads(vmess_config.replace("false", "False").replace("true", "True"))
-                proxies.append({
-                    "name": config.get("ps", "Tanpa Nama"),
-                    "server": BUGCDN,
-                    "port": int(config["port"]),
-                    "type": "vmess",
-                    "uuid": config["id"],
-                    "alterId": int(config.get("aid", 0)),
-                    "cipher": "auto",
-                    "tls": True,
-                    "skip-cert-verify": True,
-                    "servername": config.get("host", ""),
-                    "network": config.get("net") if config.get("net") == "ws" else None,
-                    "ws-opts": {
-                        "path": config.get("path", "/vmess-ws"),
-                        "headers": {"Host": config.get("host", "")}
-                    },
-                    "udp": True
-                })
+                if "path" in config:
+                    proxies.append({
+                        "name": config.get("ps", "Tanpa Nama"),
+                        "server": BUGCDN,
+                        "port": int(config["port"]),
+                        "type": "vmess",
+                        "uuid": config["id"],
+                        "alterId": int(config.get("aid", 0)),
+                        "cipher": "auto",
+                        "tls": True,
+                        "skip-cert-verify": True,
+                        "servername": config.get("host", ""),
+                        "network": config.get("net") if config.get("net") == "ws" else None,
+                        "ws-opts": {
+                            "path": config.get("path", "/vmess-ws"),
+                            "headers": {"Host": config.get("host", "")}
+                        },
+                        "udp": True
+                    })
             except Exception as e:
                 print(f"⚠️ Gagal memparsing vmess: {e}")
         
@@ -148,7 +150,7 @@ def konversi_ke_clash(nodes):
                     path = path.split('#')[0]
                 path = path.replace('%2F', '/')
 
-                if port == '443' and params.get('type') == 'ws':
+                if port == '443' and params.get('type') == 'ws' and path:
                     proxies.append({
                         "name": name,
                         "server": server,
