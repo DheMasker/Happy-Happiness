@@ -8,7 +8,7 @@ import urllib.parse
 # Daftar sumber langganan
 SUB_LINKS = [ 
    
-"https://raw.githubusercontent.com/mheidari98/.proxy/refs/heads/main/all"
+"https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
 ]
 
 BUGCDN = "104.22.5.240"
