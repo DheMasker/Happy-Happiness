@@ -95,10 +95,13 @@ def saring_node(nodes):
     for node in nodes:
         if node.startswith("vmess://"):
             info = decode_node_info_base64(node)
-            # Pastikan ada host, path, dan servername
-            if info is not None and "path" in info and "host" in info and info["host"]:
-                if info.get("port") in {443, 80} and info.get("net") == "ws":
-                    terfilter.append(node)
+            # Pastikan hanya memproses yang memiliki network ws, port 443, nama, dan path
+            if (info is not None and 
+                info.get("net") == "ws" and 
+                info.get("port") == 443 and 
+                "ps" in info and info["ps"] and 
+                "path" in info and info["path"]):
+                terfilter.append(node)
         elif node.startswith("trojan://"):
             raw = node[9:]  
             parts = raw.split('@')
@@ -110,8 +113,11 @@ def saring_node(nodes):
                     query = server_details[1].split('?')[1] if '?' in server_details[1] else ''
                     params = {param.split('=')[0]: param.split('=')[1] for param in query.split('&') if '=' in param}
                     
-                    # Hanya tambahkan jika ada host dan path
-                    if port == '443' and params.get('type') == 'ws' and 'path' in params and 'host' in params and params['host']:
+                    # Hanya tambahkan jika ada type ws, port 443, nama, dan path
+                    if (port == '443' and 
+                        params.get('type') == 'ws' and 
+                        "path" in params and params["path"] and 
+                        "name" in parts[0] and parts[0].split('#')[0].strip()):
                         terfilter.append(node)
     return terfilter
 
@@ -133,16 +139,18 @@ def konversi_ke_clash(nodes):
             try:
                 vmess_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
                 config = json.loads(vmess_config.replace("false", "False").replace("true", "True"))
-                
+
                 # Menghapus karakter # dan setelahnya dari host dan servername
                 host = config.get("host", "").split('#')[0].strip()
-                servername = config.get("servername", "").split('#')[0].strip()  # Menggunakan servername dari config
+                servername = config.get("servername", "").split('#')[0].strip()
 
-                # Jika salah satu kosong, isikan dari yang ada
+                # Mengisi servername atau host jika salah satu kosong
                 if not servername and host:
                     servername = host
+                if not host and servername:
+                    host = servername
 
-                if host and config.get("path"):
+                if config.get("path"):
                     proxies.append({
                         "name": config.get("ps", "Tanpa Nama").replace('"', '').split('#')[0].strip(),  # Menghapus tanda kutip dan # dari nama
                         "server": BUGCDN,
@@ -172,21 +180,23 @@ def konversi_ke_clash(nodes):
                 parts = raw.split('@')
                 credentials, server_info = parts
                 server_details = server_info.split(':')
-                
+
                 server = BUGCDN
                 port = server_details[1].split('?')[0]
                 query = server_details[1].split('?')[1] if '?' in server_details[1] else ''
                 params = {param.split('=')[0]: param.split('=')[1] for param in query.split('&') if '=' in param}
 
-                name = node.split('#')[1].strip() if '#' in node else 'default_name'
-                name = urllib.parse.unquote(name).replace('"', '').split('#')[0].strip()  # Menghapus tanda kutip dan # dari nama
+                name = parts[0].split('#')[0].strip() if '#' in parts[0] else parts[0].strip()
+                name = urllib.parse.unquote(name).replace('"', '').strip()  # Menghapus tanda kutip dan # dari nama
 
                 host = params.get('host', '').split('#')[0].strip()
                 sni = params.get('sni', '').split('#')[0].strip()
 
-                # Jika salah satu kosong, isikan dari yang ada
+                # Mengisi sni atau host jika salah satu kosong
                 if not sni and host:
                     sni = host
+                if not host and sni:
+                    host = sni
 
                 path = urllib.parse.unquote(params.get('path', ''))
 
