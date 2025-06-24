@@ -1,3 +1,5 @@
+#vmess trojan sub bukan base4
+
 import base64
 import requests
 import yaml
@@ -7,7 +9,8 @@ import urllib.parse
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
-    "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
+   
+"https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt"
 ]
 
 BUGCDN = "104.22.5.240"
@@ -100,7 +103,7 @@ def konversi_ke_clash(nodes):
         
         elif node.startswith("trojan://"):
             try:
-                raw = node[9:]  
+                raw = node[10:]  
                 parts = raw.split('@')
                 credentials, server_info = parts
                 server_details = server_info.split(':')
