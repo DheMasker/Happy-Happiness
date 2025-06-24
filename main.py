@@ -104,7 +104,7 @@ def konversi_ke_clash(nodes):
                 server_details = server_info.split(':')
                 
                 server = BUGCDN
-                port = server_details[1].split('?')[0]
+                port = int(server_details[1].split('?')[0])
                 query = server_details[1].split('?')[1] if '?' in server_details[1] else ''
                 params = {param.split('=')[0]: param.split('=')[1] for param in query.split('&') if '=' in param}
 
@@ -112,32 +112,19 @@ def konversi_ke_clash(nodes):
                 name = urllib.parse.unquote(name)
 
                 host = params.get('host', '')
-                if '#' in host:
-                    host = host.split('#')[0]
                 host = urllib.parse.unquote(host)
 
-                sni = params.get('sni', '')
-                if '#' in sni:
-                    sni = sni.split('#')[0]
-                sni = urllib.parse.unquote(sni)
-
-                path = urllib.parse.unquote(params.get('path', ''))
-                if '#' in path:
-                    path = path.split('#')[0]
-                path = path.replace('%2F', '/')
-
-                if port == '443' and params.get('type') == 'ws' and path and host:
+                if port == 443 and params.get('type') == 'ws':
                     proxies.append({
                         "name": name,
                         "server": server,
-                        "port": int(port),
+                        "port": port,
                         "type": "trojan",
                         "password": urllib.parse.unquote(credentials),
                         "skip-cert-verify": True,
-                        "sni": sni,
-                        "network": params.get('type') if 'type' in params and params['type'] == 'ws' else None,
+                        "network": params.get('type'),
                         "ws-opts": {
-                            "path": path,
+                            "path": params.get('path', '/'),
                             "headers": {
                                 "Host": host
                             }
