@@ -253,7 +253,7 @@ def main():
     nodes = ambil_langganan()
     filtered_nodes = saring_node(nodes)
     os.makedirs("proxies", exist_ok=True)
-    with open("proxies/vmesstrojanwscdn443.yaml", "w", encoding="utf-8") as f:
+    with open("proxies/frombasewscdn443.yaml", "w", encoding="utf-8") as f:
         f.write(konversi_ke_clash(filtered_nodes))
 
 if __name__ == "__main__":
