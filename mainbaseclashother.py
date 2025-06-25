@@ -17,19 +17,22 @@ proxies1 = yaml.safe_load(data1)
 proxies2 = yaml.safe_load(data2)
 
 # Gabungkan kedua list proxy
-combined_proxies = proxies1 + proxies2
+combined_proxies = proxies1['proxies'] + proxies2['proxies']
 
-# Menghapus duplikat
-unique_proxies = []
-seen = set()
-
+# Menghapus duplikat berdasarkan type, uuid (untuk vmess) dan password (untuk trojan)
+unique_proxies = {}
 for proxy in combined_proxies:
-    # Gunakan string representasi dari proxy untuk menghindari duplikat
-    proxy_key = (proxy['type'], proxy.get('password'), proxy.get('uuid'))
-    if proxy_key not in seen:
-        seen.add(proxy_key)
-        unique_proxies.append(proxy)
+    proxy_type = proxy.get('type')
+    if proxy_type == 'vmess':
+        key = (proxy_type, proxy.get('uuid'), proxy.get('ws-opts', {}).get('headers', {}).get('Host'))
+    elif proxy_type == 'trojan':
+        key = (proxy_type, proxy.get('password'), proxy.get('ws-opts', {}).get('headers', {}).get('Host'))
+    else:
+        continue  # Jika tipe tidak dikenali, lewati
+
+    if key not in unique_proxies:
+        unique_proxies[key] = proxy
 
 # Simpan hasil ke file baru di folder proxies
 with open('proxies/vmesstrojanwscdn443.yaml', 'w') as f:
-    yaml.dump(unique_proxies, f)
+    yaml.dump({'proxies': list(unique_proxies.values())}, f)
