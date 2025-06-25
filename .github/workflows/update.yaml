@@ -22,7 +22,7 @@ jobs:
         run: pip install requests pyyaml
 
       - name: Run first Python script
-        run: python3 mainbas64other.py
+        run: python3 mainbaseother.py
 
       - name: Run second Python script
         run: python3 mainclashother.py
