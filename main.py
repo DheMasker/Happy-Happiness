@@ -7,16 +7,15 @@ BUGCDN = "104.22.5.240"
 
 # Daftar sumber langganan
 SUB_LINKS = [
-        "https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/collected-proxies/clash-meta/all.yaml",
-        "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.yml",
-        "https://raw.githubusercontent.com/WilliamStar007/ClashX-V2Ray-TopFreeProxy/main/combine/clash.config.yaml",
-        "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/Eternity.yml",
-        "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/snippets/nodes.yml",
-        "https://raw.githubusercontent.com/Airuop/cross/master/Eternity.yml",
-        "https://raw.githubusercontent.com/tbbatbb/Proxy/master/dist/clash.config.yaml",
-        "https://raw.githubusercontent.com/busymilk/clash_config_auto_build/main/config/config.yaml",
-        "https://raw.githubusercontent.com/PuddinCat/BestClash/refs/heads/main/proxies.yaml",
-
+    "https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/collected-proxies/clash-meta/all.yaml",
+    "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.yml",
+    "https://raw.githubusercontent.com/WilliamStar007/ClashX-V2Ray-TopFreeProxy/main/combine/clash.config.yaml",
+    "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/Eternity.yml",
+    "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/snippets/nodes.yml",
+    "https://raw.githubusercontent.com/Airuop/cross/master/Eternity.yml",
+    "https://raw.githubusercontent.com/tbbatbb/Proxy/master/dist/clash.config.yaml",
+    "https://raw.githubusercontent.com/busymilk/clash_config_auto_build/main/config/config.yaml",
+    "https://raw.githubusercontent.com/PuddinCat/BestClash/refs/heads/main/proxies.yaml",
     "https://raw.githubusercontent.com/kSLAWIASCA/actions/refs/heads/main/Clash.yml",
     "https://raw.githubusercontent.com/busymilk/clash_config_auto_build/main/config/config.yaml"
 ]
@@ -35,8 +34,11 @@ def saring_proxies(data):
         for proxy in data['proxies']:
             # Filter berdasarkan type, network, dan port
             if proxy.get('type') in ['vmess', 'trojan'] and proxy.get('network') == 'ws' and proxy.get('port') == 443:
-                # Cek jika 'name' tidak diawali dengan '-'
-                if isinstance(proxy.get('name'), str) and not proxy['name'].startswith('-'):
+                # Cek jika 'name' adalah string
+                if isinstance(proxy.get('name'), str):
+                    # Jika 'name' tidak diawali dengan '-', tambahkan '-'
+                    if not proxy['name'].startswith('-'):
+                        proxy['name'] = '-' + proxy['name']
                     # Ganti server dengan BUGCDN
                     proxy['server'] = BUGCDN
                     terfilter.append(proxy)
