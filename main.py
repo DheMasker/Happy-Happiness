@@ -7,6 +7,16 @@ BUGCDN = "104.22.5.240"
 
 # Daftar sumber langganan
 SUB_LINKS = [
+        "https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/collected-proxies/clash-meta/all.yaml",
+        "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.yml",
+        "https://raw.githubusercontent.com/WilliamStar007/ClashX-V2Ray-TopFreeProxy/main/combine/clash.config.yaml",
+        "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/Eternity.yml",
+        "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/snippets/nodes.yml",
+        "https://raw.githubusercontent.com/Airuop/cross/master/Eternity.yml",
+        "https://raw.githubusercontent.com/tbbatbb/Proxy/master/dist/clash.config.yaml",
+        "https://raw.githubusercontent.com/busymilk/clash_config_auto_build/main/config/config.yaml",
+        "https://raw.githubusercontent.com/PuddinCat/BestClash/refs/heads/main/proxies.yaml",
+
     "https://raw.githubusercontent.com/kSLAWIASCA/actions/refs/heads/main/Clash.yml",
     "https://raw.githubusercontent.com/busymilk/clash_config_auto_build/main/config/config.yaml"
 ]
