@@ -49,13 +49,21 @@ def saring_proxies(data):
 
 def hapus_duplikat(proxies):
     seen_vm = set()
+    seen_trojan = set()
     hasil = []
 
     for proxy in proxies:
-        identitas = (proxy.get('server'), proxy.get('uuid'))
-        if identitas not in seen_vm:
-            seen_vm.add(identitas)
-            hasil.append(proxy)
+        if proxy.get('type') == 'vmess':
+            identitas = (proxy.get('host'), proxy.get('uuid'))
+            if identitas not in seen_vm:
+                seen_vm.add(identitas)
+                hasil.append(proxy)
+        elif proxy.get('type') == 'trojan':
+            identitas = (proxy.get('host'), proxy.get('password'))
+            if identitas not in seen_trojan:
+                seen_trojan.add(identitas)
+                hasil.append(proxy)
+
     return hasil
 
 def main():
