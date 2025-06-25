@@ -32,8 +32,11 @@ def saring_proxies(data):
     terfilter = []
     if 'proxies' in data:
         for proxy in data['proxies']:
-            # Hanya filter berdasarkan tipe
-            if proxy.get('type') == 'vmess':  
+            # Hanya ambil proxy dengan type 'vmess' atau 'trojan', port 443, dan network 'ws'
+            if (proxy.get('type') in ['vmess', 'trojan'] 
+                and proxy.get('port') == 443 
+                and proxy.get('network') == 'ws'):
+                
                 # Cek jika 'name' adalah string
                 if isinstance(proxy.get('name'), str):
                     # Jika 'name' tidak diawali dengan '-', tambahkan '-'
@@ -41,23 +44,10 @@ def saring_proxies(data):
                         proxy['name'] = '-' + proxy['name']
                     # Ganti server dengan BUGCDN
                     proxy['server'] = BUGCDN
-                    
-                    # Susun ulang agar 'name' selalu di atas
-                    terfilter.append({
-                        'name': proxy.get('name'),
-                        'cipher': proxy.get('cipher'),
-                        'alterId': proxy.get('alterId'),
-                        'network': proxy.get('network'),
-                        'port': proxy.get('port'),
-                        'server': proxy.get('server'),
-                        'skip-cert-verify': proxy.get('skip-cert-verify'),
-                        'tfo': proxy.get('tfo'),
-                        'tls': proxy.get('tls'),
-                        'type': proxy.get('type'),
-                        'udp': proxy.get('udp'),
-                        'uuid': proxy.get('uuid'),
-                        'ws-opts': proxy.get('ws-opts')
-                    })
+
+                    # Tambahkan proxy
+                    terfilter.append(proxy)
+
     return terfilter
 
 def hapus_duplikat(proxies):
