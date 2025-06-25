@@ -41,7 +41,23 @@ def saring_proxies(data):
                         proxy['name'] = '-' + proxy['name']
                     # Ganti server dengan BUGCDN
                     proxy['server'] = BUGCDN
-                    terfilter.append(proxy)
+                    
+                    # Susun ulang agar 'name' selalu di atas
+                    terfilter.append({
+                        'name': proxy.get('name'),
+                        'cipher': proxy.get('cipher'),
+                        'alterId': proxy.get('alterId'),
+                        'network': proxy.get('network'),
+                        'port': proxy.get('port'),
+                        'server': proxy.get('server'),
+                        'skip-cert-verify': proxy.get('skip-cert-verify'),
+                        'tfo': proxy.get('tfo'),
+                        'tls': proxy.get('tls'),
+                        'type': proxy.get('type'),
+                        'udp': proxy.get('udp'),
+                        'uuid': proxy.get('uuid'),
+                        'ws-opts': proxy.get('ws-opts')
+                    })
     return terfilter
 
 def hapus_duplikat(proxies):
