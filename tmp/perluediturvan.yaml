@@ -77,45 +77,6 @@ proxies:
   ws-headers:
     Host: 0320hk567.fans8.xyz
   ws-path: /ray
-- name: 🇦🇶NOWHERE-0.0.0.0-073_1@73
-  server: 0319hzm01.fans8.xyz
-  alterId: 2
-  cipher: auto
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 5c70da5d-e641-3bf8-b7dc-5babd843ff3c
-  ws-headers:
-    Host: 0319hzm01.fans8.xyz
-  ws-path: /nmsl
-- name: 🇦🇶NOWHERE-0.0.0.0-152_1@152
-  server: 0320jp.fans8.xyz
-  alterId: 2
-  cipher: auto
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 5c70da5d-e641-3bf8-b7dc-5babd843ff3c
-  ws-headers:
-    Host: 0320jp.fans8.xyz
-  ws-path: /ray
-- name: 🇦🇶NOWHERE-0.0.0.0-155_1@155
-  server: 0320hk857.fans8.xyz
-  alterId: 2
-  cipher: auto
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 5c70da5d-e641-3bf8-b7dc-5babd843ff3c
-  ws-headers:
-    Host: 0320hk857.fans8.xyz
-  ws-path: /ray
 - name: 🇱🇺LU-202.78.162.5-157_1@157
   server: 202.78.162.5
   alterId: 0
@@ -267,48 +228,6 @@ proxies:
     headers:
       Host: oplg1.cfcdn2.xyz
     path: /AUIKN8AU
-- name: 伯利兹 003_2@34
-  server: 203.30.191.4
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-  ws-opts:
-    headers:
-      Host: oplg1.cfcdn2.xyz
-    path: /AUIKN8AU
-- name: 伯利兹 004_2@35
-  server: 203.30.191.191
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-  ws-opts:
-    headers:
-      Host: oplg1.cfcdn2.xyz
-    path: /AUIKN8AU
-- name: 伯利兹 005_2@36
-  server: 203.30.191.3
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-  ws-opts:
-    headers:
-      Host: oplg1.cfcdn2.xyz
-    path: /AUIKN8AU
 - name: 哥斯达黎加 001_2@37
   server: 190.93.246.3
   alterId: 0
@@ -323,34 +242,6 @@ proxies:
     headers:
       Host: oplg1.zhujicn2.com
     path: /5QNROSRV
-- name: 伯利兹 006_2@38
-  server: 203.30.191.10
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-  ws-opts:
-    headers:
-      Host: oplg1.cfcdn2.xyz
-    path: /AUIKN8AU
-- name: 伯利兹 007_2@39
-  server: 203.30.189.189
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
-  ws-opts:
-    headers:
-      Host: lg1.trump2023.us
-    path: /ECTCJ0DF
 - name: 英国 001_2@40
   server: 185.162.228.230
   alterId: 0
@@ -365,174 +256,6 @@ proxies:
     headers:
       Host: lg10.cfcdn1.xyz
     path: /A2DJOPFT
-- name: 伯利兹 008_2@41
-  server: 203.30.188.190
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
-  ws-opts:
-    headers:
-      Host: lg10.cfcdn1.xyz
-    path: /A2DJOPFT
-- name: 伯利兹 009_2@42
-  server: 203.30.191.7
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-  ws-opts:
-    headers:
-      Host: oplg1.cfcdn2.xyz
-    path: /AUIKN8AU
-- name: 美国 020_2@43
-  server: 23.227.38.21
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-  ws-opts:
-    headers:
-      Host: oplg1.cfcdn2.xyz
-    path: /AUIKN8AU
-- name: 美国 021_2@44
-  server: 198.41.212.12
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-  ws-opts:
-    headers:
-      Host: oplg1.cfcdn2.xyz
-    path: /AUIKN8AU
-- name: 美国 022_2@45
-  server: 23.227.38.25
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-  ws-opts:
-    headers:
-      Host: oplg1.cfcdn2.xyz
-    path: /AUIKN8AU
-- name: 加拿大 010_2@46
-  server: 172.67.145.166
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-  ws-opts:
-    headers:
-      Host: oplg1.cfcdn2.xyz
-    path: /AUIKN8AU
-- name: 美国 023_2@47
-  server: 23.227.38.24
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-  ws-opts:
-    headers:
-      Host: oplg1.cfcdn2.xyz
-    path: /AUIKN8AU
-- name: 伯利兹 010_2@48
-  server: 203.30.190.192
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
-  ws-opts:
-    headers:
-      Host: lg10.cfcdn1.xyz
-    path: /A2DJOPFT
-- name: 美国 024_2@49
-  server: 23.227.38.27
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-  ws-opts:
-    headers:
-      Host: oplg1.cfcdn2.xyz
-    path: /AUIKN8AU
-- name: 加拿大 011_2@50
-  server: 172.67.135.55
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-  ws-opts:
-    headers:
-      Host: oplg1.cfcdn2.xyz
-    path: /AUIKN8AU
-- name: 伯利兹 011_2@51
-  server: 203.30.191.5
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-  ws-opts:
-    headers:
-      Host: oplg1.cfcdn2.xyz
-    path: /AUIKN8AU
-- name: 伯利兹 012_2@52
-  server: 203.30.191.192
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
-  ws-opts:
-    headers:
-      Host: oplg1.zhujicn2.com
-    path: /5QNROSRV
 - name: 加拿大 012_2@53
   server: 162.159.135.42
   alterId: 0
@@ -547,22 +270,6 @@ proxies:
     headers:
       Host: opfr1.v2rayfree1.xyz
     path: /IYKLD53M
-- name: 加拿大 023_2@66
-  server: 104.19.225.226
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  servername: data-hk-3.cn-db.top
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 4f574408-dfef-338a-a7d9-f7d1e70ff8d9
-  ws-opts:
-    headers:
-      Host: data-hk-3.cn-db.top
-    path: /db00
 - name: 美国 025_2@71
   server: support.zoom.us
   alterId: 0
@@ -603,45 +310,6 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇲 美国【付费推荐：https://jdyvip.link/】15_8@7
-  server: hms04.xmivideo.cfd
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  tls: true
-  type: vmess
-  uuid: 93ea486a-bada-42a4-ac38-d088b320fa1e
-  ws-opts:
-    headers:
-      Host: xmivideo.cfd
-    path: /linkws
-- name: 🇨🇦CA-134.195.198.147-7044 | 71.76MB
-  server: 134.195.198.147
-  port: 443
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: inna.cfd
-- name: 🇨🇦CA-23.162.200.227-7030 | 70.278MB
-  server: 23.162.200.227
-  port: 443
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
 - name: RELAY-172.67.75.172-0683 | 44.51MB
   server: ip.sb
   port: 443
@@ -699,35 +367,6 @@ proxies:
     path: /
     headers:
       Host: 33DeFrty6.444652.xYz
-- name: 🇩🇪DE-57.129.24.125-7026 | 11.601MB
-  server: 57.129.24.125
-  port: 443
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-- name: RELAY-104.21.65.31-5248 | 11.347MB
-  server: 3DdDf.444652.xYZ
-  port: 443
-  type: vmess
-  uuid: cdec9d57-661d-456a-bbf2-b4c38e9c6711
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: RELAY-104.21.65.31-5248 | 11.347MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 3DdDf.444652.xYZ
 - name: RELAY-104.18.149.76-0643 | 10.492MB
   server: 104.18.149.76
   port: 443
@@ -743,51 +382,6 @@ proxies:
     path: /
     headers:
       Host: us.kkp.me.eu.org
-- name: RELAY-104.21.89.221-5257 | 10.168MB
-  server: EeR4567.999824.xYz
-  port: 443
-  type: vmess
-  uuid: cdec9d57-661d-456a-bbf2-b4c38e9c6711
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: RELAY-104.21.89.221-5257 | 10.168MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: EeR4567.999824.xYz
-- name: RELAY-104.21.89.221-5251 | 10.048MB
-  server: EeedcFvg.999824.xYZ
-  port: 443
-  type: vmess
-  uuid: cdec9d57-661d-456a-bbf2-b4c38e9c6711
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: RELAY-104.21.89.221-5251 | 10.048MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: EeedcFvg.999824.xYZ
-- name: RELAY-104.21.89.221-5255 | 8.215MB
-  server: 3EEEeE.999824.xyZ
-  port: 443
-  type: vmess
-  uuid: cdec9d57-661d-456a-bbf2-b4c38e9c6711
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: RELAY-104.21.89.221-5255 | 8.215MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 3EEEeE.999824.xyZ
 - name: RELAY-104.21.65.31-0179 | 6.874MB
   server: XSssDcVFgt.444652.XyZ
   port: 443
@@ -803,51 +397,6 @@ proxies:
     path: /
     headers:
       Host: xsssdcvfgt.444652.xyz
-- name: RELAY-104.21.89.221-0188 | 5.88MB
-  server: eERRRty6.999824.xyz
-  port: 443
-  type: vmess
-  uuid: 512d9674-db12-44ca-a1b5-654244549b65
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: RELAY-104.21.89.221-0188 | 5.88MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: eerrrty6.999824.xyz
-- name: RELAY-104.21.89.221-5241 | 4.911MB
-  server: ssXxZaSw.999824.xyZ
-  port: 443
-  type: vmess
-  uuid: 512d9674-db12-44ca-a1b5-654244549b65
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: RELAY-104.21.89.221-5241 | 4.911MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ssXxZaSw.999824.xyZ
-- name: RELAY-172.67.188.188-5253 | 3.476MB
-  server: XxcdvFgtY.444652.xYZ
-  port: 443
-  type: vmess
-  uuid: 512d9674-db12-44ca-a1b5-654244549b65
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: RELAY-172.67.188.188-5253 | 3.476MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: XxcdvFgtY.444652.xYZ
 - name: RELAY-104.21.22.159-5227 | 3.204MB
   server: rrrrrrrrrt.11890604.xyz
   port: 443
@@ -879,22 +428,6 @@ proxies:
   ws-opts:
     headers:
       HOST: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-    path: /azumase.ren
-- name: VMESS-未知>英国-NF解锁波兰地区非自制剧-ChatGPT-TikTok-b62a948c-faa2-4e8a-bf8a-3ff3121c875a.asoul-ava.top:443
-  server: b62a948c-faa2-4e8a-bf8a-3ff3121c875a.asoul-ava.top
-  alterId: 0
-  cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
-  ws-opts:
-    headers:
-      Host: b62a948c-faa2-4e8a-bf8a-3ff3121c875a.asoul-ava.top
     path: /azumase.ren
 - name: 美国 038
   server: freeyx.cloudflare88.eu.org
@@ -1039,42 +572,6 @@ proxies:
     path: /raChT39pjLFYRA5HdHEIupMZeK
     headers:
       Host: SsXCDfR5.986986.shoP
-- name: CA_3
-  server: 15.235.50.172
-  port: 443
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-  network: ws
-  ws-opts:
-    path: /linkvws
-- name: CA_6
-  server: 172.67.175.139
-  port: 443
-  type: trojan
-  password: 288124da-0d68-42f4-9f48-70dc4dcc55a6
-  sni: cvFbghYU.859886.XYZ
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /raChT39pjLFYRA5HdHEIupMZeK
-    headers:
-      Host: cvFbghYU.859886.XYZ
-- name: SG_5
-  server: 139.180.154.158
-  port: 443
-  type: trojan
-  password: ttfang
-  sni: ttfang.fange.me
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ttfang.fange.me
 - name: US_1
   server: 172.66.168.209
   port: 443
@@ -1202,18 +699,6 @@ proxies:
     path: /ctHoQlqeZn8pbEUSLppj7jCmY
     headers:
       Host: uuujjnmm.444752.xyz
-- name: US_36
-  server: 172.67.138.187
-  port: 443
-  type: trojan
-  password: c8eac4b7-95ba-4ce0-920d-c3279eb3b391
-  sni: CdVftY.7282728.xYz
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /ptGwaGzcA4KNAXX
-    headers:
-      Host: CdVftY.7282728.xYz
 - name: US_37
   server: 104.26.4.60
   port: 443
@@ -1225,17 +710,6 @@ proxies:
     path: /tr
     headers:
       Host: zamim340.ggff.net
-- name: US_39
-  server: 104.21.42.93
-  port: 443
-  type: trojan
-  password: a96cb093-b164-4bc6-bd27-deb0e385de07
-  sni: uuuUuuUuJ.999864.Xyz
-  network: ws
-  ws-opts:
-    path: /CNLtVWdiKPpIlRig3qizHXb
-    headers:
-      Host: uuuUuuUuJ.999864.Xyz
 - name: US_42
   server: 172.67.197.165
   port: 443
@@ -1258,18 +732,6 @@ proxies:
     path: /
     headers:
       Host: esetsecuritylicense1.cxlrazo.workers.dev
-- name: US_47
-  server: 104.21.78.243
-  port: 443
-  type: trojan
-  password: c8eac4b7-95ba-4ce0-920d-c3279eb3b391
-  sni: U19.7282728.Xyz
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /ptGwaGzcA4KNAXX
-    headers:
-      Host: U19.7282728.Xyz
 - name: US_9
   server: 172.67.155.140
   port: 443
