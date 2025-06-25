@@ -2,7 +2,7 @@ name: Update subscriptions
 
 on:
   schedule:
-    - cron: "0 */7 * * *"  # Every 7 Hours
+    - cron: "0 */7 * * *"  # Every 7 Hour
   workflow_dispatch:
 
 jobs:
