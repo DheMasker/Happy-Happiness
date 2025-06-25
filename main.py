@@ -2,6 +2,9 @@ import requests
 import yaml
 import os
 
+# Variabel untuk alamat server
+BUGCDN = "104.22.5.240"
+
 # Daftar sumber langganan
 SUB_LINKS = [
     "https://raw.githubusercontent.com/kSLAWIASCA/actions/refs/heads/main/Clash.yml",
@@ -20,10 +23,32 @@ def saring_proxies(data):
     terfilter = []
     if 'proxies' in data:
         for proxy in data['proxies']:
-            # Hanya masukkan proxy jika 'name' tidak diawali dengan '-'
-            if isinstance(proxy.get('name'), str) and not proxy['name'].startswith('-'):
-                terfilter.append(proxy)  # Tambahkan proxy ke hasil
+            # Filter berdasarkan type, network, dan port
+            if proxy.get('type') in ['vmess', 'trojan'] and proxy.get('network') == 'ws' and proxy.get('port') == 443:
+                # Cek jika 'name' tidak diawali dengan '-'
+                if isinstance(proxy.get('name'), str) and not proxy['name'].startswith('-'):
+                    # Ganti server dengan BUGCDN
+                    proxy['server'] = BUGCDN
+                    terfilter.append(proxy)
     return terfilter
+
+def hapus_duplikat(proxies):
+    seen_vm = set()
+    seen_tr = set()
+    hasil = []
+
+    for proxy in proxies:
+        if proxy.get('type') == 'vmess':
+            identitas = (proxy.get('host'), proxy.get('uuid'))
+            if identitas not in seen_vm:
+                seen_vm.add(identitas)
+                hasil.append(proxy)
+        elif proxy.get('type') == 'trojan':
+            identitas = (proxy.get('host'), proxy.get('password'))
+            if identitas not in seen_tr:
+                seen_tr.add(identitas)
+                hasil.append(proxy)
+    return hasil
 
 def main():
     semua_proxies = []
@@ -34,9 +59,12 @@ def main():
             filtered_proxies = saring_proxies(data)
             semua_proxies.extend(filtered_proxies)  # Menggabungkan hasil
 
+    # Hapus duplikat
+    semua_proxies = hapus_duplikat(semua_proxies)
+
     # Simpan hasil yang sudah disaring ke file
-    os.makedirs("proxies", exist_ok=True)
-    with open("proxies/filtered_proxies.yaml", "w", encoding="utf-8") as f:
+    os.makedirs("tmp", exist_ok=True)
+    with open("tmp/perluediturvan.yaml", "w", encoding="utf-8") as f:
         yaml.dump({"proxies": semua_proxies}, f, allow_unicode=True, sort_keys=False)
 
 if __name__ == "__main__":
