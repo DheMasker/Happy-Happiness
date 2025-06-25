@@ -1,31 +1,33 @@
-import requests
-import yaml
-import os
+name: Combine subscriptions
 
-# Buat folder proxies jika belum ada
-os.makedirs('proxies', exist_ok=True)
+on:
+  schedule:
+    - cron: "0 */8 * * *"  # Every 7 Hour
+  workflow_dispatch:
 
-# Ambil data dari URL
-url1 = "https://raw.githubusercontent.com/DheMasker/Happy-Happiness/refs/heads/main/proxies/frombasewscdn443.yaml"
-url2 = "https://raw.githubusercontent.com/DheMasker/Happy-Happiness/refs/heads/main/proxies/fromclashwscdn443.yaml"
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-data1 = requests.get(url1).text
-data2 = requests.get(url2).text
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-# Muat data YAML
-proxies1 = yaml.safe_load(data1)
-proxies2 = yaml.safe_load(data2)
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
 
-# Gabungkan dan hapus duplikat
-combined_proxies = {**proxies1, **proxies2}  # Menggabungkan dictionary
+      - name: Install dependencies
+        run: pip install requests pyyaml
 
-# Menghapus duplikat berdasarkan trojan host password dan vmess host uuid
-unique_proxies = {}
-for proxy in combined_proxies:
-    key = (proxy.get('password'), proxy.get('uuid'))  # Sesuaikan dengan struktur data
-    if key not in unique_proxies:
-        unique_proxies[key] = proxy
+      - name: Run first Python script
+        run: python3 mainbaseclashother.py
 
-# Simpan hasil ke file baru di folder proxies
-with open('proxies/vmesstrojanwscdn443.yaml', 'w') as f:
-    yaml.dump(list(unique_proxies.values()), f)
+      - name: Push changes
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git add proxies/
+          git commit -m "Update subscriptions" || echo "No changes to commit"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
