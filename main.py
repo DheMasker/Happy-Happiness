@@ -1,12 +1,15 @@
-import base64
 import requests
 import yaml
 import os
 import json
 import urllib.parse
+import base64
 
 # Daftar sumber langganan
 SUB_LINKS = [ 
+    "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt",
+    "https://raw.githubusercontent.com/mheidari98/.proxy/refs/heads/main/all",
+    "https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/V2RAY_SUB/refs/heads/main/v2ray_configs.txt",
     "https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/collected-proxies/clash-meta/all.yaml",
     "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.yml",
     "https://raw.githubusercontent.com/WilliamStar007/ClashX-V2Ray-TopFreeProxy/main/combine/clash.config.yaml",
@@ -29,22 +32,19 @@ def ambil_langganan():
             print(f"Mengambil langganan: {url}")
             res = requests.get(url, timeout=60)
             konten = res.text.strip()
-            
-            # Mencoba mendekode konten dan menangani karakter non-ASCII
-            try:
-                konten = konten.encode('utf-8').decode('utf-8', errors='ignore')
-            except Exception as e:
-                print(f"⚠️ Kesalahan saat mendekode konten: {e}")
 
-            if not konten.startswith(("vmess://", "trojan://")):
+            # Proses konten untuk mendeteksi node
+            if konten.startswith(("vmess://", "trojan://")):
+                semua_node.append(konten)
+            else:
+                # Coba mendekode base64 jika tidak dalam format yang diharapkan
                 try:
                     konten = base64.b64decode(konten + '===').decode('utf-8', errors='ignore')
+                    baris = [line.strip() for line in konten.splitlines() if line.strip()]
+                    semua_node.extend(baris)
                 except Exception as e:
                     print(f"⚠️ Kesalahan saat mendekode base64: {e}")
-                    continue  # Lanjutkan ke iterasi berikutnya jika ada kesalahan
-
-            baris = [line.strip() for line in konten.splitlines() if line.strip()]
-            semua_node.extend(baris)
+                    continue  # Lanjutkan jika ada kesalahan
         except Exception as e:
             print(f"❌ Kesalahan sumber langganan: {url} -> {e}")
     return semua_node
@@ -53,21 +53,13 @@ def saring_node(nodes):
     terfilter = []
     for node in nodes:
         if node.startswith("vmess://"):
-            info = decode_node_info_base64(node)
+            info = decode_node_info(node)
             if info is not None and "path" in info:
                 if info.get("port") == 443 and info.get("net") == "ws":
-                    name = info.get("ps", "").replace('"', '')
-                    servername = info.get("host", "").split('#')[0]
-                    if not servername:
-                        servername = info.get("servername", "").split('#')[0]
-                    
-                    # Hanya tambahkan jika ada nilai di host, servername, dan path
-                    if (servername or info.get("host")) and info.get("path"):
-                        terfilter.append(node)
+                    terfilter.append(node)
 
         elif node.startswith("trojan://"):
-            raw = node[9:]  
-            parts = raw.split('@')
+            parts = node[9:].split('@')
             if len(parts) == 2:
                 server_info = parts[1]
                 server_details = server_info.split(':')
@@ -76,64 +68,51 @@ def saring_node(nodes):
                     query = server_details[1].split('?')[1] if '?' in server_details[1] else ''
                     params = {param.split('=')[0]: param.split('=')[1] for param in query.split('&') if '=' in param}
 
-                    name = node.split('#')[1].strip() if '#' in node else 'default_name'
-                    name = name.replace('"', '')
-
-                    host = params.get('host', '').split('#')[0]
-                    if not host:
-                        host = params.get('sni', '').split('#')[0]
-
-                    # Hanya tambahkan jika ada nilai di host atau sni dan path
-                    if port == '443' and params.get('type') == 'ws' and (host or params.get('sni')) and params.get('path'):
+                    if port == '443' and params.get('type') == 'ws' and params.get('path'):
                         terfilter.append(node)
     return terfilter
 
-def decode_node_info_base64(node):
+def decode_node_info(node):
     try:
         if node.startswith("vmess://"):
             raw = node[8:]
-            decoded = base64.b64decode(raw + '===').decode('utf-8', errors='ignore')
-            return json.loads(decoded.replace("false", "False").replace("true", "True"))
+            decoded = json.loads(urllib.parse.unquote(raw))
+            return decoded
     except Exception as e:
         print(f"⚠️ Gagal mendecode node: {e}")
         return None
 
 def konversi_ke_clash(nodes):
     proxies = []
-    unique_vmess_ids = set()  # Set untuk menyimpan kombinasi unik dari uuid dan host untuk vmess
-    unique_trojan_ids = set()  # Set untuk menyimpan kombinasi unik dari password dan host untuk trojan
+    unique_vmess_ids = set()
+    unique_trojan_ids = set()
 
     for node in nodes:
         if node.startswith("vmess://"):
             try:
-                vmess_config = base64.b64decode(node[8:] + '===').decode('utf-8', errors='ignore')
-                config = json.loads(vmess_config.replace("false", "False").replace("true", "True"))
-                name = config.get("ps", "Tanpa Nama").replace('"', '')  # Menghapus tanda kutip
-                servername = config.get("host", "") or config.get("servername", "")
-                if servername and '#' in servername:
-                    servername = servername.split('#')[0]
-
-                uuid = config.get("id")
-                host = config.get("host", "")
-                proxy_id = (uuid, host)  # Kombinasi unik berdasarkan uuid dan host
-                if proxy_id not in unique_vmess_ids:  # Memeriksa keunikan
+                info = decode_node_info(node)
+                name = info.get("ps", "Tanpa Nama")
+                uuid = info.get("id")
+                host = info.get("host", "")
+                proxy_id = (uuid, host)
+                if proxy_id not in unique_vmess_ids:
                     unique_vmess_ids.add(proxy_id)
                     proxies.append({
                         "name": name,
                         "server": BUGCDN,
-                        "port": int(config["port"]),
+                        "port": int(info["port"]),
                         "type": "vmess",
                         "uuid": uuid,
-                        "alterId": int(config.get("aid", 0)),
+                        "alterId": int(info.get("aid", 0)),
                         "cipher": "auto",
                         "tls": True,
                         "skip-cert-verify": True,
-                        "servername": servername.replace('"', ''),  # Menghapus tanda kutip
-                        "network": config.get("net", "ws"),
+                        "servername": host,
+                        "network": info.get("net", "ws"),
                         "ws-opts": {
-                            "path": config.get("path", "/vmess-ws"),
+                            "path": info.get("path", "/vmess-ws"),
                             "headers": {
-                                "Host": servername.replace('"', '')  # Mengisi Host dengan servername
+                                "Host": host
                             }
                         },
                         "udp": True
@@ -153,13 +132,9 @@ def konversi_ke_clash(nodes):
                 params = {param.split('=')[0]: param.split('=')[1] for param in query.split('&') if '=' in param}
 
                 host = params.get('host', '')
-                if '#' in host:
-                    host = host.split('#')[0]
-                host = urllib.parse.unquote(host)
-
                 password = urllib.parse.unquote(credentials)
-                proxy_id = (password, host)  # Kombinasi unik berdasarkan password dan host
-                if proxy_id not in unique_trojan_ids:  # Memeriksa keunikan
+                proxy_id = (password, host)
+                if proxy_id not in unique_trojan_ids:
                     unique_trojan_ids.add(proxy_id)
                     proxies.append({
                         "name": node.split('#')[1].strip() if '#' in node else 'default_name',
@@ -168,12 +143,12 @@ def konversi_ke_clash(nodes):
                         "type": "trojan",
                         "password": password,
                         "skip-cert-verify": True,
-                        "sni": params.get('sni', host),  # Mengisi SNI dengan host
+                        "sni": params.get('sni', host),
                         "network": params.get('type') if 'type' in params and params['type'] == 'ws' else None,
                         "ws-opts": {
                             "path": urllib.parse.unquote(params.get('path', '')),
                             "headers": {
-                                "Host": host if host else params.get('sni', '')  # Mengisi Host
+                                "Host": host if host else params.get('sni', '')
                             }
                         },
                         "udp": True
@@ -184,7 +159,7 @@ def konversi_ke_clash(nodes):
     proxies_clash = {
         "proxies": proxies
     }
-    return yaml.dump(proxies_clash, allow_unicode=True, sort_keys=False).replace('"', '')  # Menghapus tanda kutip
+    return yaml.dump(proxies_clash, allow_unicode=True, sort_keys=False)
 
 def main():
     nodes = ambil_langganan()
