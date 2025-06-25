@@ -32,21 +32,13 @@ def saring_proxies(data):
     terfilter = []
     if 'proxies' in data:
         for proxy in data['proxies']:
-            # Hanya ambil proxy dengan type 'vmess' atau 'trojan', port 443, dan network 'ws'
-            if (proxy.get('type') in ['vmess', 'trojan'] 
-                and proxy.get('port') == 443 
-                and proxy.get('network') == 'ws'):
-                
-                # Cek jika 'name' adalah string
-                if isinstance(proxy.get('name'), str):
-                    # Jika 'name' tidak diawali dengan '-', tambahkan '-'
-                    if not proxy['name'].startswith('-'):
-                        proxy['name'] = '-' + proxy['name']
-                    # Ganti server dengan BUGCDN
-                    proxy['server'] = BUGCDN
-
-                    # Tambahkan proxy
-                    terfilter.append(proxy)
+            # Buat entri proxy dengan 'name' di atas
+            proxy_entry = {
+                "name": proxy.get("name", "Tanpa Nama"),  # Memastikan 'name' di atas
+                "server": BUGCDN,  # Ganti server dengan BUGCDN
+                **{k: v for k, v in proxy.items() if k != "name"}  # Tambahkan atribut lain tanpa 'name'
+            }
+            terfilter.append(proxy_entry)
 
     return terfilter
 
@@ -55,7 +47,7 @@ def hapus_duplikat(proxies):
     hasil = []
 
     for proxy in proxies:
-        identitas = (proxy.get('host'), proxy.get('uuid'))
+        identitas = (proxy.get('server'), proxy.get('uuid'))
         if identitas not in seen_vm:
             seen_vm.add(identitas)
             hasil.append(proxy)
