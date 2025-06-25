@@ -32,13 +32,18 @@ def saring_proxies(data):
     terfilter = []
     if 'proxies' in data:
         for proxy in data['proxies']:
-            # Buat entri proxy dengan 'name' di atas
-            proxy_entry = {
-                "name": proxy.get("name", "Tanpa Nama"),  # Memastikan 'name' di atas
-                "server": BUGCDN,  # Ganti server dengan BUGCDN
-                **{k: v for k, v in proxy.items() if k != "name"}  # Tambahkan atribut lain tanpa 'name'
-            }
-            terfilter.append(proxy_entry)
+            # Memeriksa apakah proxy memenuhi syarat
+            if (proxy.get('type') in ['vmess', 'trojan'] and 
+                proxy.get('network') == 'ws' and 
+                proxy.get('port') == 443):
+                
+                # Buat entri proxy dengan 'name' di atas
+                proxy_entry = {
+                    "name": proxy.get("name", "Tanpa Nama"),  # Memastikan 'name' di atas
+                    "server": BUGCDN,  # Ganti server dengan BUGCDN
+                    **{k: v for k, v in proxy.items() if k != "name"}  # Tambahkan atribut lain tanpa 'name'
+                }
+                terfilter.append(proxy_entry)
 
     return terfilter
 
