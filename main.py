@@ -6,10 +6,7 @@ import urllib.parse
 import base64
 
 # Daftar sumber langganan
-SUB_LINKS = [ 
-    "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/full/5ubscrpt10n-b64.txt",
-    "https://raw.githubusercontent.com/mheidari98/.proxy/refs/heads/main/all",
-    "https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/V2RAY_SUB/refs/heads/main/v2ray_configs.txt",
+SUB_LINKS = [
     "https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/collected-proxies/clash-meta/all.yaml",
     "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.yml",
     "https://raw.githubusercontent.com/WilliamStar007/ClashX-V2Ray-TopFreeProxy/main/combine/clash.config.yaml",
@@ -21,6 +18,7 @@ SUB_LINKS = [
     "https://raw.githubusercontent.com/PuddinCat/BestClash/refs/heads/main/proxies.yaml",
     "https://raw.githubusercontent.com/kSLAWIASCA/actions/refs/heads/main/Clash.yml",
     "https://raw.githubusercontent.com/busymilk/clash_config_auto_build/main/config/config.yaml"
+
 ]
 
 BUGCDN = "104.22.5.240"
