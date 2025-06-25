@@ -1,5 +1,5 @@
 proxies:
-- name: 0|🌀4-TH |  2.6MB/s|55%|Netflix|O...
+- name: 1|🌀4-TH |  2.6MB/s|55%|Netflix|O...
   server: 38.47.96.30
   alterId: 0
   cipher: auto
@@ -560,6 +560,17 @@ proxies:
     headers:
       Host: eer.freevpnatm.dpdns.org
     path: /XmTzATQPJv9RO3xr1D40NK
+- name: FI_1
+  server: 172.67.174.252
+  port: 443
+  type: trojan
+  password: auto
+  sni: esetsecuritylicense1.vowexa5791.workers.dev
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: esetsecuritylicense1.vowexa5791.workers.dev
 - name: TW_1
   server: 166.0.198.68
   port: 443
@@ -572,149 +583,151 @@ proxies:
     path: /apple
     headers:
       Host: golinkwuxian.top
-- name: US_18
-  server: 104.21.30.167
+- name: US_20
+  server: 172.67.162.74
   port: 443
   type: trojan
-  password: a7b22c05-27fd-4a76-8896-2aebaf4cf3a1
-  sni: TttTtTYU.2032.PP.UA
+  password: e9b4bdbd-cc5b-4a90-9616-ea0f1092ec7c
+  sni: KKiuuyTr.iran.PP.uA
   network: ws
   ws-opts:
-    path: /mXG7Hx4Y37nTr2Hdmy903WCeD85F1b
+    path: /s1XRkMWuneQkqtp5KKSues
     headers:
-      Host: TttTtTYU.2032.PP.UA
-- name: US_26
-  server: 104.21.89.221
+      Host: KKiuuyTr.iran.PP.uA
+- name: US_21
+  server: 172.67.149.202
   port: 443
   type: trojan
-  password: c7f423b7-ced8-43da-a9ae-e906cb4a222c
-  sni: DdDdddDDdF.999824.Xyz
+  password: 19a78eeb-d83a-4364-b095-b7dd93436320
+  sni: CVFgTrE4.222560.XyZ
   network: ws
   ws-opts:
-    path: /dwPcFaK3QxWRQTqot0LE
+    path: /Hq0I4JMuzO0WLijID
     headers:
-      Host: DdDdddDDdF.999824.Xyz
-- name: US_27
-  server: 198.41.208.23
+      Host: CVFgTrE4.222560.XyZ
+- name: US_28
+  server: 104.21.61.73
   port: 443
   type: trojan
-  password: c7cdf323-25d4-4c82-ad35-0aca769041c2
-  sni: trojans1.114514660.xyz
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: trojans1.114514660.xyz
-- name: US_31
-  server: 172.67.220.32
-  port: 443
-  type: trojan
-  password: a4291a2a-d62c-4eb9-ac7a-ac7355d1eda2
-  sni: RFgTHYu7.999836.Xyz
-  network: ws
-  ws-opts:
-    path: /mFvK3LJyIAe8ydvnmRKWDa8
-    headers:
-      Host: RFgTHYu7.999836.Xyz
-- name: US_33
-  server: 104.21.22.133
-  port: 443
-  type: trojan
-  password: e4cbe8b8-37db-4aaa-8469-b84f34c51ebc
-  sni: xsCdfVg.20220420.Pp.UA
-  network: ws
-  ws-opts:
-    path: /dilyfCPEmLvYr5hYXD
-    headers:
-      Host: xsCdfVg.20220420.Pp.UA
-- name: US_34
-  server: 172.67.220.140
-  port: 443
-  type: trojan
-  password: 13e26f64-2e0c-4461-92cd-d83294cc18f0
-  sni: dddDvvbHY7.000890604.XyZ
-  network: ws
-  ws-opts:
-    path: /TDUxZUop9k44oPiit2OdWk0KwirdY
-    headers:
-      Host: dddDvvbHY7.000890604.XyZ
-- name: US_40
-  server: 104.21.6.179
-  port: 443
-  type: trojan
-  password: 6757b7d6-fa32-4708-b5d1-30e3cf928b51
-  sni: ZZzzzZZ.890601.XYZ
+  password: yaml777
+  sni: yaml7.ggff.net
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /l96MZ8se5Kl2p8BiMhP42l
+    path: /
     headers:
-      Host: ZZzzzZZ.890601.XYZ
-- name: US_49
-  server: 104.21.48.1
+      Host: yaml7.ggff.net
+- name: US_33
+  server: 172.67.150.132
+  port: 443
+  type: trojan
+  password: 0f7070cd-c91d-4532-a51f-56da4f0e94be
+  sni: eeddcvfgt6.444682.xyz
+  network: ws
+  ws-opts:
+    path: /ctHoQlqeZn8pbEUSLppj7jCmY
+    headers:
+      Host: eeddcvfgt6.444682.xyz
+- name: US_34
+  server: 104.21.112.1
+  port: 443
+  type: trojan
+  password: er668
+  sni: kfjdi.pages.dev
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: kfjdi.pages.dev
+- name: US_35
+  server: 104.21.32.1
   port: 443
   type: trojan
   password: 7701ddf5-6a48-401b-a3ec-8af52b6deb48
   sni: SsXcDFGty.99890604.XYZ
-  skip-cert-verify: true
   network: ws
   ws-opts:
     path: /QRNs4ue90AX3hweBopuhWEbIX
     headers:
       Host: SsXcDFGty.99890604.XYZ
-- name: US_5
-  server: cccvffgty.444752.xyz
+- name: US_36
+  server: 172.67.177.109
+  port: 443
+  type: trojan
+  password: bce0c7cb-08d1-46a7-b77b-7bff8b46252f
+  sni: UUUUuUuuU.666461.xYz
+  network: ws
+  ws-opts:
+    path: /x9F83IcyjcEyBXZBROjL3Q5vTymr
+    headers:
+      Host: UUUUuUuuU.666461.xYz
+- name: US_39
+  server: 172.67.214.21
+  port: 443
+  type: trojan
+  password: 7248e825-887c-48b9-83bc-c26bc6392bf8
+  sni: xXcdvFgt.191268.XYz
+  network: ws
+  ws-opts:
+    path: /ctdmgeIg3NII3ibrzzKXJGy3S1
+    headers:
+      Host: xXcdvFgt.191268.XYz
+- name: US_42
+  server: 172.67.185.107
+  port: 443
+  type: trojan
+  password: 13e26f64-2e0c-4461-92cd-d83294cc18f0
+  sni: WwwDe.00890604.XyZ
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /TDUxZUop9k44oPiit2OdWk0KwirdY
+    headers:
+      Host: WwwDe.00890604.XyZ
+- name: US_45
+  server: 104.16.83.8
+  port: 443
+  type: trojan
+  password: Ng35283528
+  sni: c2.validbv3528.eu.org
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: c2.validbv3528.eu.org
+- name: US_48
+  server: 172.67.160.119
+  port: 443
+  type: trojan
+  password: a96cb093-b164-4bc6-bd27-deb0e385de07
+  sni: UUuUUuUj.999864.XYZ
+  network: ws
+  ws-opts:
+    path: /CNLtVWdiKPpIlRig3qizHXb
+    headers:
+      Host: UUuUUuUj.999864.XYZ
+- name: US_54
+  server: 104.17.147.22
+  port: 443
+  type: trojan
+  password: 13253e6e-a1f7-4090-801f-a8dc2b083bef
+  sni: InViNCible.FAFa20.sHop
+  network: ws
+  ws-opts:
+    path: /trhRl2EYQKIyl0TZ2d/c2hpcmVuLnlhZW1pa28uZ2dmZi5uZXQ=?ed=2560
+    headers:
+      Host: InViNCible.FAFa20.sHop
+- name: US_8
+  server: 172.67.188.188
   port: 443
   type: trojan
   password: 512d9674-db12-44ca-a1b5-654244549b65
-  sni: cccvffgty.444752.xyz
+  sni: XxCdvfgty.444652.xyZ
   skip-cert-verify: true
   network: ws
   ws-opts:
     path: /HOi2k5ElZdeML7Ua7dX3JIrYk7zm
     headers:
-      Host: cccvffgty.444752.xyz
-- name: US_55
-  server: 104.21.75.193
-  port: 443
-  type: trojan
-  password: bpb-trojan
-  sni: mashdt.pages.dev
-  network: ws
-  ws-opts:
-    path: /tr?ed=2560
-    headers:
-      Host: mashdt.pages.dev
-- name: US_6
-  server: 104.21.22.211
-  port: 443
-  type: trojan
-  password: 5a5d1112-4ae7-431f-bdde-0d008fb473dd
-  sni: 90.tAIpEI108.dpDnS.orG
-  network: ws
-  ws-opts:
-    path: /685uFbiRrgAsHzTP8d
-    headers:
-      Host: 90.tAIpEI108.dpDnS.orG
-- name: US_60
-  server: 172.67.214.21
-  port: 443
-  type: trojan
-  password: 7248e825-887c-48b9-83bc-c26bc6392bf8
-  sni: XXcdvFgT.191268.xYZ
-  network: ws
-  ws-opts:
-    path: /ctdmgeIg3NII3ibrzzKXJGy3S1
-    headers:
-      Host: XXcdvFgT.191268.xYZ
-- name: US_9
-  server: 104.21.13.36
-  port: 443
-  type: trojan
-  password: a7c9c017-db10-4d15-b01b-0634db498b57
-  sni: ERt5.0890604.XyZ
-  network: ws
-  ws-opts:
-    path: /OBmXcXufeTh7sLJtI1
-    headers:
-      Host: ERt5.0890604.XyZ
+      Host: XxCdvfgty.444652.xyZ
