@@ -560,32 +560,30 @@ proxies:
     headers:
       Host: eer.freevpnatm.dpdns.org
     path: /XmTzATQPJv9RO3xr1D40NK
-- name: CA_3
-  server: 104.21.77.79
+- name: US_11
+  server: sssxxcvfty.444752.xyz
   port: 443
   type: trojan
-  password: 288124da-0d68-42f4-9f48-70dc4dcc55a6
-  sni: SsXCDfR5.986986.shoP
+  password: 512d9674-db12-44ca-a1b5-654244549b65
+  sni: sssxxcvfty.444752.xyz
+  skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /raChT39pjLFYRA5HdHEIupMZeK
+    path: /HOi2k5ElZdeML7Ua7dX3JIrYk7zm
     headers:
-      Host: SsXCDfR5.986986.shoP
-- name: FR_2
-  server: 6815:fd4
+      Host: sssxxcvfty.444752.xyz
+- name: US_12
+  server: 172.67.220.32
   port: 443
-  type: vmess
-  uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: glweidf.sbs
+  type: trojan
+  password: a4291a2a-d62c-4eb9-ac7a-ac7355d1eda2
+  sni: RRrFGhy7.999836.XYZ
   network: ws
   ws-opts:
-    path: /linkws
+    path: /mFvK3LJyIAe8ydvnmRKWDa8
     headers:
-      Host: glweidf.sbs
-- name: US_13
+      Host: RRrFGhy7.999836.XYZ
+- name: US_2
   server: 104.21.91.180
   port: 443
   type: trojan
@@ -597,85 +595,53 @@ proxies:
     path: /x9F83IcyjcEyBXZBROjL3Q5vTymr
     headers:
       Host: XXXXxxXxXc.666461.xyZ
-- name: US_16
-  server: 104.21.96.1
-  port: 443
-  type: trojan
-  password: e9b4bdbd-cc5b-4a90-9616-ea0f1092ec7c
-  sni: ttYUi.7777198.xYZ
-  network: ws
-  ws-opts:
-    path: /s1XRkMWuneQkqtp5KKSues
-    headers:
-      Host: ttYUi.7777198.xYZ
-- name: US_2
-  server: 172.67.145.200
-  port: 443
-  type: trojan
-  password: fa050497-fc2a-45ee-89c0-96670c4ecb65
-  sni: Rrr4.8906004.xYZ
-  network: ws
-  ws-opts:
-    path: /DZxb5QZyWgQPuXTwt
-    headers:
-      Host: Rrr4.8906004.xYZ
 - name: US_20
-  server: 172.67.214.21
+  server: 104.21.13.36
   port: 443
   type: trojan
-  password: 7248e825-887c-48b9-83bc-c26bc6392bf8
-  sni: xXcdvFgt.191268.XYz
+  password: a7c9c017-db10-4d15-b01b-0634db498b57
+  sni: ERt5.0890604.XyZ
   network: ws
   ws-opts:
-    path: /ctdmgeIg3NII3ibrzzKXJGy3S1
+    path: /OBmXcXufeTh7sLJtI1
     headers:
-      Host: xXcdvFgt.191268.XYz
-- name: US_27
-  server: 104.21.29.205
+      Host: ERt5.0890604.XyZ
+- name: US_21
+  server: 104.26.4.60
   port: 443
   type: trojan
-  password: 19a78eeb-d83a-4364-b095-b7dd93436320
-  sni: CVFgTrE4.222560.XyZ
+  password: bpb-trojan
+  sni: zamim340.ggff.net
+  network: ws
+  ws-opts:
+    path: /tr?ed=2560
+    headers:
+      Host: zamim340.ggff.net
+- name: US_23
+  server: 104.21.48.1
+  port: 443
+  type: trojan
+  password: er668
+  sni: kfjdi.pages.dev
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /Hq0I4JMuzO0WLijID
-    headers:
-      Host: CVFgTrE4.222560.XyZ
-- name: US_37
-  server: 104.18.2.150
-  port: 443
-  type: trojan
-  password: slch2024
-  sni: ocost-dy.wmlefl.cc
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: ocost-dy.wmlefl.cc
-- name: US_38
-  server: 104.21.30.37
+      Host: kfjdi.pages.dev
+- name: US_3
+  server: 104.21.14.54
   port: 443
   type: trojan
-  password: cdec9d57-661d-456a-bbf2-b4c38e9c6711
-  sni: DDdcVfbGHy7.444682.xyz
+  password: e4cbe8b8-37db-4aaa-8469-b84f34c51ebc
+  sni: 6666YHjU.777159.xYz
+  skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /UgBAUEI9Y18NcpHHrL0VwSolbqFpg
+    path: /dilyfCPEmLvYr5hYXD
     headers:
-      Host: DDdcVfbGHy7.444682.xyz
-- name: US_42
-  server: 172.67.220.32
-  port: 443
-  type: trojan
-  password: a4291a2a-d62c-4eb9-ac7a-ac7355d1eda2
-  sni: RRrFGhy7.999836.XYZ
-  network: ws
-  ws-opts:
-    path: /mFvK3LJyIAe8ydvnmRKWDa8
-    headers:
-      Host: RRrFGhy7.999836.XYZ
-- name: US_43
+      Host: 6666YHjU.777159.xYz
+- name: US_32
   server: 172.67.191.140
   port: 443
   type: trojan
@@ -692,12 +658,58 @@ proxies:
   type: trojan
   password: a96cb093-b164-4bc6-bd27-deb0e385de07
   sni: uuuUuuUuJ.999864.Xyz
+  skip-cert-verify: true
   network: ws
   ws-opts:
     path: /CNLtVWdiKPpIlRig3qizHXb
     headers:
       Host: uuuUuuUuJ.999864.Xyz
-- name: US_5
+- name: US_47
+  server: 104.21.22.159
+  port: 443
+  type: trojan
+  password: f898ffcb-6417-4373-9640-0b66091e8206
+  sni: q12.11890604.xyz
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /CLtmyjAuOFZsWSituzXyJ5XNeH1R1
+    headers:
+      Host: q12.11890604.xyz
+- name: US_48
+  server: 172.67.219.196
+  port: 443
+  type: trojan
+  password: f108e0e2-5f12-42b6-9e67-1b2f073ffb2b
+  sni: CCcvfgt6.852224.dpdns.org
+  network: ws
+  ws-opts:
+    path: /CA5bMmr2JMum8sDKRwvFCJq
+    headers:
+      Host: CCcvfgt6.852224.dpdns.org
+- name: US_50
+  server: 172.67.135.37
+  port: 443
+  type: trojan
+  password: 07a3df8f-2a2c-42f8-ad92-65889d90f3bf
+  sni: rrrRrRRrT.459.pp.ua
+  network: ws
+  ws-opts:
+    path: /znQImc22ijDwVOkZfoq
+    headers:
+      Host: rrrRrRRrT.459.pp.ua
+- name: US_51
+  server: 172.67.162.74
+  port: 443
+  type: trojan
+  password: e9b4bdbd-cc5b-4a90-9616-ea0f1092ec7c
+  sni: p09.IrAN.pP.Ua
+  network: ws
+  ws-opts:
+    path: /s1XRkMWuneQkqtp5KKSues
+    headers:
+      Host: p09.IrAN.pP.Ua
+- name: US_55
   server: 172.67.157.254
   port: 443
   type: trojan
@@ -709,25 +721,39 @@ proxies:
     path: /ctHoQlqeZn8pbEUSLppj7jCmY
     headers:
       Host: uuujjnmm.444752.xyz
-- name: US_55
-  server: 104.21.14.54
+- name: US_6
+  server: 172.67.177.109
   port: 443
   type: trojan
-  password: e4cbe8b8-37db-4aaa-8469-b84f34c51ebc
-  sni: 6666YHjU.777159.xYz
+  password: 357b1bba-6400-4944-baff-1b933311ff28
+  sni: EeEEeEEeeeeeeE.666461.xyz
+  skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /dilyfCPEmLvYr5hYXD
+    path: /HbjLgzKC7MBYIsgt
     headers:
-      Host: 6666YHjU.777159.xYz
-- name: US_9
-  server: 104.21.94.69
+      Host: EeEEeEEeeeeeeE.666461.xyz
+- name: US_7
+  server: 104.21.30.167
   port: 443
   type: trojan
-  password: 13e26f64-2e0c-4461-92cd-d83294cc18f0
-  sni: dddDvvbHY7.000890604.XyZ
+  password: a7b22c05-27fd-4a76-8896-2aebaf4cf3a1
+  sni: TttTtTYU.2032.PP.UA
+  skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /TDUxZUop9k44oPiit2OdWk0KwirdY
+    path: /mXG7Hx4Y37nTr2Hdmy903WCeD85F1b
     headers:
-      Host: dddDvvbHY7.000890604.XyZ
+      Host: TttTtTYU.2032.PP.UA
+- name: US_8
+  server: 104.21.29.205
+  port: 443
+  type: trojan
+  password: 19a78eeb-d83a-4364-b095-b7dd93436320
+  sni: CVFgTrE4.222560.XyZ
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /Hq0I4JMuzO0WLijID
+    headers:
+      Host: CVFgTrE4.222560.XyZ
