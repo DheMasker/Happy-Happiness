@@ -1,5 +1,5 @@
 proxies:
-- name: 167ebc56e2534465a70ea4dfe8d78e3a_@_@Hope_Net-join-us-on-Telegram
+- name: 68bce709dbae41869eac8205cb415055_@_@Hope_Net-join-us-on-Telegram
   server: 134.195.198.147
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -13,7 +13,7 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /linkvws
-- name: 1|🌀4-TH |  2.6MB/s|55%|Netflix|O...
+- name: 2|🌀4-TH |  2.6MB/s|55%|Netflix|O...
   server: 38.47.96.30
   alterId: 0
   cipher: auto
@@ -28,6 +28,19 @@ proxies:
     headers:
       Host: th.lzj520hxw.dpdns.org
     path: /lzjjj
+- name: 14|US_speednode_0253
+  server: 172.67.191.140
+  network: ws
+  password: c7f423b7-ced8-43da-a9ae-e906cb4a222c
+  port: 443
+  skip-cert-verify: false
+  sni: DdDdddDDdF.999824.Xyz
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: DdDdddDDdF.999824.Xyz
+    path: /dwPcFaK3QxWRQTqot0LE
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -298,7 +311,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇫🇷FR-45.145.165.114-6824 | 33.604MB
+- name: 🇫🇷FR-45.145.165.114-6876 | 21.979MB
   server: beyonddsz.cfd
   port: 443
   type: vmess
@@ -312,8 +325,23 @@ proxies:
     path: /
     headers:
       Host: beyonddsz.cfd
-- name: RELAY-104.21.89.221-0157 | 3.771MB
-  server: eERRRty6.999824.xyz
+- name: RELAY-104.21.89.221-5075 | 15.802MB
+  server: 3EEEeE.999824.xyZ
+  port: 443
+  type: vmess
+  uuid: cdec9d57-661d-456a-bbf2-b4c38e9c6711
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: RELAY-104.21.89.221-5075 | 15.802MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 3EEEeE.999824.xyZ
+- name: RELAY-172.67.188.188-5077 | 8.378MB
+  server: XSssDcVFgt.444652.XyZ
   port: 443
   type: vmess
   uuid: 512d9674-db12-44ca-a1b5-654244549b65
@@ -321,27 +349,28 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-104.21.89.221-0157 | 3.771MB
+  servername: RELAY-172.67.188.188-5077 | 8.378MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: eerrrty6.999824.xyz
-- name: RELAY-104.21.84.242-5015 | 2.264MB
-  server: wWWD.4444916.xYZ
+      Host: XSssDcVFgt.444652.XyZ
+- name: RELAY-104.18.149.76-0597 | 6.232MB
+  server: 104.18.149.76
   port: 443
   type: vmess
-  uuid: 03e92910-34b1-4245-ac63-04a865f43cd5
+  uuid: de94cc0a-0592-4969-b1fc-97ea8f0ea0b3
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: false
+  servername: RELAY-104.18.149.76-0597 | 6.232MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: wWWD.4444916.xYZ
-- name: RELAY-172.64.80.1-5013 | 0.165MB
+      Host: us.kkp.me.eu.org
+- name: RELAY-104.21.22.159-5049 | 5.625MB
   server: rrrrrrrrrt.11890604.xyz
   port: 443
   type: vmess
@@ -350,7 +379,7 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-172.64.80.1-5013 | 0.165MB
+  servername: RELAY-104.21.22.159-5049 | 5.625MB
   network: ws
   ws-opts:
     path: /
@@ -373,22 +402,6 @@ proxies:
     headers:
       HOST: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
     path: /azumase.ren
-- name: 美国 030
-  server: 104.18.149.76
-  alterId: 0
-  cipher: auto
-  delay: 2889
-  network: ws
-  port: 443
-  servername: us.kkp.me.eu.org
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: de94cc0a-0592-4969-b1fc-97ea8f0ea0b3
-  ws-opts:
-    headers:
-      Host: us.kkp.me.eu.org
-    path: /aa
 - name: 美国 038
   server: freeyx.cloudflare88.eu.org
   alterId: 0
@@ -533,86 +546,67 @@ proxies:
     headers:
       Host: eer.freevpnatm.dpdns.org
     path: /XmTzATQPJv9RO3xr1D40NK
-- name: CA_3
-  server: 172.67.175.139
+- name: US_11
+  server: 172.67.149.202
   port: 443
   type: trojan
-  password: 288124da-0d68-42f4-9f48-70dc4dcc55a6
-  sni: cvFbghYU.859886.XYZ
-  skip-cert-verify: true
+  password: c03d1bce-e54c-4cc0-a0fa-d83e22f15620
+  sni: wwWWwWE.222560.XyZ
   network: ws
   ws-opts:
-    path: /raChT39pjLFYRA5HdHEIupMZeK
+    path: /mLdrBlaGdnFVA6Y34zWUk6JUQ
     headers:
-      Host: cvFbghYU.859886.XYZ
-- name: US_10
-  server: 172.67.135.37
-  port: 443
-  type: trojan
-  password: 07a3df8f-2a2c-42f8-ad92-65889d90f3bf
-  sni: rrrRrRRrT.459.pp.ua
-  network: ws
-  ws-opts:
-    path: /znQImc22ijDwVOkZfoq
-    headers:
-      Host: rrrRrRRrT.459.pp.ua
-- name: US_13
-  server: 104.21.30.167
-  port: 443
-  type: trojan
-  password: a7b22c05-27fd-4a76-8896-2aebaf4cf3a1
-  sni: TttTtTYU.2032.PP.UA
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /mXG7Hx4Y37nTr2Hdmy903WCeD85F1b
-    headers:
-      Host: TttTtTYU.2032.PP.UA
-- name: US_14
-  server: 104.26.5.60
-  port: 443
-  type: trojan
-  password: bpb-trojan
-  sni: zamim340.ggff.net
-  network: ws
-  ws-opts:
-    path: /tr?ed%3D2560
-    headers:
-      Host: zamim340.ggff.net
-- name: US_2
-  server: 104.21.91.180
-  port: 443
-  type: trojan
-  password: bce0c7cb-08d1-46a7-b77b-7bff8b46252f
-  sni: XXXXxxXxXc.666461.xyZ
-  network: ws
-  ws-opts:
-    path: /x9F83IcyjcEyBXZBROjL3Q5vTymr
-    headers:
-      Host: XXXXxxXxXc.666461.xyZ
-- name: US_22
-  server: 172.67.191.140
-  port: 443
-  type: trojan
-  password: c7f423b7-ced8-43da-a9ae-e906cb4a222c
-  sni: DdDdddDDdF.999824.Xyz
-  network: ws
-  ws-opts:
-    path: /dwPcFaK3QxWRQTqot0LE
-    headers:
-      Host: DdDdddDDdF.999824.Xyz
-- name: US_38
-  server: 172.67.162.74
+      Host: wwWWwWE.222560.XyZ
+- name: US_19
+  server: 104.21.57.88
   port: 443
   type: trojan
   password: e9b4bdbd-cc5b-4a90-9616-ea0f1092ec7c
   sni: p09.IrAN.pP.Ua
+  skip-cert-verify: true
   network: ws
   ws-opts:
     path: /s1XRkMWuneQkqtp5KKSues
     headers:
       Host: p09.IrAN.pP.Ua
-- name: US_42
+- name: US_35
+  server: 172.67.160.119
+  port: 443
+  type: trojan
+  password: a96cb093-b164-4bc6-bd27-deb0e385de07
+  sni: UUuUUuUj.999864.XYZ
+  network: ws
+  ws-opts:
+    path: /CNLtVWdiKPpIlRig3qizHXb
+    headers:
+      Host: UUuUUuUj.999864.XYZ
+- name: US_39
+  server: 104.21.91.180
+  port: 443
+  type: trojan
+  password: bce0c7cb-08d1-46a7-b77b-7bff8b46252f
+  sni: XXXXxxXxXc.666461.xyZ
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /x9F83IcyjcEyBXZBROjL3Q5vTymr
+    headers:
+      Host: XXXXxxXxXc.666461.xyZ
+- name: US_48
+  server: www.shopify.com
+  port: 443
+  type: vmess
+  uuid: e9b4bdbd-cc5b-4a90-9616-ea0f1092ec7c
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: p09.iran.pp.ua
+  network: ws
+  ws-opts:
+    path: /VgtsOrriMf1sdep5KKSues
+    headers:
+      Host: p09.iran.pp.ua
+- name: US_49
   server: 172.67.214.21
   port: 443
   type: trojan
@@ -624,3 +618,26 @@ proxies:
     path: /ctdmgeIg3NII3ibrzzKXJGy3S1
     headers:
       Host: XXcdvFgT.191268.xYZ
+- name: US_5
+  server: 172.67.205.157
+  port: 443
+  type: trojan
+  password: 288124da-0d68-42f4-9f48-70dc4dcc55a6
+  sni: SsXCDfR5.986986.shoP
+  network: ws
+  ws-opts:
+    path: /raChT39pjLFYRA5HdHEIupMZeK
+    headers:
+      Host: SsXCDfR5.986986.shoP
+- name: US_52
+  server: 172.67.177.109
+  port: 443
+  type: trojan
+  password: 357b1bba-6400-4944-baff-1b933311ff28
+  sni: EeEEeEEeeeeeeE.666461.xyz
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /HbjLgzKC7MBYIsgt
+    headers:
+      Host: EeEEeEEeeeeeeE.666461.xyz
