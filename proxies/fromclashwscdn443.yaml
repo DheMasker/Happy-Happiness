@@ -1,5 +1,5 @@
 proxies:
-- name: 9b88f1303624457db6c5528db0560122_@_@Hope_Net-join-us-on-Telegram
+- name: 185cf7e8783d42908fe22ea1b607cf80_@_@Hope_Net-join-us-on-Telegram
   server: www.visa.com.tw
   uuid: 8918b792-996c-4bbd-bf1a-6121f7968636
   cipher: auto
@@ -13,7 +13,7 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /vmess-argo?ed=2048
-- name: 2ed8f95aaf674d4d9c5f7be8aa812ecd_@_@Hope_Net-join-us-on-Telegram
+- name: e6f9324257ac48778ec5b998650f9de5_@_@Hope_Net-join-us-on-Telegram
   server: 104.18.149.75
   uuid: cae97b1c-35e8-4cf2-dc1b-52032c3d3fa7
   cipher: auto
@@ -27,6 +27,20 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /aa
+- name: e1efc7b0ab364c5b9d981646ecc9203a_@_@Hope_Net-join-us-on-Telegram
+  server: 57.129.24.141
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /linkvws
 - name: 2|🌀4-TH |  2.6MB/s|55%|Netflix|O...
   server: 38.47.96.30
   alterId: 0
@@ -157,19 +171,6 @@ proxies:
   ws-headers:
     Host: hkd1.quickerlink.xyz
   ws-path: /h6jr23x9h3lqiitg
-- name: 🏁RELAY-172.67.132.44-222_1@221
-  server: nicola.pics
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-headers:
-    Host: nicola.pics
-  ws-path: /linkvws
 - name: 美国 011_2@19
   server: 104.18.92.5
   alterId: 0
@@ -381,6 +382,16 @@ proxies:
     path: /
     headers:
       Host: EeedcFvg.999824.xYZ
+- name: 🇺🇸_US_美国
+  server: mmmkiiuytr.iran.pp.ua
+  network: ws
+  password: e9b4bdbd-cc5b-4a90-9616-ea0f1092ec7c
+  port: 443
+  sni: MMmkIiuYTR.IRaN.pP.Ua
+  type: trojan
+  udp: true
+  ws-opts:
+    path: /s1XRkMWuneQkqtp5KKSues
 - name: VMESS-未知>法国-ChatGPT-1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top:443
   server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
   alterId: 0
@@ -558,18 +569,30 @@ proxies:
     headers:
       Host: eer.freevpnatm.dpdns.org
     path: /XmTzATQPJv9RO3xr1D40NK
-- name: US_1
-  server: 172.67.208.155
+- name: US_16
+  server: 172.67.207.27
   port: 443
   type: trojan
-  password: da128246-33b0-4c88-a44e-d91e9e0a1e05
-  sni: SsSDdDffGBNhJu.2030.Pp.Ua
+  password: 5a5d1112-4ae7-431f-bdde-0d008fb473dd
+  sni: 90.tAIpEI108.dpDnS.orG
+  skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /UmUQq8h08wB9JsgTazwz9
+    path: /685uFbiRrgAsHzTP8d
     headers:
-      Host: SsSDdDffGBNhJu.2030.Pp.Ua
-- name: US_23
+      Host: 90.tAIpEI108.dpDnS.orG
+- name: US_29
+  server: 172.67.204.75
+  port: 443
+  type: trojan
+  password: 9486ff17-2481-40c7-a5c4-d0d307de2509
+  sni: zzzzzzzzzzzzcd.818185.xyz
+  network: ws
+  ws-opts:
+    path: /ORgwL4kEvW32T1dU239ar
+    headers:
+      Host: zzzzzzzzzzzzcd.818185.xyz
+- name: US_4
   server: 104.21.73.150
   port: 443
   type: trojan
@@ -580,19 +603,18 @@ proxies:
     path: /eoIwQ2eV4yO04R1hYgCXNutkS5H
     headers:
       Host: dDDfFfVVBNHju.931.pP.UA
-- name: US_24
-  server: 104.21.57.88
+- name: US_45
+  server: 172.67.149.202
   port: 443
   type: trojan
-  password: e9b4bdbd-cc5b-4a90-9616-ea0f1092ec7c
-  sni: p09.IrAN.pP.Ua
-  skip-cert-verify: true
+  password: c03d1bce-e54c-4cc0-a0fa-d83e22f15620
+  sni: wwWWwWE.222560.XyZ
   network: ws
   ws-opts:
-    path: /s1XRkMWuneQkqtp5KKSues
+    path: /mLdrBlaGdnFVA6Y34zWUk6JUQ
     headers:
-      Host: p09.IrAN.pP.Ua
-- name: US_26
+      Host: wwWWwWE.222560.XyZ
+- name: US_5
   server: 104.21.94.69
   port: 443
   type: trojan
@@ -604,29 +626,7 @@ proxies:
     path: /TDUxZUop9k44oPiit2OdWk0KwirdY
     headers:
       Host: dddDvvbHY7.000890604.XyZ
-- name: US_27
-  server: 172.67.207.27
-  port: 443
-  type: trojan
-  password: 5a5d1112-4ae7-431f-bdde-0d008fb473dd
-  sni: 90.tAIpEI108.dpDnS.orG
-  network: ws
-  ws-opts:
-    path: /685uFbiRrgAsHzTP8d
-    headers:
-      Host: 90.tAIpEI108.dpDnS.orG
-- name: US_39
-  server: 104.21.29.205
-  port: 443
-  type: trojan
-  password: c03d1bce-e54c-4cc0-a0fa-d83e22f15620
-  sni: wwWWwWE.222560.XyZ
-  network: ws
-  ws-opts:
-    path: /mLdrBlaGdnFVA6Y34zWUk6JUQ
-    headers:
-      Host: wwWWwWE.222560.XyZ
-- name: US_4
+- name: US_50
   server: 172.67.173.64
   port: 443
   type: trojan
@@ -637,3 +637,14 @@ proxies:
     path: /mXG7Hx4Y37nTr2Hdmy903WCeD85F1b
     headers:
       Host: TttTtTYU.2032.PP.UA
+- name: US_54
+  server: 172.67.208.155
+  port: 443
+  type: trojan
+  password: da128246-33b0-4c88-a44e-d91e9e0a1e05
+  sni: SsSDdDffGBNhJu.2030.Pp.Ua
+  network: ws
+  ws-opts:
+    path: /UmUQq8h08wB9JsgTazwz9
+    headers:
+      Host: SsSDdDffGBNhJu.2030.Pp.Ua
