@@ -1,5 +1,5 @@
 proxies:
-- name: 185cf7e8783d42908fe22ea1b607cf80_@_@Hope_Net-join-us-on-Telegram
+- name: 83e2d506ec1c48aca68650c66ad130f8_@_@Hope_Net-join-us-on-Telegram
   server: www.visa.com.tw
   uuid: 8918b792-996c-4bbd-bf1a-6121f7968636
   cipher: auto
@@ -13,7 +13,7 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /vmess-argo?ed=2048
-- name: e6f9324257ac48778ec5b998650f9de5_@_@Hope_Net-join-us-on-Telegram
+- name: d7bfcee0065748a381f7ec861d5f3f8a_@_@Hope_Net-join-us-on-Telegram
   server: 104.18.149.75
   uuid: cae97b1c-35e8-4cf2-dc1b-52032c3d3fa7
   cipher: auto
@@ -27,9 +27,9 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /aa
-- name: e1efc7b0ab364c5b9d981646ecc9203a_@_@Hope_Net-join-us-on-Telegram
-  server: 57.129.24.141
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+- name: cbbf346093f8433bae3740bfd02faf65_@_@Hope_Net-join-us-on-Telegram
+  server: cdncdncdn.aikunapp.com
+  uuid: 69dd9741-0ae4-4bd2-bb32-46ca96d05128
   cipher: auto
   alterId: 0
   type: vmess
@@ -38,9 +38,12 @@ proxies:
   tls: true
   udp: false
   client-fingerprint: chrome
+  servername: r-qzlCGlN6avrJRc2S.sm-node.com
   fingerprint: ''
   ws-opts:
-    path: /linkvws
+    headers:
+      host: r-qzlCGlN6avrJRc2S.sm-node.com
+    path: /vmess_ws/smjc/index?ed=8192
 - name: 2|🌀4-TH |  2.6MB/s|55%|Netflix|O...
   server: 38.47.96.30
   alterId: 0
@@ -171,6 +174,19 @@ proxies:
   ws-headers:
     Host: hkd1.quickerlink.xyz
   ws-path: /h6jr23x9h3lqiitg
+- name: 🏁RELAY-172.67.132.44-222_1@221
+  server: nicola.pics
+  alterId: 0
+  cipher: auto
+  network: ws
+  port: 443
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-headers:
+    Host: nicola.pics
+  ws-path: /linkvws
 - name: 美国 011_2@19
   server: 104.18.92.5
   alterId: 0
@@ -339,22 +355,8 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇫🇷FR-45.145.165.114-6818 | 34.219MB
-  server: beyonddsz.cfd
-  port: 443
-  type: vmess
-  uuid: 9b456c2a-f2c1-45e1-87a9-b7628b04bb24
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: beyonddsz.cfd
-- name: RELAY-172.67.191.140-0946 | 18.895MB
-  server: xcvBnMjKi.999824.xyZ
+- name: RELAY-172.67.191.140-1006 | 34.043MB
+  server: ssXxZaSw.999824.xyZ
   port: 443
   type: vmess
   uuid: 512d9674-db12-44ca-a1b5-654244549b65
@@ -366,8 +368,8 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: xcvBnMjKi.999824.xyZ
-- name: RELAY-172.67.191.140-5036 | 3.416MB
+      Host: ssxxzasw.999824.xyz
+- name: RELAY-104.21.89.221-0226 | 19.651MB
   server: EeedcFvg.999824.xYZ
   port: 443
   type: vmess
@@ -376,12 +378,42 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-172.67.191.140-5036 | 3.416MB
+  servername: RELAY-104.21.89.221-0226 | 19.651MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: EeedcFvg.999824.xYZ
+      Host: eeedcfvg.999824.xyz
+- name: 🇺🇸US-77.83.141.171-5090 | 17.84MB
+  server: vc.fly.dev
+  port: 443
+  type: vmess
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇺🇸US-77.83.141.171-5090 | 17.84MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vc.fly.dev
+- name: RELAY-104.18.149.76-0685 | 7.043MB
+  server: 104.18.149.76
+  port: 443
+  type: vmess
+  uuid: de94cc0a-0592-4969-b1fc-97ea8f0ea0b3
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: RELAY-104.18.149.76-0685 | 7.043MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: us.kkp.me.eu.org
 - name: 🇺🇸_US_美国
   server: mmmkiiuytr.iran.pp.ua
   network: ws
@@ -409,22 +441,6 @@ proxies:
     headers:
       HOST: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
     path: /azumase.ren
-- name: 美国 030
-  server: 104.18.149.76
-  alterId: 0
-  cipher: auto
-  delay: 2889
-  network: ws
-  port: 443
-  servername: us.kkp.me.eu.org
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: de94cc0a-0592-4969-b1fc-97ea8f0ea0b3
-  ws-opts:
-    headers:
-      Host: us.kkp.me.eu.org
-    path: /aa
 - name: 美国 038
   server: freeyx.cloudflare88.eu.org
   alterId: 0
@@ -569,75 +585,55 @@ proxies:
     headers:
       Host: eer.freevpnatm.dpdns.org
     path: /XmTzATQPJv9RO3xr1D40NK
-- name: US_16
-  server: 172.67.207.27
+- name: cf|3df2|puddincat07@Telegram
+  server: 104.16.192.159
+  network: ws
+  password: cb1f26aa437d4bfa9b841d28503ce8cc
+  port: 443
+  skip-cert-verify: true
+  sni: jobsapplyworld.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: jobsapplyworld.com
+    path: '%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252F6b777a91'
+- name: DE_1
+  server: 172.67.140.61
   port: 443
   type: trojan
-  password: 5a5d1112-4ae7-431f-bdde-0d008fb473dd
-  sni: 90.tAIpEI108.dpDnS.orG
+  password: bpb-trojan
+  sni: adbt.ir
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /685uFbiRrgAsHzTP8d
+    path: /tr?ed=2560
     headers:
-      Host: 90.tAIpEI108.dpDnS.orG
-- name: US_29
-  server: 172.67.204.75
+      Host: adbt.ir
+- name: US_12
+  server: 172.67.187.28
   port: 443
   type: trojan
-  password: 9486ff17-2481-40c7-a5c4-d0d307de2509
-  sni: zzzzzzzzzzzzcd.818185.xyz
+  password: 4174b95d-115e-4d39-add6-1f8db95bb860
+  sni: rrraasde.iran2035.dpdns.org
   network: ws
   ws-opts:
-    path: /ORgwL4kEvW32T1dU239ar
+    path: /uzJNzgkkYWRWGxgFnoFPw1
     headers:
-      Host: zzzzzzzzzzzzcd.818185.xyz
-- name: US_4
-  server: 104.21.73.150
+      Host: rrraasde.iran2035.dpdns.org
+- name: US_19
+  server: 104.21.14.54
   port: 443
   type: trojan
-  password: a4e8ec0a-75d0-4fc5-837a-4973ed3a9d3e
-  sni: dDDfFfVVBNHju.931.pP.UA
-  network: ws
-  ws-opts:
-    path: /eoIwQ2eV4yO04R1hYgCXNutkS5H
-    headers:
-      Host: dDDfFfVVBNHju.931.pP.UA
-- name: US_45
-  server: 172.67.149.202
-  port: 443
-  type: trojan
-  password: c03d1bce-e54c-4cc0-a0fa-d83e22f15620
-  sni: wwWWwWE.222560.XyZ
-  network: ws
-  ws-opts:
-    path: /mLdrBlaGdnFVA6Y34zWUk6JUQ
-    headers:
-      Host: wwWWwWE.222560.XyZ
-- name: US_5
-  server: 104.21.94.69
-  port: 443
-  type: trojan
-  password: 13e26f64-2e0c-4461-92cd-d83294cc18f0
-  sni: dddDvvbHY7.000890604.XyZ
+  password: e4cbe8b8-37db-4aaa-8469-b84f34c51ebc
+  sni: 6666YHjU.777159.xYz
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /TDUxZUop9k44oPiit2OdWk0KwirdY
+    path: /dilyfCPEmLvYr5hYXD
     headers:
-      Host: dddDvvbHY7.000890604.XyZ
-- name: US_50
-  server: 172.67.173.64
-  port: 443
-  type: trojan
-  password: a7b22c05-27fd-4a76-8896-2aebaf4cf3a1
-  sni: TttTtTYU.2032.PP.UA
-  network: ws
-  ws-opts:
-    path: /mXG7Hx4Y37nTr2Hdmy903WCeD85F1b
-    headers:
-      Host: TttTtTYU.2032.PP.UA
-- name: US_54
+      Host: 6666YHjU.777159.xYz
+- name: US_21
   server: 172.67.208.155
   port: 443
   type: trojan
@@ -648,3 +644,52 @@ proxies:
     path: /UmUQq8h08wB9JsgTazwz9
     headers:
       Host: SsSDdDffGBNhJu.2030.Pp.Ua
+- name: US_37
+  server: 172.67.163.102
+  port: 443
+  type: trojan
+  password: a4e8ec0a-75d0-4fc5-837a-4973ed3a9d3e
+  sni: dDDfFfVVBNHju.931.pP.UA
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /eoIwQ2eV4yO04R1hYgCXNutkS5H
+    headers:
+      Host: dDDfFfVVBNHju.931.pP.UA
+- name: US_41
+  server: 172.67.149.202
+  port: 443
+  type: trojan
+  password: c03d1bce-e54c-4cc0-a0fa-d83e22f15620
+  sni: wwWWwWE.222560.XyZ
+  network: ws
+  ws-opts:
+    path: /mLdrBlaGdnFVA6Y34zWUk6JUQ
+    headers:
+      Host: wwWWwWE.222560.XyZ
+- name: US_43
+  server: 172.67.161.129
+  port: 443
+  type: trojan
+  password: 662e38ba-8427-4955-94aa-76f5347a0ce8
+  sni: EeEeeEEeEdF.666470.XyZ
+  network: ws
+  ws-opts:
+    path: /hCbtKwyNTRDjtF5UvWyyVQu
+    headers:
+      Host: EeEeeEEeEdF.666470.XyZ
+- name: US_50
+  server: sSsdCVfBGNjkI.931.PP.Ua
+  port: 443
+  type: vmess
+  uuid: a4e8ec0a-75d0-4fc5-837a-4973ed3a9d3e
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: sssdcvfbgnjki.931.pp.ua
+  network: ws
+  ws-opts:
+    path: /14Fziqw1hYgCXNutkS5H
+    headers:
+      Host: sSsdCVfBGNjkI.931.PP.Ua
