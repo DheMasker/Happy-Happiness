@@ -92,7 +92,7 @@ proxies:
     headers:
       host: shsus.256709394.xyz
     path: /RVr8ALFBsgTfBC
-- name: 2|🌀4-TH |  2.6MB/s|55%|Netflix|O...
+- name: 0|🌀4-TH |  2.6MB/s|55%|Netflix|O...
   server: 38.47.96.30
   alterId: 0
   cipher: auto
@@ -107,7 +107,7 @@ proxies:
     headers:
       Host: th.lzj520hxw.dpdns.org
     path: /lzjjj
-- name: 14|US_speednode_0265
+- name: 13|US_speednode_0265
   server: 172.66.45.35
   network: ws
   password: juzi
@@ -493,6 +493,18 @@ proxies:
     path: /
     headers:
       Host: us.kkp.me.eu.org
+- name: 🇺🇸_US_美国
+  server: 104.21.6.179
+  network: ws
+  password: 6757b7d6-fa32-4708-b5d1-30e3cf928b51
+  port: 443
+  sni: ZZzzzZZ.890601.XYZ
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      host: ZZzzzZZ.890601.XYZ
+    path: /l96MZ8se5Kl2p8BiMhP42l
 - name: VMESS-未知>法国-ChatGPT-1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top:443
   server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
   alterId: 0
@@ -538,8 +550,43 @@ proxies:
     headers:
       Host: us148.vp1000.net
     path: /cp100vp800kkkdsnx
+- name: CA_3
+  server: 104.21.77.79
+  port: 443
+  type: trojan
+  password: 288124da-0d68-42f4-9f48-70dc4dcc55a6
+  sni: SsXCDfR5.986986.shoP
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /raChT39pjLFYRA5HdHEIupMZeK
+    headers:
+      Host: SsXCDfR5.986986.shoP
 - name: US_10
-  server: 172.67.207.27
+  server: 104.21.17.127
+  port: 443
+  type: trojan
+  password: da128246-33b0-4c88-a44e-d91e9e0a1e05
+  sni: x4.859885.XYz
+  network: ws
+  ws-opts:
+    path: /UmUQq8h08wB9JsgTazwz9
+    headers:
+      Host: x4.859885.XYz
+- name: US_11
+  server: 172.67.187.28
+  port: 443
+  type: trojan
+  password: 57c4f3b6-19bd-493e-bf85-aa4a92cc20e7
+  sni: iIiJjhgfDSeeeEr.iRan2035.dPdNS.ORG
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /gGGQCwonAwKQmIGQ02idh
+    headers:
+      Host: iIiJjhgfDSeeeEr.iRan2035.dPdNS.ORG
+- name: US_12
+  server: 104.21.22.211
   port: 443
   type: trojan
   password: 5a5d1112-4ae7-431f-bdde-0d008fb473dd
@@ -550,18 +597,78 @@ proxies:
     path: /685uFbiRrgAsHzTP8d
     headers:
       Host: 90.tAIpEI108.dpDnS.orG
-- name: US_11
-  server: 104.21.63.226
+- name: US_13
+  server: 104.21.76.21
   port: 443
   type: trojan
-  password: cf8c791e-9d0b-4e90-aaf6-41ac62468416
-  sni: aaaAAaaaAaaAZ.457.pp.UA
+  password: 13e26f64-2e0c-4461-92cd-d83294cc18f0
+  sni: WwwDe.00890604.XyZ
+  skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /XkJmZCwVxJO8180gomOew3d
+    path: /TDUxZUop9k44oPiit2OdWk0KwirdY
     headers:
-      Host: aaaAAaaaAaaAZ.457.pp.UA
-- name: US_12
+      Host: WwwDe.00890604.XyZ
+- name: US_15
+  server: 104.21.14.54
+  port: 443
+  type: trojan
+  password: e4cbe8b8-37db-4aaa-8469-b84f34c51ebc
+  sni: 6666YHjU.777159.xYz
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /dilyfCPEmLvYr5hYXD
+    headers:
+      Host: 6666YHjU.777159.xYz
+- name: US_25
+  server: 104.21.66.157
+  port: 443
+  type: trojan
+  password: 662e38ba-8427-4955-94aa-76f5347a0ce8
+  sni: cccCcCCCV.666470.XYz
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /hCbtKwyNTRDjtF5UvWyyVQu
+    headers:
+      Host: cccCcCCCV.666470.XYz
+- name: US_26
+  server: 104.21.84.58
+  port: 443
+  type: trojan
+  password: a94fafdb-10d6-46c2-be8a-5c2e8358fbb0
+  sni: DDddDDdDDdfrRrrrRrRY.iRAn2035.DpDNs.ORg
+  network: ws
+  ws-opts:
+    path: /xa846InEcmjyiKVby2Lp
+    headers:
+      Host: DDddDDdDDdfrRrrrRrRY.iRAn2035.DpDNs.ORg
+- name: US_28
+  server: 104.21.71.131
+  port: 443
+  type: trojan
+  password: ffcf7ec1-3e09-4821-b3d9-b426a107b73b
+  sni: xxcdfR.999854.xyz
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /XmTzATQPJv9RO3xr1D40NK
+    headers:
+      Host: xxcdfR.999854.xyz
+- name: US_30
+  server: 172.67.177.109
+  port: 443
+  type: trojan
+  password: dc50eb1d-244d-4711-b168-a101a5e6fb1b
+  sni: yyyhhjki.666461.xyz
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /c6nDz4OnpXiNaWb
+    headers:
+      Host: yyyhhjki.666461.xyz
+- name: US_31
   server: 104.21.77.149
   port: 443
   type: trojan
@@ -572,41 +679,7 @@ proxies:
     path: /yBqYg1mv8EDa06b88JSo
     headers:
       Host: VvvvVVvVvvvBBbNNMJkiOO.999834.xYz
-- name: US_13
-  server: 172.67.187.28
-  port: 443
-  type: trojan
-  password: a94fafdb-10d6-46c2-be8a-5c2e8358fbb0
-  sni: NnNNnNNNNNjJjJJjhG.IRan2035.dPDnS.Org
-  network: ws
-  ws-opts:
-    path: /xa846InEcmjyiKVby2Lp
-    headers:
-      Host: NnNNnNNNNNjJjJJjhG.IRan2035.dPDnS.Org
-- name: US_14
-  server: 172.67.161.129
-  port: 443
-  type: trojan
-  password: 662e38ba-8427-4955-94aa-76f5347a0ce8
-  sni: EeEeeEEeEdF.666470.XyZ
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /hCbtKwyNTRDjtF5UvWyyVQu
-    headers:
-      Host: EeEeeEEeEdF.666470.XyZ
-- name: US_25
-  server: 104.21.91.180
-  port: 443
-  type: trojan
-  password: dc50eb1d-244d-4711-b168-a101a5e6fb1b
-  sni: yyyhhjki.666461.xyz
-  network: ws
-  ws-opts:
-    path: /c6nDz4OnpXiNaWb
-    headers:
-      Host: yyyhhjki.666461.xyz
-- name: US_34
+- name: US_47
   server: 104.21.89.221
   port: 443
   type: trojan
@@ -617,37 +690,14 @@ proxies:
     path: /dwPcFaK3QxWRQTqot0LE
     headers:
       Host: DdDdddDDdF.999824.Xyz
-- name: US_38
-  server: 104.19.173.68
+- name: US_7
+  server: 172.67.216.240
   port: 443
   type: trojan
-  password: trojan
-  sni: azadnet-9ya.pages.dev
+  password: cf8c791e-9d0b-4e90-aaf6-41ac62468416
+  sni: nnNnNNnNnnM.857856.XYZ
   network: ws
   ws-opts:
-    path: /?ed=2560
+    path: /XkJmZCwVxJO8180gomOew3d
     headers:
-      Host: azadnet-9ya.pages.dev
-- name: US_5
-  server: 104.21.88.226
-  port: 443
-  type: trojan
-  password: 4174b95d-115e-4d39-add6-1f8db95bb860
-  sni: qqqqqqqqqqa.www890604.dpdns.org
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /uzJNzgkkYWRWGxgFnoFPw1
-    headers:
-      Host: qqqqqqqqqqa.www890604.dpdns.org
-- name: US_56
-  server: 172.67.135.23
-  port: 443
-  type: trojan
-  password: 6757b7d6-fa32-4708-b5d1-30e3cf928b51
-  sni: ZZzzzZZ.890601.XYZ
-  network: ws
-  ws-opts:
-    path: /l96MZ8se5Kl2p8BiMhP42l
-    headers:
-      Host: ZZzzzZZ.890601.XYZ
+      Host: nnNnNNnNnnM.857856.XYZ
