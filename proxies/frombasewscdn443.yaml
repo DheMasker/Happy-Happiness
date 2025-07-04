@@ -15,20 +15,20 @@ proxies:
     headers:
       Host: th.lzj520hxw.dpdns.org
   udp: true
-- name: '%F0%9F%8F%81RELAY-172.66.46.221-1098'
+- name: '%F0%9F%87%B8%F0%9F%87%ACSG-138.2.64.229-1066'
   server: 104.22.5.240
   port: 443
   type: trojan
-  password: juzi
+  password: ttfang
   skip-cert-verify: true
-  sni: juzi8186-sr1.pages.dev
+  sni: ttfang.fange.me
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: juzi8186-sr1.pages.dev
+      Host: ttfang.fange.me
   udp: true
-- name: '%F0%9F%8F%81RELAY-172.67.131.245-8218'
+- name: '%F0%9F%8F%81RELAY-172.67.131.245-8183'
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -41,7 +41,7 @@ proxies:
     headers:
       Host: series-v1.samanehha.co
   udp: true
-- name: '%F0%9F%87%BA%F0%9F%87%B8US-199.59.243.228-8310'
+- name: '%F0%9F%87%BA%F0%9F%87%B8US-199.59.243.228-8275'
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -54,7 +54,7 @@ proxies:
     headers:
       Host: c5mt.cdncisco.org
   udp: true
-- name: '%F0%9F%87%AB%F0%9F%87%B7FR-146.70.158.111-9041'
+- name: '%F0%9F%87%AB%F0%9F%87%B7FR-146.70.158.111-9006'
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -67,7 +67,7 @@ proxies:
     headers:
       Host: amin.karkas1.ir
   udp: true
-- name: '%F0%9F%8F%81RELAY-104.21.79.246-9241'
+- name: '%F0%9F%8F%81RELAY-104.21.79.246-9206'
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -80,7 +80,7 @@ proxies:
     headers:
       Host: notdirect.howhealthyistoomajreally.homes
   udp: true
-- name: '%F0%9F%8F%81RELAY-104.16.183.101-9303'
+- name: '%F0%9F%8F%81RELAY-104.16.183.101-9268'
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -1693,6 +1693,22 @@ proxies:
     headers:
       Host: sni.cloudflare.com
   udp: true
+- name: IE 🇮🇪 ┇ VMESS-WS-TLS - AMAZON-02 ┇ 54.228.42.199
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 17af76e1-a5d7-41ab-ae87-b48f185075d1
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: xr-1.herokuapp.com
+  network: ws
+  ws-opts:
+    path: /17af76e1-a5d7-41ab-ae87-b48f185075d1-vmess
+    headers:
+      Host: xr-1.herokuapp.com
+  udp: true
 - name: IN 🇮🇳 ┇ VMESS-WS-TLS - DIGITALOCEAN-ASN ┇ 139.59.0.29
   server: 104.22.5.240
   port: 443
@@ -1837,7 +1853,7 @@ proxies:
     headers:
       Host: web-1.kyann.de
   udp: true
-- name: IR 🇮🇷 ┇ VMESS-WS-TLS - Noyan Abr Arvan Co. ( Private Joint Stock) ┇ 185.143.233.120
+- name: IR 🇮🇷 ┇ VMESS-WS-TLS - Noyan Abr Arvan Co. ( Private Joint Stock) ┇ 185.143.234.120
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -2973,7 +2989,7 @@ proxies:
     headers:
       Host: woideneu7.jsworld.eu.org
   udp: true
-- name: US 🇺🇸 ┇ VMESS-WS-TLS - AMAZON-02 ┇ 108.156.105.38
+- name: US 🇺🇸 ┇ VMESS-WS-TLS - AMAZON-02 ┇ 3.167.217.151
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -3004,22 +3020,6 @@ proxies:
     path: /
     headers:
       Host: us3.loc-m.xyz
-  udp: true
-- name: US 🇺🇸 ┇ VMESS-WS-TLS - AMAZON-AES ┇ 52.5.82.174
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: 17af76e1-a5d7-41ab-ae87-b48f185075d1
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: xr-1.herokuapp.com
-  network: ws
-  ws-opts:
-    path: /17af76e1-a5d7-41ab-ae87-b48f185075d1-vmess
-    headers:
-      Host: xr-1.herokuapp.com
   udp: true
 - name: US 🇺🇸 ┇ VMESS-WS-TLS - AMAZON-AES ┇ 54.224.34.30
   server: 104.22.5.240
@@ -3229,6 +3229,22 @@ proxies:
     headers:
       Host: s1.mehrmah.shop
   udp: true
+- name: US 🇺🇸 ┇ VMESS-WS-TLS - Aiyun HK Network ┇ 45.89.104.129
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: c26f81db-422e-48e5-8324-0970dde4553f
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: xc147-2.meiziba5566.com
+  network: ws
+  ws-opts:
+    path: /c26f81db
+    headers:
+      Host: xc147-2.meiziba5566.com
+  udp: true
 - name: US 🇺🇸 ┇ VMESS-WS-TLS - Aiyun HK Network ┇ 198.23.184.36
   server: 104.22.5.240
   port: 443
@@ -3244,22 +3260,6 @@ proxies:
     path: /6b95d340
     headers:
       Host: xc125-1.meiziba5566.com
-  udp: true
-- name: US 🇺🇸 ┇ VMESS-WS-TLS - Aiyun HK Network ┇ 198.23.184.89
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: f40a8d65-a9ac-42ce-ebcc-9e6447a9866d
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: xc115-1.meiziba5566.com
-  network: ws
-  ws-opts:
-    path: /f40a8d65
-    headers:
-      Host: xc115-1.meiziba5566.com
   udp: true
 - name: US 🇺🇸 ┇ VMESS-WS-TLS - Aiyun HK Network ┇ 198.23.184.128
   server: 104.22.5.240
@@ -3277,21 +3277,21 @@ proxies:
     headers:
       Host: xc011-2.meiziba5566.com
   udp: true
-- name: US 🇺🇸 ┇ VMESS-WS-TLS - Aiyun HK Network ┇ 45.89.104.129
+- name: US 🇺🇸 ┇ VMESS-WS-TLS - Aiyun HK Network ┇ 198.23.184.89
   server: 104.22.5.240
   port: 443
   type: vmess
-  uuid: c26f81db-422e-48e5-8324-0970dde4553f
+  uuid: f40a8d65-a9ac-42ce-ebcc-9e6447a9866d
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: xc147-2.meiziba5566.com
+  servername: xc115-1.meiziba5566.com
   network: ws
   ws-opts:
-    path: /c26f81db
+    path: /f40a8d65
     headers:
-      Host: xc147-2.meiziba5566.com
+      Host: xc115-1.meiziba5566.com
   udp: true
 - name: US 🇺🇸 ┇ VMESS-WS-TLS - Aiyun HK Network ┇ 198.23.184.178
   server: 104.22.5.240
@@ -3565,7 +3565,7 @@ proxies:
     headers:
       Host: usa6.connecton.surf
   udp: true
-- name: US 🇺🇸 ┇ VMESS-WS-TLS - FASTLY ┇ 146.75.78.207
+- name: US 🇺🇸 ┇ VMESS-WS-TLS - FASTLY ┇ 146.75.94.207
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -3597,7 +3597,7 @@ proxies:
     headers:
       Host: gov.uk
   udp: true
-- name: US 🇺🇸 ┇ VMESS-WS-TLS - FASTLY ┇ 146.75.78.133
+- name: US 🇺🇸 ┇ VMESS-WS-TLS - FASTLY ┇ 146.75.94.133
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -3629,7 +3629,7 @@ proxies:
     headers:
       Host: loki.oracle
   udp: true
-- name: US 🇺🇸 ┇ VMESS-WS-TLS - FASTLY ┇ 146.75.77.29
+- name: US 🇺🇸 ┇ VMESS-WS-TLS - FASTLY ┇ 146.75.93.29
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -3645,7 +3645,7 @@ proxies:
     headers:
       Host: www.Kayak.com
   udp: true
-- name: US 🇺🇸 ┇ VMESS-WS-TLS - FASTLY ┇ 151.101.192.155
+- name: US 🇺🇸 ┇ VMESS-WS-TLS - FASTLY ┇ 151.101.64.155
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -3661,7 +3661,7 @@ proxies:
     headers:
       Host: biography.com
   udp: true
-- name: US 🇺🇸 ┇ VMESS-WS-TLS - FASTLY ┇ 151.101.130.187
+- name: US 🇺🇸 ┇ VMESS-WS-TLS - FASTLY ┇ 151.101.2.187
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -3677,7 +3677,7 @@ proxies:
     headers:
       Host: target.com
   udp: true
-- name: US 🇺🇸 ┇ VMESS-WS-TLS - FASTLY ┇ 146.75.78.191
+- name: US 🇺🇸 ┇ VMESS-WS-TLS - FASTLY ┇ 146.75.94.191
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -3693,7 +3693,7 @@ proxies:
     headers:
       Host: www.smcacre.gov
   udp: true
-- name: US 🇺🇸 ┇ VMESS-WS-TLS - FDCSERVERS ┇ 50.7.87.86
+- name: US 🇺🇸 ┇ VMESS-WS-TLS - FDCSERVERS ┇ 50.7.85.219
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -3788,22 +3788,6 @@ proxies:
     path: /ws
     headers:
       Host: usa-washington.lvuft.com
-  udp: true
-- name: US 🇺🇸 ┇ VMESS-WS-TLS - LEASEWEB-USA-WDC ┇ 162.210.199.85
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: 9fbb6122-46e7-413b-b29d-749eef446c8d
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: oz.moonfree.top
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: oz.moonfree.top
   udp: true
 - name: US 🇺🇸 ┇ VMESS-WS-TLS - MULTA-ASN1 ┇ 154.94.214.2
   server: 104.22.5.240
@@ -4081,358 +4065,6 @@ proxies:
   server: 104.22.5.240
   port: 443
   type: vmess
-  uuid: 0a3cd062-241a-43fc-9c50-eccacbbd5aae
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: hkvm.gecs.top
-  network: ws
-  ws-opts:
-    path: /vm
-    headers:
-      Host: hkvm.gecs.top
-  udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: ffffffff-ffff-ffff-ffff-ffffffffffff
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: RELAY-104.16.231.132-6237 | 1.077MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: RELAY-104.16.231.132-6237 | 1.077MB
-  udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: a0605527-28e4-449c-80ee-5642cc16a8af
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: ca0.899994.xyz
-  network: ws
-  ws-opts:
-    path: /index
-    headers:
-      Host: ca0.899994.xyz
-  udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: 4d04b30c-ef7b-4a07-8f9e-f581ec171f8a
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: us7-01.890624.xyz
-  network: ws
-  ws-opts:
-    path: /bua2hMcbA8wMzbGFtV
-    headers:
-      Host: us7-01.890624.xyz
-  udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: 4d04b30c-ef7b-4a07-8f9e-f581ec171f8a
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: us7-02.890624.xyz
-  network: ws
-  ws-opts:
-    path: /bua2hMcbA8wMzbGFtV
-    headers:
-      Host: us7-02.890624.xyz
-  udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: c3f6d33d-fb7e-48cf-c6d9-5397dac3a9be
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: s1.mehrmah.shop
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: s1.mehrmah.shop
-  udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: cd0e795a-4f26-4f8c-9981-ed8b7dcb6126
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: qwe.852224.GgfF.nET
-  network: ws
-  ws-opts:
-    path: /SpXidaRA9PbqU8RhisheV
-    headers:
-      Host: qwe.852224.GgfF.nET
-  udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: 89c1aea7-4d0d-4013-b663-0f94a3e6bdbd
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: sanjose05.852224.ggff.net
-  network: ws
-  ws-opts:
-    path: /YfB29GXf4cThJQeJb
-    headers:
-      Host: sanjose05.852224.ggff.net
-  udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: 4664df84-15cf-4e57-828b-0782f125e898
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: kr2.ttcc.tech
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: kr2.ttcc.tech
-  udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: 576c81b6-4976-4fe3-b1a9-05a9c302e98e
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: us10-09.852224.ggff.net
-  network: ws
-  ws-opts:
-    path: /SNwNdunw28lVztopw90eoXel
-    headers:
-      Host: us10-09.852224.ggff.net
-  udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: 576c81b6-4976-4fe3-b1a9-05a9c302e98e
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: us10-04.852224.ggff.net
-  network: ws
-  ws-opts:
-    path: /SNwNdunw28lVztopw90eoXel
-    headers:
-      Host: us10-04.852224.ggff.net
-  udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: 89c1aea7-4d0d-4013-b663-0f94a3e6bdbd
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: sanjose01.890614.filegear-sg.me
-  network: ws
-  ws-opts:
-    path: /YfB29GXf4cThJQeJb
-    headers:
-      Host: sanjose01.890614.filegear-sg.me
-  udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: 5453ae26-250d-4e79-b4ec-016baf806865
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: D2860d7d-07ee-A0Db-EF7B-54808dB00b03.890601.pP.UA
-  network: ws
-  ws-opts:
-    path: /h7Rcu0y30lhjdVjJ3gc4aj
-    headers:
-      Host: D2860d7d-07ee-A0Db-EF7B-54808dB00b03.890601.pP.UA
-  udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: 5453ae26-250d-4e79-b4ec-016baf806865
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: 2E21CEDc-fA8B-4020-8Ce0-390e7287D276.890603.Pp.uA
-  network: ws
-  ws-opts:
-    path: /h7Rcu0y30lhjdVjJ3gc4aj
-    headers:
-      Host: 2E21CEDc-fA8B-4020-8Ce0-390e7287D276.890603.Pp.uA
-  udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: 0212fab5-e93c-4904-b7a8-187fd535f354
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: 3sdfgvcxxx.938.pp.ua
-  network: ws
-  ws-opts:
-    path: /P879mtCoHQqaWO67qEaMINZ1
-    headers:
-      Host: 3sdfgvcxxx.938.pp.ua
-  udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: c99929e1-9c82-4a33-d11e-f177247b8f63
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: ray.skymirror.cc
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ray.skymirror.cc
-  udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: 6796611b-260e-4d63-9016-20c27b12e420
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: u8.huvicloud.com
-  network: ws
-  ws-opts:
-    path: /6796611b-260e-4d63-9016-20c27b12e420
-    headers:
-      Host: u8.huvicloud.com
-  udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: 15b24b56-d667-4fa8-b548-f3dc942fb461
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: 7fa54343-7c0a-45c9.2031.pp.ua
-  network: ws
-  ws-opts:
-    path: /usYhm60UxQ8YJFJxz
-    headers:
-      Host: 7fa54343-7c0a-45c9.2031.pp.ua
-  udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: 906ba92f-ef96-4133-8eee-f33202a5a721
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: 9x.938.pp.ua
-  network: ws
-  ws-opts:
-    path: /DAxJddOdTd5pVam9w
-    headers:
-      Host: 9x.938.pp.ua
-  udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: 0a28b420-4f7c-43ad-a29e-80068ce08263
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: m11serfgh.459.pp.ua
-  network: ws
-  ws-opts:
-    path: /lhU8ShsoPZlulnnYPb86csp
-    headers:
-      Host: m11serfgh.459.pp.ua
-  udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: 02869733-3e98-46e6-a0c3-a6a893ae041b
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: XcDfGtYU7.999182.XYZ
-  network: ws
-  ws-opts:
-    path: /Nv4cTUkD1j29wMBnDE
-    headers:
-      Host: XcDfGtYU7.999182.XYZ
-  udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: 906ba92f-ef96-4133-8eee-f33202a5a721
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: 9uyiopsdfh.iran.pp.ua
-  network: ws
-  ws-opts:
-    path: /DAxJddOdTd5pVam9w
-    headers:
-      Host: 9uyiopsdfh.iran.pp.ua
-  udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
-  server: 104.22.5.240
-  port: 443
-  type: vmess
   uuid: f9e4b7a2-9f13-4b8e-9c4d-7f2b3u8a6f51
   alterId: 0
   cipher: auto
@@ -4481,38 +4113,6 @@ proxies:
   server: 104.22.5.240
   port: 443
   type: vmess
-  uuid: 50ef0b23-f14b-459f-97aa-d0f346189d2a
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: Join.MelodyFeenEt2.shoP.
-  network: ws
-  ws-opts:
-    path: /mail/
-    headers:
-      Host: Join.MelodyFeenEt2.shoP.
-  udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: 82ff6d30-2920-4ebd-b95c-b016ede1a841
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: gs03-1.guoshi1520.com
-  network: ws
-  ws-opts:
-    path: /82ff6d30
-    headers:
-      Host: gs03-1.guoshi1520.com
-  udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
-  server: 104.22.5.240
-  port: 443
-  type: vmess
   uuid: 2217affb-e96a-4aab-8e74-ce2adcedcc81
   alterId: 0
   cipher: auto
@@ -4524,6 +4124,22 @@ proxies:
     path: /53019/mehdi
     headers:
       Host: Freedomisnear.onetwothree123.ir
+  udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: a0605527-28e4-449c-80ee-5642cc16a8af
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: ca0.899994.xyz
+  network: ws
+  ws-opts:
+    path: /index
+    headers:
+      Host: ca0.899994.xyz
   udp: true
 - name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
   server: 104.22.5.240
@@ -4593,6 +4209,38 @@ proxies:
   server: 104.22.5.240
   port: 443
   type: vmess
+  uuid: 4d04b30c-ef7b-4a07-8f9e-f581ec171f8a
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: us7-01.890624.xyz
+  network: ws
+  ws-opts:
+    path: /bua2hMcbA8wMzbGFtV
+    headers:
+      Host: us7-01.890624.xyz
+  udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 89c1aea7-4d0d-4013-b663-0f94a3e6bdbd
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: sanjose01.890614.filegear-sg.me
+  network: ws
+  ws-opts:
+    path: /YfB29GXf4cThJQeJb
+    headers:
+      Host: sanjose01.890614.filegear-sg.me
+  udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
+  server: 104.22.5.240
+  port: 443
+  type: vmess
   uuid: 89c1aea7-4d0d-4013-b663-0f94a3e6bdbd
   alterId: 0
   cipher: auto
@@ -4641,6 +4289,54 @@ proxies:
   server: 104.22.5.240
   port: 443
   type: vmess
+  uuid: 576c81b6-4976-4fe3-b1a9-05a9c302e98e
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: us10-04.852224.ggff.net
+  network: ws
+  ws-opts:
+    path: /SNwNdunw28lVztopw90eoXel
+    headers:
+      Host: us10-04.852224.ggff.net
+  udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: c3f6d33d-fb7e-48cf-c6d9-5397dac3a9be
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: s1.mehrmah.shop
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: s1.mehrmah.shop
+  udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 4d04b30c-ef7b-4a07-8f9e-f581ec171f8a
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: us7-02.890624.xyz
+  network: ws
+  ws-opts:
+    path: /bua2hMcbA8wMzbGFtV
+    headers:
+      Host: us7-02.890624.xyz
+  udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
+  server: 104.22.5.240
+  port: 443
+  type: vmess
   uuid: 89c1aea7-4d0d-4013-b663-0f94a3e6bdbd
   alterId: 0
   cipher: auto
@@ -4652,6 +4348,102 @@ proxies:
     path: /YfB29GXf4cThJQeJb
     headers:
       Host: sanjose06.852224.ggff.net
+  udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: cd0e795a-4f26-4f8c-9981-ed8b7dcb6126
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: QWe.852224.GGFF.NEt
+  network: ws
+  ws-opts:
+    path: /SpXidaRA9PbqU8RhisheV
+    headers:
+      Host: QWe.852224.GGFF.NEt
+  udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 89c1aea7-4d0d-4013-b663-0f94a3e6bdbd
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: sanjose05.852224.ggff.net
+  network: ws
+  ws-opts:
+    path: /YfB29GXf4cThJQeJb
+    headers:
+      Host: sanjose05.852224.ggff.net
+  udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 4664df84-15cf-4e57-828b-0782f125e898
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: kr2.ttcc.tech
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: kr2.ttcc.tech
+  udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 576c81b6-4976-4fe3-b1a9-05a9c302e98e
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: us10-09.852224.ggff.net
+  network: ws
+  ws-opts:
+    path: /SNwNdunw28lVztopw90eoXel
+    headers:
+      Host: us10-09.852224.ggff.net
+  udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 15b24b56-d667-4fa8-b548-f3dc942fb461
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: 7fa54343-7c0a-45c9.2031.pp.ua
+  network: ws
+  ws-opts:
+    path: /usYhm60UxQ8YJFJxz
+    headers:
+      Host: 7fa54343-7c0a-45c9.2031.pp.ua
+  udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 0212fab5-e93c-4904-b7a8-187fd535f354
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: 3sdfgvcxxx.938.pp.ua
+  network: ws
+  ws-opts:
+    path: /P879mtCoHQqaWO67qEaMINZ1
+    headers:
+      Host: 3sdfgvcxxx.938.pp.ua
   udp: true
 - name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
   server: 104.22.5.240
@@ -4673,6 +4465,54 @@ proxies:
   server: 104.22.5.240
   port: 443
   type: vmess
+  uuid: 6796611b-260e-4d63-9016-20c27b12e420
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: u8.huvicloud.com
+  network: ws
+  ws-opts:
+    path: /6796611b-260e-4d63-9016-20c27b12e420
+    headers:
+      Host: u8.huvicloud.com
+  udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: c99929e1-9c82-4a33-d11e-f177247b8f63
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: ray.skymirror.cc
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ray.skymirror.cc
+  udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 906ba92f-ef96-4133-8eee-f33202a5a721
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: 9x.938.pp.ua
+  network: ws
+  ws-opts:
+    path: /DAxJddOdTd5pVam9w
+    headers:
+      Host: 9x.938.pp.ua
+  udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
+  server: 104.22.5.240
+  port: 443
+  type: vmess
   uuid: d955cf75-5206-5bd4-beff-3b9ce6db67b0
   alterId: 0
   cipher: auto
@@ -4684,6 +4524,134 @@ proxies:
     path: /vmess#DONT-FORGET-TO-SUPPORT-SSHMAX.COM-TO-KEEP-THIS-SERVER-ALIVE
     headers:
       Host: se.vmess.comnpmjs.com
+  udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 0a28b420-4f7c-43ad-a29e-80068ce08263
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: m11serfgh.459.pp.ua
+  network: ws
+  ws-opts:
+    path: /lhU8ShsoPZlulnnYPb86csp
+    headers:
+      Host: m11serfgh.459.pp.ua
+  udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 906ba92f-ef96-4133-8eee-f33202a5a721
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: 9uyiopsdfh.iran.pp.ua
+  network: ws
+  ws-opts:
+    path: /DAxJddOdTd5pVam9w
+    headers:
+      Host: 9uyiopsdfh.iran.pp.ua
+  udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 50ef0b23-f14b-459f-97aa-d0f346189d2a
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: Join.MelodyFeenEt2.shoP.
+  network: ws
+  ws-opts:
+    path: /mail/
+    headers:
+      Host: Join.MelodyFeenEt2.shoP.
+  udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 0a3cd062-241a-43fc-9c50-eccacbbd5aae
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: hkvm.gecs.top
+  network: ws
+  ws-opts:
+    path: /vm
+    headers:
+      Host: hkvm.gecs.top
+  udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: ffffffff-ffff-ffff-ffff-ffffffffffff
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: RELAY-104.16.231.132-6237 | 1.077MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: RELAY-104.16.231.132-6237 | 1.077MB
+  udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 5453ae26-250d-4e79-b4ec-016baf806865
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: D2860d7d-07ee-A0Db-EF7B-54808dB00b03.890601.pP.UA
+  network: ws
+  ws-opts:
+    path: /h7Rcu0y30lhjdVjJ3gc4aj
+    headers:
+      Host: D2860d7d-07ee-A0Db-EF7B-54808dB00b03.890601.pP.UA
+  udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 5453ae26-250d-4e79-b4ec-016baf806865
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: 2E21CEDc-fA8B-4020-8Ce0-390e7287D276.890603.Pp.uA
+  network: ws
+  ws-opts:
+    path: /h7Rcu0y30lhjdVjJ3gc4aj
+    headers:
+      Host: 2E21CEDc-fA8B-4020-8Ce0-390e7287D276.890603.Pp.uA
+  udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 02869733-3e98-46e6-a0c3-a6a893ae041b
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: XcDfGtYU7.999182.XYZ
+  network: ws
+  ws-opts:
+    path: /Nv4cTUkD1j29wMBnDE
+    headers:
+      Host: XcDfGtYU7.999182.XYZ
   udp: true
 - name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
   server: 104.22.5.240
@@ -9905,22 +9873,6 @@ proxies:
   server: 104.22.5.240
   port: 443
   type: vmess
-  uuid: A59E320C-BAC6-45E3-8A27-1518610708D0
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: Amsterdam.v2ray.online
-  network: ws
-  ws-opts:
-    path: /speedtest
-    headers:
-      Host: Amsterdam.v2ray.online
-  udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
-  server: 104.22.5.240
-  port: 443
-  type: vmess
   uuid: 2b0aa472-73f8-4c44-b194-988261aed232
   alterId: 0
   cipher: auto
@@ -11217,22 +11169,6 @@ proxies:
   server: 104.22.5.240
   port: 443
   type: vmess
-  uuid: 7455cf85-4411-42fd-802a-f2e91c2da67c
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: sgm3.targoocloud.live
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: sgm3.targoocloud.live
-  udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
-  server: 104.22.5.240
-  port: 443
-  type: vmess
   uuid: 1bdc5e30-9a8e-4d39-accc-48cd91637b8c
   alterId: 0
   cipher: auto
@@ -11549,7 +11485,7 @@ proxies:
     headers:
       Host: 7wih-darkness-f0af.jivegoh116.workers.dev
   udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 172.67.223.92
+- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.21.59.107
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -11725,7 +11661,7 @@ proxies:
     headers:
       Host: max.mankadmu.com
   udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 172.67.191.45
+- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.21.49.154
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -11757,22 +11693,6 @@ proxies:
     headers:
       Host: nezuko.raidenshogun.cloudns.org
   udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.21.94.125
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: 24146d40-a9c8-4d86-af21-57121f96eb4a
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: ru1.kuailink.de
-  network: ws
-  ws-opts:
-    path: /ru
-    headers:
-      Host: ru1.kuailink.de
-  udp: true
 - name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 172.67.223.175
   server: 104.22.5.240
   port: 443
@@ -11788,6 +11708,22 @@ proxies:
     path: /nl
     headers:
       Host: nl1.kuailink.de
+  udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.21.94.125
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 24146d40-a9c8-4d86-af21-57121f96eb4a
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: ru1.kuailink.de
+  network: ws
+  ws-opts:
+    path: /ru
+    headers:
+      Host: ru1.kuailink.de
   udp: true
 - name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.17.233.86
   server: 104.22.5.240
@@ -11805,39 +11741,23 @@ proxies:
     headers:
       Host: 28000000000.fastroot.ir
   udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.16.123.203
+- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.26.13.101
   server: 104.22.5.240
   port: 443
   type: vmess
-  uuid: 02f3eac9-9ccf-41f2-b95a-e19d1db7b5f8
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: shs111.kejixiaoqi666.store
+  servername: join---bede.mosiv2-com.workers.dev
   network: ws
   ws-opts:
-    path: /
+    path: /sgfqkqmltcy.site/rbqqvws
     headers:
-      Host: shs111.kejixiaoqi666.store
+      Host: join---bede.mosiv2-com.workers.dev
   udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.21.13.237
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: c2723c0e-b601-475b-9058-dc89332e9813
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: whk.357567.xyz
-  network: ws
-  ws-opts:
-    path: /c2723c0e-b601-475b-9058-dc89332e9813
-    headers:
-      Host: whk.357567.xyz
-  udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 172.67.5.14
+- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.22.4.240
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -11852,6 +11772,22 @@ proxies:
     path: /vmess
     headers:
       Host: serv1.idks1.web.id
+  udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.19.133.74
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: bf67437e-6c90-45ca-abc2-c7240a5ce2aa
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: foxlux.fovi.tk
+  network: ws
+  ws-opts:
+    path: /eisasqa
+    headers:
+      Host: foxlux.fovi.tk
   udp: true
 - name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.17.137.127
   server: 104.22.5.240
@@ -11868,6 +11804,70 @@ proxies:
     path: /aa
     headers:
       Host: hk.niskakowski.ggff.net
+  udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.26.13.192
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: b3d99d13-61e1-4120-94a1-c066efb975bc
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: br1.zfork.com
+  network: ws
+  ws-opts:
+    path: /dse456tywpe9gnesgfpt
+    headers:
+      Host: br1.zfork.com
+  udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.18.25.41
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: b3d99d13-61e1-4120-94a1-c066efb975bc
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: server3-29.99887766.best
+  network: ws
+  ws-opts:
+    path: /aesriougy9803w45yt93w84
+    headers:
+      Host: server3-29.99887766.best
+  udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.18.28.104
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: b3d99d13-61e1-4120-94a1-c066efb975bc
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: server1-26.99887766.best
+  network: ws
+  ws-opts:
+    path: /sdfgiuyoedshiufe
+    headers:
+      Host: server1-26.99887766.best
+  udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.21.13.237
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: c2723c0e-b601-475b-9058-dc89332e9813
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: whk.357567.xyz
+  network: ws
+  ws-opts:
+    path: /c2723c0e-b601-475b-9058-dc89332e9813
+    headers:
+      Host: whk.357567.xyz
   udp: true
 - name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.18.23.107
   server: 104.22.5.240
@@ -11933,38 +11933,6 @@ proxies:
     headers:
       Host: maXNEtVIP-usA-VP4.nETKH3.SiTE
   udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.26.12.101
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: join---bede.mosiv2-com.workers.dev
-  network: ws
-  ws-opts:
-    path: /sgfqkqmltcy.site/rbqqvws
-    headers:
-      Host: join---bede.mosiv2-com.workers.dev
-  udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.19.133.74
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: bf67437e-6c90-45ca-abc2-c7240a5ce2aa
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: foxlux.fovi.tk
-  network: ws
-  ws-opts:
-    path: /eisasqa
-    headers:
-      Host: foxlux.fovi.tk
-  udp: true
 - name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.31.16.197
   server: 104.22.5.240
   port: 443
@@ -12013,7 +11981,7 @@ proxies:
     headers:
       Host: sandp.blanku.me
   udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.21.39.21
+- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 172.67.142.55
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -12173,7 +12141,23 @@ proxies:
     headers:
       Host: mikasa.yaemiko.cloudns.org
   udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.21.41.39
+- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.24.196.20
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: BA9ED98E-4077-4782-801B-64C9CCCCF964
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: Amsterdam.kotick.site
+  network: ws
+  ws-opts:
+    path: /speedtest
+    headers:
+      Host: Amsterdam.kotick.site
+  udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 172.67.142.84
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -12253,7 +12237,7 @@ proxies:
     headers:
       Host: edeen.makeup
   udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 162.159.134.53
+- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 162.159.133.53
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -12637,7 +12621,7 @@ proxies:
     headers:
       Host: novia.makeup
   udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.18.88.70
+- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 162.159.134.50
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -13213,22 +13197,6 @@ proxies:
     headers:
       Host: morning-queen-7df4.walidfree19.workers.dev
   udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.19.54.50
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: 02DD674F-898E-4835-9958-97670C4CCA71
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: red-leaf-2332.walidfree20.workers.dev
-  network: ws
-  ws-opts:
-    path: /speedtest/Kansas.kotick.site
-    headers:
-      Host: red-leaf-2332.walidfree20.workers.dev
-  udp: true
 - name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.17.170.210
   server: 104.22.5.240
   port: 443
@@ -13277,7 +13245,7 @@ proxies:
     headers:
       Host: www.ltzs.buzz
   udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 162.159.200.1
+- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 162.159.200.123
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -13357,7 +13325,7 @@ proxies:
     headers:
       Host: RELAY-162.159.195.41-5405 | 45.382MB
   udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.21.71.57
+- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 172.67.169.249
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -13373,7 +13341,7 @@ proxies:
     headers:
       Host: sea.802039.xyz
   udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.21.89.129
+- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 172.67.189.71
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -13501,6 +13469,22 @@ proxies:
     headers:
       Host: milad2.sudizo7748.workers.dev
   udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 172.67.182.84
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 459D4986-687E-4CD6-8EDE-4417EAABA8A8
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: 23.walidfree23.workers.dev
+  network: ws
+  ws-opts:
+    path: /speedtest/Amsterdam.kotick.site
+    headers:
+      Host: 23.walidfree23.workers.dev
+  udp: true
 - name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.16.111.58
   server: 104.22.5.240
   port: 443
@@ -13533,7 +13517,7 @@ proxies:
     headers:
       Host: RELAY-104.18.56.66-5208 | 38.939MB
   udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.21.40.95
+- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 172.67.183.209
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -13564,22 +13548,6 @@ proxies:
     path: /speedtest/Amsterdam.kotick.site
     headers:
       Host: 14.walidfree14.workers.dev
-  udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 172.67.169.249
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: 270685c6-f4fb-4b15-bca6-dd6c622e8f44
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: ru2.802039.xyz
-  network: ws
-  ws-opts:
-    path: /fuckgfw
-    headers:
-      Host: ru2.802039.xyz
   udp: true
 - name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 162.159.60.86
   server: 104.22.5.240
@@ -13645,7 +13613,7 @@ proxies:
     headers:
       Host: 7f7a1daa-ae96-11ed-9e11-ff9de5aee42c.schere.net
   udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 162.159.2.9
+- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 162.159.6.6
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -13708,6 +13676,22 @@ proxies:
     path: /vjp2.0bad.com/chat
     headers:
       Host: outlook.miladsa743559.workers.dev
+  udp: true
+- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.21.71.57
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 270685c6-f4fb-4b15-bca6-dd6c622e8f44
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: sj.802039.xyz
+  network: ws
+  ws-opts:
+    path: /fuckgfw
+    headers:
+      Host: sj.802039.xyz
   udp: true
 - name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 172.67.209.170
   server: 104.22.5.240
@@ -13981,7 +13965,7 @@ proxies:
     headers:
       Host: download.game-one.ir
   udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.17.185.195
+- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.17.187.195
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -13997,7 +13981,7 @@ proxies:
     headers:
       Host: jpv.xiaoqi555.xyz
   udp: true
-- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 104.26.0.54
+- name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 172.67.71.54
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -14055,7 +14039,7 @@ proxies:
     headers:
       Host: epccd.ambercc.filegear-sg.me
   udp: true
-- name: 4FreeIran-3431
+- name: 4Nika-3430
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14068,7 +14052,7 @@ proxies:
     headers:
       Host: de1.test3.net
   udp: true
-- name: 4FreeIran-3862
+- name: 4Nika-3842
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14081,7 +14065,7 @@ proxies:
     headers:
       Host: de1.test3.net
   udp: true
-- name: 4FreeIran-7106
+- name: 4Nika-6847
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14090,11 +14074,11 @@ proxies:
   sni: DieGo.DIEgoMAraDOnA.iR.
   network: ws
   ws-opts:
-    path: /#4FreeIran-7106
+    path: /#4Nika-6847
     headers:
       Host: DieGo.DIEgoMAraDOnA.iR.
   udp: true
-- name: 4FreeIran-6454
+- name: 4Nika-6265
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14120,7 +14104,7 @@ proxies:
     headers:
       Host: bangladeshipatri.com
   udp: true
-- name: 4FreeIran-3917
+- name: 4Nika-3892
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14129,11 +14113,11 @@ proxies:
   sni: bangladeshipatri.com
   network: ws
   ws-opts:
-    path: /6b777a91#4FreeIran-3917
+    path: /6b777a91#4Nika-3892
     headers:
       Host: bangladeshipatri.com
   udp: true
-- name: 4FreeIran-3674
+- name: 4Nika-3655
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14142,7 +14126,7 @@ proxies:
   sni: bangladeshipatri.com
   network: ws
   ws-opts:
-    path: /6b777a91#4FreeIran-3674
+    path: /6b777a91#4Nika-3655
     headers:
       Host: bangladeshipatri.com
   udp: true
@@ -14172,6 +14156,19 @@ proxies:
     headers:
       Host: jobscareerforstudent.com
   udp: true
+- name: 4Nika-6270
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: c7cdf323-25d4-4c82-ad35-0aca769041c2
+  skip-cert-verify: true
+  sni: trojans1.114514660.xyz
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: trojans1.114514660.xyz
+  udp: true
 - name: '[]t.me/ConfigsHub'
   server: 104.22.5.240
   port: 443
@@ -14185,7 +14182,7 @@ proxies:
     headers:
       Host: mail.grznt.fun
   udp: true
-- name: 4FreeIran-3299
+- name: 4Nika-3299
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14194,11 +14191,11 @@ proxies:
   sni: jobscareerfortoday.com
   network: ws
   ws-opts:
-    path: /6b777a91#4FreeIran-3299
+    path: /6b777a91#4Nika-3299
     headers:
       Host: jobscareerfortoday.com
   udp: true
-- name: 4FreeIran-3553
+- name: 4Nika-3552
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14207,11 +14204,11 @@ proxies:
   sni: jobscareertoday.com
   network: ws
   ws-opts:
-    path: /6b777a91#4FreeIran-3553
+    path: /6b777a91#4Nika-3552
     headers:
       Host: jobscareertoday.com
   udp: true
-- name: 4FreeIran-4055
+- name: 4Nika-4032
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14220,7 +14217,7 @@ proxies:
   sni: bangladeshipatri.com
   network: ws
   ws-opts:
-    path: /6b777a91#4FreeIran-4055
+    path: /6b777a91#4Nika-4032
     headers:
       Host: bangladeshipatri.com
   udp: true
@@ -14237,7 +14234,7 @@ proxies:
     headers:
       Host: a17cabb5-3f13-4056-b0ce-476143491d4b.blackbeautifulman.cloudns.org
   udp: true
-- name: 4FreeIran-4341
+- name: 4Nika-4315
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14263,7 +14260,7 @@ proxies:
     headers:
       Host: avianrecruit.com
   udp: true
-- name: 4FreeIran-6056
+- name: 4Nika-5914
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14276,7 +14273,7 @@ proxies:
     headers:
       Host: s1.mitivpn.workers.dev
   udp: true
-- name: 4FreeIran-4671
+- name: 4Nika-4641
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14285,11 +14282,11 @@ proxies:
   sni: epmf.ambercc.filegear-sg.me
   network: ws
   ws-opts:
-    path: /?ed=2560&proxyip=ts.hpc.tw#4FreeIran-4671
+    path: /?ed=2560&proxyip=ts.hpc.tw#4Nika-4641
     headers:
       Host: epmf.ambercc.filegear-sg.me
   udp: true
-- name: 4FreeIran-3946
+- name: 4Nika-3923
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14302,7 +14299,7 @@ proxies:
     headers:
       Host: icecream.955850.xyz
   udp: true
-- name: 4FreeIran-6099
+- name: 4Nika-5954
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14311,11 +14308,11 @@ proxies:
   sni: iSaa1.PAGeS.DeV
   network: ws
   ws-opts:
-    path: /#4FreeIran-6099
+    path: /#4Nika-5954
     headers:
       Host: iSAA1.paGEs.DEV
   udp: true
-- name: 4FreeIran-6295
+- name: 4Nika-6115
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14324,11 +14321,11 @@ proxies:
   sni: skwygx.top
   network: ws
   ws-opts:
-    path: /tr#4FreeIran-6295
+    path: /tr#4Nika-6115
     headers:
       Host: skwygx.top
   udp: true
-- name: 4FreeIran-3482
+- name: 4Nika-3480
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14337,7 +14334,7 @@ proxies:
   sni: jobscareertoday.com
   network: ws
   ws-opts:
-    path: /6b777a91#4FreeIran-3482
+    path: /6b777a91#4Nika-3480
     headers:
       Host: jobscareertoday.com
   udp: true
@@ -14380,7 +14377,7 @@ proxies:
     headers:
       Host: jobscareerforstudent.com
   udp: true
-- name: 4FreeIran-7027
+- name: 4Nika-6771
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14393,7 +14390,7 @@ proxies:
     headers:
       Host: azadnet-9ya.pages.dev
   udp: true
-- name: 4FreeIran-6296
+- name: 4Nika-6116
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14432,7 +14429,7 @@ proxies:
     headers:
       Host: e9464f45.trauma-2r4.pages.dev
   udp: true
-- name: 4FreeIran-3923
+- name: 4Nika-3899
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14441,11 +14438,11 @@ proxies:
   sni: m4DdfG.999358.Xyz
   network: ws
   ws-opts:
-    path: /NuDL4mLrBwsbnEcmJLxC#4FreeIran-3923
+    path: /NuDL4mLrBwsbnEcmJLxC
     headers:
       Host: m4ddfg.999358.xyz
   udp: true
-- name: 4FreeIran-6105
+- name: 4Nika-5960
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14458,7 +14455,7 @@ proxies:
     headers:
       Host: ert5.0890604.xyz
   udp: true
-- name: 4FreeIran-6262
+- name: 4Nika-6087
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14471,7 +14468,7 @@ proxies:
     headers:
       Host: tc.promote.icu
   udp: true
-- name: 4FreeIran-3636
+- name: 4Nika-3618
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14484,7 +14481,7 @@ proxies:
     headers:
       Host: e333.2030.pp.ua
   udp: true
-- name: 4FreeIran-6578
+- name: 4Nika-6387
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14497,7 +14494,7 @@ proxies:
     headers:
       Host: x4.859885.xyz
   udp: true
-- name: 4FreeIran-3859
+- name: 4Nika-3839
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14506,11 +14503,11 @@ proxies:
   sni: notice.2513142.xyz
   network: ws
   ws-opts:
-    path: /#4FreeIran-3859
+    path: /#4Nika-3839
     headers:
       Host: notice.2513142.xyz
   udp: true
-- name: 4FreeIran-6848
+- name: 4Nika-6649
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14519,11 +14516,11 @@ proxies:
   sni: sAiKOXpUbGm.ZhkinGkuRD13.WorkErs.dEV
   network: ws
   ws-opts:
-    path: /tr4BCdusB84159lWnu#4FreeIran-6848
+    path: /tr4BCdusB84159lWnu#4Nika-6649
     headers:
       Host: saikoxpubgm.zhkingkurd13.workers.dev
   udp: true
-- name: 4FreeIran-4026
+- name: 4Nika-4004
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14532,11 +14529,11 @@ proxies:
   sni: BoStoN01.890614.GGff.neT
   network: ws
   ws-opts:
-    path: /Q3cz2AWTPMCtDGV1L6R1Jz18eIUw
+    path: /Q3cz2AWTPMCtDGV1L6R1Jz18eIUw#4Nika-4004
     headers:
       Host: boston01.890614.ggff.net
   udp: true
-- name: 4FreeIran-3516
+- name: 4Nika-3514
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14549,7 +14546,7 @@ proxies:
     headers:
       Host: rrfgty6.890606.xyz
   udp: true
-- name: 4FreeIran-4043
+- name: '%F0%9F%8F%B3%5Bopenproxylist.com%5D%20trojan-'
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14562,7 +14559,7 @@ proxies:
     headers:
       Host: 11q.003330333.xyz
   udp: true
-- name: 4FreeIran-6624
+- name: '%F0%9F%8F%B3%5Bopenproxylist.com%5D%20trojan-'
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14575,7 +14572,7 @@ proxies:
     headers:
       Host: xscdfvg.20220420.pp.ua
   udp: true
-- name: 4FreeIran-6733
+- name: 4Nika-6538
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14584,11 +14581,11 @@ proxies:
   sni: q12.11890604.xyz
   network: ws
   ws-opts:
-    path: /CLtmyjAuOFZsWSituzXyJ5XNeH1R1#4FreeIran-6733
+    path: /CLtmyjAuOFZsWSituzXyJ5XNeH1R1#4Nika-6538
     headers:
       Host: q12.11890604.xyz
   udp: true
-- name: 4FreeIran-3830
+- name: 4Nika-3810
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14601,7 +14598,20 @@ proxies:
     headers:
       Host: 90.taipei108.dpdns.org
   udp: true
-- name: 4FreeIran-6478
+- name: '%F0%9F%87%BA%F0%9F%87%B8%5Bopenproxylist.com%5D%20trojan-US'
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: 4174b95d-115e-4d39-add6-1f8db95bb860
+  skip-cert-verify: true
+  sni: dddccvvgbnhju.131.pp.ua
+  network: ws
+  ws-opts:
+    path: /uzJNzgkkYWRWGxgFnoFPw1
+    headers:
+      Host: dddccvvgbnhju.131.pp.ua
+  udp: true
+- name: 4Nika-6291
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14614,7 +14624,7 @@ proxies:
     headers:
       Host: ooo0987654.932.pp.ua
   udp: true
-- name: 4FreeIran-3487
+- name: 4Nika-3485
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14627,20 +14637,20 @@ proxies:
     headers:
       Host: cdvfbnmjki9.852224.dpdns.org
   udp: true
-- name: '%F0%9F%87%BA%F0%9F%87%B8_%E5%AE%9A%E5%88%B6%E4%B8%93%E7%BA%BF%EF%BC%9A%40QS00008'
+- name: 4Nika-4006
   server: 104.22.5.240
   port: 443
   type: trojan
-  password: f0f6e76e-e5fe-4e2c-9faf-34832e021eae
+  password: 6d898085-bf6a-449b-9763-0073d4dc2ce0
   skip-cert-verify: true
-  sni: DDd.890604.FIlEGear-sG.Me
+  sni: boston03.890604.FILEGEAr-SG.ME
   network: ws
   ws-opts:
-    path: /mZr1mA5hub7QHHkQBzYO#🇺🇸_定制专线：@QS00008
+    path: /Q3cz2AWTPMCtDGV1L6R1Jz18eIUw#4Nika-4006
     headers:
-      Host: DDd.890604.FIlEGear-sG.Me
+      Host: boston03.890604.FILEGEAr-SG.ME
   udp: true
-- name: 4FreeIran-4262
+- name: 4Nika-4240
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14653,7 +14663,7 @@ proxies:
     headers:
       Host: sanjose01.890614.filegear-sg.me
   udp: true
-- name: 4FreeIran-6511
+- name: 4Nika-6317
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14666,7 +14676,20 @@ proxies:
     headers:
       Host: dddcvfbghy7.444682.xyz
   udp: true
-- name: 4FreeIran-3421
+- name: 4Nika-3734
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: 4b33b482-25bc-49e4-b866-878c914d945a
+  skip-cert-verify: true
+  sni: xXxXxxx.890604.dPDNs.org
+  network: ws
+  ws-opts:
+    path: /kzefUfBUzMsQY6zyyQCjn8kmnN0ehd
+    headers:
+      Host: xxxxxxx.890604.dpdns.org
+  udp: true
+- name: 4Nika-3420
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14675,11 +14698,11 @@ proxies:
   sni: 2qwert.2031.pp.ua
   network: ws
   ws-opts:
-    path: /4p35eUnmGxQ8YJFJxz
+    path: /4p35eUnmGxQ8YJFJxz#4Nika-3420
     headers:
       Host: 2qwert.2031.pp.ua
   udp: true
-- name: 4FreeIran-6479
+- name: 4Nika-6292
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14688,11 +14711,11 @@ proxies:
   sni: ff.HuangSHANg2030.DPDnS.oRg
   network: ws
   ws-opts:
-    path: /ptGwaGzcA4KNAXX#4FreeIran-6479
+    path: /ptGwaGzcA4KNAXX#4Nika-6292
     headers:
       Host: ff.huangshang2030.dpdns.org
   udp: true
-- name: 4FreeIran-6627
+- name: 4Nika-6435
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14701,11 +14724,11 @@ proxies:
   sni: app.soft10.ir
   network: ws
   ws-opts:
-    path: /rIQYIUFzZ8PfAZpXO7Ci#4FreeIran-6627
+    path: /rIQYIUFzZ8PfAZpXO7Ci#4Nika-6435
     headers:
       Host: app.soft10.ir
   udp: true
-- name: 4FreeIran-3548
+- name: 4Nika-3547
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14718,7 +14741,7 @@ proxies:
     headers:
       Host: dddcccdvfg.222856.xyz
   udp: true
-- name: 4FreeIran-3530
+- name: 4Nika-3529
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14731,7 +14754,7 @@ proxies:
     headers:
       Host: de1.test3.net
   udp: true
-- name: 4FreeIran-4118
+- name: '%F0%9F%87%BA%F0%9F%87%B8%5Bopenproxylist.com%5D%20trojan-US'
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14744,7 +14767,7 @@ proxies:
     headers:
       Host: xxcdvfgt.191268.xyz
   udp: true
-- name: 4FreeIran-6110
+- name: 4Nika-5966
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14753,7 +14776,7 @@ proxies:
   sni: uuuUuuUuJ.999864.Xyz
   network: ws
   ws-opts:
-    path: /CNLtVWdiKPpIlRig3qizHXb#4FreeIran-6110
+    path: /CNLtVWdiKPpIlRig3qizHXb#4Nika-5966
     headers:
       Host: uuuUuuUuJ.999864.Xyz
   udp: true
@@ -14770,7 +14793,7 @@ proxies:
     headers:
       Host: us-ashburn.wealthpost.ca
   udp: true
-- name: 4FreeIran-6669
+- name: 4Nika-6474
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14779,11 +14802,11 @@ proxies:
   sni: MehRneWS.OnEtwothREe123.iR
   network: ws
   ws-opts:
-    path: /26za8O91d9bS7H1OOKD
+    path: /26za8O91d9bS7H1OOKD#4Nika-6474
     headers:
       Host: mehrnews.onetwothree123.ir
   udp: true
-- name: 4FreeIran-3569
+- name: 4Nika-3568
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14796,7 +14819,20 @@ proxies:
     headers:
       Host: iiiiuuuyyyyy.freevpnatm.dpdns.org
   udp: true
-- name: 4FreeIran-6160
+- name: '%F0%9F%8F%B3%5Bopenproxylist.com%5D%20trojan-'
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: c891d9fe-c4eb-4526-94e0-d9bf841c572a
+  skip-cert-verify: true
+  sni: xxxcDFRrr.890624.xyZ
+  network: ws
+  ws-opts:
+    path: /xMZBZXFlWfYaf1WT6O9LnD
+    headers:
+      Host: xxxcdfrrr.890624.xyz
+  udp: true
+- name: 4Nika-6006
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14805,11 +14841,11 @@ proxies:
   sni: nameless-term-9c25.vpnconnect202020.workers.dev
   network: ws
   ws-opts:
-    path: /#4FreeIran-6160
+    path: /#4Nika-6006
     headers:
       Host: nameless-term-9c25.vpnconnect202020.workers.dev
   udp: true
-- name: 4FreeIran-6808
+- name: 4Nika-6610
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14822,7 +14858,7 @@ proxies:
     headers:
       Host: aws-uae-1.f1cflined.com
   udp: true
-- name: 4FreeIran-3451
+- name: 4Nika-3449
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14835,7 +14871,7 @@ proxies:
     headers:
       Host: cccddvfbg.freevpn2026.dpdns.org
   udp: true
-- name: 4FreeIran-6734
+- name: 4Nika-6539
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14848,7 +14884,7 @@ proxies:
     headers:
       Host: ssscccbbnmmmk.4444926.xyz
   udp: true
-- name: 4FreeIran-4350
+- name: 4Nika-4323
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14874,7 +14910,7 @@ proxies:
     headers:
       Host: ZZzzzZZ.890601.XYZ
   udp: true
-- name: 4FreeIran-6739
+- name: 4Nika-6545
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14883,11 +14919,11 @@ proxies:
   sni: Rrr4.8906004.xYZ
   network: ws
   ws-opts:
-    path: /DZxb5QZyWgQPuXTwt#4FreeIran-6739
+    path: /DZxb5QZyWgQPuXTwt#4Nika-6545
     headers:
       Host: rrr4.8906004.xyz
   udp: true
-- name: 4FreeIran-4224
+- name: 4Nika-4200
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14900,7 +14936,7 @@ proxies:
     headers:
       Host: xcdfvgbhy6.457.pp.ua
   udp: true
-- name: 4FreeIran-3796
+- name: 4Nika-3776
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14913,7 +14949,7 @@ proxies:
     headers:
       Host: xxcdvfgty.444652.xyz
   udp: true
-- name: 4FreeIran-3912
+- name: 4Nika-3887
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14926,7 +14962,7 @@ proxies:
     headers:
       Host: ccccccccv.666470.xyz
   udp: true
-- name: 4FreeIran-3363
+- name: 4Nika-3364
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14939,7 +14975,7 @@ proxies:
     headers:
       Host: uuujjnmm.444752.xyz
   udp: true
-- name: 4FreeIran-3554
+- name: 4Nika-3553
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14952,7 +14988,7 @@ proxies:
     headers:
       Host: zzzzzzzz.222769.xyz
   udp: true
-- name: 4FreeIran-6366
+- name: 4Nika-6176
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14961,11 +14997,11 @@ proxies:
   sni: se1.safecdn.site
   network: ws
   ws-opts:
-    path: /by-AB_841#4FreeIran-6366
+    path: /by-AB_841#4Nika-6176
     headers:
       Host: se1.safecdn.site
   udp: true
-- name: 4FreeIran-6809
+- name: 4Nika-6611
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14978,7 +15014,7 @@ proxies:
     headers:
       Host: aws-us-oregon-1.f1cflinec.com
   udp: true
-- name: 4FreeIran-3754
+- name: 4Nika-3735
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14991,7 +15027,7 @@ proxies:
     headers:
       Host: 44444444.huangshang.dpdns.org
   udp: true
-- name: 4FreeIran-7210
+- name: 4Nika-6948
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15004,7 +15040,7 @@ proxies:
     headers:
       Host: aws-sg-1.f1cflineb.com
   udp: true
-- name: 4FreeIran-6661
+- name: 4Nika-6466
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15013,11 +15049,11 @@ proxies:
   sni: vpn.stupidworld.web.id
   network: ws
   ws-opts:
-    path: /Stupid-World/103.106.228.126-2053#4FreeIran-6661
+    path: /Stupid-World/103.106.228.126-2053#4Nika-6466
     headers:
       Host: vpn.stupidworld.web.id
   udp: true
-- name: 4FreeIran-7211
+- name: 4Nika-6949
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15030,7 +15066,7 @@ proxies:
     headers:
       Host: aws-aus-sydney-1.f1cflinea.com
   udp: true
-- name: 4FreeIran-6515
+- name: 4Nika-6321
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15043,7 +15079,7 @@ proxies:
     headers:
       Host: uuuuuuuuuuuuuuy.857856.xyz
   udp: true
-- name: 4FreeIran-3549
+- name: '%F0%9F%87%BA%F0%9F%87%B8%5Bopenproxylist.com%5D%20trojan-US'
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15069,7 +15105,7 @@ proxies:
     headers:
       Host: 403b3611-99Bc-43b7-88D7-26ED5d0825a9-3.pAgeS.Dev
   udp: true
-- name: 4FreeIran-3325
+- name: 4Nika-3326
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15078,11 +15114,11 @@ proxies:
   sni: x4444.890603.xyz
   network: ws
   ws-opts:
-    path: /xJXdWGMbbZovkcaL2SsGTGxE#4FreeIran-3325
+    path: /xJXdWGMbbZovkcaL2SsGTGxE
     headers:
       Host: x4444.890603.xyz
   udp: true
-- name: 4FreeIran-3517
+- name: 4Nika-3515
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15095,7 +15131,7 @@ proxies:
     headers:
       Host: ssxcdfr5.986986.shop
   udp: true
-- name: 4FreeIran-3635
+- name: 4Nika-3617
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15104,11 +15140,11 @@ proxies:
   sni: FFfgtyy.7282728.XYZ
   network: ws
   ws-opts:
-    path: /WaHA3RC540rQ8PWqRcOEICAwmfH7#4FreeIran-3635
+    path: /WaHA3RC540rQ8PWqRcOEICAwmfH7#4Nika-3617
     headers:
       Host: FFfgtyy.7282728.XYZ
   udp: true
-- name: 4FreeIran-3751
+- name: 4Nika-3732
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15117,11 +15153,11 @@ proxies:
   sni: m1assddr.777259.xyz
   network: ws
   ws-opts:
-    path: /Hnko4qt8WwmcpejJLlDlbpi#4FreeIran-3751
+    path: /Hnko4qt8WwmcpejJLlDlbpi#4Nika-3732
     headers:
       Host: m1assddr.777259.xyz
   udp: true
-- name: 4FreeIran-6748
+- name: 4Nika-6553
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15130,11 +15166,11 @@ proxies:
   sni: 5ttt.191288.xyz
   network: ws
   ws-opts:
-    path: /BFBuPh4SuxTxCwkqKrjE#4FreeIran-6748
+    path: /BFBuPh4SuxTxCwkqKrjE#4Nika-6553
     headers:
       Host: 5ttt.191288.xyz
   udp: true
-- name: 4FreeIran-5956
+- name: 4Nika-5823
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15143,11 +15179,11 @@ proxies:
   sni: zb.ylks.xyz
   network: ws
   ws-opts:
-    path: /#4FreeIran-5956
+    path: /#4Nika-5823
     headers:
       Host: zb.ylks.xyz
   udp: true
-- name: 4FreeIran-3661
+- name: 4Nika-3643
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15160,7 +15196,7 @@ proxies:
     headers:
       Host: qqqqqqqqqqa.www890604.dpdns.org
   udp: true
-- name: 4FreeIran-6089
+- name: 4Nika-5945
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15173,7 +15209,7 @@ proxies:
     headers:
       Host: xxcdvfghyuiop.999165.xyz
   udp: true
-- name: 4FreeIran-6476
+- name: 4Nika-6289
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15186,7 +15222,7 @@ proxies:
     headers:
       Host: dddddddddf.999824.xyz
   udp: true
-- name: 4FreeIran-6370
+- name: 4Nika-6180
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15199,7 +15235,7 @@ proxies:
     headers:
       Host: sssxxzaw.666461.xyz
   udp: true
-- name: 4FreeIran-3415
+- name: 4Nika-3414
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15212,7 +15248,7 @@ proxies:
     headers:
       Host: ddddvvbhy7.000890604.xyz
   udp: true
-- name: 4FreeIran-4346
+- name: 4Nika-4320
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15221,11 +15257,11 @@ proxies:
   sni: md1.safecdn.site
   network: ws
   ws-opts:
-    path: /Channel_vpnAndroid2-Channel_vpnAndroid2-Channel_vpnAndroid2-Channel_vpnAndroid2#4FreeIran-4346
+    path: /Channel_vpnAndroid2-Channel_vpnAndroid2-Channel_vpnAndroid2-Channel_vpnAndroid2#4Nika-4320
     headers:
       Host: md1.safecdn.site
   udp: true
-- name: 4FreeIran-6306
+- name: 4Nika-6124
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15234,7 +15270,7 @@ proxies:
   sni: zamim340.ggff.net
   network: ws
   ws-opts:
-    path: /tr?ed=2560#4FreeIran-6306
+    path: /tr?ed=2560#4Nika-6124
     headers:
       Host: zamim340.ggff.net
   udp: true
@@ -15251,7 +15287,7 @@ proxies:
     headers:
       Host: bangladeshipatri.com
   udp: true
-- name: 4FreeIran-7134
+- name: 4Nika-6875
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15260,11 +15296,11 @@ proxies:
   sni: heihu880.pages.dev
   network: ws
   ws-opts:
-    path: /?ed=2560#4FreeIran-7134
+    path: /?ed=2560#4Nika-6875
     headers:
       Host: heihu880.pages.dev
   udp: true
-- name: 4FreeIran-3812
+- name: 4Nika-3792
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15277,7 +15313,7 @@ proxies:
     headers:
       Host: de1.trojanvpn.dE
   udp: true
-- name: 4FreeIran-4307
+- name: 4Nika-4282
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15303,7 +15339,7 @@ proxies:
     headers:
       Host: huangshang9.zone.id
   udp: true
-- name: 4FreeIran-7048
+- name: 4Nika-6791
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15312,7 +15348,7 @@ proxies:
   sni: ttfang.fange.me
   network: ws
   ws-opts:
-    path: /#4FreeIran-7048
+    path: /#4Nika-6791
     headers:
       Host: ttfang.fange.me
   udp: true
@@ -15329,7 +15365,7 @@ proxies:
     headers:
       Host: im.ylks.xyz
   udp: true
-- name: 4FreeIran-5962
+- name: 4Nika-5829
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15338,11 +15374,11 @@ proxies:
   sni: za.ylks.xyz
   network: ws
   ws-opts:
-    path: /#4FreeIran-5962
+    path: /#4Nika-5829
     headers:
       Host: za.ylks.xyz
   udp: true
-- name: 4FreeIran-3759
+- name: 4Nika-3741
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15351,11 +15387,11 @@ proxies:
   sni: uk8i7uufxlcbr2hbym.jjjiedian6j4tblb.com
   network: ws
   ws-opts:
-    path: /images#4FreeIran-3759
+    path: /images#4Nika-3741
     headers:
       Host: uk8i7uufxlcbr2hbym.jjjiedian6j4tblb.com
   udp: true
-- name: 4FreeIran-3760
+- name: 4Nika-3742
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15364,11 +15400,11 @@ proxies:
   sni: catro51avxe7b8r2pw.jjjiedian6j4tblb.com
   network: ws
   ws-opts:
-    path: /images#4FreeIran-3760
+    path: /images#4Nika-3742
     headers:
       Host: catro51avxe7b8r2pw.jjjiedian6j4tblb.com
   udp: true
-- name: 4FreeIran-6368
+- name: 4Nika-6178
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15377,11 +15413,11 @@ proxies:
   sni: uk8i7uufxlcbr2hbym.jjjiedian6j4tblb.com
   network: ws
   ws-opts:
-    path: /images#4FreeIran-6368
+    path: /images#4Nika-6178
     headers:
       Host: uk8i7uufxlcbr2hbym.jjjiedian6j4tblb.com
   udp: true
-- name: 4FreeIran-3761
+- name: 4Nika-3743
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15390,11 +15426,11 @@ proxies:
   sni: ush9pgjbr1t6mxmbwe.jjjiedian6j4tblb.com
   network: ws
   ws-opts:
-    path: /images#4FreeIran-3761
+    path: /images#4Nika-3743
     headers:
       Host: ush9pgjbr1t6mxmbwe.jjjiedian6j4tblb.com
   udp: true
-- name: 4FreeIran-6369
+- name: 4Nika-6179
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15403,11 +15439,11 @@ proxies:
   sni: ush9pgjbr1t6mxmbwe.jjjiedian6j4tblb.com
   network: ws
   ws-opts:
-    path: /images#4FreeIran-6369
+    path: /images#4Nika-6179
     headers:
       Host: ush9pgjbr1t6mxmbwe.jjjiedian6j4tblb.com
   udp: true
-- name: 4FreeIran-3765
+- name: 4Nika-3746
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15416,11 +15452,11 @@ proxies:
   sni: ustrorxur6vt79grpe.jjjiedian6j4tblb.com
   network: ws
   ws-opts:
-    path: /images#4FreeIran-3765
+    path: /images#4Nika-3746
     headers:
       Host: ustrorxur6vt79grpe.jjjiedian6j4tblb.com
   udp: true
-- name: 4FreeIran-3669
+- name: 4Nika-3651
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15433,7 +15469,7 @@ proxies:
     headers:
       Host: Germandiginoe.com
   udp: true
-- name: 4FreeIran-3412
+- name: 4Nika-3412
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15446,7 +15482,7 @@ proxies:
     headers:
       Host: de1.test3.net
   udp: true
-- name: 4FreeIran-3175
+- name: 4Nika-3174
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15472,7 +15508,7 @@ proxies:
     headers:
       Host: vip.putata.eu.org
   udp: true
-- name: 4FreeIran-4117
+- name: 4Nika-4094
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15481,11 +15517,11 @@ proxies:
   sni: vbbb.ylks2024.us.kg
   network: ws
   ws-opts:
-    path: /youlingkaishi#4FreeIran-4117
+    path: /youlingkaishi#4Nika-4094
     headers:
       Host: vbbb.ylks2024.us.kg
   udp: true
-- name: 4FreeIran-6544
+- name: 4Nika-6351
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15511,7 +15547,7 @@ proxies:
     headers:
       Host: mindrOOm-5cz.pAgEs.dEV
   udp: true
-- name: '%F0%9F%87%BA%F0%9F%87%B8_%E5%AE%9A%E5%88%B6%E4%B8%93%E7%BA%BF%EF%BC%9A%40QS00008'
+- name: 4Nika-5970
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15520,24 +15556,11 @@ proxies:
   sni: uSa-vp-27.bLAzECLOUD.SITE
   network: ws
   ws-opts:
-    path: /linkvkws#🇺🇸_定制专线：@QS00008
+    path: /linkvkws#4Nika-5970
     headers:
       Host: uSa-vp-27.bLAzECLOUD.SITE
   udp: true
-- name: 4FreeIran-6114
-  server: 104.22.5.240
-  port: 443
-  type: trojan
-  password: aTArbZ2F0E
-  skip-cert-verify: true
-  sni: uSa-vp-27.bLAzECLOUD.SITE
-  network: ws
-  ws-opts:
-    path: /linkvkws#4FreeIran-6114
-    headers:
-      Host: uSa-vp-27.bLAzECLOUD.SITE
-  udp: true
-- name: 4FreeIran-4226
+- name: 4Nika-4203
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15546,11 +15569,11 @@ proxies:
   sni: ush9pgjbr1t6mxmbwe.jjjiedian6j4tblb.com
   network: ws
   ws-opts:
-    path: /images#4FreeIran-4226
+    path: /images
     headers:
       Host: ush9pgjbr1t6mxmbwe.jjjiedian6j4tblb.com
   udp: true
-- name: 4FreeIran-6779
+- name: 4Nika-6583
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15563,7 +15586,7 @@ proxies:
     headers:
       Host: juzi8186-sr1.pages.dev
   udp: true
-- name: 4FreeIran-3793
+- name: '%F0%9F%87%BA%F0%9F%87%B8%5Bopenproxylist.com%5D%20trojan-US'
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15576,7 +15599,7 @@ proxies:
     headers:
       Host: cccvfgtyu.89060004.xyz
   udp: true
-- name: 4FreeIran-6480
+- name: 4Nika-6293
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15589,7 +15612,7 @@ proxies:
     headers:
       Host: u19.7282728.xyz
   udp: true
-- name: 4FreeIran-4260
+- name: 4Nika-4238
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15598,11 +15621,11 @@ proxies:
   sni: CFR56ty7890.288288.sHOP
   network: ws
   ws-opts:
-    path: /By7cEmOrNRS58yeduy9AOG#4FreeIran-4260
+    path: /By7cEmOrNRS58yeduy9AOG#4Nika-4238
     headers:
       Host: cfr56ty7890.288288.shop
   udp: true
-- name: 4FreeIran-4263
+- name: 4Nika-4241
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15611,11 +15634,11 @@ proxies:
   sni: usa-sanjose-one.890614.filegear-sg.me
   network: ws
   ws-opts:
-    path: /T5yZBrY2Qkg2cThJQeJb#4FreeIran-4263
+    path: /T5yZBrY2Qkg2cThJQeJb#4Nika-4241
     headers:
       Host: usa-sanjose-one.890614.filegear-sg.me
   udp: true
-- name: 4FreeIran-5885
+- name: 4Nika-5758
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15624,11 +15647,11 @@ proxies:
   sni: 7xVB-b9Ws5Zjp6cYjvW89zRKU9GMuPW6.maryAFArhUnI.WORkers.dEv
   network: ws
   ws-opts:
-    path: /trU3kEraImU22Jv6vo
+    path: /trU3kEraImU22Jv6vo?ed=2560
     headers:
-      Host: 7xVB-b9Ws5Zjp6cYjvW89zRKU9GMuPW6.maryAFArhUnI.WORkers.dEv
+      Host: 7xvb-b9ws5zjp6cyjvw89zrku9gmupw6.maryafarhuni.workers.dev
   udp: true
-- name: 4FreeIran-6625
+- name: 4Nika-6433
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15641,7 +15664,7 @@ proxies:
     headers:
       Host: 6666yhju.777159.xyz
   udp: true
-- name: 4FreeIran-6111
+- name: 4Nika-5967
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15654,7 +15677,7 @@ proxies:
     headers:
       Host: uuuuuuuj.999864.xyz
   udp: true
-- name: 4FreeIran-3913
+- name: 4Nika-3888
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15667,7 +15690,7 @@ proxies:
     headers:
       Host: eeeeeeeeedf.666470.xyz
   udp: true
-- name: 4FreeIran-5992
+- name: 4Nika-5854
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15680,7 +15703,7 @@ proxies:
     headers:
       Host: support.sabapardaziran.ir
   udp: true
-- name: 4FreeIran-6866
+- name: 4Nika-6667
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15689,11 +15712,11 @@ proxies:
   sni: DieGo.DIEgoMAraDOnA.iR.
   network: ws
   ws-opts:
-    path: /#4FreeIran-6866
+    path: /#4Nika-6667
     headers:
       Host: DieGo.DIEgoMAraDOnA.iR.
   udp: true
-- name: 4FreeIran-4241
+- name: 4Nika-4219
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15706,7 +15729,7 @@ proxies:
     headers:
       Host: df5tym.2031.pp.ua
   udp: true
-- name: 4FreeIran-6752
+- name: 4Nika-6557
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15719,7 +15742,7 @@ proxies:
     headers:
       Host: xxcdfr.999854.xyz
   udp: true
-- name: 4FreeIran-3409
+- name: 4Nika-3409
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15732,7 +15755,7 @@ proxies:
     headers:
       Host: invincible.fafa20.shop
   udp: true
-- name: 4FreeIran-6090
+- name: '%F0%9F%87%BA%F0%9F%87%B8%5Bopenproxylist.com%5D%20trojan-US'
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15745,7 +15768,7 @@ proxies:
     headers:
       Host: 666666y.999165.xyz
   udp: true
-- name: 4FreeIran-6104
+- name: 4Nika-5959
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15758,7 +15781,7 @@ proxies:
     headers:
       Host: ttttttyu.2032.pp.ua
   udp: true
-- name: 4FreeIran-4352
+- name: 4Nika-4325
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15771,7 +15794,7 @@ proxies:
     headers:
       Host: ggggggggggh.859886.xyz
   udp: true
-- name: 4FreeIran-6579
+- name: 4Nika-6388
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15784,7 +15807,7 @@ proxies:
     headers:
       Host: x9.859885.xyz
   udp: true
-- name: 4FreeIran-6329
+- name: 4Nika-6143
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15797,7 +15820,7 @@ proxies:
     headers:
       Host: mashdt.pages.dev
   udp: true
-- name: 4FreeIran-6481
+- name: 4Nika-6294
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15806,11 +15829,11 @@ proxies:
   sni: EEeEee4.hUAngSHANG2030.dPdNS.org
   network: ws
   ws-opts:
-    path: /ptGwaGzcA4KNAXX#4FreeIran-6481
+    path: /ptGwaGzcA4KNAXX#4Nika-6294
     headers:
       Host: EEeEee4.hUAngSHANG2030.dPdNS.org
   udp: true
-- name: 4FreeIran-6109
+- name: 4Nika-5965
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15823,7 +15846,7 @@ proxies:
     headers:
       Host: dddddddddffff.iran2035.dpdns.org
   udp: true
-- name: 4FreeIran-3393
+- name: 4Nika-3391
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15836,7 +15859,7 @@ proxies:
     headers:
       Host: jjjjjjjjjjk.4444916.xyz
   udp: true
-- name: 4FreeIran-3922
+- name: 4Nika-3897
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15849,7 +15872,7 @@ proxies:
     headers:
       Host: ggGGGGgggGGgGggy.FReevPN2026.DpDNS.Org
   udp: true
-- name: 4FreeIran-6670
+- name: 4Nika-6475
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15858,7 +15881,7 @@ proxies:
   sni: ExPREsStV.oNetwOthrEE123.Ir
   network: ws
   ws-opts:
-    path: /26za8O91d9bS7H1OOKD#4FreeIran-6670
+    path: /26za8O91d9bS7H1OOKD#4Nika-6475
     headers:
       Host: expresstv.onetwothree123.ir
   udp: true
@@ -15875,7 +15898,7 @@ proxies:
     headers:
       Host: 1sdfghjk.890602.xyz
   udp: true
-- name: 4FreeIran-4353
+- name: 4Nika-4326
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15901,7 +15924,7 @@ proxies:
     headers:
       Host: yaml7.ggff.net
   udp: true
-- name: 4FreeIran-6580
+- name: '%F0%9F%8F%B3%5Bopenproxylist.com%5D%20trojan-'
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15914,7 +15937,7 @@ proxies:
     headers:
       Host: sssdddffgbnhju.2030.pp.ua
   udp: true
-- name: 4FreeIran-3579
+- name: 4Nika-3579
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15927,7 +15950,7 @@ proxies:
     headers:
       Host: wsxxzxsd.999834.xyz
   udp: true
-- name: 4FreeIran-6516
+- name: 4Nika-6322
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15940,7 +15963,7 @@ proxies:
     headers:
       Host: nnnnnnnnnnm.857856.xyz
   udp: true
-- name: 4FreeIran-6830
+- name: 4Nika-6632
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15953,7 +15976,7 @@ proxies:
     headers:
       Host: aws-us-oregon-1.f1cflined.com
   udp: true
-- name: 4FreeIran-3926
+- name: 4Nika-3903
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15962,11 +15985,11 @@ proxies:
   sni: M4rrT.999157.XYz
   network: ws
   ws-opts:
-    path: /NuDL4mLrBwsbnEcmJLxC#4FreeIran-3926
+    path: /NuDL4mLrBwsbnEcmJLxC#4Nika-3903
     headers:
       Host: m4rrt.999157.xyz
   udp: true
-- name: 4FreeIran-6753
+- name: '%F0%9F%87%BA%F0%9F%87%B8%5Bopenproxylist.com%5D%20trojan-US'
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -16018,7 +16041,7 @@ proxies:
     headers:
       Host: ij.ylks.xyz
   udp: true
-- name: 4FreeIran-7222
+- name: 4Nika-6960
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -16031,7 +16054,7 @@ proxies:
     headers:
       Host: aws-ge-frankfurt-1.f1cflinea.com
   udp: true
-- name: 4FreeIran-6180
+- name: 4Nika-6024
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -16040,7 +16063,7 @@ proxies:
   sni: mazq100za43.962dael.workers.dev
   network: ws
   ws-opts:
-    path: /#4FreeIran-6180
+    path: /#4Nika-6024
     headers:
       Host: mazq100za43.962dael.workers.dev
   udp: true
@@ -16057,7 +16080,7 @@ proxies:
     headers:
       Host: il.ylks.xyz
   udp: true
-- name: 4FreeIran-6586
+- name: 4Nika-6395
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -16066,7 +16089,7 @@ proxies:
   sni: jobscareerforlawyers.com
   network: ws
   ws-opts:
-    path: /6b777a91#4FreeIran-6586
+    path: /6b777a91#4Nika-6395
     headers:
       Host: jobscareerforlawyers.com
   udp: true
@@ -16096,7 +16119,7 @@ proxies:
     headers:
       Host: ik.ylks.xyz
   udp: true
-- name: 4FreeIran-6340
+- name: 4Nika-6153
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -16105,7 +16128,7 @@ proxies:
   sni: bpb.my79801.com
   network: ws
   ws-opts:
-    path: /tr#4FreeIran-6340
+    path: /tr#4Nika-6153
     headers:
       Host: bpb.my79801.com
   udp: true
@@ -16135,7 +16158,7 @@ proxies:
     headers:
       Host: torjan.xn--xhq44j.eu.org
   udp: true
-- name: 4FreeIran-6183
+- name: 4Nika-6027
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -16144,7 +16167,7 @@ proxies:
   sni: syndication-statutes-wanted-logo.trycloudflare.com
   network: ws
   ws-opts:
-    path: /argox-tr#4FreeIran-6183
+    path: /argox-tr#4Nika-6027
     headers:
       Host: syndication-statutes-wanted-logo.trycloudflare.com
   udp: true
@@ -16174,7 +16197,20 @@ proxies:
     headers:
       Host: 3wsxcvbn.890617.xyz
   udp: true
-- name: 4FreeIran-3544
+- name: 4Nika-6106
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: blue2024
+  skip-cert-verify: true
+  sni: b.promote.icu
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: tb.promote.icu
+  udp: true
+- name: 4Nika-3543
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -16183,11 +16219,11 @@ proxies:
   sni: telewebion.com
   network: ws
   ws-opts:
-    path: /trojanws#4FreeIran-3544
+    path: /trojanws#4Nika-3543
     headers:
       Host: telewebion.com
   udp: true
-- name: 4FreeIran-6545
+- name: 4Nika-6352
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -16200,7 +16236,7 @@ proxies:
     headers:
       Host: p6us4.pqjc.buzz
   udp: true
-- name: 4FreeIran-5926
+- name: 4Nika-5795
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -16213,7 +16249,7 @@ proxies:
     headers:
       Host: uk3333ip6.hajhesam.biz.id
   udp: true
-- name: 4FreeIran-3306
+- name: 4Nika-3306
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -16225,6 +16261,19 @@ proxies:
     path: /websocket
     headers:
       Host: se1.trojanvpn.de
+  udp: true
+- name: '%f0%9f%87%ba%f0%9f%87%b8%20US%202'
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: 10b1e371-d734-4306-b67f-0fc1f95c2485
+  skip-cert-verify: true
+  sni: aazxSde.003330333.xyZ
+  network: ws
+  ws-opts:
+    path: /KodE23lBlbnEsM#🇺🇸 US 2
+    headers:
+      Host: aazxsde.003330333.xyz
   udp: true
 - name: All--%40V2ray_Alpha-19
   server: 104.22.5.240
@@ -16239,7 +16288,7 @@ proxies:
     headers:
       Host: aksnmaioas.pages.dev
   udp: true
-- name: HK%E9%A6%99%E6%B8%AF%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
+- name: '%E7%BE%8E%E5%9B%BD%28yudou123.top%20%E7%8E%89%E8%B1%86%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9%29'
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -16248,11 +16297,11 @@ proxies:
   sni: epml.ambercc.filegear-sg.me
   network: ws
   ws-opts:
-    path: /?ed=2560&proxyip=ts.hpc.tw#HK香港(mibei77.com 米贝节点分享)
+    path: /?ed=2560&proxyip=ts.hpc.tw#美国(yudou123.top 玉豆免费节点)
     headers:
       Host: epml.ambercc.filegear-sg.me
   udp: true
-- name: 4FreeIran-7229
+- name: 4Nika-6967
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -16265,7 +16314,7 @@ proxies:
     headers:
       Host: aws-ar-buenosaires-1.f1cflinea.com
   udp: true
-- name: 4FreeIran-7230
+- name: 4Nika-6968
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -16278,7 +16327,7 @@ proxies:
     headers:
       Host: aws-ca-central-1.f1cflinea.com
   udp: true
-- name: 4FreeIran-7231
+- name: 4Nika-6969
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -16291,7 +16340,7 @@ proxies:
     headers:
       Host: aws-ca-central-1.f1cflineb.com
   udp: true
-- name: 4FreeIran-7232
+- name: 4Nika-6970
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -16304,7 +16353,7 @@ proxies:
     headers:
       Host: aws-ch-zurich-1.f1cflineb.com
   udp: true
-- name: 4FreeIran-7234
+- name: 4Nika-6972
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -16317,7 +16366,7 @@ proxies:
     headers:
       Host: aws-in-mumbai-1.f1cflinea.com
   udp: true
-- name: 4FreeIran-7235
+- name: 4Nika-6973
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -16330,7 +16379,7 @@ proxies:
     headers:
       Host: aws-se-stockholm-1.f1cflinea.com
   udp: true
-- name: 4FreeIran-7236
+- name: 4Nika-6974
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -16343,7 +16392,7 @@ proxies:
     headers:
       Host: aws-uae-1.f1cflineb.com
   udp: true
-- name: 4FreeIran-7238
+- name: 4Nika-6976
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -16356,7 +16405,7 @@ proxies:
     headers:
       Host: aws-uk-london-1.f1cflinea.com
   udp: true
-- name: 4FreeIran-7239
+- name: 4Nika-6977
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -16408,7 +16457,7 @@ proxies:
     headers:
       Host: cfpage-39t.pages.dev
   udp: true
-- name: 4FreeIran-3836
+- name: 4Nika-3817
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -16417,11 +16466,11 @@ proxies:
   sni: c3mc.ciscocdn1.live
   network: ws
   ws-opts:
-    path: /ywQ9KSLI4ZBm9wOAXUaN#4FreeIran-3836
+    path: /ywQ9KSLI4ZBm9wOAXUaN#4Nika-3817
     headers:
       Host: c3mc.ciscocdn1.live
   udp: true
-- name: 4FreeIran-3866
+- name: 4Nika-3846
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -16430,11 +16479,11 @@ proxies:
   sni: c1mc.cdncisco4.co
   network: ws
   ws-opts:
-    path: /422Kdfwzf49IxeZJa#4FreeIran-3866
+    path: /422Kdfwzf49IxeZJa#4Nika-3846
     headers:
       Host: c1mc.cdncisco4.co
   udp: true
-- name: 4FreeIran-3784
+- name: 4Nika-3765
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -16443,11 +16492,11 @@ proxies:
   sni: c2mk.ciscocdn1.live
   network: ws
   ws-opts:
-    path: /rDCYQta83d0oPABKBhcIX#4FreeIran-3784
+    path: /rDCYQta83d0oPABKBhcIX#4Nika-3765
     headers:
       Host: c2mk.ciscocdn1.live
   udp: true
-- name: US%E7%BE%8E%E5%9B%BD%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
+- name: '%E7%BE%8E%E5%9B%BD%28yudou123.top%20%E7%8E%89%E8%B1%86%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9%29'
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -16456,7 +16505,7 @@ proxies:
   sni: epmk.ambercc.filegear-sg.me
   network: ws
   ws-opts:
-    path: /?ed=2560&proxyip=ts.hpc.tw#US美国(mibei77.com 米贝节点分享)
+    path: /?ed=2560&proxyip=ts.hpc.tw#美国(yudou123.top 玉豆免费节点)
     headers:
       Host: epmk.ambercc.filegear-sg.me
   udp: true
@@ -16735,7 +16784,7 @@ proxies:
     headers:
       Host: 104.149.143.105
   udp: true
-- name: 4FreeIran-22675
+- name: 4Nika-22104
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -16767,7 +16816,7 @@ proxies:
     headers:
       Host: 104.18.3.33
   udp: true
-- name: 4FreeIran-22962
+- name: 4Nika-22390
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -16783,7 +16832,7 @@ proxies:
     headers:
       Host: odelia.autos
   udp: true
-- name: 4FreeIran-23198
+- name: 4Nika-22622
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -16831,7 +16880,7 @@ proxies:
     headers:
       Host: us2.v2rayserv.com
   udp: true
-- name: 4FreeIran-23211
+- name: 4Nika-22635
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -16895,7 +16944,7 @@ proxies:
     headers:
       Host: yvsos.vtcss.top
   udp: true
-- name: 4FreeIran-23309
+- name: 4Nika-22730
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -17039,7 +17088,7 @@ proxies:
     headers:
       Host: fast.com
   udp: true
-- name: 4FreeIran-23646
+- name: 4Nika-23039
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -17119,7 +17168,7 @@ proxies:
     headers:
       Host: lg1.cfcdn3.xyz
   udp: true
-- name: 4FreeIran-23761
+- name: 4Nika-23154
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -17135,7 +17184,7 @@ proxies:
     headers:
       Host: www.44716766.xyz
   udp: true
-- name: 4FreeIran-23767
+- name: 4Nika-23160
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -17311,7 +17360,7 @@ proxies:
     headers:
       Host: 170.187.206.48
   udp: true
-- name: 4FreeIran-24104
+- name: 4Nika-23493
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -17407,7 +17456,7 @@ proxies:
     headers:
       Host: chat.samrg.buzz
   udp: true
-- name: 4FreeIran-24219
+- name: 4Nika-23608
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -17503,7 +17552,7 @@ proxies:
     headers:
       Host: eu3.glucy.top
   udp: true
-- name: 4FreeIran-24803
+- name: 4Nika-24188
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -17615,7 +17664,7 @@ proxies:
     headers:
       Host: www.82131333.xyz
   udp: true
-- name: 4FreeIran-24971
+- name: 4Nika-24353
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -17647,7 +17696,7 @@ proxies:
     headers:
       Host: www.29870011.xyz
   udp: true
-- name: 4FreeIran-25010
+- name: 4Nika-24392
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -17711,7 +17760,7 @@ proxies:
     headers:
       Host: www.33709952.xyz
   udp: true
-- name: 4FreeIran-25075
+- name: 4Nika-24457
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -17727,7 +17776,7 @@ proxies:
     headers:
       Host: 2.freek1.xyz
   udp: true
-- name: 4FreeIran-25095
+- name: 4Nika-24477
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -17743,7 +17792,7 @@ proxies:
     headers:
       Host: d.freeh1.xyz
   udp: true
-- name: 4FreeIran-25098
+- name: 4Nika-24480
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -17855,7 +17904,7 @@ proxies:
     headers:
       Host: Kansas.kotick.site
   udp: true
-- name: 4FreeIran-25365
+- name: 4Nika-24741
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -17983,7 +18032,7 @@ proxies:
     headers:
       Host: www.37407045.xyz
   udp: true
-- name: 4FreeIran-25684
+- name: 4Nika-25048
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -18047,7 +18096,7 @@ proxies:
     headers:
       Host: www.57024853.xyz
   udp: true
-- name: 4FreeIran-25730
+- name: 4Nika-25094
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -18079,7 +18128,7 @@ proxies:
     headers:
       Host: www.29794192.xyz
   udp: true
-- name: 4FreeIran-25892
+- name: 4Nika-25251
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -18094,38 +18143,6 @@ proxies:
     path: Elx0YjFbQWYqM3pxcityNDJEMyoeHih7UXJzRhsjaUVhC1l0MTo6BgpgCxtgeCUH
     headers:
       Host: bfcEb82481eEA41083b721E3D99d42c5b34AE27e4e03170FfaD8a75e948050D.wwwNaMAsha.Com
-  udp: true
-- name: 美国 CloudFlare节点
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: cdec9d57-661d-456a-bbf2-b4c38e9c6711
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: eer4567.999824.xyz
-  network: ws
-  ws-opts:
-    path: /9dZlJLjHHrL0VwSolbqFpg
-    headers:
-      Host: eer4567.999824.xyz
-  udp: true
-- name: 美国 CloudFlare节点
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: cdec9d57-661d-456a-bbf2-b4c38e9c6711
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: eeedcfvg.999824.xyz
-  network: ws
-  ws-opts:
-    path: /9dZlJLjHHrL0VwSolbqFpg
-    headers:
-      Host: eeedcfvg.999824.xyz
   udp: true
 - name: 🇺🇸 United States 06 TG...
   server: 104.22.5.240
@@ -18159,7 +18176,7 @@ proxies:
     headers:
       Host: download.game-one.ir
   udp: true
-- name: 4FreeIran-26019
+- name: 4Nika-25376
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -18174,6 +18191,22 @@ proxies:
     path: /12796
     headers:
       Host: amstd.digires.shop
+  udp: true
+- name: '@DeamNet_🇺🇸Newark-3088-150'
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: A59E320C-BAC6-45E3-8A27-1518610708D0
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: Amsterdam.v2ray.online
+  network: ws
+  ws-opts:
+    path: /speedtest
+    headers:
+      Host: Amsterdam.v2ray.online
   udp: true
 - name: 09. آسیاتک
   server: 104.22.5.240
@@ -18207,7 +18240,7 @@ proxies:
     headers:
       Host: b.gguu.pp.ua
   udp: true
-- name: 4FreeIran-26065
+- name: 4Nika-25420
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -18303,7 +18336,7 @@ proxies:
     headers:
       Host: shirazu.ac.ir
   udp: true
-- name: 4FreeIran-26096
+- name: 4Nika-25451
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -18319,7 +18352,7 @@ proxies:
     headers:
       Host: cdntr2.digisport.shop
   udp: true
-- name: 4FreeIran-25942
+- name: 4Nika-25298
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -18335,7 +18368,7 @@ proxies:
     headers:
       Host: dd2.1808.cf
   udp: true
-- name: 4FreeIran-25947
+- name: 4Nika-25303
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -18367,7 +18400,7 @@ proxies:
     headers:
       Host: lu.sharecentre.online
   udp: true
-- name: 4FreeIran-25970
+- name: 4Nika-25326
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -18383,7 +18416,7 @@ proxies:
     headers:
       Host: us.dalazhi.eu.org
   udp: true
-- name: 4FreeIran-25986
+- name: 4Nika-25342
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -18398,22 +18431,6 @@ proxies:
     path: /zh-cn
     headers:
       Host: us3.sanfencdn1.com
-  udp: true
-- name: telegram 🚀 DailyV2ry
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: c208e0ae-6f6d-4745-99da-44a44744c530
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: blazE-GEr-248.blAZeClOuDmaiN.sitE
-  network: ws
-  ws-opts:
-    path: /linkwsrt?ed=2560
-    headers:
-      Host: blazE-GEr-248.blAZeClOuDmaiN.sitE
   udp: true
 - name: 美国 CloudFlare节点
   server: 104.22.5.240
@@ -18447,21 +18464,21 @@ proxies:
     headers:
       Host: ghxlh.tk
   udp: true
-- name: 🇭🇰香港2 | ⬇️ 1.2MB/s
+- name: 🇺🇸美国26 | ⬇️ 3.2MB/s
   server: 104.22.5.240
   port: 443
   type: vmess
-  uuid: db69d5bc-d36c-4903-f471-74b98c5cefe5
+  uuid: 82ff6d30-2920-4ebd-b95c-b016ede1a841
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: hk2.lrzdx.uk
+  servername: gs03-1.guoshi1520.com
   network: ws
   ws-opts:
-    path: /register
+    path: /82ff6d30
     headers:
-      Host: hk2.lrzdx.uk
+      Host: gs03-1.guoshi1520.com
   udp: true
 - name: v2rayfree.eu.org - 香港A...
   server: 104.22.5.240
@@ -18559,7 +18576,7 @@ proxies:
     headers:
       Host: jp1.mayaa.cf
   udp: true
-- name: 4FreeIran-26290
+- name: 4Nika-25642
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -18575,7 +18592,7 @@ proxies:
     headers:
       Host: fn.mostafago.tk
   udp: true
-- name: 4FreeIran-26404
+- name: 4Nika-25753
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -18591,7 +18608,7 @@ proxies:
     headers:
       Host: 4.saintink.eu.org
   udp: true
-- name: 4FreeIran-26409
+- name: 4Nika-25758
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -18671,7 +18688,7 @@ proxies:
     headers:
       Host: quran-audio2.xyz
   udp: true
-- name: 4FreeIran-26533
+- name: 4Nika-25870
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -18703,7 +18720,7 @@ proxies:
     headers:
       Host: badger.nanoravro.ml
   udp: true
-- name: 4FreeIran-26538
+- name: 4Nika-25874
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -18831,7 +18848,7 @@ proxies:
     headers:
       Host: us02.gogogoo.cyou
   udp: true
-- name: 4FreeIran-26648
+- name: 4Nika-25975
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -18911,6 +18928,22 @@ proxies:
     headers:
       Host: xcf029.facai2024.com
   udp: true
+- name: 🇭🇰香港2 | ⬇️ 1.2MB/s
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: db69d5bc-d36c-4903-f471-74b98c5cefe5
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: hk2.lrzdx.uk
+  network: ws
+  ws-opts:
+    path: /register
+    headers:
+      Host: hk2.lrzdx.uk
+  udp: true
 - name: 🇺🇸美国104 | ⬇️ 3.3MB/s
   server: 104.22.5.240
   port: 443
@@ -18927,19 +18960,6 @@ proxies:
     headers:
       Host: maXNEtVIP-usA-VP3.nETKH3.SiTE
   udp: true
-- name: ⚡ b2n.ir/v2ray-configs | 362
-  server: 104.22.5.240
-  port: 443
-  type: trojan
-  password: 0f7070cd-c91d-4532-a51f-56da4f0e94be
-  skip-cert-verify: true
-  sni: wwwsder.444682.xyz
-  network: ws
-  ws-opts:
-    path: /ctHoQlqeZn8pbEUSLppj7jCmY
-    headers:
-      Host: wwwsder.444682.xyz
-  udp: true
 - name: ⚡ b2n.ir/v2ray-configs | 528
   server: 104.22.5.240
   port: 443
@@ -18953,176 +18973,7 @@ proxies:
     headers:
       Host: m9uujh2.459.pp.ua
   udp: true
-- name: ⚡ b2n.ir/v2ray-configs | 981
-  server: 104.22.5.240
-  port: 443
-  type: trojan
-  password: 1c5b4508-7f18-47bf-9bce-e7ec19fb31cb
-  skip-cert-verify: true
-  sni: dddfghnju.890604.dpdns.org
-  network: ws
-  ws-opts:
-    path: /AqI89g7rmh6dX7cJaQmgEe
-    headers:
-      Host: dddfghnju.890604.dpdns.org
-  udp: true
-- name: ⚡ b2n.ir/v2ray-configs | 224
-  server: 104.22.5.240
-  port: 443
-  type: trojan
-  password: a4e8ec0a-75d0-4fc5-837a-4973ed3a9d3e
-  skip-cert-verify: true
-  sni: dDDfFfVVBNHju.931.pP.UA
-  network: ws
-  ws-opts:
-    path: /eoIwQ2eV4yO04R1hYgCXNutkS5H
-    headers:
-      Host: dddfffvvbnhju.931.pp.ua
-  udp: true
-- name: ⚡ b2n.ir/v2ray-configs | 922
-  server: 104.22.5.240
-  port: 443
-  type: trojan
-  password: e35026da-e985-49ca-b43b-276062a535a6
-  skip-cert-verify: true
-  sni: notdirect.howhealthyistoomajreally.homes
-  network: ws
-  ws-opts:
-    path: /ilb9fuWfuqWDjlQrGCkIH66kMFPa#⚡ b2n.ir/v2ray-configs | 922
-    headers:
-      Host: notdirect.howhealthyistoomajreally.homes
-  udp: true
-- name: ⚡ b2n.ir/v2ray-configs | 12
-  server: 104.22.5.240
-  port: 443
-  type: trojan
-  password: 6d898085-bf6a-449b-9763-0073d4dc2ce0
-  skip-cert-verify: true
-  sni: BoSTON03.862224.ggFf.neT
-  network: ws
-  ws-opts:
-    path: /Q3cz2AWTPMCtDGV1L6R1Jz18eIUw#⚡ b2n.ir/v2ray-configs | 12
-    headers:
-      Host: boston03.862224.ggff.net
-  udp: true
-- name: ⚡ b2n.ir/v2ray-configs | 127
-  server: 104.22.5.240
-  port: 443
-  type: trojan
-  password: auto
-  skip-cert-verify: true
-  sni: esetsecuritylicense3.wawafec355.workers.dev
-  network: ws
-  ws-opts:
-    path: /#⚡ b2n.ir/v2ray-configs | 127
-    headers:
-      Host: esetsecuritylicense3.wawafec355.workers.dev
-  udp: true
-- name: ⚡ b2n.ir/v2ray-configs | 24
-  server: 104.22.5.240
-  port: 443
-  type: trojan
-  password: e9b4bdbd-cc5b-4a90-9616-ea0f1092ec7c
-  skip-cert-verify: true
-  sni: p09.IrAN.pP.Ua
-  network: ws
-  ws-opts:
-    path: /s1XRkMWuneQkqtp5KKSues
-    headers:
-      Host: p09.iran.pp.ua
-  udp: true
-- name: ⚡ b2n.ir/v2ray-configs | 651
-  server: 104.22.5.240
-  port: 443
-  type: trojan
-  password: CjqK8GFZ),D?
-  skip-cert-verify: true
-  sni: 7xVB-b9Ws5Zjp6cYjvW89zRKU9GMuPW6.maryAFArhUnI.WORkers.dEv
-  network: ws
-  ws-opts:
-    path: /trU3kEraImU22Jv6vo?ed=2560
-    headers:
-      Host: 7xvb-b9ws5zjp6cyjvw89zrku9gmupw6.maryafarhuni.workers.dev
-  udp: true
-- name: ⚡ b2n.ir/v2ray-configs | 583
-  server: 104.22.5.240
-  port: 443
-  type: trojan
-  password: WOeXShhJpL
-  skip-cert-verify: true
-  sni: 08jzus.zdzdzd.xyz
-  network: ws
-  ws-opts:
-    path: /juzigongyi#⚡ b2n.ir/v2ray-configs | 583
-    headers:
-      Host: 08jzus.zdzdzd.xyz
-  udp: true
-- name: ⚡ b2n.ir/v2ray-configs | 987
-  server: 104.22.5.240
-  port: 443
-  type: trojan
-  password: 11dd4a95-fd4f-4f08-8def-e950aa2c1766
-  skip-cert-verify: true
-  sni: uUUui.459.pP.Ua
-  network: ws
-  ws-opts:
-    path: /z749eTIMq2m5GWnxMyM
-    headers:
-      Host: uuuui.459.pp.ua
-  udp: true
-- name: ⚡ b2n.ir/v2ray-configs | 128
-  server: 104.22.5.240
-  port: 443
-  type: trojan
-  password: a8fce442-ae9a-4cc1-a0cc-20308ff0a0db
-  skip-cert-verify: true
-  sni: 1P.890689.xyZ
-  network: ws
-  ws-opts:
-    path: /lXENb74xF4ylXngZ
-    headers:
-      Host: 1p.890689.xyz
-  udp: true
-- name: ⚡ b2n.ir/v2ray-configs | 139
-  server: 104.22.5.240
-  port: 443
-  type: trojan
-  password: Aimer
-  skip-cert-verify: true
-  sni: epmo.ambercc.filegear-sg.me
-  network: ws
-  ws-opts:
-    path: /?ed=2560&proxyip=ts.hpc.tw#⚡ b2n.ir/v2ray-configs | 139
-    headers:
-      Host: epmo.ambercc.filegear-sg.me
-  udp: true
-- name: ⚡ b2n.ir/v2ray-configs | 911
-  server: 104.22.5.240
-  port: 443
-  type: trojan
-  password: 6757b7d6-fa32-4708-b5d1-30e3cf928b51
-  skip-cert-verify: true
-  sni: ZZzzzZZ.890601.XYZ
-  network: ws
-  ws-opts:
-    path: /l96MZ8se5Kl2p8BiMhP42l
-    headers:
-      Host: zzzzzzz.890601.xyz
-  udp: true
-- name: '%E6%9C%AA%E7%9F%A571'
-  server: 104.22.5.240
-  port: 443
-  type: trojan
-  password: auto
-  skip-cert-verify: true
-  sni: esetsecuritylicense1.cxlrazo.workers.dev
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: esetsecuritylicense1.cxlrazo.workers.dev
-  udp: true
-- name: '%E6%9C%AA%E7%9F%A573'
+- name: ⚡ b2n.ir/v2ray-configs | 804
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -19135,7 +18986,7 @@ proxies:
     headers:
       Host: wwwde.00890604.xyz
   udp: true
-- name: '%E6%9C%AA%E7%9F%A5162'
+- name: ⚡ b2n.ir/v2ray-configs | 26
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -19144,9 +18995,168 @@ proxies:
   sni: esetsecuritylicense1.vowexa5791.workers.dev
   network: ws
   ws-opts:
-    path: /
+    path: /#⚡ b2n.ir/v2ray-configs | 26
     headers:
       Host: esetsecuritylicense1.vowexa5791.workers.dev
+  udp: true
+- name: ⚡ b2n.ir/v2ray-configs | 449
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: a4e8ec0a-75d0-4fc5-837a-4973ed3a9d3e
+  skip-cert-verify: true
+  sni: dDDfFfVVBNHju.931.pP.UA
+  network: ws
+  ws-opts:
+    path: /eoIwQ2eV4yO04R1hYgCXNutkS5H
+    headers:
+      Host: dddfffvvbnhju.931.pp.ua
+  udp: true
+- name: ⚡ b2n.ir/v2ray-configs | 932
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: a94fafdb-10d6-46c2-be8a-5c2e8358fbb0
+  skip-cert-verify: true
+  sni: gGgGGGGGGgGgHHHHhhhHhj.iRaN2035.dpdNS.oRg
+  network: ws
+  ws-opts:
+    path: /xa846InEcmjyiKVby2Lp
+    headers:
+      Host: gggggggggggghhhhhhhhhj.iran2035.dpdns.org
+  udp: true
+- name: ⚡ b2n.ir/v2ray-configs | 758
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: auto
+  skip-cert-verify: true
+  sni: esetsecuritylicense1.cxlrazo.workers.dev
+  network: ws
+  ws-opts:
+    path: /#⚡ b2n.ir/v2ray-configs | 758
+    headers:
+      Host: esetsecuritylicense1.cxlrazo.workers.dev
+  udp: true
+- name: ⚡ b2n.ir/v2ray-configs | 83
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: d67cfeaf-b277-44ac-ab99-9dd02a7c5299
+  skip-cert-verify: true
+  sni: Fgh9JkR5.890617.xYz
+  network: ws
+  ws-opts:
+    path: /lWljHWvIMOj85lz42MdhsCLV
+    headers:
+      Host: fgh9jkr5.890617.xyz
+  udp: true
+- name: ⚡ b2n.ir/v2ray-configs | 347
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: a5fd0c47-f3f6-48c8-becb-cc766edf3e1a
+  skip-cert-verify: true
+  sni: m5rtyu.999658.xyz
+  network: ws
+  ws-opts:
+    path: /GawgMugyRDAQXp6e0CScyGqcQZW
+    headers:
+      Host: m5rtyu.999658.xyz
+  udp: true
+- name: ⚡ b2n.ir/v2ray-configs | 387
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: 0b65bb06-6b28-487a-8e3c-820dda51e977
+  skip-cert-verify: true
+  sni: series-v1.samanehha.co
+  network: ws
+  ws-opts:
+    path: /43xf5zgeApzDAfhOHq#⚡ b2n.ir/v2ray-configs | 387
+    headers:
+      Host: series-v1.samanehha.co
+  udp: true
+- name: '%E6%9C%AA%E7%9F%A55'
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: f2s539
+  skip-cert-verify: true
+  sni: aws-us-dallas-1.f1cflined.com
+  network: ws
+  ws-opts:
+    path: /f1rocket
+    headers:
+      Host: aws-us-dallas-1.f1cflined.com
+  udp: true
+- name: '%E6%9C%AA%E7%9F%A5139'
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: a8fce442-ae9a-4cc1-a0cc-20308ff0a0db
+  skip-cert-verify: true
+  sni: 1P.890689.xyZ
+  network: ws
+  ws-opts:
+    path: /lXENb74xF4ylXngZ
+    headers:
+      Host: 1p.890689.xyz
+  udp: true
+- name: 🇺🇸[openproxylist.com] trojan-US
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: bce0c7cb-08d1-46a7-b77b-7bff8b46252f
+  skip-cert-verify: true
+  sni: XXXXxxXxXc.666461.xyZ
+  network: ws
+  ws-opts:
+    path: /x9F83IcyjcEyBXZBROjL3Q5vTymr
+    headers:
+      Host: xxxxxxxxxc.666461.xyz
+  udp: true
+- name: 🔥Join+Telegram:@Farah_VPN🟣
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: c208e0ae-6f6d-4745-99da-44a44744c530
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: blazE-GEr-248.blAZeClOuDmaiN.sitE
+  network: ws
+  ws-opts:
+    path: /linkwsrt?ed=2560
+    headers:
+      Host: blazE-GEr-248.blAZeClOuDmaiN.sitE
+  udp: true
+- name: '%40V2rayNG3'
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: Pooria
+  skip-cert-verify: true
+  sni: 301.pOORiAm.ir#%40V2rayNG3
+  network: ws
+  ws-opts:
+    path: trPyOrWMfkHd15oxiI?ed=1520#@v2ray_alpha
+    headers:
+      Host: 301.pooriam.ir
+  udp: true
+- name: '%E6%9C%AA%E7%9F%A513'
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: CjqK8GFZ),D?
+  skip-cert-verify: true
+  sni: 7xVB-b9Ws5Zjp6cYjvW89zRKU9GMuPW6.maryAFArhUnI.WORkers.dEv
+  network: ws
+  ws-opts:
+    path: /trU3kEraImU22Jv6vo
+    headers:
+      Host: 7xVB-b9Ws5Zjp6cYjvW89zRKU9GMuPW6.maryAFArhUnI.WORkers.dEv
   udp: true
 - name: 美国 CloudFlare节点
   server: 104.22.5.240
@@ -19164,26 +19174,26 @@ proxies:
     headers:
       Host: ssxxzasw.999824.xyz
   udp: true
-- name: '%40V2rayNG3'
+- name: '%F0%9F%8F%81RELAY-172.66.46.221-1098'
   server: 104.22.5.240
   port: 443
   type: trojan
-  password: Pooria
+  password: juzi
   skip-cert-verify: true
-  sni: 301.pOORiAm.ir#%40V2rayNG3
+  sni: juzi8186-sr1.pages.dev
   network: ws
   ws-opts:
-    path: trPyOrWMfkHd15oxiI?ed=1520#@v2ray_alpha
+    path: /
     headers:
-      Host: 301.pooriam.ir
+      Host: juzi8186-sr1.pages.dev
   udp: true
-- name: Server145| Sonzai X
+- name: Server75| Sonzai X
   server: 104.22.5.240
   port: 443
   type: trojan
   password: amclubs
   skip-cert-verify: true
-  sni: tran.amclubstest.nyc.mn# Server145| Sonzai X
+  sni: tran.amclubstest.nyc.mn# Server75| Sonzai X
   network: ws
   ws-opts:
     path: /Telegram@V2ray_Alpha/?ed=2560
@@ -19372,6 +19382,19 @@ proxies:
     path: /Q3cz2AWTPMCtDGV1L6R1Jz18eIUw
     headers:
       Host: boston01.890614.filegear-sg.me
+  udp: true
+- name: '[]t.me/ConfigsHub'
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: 6d898085-bf6a-449b-9763-0073d4dc2ce0
+  skip-cert-verify: true
+  sni: BoSTON03.862224.ggFf.neT
+  network: ws
+  ws-opts:
+    path: /Q3cz2AWTPMCtDGV1L6R1Jz18eIUw
+    headers:
+      Host: boston03.862224.ggff.net
   udp: true
 - name: '[]t.me/MoftConfig'
   server: 104.22.5.240
@@ -19585,19 +19608,6 @@ proxies:
   server: 104.22.5.240
   port: 443
   type: trojan
-  password: d67cfeaf-b277-44ac-ab99-9dd02a7c5299
-  skip-cert-verify: true
-  sni: Fgh9JkR5.890617.xYz#[]t.me/ConfigsHub
-  network: ws
-  ws-opts:
-    path: /lWljHWvIMOj85lz42MdhsCLV
-    headers:
-      Host: fgh9jkr5.890617.xyz
-  udp: true
-- name: '[]t.me/ConfigsHub'
-  server: 104.22.5.240
-  port: 443
-  type: trojan
   password: e86c7146-bd09-409c-a532-f41aed042f8d
   skip-cert-verify: true
   sni: tr1.safecdn.site#[]t.me/ConfigsHub
@@ -19797,6 +19807,19 @@ proxies:
     path: /Zseq8mE8wMzbGFtV
     headers:
       Host: us7-08.890602.xyz
+  udp: true
+- name: '[]t.me/ConfigsHub'
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: auto
+  skip-cert-verify: true
+  sni: esetsecuritylicense3.wawafec355.workers.dev#[]t.me/ConfigsHub
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: esetsecuritylicense3.wawafec355.workers.dev
   udp: true
 - name: '[]t.me/MoftConfig'
   server: 104.22.5.240
@@ -20222,19 +20245,6 @@ proxies:
   server: 104.22.5.240
   port: 443
   type: trojan
-  password: a5fd0c47-f3f6-48c8-becb-cc766edf3e1a
-  skip-cert-verify: true
-  sni: m5rtyu.999658.xyz#[]t.me/ConfigsHub
-  network: ws
-  ws-opts:
-    path: /GawgMugyRDAQXp6e0CScyGqcQZW
-    headers:
-      Host: m5rtyu.999658.xyz
-  udp: true
-- name: '[]t.me/ConfigsHub'
-  server: 104.22.5.240
-  port: 443
-  type: trojan
   password: 21e5535e-4783-4a80-a735-24a1162d315c
   skip-cert-verify: true
   sni: sscDfr5.999182.XyZ#[]t.me/ConfigsHub
@@ -20308,19 +20318,6 @@ proxies:
     path: /I4L1BP2DQVYmx5NYQ76MGGq
     headers:
       Host: fghklo5.890617.xyz
-  udp: true
-- name: '[]t.me/ConfigsHub'
-  server: 104.22.5.240
-  port: 443
-  type: trojan
-  password: 6d898085-bf6a-449b-9763-0073d4dc2ce0
-  skip-cert-verify: true
-  sni: boston03.890604.FILEGEAr-SG.ME
-  network: ws
-  ws-opts:
-    path: /Q3cz2AWTPMCtDGV1L6R1Jz18eIUw#[]t.me/ConfigsHub
-    headers:
-      Host: boston03.890604.FILEGEAr-SG.ME
   udp: true
 - name: '[]t.me/ConfigsHub'
   server: 104.22.5.240
@@ -20430,6 +20427,32 @@ proxies:
   server: 104.22.5.240
   port: 443
   type: trojan
+  password: blue2024
+  skip-cert-verify: true
+  sni: tc.promote.icu
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: tc.promote.icu
+  udp: true
+- name: '[]t.me/ConfigsHub'
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: WOeXShhJpL
+  skip-cert-verify: true
+  sni: 08jzus.zdzdzd.xyz
+  network: ws
+  ws-opts:
+    path: /juzigongyi
+    headers:
+      Host: 08jzus.zdzdzd.xyz
+  udp: true
+- name: '[]t.me/ConfigsHub'
+  server: 104.22.5.240
+  port: 443
+  type: trojan
   password: Aimer
   skip-cert-verify: true
   sni: agepq.ambercc.filegear-sg.me
@@ -20491,19 +20514,6 @@ proxies:
     headers:
       Host: us7-02.890624.xyz
   udp: true
-- name: '[]t.me/ConfigsHub'
-  server: 104.22.5.240
-  port: 443
-  type: trojan
-  password: f2s539
-  skip-cert-verify: true
-  sni: aws-us-dallas-1.f1cflined.com
-  network: ws
-  ws-opts:
-    path: /f1rocket#[]t.me/ConfigsHub
-    headers:
-      Host: aws-us-dallas-1.f1cflined.com
-  udp: true
 - name: '[]t.me/MoftConfig'
   server: 104.22.5.240
   port: 443
@@ -20529,19 +20539,6 @@ proxies:
     path: /xJXdWGMbbZovkcaL2SsGTGxE
     headers:
       Host: xs2ws.857856.xyz
-  udp: true
-- name: '[]t.me/ConfigsHub'
-  server: 104.22.5.240
-  port: 443
-  type: trojan
-  password: 0b65bb06-6b28-487a-8e3c-820dda51e977
-  skip-cert-verify: true
-  sni: series-v1.samanehha.co
-  network: ws
-  ws-opts:
-    path: /43xf5zgeApzDAfhOHq#[]t.me/ConfigsHub
-    headers:
-      Host: series-v1.samanehha.co
   udp: true
 - name: '[]t.me/ConfigsHub'
   server: 104.22.5.240
@@ -21120,7 +21117,7 @@ proxies:
     headers:
       Host: zheshiscp.com
   udp: true
-- name: 4FreeIran-3168
+- name: 4Nika-3168
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -21133,7 +21130,33 @@ proxies:
     headers:
       Host: us1.test3.net
   udp: true
-- name: 4FreeIran-3436
+- name: 4Nika-3365
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: 0f7070cd-c91d-4532-a51f-56da4f0e94be
+  skip-cert-verify: true
+  sni: wwwsder.444682.xyz
+  network: ws
+  ws-opts:
+    path: /ctHoQlqeZn8pbEUSLppj7jCmY
+    headers:
+      Host: wwwsder.444682.xyz
+  udp: true
+- name: 4Nika-3382
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: 11dd4a95-fd4f-4f08-8def-e950aa2c1766
+  skip-cert-verify: true
+  sni: uUUui.459.pP.Ua
+  network: ws
+  ws-opts:
+    path: /z749eTIMq2m5GWnxMyM
+    headers:
+      Host: uuuui.459.pp.ua
+  udp: true
+- name: 4Nika-3437
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -21146,7 +21169,20 @@ proxies:
     headers:
       Host: cvfgtre4.222560.xyz
   udp: true
-- name: 4FreeIran-3637
+- name: 4Nika-3455
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: 1c5b4508-7f18-47bf-9bce-e7ec19fb31cb
+  skip-cert-verify: true
+  sni: dddfghnju.890604.dpdns.org
+  network: ws
+  ws-opts:
+    path: /AqI89g7rmh6dX7cJaQmgEe
+    headers:
+      Host: dddfghnju.890604.dpdns.org
+  udp: true
+- name: 4Nika-3624
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -21155,37 +21191,24 @@ proxies:
   sni: eeeeeEE4.iRan.PP.uA
   network: ws
   ws-opts:
-    path: /51ilfH8vHwxilZqfwAwY2SNm#4FreeIran-3637
+    path: /51ilfH8vHwxilZqfwAwY2SNm#4Nika-3624
     headers:
       Host: eeeeeEE4.iRan.PP.uA
   udp: true
-- name: 4FreeIran-3660
+- name: 4Nika-3902
   server: 104.22.5.240
   port: 443
   type: trojan
-  password: 4174b95d-115e-4d39-add6-1f8db95bb860
+  password: 6757b7d6-fa32-4708-b5d1-30e3cf928b51
   skip-cert-verify: true
-  sni: dddccvvgbnhju.131.pp.ua
+  sni: ZZzzzZZ.890601.XYZ
   network: ws
   ws-opts:
-    path: /uzJNzgkkYWRWGxgFnoFPw1
+    path: /l96MZ8se5Kl2p8BiMhP42l
     headers:
-      Host: dddccvvgbnhju.131.pp.ua
+      Host: zzzzzzz.890601.xyz
   udp: true
-- name: 4FreeIran-3753
-  server: 104.22.5.240
-  port: 443
-  type: trojan
-  password: 4b33b482-25bc-49e4-b866-878c914d945a
-  skip-cert-verify: true
-  sni: xXxXxxx.890604.dPDNs.org
-  network: ws
-  ws-opts:
-    path: /kzefUfBUzMsQY6zyyQCjn8kmnN0ehd
-    headers:
-      Host: xxxxxxx.890604.dpdns.org
-  udp: true
-- name: 4FreeIran-4030
+- name: 4Nika-4014
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -21194,11 +21217,11 @@ proxies:
   sni: BOSton01.890604.GGff.NeT
   network: ws
   ws-opts:
-    path: /Q3cz2AWTPMCtDGV1L6R1Jz18eIUw#4FreeIran-4030
+    path: /Q3cz2AWTPMCtDGV1L6R1Jz18eIUw#4Nika-4014
     headers:
       Host: boston01.890604.ggff.net
   udp: true
-- name: 4FreeIran-4239
+- name: 4Nika-4224
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -21211,7 +21234,20 @@ proxies:
     headers:
       Host: tjjd.yzyx1.v6.army
   udp: true
-- name: 4FreeIran-6020
+- name: 4Nika-4934
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: Aimer
+  skip-cert-verify: true
+  sni: epmo.ambercc.filegear-sg.me
+  network: ws
+  ws-opts:
+    path: /?ed=2560&proxyip=ts.hpc.tw#4Nika-4934
+    headers:
+      Host: epmo.ambercc.filegear-sg.me
+  udp: true
+- name: 4Nika-5932
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -21224,20 +21260,7 @@ proxies:
     headers:
       Host: ssjj.esslh.filegear-sg.mehttp/1.1
   udp: true
-- name: 4FreeIran-6021
-  server: 104.22.5.240
-  port: 443
-  type: trojan
-  password: SSorg
-  skip-cert-verify: true
-  sni: ssjj.esslh.filegear-sg.me
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ssjj.esslh.filegear-sg.me
-  udp: true
-- name: 4FreeIran-6074
+- name: 4Nika-5985
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -21246,11 +21269,11 @@ proxies:
   sni: tws23.kallepache.store
   network: ws
   ws-opts:
-    path: /update#4FreeIran-6074
+    path: /update#4Nika-5985
     headers:
       Host: tws23.kallepache.store
   udp: true
-- name: 4FreeIran-6103
+- name: 4Nika-6014
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -21263,20 +21286,7 @@ proxies:
     headers:
       Host: TttTtTYU.2032.PP.UA
   udp: true
-- name: 4FreeIran-6108
-  server: 104.22.5.240
-  port: 443
-  type: trojan
-  password: a94fafdb-10d6-46c2-be8a-5c2e8358fbb0
-  skip-cert-verify: true
-  sni: gGgGGGGGGgGgHHHHhhhHhj.iRaN2035.dpdNS.oRg
-  network: ws
-  ws-opts:
-    path: /xa846InEcmjyiKVby2Lp
-    headers:
-      Host: gggggggggggghhhhhhhhhj.iran2035.dpdns.org
-  udp: true
-- name: 4FreeIran-6202
+- name: 4Nika-6104
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -21285,37 +21295,37 @@ proxies:
   sni: usa03.rtx.al
   network: ws
   ws-opts:
-    path: /cfyyds#4FreeIran-6202
+    path: /cfyyds#4Nika-6104
     headers:
       Host: usa03.rtx.al
   udp: true
-- name: 4FreeIran-6261
+- name: 4Nika-6486
   server: 104.22.5.240
   port: 443
   type: trojan
-  password: blue2024
+  password: e35026da-e985-49ca-b43b-276062a535a6
   skip-cert-verify: true
-  sni: tc.promote.icu
+  sni: notdirect.howhealthyistoomajreally.homes
   network: ws
   ws-opts:
-    path: /
+    path: /ilb9fuWfuqWDjlQrGCkIH66kMFPa#4Nika-6486
     headers:
-      Host: tc.promote.icu
+      Host: notdirect.howhealthyistoomajreally.homes
   udp: true
-- name: 4FreeIran-6283
+- name: 4Nika-6508
   server: 104.22.5.240
   port: 443
   type: trojan
-  password: blue2024
+  password: e9b4bdbd-cc5b-4a90-9616-ea0f1092ec7c
   skip-cert-verify: true
-  sni: b.promote.icu
+  sni: p09.IrAN.pP.Ua
   network: ws
   ws-opts:
-    path: /
+    path: /s1XRkMWuneQkqtp5KKSues
     headers:
-      Host: tb.promote.icu
+      Host: p09.iran.pp.ua
   udp: true
-- name: 4FreeIran-6750
+- name: 4Nika-6621
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -21328,7 +21338,7 @@ proxies:
     headers:
       Host: xcfvgbhfg.999836.xyz
   udp: true
-- name: 4FreeIran-22643
+- name: 4Nika-22183
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -21344,7 +21354,7 @@ proxies:
     headers:
       Host: d84ee332-1284-11ee-a5c8-8213fd3be4b9.bamarambash.monster
   udp: true
-- name: 4FreeIran-23158
+- name: 4Nika-22694
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -21360,7 +21370,7 @@ proxies:
     headers:
       Host: cf.tonyluk.link
   udp: true
-- name: 4FreeIran-23255
+- name: 4Nika-22788
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -21376,7 +21386,7 @@ proxies:
     headers:
       Host: Dusseldorf.kotick.site
   udp: true
-- name: 4FreeIran-24285
+- name: 4Nika-23783
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -21392,7 +21402,7 @@ proxies:
     headers:
       Host: localhoster.ml
   udp: true
-- name: 4FreeIran-24535
+- name: 4Nika-24033
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -21408,7 +21418,7 @@ proxies:
     headers:
       Host: 72d6d25e-1b39-11ee-a5c8-8213fd3be4b9.bamarambash.monster
   udp: true
-- name: 4FreeIran-25170
+- name: 4Nika-24662
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -21424,7 +21434,7 @@ proxies:
     headers:
       Host: www.42088326.xyz
   udp: true
-- name: 4FreeIran-25928
+- name: 4Nika-25401
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -21440,7 +21450,7 @@ proxies:
     headers:
       Host: cold-dawn-9246.fly.dev
   udp: true
-- name: 4FreeIran-25945
+- name: 4Nika-25418
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -21456,7 +21466,7 @@ proxies:
     headers:
       Host: lo.twittei.me
   udp: true
-- name: 4FreeIran-25946
+- name: 4Nika-25419
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -21472,7 +21482,7 @@ proxies:
     headers:
       Host: us2.twittei.me
   udp: true
-- name: 4FreeIran-25985
+- name: 4Nika-25458
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -21488,7 +21498,7 @@ proxies:
     headers:
       Host: us4.sanfencdn1.com
   udp: true
-- name: 4FreeIran-26047
+- name: 4Nika-25520
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -21504,7 +21514,7 @@ proxies:
     headers:
       Host: ahsorathiyaa.fly.dev
   udp: true
-- name: 4FreeIran-26054
+- name: 4Nika-25527
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -21520,7 +21530,7 @@ proxies:
     headers:
       Host: 1c5854ba-1b44-11ee-a146-8213fd3be4b9.bamarambash.monster
   udp: true
-- name: 4FreeIran-26402
+- name: 4Nika-25893
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -21536,7 +21546,7 @@ proxies:
     headers:
       Host: b8767a6a-1c30-11ee-ba76-9ee097a90b8b.bamarambash.monster
   udp: true
-- name: 4FreeIran-26581
+- name: 4Nika-26059
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -21552,7 +21562,7 @@ proxies:
     headers:
       Host: sub2.saintink.eu.org
   udp: true
-- name: 4FreeIran-26684
+- name: 4Nika-26188
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -21647,6 +21657,22 @@ proxies:
     path: /ws
     headers:
       Host: eeh7iewe.com
+  udp: true
+- name: Relay_🇺🇸US-🇺🇸US_1945
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 9fbb6122-46e7-413b-b29d-749eef446c8d
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: oz.moonfree.top
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: oz.moonfree.top
   udp: true
 - name: github.com/freefq - 美国CloudFlare公司CDN节点 35
   server: 104.22.5.240
@@ -21773,6 +21799,64 @@ proxies:
     headers:
       Host: b62a948c-faa2-4e8a-bf8a-3ff3121c875a.asoul-ava.top
   udp: true
+- name: 美国 CloudFlare节点
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: cdec9d57-661d-456a-bbf2-b4c38e9c6711
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: eer4567.999824.xyz
+  network: ws
+  ws-opts:
+    path: /9dZlJLjHHrL0VwSolbqFpg
+    headers:
+      Host: eer4567.999824.xyz
+  udp: true
+- name: 美国 CloudFlare节点
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: cdec9d57-661d-456a-bbf2-b4c38e9c6711
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: eeedcfvg.999824.xyz
+  network: ws
+  ws-opts:
+    path: /9dZlJLjHHrL0VwSolbqFpg
+    headers:
+      Host: eeedcfvg.999824.xyz
+  udp: true
+- name: '%F0%9F%87%BA%F0%9F%87%B8_%E5%AE%9A%E5%88%B6%E4%B8%93%E7%BA%BF%EF%BC%9A%40Alin006Bot'
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: aTArbZ2F0E
+  skip-cert-verify: true
+  sni: uSa-vp-27.bLAzECLOUD.SITE
+  network: ws
+  ws-opts:
+    path: /linkvkws#🇺🇸_定制专线：@Alin006Bot
+    headers:
+      Host: uSa-vp-27.bLAzECLOUD.SITE
+  udp: true
+- name: '%F0%9F%87%BA%F0%9F%87%B8_%E5%AE%9A%E5%88%B6%E4%B8%93%E7%BA%BF%EF%BC%9A%40Alin006Bot'
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: f0f6e76e-e5fe-4e2c-9faf-34832e021eae
+  skip-cert-verify: true
+  sni: DDd.890604.FIlEGear-sG.Me
+  network: ws
+  ws-opts:
+    path: /mZr1mA5hub7QHHkQBzYO#🇺🇸_定制专线：@Alin006Bot
+    headers:
+      Host: DDd.890604.FIlEGear-sG.Me
+  udp: true
 - name: '%F0%9F%94%92%20TR-WS-TLS%20%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F%20NA-172.67.216.240%3A443'
   server: 104.22.5.240
   port: 443
@@ -21824,19 +21908,6 @@ proxies:
     path: /raChT39pjLFYRA5HdHEIupMZeK#🔒 TR-WS-NA 🏴‍☠️ NA-172.67.200.11:443
     headers:
       Host: rRfGty6.890606.XYz
-  udp: true
-- name: '%F0%9F%94%92%20TR-WS-TLS%20%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F%20NA-104.21.91.180%3A443'
-  server: 104.22.5.240
-  port: 443
-  type: trojan
-  password: bce0c7cb-08d1-46a7-b77b-7bff8b46252f
-  skip-cert-verify: true
-  sni: XXXXxxXxXc.666461.xyZ
-  network: ws
-  ws-opts:
-    path: /x9F83IcyjcEyBXZBROjL3Q5vTymr#🔒 TR-WS-TLS 🏴‍☠️ NA-104.21.91.180:443
-    headers:
-      Host: xxxxxxxxxc.666461.xyz
   udp: true
 - name: '%F0%9F%94%92%20TR-WS-TLS%20%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F%20NA-172.67.219.196%3A443'
   server: 104.22.5.240
