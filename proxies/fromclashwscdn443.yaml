@@ -1,23 +1,6 @@
 proxies:
-- name: 55fb0421865f4d338b40a0288a11d6f4_@_@Hope_Net-join-us-on-Telegram
-  server: 146.19.168.161
-  uuid: 3f638f34-8dba-4186-bc43-2716a7ddd4be
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: az05.beyondy.cfd
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: az05.beyondy.cfd
-    path: /link
-- name: 1dd857a303d64fb5a803cd4d17606bc6_@_@Hope_Net-join-us-on-Telegram
-  server: tokyo.899994.xyz
+- name: b728586ef34042af96c3e72c49d8161f_@_@Hope_Net-join-us-on-Telegram
+  server: br.899994.xyz
   uuid: a0605527-28e4-449c-80ee-5642cc16a8af
   cipher: auto
   alterId: 0
@@ -27,10 +10,13 @@ proxies:
   tls: true
   udp: false
   client-fingerprint: chrome
+  servername: br.899994.xyz
   fingerprint: ''
   ws-opts:
+    headers:
+      host: br.899994.xyz
     path: /index
-- name: 2|🌀4-TH |  2.6MB/s|55%|Netflix|O...
+- name: 0|🌀4-TH |  2.6MB/s|55%|Netflix|O...
   server: 38.47.96.30
   alterId: 0
   cipher: auto
@@ -328,22 +314,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-172.67.163.102-5520 | 55.171MB
-  server: sSsdCVfBGNjkI.931.PP.Ua
-  port: 443
-  type: vmess
-  uuid: a4e8ec0a-75d0-4fc5-837a-4973ed3a9d3e
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: RELAY-172.67.163.102-5520 | 55.171MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: sSsdCVfBGNjkI.931.PP.Ua
-- name: RELAY-104.21.29.205-5494 | 20.523MB
+- name: RELAY-104.21.29.205-5399 | 29.363MB
   server: FffvvVbnhJui8.222560.XYz
   port: 443
   type: vmess
@@ -357,21 +328,7 @@ proxies:
     path: /
     headers:
       Host: FffvvVbnhJui8.222560.XYz
-- name: 🇫🇷FR-45.145.165.114-7310 | 20.093MB
-  server: beyonddsz.cfd
-  port: 443
-  type: vmess
-  uuid: 9b456c2a-f2c1-45e1-87a9-b7628b04bb24
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: beyonddsz.cfd
-- name: RELAY-172.67.163.102-5517 | 9.851MB
+- name: RELAY-104.21.73.150-5436 | 25.16MB
   server: SSsXXXCvBnmjKi.931.Pp.uA
   port: 443
   type: vmess
@@ -380,13 +337,28 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-172.67.163.102-5517 | 9.851MB
+  servername: RELAY-104.21.73.150-5436 | 25.16MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: SSsXXXCvBnmjKi.931.Pp.uA
-- name: RELAY-172.67.205.131-5493 | 9.426MB
+- name: RELAY-104.21.21.192-5400 | 22.344MB
+  server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+  port: 443
+  type: vmess
+  uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: RELAY-104.21.21.192-5400 | 22.344MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+- name: RELAY-104.21.22.159-5402 | 22.145MB
   server: rrrrrrrrrt.11890604.xyz
   port: 443
   type: vmess
@@ -395,28 +367,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-172.67.205.131-5493 | 9.426MB
+  servername: RELAY-104.21.22.159-5402 | 22.145MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: rrrrrrrrrt.11890604.xyz
-- name: RELAY-172.67.191.140-5536 | 9.115MB
-  server: ssXxZaSw.999824.xyZ
-  port: 443
-  type: vmess
-  uuid: 512d9674-db12-44ca-a1b5-654244549b65
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: RELAY-172.67.191.140-5536 | 9.115MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ssXxZaSw.999824.xyZ
-- name: RELAY-104.21.89.221-5512 | 7.239MB
+- name: RELAY-172.67.191.140-5420 | 13.593MB
   server: EeR4567.999824.xYz
   port: 443
   type: vmess
@@ -425,13 +382,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-104.21.89.221-5512 | 7.239MB
+  servername: RELAY-172.67.191.140-5420 | 13.593MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: EeR4567.999824.xYz
-- name: RELAY-104.18.149.76-0745 | 6.744MB
+- name: RELAY-104.18.149.76-0727 | 9.512MB
   server: 104.18.149.76
   port: 443
   type: vmess
@@ -440,29 +397,12 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-104.18.149.76-0745 | 6.744MB
+  servername: RELAY-104.18.149.76-0727 | 9.512MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: us.kkp.me.eu.org
-- name: VMESS-未知>法国-ChatGPT-1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top:443
-  server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-  alterId: 0
-  cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  network: ws
-  port: 443
-  servername: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
-  ws-opts:
-    headers:
-      HOST: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-    path: /azumase.ren
 - name: 美国 038
   server: freeyx.cloudflare88.eu.org
   alterId: 0
@@ -502,8 +442,8 @@ proxies:
     headers:
       Host: ZZzzzZZ.890601.XYZ
     path: /l96MZ8se5Kl2p8BiMhP42l
-- name: sg|3e5f|puddincat07@Telegram
-  server: 139.180.154.158
+- name: sg|580c|puddincat07@Telegram
+  server: 13.229.159.215
   alterId: 0
   network: ws
   password: ttfang
