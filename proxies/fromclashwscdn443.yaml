@@ -1,4 +1,35 @@
 proxies:
+- name: 55fb0421865f4d338b40a0288a11d6f4_@_@Hope_Net-join-us-on-Telegram
+  server: 146.19.168.161
+  uuid: 3f638f34-8dba-4186-bc43-2716a7ddd4be
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: az05.beyondy.cfd
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: az05.beyondy.cfd
+    path: /link
+- name: 1dd857a303d64fb5a803cd4d17606bc6_@_@Hope_Net-join-us-on-Telegram
+  server: tokyo.899994.xyz
+  uuid: a0605527-28e4-449c-80ee-5642cc16a8af
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /index
 - name: 2|🌀4-TH |  2.6MB/s|55%|Netflix|O...
   server: 38.47.96.30
   alterId: 0
@@ -471,19 +502,17 @@ proxies:
     headers:
       Host: ZZzzzZZ.890601.XYZ
     path: /l96MZ8se5Kl2p8BiMhP42l
-- name: sg|56db|puddincat07@Telegram
-  server: 138.2.64.229
+- name: sg|3e5f|puddincat07@Telegram
+  server: 139.180.154.158
+  alterId: 0
   network: ws
   password: ttfang
   port: 443
   skip-cert-verify: true
   sni: ttfang.fange.me
+  tls: true
   type: trojan
   udp: true
-  ws-opts:
-    headers:
-      Host: ttfang.fange.me
-    path: /
 - name: US_1
   server: 172.67.187.28
   port: 443
