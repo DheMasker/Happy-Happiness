@@ -45,6 +45,19 @@ proxies:
     headers:
       Host: th.lzj520hxw.dpdns.org
     path: /lzjjj
+- name: 14|KZ_speednode_0179
+  server: 31.43.179.27
+  network: ws
+  password: Aimer
+  port: 443
+  skip-cert-verify: false
+  sni: epmk.ambercc.filegear-sg.me
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: epmk.ambercc.filegear-sg.me
+    path: /
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -328,7 +341,22 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-104.21.29.205-5399 | 35.68MB
+- name: RELAY-104.21.73.150-5367 | 43.165MB
+  server: sSsdCVfBGNjkI.931.PP.Ua
+  port: 443
+  type: vmess
+  uuid: a4e8ec0a-75d0-4fc5-837a-4973ed3a9d3e
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: RELAY-104.21.73.150-5367 | 43.165MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: sSsdCVfBGNjkI.931.PP.Ua
+- name: RELAY-172.67.149.202-5335 | 36.404MB
   server: FffvvVbnhJui8.222560.XYz
   port: 443
   type: vmess
@@ -342,22 +370,7 @@ proxies:
     path: /
     headers:
       Host: FffvvVbnhJui8.222560.XYz
-- name: RELAY-104.21.73.150-5436 | 29.801MB
-  server: SSsXXXCvBnmjKi.931.Pp.uA
-  port: 443
-  type: vmess
-  uuid: da128246-33b0-4c88-a44e-d91e9e0a1e05
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: RELAY-104.21.73.150-5436 | 29.801MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: SSsXXXCvBnmjKi.931.Pp.uA
-- name: RELAY-104.21.21.192-5400 | 26.815MB
+- name: RELAY-104.21.21.192-5334 | 24.567MB
   server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
   port: 443
   type: vmess
@@ -366,28 +379,27 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-104.21.21.192-5400 | 26.815MB
+  servername: RELAY-104.21.21.192-5334 | 24.567MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-- name: RELAY-104.21.22.159-5402 | 26.291MB
-  server: rrrrrrrrrt.11890604.xyz
+- name: RELAY-172.66.168.228-0815 | 20.627MB
+  server: cloudgetservice2.mcloudservice.site
   port: 443
   type: vmess
-  uuid: f898ffcb-6417-4373-9640-0b66091e8206
+  uuid: c208e0ae-6f6d-4745-99da-44a44744c530
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-104.21.22.159-5402 | 26.291MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: rrrrrrrrrt.11890604.xyz
-- name: RELAY-172.67.191.140-5420 | 5.943MB
+      Host: blazE-GEr-248.blAZeClOuDmaiN.sitE
+- name: RELAY-172.67.191.140-5359 | 19.982MB
   server: EeR4567.999824.xYz
   port: 443
   type: vmess
@@ -396,13 +408,28 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-172.67.191.140-5420 | 5.943MB
+  servername: RELAY-172.67.191.140-5359 | 19.982MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: EeR4567.999824.xYz
-- name: RELAY-104.18.149.76-0727 | 5.277MB
+- name: RELAY-172.67.205.131-5338 | 19.419MB
+  server: rrrrrrrrrt.11890604.xyz
+  port: 443
+  type: vmess
+  uuid: f898ffcb-6417-4373-9640-0b66091e8206
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: RELAY-172.67.205.131-5338 | 19.419MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: rrrrrrrrrt.11890604.xyz
+- name: RELAY-104.18.149.76-0746 | 18.445MB
   server: 104.18.149.76
   port: 443
   type: vmess
@@ -411,12 +438,78 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-104.18.149.76-0727 | 5.277MB
+  servername: RELAY-104.18.149.76-0746 | 18.445MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: us.kkp.me.eu.org
+- name: RELAY-172.67.163.102-5365 | 7.169MB
+  server: SSsXXXCvBnmjKi.931.Pp.uA
+  port: 443
+  type: vmess
+  uuid: da128246-33b0-4c88-a44e-d91e9e0a1e05
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: RELAY-172.67.163.102-5365 | 7.169MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: SSsXXXCvBnmjKi.931.Pp.uA
+- name: RELAY-104.21.89.221-5370 | 7.105MB
+  server: ssXxZaSw.999824.xyZ
+  port: 443
+  type: vmess
+  uuid: 512d9674-db12-44ca-a1b5-654244549b65
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: RELAY-104.21.89.221-5370 | 7.105MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ssXxZaSw.999824.xyZ
+- name: 🇺🇸_US_美国_1
+  server: 104.21.7.147
+  network: ws
+  password: 4b33b482-25bc-49e4-b866-878c914d945a
+  port: 443
+  sni: 44444444.HuanGShANG.DPDNs.oRG
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      host: 44444444.HuanGShANG.DPDNs.oRG
+    path: /kzefUfBUzMsQY6zyyQCjn8kmnN0ehd
+- name: 🇺🇸_US_美国->🇫🇷_FR_法国
+  server: 104.21.63.135
+  network: ws
+  password: fa050497-fc2a-45ee-89c0-96670c4ecb65
+  port: 443
+  sni: Rrr4.8906004.xYZ
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      host: rrr4.8906004.xyz
+    path: /DZxb5QZyWgQPuXTwt
+- name: 🇺🇸_US_美国_3
+  server: cccvffgty.444752.xyz
+  network: ws
+  password: 512d9674-db12-44ca-a1b5-654244549b65
+  port: 443
+  sni: cccvffgty.444752.xyz
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      host: cccvffgty.444752.xyz
+    path: /HOi2k5ElZdeML7Ua7dX3JIrYk7zm
 - name: 美国 038
   server: freeyx.cloudflare88.eu.org
   alterId: 0
@@ -456,17 +549,6 @@ proxies:
     headers:
       Host: ZZzzzZZ.890601.XYZ
     path: /l96MZ8se5Kl2p8BiMhP42l
-- name: sg|6f7e|puddincat07@Telegram
-  server: 128.199.237.143
-  alterId: 0
-  network: ws
-  password: ttfang
-  port: 443
-  skip-cert-verify: true
-  sni: ttfang.fange.me
-  tls: true
-  type: trojan
-  udp: true
 - name: US_1
   server: 172.67.187.28
   port: 443
@@ -555,17 +637,6 @@ proxies:
     path: /c6nDz4OnpXiNaWb
     headers:
       Host: yyyhhjki.666461.xyz
-- name: US_29
-  server: duke.ns.cloudflare.com
-  port: 443
-  type: trojan
-  password: Aimer
-  sni: epml.ambercc.filegear-sg.me
-  network: ws
-  ws-opts:
-    path: /?ed=2560&proxyip=ts.hpc.tw
-    headers:
-      Host: epml.ambercc.filegear-sg.me
 - name: US_39
   server: 172.67.208.155
   port: 443
