@@ -1,19 +1,5 @@
 proxies:
-- name: 0cc9229f9f134c5e873c621f9fedfe1a_@_👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:6.23ms
-  server: www.speedtest.net
-  uuid: cb443ca0-9221-4357-8d57-a83b5981f80f
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /linkvkwsss
-- name: 5f496e36dffb42b1bb7e9bb1d6f36992_@_👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:8.01ms
+- name: ebf43efa286c4018a2bb674db2990772_@_👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:8.01ms
   server: 104.21.77.29
   uuid: 8d90c129-4156-4d6c-9115-24df25f26a02
   cipher: auto
@@ -27,6 +13,23 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /linkws
+- name: a2e41d75b68c4d359edb05475c2708f2_@_@Hope_Net-join-us-on-Telegram
+  server: 104.21.32.1
+  uuid: a0605527-28e4-449c-80ee-5642cc16a8af
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: de0.899994.xyz
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: de0.899994.xyz
+    path: /index
 - name: 2|🌀4-TH |  2.6MB/s|55%|Netflix|O...
   server: 38.47.96.30
   alterId: 0
@@ -453,6 +456,17 @@ proxies:
     headers:
       Host: ZZzzzZZ.890601.XYZ
     path: /l96MZ8se5Kl2p8BiMhP42l
+- name: sg|6f7e|puddincat07@Telegram
+  server: 128.199.237.143
+  alterId: 0
+  network: ws
+  password: ttfang
+  port: 443
+  skip-cert-verify: true
+  sni: ttfang.fange.me
+  tls: true
+  type: trojan
+  udp: true
 - name: US_1
   server: 172.67.187.28
   port: 443
