@@ -1,7 +1,24 @@
 proxies:
-- name: 619df41c1718464a9135fdad26e66976_@_👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:8.91ms
-  server: sdfghyju.999824.xyz
-  uuid: 512d9674-db12-44ca-a1b5-654244549b65
+- name: 8fa5a360db7c42a0a7f7e8b97c589aa2_@_👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:8.47ms
+  server: sssxxxcvbnmjki.931.pp.ua
+  uuid: da128246-33b0-4c88-a44e-d91e9e0a1e05
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: sssxxxcvbnmjki.931.pp.ua
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: sssxxxcvbnmjki.931.pp.ua
+    path: /0FhUkqQUdxOhMB9JsgTazwz9
+- name: 9b470480b2ba4000ba34ab684fbf6ef4_@_@Hope_Net-join-us-on-Telegram
+  server: cdncdncdn.aikunapp.com
+  uuid: 96cad374-7573-4463-8804-4665c2c3d932
   cipher: auto
   alterId: 0
   type: vmess
@@ -12,8 +29,8 @@ proxies:
   client-fingerprint: chrome
   fingerprint: ''
   ws-opts:
-    path: /uiAxvH6OkVk0VCfa7dX3JIrYk7zm
-- name: 1|🌀4-TH |  2.6MB/s|55%|Netflix|O...
+    path: /vmess_ws/smjc/index?ed=8192
+- name: 2|🌀4-TH |  2.6MB/s|55%|Netflix|O...
   server: 38.47.96.30
   alterId: 0
   cipher: auto
@@ -384,21 +401,6 @@ proxies:
     path: /
     headers:
       Host: sssssssxxxx.2032.pp.ua
-- name: RELAY-104.21.73.150-5161 | 3.476MB
-  server: SSsXXXCvBnmjKi.931.Pp.uA
-  port: 443
-  type: vmess
-  uuid: da128246-33b0-4c88-a44e-d91e9e0a1e05
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: RELAY-104.21.73.150-5161 | 3.476MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: SSsXXXCvBnmjKi.931.Pp.uA
 - name: RELAY-104.18.149.76-0638 | 2.904MB
   server: 104.18.149.76
   port: 443
@@ -443,20 +445,6 @@ proxies:
     path: /
     headers:
       Host: ep-sunset-9b11.kekic13319.workers.dev
-- name: RELAY-104.21.29.205-5205 | 7.812MB
-  server: FffvvVbnhJui8.222560.XYz
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 7701ddf5-6a48-401b-a3ec-8af52b6deb48
-  ws-opts:
-    headers:
-      Host: FffvvVbnhJui8.222560.XYz
-    path: /
 - name: 🇺🇸_US_美国
   server: 172.67.220.32
   network: ws
@@ -566,17 +554,21 @@ proxies:
     headers:
       Host: ZZzzzZZ.890601.XYZ
     path: /l96MZ8se5Kl2p8BiMhP42l
-- name: sg|a491|puddincat07@Telegram
-  server: 128.199.237.143
+- name: xx|f9d1|puddincat07@Telegram
+  server: FffvvVbnhJui8.222560.XYz
   alterId: 0
+  cipher: auto
+  client-fingerprint: chrome
   network: ws
-  password: ttfang
   port: 443
   skip-cert-verify: true
-  sni: ttfang.fange.me
   tls: true
-  type: trojan
-  udp: true
+  type: vmess
+  uuid: 7701ddf5-6a48-401b-a3ec-8af52b6deb48
+  ws-opts:
+    headers:
+      host: FffvvVbnhJui8.222560.XYz
+    path: /mlyR5tmcKx3hweBopuhWEbIX
 - name: US_1
   server: 172.67.187.28
   port: 443
