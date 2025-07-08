@@ -1,7 +1,40 @@
 proxies:
-- name: c31a60ee6707446aa778770f76b1ebe3_@_👉🆔@v2ray_configs_pool📡🇩🇪®️Germany©️Limburg
-    an der Lahn🅿️ping:33.96ms
-  server: 57.129.25.25
+- name: 7cafa71082804195ae3bb17e9ed449ba_@_👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:9.06ms
+  server: 3dddf.444652.xyz
+  uuid: cdec9d57-661d-456a-bbf2-b4c38e9c6711
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: 3dddf.444652.xyz
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: 3dddf.444652.xyz
+    path: /9dZlJLjHHrL0VwSolbqFpg
+- name: 8afe8eeeef39478e9488182f76d5ab41_@_👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:8.46ms
+  server: 104.18.149.76
+  uuid: de94cc0a-0592-4969-b1fc-97ea8f0ea0b3
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: us.kkp.me.eu.org
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: us.kkp.me.eu.org
+    path: /aa
+- name: b0663030211c4f229ec144801d1c3d46_@_@Hope_Net-join-us-on-Telegram
+  server: 57.129.24.124
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
   alterId: 0
@@ -332,36 +365,6 @@ proxies:
     path: /
     headers:
       Host: rrrrrrrrrt.11890604.xyz
-- name: RELAY-104.18.149.76-0638 | 1.388MB
-  server: 104.18.149.76
-  port: 443
-  type: vmess
-  uuid: de94cc0a-0592-4969-b1fc-97ea8f0ea0b3
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: RELAY-104.18.149.76-0638 | 1.388MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: us.kkp.me.eu.org
-- name: RELAY-104.21.89.221-5256 | 1.166MB
-  server: EeedcFvg.999824.xYZ
-  port: 443
-  type: vmess
-  uuid: cdec9d57-661d-456a-bbf2-b4c38e9c6711
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: RELAY-104.21.89.221-5256 | 1.166MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: EeedcFvg.999824.xYZ
 - name: 🇺🇸US-77.83.141.171-0954 | 0.712MB
   server: vc.fly.dev
   port: 443
@@ -420,35 +423,6 @@ proxies:
     path: /
     headers:
       Host: SSsXXXCvBnmjKi.931.Pp.uA
-- name: RELAY-104.21.21.192-5121 | 19.108MB
-  server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  servername: RELAY-104.21.21.192-5121 | 19.108MB
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
-  ws-opts:
-    headers:
-      Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-    path: /
-- name: RELAY-147.185.161.125-7548 | 0.153MB
-  server: 147.185.161.125
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 441da342-ce90-441e-bff9-d2ceb55e68ca
-  ws-opts:
-    headers:
-      Host: ep-sunset-9b11.kekic13319.workers.dev
-    path: /
 - name: 🇺🇸_US_美国->🇫🇷_FR_法国
   server: 104.21.63.135
   network: ws
@@ -485,6 +459,23 @@ proxies:
     headers:
       host: eeefgty6.999836.xyz
     path: /XmTzATQPJv9RO3xr1D40NK
+- name: VMESS-未知>法国-ChatGPT-1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top:443
+  server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+  alterId: 0
+  cipher: auto
+  h2-opts: {}
+  http-opts: {}
+  network: ws
+  port: 443
+  servername: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
+  ws-opts:
+    headers:
+      HOST: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+    path: /azumase.ren
 - name: 美国 038
   server: freeyx.cloudflare88.eu.org
   alterId: 0
