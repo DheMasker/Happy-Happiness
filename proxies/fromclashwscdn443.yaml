@@ -1,7 +1,6 @@
 proxies:
-- name: 66ccdad2e1384f82a715f27bcc0a66b3_@_👉🆔@v2ray_configs_pool📡🇩🇪®️Germany©️Frankfurt
-    am Main🅿️ping:25.85ms
-  server: 23.158.56.241
+- name: c98d5910e48d453a9ea4ff4b2001f84e_@_👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:109.69ms
+  server: 23.162.200.227
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
   alterId: 0
@@ -475,36 +474,6 @@ proxies:
     path: /
     headers:
       Host: eeh7iewe.com
-- name: RELAY-104.21.21.192-5077 | 21.688MB
-  server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  servername: RELAY-104.21.21.192-5077 | 21.688MB
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
-  ws-opts:
-    headers:
-      Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-    path: /
-- name: RELAY-172.64.80.1-5073 | 3.315MB
-  server: rrrrrrrrrt.11890604.xyz
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  servername: RELAY-172.64.80.1-5073 | 3.315MB
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: f898ffcb-6417-4373-9640-0b66091e8206
-  ws-opts:
-    headers:
-      Host: rrrrrrrrrt.11890604.xyz
-    path: /
 - name: 🇺🇸_US_美国_1
   server: 172.67.220.32
   network: ws
@@ -517,6 +486,23 @@ proxies:
     headers:
       host: eeefgty6.999836.xyz
     path: /XmTzATQPJv9RO3xr1D40NK
+- name: VMESS-未知>法国-ChatGPT-1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top:443
+  server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+  alterId: 0
+  cipher: auto
+  h2-opts: {}
+  http-opts: {}
+  network: ws
+  port: 443
+  servername: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
+  ws-opts:
+    headers:
+      HOST: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+    path: /azumase.ren
 - name: 美国 038
   server: freeyx.cloudflare88.eu.org
   alterId: 0
