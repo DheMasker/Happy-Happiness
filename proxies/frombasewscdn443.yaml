@@ -1,4 +1,36 @@
 proxies:
+- name: '@sockss_http 2297'
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: o.metuji.com
+  network: ws
+  ws-opts:
+    path: /linkvws
+    headers:
+      Host: o.metuji.com
+  udp: true
+- name: '@sockss_http 2307'
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: f.khilei.com
+  network: ws
+  ws-opts:
+    path: /linkvws
+    headers:
+      Host: f.khilei.com
+  udp: true
 - name: 法国 国际航空电讯集团公司(SITA)
   server: 104.22.5.240
   port: 443
@@ -31,6 +63,32 @@ proxies:
     headers:
       Host: th.lzj520hxw.dpdns.org
   udp: true
+- name: GB_speednode_0094
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: trojan
+  skip-cert-verify: true
+  sni: wahaha.yingyangkuaixian.dpdns.org
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: wahaha.yingyangkuaixian.dpdns.org
+  udp: true
+- name: KZ_speednode_0121
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: tg-fq521free
+  skip-cert-verify: true
+  sni: torjan.xn--xhq44j.eu.org
+  network: ws
+  ws-opts:
+    path: /#KZ_speednode_0121
+    headers:
+      Host: torjan.xn--xhq44j.eu.org
+  udp: true
 - name: '%F0%9F%8F%81RELAY-104.21.6.179-0631'
   server: 104.22.5.240
   port: 443
@@ -44,7 +102,7 @@ proxies:
     headers:
       Host: ZZzzzZZ.890601.XYZ
   udp: true
-- name: '%F0%9F%8F%81RELAY-172.67.131.245-7797'
+- name: '%F0%9F%8F%81RELAY-104.21.12.87-7743'
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -57,7 +115,7 @@ proxies:
     headers:
       Host: series-v1.samanehha.co
   udp: true
-- name: '%F0%9F%87%BA%F0%9F%87%B8US-199.59.243.228-7889'
+- name: '%F0%9F%87%BA%F0%9F%87%B8US-199.59.243.228-7835'
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -70,7 +128,7 @@ proxies:
     headers:
       Host: c5mt.cdncisco.org
   udp: true
-- name: '%F0%9F%87%AB%F0%9F%87%B7FR-146.70.158.111-8620'
+- name: '%F0%9F%87%AB%F0%9F%87%B7FR-146.70.158.111-8566'
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -83,7 +141,7 @@ proxies:
     headers:
       Host: amin.karkas1.ir
   udp: true
-- name: '%F0%9F%8F%81RELAY-104.21.79.246-8820'
+- name: '%F0%9F%8F%81RELAY-104.21.79.246-8766'
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -96,7 +154,7 @@ proxies:
     headers:
       Host: notdirect.howhealthyistoomajreally.homes
   udp: true
-- name: '%F0%9F%8F%81RELAY-104.16.183.101-8882'
+- name: '%F0%9F%8F%81RELAY-104.16.183.101-8828'
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -1932,22 +1990,6 @@ proxies:
     path: /speedtest
     headers:
       Host: Dusseldorf.kotick.site
-  udp: true
-- name: DE 🇩🇪 ┇ VMESS-WS-TLS - OVH SAS ┇ 57.129.25.25
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: f.khilei.com
-  network: ws
-  ws-opts:
-    path: /linkvws
-    headers:
-      Host: f.khilei.com
   udp: true
 - name: XX 🏳️ ┇ VMESS-WS-TLS ┇ None
   server: 104.22.5.240
@@ -6588,22 +6630,6 @@ proxies:
     path: /01f75b6a-935f-466c-ba3d-9f561d9bf191-vm?ed=2048
     headers:
       Host: attendance-determine-hunt-studying.trycloudflare.com
-  udp: true
-- name: FR 🇫🇷 ┇ VMESS-WS-TLS - OVH SAS ┇ 146.59.55.50
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: o.metuji.com
-  network: ws
-  ws-opts:
-    path: /linkvws
-    headers:
-      Host: o.metuji.com
   udp: true
 - name: XX 🏳️ ┇ VMESS-WS-TLS - CLOUDFLARENET ┇ 188.114.99.112
   server: 104.22.5.240
@@ -14183,7 +14209,7 @@ proxies:
     headers:
       Host: epccd.ambercc.filegear-sg.me
   udp: true
-- name: 4Mohsen-2680
+- name: 4FreeIran-2701
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14196,7 +14222,7 @@ proxies:
     headers:
       Host: de1.test3.net
   udp: true
-- name: 4Mohsen-2937
+- name: 4FreeIran-2969
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14221,6 +14247,19 @@ proxies:
     path: 6b777a91#🔒 TR-WS-TLS 🏴‍☠️ NA-104.16.159.3:443
     headers:
       Host: bangladeshipatri.com
+  udp: true
+- name: 4FreeIran-2853
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: 4311735421mM@
+  skip-cert-verify: true
+  sni: ziaran.mohsen-karami-ziaranii.workers.dev#4FreeIran-2853
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: ziaran.mohsen-karami-ziaranii.workers.dev
   udp: true
 - name: '%F0%9F%94%92%20TR-WS-TLS%20%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F%20NA-104.16.192.138%3A443'
   server: 104.22.5.240
@@ -14287,7 +14326,7 @@ proxies:
     headers:
       Host: main.xicun.us.kg
   udp: true
-- name: 4Mohsen-3148
+- name: 4FreeIran-3228
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14312,6 +14351,19 @@ proxies:
     path: /6b777a91
     headers:
       Host: avianrecruit.com
+  udp: true
+- name: '%F0%9F%87%BA%F0%9F%87%B8US(AzadNet.t.me)_386'
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: a6292090-afe1-4640-97a7-4f1d1d877cf1
+  skip-cert-verify: true
+  sni: hdfy8c1.foriran.nl#%F0%9F%87%BA%F0%9F%87%B8US(AzadNet.t.me)_386
+  network: ws
+  ws-opts:
+    path: /8bHUAD5IX0licU6D349brWUw6a
+    headers:
+      Host: hdfy8c1.foriran.nl
   udp: true
 - name: '%F0%9F%94%92%20TR-WS-TLS%20%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F%20NA-104.19.159.2%3A443'
   server: 104.22.5.240
@@ -14391,7 +14443,7 @@ proxies:
     headers:
       Host: rrrRrRRrT.459.pp.ua
   udp: true
-- name: 4Mohsen-2749
+- name: 4FreeIran-2772
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14430,7 +14482,7 @@ proxies:
     headers:
       Host: nameless-term-9c25.vpnconnect202020.workers.dev
   udp: true
-- name: 4Mohsen-3562
+- name: 4FreeIran-3640
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14443,7 +14495,7 @@ proxies:
     headers:
       Host: aws-uae-1.f1cflined.com
   udp: true
-- name: 4Mohsen-2565
+- name: 4FreeIran-2567
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14456,7 +14508,7 @@ proxies:
     headers:
       Host: us1.test3.net
   udp: true
-- name: 4Mohsen-3563
+- name: 4FreeIran-3641
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14482,7 +14534,7 @@ proxies:
     headers:
       Host: 44444444.HuanGShANG.DPDNs.oRG
   udp: true
-- name: 4Mohsen-3699
+- name: 4FreeIran-3797
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14495,7 +14547,7 @@ proxies:
     headers:
       Host: aws-sg-1.f1cflineb.com
   udp: true
-- name: 4Mohsen-3700
+- name: 4FreeIran-3798
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14534,6 +14586,19 @@ proxies:
     headers:
       Host: SsXCDfR5.986986.shoP
   udp: true
+- name: '%F0%9F%87%BA%F0%9F%87%B8%20US%20%7C%20%F0%9F%9F%A2%20%7C%20trojan%20%7C%20%40freevpnatm%20%7C%2016'
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: 13e26f64-2e0c-4461-92cd-d83294cc18f0
+  skip-cert-verify: true
+  sni: dddcVbhnj.000890604.xyZ
+  network: ws
+  ws-opts:
+    path: /TDUxZUop9k44oPiit2OdWk0KwirdY
+    headers:
+      Host: dddcvbhnj.000890604.xyz
+  udp: true
 - name: '%E6%9C%AA%E7%9F%A5139'
   server: 104.22.5.240
   port: 443
@@ -14547,7 +14612,7 @@ proxies:
     headers:
       Host: bangladeshipatri.com
   udp: true
-- name: 4Mohsen-2912
+- name: 4FreeIran-2942
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14560,7 +14625,7 @@ proxies:
     headers:
       Host: de1.trojanvpn.dE
   udp: true
-- name: 4Mohsen-3139
+- name: 4FreeIran-3219
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14585,6 +14650,19 @@ proxies:
     path: /I4L1BP2DQVYmx5NYQ76MGGq
     headers:
       Host: huangshang9.zone.id
+  udp: true
+- name: '%F0%9F%87%B8%F0%9F%87%AC%5Bopenproxylist.com%5D%20trojan-SG'
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: ttfang
+  skip-cert-verify: true
+  sni: ttfang.fange.me
+  network: ws
+  ws-opts:
+    path: /#🇸🇬[openproxylist.com] trojan-SG
+    headers:
+      Host: ttfang.fange.me
   udp: true
 - name: '%E6%9C%AA%E7%9F%A5124'
   server: 104.22.5.240
@@ -14612,7 +14690,7 @@ proxies:
     headers:
       Host: aka.ms
   udp: true
-- name: 4Mohsen-2670
+- name: 4FreeIran-2691
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14625,7 +14703,7 @@ proxies:
     headers:
       Host: de1.test3.net
   udp: true
-- name: 4Mohsen-2570
+- name: 4FreeIran-2572
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14664,7 +14742,7 @@ proxies:
     headers:
       Host: 222.golinkwuxian.top
   udp: true
-- name: 4Mohsen-3422
+- name: 4FreeIran-3501
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14729,6 +14807,19 @@ proxies:
     headers:
       Host: mashdt.pages.dev
   udp: true
+- name: ae_proxy
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: a94fafdb-10d6-46c2-be8a-5c2e8358fbb0
+  skip-cert-verify: true
+  sni: dddDdDdDDFfFf.iran2035.dPdNS.ORG#ae_proxy
+  network: ws
+  ws-opts:
+    path: /xa846InEcmjyiKVby2Lp
+    headers:
+      Host: dddddddddffff.iran2035.dpdns.org
+  udp: true
 - name: '%F0%9F%87%BA%F0%9F%87%B8%20%E6%9C%BA%E5%9C%BA%E6%8E%A8%E8%8D%90%3Adafei.de%20%E7%BE%8E%E5%9B%BD%2031'
   server: 104.22.5.240
   port: 443
@@ -14741,6 +14832,19 @@ proxies:
     path: /raChT39pjLFYRA5HdHEIupMZeK
     headers:
       Host: rRfGty6.890606.XYz
+  udp: true
+- name: TG%3A%40v2ray_sub
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: 6757b7d6-fa32-4708-b5d1-30e3cf928b51
+  skip-cert-verify: true
+  sni: ggGGGGgggGGgGggy.FReevPN2026.DpDNS.Org
+  network: ws
+  ws-opts:
+    path: /l96MZ8se5Kl2p8BiMhP42l#TG:@v2ray_sub
+    headers:
+      Host: ggGGGGgggGGgGggy.FReevPN2026.DpDNS.Org
   udp: true
 - name: US%E7%BE%8E%E5%9B%BD%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
   server: 104.22.5.240
@@ -14768,7 +14872,7 @@ proxies:
     headers:
       Host: yaml7.ggff.net
   udp: true
-- name: 4Mohsen-3574
+- name: 4FreeIran-3652
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14859,7 +14963,7 @@ proxies:
     headers:
       Host: ij.ylks.xyz
   udp: true
-- name: 4Mohsen-3711
+- name: 4FreeIran-3809
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14924,33 +15028,7 @@ proxies:
     headers:
       Host: jobscareerforlawyers.com
   udp: true
-- name: '%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20-%20NA%20%F0%9F%8C%8E%20TR-WS-TLS%204%E2%83%A3'
-  server: 104.22.5.240
-  port: 443
-  type: trojan
-  password: tg-fq521free
-  skip-cert-verify: true
-  sni: torjan.xn--xhq44j.eu.org
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: torjan.xn--xhq44j.eu.org
-  udp: true
-- name: '%E7%BE%8E%E5%9B%BD%28yudou123.top%20%E7%8E%89%E8%B1%86%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9%29'
-  server: 104.22.5.240
-  port: 443
-  type: trojan
-  password: ttfang
-  skip-cert-verify: true
-  sni: ttfang.fange.me
-  network: ws
-  ws-opts:
-    path: /#美国(yudou123.top 玉豆免费节点)
-    headers:
-      Host: ttfang.fange.me
-  udp: true
-- name: 4Mohsen-3329
+- name: 4FreeIran-3402
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -14959,7 +15037,7 @@ proxies:
   sni: syndication-statutes-wanted-logo.trycloudflare.com
   network: ws
   ws-opts:
-    path: /argox-tr#4Mohsen-3329
+    path: /argox-tr#4FreeIran-3402
     headers:
       Host: syndication-statutes-wanted-logo.trycloudflare.com
   udp: true
@@ -15002,7 +15080,7 @@ proxies:
     headers:
       Host: telegram.org
   udp: true
-- name: 4Mohsen-3423
+- name: 4FreeIran-3502
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15015,7 +15093,7 @@ proxies:
     headers:
       Host: p6us4.pqjc.buzz
   udp: true
-- name: 4Mohsen-2616
+- name: 4FreeIran-2637
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15041,7 +15119,7 @@ proxies:
     headers:
       Host: aksnmaioas.pages.dev
   udp: true
-- name: 4Mohsen-3718
+- name: 4FreeIran-3816
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15054,7 +15132,7 @@ proxies:
     headers:
       Host: aws-ar-buenosaires-1.f1cflinea.com
   udp: true
-- name: 4Mohsen-3719
+- name: 4FreeIran-3817
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15067,7 +15145,7 @@ proxies:
     headers:
       Host: aws-ca-central-1.f1cflinea.com
   udp: true
-- name: 4Mohsen-3720
+- name: 4FreeIran-3818
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15080,7 +15158,7 @@ proxies:
     headers:
       Host: aws-ca-central-1.f1cflineb.com
   udp: true
-- name: 4Mohsen-3721
+- name: 4FreeIran-3819
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15093,7 +15171,7 @@ proxies:
     headers:
       Host: aws-ch-zurich-1.f1cflineb.com
   udp: true
-- name: 4Mohsen-3723
+- name: 4FreeIran-3821
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15106,7 +15184,7 @@ proxies:
     headers:
       Host: aws-in-mumbai-1.f1cflinea.com
   udp: true
-- name: 4Mohsen-3724
+- name: 4FreeIran-3822
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15119,7 +15197,7 @@ proxies:
     headers:
       Host: aws-se-stockholm-1.f1cflinea.com
   udp: true
-- name: 4Mohsen-3725
+- name: 4FreeIran-3823
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15132,7 +15210,7 @@ proxies:
     headers:
       Host: aws-uae-1.f1cflineb.com
   udp: true
-- name: 4Mohsen-3727
+- name: 4FreeIran-3825
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15145,7 +15223,7 @@ proxies:
     headers:
       Host: aws-uk-london-1.f1cflinea.com
   udp: true
-- name: 4Mohsen-3728
+- name: 4FreeIran-3826
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15210,7 +15288,7 @@ proxies:
     headers:
       Host: cfpage-39t.pages.dev
   udp: true
-- name: 4Mohsen-2925
+- name: 4FreeIran-2955
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15219,11 +15297,11 @@ proxies:
   sni: c3mc.ciscocdn1.live
   network: ws
   ws-opts:
-    path: /ywQ9KSLI4ZBm9wOAXUaN#4Mohsen-2925
+    path: /ywQ9KSLI4ZBm9wOAXUaN#4FreeIran-2955
     headers:
       Host: c3mc.ciscocdn1.live
   udp: true
-- name: 4Mohsen-2941
+- name: 4FreeIran-2973
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15232,11 +15310,11 @@ proxies:
   sni: c1mc.cdncisco4.co
   network: ws
   ws-opts:
-    path: /422Kdfwzf49IxeZJa#4Mohsen-2941
+    path: /422Kdfwzf49IxeZJa#4FreeIran-2973
     headers:
       Host: c1mc.cdncisco4.co
   udp: true
-- name: 4Mohsen-2901
+- name: 4FreeIran-2931
   server: 104.22.5.240
   port: 443
   type: trojan
@@ -15245,7 +15323,7 @@ proxies:
   sni: c2mk.ciscocdn1.live
   network: ws
   ws-opts:
-    path: /rDCYQta83d0oPABKBhcIX#4Mohsen-2901
+    path: /rDCYQta83d0oPABKBhcIX#4FreeIran-2931
     headers:
       Host: c2mk.ciscocdn1.live
   udp: true
@@ -15392,6 +15470,19 @@ proxies:
     headers:
       Host: pardazeshvpn-tg7.pages.dev
   udp: true
+- name: '%F0%9F%87%BA%F0%9F%87%B8%20US%20%7C%20%F0%9F%9F%A2%20%7C%20trojan%20%7C%20%40cryptoguardvpn%20%7C%202'
+  server: 104.22.5.240
+  port: 443
+  type: trojan
+  password: 9yu6m5okr
+  skip-cert-verify: true
+  sni: production.tj.ojan.workers.dev#%F0%9F%87%BA%F0%9F%87%B8%20US%20%7C%20%F0%9F%9F%A2%20%7C%20trojan%20%7C%20%40cryptoguardvpn%20%7C%202
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: production.tj.ojan.workers.dev
+  udp: true
 - name: '[]t.me/ConfigsHub'
   server: 104.22.5.240
   port: 443
@@ -15483,16 +15574,16 @@ proxies:
     headers:
       Host: poORiaReD--PErsePOlIs.PagES.DEv
   udp: true
-- name: US%E7%BE%8E%E5%9B%BD%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
+- name: '%E7%BE%8E%E5%9B%BD%28yudou123.top%20%E7%8E%89%E8%B1%86%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9%29'
   server: 104.22.5.240
   port: 443
   type: trojan
-  password: af87a411-3833-4e98-a45d-41c4c8d49a7f
+  password: a56d934f-d756-43f5-a2d3-bd15cbb73dea
   skip-cert-verify: true
   sni: zoomgov.vipren.biz.id
   network: ws
   ws-opts:
-    path: /5.223.49.4=2053#US美国(mibei77.com 米贝节点分享)
+    path: /65.20.76.125=8443#美国(yudou123.top 玉豆免费节点)
     headers:
       Host: zoomgov.vipren.biz.id
   udp: true
@@ -15576,7 +15667,7 @@ proxies:
     headers:
       Host: 104.149.143.105
   udp: true
-- name: 4Mohsen-4690
+- name: 4FreeIran-5174
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -15608,7 +15699,7 @@ proxies:
     headers:
       Host: 104.18.3.33
   udp: true
-- name: 4Mohsen-4977
+- name: 4FreeIran-5463
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -15624,7 +15715,7 @@ proxies:
     headers:
       Host: odelia.autos
   udp: true
-- name: 4Mohsen-5207
+- name: 4FreeIran-5694
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -15672,7 +15763,7 @@ proxies:
     headers:
       Host: us2.v2rayserv.com
   udp: true
-- name: 4Mohsen-5220
+- name: 4FreeIran-5707
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -15800,7 +15891,7 @@ proxies:
     headers:
       Host: yvsos.vtcss.top
   udp: true
-- name: 4Mohsen-5314
+- name: 4FreeIran-5803
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -15976,7 +16067,7 @@ proxies:
     headers:
       Host: www.32797326.xyz
   udp: true
-- name: 4Mohsen-5598
+- name: 4FreeIran-6095
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -16056,7 +16147,7 @@ proxies:
     headers:
       Host: lg1.cfcdn3.xyz
   udp: true
-- name: 4Mohsen-5713
+- name: 4FreeIran-6210
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -16072,7 +16163,7 @@ proxies:
     headers:
       Host: www.44716766.xyz
   udp: true
-- name: 4Mohsen-5719
+- name: 4FreeIran-6216
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -16280,7 +16371,7 @@ proxies:
     headers:
       Host: 170.187.206.48
   udp: true
-- name: 4Mohsen-6037
+- name: 4FreeIran-6537
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -16376,7 +16467,7 @@ proxies:
     headers:
       Host: chat.samrg.buzz
   udp: true
-- name: 4Mohsen-6150
+- name: 4FreeIran-6650
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -16488,7 +16579,7 @@ proxies:
     headers:
       Host: eu3.glucy.top
   udp: true
-- name: 4Mohsen-6712
+- name: 4FreeIran-7213
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -16696,7 +16787,7 @@ proxies:
     headers:
       Host: www.82131333.xyz
   udp: true
-- name: 4Mohsen-6852
+- name: 4FreeIran-7354
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -16728,7 +16819,7 @@ proxies:
     headers:
       Host: www.29870011.xyz
   udp: true
-- name: 4Mohsen-6863
+- name: 4FreeIran-7365
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -16808,7 +16899,7 @@ proxies:
     headers:
       Host: www.33709952.xyz
   udp: true
-- name: 4Mohsen-6921
+- name: 4FreeIran-7423
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -16824,7 +16915,7 @@ proxies:
     headers:
       Host: 2.freek1.xyz
   udp: true
-- name: 4Mohsen-6941
+- name: 4FreeIran-7443
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -16840,7 +16931,7 @@ proxies:
     headers:
       Host: d.freeh1.xyz
   udp: true
-- name: 4Mohsen-6944
+- name: 4FreeIran-7446
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -16952,7 +17043,7 @@ proxies:
     headers:
       Host: Kansas.kotick.site
   udp: true
-- name: 4Mohsen-7132
+- name: 4FreeIran-7638
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -17096,7 +17187,7 @@ proxies:
     headers:
       Host: www.37407045.xyz
   udp: true
-- name: 4Mohsen-7364
+- name: 4FreeIran-7876
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -17160,7 +17251,7 @@ proxies:
     headers:
       Host: www.57024853.xyz
   udp: true
-- name: 4Mohsen-7392
+- name: 4FreeIran-7904
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -17192,7 +17283,7 @@ proxies:
     headers:
       Host: www.29794192.xyz
   udp: true
-- name: 4Mohsen-7487
+- name: 4FreeIran-8000
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -17223,22 +17314,6 @@ proxies:
     path: /9dZlJLjHHrL0VwSolbqFpg
     headers:
       Host: eer4567.999824.xyz
-  udp: true
-- name: 🇺🇸 US 14
-  server: 104.22.5.240
-  port: 443
-  type: vmess
-  uuid: dc50eb1d-244d-4711-b168-a101a5e6fb1b
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: JJJjjjjjmMMmM.4444926.XYZ
-  network: ws
-  ws-opts:
-    path: /awmqq79B17rfnpXiNaWb
-    headers:
-      Host: JJJjjjjjmMMmM.4444926.XYZ
   udp: true
 - name: 🇺🇸 United States 06 TG...
   server: 104.22.5.240
@@ -17288,7 +17363,7 @@ proxies:
     headers:
       Host: download.game-one.ir
   udp: true
-- name: 4Mohsen-7589
+- name: 4FreeIran-8091
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -17352,7 +17427,7 @@ proxies:
     headers:
       Host: b.gguu.pp.ua
   udp: true
-- name: 4Mohsen-7617
+- name: 4FreeIran-8121
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -17448,7 +17523,7 @@ proxies:
     headers:
       Host: shirazu.ac.ir
   udp: true
-- name: 4Mohsen-7629
+- name: 4FreeIran-8133
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -17464,7 +17539,7 @@ proxies:
     headers:
       Host: cdntr2.digisport.shop
   udp: true
-- name: 4Mohsen-7525
+- name: 4FreeIran-8028
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -17480,7 +17555,7 @@ proxies:
     headers:
       Host: dd2.1808.cf
   udp: true
-- name: 4Mohsen-7530
+- name: 4FreeIran-8033
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -17512,7 +17587,7 @@ proxies:
     headers:
       Host: lu.sharecentre.online
   udp: true
-- name: 4Mohsen-7551
+- name: 4FreeIran-8054
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -17528,7 +17603,7 @@ proxies:
     headers:
       Host: us.dalazhi.eu.org
   udp: true
-- name: 4Mohsen-7567
+- name: 4FreeIran-8070
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -17672,7 +17747,7 @@ proxies:
     headers:
       Host: jp1.mayaa.cf
   udp: true
-- name: 4Mohsen-7753
+- name: 4FreeIran-8255
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -17704,7 +17779,7 @@ proxies:
     headers:
       Host: klo.986986.shop
   udp: true
-- name: 4Mohsen-7860
+- name: 4FreeIran-8369
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -17720,7 +17795,7 @@ proxies:
     headers:
       Host: 4.saintink.eu.org
   udp: true
-- name: 4Mohsen-7865
+- name: 4FreeIran-8374
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -17800,7 +17875,7 @@ proxies:
     headers:
       Host: quran-audio2.xyz
   udp: true
-- name: 4Mohsen-7980
+- name: 4FreeIran-8492
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -17832,7 +17907,7 @@ proxies:
     headers:
       Host: badger.nanoravro.ml
   udp: true
-- name: 4Mohsen-7983
+- name: 4FreeIran-8494
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -17944,7 +18019,7 @@ proxies:
     headers:
       Host: us02.gogogoo.cyou
   udp: true
-- name: 4Mohsen-8087
+- name: 4FreeIran-8609
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -18234,19 +18309,6 @@ proxies:
     headers:
       Host: sssxxxcvbnmjki.931.pp.ua
   udp: true
-- name: 🇸🇬[openproxylist.com] trojan-SG
-  server: 104.22.5.240
-  port: 443
-  type: trojan
-  password: trojan
-  skip-cert-verify: true
-  sni: azadnet-9ya.pages.dev#🇸🇬[openproxylist.com] trojan-SG
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: azadnet-9ya.pages.dev
-  udp: true
 - name: '%40V2rayNG3'
   server: 104.22.5.240
   port: 443
@@ -18260,26 +18322,13 @@ proxies:
     headers:
       Host: 301.pooriam.ir
   udp: true
-- name: 34 | Tir-22| MTSRVRS
-  server: 104.22.5.240
-  port: 443
-  type: trojan
-  password: 4311735421mM@
-  skip-cert-verify: true
-  sni: ziaran.mohsen-karami-ziaranii.workers.dev# 34 | Tir-22| MTSRVRS
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: ziaran.mohsen-karami-ziaranii.workers.dev
-  udp: true
-- name: Server30| Sonzai X
+- name: Server394| Sonzai X
   server: 104.22.5.240
   port: 443
   type: trojan
   password: amclubs
   skip-cert-verify: true
-  sni: tran.amclubstest.nyc.mn# Server30| Sonzai X
+  sni: tran.amclubstest.nyc.mn# Server394| Sonzai X
   network: ws
   ws-opts:
     path: /Telegram@V2ray_Alpha/?ed=2560
@@ -19851,6 +19900,19 @@ proxies:
   server: 104.22.5.240
   port: 443
   type: trojan
+  password: trojan
+  skip-cert-verify: true
+  sni: azadnet-9ya.pages.dev#[]t.me/ConfigsHub
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: azadnet-9ya.pages.dev
+  udp: true
+- name: '[]t.me/ConfigsHub'
+  server: 104.22.5.240
+  port: 443
+  type: trojan
   password: amclubs2024
   skip-cert-verify: true
   sni: tr.amclub.us.kg
@@ -20512,19 +20574,6 @@ proxies:
     headers:
       Host: esetsecuritylicense.bwnsmv.workers.dev
   udp: true
-- name: All-%40V2ray_Alpha-8
-  server: 104.22.5.240
-  port: 443
-  type: trojan
-  password: 9yu6m5okr
-  skip-cert-verify: true
-  sni: production.tj.ojan.workers.dev#All-%40V2ray_Alpha-8
-  network: ws
-  ws-opts:
-    path: /Telegram-@V2ray_Alpha/?ed=2560
-    headers:
-      Host: production.tj.ojan.workers.dev
-  udp: true
 - name: All-%40V2ray_Alpha-11
   server: 104.22.5.240
   port: 443
@@ -20606,7 +20655,7 @@ proxies:
     headers:
       Host: zheshiscp.com
   udp: true
-- name: 4Mohsen-4663
+- name: 4FreeIran-5149
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -20622,7 +20671,7 @@ proxies:
     headers:
       Host: d84ee332-1284-11ee-a5c8-8213fd3be4b9.bamarambash.monster
   udp: true
-- name: 4Mohsen-5172
+- name: 4FreeIran-5659
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -20638,7 +20687,7 @@ proxies:
     headers:
       Host: cf.tonyluk.link
   udp: true
-- name: 4Mohsen-5264
+- name: 4FreeIran-5751
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -20654,7 +20703,7 @@ proxies:
     headers:
       Host: Dusseldorf.kotick.site
   udp: true
-- name: 4Mohsen-6215
+- name: 4FreeIran-6715
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -20670,7 +20719,7 @@ proxies:
     headers:
       Host: localhoster.ml
   udp: true
-- name: 4Mohsen-6461
+- name: 4FreeIran-6961
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -20686,7 +20735,7 @@ proxies:
     headers:
       Host: 72d6d25e-1b39-11ee-a5c8-8213fd3be4b9.bamarambash.monster
   udp: true
-- name: 4Mohsen-6980
+- name: 4FreeIran-7482
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -20702,7 +20751,7 @@ proxies:
     headers:
       Host: www.42088326.xyz
   udp: true
-- name: 4Mohsen-7528
+- name: 4FreeIran-8031
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -20718,7 +20767,7 @@ proxies:
     headers:
       Host: lo.twittei.me
   udp: true
-- name: 4Mohsen-7529
+- name: 4FreeIran-8032
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -20734,7 +20783,7 @@ proxies:
     headers:
       Host: us2.twittei.me
   udp: true
-- name: 4Mohsen-7566
+- name: 4FreeIran-8069
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -20750,7 +20799,7 @@ proxies:
     headers:
       Host: us4.sanfencdn1.com
   udp: true
-- name: 4Mohsen-7606
+- name: 4FreeIran-8109
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -20766,7 +20815,7 @@ proxies:
     headers:
       Host: ahsorathiyaa.fly.dev
   udp: true
-- name: 4Mohsen-7611
+- name: 4FreeIran-8114
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -20782,7 +20831,7 @@ proxies:
     headers:
       Host: 1c5854ba-1b44-11ee-a146-8213fd3be4b9.bamarambash.monster
   udp: true
-- name: 4Mohsen-7858
+- name: 4FreeIran-8367
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -20798,7 +20847,7 @@ proxies:
     headers:
       Host: b8767a6a-1c30-11ee-ba76-9ee097a90b8b.bamarambash.monster
   udp: true
-- name: 4Mohsen-8015
+- name: 4FreeIran-8529
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -20814,7 +20863,7 @@ proxies:
     headers:
       Host: sub2.saintink.eu.org
   udp: true
-- name: 4Mohsen-8124
+- name: 4FreeIran-8648
   server: 104.22.5.240
   port: 443
   type: vmess
@@ -21050,6 +21099,22 @@ proxies:
     path: 6b777a91#🔒 TR-WS-TLS 🏴‍☠️ NA-104.16.159.5:443
     headers:
       Host: bangladeshipatri.com
+  udp: true
+- name: 🇺🇸 US 14
+  server: 104.22.5.240
+  port: 443
+  type: vmess
+  uuid: dc50eb1d-244d-4711-b168-a101a5e6fb1b
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: JJJjjjjjmMMmM.4444926.XYZ
+  network: ws
+  ws-opts:
+    path: /awmqq79B17rfnpXiNaWb
+    headers:
+      Host: JJJjjjjjmMMmM.4444926.XYZ
   udp: true
 - name: 🇺🇸 US 16
   server: 104.22.5.240
@@ -21359,7 +21424,7 @@ proxies:
     headers:
       Host: petal.tk
   udp: true
-- name: '@Vip_Security join us - 469
+- name: '@Vip_Security join us - 468
 
     '
   server: 104.22.5.240
