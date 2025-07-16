@@ -1,33 +1,5 @@
 proxies:
-- name: 678c0ae1e1724dada174b0f35c4c9d69_@_@Hope_Net-join-us-on-Telegram
-  server: tokyo.899994.xyz
-  uuid: a0605527-28e4-449c-80ee-5642cc16a8af
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /
-- name: 2c2c8cdfb95244e88e6c02eafa8a225e_@_@Hope_Net-join-us-on-Telegram
-  server: jp.cowvpn.org
-  uuid: 11a805f2-41a7-4cd8-8406-0470c3cde0d3
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /cctv13/vmess_jpcf
-- name: f32245caf31846d2a8fb3f3e9e1f74b5_@_@Hope_Net-join-us-on-Telegram
+- name: 73911916ce124820973efd137527efff_@_@Hope_Net-join-us-on-Telegram
   server: 57.129.24.125
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -44,7 +16,7 @@ proxies:
     headers:
       host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
     path: /linkvws
-- name: 2|🌀4-TH |  2.6MB/s|55%|Netflix|O...
+- name: 1|🌀4-TH |  2.6MB/s|55%|Netflix|O...
   server: 38.47.96.30
   alterId: 0
   cipher: auto
@@ -342,7 +314,22 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇸🇬SG-103.253.26.20-0200 | 0.0MB
+- name: RELAY-172.67.200.13-5056 | 17.946MB
+  server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+  port: 443
+  type: vmess
+  uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: RELAY-172.67.200.13-5056 | 17.946MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+- name: 🇸🇬SG-103.253.26.20-0145 | 0.0MB
   server: 103.253.26.20
   port: 443
   type: vmess
@@ -356,7 +343,7 @@ proxies:
     path: /
     headers:
       Host: zecjk.com
-- name: 🇦🇺AU-103.224.212.215-0194 | 0.0MB
+- name: 🇦🇺AU-103.224.212.215-0139 | 0.0MB
   server: vjp3.0bad.com
   port: 443
   type: vmess
@@ -370,64 +357,7 @@ proxies:
     path: /
     headers:
       Host: vjp3.0bad.com
-- name: 🇺🇸 美国 345
-  server: 1750158741.tencentapp.cn
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  servername: free1.loopycloudcfjiasucdn.us.kg
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 2e6af5fd-b133-42b0-af98-c136a1405b2b
-  ws-opts:
-    headers:
-      Host: free1.loopycloudcfjiasucdn.us.kg
-    path: /
-- name: 🇺🇸 美国 722
-  server: ssssssssssssfffffffgh.2032.pp.ua
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 4174b95d-115e-4d39-add6-1f8db95bb860
-  ws-opts:
-    headers:
-      Host: ssssssssssssfffffffgh.2032.pp.ua
-    path: /6We3U9Df1WGxgFnoFPw1
-- name: 🇸🇬 新加坡 01
-  server: 139.180.154.158
-  network: ws
-  password: ttfang
-  port: 443
-  skip-cert-verify: true
-  sni: ttfang.fange.me
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: ttfang.fange.me
-    path: /
-- name: 🇺🇸 美国 493
-  server: 172.67.220.32
-  network: ws
-  password: ffcf7ec1-3e09-4821-b3d9-b426a107b73b
-  port: 443
-  skip-cert-verify: false
-  sni: eEEfGty6.999836.XYz
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: eEEfGty6.999836.XYz
-    path: /XmTzATQPJv9RO3xr1D40NK
-- name: 🇺🇸 美国 054
+- name: 🇺🇸 美国 347
   server: 172.67.135.37
   alpn:
   - http%2F1.1
@@ -442,6 +372,19 @@ proxies:
     headers:
       Host: EeEeeD.459.pp.uA
     path: /XkJmZCwVxJO8180gomOew3d
+- name: 🇺🇸 美国 135
+  server: 156.238.19.8
+  network: ws
+  password: d6b8011a-c725-435a-9fec-bf6d3530392c
+  port: 443
+  skip-cert-verify: true
+  sni: vle.amclubdns.dpdns.org
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: vle.amclubdns.dpdns.org
+    path: /?ed=2560&PROT_TYPE=trojan
 - name: 美国 030
   server: 104.18.149.76
   alterId: 0
@@ -458,21 +401,6 @@ proxies:
     headers:
       Host: us.kkp.me.eu.org
     path: /aa
-- name: 美国 033
-  server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  servername: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
-  ws-opts:
-    headers:
-      Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-    path: /
 - name: 美国 038
   server: freeyx.cloudflare88.eu.org
   alterId: 0
@@ -538,19 +466,116 @@ proxies:
     headers:
       Host: aazxsdE.003330333.XYz
     path: /SXjq8YlnGNBlbnEsM
-- name: 🇨🇦 加拿大 01
-  server: 172.67.200.11
+- name: 美国 059
+  server: sssssssxxxx.2032.pp.ua
+  alterId: 0
+  cipher: auto
   network: ws
-  password: 288124da-0d68-42f4-9f48-70dc4dcc55a6
   port: 443
-  skip-cert-verify: false
-  sni: rRfGty6.890606.XYz
+  tls: true
+  type: vmess
+  uuid: 4174b95d-115e-4d39-add6-1f8db95bb860
+  ws-opts:
+    headers:
+      Host: sssssssxxxx.2032.pp.ua
+    path: /6We3U9Df1WGxgFnoFPw1
+- name: 美国 060
+  server: 20.235.105.146
+  network: ws
+  password: ttfang
+  port: 443
+  sni: ttfang.fange.me
+  type: trojan
+  ws-opts:
+    headers:
+      Host: ttfang.fange.me
+    path: /
+- name: 美国 061
+  server: sSsdCVfBGNjkI.931.PP.Ua
+  alterId: 0
+  cipher: auto
+  network: ws
+  port: 443
+  tls: true
+  type: vmess
+  uuid: a4e8ec0a-75d0-4fc5-837a-4973ed3a9d3e
+  ws-opts:
+    headers:
+      Host: sSsdCVfBGNjkI.931.PP.Ua
+    path: /14Fziqw1hYgCXNutkS5H
+- name: 🇳🇱 荷兰 32
+  server: 1750158741.tencentapp.cn
+  alterId: 0
+  cipher: auto
+  network: ws
+  port: 443
+  servername: free3.loopycloudcfjiasucdn.us.kg
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 69fe97c7-8a1c-4ab0-b4fd-c17042b49291
+  ws-opts:
+    headers:
+      Host: free3.loopycloudcfjiasucdn.us.kg
+    path: /
+- name: 🇺🇸 美国 197
+  server: 104.21.66.86
+  alpn:
+  - http%2F1.1
+  network: ws
+  password: 0f7070cd-c91d-4532-a51f-56da4f0e94be
+  port: 443
+  skip-cert-verify: true
+  sni: uuujjnmm.444752.xyz
   type: trojan
   udp: true
   ws-opts:
     headers:
-      Host: rRfGty6.890606.XYz
-    path: /raChT39pjLFYRA5HdHEIupMZeK
+      Host: uuujjnmm.444752.xyz
+    path: /ctHoQlqeZn8pbEUSLppj7jCmY
+- name: 🇺🇸 美国 933
+  server: 172.67.219.196
+  network: ws
+  password: f108e0e2-5f12-42b6-9e67-1b2f073ffb2b
+  port: 443
+  skip-cert-verify: false
+  sni: CCcvfgt6.852224.dpdns.org
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: CCcvfgt6.852224.dpdns.org
+    path: /CA5bMmr2JMum8sDKRwvFCJq
+- name: 🇺🇸 美国 193
+  server: 104.21.88.226
+  alpn:
+  - http%2F1.1
+  network: ws
+  password: 357b1bba-6400-4944-baff-1b933311ff28
+  port: 443
+  skip-cert-verify: true
+  sni: XxxxxXXXXXXxXf.wwW890604.Dpdns.orG
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: XxxxxXXXXXXxXf.wwW890604.Dpdns.orG
+    path: /HbjLgzKC7MBYIsgt
+- name: 🇺🇸 美国 596
+  server: 104.21.26.17
+  alpn:
+  - http/1.1
+  network: ws
+  password: 07a3df8f-2a2c-42f8-ad92-65889d90f3bf
+  port: 443
+  skip-cert-verify: false
+  sni: rrrRrRRrT.459.pp.ua
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: rrrRrRRrT.459.pp.ua
+    path: /znQImc22ijDwVOkZfoq
 - name: US_1
   server: 172.67.187.28
   port: 443
