@@ -1,22 +1,5 @@
 proxies:
-- name: 73911916ce124820973efd137527efff_@_@Hope_Net-join-us-on-Telegram
-  server: 57.129.24.125
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-    path: /linkvws
-- name: 1|🌀4-TH |  2.6MB/s|55%|Netflix|O...
+- name: 2|🌀4-TH |  2.6MB/s|55%|Netflix|O...
   server: 38.47.96.30
   alterId: 0
   cipher: auto
@@ -31,12 +14,25 @@ proxies:
     headers:
       Host: th.lzj520hxw.dpdns.org
     path: /lzjjj
-- name: 14|US_speednode_0206
-  server: 198.62.62.67
+- name: 14|GB_speednode_0076
+  server: 91.193.58.0
+  network: ws
+  password: trojan
+  port: 443
+  skip-cert-verify: false
+  sni: wahaha.yingyangkuaixian.dpdns.org
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: wahaha.yingyangkuaixian.dpdns.org
+    path: /
+- name: 14|RU_speednode_0144
+  server: 45.67.215.95
   network: ws
   password: tg-fq521free
   port: 443
-  skip-cert-verify: true
+  skip-cert-verify: false
   sni: torjan.xn--xhq44j.eu.org
   type: trojan
   udp: true
@@ -146,6 +142,19 @@ proxies:
   ws-headers:
     Host: hkd1.quickerlink.xyz
   ws-path: /h6jr23x9h3lqiitg
+- name: 🏁RELAY-172.67.132.44-222_1@221
+  server: nicola.pics
+  alterId: 0
+  cipher: auto
+  network: ws
+  port: 443
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-headers:
+    Host: nicola.pics
+  ws-path: /linkvws
 - name: 美国 011_2@19
   server: 104.18.92.5
   alterId: 0
@@ -314,21 +323,6 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-172.67.200.13-5056 | 17.946MB
-  server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-  port: 443
-  type: vmess
-  uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: RELAY-172.67.200.13-5056 | 17.946MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
 - name: 🇸🇬SG-103.253.26.20-0145 | 0.0MB
   server: 103.253.26.20
   port: 443
@@ -357,34 +351,67 @@ proxies:
     path: /
     headers:
       Host: vjp3.0bad.com
-- name: 🇺🇸 美国 347
-  server: 172.67.135.37
+- name: VMESS-未知>法国-ChatGPT-1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top:443
+  server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+  alterId: 0
+  cipher: auto
+  h2-opts: {}
+  http-opts: {}
+  network: ws
+  port: 443
+  servername: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
+  ws-opts:
+    headers:
+      HOST: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+    path: /azumase.ren
+- name: 🇺🇸 美国 898
+  server: www.csgo.com
+  network: ws
+  password: vip
+  port: 443
+  skip-cert-verify: true
+  sni: heihu880.pages.dev
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: heihu880.pages.dev
+    path: /?ed=2560
+- name: 🇺🇸 美国 192
+  server: 172.67.145.200
   alpn:
   - http%2F1.1
   network: ws
-  password: cf8c791e-9d0b-4e90-aaf6-41ac62468416
+  password: fa050497-fc2a-45ee-89c0-96670c4ecb65
   port: 443
   skip-cert-verify: true
-  sni: EeEeeD.459.pp.uA
+  sni: Rrr4.8906004.xYZ
   type: trojan
   udp: true
   ws-opts:
     headers:
-      Host: EeEeeD.459.pp.uA
-    path: /XkJmZCwVxJO8180gomOew3d
-- name: 🇺🇸 美国 135
-  server: 156.238.19.8
+      Host: Rrr4.8906004.xYZ
+    path: /DZxb5QZyWgQPuXTwt
+- name: 🇺🇸 美国 308
+  server: 1750158741.tencentapp.cn
+  alterId: 0
+  cipher: auto
   network: ws
-  password: d6b8011a-c725-435a-9fec-bf6d3530392c
   port: 443
+  servername: free1.loopycloudcfjiasucdn.us.kg
   skip-cert-verify: true
-  sni: vle.amclubdns.dpdns.org
-  type: trojan
+  tls: true
+  type: vmess
   udp: true
+  uuid: e8fbabcd-315d-411a-931e-7d140faee58d
   ws-opts:
     headers:
-      Host: vle.amclubdns.dpdns.org
-    path: /?ed=2560&PROT_TYPE=trojan
+      Host: free1.loopycloudcfjiasucdn.us.kg
+    path: /
 - name: 美国 030
   server: 104.18.149.76
   alterId: 0
@@ -503,21 +530,6 @@ proxies:
     headers:
       Host: sSsdCVfBGNjkI.931.PP.Ua
     path: /14Fziqw1hYgCXNutkS5H
-- name: 🇳🇱 荷兰 32
-  server: 1750158741.tencentapp.cn
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  servername: free3.loopycloudcfjiasucdn.us.kg
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 69fe97c7-8a1c-4ab0-b4fd-c17042b49291
-  ws-opts:
-    headers:
-      Host: free3.loopycloudcfjiasucdn.us.kg
-    path: /
 - name: 🇺🇸 美国 197
   server: 104.21.66.86
   alpn:
@@ -620,6 +632,17 @@ proxies:
     path: /a4unyD0ay1Vp4fx59ry
     headers:
       Host: 11q.003330333.Xyz
+- name: US_21
+  server: 172.67.216.240
+  port: 443
+  type: trojan
+  password: cf8c791e-9d0b-4e90-aaf6-41ac62468416
+  sni: nnNnNNnNnnM.857856.XYZ
+  network: ws
+  ws-opts:
+    path: /XkJmZCwVxJO8180gomOew3d
+    headers:
+      Host: nnNnNNnNnnM.857856.XYZ
 - name: US_23
   server: 172.67.175.139
   port: 443
@@ -631,17 +654,6 @@ proxies:
     path: /ORgwL4kEvW32T1dU239ar
     headers:
       Host: rrrrrrrt.859886.xyz
-- name: US_25
-  server: 104.19.174.68
-  port: 443
-  type: trojan
-  password: trojan
-  sni: azadnet-9ya.pages.dev
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: azadnet-9ya.pages.dev
 - name: US_26
   server: 104.21.91.180
   port: 443
