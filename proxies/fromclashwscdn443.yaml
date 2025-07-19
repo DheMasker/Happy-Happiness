@@ -1,5 +1,5 @@
 proxies:
-- name: 81132495410648779fa02a2341f5cce0_@_@Hope_Net-join-us-on-Telegram
+- name: d0939e90f4244848b5af72d3f848edee_@_@Hope_Net-join-us-on-Telegram
   server: 172.233.19.143
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -13,7 +13,7 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: linkvws
-- name: dc8fcd39a6fb40e196b102f9f886011d_@_@Hope_Net-join-us-on-Telegram
+- name: 18f74ba5bd1347de897987f78345b9c2_@_@Hope_Net-join-us-on-Telegram
   server: hms23.fixedfloati.cfd
   uuid: 9072d339-3885-4fe1-b0bc-29fa7505410e
   cipher: auto
@@ -27,7 +27,38 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /linkwsd
-- name: 1|🌀4-TH |  2.6MB/s|55%|Netflix|O...
+- name: b77438e760d343a5a0d22d89a369dc9e_@_@Hope_Net-join-us-on-Telegram
+  server: irhms03.dongfeng.cfd
+  uuid: fa5b55cd-cafc-4de0-a4c8-722e02a9f58e
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: hms03.dongfeng.cfd
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: hms03.dongfeng.cfd
+    path: /linkws
+- name: f75aaed08f5340e6939177238b48c292_@_@Hope_Net-join-us-on-Telegram
+  server: irvideo.cfd
+  uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /linkws
+- name: 0|🌀4-TH |  2.6MB/s|55%|Netflix|O...
   server: 38.47.96.30
   alterId: 0
   cipher: auto
@@ -396,7 +427,7 @@ proxies:
     path: /
     headers:
       Host: vjp3.0bad.com
-- name: 🇺🇸 美国-Flower Mound (388e3b)
+- name: 🇺🇸 美国-San Jose (8192e8)
   server: 156.238.19.8
   network: ws
   password: d6b8011a-c725-435a-9fec-bf6d3530392c
@@ -409,33 +440,6 @@ proxies:
     headers:
       Host: vle.amclubdns.dpdns.org
     path: /?ed=2560&PROT_TYPE=trojan
-- name: 🇺🇸 美国 (a8c7b2)
-  server: 172.67.219.196
-  network: ws
-  password: f108e0e2-5f12-42b6-9e67-1b2f073ffb2b
-  port: 443
-  skip-cert-verify: false
-  sni: CCcvfgt6.852224.dpdns.org
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: CCcvfgt6.852224.dpdns.org
-    path: /CA5bMmr2JMum8sDKRwvFCJq
-- name: 🇺🇸 美国-New York (2b2600)
-  server: 104.21.30.167
-  alpn:
-  - http%2F1.1
-  network: ws
-  password: a7b22c05-27fd-4a76-8896-2aebaf4cf3a1
-  port: 443
-  sni: TttTtTYU.2032.PP.UA
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: TttTtTYU.2032.PP.UA
-    path: /mXG7Hx4Y37nTr2Hdmy903WCeD85F1b
 - name: 🇺🇸 美国-New York (e5cc2d)
   server: 104.21.6.179
   network: ws
@@ -447,8 +451,35 @@ proxies:
     headers:
       Host: ZZzzzZZ.890601.XYZ
     path: /l96MZ8se5Kl2p8BiMhP42l
-- name: 🇺🇸 美国-Buffalo (431e60)
+- name: 🇺🇸 美国 (dfaaba)
   server: 172.67.135.37
+  alpn:
+  - http%2F1.1
+  network: ws
+  password: cf8c791e-9d0b-4e90-aaf6-41ac62468416
+  port: 443
+  sni: EeEeeD.459.pp.uA
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: EeEeeD.459.pp.uA
+    path: /XkJmZCwVxJO8180gomOew3d
+- name: 🇺🇸 美国-New York (db6a6b)
+  server: 104.21.63.135
+  network: ws
+  password: fa050497-fc2a-45ee-89c0-96670c4ecb65
+  port: 443
+  skip-cert-verify: false
+  sni: Rrr4.8906004.xYZ
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: Rrr4.8906004.xYZ
+    path: /DZxb5QZyWgQPuXTwt
+- name: 🇺🇸 美国-Buffalo (ac516f)
+  server: 104.21.26.17
   alpn:
   - http/1.1
   network: ws
@@ -462,60 +493,20 @@ proxies:
     headers:
       Host: rrrRrRRrT.459.pp.ua
     path: /znQImc22ijDwVOkZfoq
-- name: 🇺🇸 美国-New York (3d0a94)
-  server: FffvvVbnhJui8.222560.XYz
-  alterId: 0
-  cipher: auto
+- name: 🇺🇸 美国 (3e0e58)
+  server: 172.67.219.196
   network: ws
+  password: f108e0e2-5f12-42b6-9e67-1b2f073ffb2b
   port: 443
-  tls: true
-  type: vmess
-  uuid: 7701ddf5-6a48-401b-a3ec-8af52b6deb48
-  ws-opts:
-    headers:
-      Host: FffvvVbnhJui8.222560.XYz
-    path: /mlyR5tmcKx3hweBopuhWEbIX
-- name: 🇺🇸 美国-Buffalo (2b3ebe)
-  server: sssssssxxxx.2032.pp.ua
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  tls: true
-  type: vmess
-  uuid: 4174b95d-115e-4d39-add6-1f8db95bb860
-  ws-opts:
-    headers:
-      Host: sssssssxxxx.2032.pp.ua
-    path: /6We3U9Df1WGxgFnoFPw1
-- name: 🇺🇸 美国-New York (205d0b)
-  server: 172.67.145.200
-  alpn:
-  - http%2F1.1
-  network: ws
-  password: fa050497-fc2a-45ee-89c0-96670c4ecb65
-  port: 443
-  sni: Rrr4.8906004.xYZ
+  skip-cert-verify: false
+  sni: CCcvfgt6.852224.dpdns.org
   type: trojan
   udp: true
   ws-opts:
     headers:
-      Host: Rrr4.8906004.xYZ
-    path: /DZxb5QZyWgQPuXTwt
-- name: 🇺🇸 美国-Buffalo (eb3643)
-  server: sSsdCVfBGNjkI.931.PP.Ua
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  tls: true
-  type: vmess
-  uuid: a4e8ec0a-75d0-4fc5-837a-4973ed3a9d3e
-  ws-opts:
-    headers:
-      Host: sSsdCVfBGNjkI.931.PP.Ua
-    path: /14Fziqw1hYgCXNutkS5H
-- name: 🇺🇸 美国-Buffalo (649d46)
+      Host: CCcvfgt6.852224.dpdns.org
+    path: /CA5bMmr2JMum8sDKRwvFCJq
+- name: 🇺🇸 美国-Buffalo (3cc644)
   server: 172.67.214.21
   alpn:
   - http%2F1.1
@@ -529,7 +520,7 @@ proxies:
     headers:
       Host: xXcdvFgt.191268.XYz
     path: /ctdmgeIg3NII3ibrzzKXJGy3S1
-- name: 🇸🇬 新加坡-Singapore (df2db7)
+- name: 🇸🇬 新加坡-Singapore (216c55)
   server: 139.180.154.158
   network: ws
   password: ttfang
@@ -542,19 +533,20 @@ proxies:
     headers:
       Host: ttfang.fange.me
     path: /
-- name: 🇺🇸 美国 (d3d01b)
-  server: JJJjjjjjmMMmM.4444926.XYZ
-  alterId: 0
-  cipher: auto
+- name: 🇺🇸 美国-New York (09bdd0)
+  server: 104.21.30.167
+  alpn:
+  - http%2F1.1
   network: ws
+  password: a7b22c05-27fd-4a76-8896-2aebaf4cf3a1
   port: 443
-  tls: true
-  type: vmess
-  uuid: dc50eb1d-244d-4711-b168-a101a5e6fb1b
+  sni: TttTtTYU.2032.PP.UA
+  type: trojan
+  udp: true
   ws-opts:
     headers:
-      Host: jjjjjjjjmmmmm.4444926.xyz
-    path: /awmqq79B17rfnpXiNaWb
+      Host: TttTtTYU.2032.PP.UA
+    path: /mXG7Hx4Y37nTr2Hdmy903WCeD85F1b
 - name: PL_1
   server: 104.17.148.22
   port: 443
@@ -613,17 +605,6 @@ proxies:
     path: /a4unyD0ay1Vp4fx59ry
     headers:
       Host: 11q.003330333.Xyz
-- name: US_21
-  server: 172.67.216.240
-  port: 443
-  type: trojan
-  password: cf8c791e-9d0b-4e90-aaf6-41ac62468416
-  sni: nnNnNNnNnnM.857856.XYZ
-  network: ws
-  ws-opts:
-    path: /XkJmZCwVxJO8180gomOew3d
-    headers:
-      Host: nnNnNNnNnnM.857856.XYZ
 - name: US_23
   server: 172.67.175.139
   port: 443
