@@ -1,5 +1,5 @@
 proxies:
-- name: 1|🌀4-TH |  2.6MB/s|55%|Netflix|O...
+- name: 2|🌀4-TH |  2.6MB/s|55%|Netflix|O...
   server: 38.47.96.30
   alterId: 0
   cipher: auto
@@ -14,7 +14,7 @@ proxies:
     headers:
       Host: th.lzj520hxw.dpdns.org
     path: /lzjjj
-- name: 14|GB_speednode_0064
+- name: 14|GB_speednode_0120
   server: 91.193.58.0
   network: ws
   password: trojan
@@ -26,6 +26,19 @@ proxies:
   ws-opts:
     headers:
       Host: wahaha.yingyangkuaixian.dpdns.org
+    path: /
+- name: 14|RU_speednode_0208
+  server: 45.67.215.95
+  network: ws
+  password: tg-fq521free
+  port: 443
+  skip-cert-verify: false
+  sni: torjan.xn--xhq44j.eu.org
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: torjan.xn--xhq44j.eu.org
     path: /
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
@@ -310,7 +323,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-77.83.141.171-5230 | 18.86MB
+- name: 🇺🇸US-77.83.141.171-5077 | 11.791MB
   server: vc.fly.dev
   port: 443
   type: vmess
@@ -319,13 +332,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇺🇸US-77.83.141.171-5230 | 18.86MB
+  servername: 🇺🇸US-77.83.141.171-5077 | 11.791MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: vc.fly.dev
-- name: RELAY-104.18.149.76-0587 | 7.579MB
+- name: RELAY-104.18.149.76-0576 | 8.032MB
   server: 104.18.149.76
   port: 443
   type: vmess
@@ -334,13 +347,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-104.18.149.76-0587 | 7.579MB
+  servername: RELAY-104.18.149.76-0576 | 8.032MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: us.kkp.me.eu.org
-- name: 🇸🇬SG-103.253.26.20-0174 | 0.0MB
+- name: 🇸🇬SG-103.253.26.20-0162 | 0.0MB
   server: 103.253.26.20
   port: 443
   type: vmess
@@ -354,7 +367,7 @@ proxies:
     path: /
     headers:
       Host: zecjk.com
-- name: 🇦🇺AU-103.224.212.215-0168 | 0.0MB
+- name: 🇦🇺AU-103.224.212.215-0156 | 0.0MB
   server: vjp3.0bad.com
   port: 443
   type: vmess
@@ -368,58 +381,17 @@ proxies:
     path: /
     headers:
       Host: vjp3.0bad.com
-- name: 🇳🇱 荷兰 29
-  server: www.ipaddress.my
+- name: 美国 037
+  server: 104.21.6.179
   network: ws
-  password: vip
+  password: 6757b7d6-fa32-4708-b5d1-30e3cf928b51
   port: 443
-  skip-cert-verify: true
-  sni: heihu880.pages.dev
+  sni: ZZzzzZZ.890601.XYZ
   type: trojan
-  udp: true
   ws-opts:
     headers:
-      Host: heihu880.pages.dev
-    path: /?ed=2560
-- name: 美国 062
-  server: JJJjjjjjmMMmM.4444926.XYZ
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  tls: true
-  type: vmess
-  uuid: dc50eb1d-244d-4711-b168-a101a5e6fb1b
-  ws-opts:
-    headers:
-      Host: jjjjjjjjmmmmm.4444926.xyz
-    path: /awmqq79B17rfnpXiNaWb
-- name: 美国 057
-  server: FffvvVbnhJui8.222560.XYz
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  tls: true
-  type: vmess
-  uuid: 7701ddf5-6a48-401b-a3ec-8af52b6deb48
-  ws-opts:
-    headers:
-      Host: FffvvVbnhJui8.222560.XYz
-    path: /mlyR5tmcKx3hweBopuhWEbIX
-- name: 美国 061
-  server: sSsdCVfBGNjkI.931.PP.Ua
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  tls: true
-  type: vmess
-  uuid: a4e8ec0a-75d0-4fc5-837a-4973ed3a9d3e
-  ws-opts:
-    headers:
-      Host: sSsdCVfBGNjkI.931.PP.Ua
-    path: /14Fziqw1hYgCXNutkS5H
+      Host: ZZzzzZZ.890601.XYZ
+    path: /l96MZ8se5Kl2p8BiMhP42l
 - name: 美国 059
   server: sssssssxxxx.2032.pp.ua
   alterId: 0
@@ -433,17 +405,47 @@ proxies:
     headers:
       Host: sssssssxxxx.2032.pp.ua
     path: /6We3U9Df1WGxgFnoFPw1
-- name: 美国 037
-  server: 104.21.6.179
+- name: 美国 061
+  server: sSsdCVfBGNjkI.931.PP.Ua
+  alterId: 0
+  cipher: auto
   network: ws
-  password: 6757b7d6-fa32-4708-b5d1-30e3cf928b51
   port: 443
-  sni: ZZzzzZZ.890601.XYZ
-  type: trojan
+  tls: true
+  type: vmess
+  uuid: a4e8ec0a-75d0-4fc5-837a-4973ed3a9d3e
   ws-opts:
     headers:
-      Host: ZZzzzZZ.890601.XYZ
-    path: /l96MZ8se5Kl2p8BiMhP42l
+      Host: sSsdCVfBGNjkI.931.PP.Ua
+    path: /14Fziqw1hYgCXNutkS5H
+- name: 🇺🇸 美国 029
+  server: 104.21.26.17
+  alpn:
+  - http/1.1
+  network: ws
+  password: 07a3df8f-2a2c-42f8-ad92-65889d90f3bf
+  port: 443
+  skip-cert-verify: false
+  sni: rrrRrRRrT.459.pp.ua
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: rrrRrRRrT.459.pp.ua
+    path: /znQImc22ijDwVOkZfoq
+- name: 美国 057
+  server: FffvvVbnhJui8.222560.XYz
+  alterId: 0
+  cipher: auto
+  network: ws
+  port: 443
+  tls: true
+  type: vmess
+  uuid: 7701ddf5-6a48-401b-a3ec-8af52b6deb48
+  ws-opts:
+    headers:
+      Host: FffvvVbnhJui8.222560.XYz
+    path: /mlyR5tmcKx3hweBopuhWEbIX
 - name: 美国 060
   server: 20.235.105.146
   network: ws
@@ -455,6 +457,76 @@ proxies:
     headers:
       Host: ttfang.fange.me
     path: /
+- name: 美国 062
+  server: JJJjjjjjmMMmM.4444926.XYZ
+  alterId: 0
+  cipher: auto
+  network: ws
+  port: 443
+  tls: true
+  type: vmess
+  uuid: dc50eb1d-244d-4711-b168-a101a5e6fb1b
+  ws-opts:
+    headers:
+      Host: jjjjjjjjmmmmm.4444926.xyz
+    path: /awmqq79B17rfnpXiNaWb
+- name: 🇺🇸 美国 530
+  server: 156.238.19.8
+  network: ws
+  password: d6b8011a-c725-435a-9fec-bf6d3530392c
+  port: 443
+  skip-cert-verify: true
+  sni: vle.amclubdns.dpdns.org
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: vle.amclubdns.dpdns.org
+    path: /?ed=2560&PROT_TYPE=trojan
+- name: 🇺🇸 美国 377
+  server: 104.21.63.135
+  network: ws
+  password: fa050497-fc2a-45ee-89c0-96670c4ecb65
+  port: 443
+  skip-cert-verify: false
+  sni: Rrr4.8906004.xYZ
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: Rrr4.8906004.xYZ
+    path: /DZxb5QZyWgQPuXTwt
+- name: 🇺🇸 美国 502
+  server: 104.21.30.167
+  alpn:
+  - http%2F1.1
+  network: ws
+  password: a7b22c05-27fd-4a76-8896-2aebaf4cf3a1
+  port: 443
+  sni: TttTtTYU.2032.PP.UA
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: TttTtTYU.2032.PP.UA
+    path: /mXG7Hx4Y37nTr2Hdmy903WCeD85F1b
+- name: 芬兰 - 赫尔辛基 - Cloudflare, Inc. - 1
+  server: 62.60.156.228
+  alterId: 0
+  cipher: auto
+  delay: 2782
+  h2-opts: {}
+  http-opts: {}
+  network: ws
+  port: 443
+  servername: 920f9840-4d0f-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat
+  tls: true
+  type: vmess
+  uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
+  ws-opts:
+    headers:
+      host: 920f9840-4d0f-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat
+    path: /920f9840-4d0f-11f0-a948-6a75f667b472?ed=2048
 - name: 🇺🇸 美国 152
   server: 172.67.135.37
   alpn:
@@ -469,32 +541,6 @@ proxies:
     headers:
       Host: EeEeeD.459.pp.uA
     path: /XkJmZCwVxJO8180gomOew3d
-- name: RU_speednode_0074
-  server: 45.67.215.95
-  network: ws
-  password: tg-fq521free
-  port: 443
-  skip-cert-verify: false
-  sni: torjan.xn--xhq44j.eu.org
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: torjan.xn--xhq44j.eu.org
-    path: /
-- name: 🇺🇸 美国 530
-  server: 156.238.19.8
-  network: ws
-  password: d6b8011a-c725-435a-9fec-bf6d3530392c
-  port: 443
-  skip-cert-verify: true
-  sni: vle.amclubdns.dpdns.org
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: vle.amclubdns.dpdns.org
-    path: /?ed=2560&PROT_TYPE=trojan
 - name: 🇸🇬 新加坡 19
   server: 123.interld123456789.com
   network: ws
