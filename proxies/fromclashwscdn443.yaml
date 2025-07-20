@@ -1,37 +1,53 @@
 proxies:
-- name: 08897dae5e6b4f83ac5e594c1f63c2e9_@_@Hope_Net-join-us-on-Telegram
-  server: 163.5.159.231
-  uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /linkws
-- name: 88e851e0106d4697917dcd06dc33e889_@_👉🆔@v2ray_configs_pool📡🇩🇪®️Germany©️Limburg
-    an der Lahn🅿️ping:33.8ms
-  server: 57.129.24.124
+- name: b44fb5a83127440dae8839e5455f1f09_@_@Hope_Net-join-us-on-Telegram
+  server: 104.21.53.12
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
-  alterId: 0
+  alterId: 1
   type: vmess
   port: 443
   network: ws
   tls: true
   udp: false
   client-fingerprint: chrome
-  servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
+  servername: ophelia.mom
   fingerprint: ''
   ws-opts:
     headers:
-      host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-    path: /linkvws
-- name: 1|🌀4-TH |  2.6MB/s|55%|Netflix|O...
+      host: ophelia.mom
+    path: linkvws
+- name: 744496ec61ad437da0d86a84697db60b_@_🇺🇸[openproxylist.com] vmess-US
+  server: www.visa.com.tw
+  uuid: 0a1feb87-bf84-49ae-b128-6edbd9c975d0
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: farm-connected-documentation-queens.trycloudflare.com
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: farm-connected-documentation-queens.trycloudflare.com
+    path: /vmess-argo?ed=2048
+- name: c35b86d8e71b4fea8895962df4caa17f_@_🇮🇩[openproxylist.com] vmess-ID
+  server: daffa.xstore.web.id
+  uuid: d2021e4f-66b9-4fa1-830d-993dba014b50
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /vmess
+- name: 0|🌀4-TH |  2.6MB/s|55%|Netflix|O...
   server: 38.47.96.30
   alterId: 0
   cipher: auto
@@ -316,22 +332,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: ID-203.194.112.24-5079 | 14.693MB
-  server: daffa.xstore.web.id
-  port: 443
-  type: vmess
-  uuid: d2021e4f-66b9-4fa1-830d-993dba014b50
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: ID-203.194.112.24-5079 | 14.693MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: daffa.xstore.web.id
-- name: 🇺🇸US-77.83.141.171-5313 | 13.0MB
+- name: 🇺🇸US-77.83.141.171-5313 | 0.73MB
   server: vc.fly.dev
   port: 443
   type: vmess
@@ -340,13 +341,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇺🇸US-77.83.141.171-5313 | 13.0MB
+  servername: 🇺🇸US-77.83.141.171-5313 | 0.73MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: vc.fly.dev
-- name: RELAY-104.16.163.32-5073 | 5.85MB
+- name: RELAY-104.16.163.32-5073 | 0.558MB
   server: codepen.io
   port: 443
   type: vmess
@@ -360,7 +361,7 @@ proxies:
     path: /
     headers:
       Host: farid.1.berozha.ir
-- name: 🇸🇬SG-202.79.160.164-0943 | 1.845MB
+- name: 🇸🇬SG-202.79.160.164-0943 | 0.221MB
   server: 202.79.160.164
   port: 443
   type: vmess
@@ -402,6 +403,39 @@ proxies:
     path: /
     headers:
       Host: vjp3.0bad.com
+- name: 日本 001
+  server: 91.193.58.0
+  network: ws
+  password: trojan
+  port: 443
+  sni: wahaha.yingyangkuaixian.dpdns.org
+  type: trojan
+  ws-opts:
+    headers:
+      Host: wahaha.yingyangkuaixian.dpdns.org
+    path: /
+- name: 美国 037
+  server: 104.21.6.179
+  network: ws
+  password: 6757b7d6-fa32-4708-b5d1-30e3cf928b51
+  port: 443
+  sni: ZZzzzZZ.890601.XYZ
+  type: trojan
+  ws-opts:
+    headers:
+      Host: ZZzzzZZ.890601.XYZ
+    path: /l96MZ8se5Kl2p8BiMhP42l
+- name: 美国 060
+  server: 20.235.105.146
+  network: ws
+  password: ttfang
+  port: 443
+  sni: ttfang.fange.me
+  type: trojan
+  ws-opts:
+    headers:
+      Host: ttfang.fange.me
+    path: /
 - name: 🇺🇸 美国-Reston (cffaa6)
   server: 194.76.18.129
   network: ws
@@ -415,8 +449,8 @@ proxies:
     headers:
       Host: torjan.xn--xhq44j.eu.org
     path: /
-- name: 🇺🇸 美国-Reston (8d2d1f)
-  server: 198.62.62.156
+- name: 🇺🇸 美国-Reston (8d1d52)
+  server: 156.238.19.8
   network: ws
   password: d6b8011a-c725-435a-9fec-bf6d3530392c
   port: 443
@@ -428,37 +462,13 @@ proxies:
     headers:
       Host: vle.amclubdns.dpdns.org
     path: /?ed=2560&PROT_TYPE=trojan
-- name: 🇺🇸 美国-New York (e5cc2d)
-  server: 104.21.6.179
-  network: ws
-  password: 6757b7d6-fa32-4708-b5d1-30e3cf928b51
-  port: 443
-  sni: ZZzzzZZ.890601.XYZ
-  type: trojan
-  ws-opts:
-    headers:
-      Host: ZZzzzZZ.890601.XYZ
-    path: /l96MZ8se5Kl2p8BiMhP42l
-- name: 🇺🇸 美国-New York (1cf3d1)
-  server: 104.21.30.167
+- name: 🇺🇸 美国-New York (205d0b)
+  server: 172.67.145.200
   alpn:
   - http%2F1.1
   network: ws
-  password: a7b22c05-27fd-4a76-8896-2aebaf4cf3a1
-  port: 443
-  sni: TttTtTYU.2032.PP.UA
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: TttTtTYU.2032.PP.UA
-    path: /mXG7Hx4Y37nTr2Hdmy903WCeD85F1b
-- name: 🇺🇸 美国-New York (6ccd22)
-  server: 104.21.63.135
-  network: ws
   password: fa050497-fc2a-45ee-89c0-96670c4ecb65
   port: 443
-  skip-cert-verify: false
   sni: Rrr4.8906004.xYZ
   type: trojan
   udp: true
@@ -466,17 +476,6 @@ proxies:
     headers:
       Host: Rrr4.8906004.xYZ
     path: /DZxb5QZyWgQPuXTwt
-- name: 🇺🇸 美国-Reston (724fec)
-  server: 91.193.58.0
-  network: ws
-  password: trojan
-  port: 443
-  sni: wahaha.yingyangkuaixian.dpdns.org
-  type: trojan
-  ws-opts:
-    headers:
-      Host: wahaha.yingyangkuaixian.dpdns.org
-    path: /
 - name: 🇺🇸 美国-Buffalo (fb089c)
   server: 104.21.26.17
   alpn:
@@ -492,19 +491,20 @@ proxies:
     headers:
       Host: rrrRrRRrT.459.pp.ua
     path: /znQImc22ijDwVOkZfoq
-- name: 🇺🇸 美国 (3fa150)
-  server: 172.67.219.196
+- name: 🇺🇸 美国-New York (1cf3d1)
+  server: 104.21.30.167
+  alpn:
+  - http%2F1.1
   network: ws
-  password: f108e0e2-5f12-42b6-9e67-1b2f073ffb2b
+  password: a7b22c05-27fd-4a76-8896-2aebaf4cf3a1
   port: 443
-  skip-cert-verify: false
-  sni: CCcvfgt6.852224.dpdns.org
+  sni: TttTtTYU.2032.PP.UA
   type: trojan
   udp: true
   ws-opts:
     headers:
-      Host: CCcvfgt6.852224.dpdns.org
-    path: /CA5bMmr2JMum8sDKRwvFCJq
+      Host: TttTtTYU.2032.PP.UA
+    path: /mXG7Hx4Y37nTr2Hdmy903WCeD85F1b
 - name: 🇺🇸 美国 (309aa1)
   server: 172.67.135.37
   alpn:
@@ -533,19 +533,6 @@ proxies:
     headers:
       Host: xXcdvFgt.191268.XYz
     path: /ctdmgeIg3NII3ibrzzKXJGy3S1
-- name: 🇸🇬 新加坡-Singapore (11a40a)
-  server: 139.180.154.158
-  network: ws
-  password: ttfang
-  port: 443
-  skip-cert-verify: true
-  sni: ttfang.fange.me
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: ttfang.fange.me
-    path: /
 - name: PL_1
   server: 104.17.148.22
   port: 443
