@@ -1,25 +1,8 @@
 proxies:
-- name: b44fb5a83127440dae8839e5455f1f09_@_@Hope_Net-join-us-on-Telegram
-  server: 104.21.53.12
+- name: 5e10759b58d346cd93135ca662f5a77f_@_@Hope_Net-join-us-on-Telegram
+  server: 149.7.16.75
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
-  alterId: 1
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: ophelia.mom
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: ophelia.mom
-    path: linkvws
-- name: 744496ec61ad437da0d86a84697db60b_@_🇺🇸[openproxylist.com] vmess-US
-  server: www.visa.com.tw
-  uuid: 0a1feb87-bf84-49ae-b128-6edbd9c975d0
-  cipher: auto
   alterId: 0
   type: vmess
   port: 443
@@ -27,27 +10,13 @@ proxies:
   tls: true
   udp: false
   client-fingerprint: chrome
-  servername: farm-connected-documentation-queens.trycloudflare.com
+  servername: inna.cfd
   fingerprint: ''
   ws-opts:
     headers:
-      host: farm-connected-documentation-queens.trycloudflare.com
-    path: /vmess-argo?ed=2048
-- name: c35b86d8e71b4fea8895962df4caa17f_@_🇮🇩[openproxylist.com] vmess-ID
-  server: daffa.xstore.web.id
-  uuid: d2021e4f-66b9-4fa1-830d-993dba014b50
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /vmess
-- name: 0|🌀4-TH |  2.6MB/s|55%|Netflix|O...
+      host: inna.cfd
+    path: /linkvws
+- name: 1|🌀4-TH |  2.6MB/s|55%|Netflix|O...
   server: 38.47.96.30
   alterId: 0
   cipher: auto
@@ -332,6 +301,21 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
+- name: ID-203.194.112.24-5079 | 0.784MB
+  server: daffa.xstore.web.id
+  port: 443
+  type: vmess
+  uuid: d2021e4f-66b9-4fa1-830d-993dba014b50
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: ID-203.194.112.24-5079 | 0.784MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: daffa.xstore.web.id
 - name: 🇺🇸US-77.83.141.171-5313 | 0.73MB
   server: vc.fly.dev
   port: 443
@@ -403,6 +387,19 @@ proxies:
     path: /
     headers:
       Host: vjp3.0bad.com
+- name: 🇺🇸 美国 392
+  server: 45.67.215.95
+  network: ws
+  password: tg-fq521free
+  port: 443
+  skip-cert-verify: true
+  sni: torjan.xn--xhq44j.eu.org
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: torjan.xn--xhq44j.eu.org
+    path: /
 - name: 日本 001
   server: 91.193.58.0
   network: ws
@@ -436,21 +433,8 @@ proxies:
     headers:
       Host: ttfang.fange.me
     path: /
-- name: 🇺🇸 美国-Reston (cffaa6)
-  server: 194.76.18.129
-  network: ws
-  password: tg-fq521free
-  port: 443
-  skip-cert-verify: false
-  sni: torjan.xn--xhq44j.eu.org
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: torjan.xn--xhq44j.eu.org
-    path: /
-- name: 🇺🇸 美国-Reston (8d1d52)
-  server: 156.238.19.8
+- name: 🇺🇸 美国-Reston (e9a390)
+  server: 154.83.2.200
   network: ws
   password: d6b8011a-c725-435a-9fec-bf6d3530392c
   port: 443
@@ -462,35 +446,6 @@ proxies:
     headers:
       Host: vle.amclubdns.dpdns.org
     path: /?ed=2560&PROT_TYPE=trojan
-- name: 🇺🇸 美国-New York (205d0b)
-  server: 172.67.145.200
-  alpn:
-  - http%2F1.1
-  network: ws
-  password: fa050497-fc2a-45ee-89c0-96670c4ecb65
-  port: 443
-  sni: Rrr4.8906004.xYZ
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: Rrr4.8906004.xYZ
-    path: /DZxb5QZyWgQPuXTwt
-- name: 🇺🇸 美国-Buffalo (fb089c)
-  server: 104.21.26.17
-  alpn:
-  - http/1.1
-  network: ws
-  password: 07a3df8f-2a2c-42f8-ad92-65889d90f3bf
-  port: 443
-  skip-cert-verify: false
-  sni: rrrRrRRrT.459.pp.ua
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: rrrRrRRrT.459.pp.ua
-    path: /znQImc22ijDwVOkZfoq
 - name: 🇺🇸 美国-New York (1cf3d1)
   server: 104.21.30.167
   alpn:
@@ -519,6 +474,47 @@ proxies:
     headers:
       Host: EeEeeD.459.pp.uA
     path: /XkJmZCwVxJO8180gomOew3d
+- name: 🇺🇸 美国 642
+  server: 103.160.204.59
+  network: ws
+  password: 06e4425e-a8cb-4b63-929f-2105604ab0a9
+  port: 443
+  skip-cert-verify: true
+  sni: ns.ylka.dpdns.org
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: ns.ylka.dpdns.org
+    path: /?ed=2560&PROT_TYPE=trojan
+- name: 🇺🇸 美国-Buffalo (fb089c)
+  server: 104.21.26.17
+  alpn:
+  - http/1.1
+  network: ws
+  password: 07a3df8f-2a2c-42f8-ad92-65889d90f3bf
+  port: 443
+  skip-cert-verify: false
+  sni: rrrRrRRrT.459.pp.ua
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: rrrRrRRrT.459.pp.ua
+    path: /znQImc22ijDwVOkZfoq
+- name: 🇺🇸 美国-New York (6ccd22)
+  server: 104.21.63.135
+  network: ws
+  password: fa050497-fc2a-45ee-89c0-96670c4ecb65
+  port: 443
+  skip-cert-verify: false
+  sni: Rrr4.8906004.xYZ
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: Rrr4.8906004.xYZ
+    path: /DZxb5QZyWgQPuXTwt
 - name: 🇺🇸 美国-Buffalo (95ef58)
   server: 172.67.214.21
   alpn:
