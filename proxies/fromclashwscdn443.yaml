@@ -1,19 +1,5 @@
 proxies:
-- name: 067d22c94bc04ab3ba1db3a919b257fb_@_🇺🇸[openproxylist.com] vmess-US
-  server: nyl.988978.xyz
-  uuid: 40af0e14-03c8-45eb-85f3-d2e688ddab4a
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /40af0e14-03c8-45eb-85f3-d2e688ddab4a
-- name: 94520e2524e341238553f853003320be_@_👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:8.66ms
+- name: ac868ebb5c3b4da4ad6faed78d93de00_@_👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:8.66ms
   server: 104.18.149.76
   uuid: de94cc0a-0592-4969-b1fc-97ea8f0ea0b3
   cipher: auto
@@ -30,7 +16,7 @@ proxies:
     headers:
       host: us.kkp.me.eu.org
     path: /aa
-- name: 1|🌀4-TH |  2.6MB/s|55%|Netflix|O...
+- name: 0|🌀4-TH |  2.6MB/s|55%|Netflix|O...
   server: 38.47.96.30
   alterId: 0
   cipher: auto
@@ -357,6 +343,20 @@ proxies:
     path: /
     headers:
       Host: vc.fly.dev
+- name: RELAY-172.67.200.247-0688 | 0.0MB
+  server: nyl.988978.xyz
+  port: 443
+  type: vmess
+  uuid: 40af0e14-03c8-45eb-85f3-d2e688ddab4a
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: nyl.988978.xyz
 - name: 🇸🇬SG-103.253.26.20-0202 | 0.0MB
   server: 103.253.26.20
   port: 443
