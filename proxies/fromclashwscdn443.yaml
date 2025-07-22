@@ -1,6 +1,6 @@
 proxies:
-- name: 0a7a5032a44349948601e60d187ecedd_@_@Hope_Net-join-us-on-Telegram
-  server: 149.7.16.194
+- name: 58c3756bf0c3402bbb040e78512a0f81_@_@Hope_Net-join-us-on-Telegram
+  server: be.kalavryta.org
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
   alterId: 1
@@ -10,24 +10,13 @@ proxies:
   tls: true
   udp: false
   client-fingerprint: chrome
+  servername: be.kalavryta.org
   fingerprint: ''
   ws-opts:
-    path: /linkvws
-- name: 3498dd6c27c1497699fa476aff1aa070_@_@Hope_Net-join-us-on-Telegram
-  server: irvideo.cfd
-  uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /linkws
-- name: 2|🌀4-TH |  2.6MB/s|55%|Netflix|O...
+    headers:
+      host: be.kalavryta.org
+    path: linkvws
+- name: 1|🌀4-TH |  2.6MB/s|55%|Netflix|O...
   server: 38.47.96.30
   alterId: 0
   cipher: auto
@@ -312,7 +301,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-104.21.21.192-0913 | 29.77MB
+- name: RELAY-104.21.21.192-0910 | 18.434MB
   server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
   port: 443
   type: vmess
@@ -326,7 +315,22 @@ proxies:
     path: /
     headers:
       Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-- name: RELAY-104.18.149.76-0604 | 5.193MB
+- name: 🇺🇸US-77.83.141.171-4975 | 8.705MB
+  server: vc.fly.dev
+  port: 443
+  type: vmess
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇺🇸US-77.83.141.171-4975 | 8.705MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vc.fly.dev
+- name: RELAY-104.18.149.76-0604 | 3.177MB
   server: 104.18.149.76
   port: 443
   type: vmess
@@ -335,14 +339,28 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-104.18.149.76-0604 | 5.193MB
+  servername: RELAY-104.18.149.76-0604 | 3.177MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: us.kkp.me.eu.org
-- name: 🇸🇬SG-202.61.141.130-0201 | 0.0MB
-  server: 202.61.141.130
+- name: RELAY-172.67.200.247-0688 | 0.107MB
+  server: nyl.988978.xyz
+  port: 443
+  type: vmess
+  uuid: 40af0e14-03c8-45eb-85f3-d2e688ddab4a
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: nyl.988978.xyz
+- name: 🇸🇬SG-103.253.26.20-0202 | 0.0MB
+  server: 103.253.26.20
   port: 443
   type: vmess
   uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
@@ -354,7 +372,7 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 202.61.141.130
+      Host: zecjk.com
 - name: 🇦🇺AU-103.224.212.215-0196 | 0.0MB
   server: vjp3.0bad.com
   port: 443
@@ -391,8 +409,8 @@ proxies:
     headers:
       Host: wahaha.yingyangkuaixian.dpdns.org
     path: /
-- name: 🇩🇪 德国 06
-  server: 162.159.133.85
+- name: 🇺🇸 美国 901
+  server: 103.160.204.59
   network: ws
   password: d6b8011a-c725-435a-9fec-bf6d3530392c
   port: 443
@@ -404,19 +422,6 @@ proxies:
     headers:
       Host: vle.amclubssss.dpdns.org
     path: /?ed=2560&PROT_TYPE=trojan&NAT64=true
-- name: 🇺🇸 美国 236
-  server: 103.160.204.59
-  network: ws
-  password: 06e4425e-a8cb-4b63-929f-2105604ab0a9
-  port: 443
-  skip-cert-verify: true
-  sni: ns.ylka.dpdns.org
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: ns.ylka.dpdns.org
-    path: /?ed=2560&PROT_TYPE=trojan
 - name: 🇺🇸 美国 392
   server: 45.67.215.95
   network: ws
@@ -430,19 +435,20 @@ proxies:
     headers:
       Host: torjan.xn--xhq44j.eu.org
     path: /
-- name: 🇺🇸 美国 825
-  server: 104.21.63.135
+- name: 🇺🇸 美国-New York (1cf3d1)
+  server: 104.21.30.167
+  alpn:
+  - http%2F1.1
   network: ws
-  password: fa050497-fc2a-45ee-89c0-96670c4ecb65
+  password: a7b22c05-27fd-4a76-8896-2aebaf4cf3a1
   port: 443
-  skip-cert-verify: false
-  sni: Rrr4.8906004.xYZ
+  sni: TttTtTYU.2032.PP.UA
   type: trojan
   udp: true
   ws-opts:
     headers:
-      Host: Rrr4.8906004.xYZ
-    path: /DZxb5QZyWgQPuXTwt
+      Host: TttTtTYU.2032.PP.UA
+    path: /mXG7Hx4Y37nTr2Hdmy903WCeD85F1b
 - name: 🇺🇸 美国 803
   server: 104.21.26.17
   alpn:
@@ -458,20 +464,47 @@ proxies:
     headers:
       Host: rrrRrRRrT.459.pp.ua
     path: /znQImc22ijDwVOkZfoq
-- name: 🇺🇸 美国-New York (1cf3d1)
-  server: 104.21.30.167
-  alpn:
-  - http%2F1.1
+- name: 🇺🇸 美国 825
+  server: 104.21.63.135
   network: ws
-  password: a7b22c05-27fd-4a76-8896-2aebaf4cf3a1
+  password: fa050497-fc2a-45ee-89c0-96670c4ecb65
   port: 443
-  sni: TttTtTYU.2032.PP.UA
+  skip-cert-verify: false
+  sni: Rrr4.8906004.xYZ
   type: trojan
   udp: true
   ws-opts:
     headers:
-      Host: TttTtTYU.2032.PP.UA
-    path: /mXG7Hx4Y37nTr2Hdmy903WCeD85F1b
+      Host: Rrr4.8906004.xYZ
+    path: /DZxb5QZyWgQPuXTwt
+- name: 🇺🇸 美国 732
+  server: 172.67.160.119
+  alpn:
+  - http%2F1.1
+  network: ws
+  password: a96cb093-b164-4bc6-bd27-deb0e385de07
+  port: 443
+  sni: UUuUUuUj.999864.XYZ
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: UUuUUuUj.999864.XYZ
+    path: /CNLtVWdiKPpIlRig3qizHXb
+- name: 🇺🇸 美国 013
+  server: 104.21.30.37
+  alpn:
+  - http%2F1.1
+  network: ws
+  password: cdec9d57-661d-456a-bbf2-b4c38e9c6711
+  port: 443
+  sni: DDdcVfbGHy7.444682.xyz
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: DDdcVfbGHy7.444682.xyz
+    path: /UgBAUEI9Y18NcpHHrL0VwSolbqFpg
 - name: 🇸🇬 新加坡-Singapore (11a40a)
   server: 139.180.154.158
   network: ws
