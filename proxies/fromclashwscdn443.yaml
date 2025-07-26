@@ -1,5 +1,5 @@
 proxies:
-- name: 2ff823256a494532ab5c1d1b5056d9e1_@_@Hope_Net-join-us-on-Telegram
+- name: e9b3e97ca2df42318ca921a3ad88794d_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: d1f14517f81641048aeeea81d264d01f_@_🅼🅴🅷🅳🅸
+- name: 251f333fda9e4acc9ec933e5e3c41b10_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -330,7 +330,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-172.67.200.13-0655 | 20.924MB
+- name: RELAY-172.67.200.13-0655 | 33.741MB
   server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
   port: 443
   type: vmess
@@ -344,7 +344,7 @@ proxies:
     path: /
     headers:
       Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-- name: RELAY-104.18.149.76-0566 | 8.316MB
+- name: RELAY-104.18.149.76-0566 | 30.743MB
   server: 104.18.149.76
   port: 443
   type: vmess
@@ -353,7 +353,7 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-104.18.149.76-0566 | 8.316MB
+  servername: RELAY-104.18.149.76-0566 | 30.743MB
   network: ws
   ws-opts:
     path: /
@@ -401,34 +401,30 @@ proxies:
     path: /
     headers:
       Host: Fra-Vp-123.BLaZECLOUD.Site
-- name: 🇺🇸 美国 123
-  server: 45.67.215.95
+- name: 美国 072
+  server: 216.24.57.30
   network: ws
   password: tg-fq521free
   port: 443
-  skip-cert-verify: true
   sni: torjan.xn--xhq44j.eu.org
   type: trojan
-  udp: true
   ws-opts:
     headers:
       Host: torjan.xn--xhq44j.eu.org
     path: /
-- name: 🇺🇸 美国 383
-  server: 172.67.135.37
-  alpn:
-  - http/1.1
+- name: 🇺🇸 美国 499
+  server: 176.124.223.92
   network: ws
-  password: 07a3df8f-2a2c-42f8-ad92-65889d90f3bf
+  password: Aimer
   port: 443
-  skip-cert-verify: false
-  sni: rrrRrRRrT.459.pp.ua
+  skip-cert-verify: true
+  sni: epgz.aimercc.filegear-sg.me
   type: trojan
   udp: true
   ws-opts:
     headers:
-      Host: rrrRrRRrT.459.pp.ua
-    path: /znQImc22ijDwVOkZfoq
+      Host: epgz.aimercc.filegear-sg.me
+    path: /?ed=2560&proxyip=ts.hpc.tw
 - name: 美国 037
   server: 104.21.6.179
   network: ws
@@ -451,6 +447,75 @@ proxies:
     headers:
       Host: ttfang.fange.me
     path: /
+- name: 🇺🇸 美国 338
+  server: 172.67.220.32
+  network: ws
+  password: ffcf7ec1-3e09-4821-b3d9-b426a107b73b
+  port: 443
+  skip-cert-verify: false
+  sni: eEEfGty6.999836.XYz
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: eEEfGty6.999836.XYz
+    path: /XmTzATQPJv9RO3xr1D40NK
+- name: 🇺🇸 美国 383
+  server: 172.67.135.37
+  alpn:
+  - http/1.1
+  network: ws
+  password: 07a3df8f-2a2c-42f8-ad92-65889d90f3bf
+  port: 443
+  skip-cert-verify: false
+  sni: rrrRrRRrT.459.pp.ua
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: rrrRrRRrT.459.pp.ua
+    path: /znQImc22ijDwVOkZfoq
+- name: 🇺🇸 美国-Reston (965101)
+  server: 103.160.204.1
+  network: ws
+  password: d6b8011a-c725-435a-9fec-bf6d3530392c
+  port: 443
+  skip-cert-verify: true
+  sni: vle.amclubdns.dpdns.org
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: vle.amclubdns.dpdns.org
+    path: /?ed=2560&PROT_TYPE=trojan
+- name: 🇺🇸 美国-New York (1cf3d1)
+  server: 104.21.30.167
+  alpn:
+  - http%2F1.1
+  network: ws
+  password: a7b22c05-27fd-4a76-8896-2aebaf4cf3a1
+  port: 443
+  sni: TttTtTYU.2032.PP.UA
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: TttTtTYU.2032.PP.UA
+    path: /mXG7Hx4Y37nTr2Hdmy903WCeD85F1b
+- name: 🇺🇸 美国 005
+  server: 172.67.214.21
+  alpn:
+  - http%2F1.1
+  network: ws
+  password: 7248e825-887c-48b9-83bc-c26bc6392bf8
+  port: 443
+  sni: xXcdvFgt.191268.XYz
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: xXcdvFgt.191268.XYz
+    path: /ctdmgeIg3NII3ibrzzKXJGy3S1
 - name: 🇺🇸 美国 396
   server: 104.21.24.195
   network: ws
@@ -478,19 +543,6 @@ proxies:
     headers:
       Host: DDdcVfbGHy7.444682.xyz
     path: /UgBAUEI9Y18NcpHHrL0VwSolbqFpg
-- name: 🇺🇸 美国-Reston (965101)
-  server: 103.160.204.1
-  network: ws
-  password: d6b8011a-c725-435a-9fec-bf6d3530392c
-  port: 443
-  skip-cert-verify: true
-  sni: vle.amclubdns.dpdns.org
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: vle.amclubdns.dpdns.org
-    path: /?ed=2560&PROT_TYPE=trojan
 - name: 🇺🇸 美国 380
   server: 172.67.219.196
   network: ws
@@ -504,20 +556,6 @@ proxies:
     headers:
       Host: CCcvfgt6.852224.dpdns.org
     path: /CA5bMmr2JMum8sDKRwvFCJq
-- name: 🇺🇸 美国-New York (1cf3d1)
-  server: 104.21.30.167
-  alpn:
-  - http%2F1.1
-  network: ws
-  password: a7b22c05-27fd-4a76-8896-2aebaf4cf3a1
-  port: 443
-  sni: TttTtTYU.2032.PP.UA
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: TttTtTYU.2032.PP.UA
-    path: /mXG7Hx4Y37nTr2Hdmy903WCeD85F1b
 - name: 🇺🇸 美国 825
   server: 104.21.63.135
   network: ws
@@ -531,33 +569,6 @@ proxies:
     headers:
       Host: Rrr4.8906004.xYZ
     path: /DZxb5QZyWgQPuXTwt
-- name: '🇺🇸 美国 388 #2'
-  server: 172.67.220.32
-  network: ws
-  password: ffcf7ec1-3e09-4821-b3d9-b426a107b73b
-  port: 443
-  skip-cert-verify: false
-  sni: eEEfGty6.999836.XYz
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: eEEfGty6.999836.XYz
-    path: /XmTzATQPJv9RO3xr1D40NK
-- name: 🇺🇸 美国 005
-  server: 172.67.214.21
-  alpn:
-  - http%2F1.1
-  network: ws
-  password: 7248e825-887c-48b9-83bc-c26bc6392bf8
-  port: 443
-  sni: xXcdvFgt.191268.XYz
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: xXcdvFgt.191268.XYz
-    path: /ctdmgeIg3NII3ibrzzKXJGy3S1
 - name: US_1
   server: 172.67.187.28
   port: 443
@@ -635,17 +646,6 @@ proxies:
     path: /c6nDz4OnpXiNaWb
     headers:
       Host: yyyhhjki.666461.xyz
-- name: US_29
-  server: duke.ns.cloudflare.com
-  port: 443
-  type: trojan
-  password: Aimer
-  sni: epml.ambercc.filegear-sg.me
-  network: ws
-  ws-opts:
-    path: /?ed=2560&proxyip=ts.hpc.tw
-    headers:
-      Host: epml.ambercc.filegear-sg.me
 - name: US_39
   server: 172.67.208.155
   port: 443
