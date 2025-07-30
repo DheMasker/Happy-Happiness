@@ -1,5 +1,5 @@
 proxies:
-- name: 73231562c69648deb5a9c7ce19b59900_@_@Hope_Net-join-us-on-Telegram
+- name: 884bbd7c24df45bc8acdd797b5e02ffa_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: 078306921f914636bcc25bd56cd92782_@_🅼🅴🅷🅳🅸
+- name: c5745ca4650b4bd696a0f7752da98ed0_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -33,7 +33,7 @@ proxies:
     headers:
       host: 920f9840-4d0f-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat
     path: /920f9840-4d0f-11f0-a948-6a75f667b472?ed=2048
-- name: 0|🌀4-TH |  2.6MB/s|55%|Netflix|O...
+- name: 2|🌀4-TH |  2.6MB/s|55%|Netflix|O...
   server: 38.47.96.30
   alterId: 0
   cipher: auto
@@ -48,7 +48,7 @@ proxies:
     headers:
       Host: th.lzj520hxw.dpdns.org
     path: /lzjjj
-- name: 11|🇺🇸 美国|@ripaojiedian
+- name: 12|🇺🇸 美国|@ripaojiedian
   server: 172.67.214.21
   network: ws
   password: 7248e825-887c-48b9-83bc-c26bc6392bf8
@@ -330,7 +330,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-172.66.168.223-0647 | 21.13MB
+- name: RELAY-172.66.168.223-0647 | 38.809MB
   server: cloudgetservice.mcloudservice.site
   port: 443
   type: vmess
@@ -344,7 +344,7 @@ proxies:
     path: /
     headers:
       Host: Fra-Vp-123.BLaZECLOUD.Site
-- name: RELAY-172.67.200.13-0648 | 13.246MB
+- name: RELAY-172.67.200.13-0648 | 33.352MB
   server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
   port: 443
   type: vmess
@@ -358,8 +358,9 @@ proxies:
     path: /
     headers:
       Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-- name: 乌克兰 001
+- name: 美国 - 聖荷西 - Cloudflare, Inc. - 18
   server: 45.67.215.95
+  delay: 1183
   network: ws
   password: tg-fq521free
   port: 443
@@ -369,17 +370,19 @@ proxies:
     headers:
       Host: torjan.xn--xhq44j.eu.org
     path: /
-- name: 美国 080
-  server: 104.21.63.135
+- name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 11
+  server: 172.67.180.227
+  alpn:
+  - h3
+  client-fingerprint: randomized
+  delay: 1119
   network: ws
-  password: fa050497-fc2a-45ee-89c0-96670c4ecb65
+  password: bpb-trojan
   port: 443
-  sni: Rrr4.8906004.xYZ
+  sni: mashdt.pages.dev
   type: trojan
   ws-opts:
-    headers:
-      Host: Rrr4.8906004.xYZ
-    path: /DZxb5QZyWgQPuXTwt
+    path: /tr?ed=2560
 - name: 美国 037
   server: 104.21.6.179
   network: ws
@@ -391,6 +394,43 @@ proxies:
     headers:
       Host: ZZzzzZZ.890601.XYZ
     path: /l96MZ8se5Kl2p8BiMhP42l
+- name: 美国 080
+  server: 104.21.63.135
+  network: ws
+  password: fa050497-fc2a-45ee-89c0-96670c4ecb65
+  port: 443
+  sni: Rrr4.8906004.xYZ
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Rrr4.8906004.xYZ
+    path: /DZxb5QZyWgQPuXTwt
+- name: 🇺🇸 美国 588
+  server: 198.62.62.156
+  network: ws
+  password: d6b8011a-c725-435a-9fec-bf6d3530392c
+  port: 443
+  skip-cert-verify: true
+  sni: vle.amclubsvip.dpdns.org
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: vle.amclubsvip.dpdns.org
+    path: /?ed=2560&PROT_TYPE=trojan&NAT64=true
+- name: 🇺🇸 美国 446
+  server: 104.21.42.93
+  network: ws
+  password: a96cb093-b164-4bc6-bd27-deb0e385de07
+  port: 443
+  skip-cert-verify: true
+  sni: uuuUuuUuJ.999864.Xyz
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: uuuUuuUuJ.999864.Xyz
+    path: /CNLtVWdiKPpIlRig3qizHXb
 - name: 美国 060
   server: 20.235.105.146
   network: ws
@@ -417,19 +457,32 @@ proxies:
     headers:
       Host: ggGGGgggGGH.857856.xYZ
     path: /XkJmZCwVxJO8180gomOew3d
-- name: 🇺🇸 美国 511
-  server: 104.17.68.85
+- name: 🇺🇸 美国 338
+  server: 172.67.185.107
   network: ws
-  password: d6b8011a-c725-435a-9fec-bf6d3530392c
+  password: 13e26f64-2e0c-4461-92cd-d83294cc18f0
   port: 443
-  skip-cert-verify: true
-  sni: vle.amclubsvip.dpdns.org
+  sni: WwwDe.00890604.XyZ
   type: trojan
   udp: true
   ws-opts:
     headers:
-      Host: vle.amclubsvip.dpdns.org
-    path: /?ed=2560&PROT_TYPE=trojan&NAT64=true
+      Host: WwwDe.00890604.XyZ
+    path: /TDUxZUop9k44oPiit2OdWk0KwirdY
+- name: 🇺🇸 美国 396
+  server: 104.21.3.189
+  alpn:
+  - http%2F1.1
+  network: ws
+  password: 509ed9b7-8d64-4204-8ec8-6b749020ac3f
+  port: 443
+  sni: CcCVfGTyU.89060004.Xyz
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: CcCVfGTyU.89060004.Xyz
+    path: /5MkU0nARgHwk3aXBStn7
 - name: 🇺🇸 美国 448
   server: 172.67.220.32
   alpn:
@@ -445,18 +498,6 @@ proxies:
     headers:
       Host: eEEfGty6.999836.XYz
     path: /XmTzATQPJv9RO3xr1D40NK
-- name: 🇺🇸 美国 338
-  server: 172.67.185.107
-  network: ws
-  password: 13e26f64-2e0c-4461-92cd-d83294cc18f0
-  port: 443
-  sni: WwwDe.00890604.XyZ
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: WwwDe.00890604.XyZ
-    path: /TDUxZUop9k44oPiit2OdWk0KwirdY
 - name: '🇺🇸 美国 136 #2'
   server: 104.21.24.195
   network: ws
@@ -485,20 +526,6 @@ proxies:
     headers:
       Host: xcvfgt6.999854.xyz
     path: /4Bp70NdrJV3xr1D40NK
-- name: 🇺🇸 美国 396
-  server: 104.21.3.189
-  alpn:
-  - http%2F1.1
-  network: ws
-  password: 509ed9b7-8d64-4204-8ec8-6b749020ac3f
-  port: 443
-  sni: CcCVfGTyU.89060004.Xyz
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: CcCVfGTyU.89060004.Xyz
-    path: /5MkU0nARgHwk3aXBStn7
 - name: US_1
   server: 172.67.187.28
   port: 443
