@@ -1,5 +1,5 @@
 proxies:
-- name: 46d5c7ca93114a0f8fdad4c9b6530c46_@_@Hope_Net-join-us-on-Telegram
+- name: 8f7532dd9b6f48bca16c4254caa643c5_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: b1378eeab2594489acd6ded974d10db9_@_🅼🅴🅷🅳🅸
+- name: f60cc86caa5445879f968780226c509b_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -373,6 +373,19 @@ proxies:
     path: /
     headers:
       Host: farid.1.berozha.ir
+- name: 美国 - 聖荷西 - Cloudflare, Inc. - 197
+  server: 198.62.62.67
+  delay: 1745
+  network: ws
+  password: tg-fq521free
+  port: 443
+  sni: torjan.xn--xhq44j.eu.org
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: torjan.xn--xhq44j.eu.org
+    path: /
 - name: 美国 037
   server: 104.21.6.179
   network: ws
@@ -384,18 +397,46 @@ proxies:
     headers:
       Host: ZZzzzZZ.890601.XYZ
     path: /l96MZ8se5Kl2p8BiMhP42l
-- name: 🇺🇸 美国 0792
-  server: 198.62.62.67
+- name: 🇺🇸 美国 0158
+  server: 198.62.62.4
   network: ws
-  password: tg-fq521free
+  password: d6b8011a-c725-435a-9fec-bf6d3530392c
   port: 443
-  sni: torjan.xn--xhq44j.eu.org
+  skip-cert-verify: true
+  sni: vle.amclubsvip.dpdns.org
   type: trojan
   udp: true
   ws-opts:
     headers:
-      Host: torjan.xn--xhq44j.eu.org
-    path: /
+      Host: vle.amclubsvip.dpdns.org
+    path: /?ed=2560&PROT_TYPE=trojan&NAT64=true
+- name: 🇺🇸 美国 0969
+  server: 154.26.182.37
+  network: ws
+  password: Aimer
+  port: 443
+  skip-cert-verify: true
+  sni: epga.aimercc.dpdns.org
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: epga.aimercc.dpdns.org
+    path: /?ed=2560&proxyip=ts.hpc.tw
+- name: 🇺🇸 美国 1122
+  server: 172.67.220.32
+  alpn:
+  - http%2F1.1
+  network: ws
+  password: ffcf7ec1-3e09-4821-b3d9-b426a107b73b
+  port: 443
+  sni: eEEfGty6.999836.XYz
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: eEEfGty6.999836.XYz
+    path: /XmTzATQPJv9RO3xr1D40NK
 - name: 🇺🇸 美国 1118
   server: 104.21.66.86
   alpn:
@@ -439,32 +480,6 @@ proxies:
     headers:
       Host: 6666YHjU.777159.xYz
     path: /dilyfCPEmLvYr5hYXD
-- name: 🇭🇰 香港 21
-  server: 8.217.201.140
-  network: ws
-  password: Aimer
-  port: 443
-  skip-cert-verify: true
-  sni: epga.aimercc.dpdns.org
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: epga.aimercc.dpdns.org
-    path: /?ed=2560&proxyip=ts.hpc.tw
-- name: 🇺🇸 美国 0022
-  server: 103.160.204.1
-  network: ws
-  password: d6b8011a-c725-435a-9fec-bf6d3530392c
-  port: 443
-  skip-cert-verify: true
-  sni: vle.amclubsvip.dpdns.org
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: vle.amclubsvip.dpdns.org
-    path: /?ed=2560&PROT_TYPE=trojan&NAT64=true
 - name: 🇺🇸 美国 761
   server: 172.67.150.132
   alpn:
@@ -480,31 +495,6 @@ proxies:
     headers:
       Host: lllKJHGF.444682.Xyz
     path: /8y30nl6G2U0xOiraYkzOdf
-- name: 美国 080
-  server: 104.21.63.135
-  network: ws
-  password: fa050497-fc2a-45ee-89c0-96670c4ecb65
-  port: 443
-  sni: Rrr4.8906004.xYZ
-  type: trojan
-  ws-opts:
-    headers:
-      Host: Rrr4.8906004.xYZ
-    path: /DZxb5QZyWgQPuXTwt
-- name: 🇺🇸 美国 0001
-  server: 104.21.3.189
-  alpn:
-  - http%2F1.1
-  network: ws
-  password: 509ed9b7-8d64-4204-8ec8-6b749020ac3f
-  port: 443
-  sni: CcCVfGTyU.89060004.Xyz
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: CcCVfGTyU.89060004.Xyz
-    path: /5MkU0nARgHwk3aXBStn7
 - name: 🇺🇸 美国 497
   server: 172.67.165.122
   alterId: 0
@@ -519,18 +509,20 @@ proxies:
     headers:
       Host: pppploiu.4444936.xyz
     path: /SHToRcqfiraYkzOdf
-- name: 🇺🇸 美国 338
-  server: 172.67.185.107
+- name: 🇺🇸 美国 0001
+  server: 104.21.3.189
+  alpn:
+  - http%2F1.1
   network: ws
-  password: 13e26f64-2e0c-4461-92cd-d83294cc18f0
+  password: 509ed9b7-8d64-4204-8ec8-6b749020ac3f
   port: 443
-  sni: WwwDe.00890604.XyZ
+  sni: CcCVfGTyU.89060004.Xyz
   type: trojan
   udp: true
   ws-opts:
     headers:
-      Host: WwwDe.00890604.XyZ
-    path: /TDUxZUop9k44oPiit2OdWk0KwirdY
+      Host: CcCVfGTyU.89060004.Xyz
+    path: /5MkU0nARgHwk3aXBStn7
 - name: 🇺🇸 美国 446
   server: 104.21.42.93
   network: ws
@@ -544,19 +536,43 @@ proxies:
     headers:
       Host: uuuUuuUuJ.999864.Xyz
     path: /CNLtVWdiKPpIlRig3qizHXb
-- name: '🇺🇸_美国_13 #2'
-  server: 172.67.170.147
-  alterId: '0'
-  cipher: auto
+- name: 🇺🇸 美国 645
+  server: 172.67.216.240
+  alpn:
+  - http%2F1.1
   network: ws
+  password: cf8c791e-9d0b-4e90-aaf6-41ac62468416
   port: 443
-  tls: true
-  type: vmess
-  uuid: ffcf7ec1-3e09-4821-b3d9-b426a107b73b
+  sni: ggGGGgggGGH.857856.xYZ
+  type: trojan
+  udp: true
   ws-opts:
     headers:
-      host: xcvfgt6.999854.xyz
-    path: /4Bp70NdrJV3xr1D40NK
+      Host: ggGGGgggGGH.857856.xYZ
+    path: /XkJmZCwVxJO8180gomOew3d
+- name: 美国 080
+  server: 104.21.63.135
+  network: ws
+  password: fa050497-fc2a-45ee-89c0-96670c4ecb65
+  port: 443
+  sni: Rrr4.8906004.xYZ
+  type: trojan
+  ws-opts:
+    headers:
+      Host: Rrr4.8906004.xYZ
+    path: /DZxb5QZyWgQPuXTwt
+- name: 🇺🇸 美国 338
+  server: 172.67.185.107
+  network: ws
+  password: 13e26f64-2e0c-4461-92cd-d83294cc18f0
+  port: 443
+  sni: WwwDe.00890604.XyZ
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: WwwDe.00890604.XyZ
+    path: /TDUxZUop9k44oPiit2OdWk0KwirdY
 - name: '🇺🇸 美国 136 #2'
   server: 104.21.24.195
   network: ws
@@ -570,35 +586,19 @@ proxies:
     headers:
       Host: RFgTHYu7.999836.Xyz
     path: /mFvK3LJyIAe8ydvnmRKWDa8
-- name: 🇺🇸 美国 632
-  server: 172.67.220.32
-  alpn:
-  - http%2F1.1
+- name: '🇺🇸_美国_13 #2'
+  server: 172.67.170.147
+  alterId: '0'
+  cipher: auto
   network: ws
-  password: ffcf7ec1-3e09-4821-b3d9-b426a107b73b
   port: 443
-  sni: eEEfGty6.999836.XYz
-  type: trojan
-  udp: true
+  tls: true
+  type: vmess
+  uuid: ffcf7ec1-3e09-4821-b3d9-b426a107b73b
   ws-opts:
     headers:
-      Host: eEEfGty6.999836.XYz
-    path: /XmTzATQPJv9RO3xr1D40NK
-- name: '🇺🇸 美国 270 #2 #2'
-  server: 172.67.135.37
-  alpn:
-  - http%2F1.1
-  network: ws
-  password: cf8c791e-9d0b-4e90-aaf6-41ac62468416
-  port: 443
-  skip-cert-verify: true
-  sni: EeEeeD.459.pp.uA
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: EeEeeD.459.pp.uA
-    path: /XkJmZCwVxJO8180gomOew3d
+      host: xcvfgt6.999854.xyz
+    path: /4Bp70NdrJV3xr1D40NK
 - name: 🇺🇸 美国 686
   server: 104.21.22.159
   alpn:
@@ -613,13 +613,15 @@ proxies:
     headers:
       Host: q12.11890604.xyz
     path: /CLtmyjAuOFZsWSituzXyJ5XNeH1R1
-- name: 美国 060
-  server: 20.235.105.146
+- name: 🇸🇬 新加坡-Singapore (11a40a)
+  server: 139.180.154.158
   network: ws
   password: ttfang
   port: 443
+  skip-cert-verify: true
   sni: ttfang.fange.me
   type: trojan
+  udp: true
   ws-opts:
     headers:
       Host: ttfang.fange.me
