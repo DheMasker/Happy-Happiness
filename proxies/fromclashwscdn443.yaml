@@ -1,5 +1,5 @@
 proxies:
-- name: 3799b5fc8666401b8ea107aecdda7bf2_@_@Hope_Net-join-us-on-Telegram
+- name: 5e685df8ee2a4d5383cb1d088a0eba90_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: 230bbee47cd6426192f27d79f7b8e325_@_🅼🅴🅷🅳🅸
+- name: 1ddb72d4da8541a7a91c0141386979bf_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -33,7 +33,7 @@ proxies:
     headers:
       host: 920f9840-4d0f-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat
     path: /920f9840-4d0f-11f0-a948-6a75f667b472?ed=2048
-- name: 2|🌀4-TH |  2.6MB/s|55%|Netflix|O...
+- name: 1|🌀4-TH |  2.6MB/s|55%|Netflix|O...
   server: 38.47.96.30
   alterId: 0
   cipher: auto
@@ -343,21 +343,22 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-172.67.75.172-0967 | 34.306MB
-  server: ip.sb
+- name: 🇺🇸US-209.141.52.4-5285 | 45.17MB
+  server: test13.huvicloud.com
   port: 443
   type: vmess
-  uuid: 28548ef7-983d-4ee8-8bd6-7d71d905b5a2
+  uuid: b7087817-b967-474a-8e38-027e7c92a980
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: false
+  servername: 🇺🇸US-209.141.52.4-5285 | 45.17MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: fr.atlen.dpdns.org
-- name: RELAY-172.66.168.227-0691 | 11.038MB
+      Host: test13.huvicloud.com
+- name: RELAY-172.66.168.227-0659 | 38.887MB
   server: cloudgetservice.mcloudservice.site
   port: 443
   type: vmess
@@ -371,8 +372,51 @@ proxies:
     path: /
     headers:
       Host: Fra-Vp-123.BLaZECLOUD.Site
-- name: '[102ms] 🇳🇱 荷兰 121 #2'
-  server: 104.21.61.73
+- name: RELAY-104.26.13.31-0944 | 31.069MB
+  server: ip.sb
+  port: 443
+  type: vmess
+  uuid: 28548ef7-983d-4ee8-8bd6-7d71d905b5a2
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: fr.atlen.dpdns.org
+- name: RELAY-104.18.149.76-0586 | 3.715MB
+  server: 104.18.149.76
+  port: 443
+  type: vmess
+  uuid: de94cc0a-0592-4969-b1fc-97ea8f0ea0b3
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: RELAY-104.18.149.76-0586 | 3.715MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: us.kkp.me.eu.org
+- name: 🇭🇰HK-43.132.187.115-5217 | 3.206MB
+  server: tx.lonxin.net
+  port: 443
+  type: vmess
+  uuid: 29eb7d31-7117-4df2-b96d-2e91c21c5157
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: tx.lonxin.net
+- name: '[73ms] 🇳🇱 荷兰 085'
+  server: 172.67.207.57
   network: ws
   password: yaml777
   port: 443
@@ -384,9 +428,8 @@ proxies:
     headers:
       Host: yaml7.ggff.net
     path: /
-- name: '[166ms] 美国 - 聖荷西 - Cloudflare, Inc. - 22'
-  server: 156.238.19.8
-  delay: 1227
+- name: '[166ms] 🇳🇱 荷兰 047'
+  server: 104.17.206.71
   network: ws
   password: d6b8011a-c725-435a-9fec-bf6d3530392c
   port: 443
@@ -398,7 +441,19 @@ proxies:
     headers:
       Host: vle.amclubsvip.dpdns.org
     path: /?ed=2560&PROT_TYPE=trojan&NAT64=true
-- name: '[301ms] 美国 - 圣路易斯 - Nubes, LLC - 4'
+- name: '[201ms] 🇳🇱 荷兰 283'
+  server: 104.16.83.8
+  network: ws
+  password: Ng35283528
+  port: 443
+  sni: c2.validbv3528.eu.org
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: c2.validbv3528.eu.org
+    path: /
+- name: '[293ms] 美国 - 圣路易斯 - Nubes, LLC - 4'
   server: 154.53.40.110
   alterId: 0
   cipher: auto
@@ -418,21 +473,7 @@ proxies:
     headers:
       HOST: vall.codefyinc.com
     path: /vmessws
-- name: '[330ms] 🇺🇸 美国 206'
-  server: 104.21.3.189
-  alpn:
-  - http%2F1.1
-  network: ws
-  password: 509ed9b7-8d64-4204-8ec8-6b749020ac3f
-  port: 443
-  sni: CcCVfGTyU.89060004.Xyz
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: CcCVfGTyU.89060004.Xyz
-    path: /5MkU0nARgHwk3aXBStn7
-- name: '[380ms] 美国 037'
+- name: '[378ms] 美国 037'
   server: 104.21.6.179
   network: ws
   password: 6757b7d6-fa32-4708-b5d1-30e3cf928b51
@@ -443,34 +484,23 @@ proxies:
     headers:
       Host: ZZzzzZZ.890601.XYZ
     path: /l96MZ8se5Kl2p8BiMhP42l
-- name: '[390ms] 🇳🇱 荷兰 283'
-  server: 104.16.83.8
+- name: '[386ms] 🇺🇸 美国 165'
+  server: 104.21.10.97
+  alterId: 0
+  cipher: auto
   network: ws
-  password: Ng35283528
   port: 443
-  sni: c2.validbv3528.eu.org
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: c2.validbv3528.eu.org
-    path: /
-- name: '[437ms] 🇺🇸 美国 190'
-  server: 172.67.135.37
-  alpn:
-  - http/1.1
-  network: ws
-  password: 07a3df8f-2a2c-42f8-ad92-65889d90f3bf
-  port: 443
+  servername: ooOllmki.222767.xyz
   skip-cert-verify: false
-  sni: rrrRrRRrT.459.pp.ua
-  type: trojan
+  tls: true
+  type: vmess
   udp: true
+  uuid: 20e89a95-cedf-4fe3-9421-517ce66be170
   ws-opts:
     headers:
-      Host: rrrRrRRrT.459.pp.ua
-    path: /znQImc22ijDwVOkZfoq
-- name: '[454ms] 🇺🇸 美国 1129'
+      Host: ooollmki.222767.xyz
+    path: /SHToRcqfiraYkzOdf
+- name: '[400ms] 🇺🇸 美国 296'
   server: 172.67.160.119
   alpn:
   - http%2F1.1
@@ -484,7 +514,7 @@ proxies:
     headers:
       Host: UUuUUuUj.999864.XYZ
     path: /CNLtVWdiKPpIlRig3qizHXb
-- name: '[457ms] 🇺🇸 美国 255'
+- name: '[413ms] 🇺🇸 美国 255'
   server: 104.21.80.1
   alpn:
   - http/1.1
@@ -499,23 +529,65 @@ proxies:
     headers:
       Host: vVbg.008880888.xyZ
     path: /8y30nl6G2U0xOiraYkzOdf
-- name: '[463ms] 🇺🇸 美国 271'
-  server: 104.21.16.1
-  alterId: 0
-  cipher: auto
+- name: '[551ms] 🇺🇸 美国 274'
+  server: 104.21.68.76
+  alpn:
+  - http%2F1.1
   network: ws
+  password: 2e65577e-8fdb-4bb1-a495-96f3122099a7
   port: 443
-  servername: VvBg.008880888.Xyz
-  skip-cert-verify: false
-  tls: true
-  type: vmess
+  sni: zzzZZZZz.222769.XYZ
+  type: trojan
   udp: true
-  uuid: 20e89a95-cedf-4fe3-9421-517ce66be170
   ws-opts:
     headers:
-      Host: vvbg.008880888.xyz
-    path: /SHToRcqfiraYkzOdf
-- name: '[519ms] 🇺🇸 美国 074'
+      Host: zzzZZZZz.222769.XYZ
+    path: /Ws1FkyQlT190JQOSZb9TPR
+- name: '[574ms] 🇺🇸 美国 190'
+  server: 172.67.135.37
+  alpn:
+  - http/1.1
+  network: ws
+  password: 07a3df8f-2a2c-42f8-ad92-65889d90f3bf
+  port: 443
+  skip-cert-verify: false
+  sni: rrrRrRRrT.459.pp.ua
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: rrrRrRRrT.459.pp.ua
+    path: /znQImc22ijDwVOkZfoq
+- name: '[593ms] 🇺🇸 美国 300'
+  server: 172.67.145.200
+  alpn:
+  - http%2F1.1
+  network: ws
+  password: fa050497-fc2a-45ee-89c0-96670c4ecb65
+  port: 443
+  sni: Rrr4.8906004.xYZ
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: Rrr4.8906004.xYZ
+    path: /DZxb5QZyWgQPuXTwt
+- name: '[613ms] 🇺🇸 美国 080'
+  server: 172.67.170.147
+  alpn:
+  - http%2F1.1
+  network: ws
+  password: ffcf7ec1-3e09-4821-b3d9-b426a107b73b
+  port: 443
+  skip-cert-verify: true
+  sni: xxcdfR.999854.xyz
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: xxcdfR.999854.xyz
+    path: /XmTzATQPJv9RO3xr1D40NK
+- name: '[856ms] 🇺🇸 美国 150'
   server: 104.21.88.226
   alpn:
   - http%2F1.1
@@ -530,62 +602,36 @@ proxies:
     headers:
       Host: qqqqqqqqqqa.www890604.dpdns.org
     path: /uzJNzgkkYWRWGxgFnoFPw1
-- name: '[556ms] 🇺🇸 美国 275'
-  server: 172.67.191.174
-  network: ws
-  password: 2e65577e-8fdb-4bb1-a495-96f3122099a7
-  port: 443
-  sni: zzzZZZZz.222769.XYZ
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: zzzZZZZz.222769.XYZ
-    path: /Ws1FkyQlT190JQOSZb9TPR
-- name: '[665ms] 🇺🇸 美国 300'
-  server: 172.67.145.200
+- name: '[1640ms] 🇺🇸 美国 280'
+  server: 104.21.14.54
   alpn:
   - http%2F1.1
   network: ws
-  password: fa050497-fc2a-45ee-89c0-96670c4ecb65
+  password: e4cbe8b8-37db-4aaa-8469-b84f34c51ebc
   port: 443
-  sni: Rrr4.8906004.xYZ
+  sni: 6666YHjU.777159.xYz
   type: trojan
   udp: true
   ws-opts:
     headers:
-      Host: Rrr4.8906004.xYZ
-    path: /DZxb5QZyWgQPuXTwt
-- name: '[1093ms] 美国 030'
-  server: 104.18.149.76
+      Host: 6666YHjU.777159.xYz
+    path: /dilyfCPEmLvYr5hYXD
+- name: xx|502a|puddincat07@Telegram
+  server: b62a948c-faa2-4e8a-bf8a-3ff3121c875a.asoul-ava.top
   alterId: 0
   cipher: auto
-  delay: 2889
+  h2-opts: {}
+  http-opts: {}
   network: ws
   port: 443
-  servername: us.kkp.me.eu.org
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: de94cc0a-0592-4969-b1fc-97ea8f0ea0b3
-  ws-opts:
-    headers:
-      Host: us.kkp.me.eu.org
-    path: /aa
-- name: PL_1
-  server: 104.17.148.22
-  port: 443
-  type: vmess
   uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: bitter-boat-6004.samineh-sfri-95.workers.dev
-  network: ws
   ws-opts:
-    path: /b62a948c-faa2-4e8a-bf8a-3ff3121c875a.asoul-ava.top/azumase.ren
     headers:
-      Host: bitter-boat-6004.samineh-sfri-95.workers.dev
+      Host: b62a948c-faa2-4e8a-bf8a-3ff3121c875a.asoul-ava.top
+    path: /azumase.ren
 - name: US_1
   server: 172.67.187.28
   port: 443
