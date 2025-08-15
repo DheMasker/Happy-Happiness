@@ -1,5 +1,5 @@
 proxies:
-- name: c60dda9719964bd49645501de9ba9ced_@_@Hope_Net-join-us-on-Telegram
+- name: 15613cb2ee5848d99994324eb1a15d1f_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: acd9fb1cd2144d5794ad0251372c8ca0_@_🅼🅴🅷🅳🅸
+- name: 01f75013434e46a2a97a8935c26c23d6_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -33,7 +33,7 @@ proxies:
     headers:
       host: 920f9840-4d0f-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat
     path: /920f9840-4d0f-11f0-a948-6a75f667b472?ed=2048
-- name: 12|🇺🇸 美国|@ripaojiedian
+- name: 11|🇺🇸 美国|@ripaojiedian
   server: 172.67.214.21
   network: ws
   password: 7248e825-887c-48b9-83bc-c26bc6392bf8
@@ -45,7 +45,7 @@ proxies:
     headers:
       Host: xXcdvFgt.191268.XYz
     path: /ctdmgeIg3NII3ibrzzKXJGy3S1
-- name: 14|AM_speednode_0011
+- name: 13|AM_speednode_0011
   server: 188.164.159.18
   network: ws
   password: Aimer
@@ -371,6 +371,31 @@ proxies:
     path: /
     headers:
       Host: v2ray.codefyinc.com
+- name: 🇩🇪 德国 49
+  server: 162.159.153.2
+  network: ws
+  password: bpb-trojan
+  port: 443
+  skip-cert-verify: false
+  sni: zamim340.ggff.net
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: zamim340.ggff.net
+    path: /tr
+- name: 🇺🇸 美国 191
+  server: 45.67.215.95
+  network: ws
+  password: tg-fq521free
+  port: 443
+  sni: torjan.xn--xhq44j.eu.org
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: torjan.xn--xhq44j.eu.org
+    path: /
 - name: 🇺🇸 美国 452
   server: 104.17.68.85
   network: ws
@@ -384,24 +409,6 @@ proxies:
     headers:
       Host: vle.amclubssss.dpdns.org
     path: /?ed=2560&PROT_TYPE=trojan&NAT64=true
-- name: 德国 - 德赖艾希 - Cloudflare, Inc. - 2
-  server: 162.159.153.2
-  client-fingerprint: chrome
-  delay: 2318
-  network: ws
-  password: bpb-trojan
-  port: 443
-  skip-cert-verify: false
-  sni: zamim340.ggff.net
-  type: trojan
-  udp: true
-  ws-opts:
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/68.0.3440.1805 Safari/537.36 MVisionPlayer/1.0.0.0
-    max-early-data: 2560
-    path: /tr
 - name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 14
   server: 104.21.16.1
   alpn:
@@ -433,18 +440,6 @@ proxies:
   ws-opts:
     headers:
       Host: c2.validbv3528.eu.org
-    path: /
-- name: 美国 - 聖荷西 - Cloudflare, Inc. - 17
-  server: 45.67.215.95
-  delay: 1595
-  network: ws
-  password: tg-fq521free
-  port: 443
-  sni: torjan.xn--xhq44j.eu.org
-  type: trojan
-  ws-opts:
-    headers:
-      Host: torjan.xn--xhq44j.eu.org
     path: /
 - name: 🇳🇱 荷兰 244
   server: 104.18.2.150
