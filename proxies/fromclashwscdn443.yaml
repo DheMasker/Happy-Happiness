@@ -1,5 +1,5 @@
 proxies:
-- name: 91d955b6a2874e999a825329656d76ca_@_@Hope_Net-join-us-on-Telegram
+- name: 8679b6d582a440df9277568f06660273_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: 1fd4e8e8654f4a2985a899c8cc9bb2c4_@_🅼🅴🅷🅳🅸
+- name: 9b053fc0721748c19a1cc0b4e5cb5f33_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -328,7 +328,21 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-172.66.168.231-0605 | 35.543MB
+- name: RELAY-104.17.148.22-0733 | 36.075MB
+  server: www.speedtest.net
+  port: 443
+  type: vmess
+  uuid: b7acf44f-3c3a-430c-8ed0-fb64ccc9a13a
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: BLaZE-fRA-64.BLaZECLOuD.sitE
+- name: RELAY-104.16.228.91-0994 | 29.69MB
   server: cloudgetservice.mcloudservice.site
   port: 443
   type: vmess
@@ -342,7 +356,51 @@ proxies:
     path: /
     headers:
       Host: Fra-Vp-123.BLaZECLOUD.Site
-- name: RELAY-104.17.147.22-0711 | 13.478MB
+- name: 🇺🇸US-209.126.84.189-5198 | 29.554MB
+  server: v2ray.codefyinc.com
+  port: 443
+  type: vmess
+  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  servername: 🇺🇸US-209.126.84.189-5198 | 29.554MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: v2ray.codefyinc.com
+- name: 🇸🇬SG-202.79.161.188-0996 | 21.667MB
+  server: 202.79.161.188
+  port: 443
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 64
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: www.32278117.xyz
+- name: RELAY-172.67.138.69-7073 | 0.164MB
+  server: 172.67.138.69
+  port: 443
+  type: vmess
+  uuid: 62aa5f80-0328-4004-a375-7f5a59df4022
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: RELAY-172.67.138.69-7073 | 0.164MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: hms19.best-tizi.top
+- name: RELAY-104.17.148.22-0215 | 0.128MB
   server: www.speedtest.net
   port: 443
   type: vmess
@@ -356,23 +414,38 @@ proxies:
     path: /
     headers:
       Host: blaze-cana-126.blazeservers1.site
-- name: 🇺🇸US-209.126.84.189-4921 | 7.841MB
-  server: v2ray.codefyinc.com
+- name: 🇸🇬SG-103.253.26.20-0154 | 0.121MB
+  server: 103.253.26.20
   port: 443
   type: vmess
-  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
-  alterId: 0
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  alterId: 4
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: false
-  servername: 🇺🇸US-209.126.84.189-4921 | 7.841MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: v2ray.codefyinc.com
-- name: 🇩🇪 德国 49
-  server: 162.159.153.2
+      Host: zecjk.com
+- name: 🇦🇺AU-103.224.212.215-0148 | 0.063MB
+  server: vjp3.0bad.com
+  port: 443
+  type: vmess
+  uuid: 927094d3-d678-4763-8591-e240d0bcae87
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vjp3.0bad.com
+- name: 德国 - 德赖艾希 - Cloudflare, Inc. - 33
+  server: 172.67.70.92
+  client-fingerprint: chrome
+  delay: 1234
   network: ws
   password: bpb-trojan
   port: 443
@@ -381,23 +454,44 @@ proxies:
   type: trojan
   udp: true
   ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
     headers:
-      Host: zamim340.ggff.net
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/53.0.2785.143 Safari/537.36
+    max-early-data: 2560
     path: /tr
-- name: 🇺🇸 美国 191
-  server: 45.67.215.95
+- name: 美国 - 聖荷西 - Cloudflare, Inc. - 92
+  server: 194.76.18.129
+  client-fingerprint: chrome
+  delay: 1542
   network: ws
   password: tg-fq521free
   port: 443
+  skip-cert-verify: false
   sni: torjan.xn--xhq44j.eu.org
   type: trojan
   udp: true
   ws-opts:
     headers:
-      Host: torjan.xn--xhq44j.eu.org
+      User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko)
+        Chrome/55.0.2883.87 Safari/537.36
     path: /
-- name: 🇺🇸 美国 452
-  server: 104.17.68.85
+- name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 7
+  server: 172.67.156.25
+  delay: 1415
+  network: ws
+  password: f282b878-8711-45a1-8c69-5564172123c1
+  port: 443
+  skip-cert-verify: false
+  sni: aio.zipzap.biz.id
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: aio.zipzap.biz.id
+    path: /aioproxybot/129.150.49.58-18650
+- name: 🇺🇸 美国 471
+  server: 104.17.71.31
   network: ws
   password: d6b8011a-c725-435a-9fec-bf6d3530392c
   port: 443
@@ -466,19 +560,6 @@ proxies:
     headers:
       Host: yaml7.ggff.net
     path: /
-- name: 🇳🇱 荷兰 131
-  server: 172.67.156.25
-  network: ws
-  password: f282b878-8711-45a1-8c69-5564172123c1
-  port: 443
-  skip-cert-verify: false
-  sni: aio.zipzap.biz.id
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: aio.zipzap.biz.id
-    path: /aioproxybot/129.150.49.58-18650
 - name: 印度 - Santa Cruz - Cloudflare, Inc. - 1
   server: 20.235.105.146
   delay: 1187
@@ -491,21 +572,6 @@ proxies:
     headers:
       Host: ttfang.fange.me
     path: /
-- name: sg|6ba9|puddincat07@Telegram
-  server: 202.79.161.188
-  alterId: 64
-  cipher: auto
-  client-fingerprint: chrome
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    headers:
-      host: www.32278117.xyz
-    path: /path/170733132233
 - name: DE_1
   server: 185.146.173.158
   port: 443
