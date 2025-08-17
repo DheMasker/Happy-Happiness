@@ -1,5 +1,5 @@
 proxies:
-- name: 02f9fe92fc024c9daa146945e47b10a5_@_@Hope_Net-join-us-on-Telegram
+- name: d46d94b95dac4263a503a152669ad10a_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: afb28e2e6b8d43d99ac61e08a7f4b12b_@_🅼🅴🅷🅳🅸
+- name: 7439681c51484cc09342689031d01d3b_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -417,6 +417,47 @@ proxies:
         Gecko) Chrome/53.0.2785.143 Safari/537.36
     max-early-data: 2560
     path: /tr
+- name: 🇺🇸 美国 0251
+  server: 104.18.2.150
+  network: ws
+  password: slch2024
+  port: 443
+  skip-cert-verify: true
+  sni: ocost-dy.wmlefl.cc
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: ocost-dy.wmlefl.cc
+    path: /
+- name: 🇩🇪 德国 60
+  server: 162.159.133.85
+  network: ws
+  password: d6b8011a-c725-435a-9fec-bf6d3530392c
+  port: 443
+  skip-cert-verify: true
+  sni: vle.amclubsvip.dpdns.org
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: vle.amclubsvip.dpdns.org
+    path: /?ed=2560&PROT_TYPE=trojan&NAT64=true
+- name: 🇳🇱 荷兰 24
+  server: 172.67.171.131
+  alpn:
+  - http%2F1.1
+  network: ws
+  password: 13253e6e-a1f7-4090-801f-a8dc2b083bef
+  port: 443
+  skip-cert-verify: true
+  sni: InvIncIbLe.fAFa20.sHop
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: InvIncIbLe.fAFa20.sHop
+    path: /trvd3MIkUap8awiOAm/c2hpcmVuLnlhZW1pa28uZ2dmZi5uZXQ=?ed=2560
 - name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 7
   server: 172.67.156.25
   delay: 1415
@@ -431,19 +472,6 @@ proxies:
     headers:
       Host: aio.zipzap.biz.id
     path: /aioproxybot/129.150.49.58-18650
-- name: 🇺🇸 美国 580
-  server: 104.17.142.12
-  network: ws
-  password: d6b8011a-c725-435a-9fec-bf6d3530392c
-  port: 443
-  skip-cert-verify: true
-  sni: vle.amclubssss.dpdns.org
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: vle.amclubssss.dpdns.org
-    path: /?ed=2560&PROT_TYPE=trojan&NAT64=true
 - name: 🇳🇱 荷兰 20
   server: 172.67.207.57
   network: ws
@@ -489,18 +517,6 @@ proxies:
         like Gecko) Chrome/66.0.3359.117 Safari/537.36
     max-early-data: 2560
     path: /tr2mBr1NNWmU5CEViR/NDQuMjI0LjI0LjkxLDE4LjE4My4xNTguMjEx
-- name: 🇳🇱 荷兰 244
-  server: 104.18.2.150
-  network: ws
-  password: slch2024
-  port: 443
-  sni: ocost-dy.wmlefl.cc
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: ocost-dy.wmlefl.cc
-    path: /
 - name: 印度 - Santa Cruz - Cloudflare, Inc. - 1
   server: 20.235.105.146
   delay: 1187
