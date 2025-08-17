@@ -1,5 +1,5 @@
 proxies:
-- name: 1bc09f9eca334c58a14eb8f50c323f52_@_@Hope_Net-join-us-on-Telegram
+- name: a66a0b7d255544c79755ac2bcf5f90ae_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: bf9a0e7d734948d78eec82770fe7177d_@_🅼🅴🅷🅳🅸
+- name: 16a1670cc4db4fc39aef82d393e3475b_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -341,50 +341,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-205.185.126.186-0998 | 52.233MB
-  server: hicai5u.huvicloud.com
-  port: 443
-  type: vmess
-  uuid: bd33cc6a-5a55-4ae9-8a3a-7960138467c5
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: hicai5u.huvicloud.com
-- name: RELAY-104.17.148.22-1080 | 14.368MB
-  server: www.speedtest.net
-  port: 443
-  type: vmess
-  uuid: b7acf44f-3c3a-430c-8ed0-fb64ccc9a13a
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: BLaZE-fRA-64.BLaZECLOuD.sitE
-- name: 🇺🇸US-209.126.84.189-5220 | 10.767MB
-  server: v2ray.codefyinc.com
-  port: 443
-  type: vmess
-  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  servername: 🇺🇸US-209.126.84.189-5220 | 10.767MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: v2ray.codefyinc.com
-- name: RELAY-104.17.148.22-0733 | 9.994MB
+- name: RELAY-104.17.148.22-1227 | 33.584MB
   server: www.speedtest.net
   port: 443
   type: vmess
@@ -398,11 +355,41 @@ proxies:
     path: /
     headers:
       Host: blaze-cana-126.blazeservers1.site
-- name: RELAY-172.66.168.229-0725 | 9.916MB
-  server: cloudgetservice.mcloudservice.site
+- name: 🇺🇸US-209.126.84.189-5394 | 22.94MB
+  server: v2ray.codefyinc.com
   port: 443
   type: vmess
-  uuid: 37f464cb-b826-4278-9bf8-11bdf1ec892b
+  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  servername: 🇺🇸US-209.126.84.189-5394 | 22.94MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: v2ray.codefyinc.com
+- name: 🇺🇸US-77.83.141.171-5389 | 18.657MB
+  server: vc.fly.dev
+  port: 443
+  type: vmess
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇺🇸US-77.83.141.171-5389 | 18.657MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vc.fly.dev
+- name: RELAY-104.18.156.119-0839 | 0.889MB
+  server: api.jquery.com
+  port: 443
+  type: vmess
+  uuid: de94cc0a-0592-4969-b1fc-97ea8f0ea0b3
   alterId: 0
   cipher: auto
   tls: true
@@ -411,25 +398,33 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: Fra-Vp-123.BLaZECLOUD.Site
-- name: 德国 - 德赖艾希 - Cloudflare, Inc. - 33
-  server: 172.67.70.92
-  client-fingerprint: chrome
-  delay: 1234
+      Host: admin.kasrax.ir
+- name: 🇩🇪 德国 74
+  server: 104.26.4.60
   network: ws
   password: bpb-trojan
   port: 443
-  skip-cert-verify: false
+  skip-cert-verify: true
   sni: zamim340.ggff.net
   type: trojan
   udp: true
   ws-opts:
-    early-data-header-name: Sec-WebSocket-Protocol
     headers:
-      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/53.0.2785.143 Safari/537.36
-    max-early-data: 2560
-    path: /tr
+      Host: zamim340.ggff.net
+    path: /tr?ed=2560
+- name: 🇺🇸 美国 580
+  server: 104.17.142.12
+  network: ws
+  password: d6b8011a-c725-435a-9fec-bf6d3530392c
+  port: 443
+  skip-cert-verify: true
+  sni: vle.amclubssss.dpdns.org
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: vle.amclubssss.dpdns.org
+    path: /?ed=2560&PROT_TYPE=trojan&NAT64=true
 - name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 7
   server: 172.67.156.25
   delay: 1415
@@ -457,19 +452,6 @@ proxies:
     headers:
       Host: yaml7.ggff.net
     path: /
-- name: 🇩🇪 德国 67
-  server: 162.159.133.85
-  network: ws
-  password: d6b8011a-c725-435a-9fec-bf6d3530392c
-  port: 443
-  skip-cert-verify: true
-  sni: vle.amclubssss.dpdns.org
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: vle.amclubssss.dpdns.org
-    path: /?ed=2560&PROT_TYPE=trojan&NAT64=true
 - name: 🇺🇸 美国 183
   server: 104.16.83.8
   network: ws
