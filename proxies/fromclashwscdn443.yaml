@@ -1,5 +1,5 @@
 proxies:
-- name: 5678ead60d1b4343b614dd6732e591c4_@_@Hope_Net-join-us-on-Telegram
+- name: 1bb4cfea1f094184a084ab497092e446_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: 54ac517b5e5a4f5084f0a09099037b55_@_🅼🅴🅷🅳🅸
+- name: d2107fa0506648d894bc744d7ea041ab_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -427,6 +427,47 @@ proxies:
     path: /
     headers:
       Host: vjp3.0bad.com
+- name: 🇺🇸 美国 0834
+  server: 198.62.62.156
+  network: ws
+  password: d6b8011a-c725-435a-9fec-bf6d3530392c
+  port: 443
+  skip-cert-verify: true
+  sni: vle.amclubsvip.dpdns.org
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: vle.amclubsvip.dpdns.org
+    path: /?ed=2560&PROT_TYPE=trojan&NAT64=true
+- name: 🇳🇱 荷兰 40
+  server: 172.67.175.148
+  alpn:
+  - http%2F1.1
+  network: ws
+  password: 13253e6e-a1f7-4090-801f-a8dc2b083bef
+  port: 443
+  skip-cert-verify: true
+  sni: inviNcIble.fafa20.ShOp
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: inviNcIble.fafa20.ShOp
+    path: /tr7PXHQRn4VPwGA2zY/c2hpcmVuLnlhZW1pa28uZ2dmZi5uZXQ=?ed=2560
+- name: 🇳🇱 荷兰 44
+  server: 172.67.156.25
+  network: ws
+  password: f282b878-8711-45a1-8c69-5564172123c1
+  port: 443
+  skip-cert-verify: false
+  sni: aio.zipzap.biz.id
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: aio.zipzap.biz.id
+    path: /aioproxybot/129.150.49.58-18650
 - name: 德国 - 德赖艾希 - Cloudflare, Inc. - 33
   server: 172.67.70.92
   client-fingerprint: chrome
@@ -445,33 +486,6 @@ proxies:
         Gecko) Chrome/53.0.2785.143 Safari/537.36
     max-early-data: 2560
     path: /tr
-- name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 7
-  server: 172.67.156.25
-  delay: 1415
-  network: ws
-  password: f282b878-8711-45a1-8c69-5564172123c1
-  port: 443
-  skip-cert-verify: false
-  sni: aio.zipzap.biz.id
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: aio.zipzap.biz.id
-    path: /aioproxybot/129.150.49.58-18650
-- name: 🇺🇸 美国 579
-  server: 104.17.142.12
-  network: ws
-  password: d6b8011a-c725-435a-9fec-bf6d3530392c
-  port: 443
-  skip-cert-verify: true
-  sni: vle.amclubssss.dpdns.org
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: vle.amclubssss.dpdns.org
-    path: /?ed=2560&PROT_TYPE=trojan&NAT64=true
 - name: 🇺🇸 美国 0251
   server: 104.18.2.150
   network: ws
@@ -511,21 +525,6 @@ proxies:
     headers:
       Host: yaml7.ggff.net
     path: /
-- name: 🇳🇱 荷兰 24
-  server: 172.67.171.131
-  alpn:
-  - http%2F1.1
-  network: ws
-  password: 13253e6e-a1f7-4090-801f-a8dc2b083bef
-  port: 443
-  skip-cert-verify: true
-  sni: InvIncIbLe.fAFa20.sHop
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: InvIncIbLe.fAFa20.sHop
-    path: /trvd3MIkUap8awiOAm/c2hpcmVuLnlhZW1pa28uZ2dmZi5uZXQ=?ed=2560
 - name: 🇸🇬 新加坡 17
   server: 128.199.237.143
   network: ws
