@@ -1,5 +1,5 @@
 proxies:
-- name: 90af9be64e8b4f3e92d82b0c4b9c819d_@_@Hope_Net-join-us-on-Telegram
+- name: 6659ea211a5a4db3951c398e9ed12b6a_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: 74c797f85a10435bb429a248005a250d_@_🅼🅴🅷🅳🅸
+- name: 93d49aad2e934deb97b07577dc04728a_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -373,26 +373,21 @@ proxies:
     path: /
     headers:
       Host: test13.huvicloud.com
-- name: 德国 - 德赖艾希 - Cloudflare, Inc. - 33
-  server: 172.67.70.92
-  client-fingerprint: chrome
-  delay: 1234
+- name: 🇩🇪 德国 55
+  server: 162.159.153.2
   network: ws
   password: bpb-trojan
   port: 443
-  skip-cert-verify: false
+  skip-cert-verify: true
   sni: zamim340.ggff.net
   type: trojan
   udp: true
   ws-opts:
-    early-data-header-name: Sec-WebSocket-Protocol
     headers:
-      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/53.0.2785.143 Safari/537.36
-    max-early-data: 2560
-    path: /tr
-- name: 🇺🇸 美国 588
-  server: 198.62.62.156
+      Host: zamim340.ggff.net
+    path: /tr?ed=2560
+- name: 🇺🇸 美国 609
+  server: 104.17.206.71
   network: ws
   password: d6b8011a-c725-435a-9fec-bf6d3530392c
   port: 443
@@ -404,9 +399,8 @@ proxies:
     headers:
       Host: vle.amclubssss.dpdns.org
     path: /?ed=2560&PROT_TYPE=trojan&NAT64=true
-- name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 7
+- name: 🇳🇱 荷兰 37
   server: 172.67.156.25
-  delay: 1415
   network: ws
   password: f282b878-8711-45a1-8c69-5564172123c1
   port: 443
@@ -418,6 +412,51 @@ proxies:
     headers:
       Host: aio.zipzap.biz.id
     path: /aioproxybot/129.150.49.58-18650
+- name: 美国 - 聖荷西 - Cloudflare, Inc. - 502
+  server: 104.16.83.8
+  client-fingerprint: chrome
+  delay: 1400
+  network: ws
+  password: Ng35283528
+  port: 443
+  skip-cert-verify: false
+  sni: c2.validbv3528.eu.org
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/54.0.2840.99 Safari/537.36
+    path: /
+- name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 32
+  server: 172.67.207.57
+  client-fingerprint: chrome
+  delay: 1958
+  network: ws
+  password: yaml777
+  port: 443
+  skip-cert-verify: true
+  sni: yaml7.ggff.net
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/61.0.3163.79 Safari/537.36
+    path: /
+- name: 🇺🇸 美国 0251
+  server: 104.18.2.150
+  network: ws
+  password: slch2024
+  port: 443
+  skip-cert-verify: true
+  sni: ocost-dy.wmlefl.cc
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: ocost-dy.wmlefl.cc
+    path: /
 - name: 🇳🇱 荷兰 40
   server: 172.67.175.148
   alpn:
@@ -433,58 +472,6 @@ proxies:
     headers:
       Host: inviNcIble.fafa20.ShOp
     path: /tr7PXHQRn4VPwGA2zY/c2hpcmVuLnlhZW1pa28uZ2dmZi5uZXQ=?ed=2560
-- name: 🇺🇸 美国 0251
-  server: 104.18.2.150
-  network: ws
-  password: slch2024
-  port: 443
-  skip-cert-verify: true
-  sni: ocost-dy.wmlefl.cc
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: ocost-dy.wmlefl.cc
-    path: /
-- name: 🇺🇸 美国 039
-  server: 104.16.83.43
-  network: ws
-  password: Ng35283528
-  port: 443
-  skip-cert-verify: true
-  sni: c2.validbv3528.eu.org
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: c2.validbv3528.eu.org
-    path: /?ed=2560
-- name: 🇳🇱 荷兰 20
-  server: 172.67.207.57
-  network: ws
-  password: yaml777
-  port: 443
-  skip-cert-verify: true
-  sni: yaml7.ggff.net
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: yaml7.ggff.net
-    path: /
-- name: 🇸🇬 新加坡 17
-  server: 128.199.237.143
-  network: ws
-  password: ttfang
-  port: 443
-  skip-cert-verify: true
-  sni: ttfang.fange.me
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: ttfang.fange.me
-    path: /
 - name: DE_1
   server: 185.146.173.158
   port: 443
