@@ -1,5 +1,5 @@
 proxies:
-- name: 26ee19cef1b3444ab22bdfeaf91e308f_@_@Hope_Net-join-us-on-Telegram
+- name: 90af9be64e8b4f3e92d82b0c4b9c819d_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: 9227dbbd85d0409c8f463c87ab8f162d_@_🅼🅴🅷🅳🅸
+- name: 74c797f85a10435bb429a248005a250d_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -33,7 +33,7 @@ proxies:
     headers:
       host: 920f9840-4d0f-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat
     path: /920f9840-4d0f-11f0-a948-6a75f667b472?ed=2048
-- name: 13|KZ_speednode_0081
+- name: 14|KZ_speednode_0081
   server: 194.76.18.129
   network: ws
   password: tg-fq521free
@@ -316,7 +316,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-209.126.84.189-5141 | 28.084MB
+- name: 🇺🇸US-209.126.84.189-5141 | 2.721MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -325,12 +325,54 @@ proxies:
   cipher: auto
   tls: false
   skip-cert-verify: false
-  servername: 🇺🇸US-209.126.84.189-5141 | 28.084MB
+  servername: 🇺🇸US-209.126.84.189-5141 | 2.721MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: v2ray.codefyinc.com
+- name: 🇦🇺AU-103.224.212.215-0202 | 0.0MB
+  server: vjp1.0bad.com
+  port: 443
+  type: vmess
+  uuid: 927094d3-d678-4763-8591-e240d0bcae87
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vjp1.0bad.com
+- name: 🇸🇬SG-103.253.26.134-0204 | 0.0MB
+  server: 103.253.26.134
+  port: 443
+  type: vmess
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  alterId: 4
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: eeh7iewe.com
+- name: RELAY-104.21.41.4-0224 | 0.0MB
+  server: test13.huvicloud.com
+  port: 443
+  type: vmess
+  uuid: b7087817-b967-474a-8e38-027e7c92a980
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: test13.huvicloud.com
 - name: 德国 - 德赖艾希 - Cloudflare, Inc. - 33
   server: 172.67.70.92
   client-fingerprint: chrome
@@ -349,6 +391,19 @@ proxies:
         Gecko) Chrome/53.0.2785.143 Safari/537.36
     max-early-data: 2560
     path: /tr
+- name: 🇺🇸 美国 588
+  server: 198.62.62.156
+  network: ws
+  password: d6b8011a-c725-435a-9fec-bf6d3530392c
+  port: 443
+  skip-cert-verify: true
+  sni: vle.amclubssss.dpdns.org
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: vle.amclubssss.dpdns.org
+    path: /?ed=2560&PROT_TYPE=trojan&NAT64=true
 - name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 7
   server: 172.67.156.25
   delay: 1415
@@ -378,19 +433,6 @@ proxies:
     headers:
       Host: inviNcIble.fafa20.ShOp
     path: /tr7PXHQRn4VPwGA2zY/c2hpcmVuLnlhZW1pa28uZ2dmZi5uZXQ=?ed=2560
-- name: 🇺🇸 美国 0834
-  server: 198.62.62.156
-  network: ws
-  password: d6b8011a-c725-435a-9fec-bf6d3530392c
-  port: 443
-  skip-cert-verify: true
-  sni: vle.amclubsvip.dpdns.org
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: vle.amclubsvip.dpdns.org
-    path: /?ed=2560&PROT_TYPE=trojan&NAT64=true
 - name: 🇺🇸 美国 0251
   server: 104.18.2.150
   network: ws
