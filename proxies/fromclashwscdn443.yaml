@@ -1,5 +1,5 @@
 proxies:
-- name: fa54bfdbc21844d695cd38af44cd3051_@_@Hope_Net-join-us-on-Telegram
+- name: b594e8cf92b14c678bdfc77e61f692a7_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: f5b81095989045fab107d0ef122aa89b_@_🅼🅴🅷🅳🅸
+- name: 9d459064b8514e4282ed63c16ec9e276_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -316,7 +316,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-209.126.84.189-5077 | 25.845MB
+- name: 🇺🇸US-209.126.84.189-5077 | 7.418MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -325,13 +325,13 @@ proxies:
   cipher: auto
   tls: false
   skip-cert-verify: false
-  servername: 🇺🇸US-209.126.84.189-5077 | 25.845MB
+  servername: 🇺🇸US-209.126.84.189-5077 | 7.418MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: 🇺🇸US-77.83.141.171-5088 | 19.13MB
+- name: 🇺🇸US-77.83.141.171-5088 | 2.911MB
   server: vc.fly.dev
   port: 443
   type: vmess
@@ -340,13 +340,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇺🇸US-77.83.141.171-5088 | 19.13MB
+  servername: 🇺🇸US-77.83.141.171-5088 | 2.911MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: vc.fly.dev
-- name: RELAY-104.21.41.4-0729 | 18.797MB
+- name: RELAY-104.21.41.4-0729 | 2.815MB
   server: test13.huvicloud.com
   port: 443
   type: vmess
@@ -360,7 +360,7 @@ proxies:
     path: /
     headers:
       Host: test13.huvicloud.com
-- name: RELAY-205.233.181.3-1034 | 0.581MB
+- name: RELAY-205.233.181.3-1034 | 0.071MB
   server: 205.233.181.3
   port: 443
   type: vmess
@@ -392,6 +392,20 @@ proxies:
         Gecko) Chrome/36.0.1985.125 Safari/537.36
     max-early-data: 2560
     path: /tr
+- name: 美国 - 聖荷西 - Cloudflare, Inc. - 1372
+  server: 103.160.204.1
+  delay: 2108
+  network: ws
+  password: d6b8011a-c725-435a-9fec-bf6d3530392c
+  port: 443
+  skip-cert-verify: true
+  sni: vle.amclubssss.dpdns.org
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: vle.amclubssss.dpdns.org
+    path: /?ed=2560&PROT_TYPE=trojan&NAT64=true
 - name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 32
   server: 172.67.207.57
   client-fingerprint: chrome
@@ -408,20 +422,6 @@ proxies:
       User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
         like Gecko) Chrome/61.0.3163.79 Safari/537.36
     path: /
-- name: 美国 - 聖荷西 - Cloudflare, Inc. - 1372
-  server: 103.160.204.1
-  delay: 2108
-  network: ws
-  password: d6b8011a-c725-435a-9fec-bf6d3530392c
-  port: 443
-  skip-cert-verify: true
-  sni: vle.amclubssss.dpdns.org
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: vle.amclubssss.dpdns.org
-    path: /?ed=2560&PROT_TYPE=trojan&NAT64=true
 - name: 美国 - 聖荷西 - Cloudflare, Inc. - 502
   server: 104.16.83.8
   client-fingerprint: chrome
