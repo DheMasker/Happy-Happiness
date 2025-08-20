@@ -1,5 +1,5 @@
 proxies:
-- name: 9e6f873ead2247d9b1d9c11c7c417088_@_@Hope_Net-join-us-on-Telegram
+- name: fa54bfdbc21844d695cd38af44cd3051_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: e7dd789d821d46c5b478ba8c02738caa_@_🅼🅴🅷🅳🅸
+- name: f5b81095989045fab107d0ef122aa89b_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -33,7 +33,7 @@ proxies:
     headers:
       host: 920f9840-4d0f-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat
     path: /920f9840-4d0f-11f0-a948-6a75f667b472?ed=2048
-- name: 13|KZ_speednode_0081
+- name: 14|KZ_speednode_0081
   server: 194.76.18.129
   network: ws
   password: tg-fq521free
@@ -316,7 +316,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-209.126.84.189-5141 | 2.721MB
+- name: 🇺🇸US-209.126.84.189-5077 | 25.845MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -325,41 +325,28 @@ proxies:
   cipher: auto
   tls: false
   skip-cert-verify: false
-  servername: 🇺🇸US-209.126.84.189-5141 | 2.721MB
+  servername: 🇺🇸US-209.126.84.189-5077 | 25.845MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: 🇦🇺AU-103.224.212.215-0202 | 0.0MB
-  server: vjp1.0bad.com
+- name: 🇺🇸US-77.83.141.171-5088 | 19.13MB
+  server: vc.fly.dev
   port: 443
   type: vmess
-  uuid: 927094d3-d678-4763-8591-e240d0bcae87
-  alterId: 0
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
   cipher: auto
   tls: true
   skip-cert-verify: false
+  servername: 🇺🇸US-77.83.141.171-5088 | 19.13MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: vjp1.0bad.com
-- name: 🇸🇬SG-103.253.26.134-0204 | 0.0MB
-  server: 103.253.26.134
-  port: 443
-  type: vmess
-  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
-  alterId: 4
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: eeh7iewe.com
-- name: RELAY-104.21.41.4-0224 | 0.0MB
+      Host: vc.fly.dev
+- name: RELAY-104.21.41.4-0729 | 18.797MB
   server: test13.huvicloud.com
   port: 443
   type: vmess
@@ -373,61 +360,38 @@ proxies:
     path: /
     headers:
       Host: test13.huvicloud.com
-- name: 🇩🇪 德国 55
+- name: RELAY-205.233.181.3-1034 | 0.581MB
+  server: 205.233.181.3
+  port: 443
+  type: vmess
+  uuid: de94cc0a-0592-4969-b1fc-97ea8f0ea0b3
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: farid.1.berozha.ir
+- name: 德国 - 德赖艾希 - Cloudflare, Inc. - 16
   server: 162.159.153.2
+  client-fingerprint: chrome
+  delay: 2212
   network: ws
   password: bpb-trojan
   port: 443
-  skip-cert-verify: true
+  skip-cert-verify: false
   sni: zamim340.ggff.net
   type: trojan
   udp: true
   ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
     headers:
-      Host: zamim340.ggff.net
-    path: /tr?ed=2560
-- name: 🇺🇸 美国 609
-  server: 104.17.206.71
-  network: ws
-  password: d6b8011a-c725-435a-9fec-bf6d3530392c
-  port: 443
-  skip-cert-verify: true
-  sni: vle.amclubssss.dpdns.org
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: vle.amclubssss.dpdns.org
-    path: /?ed=2560&PROT_TYPE=trojan&NAT64=true
-- name: 🇳🇱 荷兰 37
-  server: 172.67.156.25
-  network: ws
-  password: f282b878-8711-45a1-8c69-5564172123c1
-  port: 443
-  skip-cert-verify: false
-  sni: aio.zipzap.biz.id
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: aio.zipzap.biz.id
-    path: /aioproxybot/129.150.49.58-18650
-- name: 美国 - 聖荷西 - Cloudflare, Inc. - 502
-  server: 104.16.83.8
-  client-fingerprint: chrome
-  delay: 1400
-  network: ws
-  password: Ng35283528
-  port: 443
-  skip-cert-verify: false
-  sni: c2.validbv3528.eu.org
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/54.0.2840.99 Safari/537.36
-    path: /
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/36.0.1985.125 Safari/537.36
+    max-early-data: 2560
+    path: /tr
 - name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 32
   server: 172.67.207.57
   client-fingerprint: chrome
@@ -444,6 +408,50 @@ proxies:
       User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
         like Gecko) Chrome/61.0.3163.79 Safari/537.36
     path: /
+- name: 美国 - 聖荷西 - Cloudflare, Inc. - 1372
+  server: 103.160.204.1
+  delay: 2108
+  network: ws
+  password: d6b8011a-c725-435a-9fec-bf6d3530392c
+  port: 443
+  skip-cert-verify: true
+  sni: vle.amclubssss.dpdns.org
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: vle.amclubssss.dpdns.org
+    path: /?ed=2560&PROT_TYPE=trojan&NAT64=true
+- name: 美国 - 聖荷西 - Cloudflare, Inc. - 502
+  server: 104.16.83.8
+  client-fingerprint: chrome
+  delay: 1400
+  network: ws
+  password: Ng35283528
+  port: 443
+  skip-cert-verify: false
+  sni: c2.validbv3528.eu.org
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/54.0.2840.99 Safari/537.36
+    path: /
+- name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 11
+  server: 172.67.156.25
+  delay: 1114
+  network: ws
+  password: f282b878-8711-45a1-8c69-5564172123c1
+  port: 443
+  skip-cert-verify: false
+  sni: aio.zipzap.biz.id
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: aio.zipzap.biz.id
+    path: /aioproxybot/129.150.49.58-18650
 - name: 🇺🇸 美国 0251
   server: 104.18.2.150
   network: ws
