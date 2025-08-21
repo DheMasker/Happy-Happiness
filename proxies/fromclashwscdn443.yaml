@@ -1,5 +1,5 @@
 proxies:
-- name: b87a138f9a3e411d97eb15ba186ea4f3_@_@Hope_Net-join-us-on-Telegram
+- name: b2b21c0814bd418fb09d1de6722f6db0_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: 0aa966cc7f2143f3be57f297a021bed8_@_🅼🅴🅷🅳🅸
+- name: f2933f03aff449228b7df2f39818409b_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -33,19 +33,6 @@ proxies:
     headers:
       host: 920f9840-4d0f-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat
     path: /920f9840-4d0f-11f0-a948-6a75f667b472?ed=2048
-- name: 12|KZ_speednode_0081
-  server: 194.76.18.129
-  network: ws
-  password: tg-fq521free
-  port: 443
-  skip-cert-verify: false
-  sni: torjan.xn--xhq44j.eu.org
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: torjan.xn--xhq44j.eu.org
-    path: /
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -316,7 +303,21 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-209.126.84.189-5077 | 33.535MB
+- name: RELAY-104.17.147.22-0732 | 6.963MB
+  server: www.speedtest.net
+  port: 443
+  type: vmess
+  uuid: e2fb28b8-a457-4bd2-801e-56fdcccbd88e
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: blaze-cana-126.blazeservers1.site
+- name: 🇺🇸US-209.126.84.189-5079 | 3.748MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -325,13 +326,13 @@ proxies:
   cipher: auto
   tls: false
   skip-cert-verify: false
-  servername: 🇺🇸US-209.126.84.189-5077 | 33.535MB
+  servername: 🇺🇸US-209.126.84.189-5079 | 3.748MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: 🇺🇸US-77.83.141.171-5088 | 32.785MB
+- name: 🇺🇸US-77.83.141.171-5090 | 2.554MB
   server: vc.fly.dev
   port: 443
   type: vmess
@@ -340,17 +341,17 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇺🇸US-77.83.141.171-5088 | 32.785MB
+  servername: 🇺🇸US-77.83.141.171-5090 | 2.554MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: vc.fly.dev
-- name: RELAY-205.233.181.3-1034 | 23.181MB
-  server: 205.233.181.3
+- name: RELAY-172.67.141.31-6895 | 1.764MB
+  server: new1.huvicloud.com
   port: 443
   type: vmess
-  uuid: de94cc0a-0592-4969-b1fc-97ea8f0ea0b3
+  uuid: 0f02e02f-418d-4434-b0cf-dbdd15892333
   alterId: 0
   cipher: auto
   tls: true
@@ -359,21 +360,33 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: farid.1.berozha.ir
-- name: 🇸🇬SG-103.253.26.20-0186 | 0.099MB
-  server: 103.253.26.20
-  port: 443
-  type: vmess
-  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
-  alterId: 4
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
+      Host: new1.huvicloud.com
+- name: KZ_speednode_0081
+  server: 194.76.18.129
   network: ws
+  password: tg-fq521free
+  port: 443
+  skip-cert-verify: false
+  sni: torjan.xn--xhq44j.eu.org
+  type: trojan
+  udp: true
   ws-opts:
-    path: /
     headers:
-      Host: zecjk.com
+      Host: torjan.xn--xhq44j.eu.org
+    path: /
+- name: 🇸🇬 新加坡 19
+  server: 128.199.237.143
+  network: ws
+  password: ttfang
+  port: 443
+  skip-cert-verify: true
+  sni: ttfang.fange.me
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: ttfang.fange.me
+    path: /
 - name: 德国 - 德赖艾希 - Cloudflare, Inc. - 16
   server: 162.159.153.2
   client-fingerprint: chrome
@@ -392,20 +405,6 @@ proxies:
         Gecko) Chrome/36.0.1985.125 Safari/537.36
     max-early-data: 2560
     path: /tr
-- name: 美国 - 聖荷西 - Cloudflare, Inc. - 1372
-  server: 103.160.204.1
-  delay: 2108
-  network: ws
-  password: d6b8011a-c725-435a-9fec-bf6d3530392c
-  port: 443
-  skip-cert-verify: true
-  sni: vle.amclubssss.dpdns.org
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: vle.amclubssss.dpdns.org
-    path: /?ed=2560&PROT_TYPE=trojan&NAT64=true
 - name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 32
   server: 172.67.207.57
   client-fingerprint: chrome
@@ -440,7 +439,21 @@ proxies:
         Gecko) Chrome/52.0.2743.116 Safari/537.36
     max-early-data: 2560
     path: /
-- name: 🇺🇸 美国 544
+- name: 美国 - 聖荷西 - Cloudflare, Inc. - 1170
+  server: 198.62.62.4
+  delay: 2092
+  network: ws
+  password: d6b8011a-c725-435a-9fec-bf6d3530392c
+  port: 443
+  skip-cert-verify: true
+  sni: vle.amclubssss.dpdns.org
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: vle.amclubssss.dpdns.org
+    path: /?ed=2560&PROT_TYPE=trojan&NAT64=true
+- name: '🇺🇸 美国 544 #2'
   server: 104.18.2.150
   network: ws
   password: slch2024
