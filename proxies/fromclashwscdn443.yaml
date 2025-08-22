@@ -1,5 +1,5 @@
 proxies:
-- name: 27d31d4f0b1b4949a53fa047b629b392_@_@Hope_Net-join-us-on-Telegram
+- name: c9a2621ad8464581ae9cb1d4b4cffb83_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: db815d3733734df3865b6ece41b8f08f_@_🅼🅴🅷🅳🅸
+- name: b88dfee6350e4b72b03d020e21dcbb57_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -303,7 +303,22 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-104.17.147.22-0732 | 6.963MB
+- name: 🇺🇸US-77.83.141.171-5088 | 27.193MB
+  server: vc.fly.dev
+  port: 443
+  type: vmess
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇺🇸US-77.83.141.171-5088 | 27.193MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vc.fly.dev
+- name: RELAY-104.17.148.22-0992 | 24.895MB
   server: www.speedtest.net
   port: 443
   type: vmess
@@ -317,7 +332,7 @@ proxies:
     path: /
     headers:
       Host: blaze-cana-126.blazeservers1.site
-- name: 🇺🇸US-209.126.84.189-5079 | 3.748MB
+- name: 🇺🇸US-209.126.84.189-5050 | 24.706MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -326,32 +341,17 @@ proxies:
   cipher: auto
   tls: false
   skip-cert-verify: false
-  servername: 🇺🇸US-209.126.84.189-5079 | 3.748MB
+  servername: 🇺🇸US-209.126.84.189-5050 | 24.706MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: 🇺🇸US-77.83.141.171-5090 | 2.554MB
-  server: vc.fly.dev
+- name: RELAY-172.66.168.224-1025 | 20.066MB
+  server: cloudgetservice.mcloudservice.site
   port: 443
   type: vmess
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
-  alterId: 32
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇺🇸US-77.83.141.171-5090 | 2.554MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vc.fly.dev
-- name: RELAY-172.67.141.31-6895 | 1.764MB
-  server: new1.huvicloud.com
-  port: 443
-  type: vmess
-  uuid: 0f02e02f-418d-4434-b0cf-dbdd15892333
+  uuid: 37f464cb-b826-4278-9bf8-11bdf1ec892b
   alterId: 0
   cipher: auto
   tls: true
@@ -360,9 +360,9 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: new1.huvicloud.com
-- name: 🇺🇸 美国 412
-  server: 194.76.18.129
+      Host: Fra-Vp-123.BLaZECLOUD.Site
+- name: RU_speednode_0175
+  server: 45.67.215.95
   network: ws
   password: tg-fq521free
   port: 443
