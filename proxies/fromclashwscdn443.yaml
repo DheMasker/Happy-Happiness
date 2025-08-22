@@ -1,5 +1,5 @@
 proxies:
-- name: 95fc14cb0a1d462b96883eeff7c120e0_@_@Hope_Net-join-us-on-Telegram
+- name: b22e02dd9501442bab746d73b099519d_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: 473ea0ee4bb04bda977805466b8ee8fb_@_🅼🅴🅷🅳🅸
+- name: 4b70cc480ece4701be30a657b380778c_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -388,8 +388,8 @@ proxies:
     path: /
     headers:
       Host: BLaZE-fRA-64.BLaZECLOuD.sitE
-- name: US_speednode_0283
-  server: 216.24.57.30
+- name: RU_speednode_0175
+  server: 45.67.215.95
   network: ws
   password: tg-fq521free
   port: 443
@@ -401,19 +401,6 @@ proxies:
     headers:
       Host: torjan.xn--xhq44j.eu.org
     path: /
-- name: 🇺🇸 美国 366
-  server: 154.83.2.200
-  network: ws
-  password: d6b8011a-c725-435a-9fec-bf6d3530392c
-  port: 443
-  skip-cert-verify: true
-  sni: vle.amclubssss.dpdns.org
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: vle.amclubssss.dpdns.org
-    path: /?ed=2560&PROT_TYPE=trojan&NAT64=true
 - name: 德国 - 德赖艾希 - Cloudflare, Inc. - 16
   server: 162.159.153.2
   client-fingerprint: chrome
@@ -432,6 +419,36 @@ proxies:
         Gecko) Chrome/36.0.1985.125 Safari/537.36
     max-early-data: 2560
     path: /tr
+- name: 美国 - 聖荷西 - Cloudflare, Inc. - 1170
+  server: 198.62.62.4
+  delay: 2092
+  network: ws
+  password: d6b8011a-c725-435a-9fec-bf6d3530392c
+  port: 443
+  skip-cert-verify: true
+  sni: vle.amclubssss.dpdns.org
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: vle.amclubssss.dpdns.org
+    path: /?ed=2560&PROT_TYPE=trojan&NAT64=true
+- name: 美国 - 聖荷西 - Cloudflare, Inc. - 502
+  server: 104.16.83.8
+  client-fingerprint: chrome
+  delay: 1400
+  network: ws
+  password: Ng35283528
+  port: 443
+  skip-cert-verify: false
+  sni: c2.validbv3528.eu.org
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/54.0.2840.99 Safari/537.36
+    path: /
 - name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 32
   server: 172.67.207.57
   client-fingerprint: chrome
@@ -447,24 +464,6 @@ proxies:
     headers:
       User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
         like Gecko) Chrome/61.0.3163.79 Safari/537.36
-    path: /
-- name: 美国 - 聖荷西 - Cloudflare, Inc. - 506
-  server: 104.16.83.43
-  client-fingerprint: chrome
-  delay: 979
-  network: ws
-  password: Ng35283528
-  port: 443
-  skip-cert-verify: false
-  sni: c2.validbv3528.eu.org
-  type: trojan
-  udp: true
-  ws-opts:
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/52.0.2743.116 Safari/537.36
-    max-early-data: 2560
     path: /
 - name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 11
   server: 172.67.156.25
