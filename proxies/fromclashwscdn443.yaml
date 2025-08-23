@@ -1,5 +1,5 @@
 proxies:
-- name: 73cd2f3dd793432f81510a1984aa03c0_@_@Hope_Net-join-us-on-Telegram
+- name: 1ad198402e23421db56274b0ab36de37_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: c8d2648450704bb89421a2e162571856_@_🅼🅴🅷🅳🅸
+- name: 69fadaa312cd4a6fb21dc5ba962513d2_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -303,7 +303,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-209.126.84.189-4898 | 27.474MB
+- name: 🇺🇸US-209.126.84.189-4902 | 28.933MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -312,13 +312,13 @@ proxies:
   cipher: auto
   tls: false
   skip-cert-verify: false
-  servername: 🇺🇸US-209.126.84.189-4898 | 27.474MB
+  servername: 🇺🇸US-209.126.84.189-4902 | 28.933MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: RELAY-172.67.75.172-0988 | 13.047MB
+- name: RELAY-172.67.75.172-0718 | 25.702MB
   server: ip.sb
   port: 443
   type: vmess
@@ -332,7 +332,7 @@ proxies:
     path: /
     headers:
       Host: fr.atlen.dpdns.org
-- name: RELAY-172.66.168.228-0720 | 2.95MB
+- name: RELAY-172.66.168.223-0996 | 16.781MB
   server: cloudgetservice.mcloudservice.site
   port: 443
   type: vmess
@@ -346,6 +346,35 @@ proxies:
     path: /
     headers:
       Host: Fra-Vp-123.BLaZECLOUD.Site
+- name: RELAY-104.17.147.22-0207 | 0.0MB
+  server: www.speedtest.net
+  port: 443
+  type: vmess
+  uuid: e2fb28b8-a457-4bd2-801e-56fdcccbd88e
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: blaze-cana-126.blazeservers1.site
+- name: 🇺🇸US-77.83.141.171-0206 | 0.0MB
+  server: vc.fly.dev
+  port: 443
+  type: vmess
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇺🇸US-77.83.141.171-0206 | 0.0MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vc.fly.dev
 - name: 🇸🇬SG-103.253.26.20-0172 | 0.0MB
   server: 103.253.26.20
   port: 443
@@ -360,36 +389,25 @@ proxies:
     path: /
     headers:
       Host: zecjk.com
-- name: 🇦🇺AU-103.224.212.215-0166 | 0.0MB
-  server: vjp3.0bad.com
-  port: 443
-  type: vmess
-  uuid: 927094d3-d678-4763-8591-e240d0bcae87
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
+- name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 32
+  server: 172.67.207.57
+  client-fingerprint: chrome
+  delay: 1958
   network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vjp3.0bad.com
-- name: RELAY-104.17.148.22-1897 | 36.12MB
-  server: www.speedtest.net
+  password: yaml777
   port: 443
-  type: vmess
-  uuid: b7acf44f-3c3a-430c-8ed0-fb64ccc9a13a
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
+  skip-cert-verify: true
+  sni: yaml7.ggff.net
+  type: trojan
+  udp: true
   ws-opts:
-    path: /
     headers:
-      Host: BLaZE-fRA-64.BLaZECLOuD.sitE
-- name: RU_speednode_0175
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/61.0.3163.79 Safari/537.36
+    path: /
+- name: 美国 - 聖荷西 - Cloudflare, Inc. - 406
   server: 45.67.215.95
+  delay: 1126
   network: ws
   password: tg-fq521free
   port: 443
@@ -401,6 +419,52 @@ proxies:
     headers:
       Host: torjan.xn--xhq44j.eu.org
     path: /
+- name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 11
+  server: 172.67.156.25
+  delay: 1114
+  network: ws
+  password: f282b878-8711-45a1-8c69-5564172123c1
+  port: 443
+  skip-cert-verify: false
+  sni: aio.zipzap.biz.id
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: aio.zipzap.biz.id
+    path: /aioproxybot/129.150.49.58-18650
+- name: 美国 - 聖荷西 - Cloudflare, Inc. - 506
+  server: 104.16.83.43
+  client-fingerprint: chrome
+  delay: 979
+  network: ws
+  password: Ng35283528
+  port: 443
+  skip-cert-verify: false
+  sni: c2.validbv3528.eu.org
+  type: trojan
+  udp: true
+  ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/52.0.2743.116 Safari/537.36
+    max-early-data: 2560
+    path: /
+- name: 美国 - 聖荷西 - Cloudflare, Inc. - 1170
+  server: 198.62.62.4
+  delay: 2092
+  network: ws
+  password: d6b8011a-c725-435a-9fec-bf6d3530392c
+  port: 443
+  skip-cert-verify: true
+  sni: vle.amclubssss.dpdns.org
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: vle.amclubssss.dpdns.org
+    path: /?ed=2560&PROT_TYPE=trojan&NAT64=true
 - name: 德国 - 德赖艾希 - Cloudflare, Inc. - 16
   server: 162.159.153.2
   client-fingerprint: chrome
@@ -419,66 +483,6 @@ proxies:
         Gecko) Chrome/36.0.1985.125 Safari/537.36
     max-early-data: 2560
     path: /tr
-- name: 美国 - 聖荷西 - Cloudflare, Inc. - 1170
-  server: 198.62.62.4
-  delay: 2092
-  network: ws
-  password: d6b8011a-c725-435a-9fec-bf6d3530392c
-  port: 443
-  skip-cert-verify: true
-  sni: vle.amclubssss.dpdns.org
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: vle.amclubssss.dpdns.org
-    path: /?ed=2560&PROT_TYPE=trojan&NAT64=true
-- name: 美国 - 聖荷西 - Cloudflare, Inc. - 502
-  server: 104.16.83.8
-  client-fingerprint: chrome
-  delay: 1400
-  network: ws
-  password: Ng35283528
-  port: 443
-  skip-cert-verify: false
-  sni: c2.validbv3528.eu.org
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/54.0.2840.99 Safari/537.36
-    path: /
-- name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 32
-  server: 172.67.207.57
-  client-fingerprint: chrome
-  delay: 1958
-  network: ws
-  password: yaml777
-  port: 443
-  skip-cert-verify: true
-  sni: yaml7.ggff.net
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/61.0.3163.79 Safari/537.36
-    path: /
-- name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 11
-  server: 172.67.156.25
-  delay: 1114
-  network: ws
-  password: f282b878-8711-45a1-8c69-5564172123c1
-  port: 443
-  skip-cert-verify: false
-  sni: aio.zipzap.biz.id
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: aio.zipzap.biz.id
-    path: /aioproxybot/129.150.49.58-18650
 - name: '🇺🇸 美国 544 #2'
   server: 104.18.2.150
   network: ws
