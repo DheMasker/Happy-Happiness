@@ -1,5 +1,5 @@
 proxies:
-- name: b589bf3897704c0c9357f61d709c06fa_@_@Hope_Net-join-us-on-Telegram
+- name: 71e7a2536a2f43c08fcd1429a29f9303_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: 68df642e067f473fa5a7371fb2ae718c_@_🅼🅴🅷🅳🅸
+- name: c1da4266c28e444891b2a833c43f8d62_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -417,6 +417,34 @@ proxies:
     path: /
     headers:
       Host: BLaZE-fRA-64.BLaZECLOuD.sitE
+- name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 2
+  server: 172.67.156.25
+  delay: 2546
+  network: ws
+  password: f282b878-8711-45a1-8c69-5564172123c1
+  port: 443
+  skip-cert-verify: false
+  sni: aio.zipzap.biz.id
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: aio.zipzap.biz.id
+    path: /aioproxybot/129.150.49.58-18650
+- name: 美国 - 聖荷西 - Cloudflare, Inc. - 406
+  server: 45.67.215.95
+  delay: 1126
+  network: ws
+  password: tg-fq521free
+  port: 443
+  skip-cert-verify: false
+  sni: torjan.xn--xhq44j.eu.org
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: torjan.xn--xhq44j.eu.org
+    path: /
 - name: 德国 - 德赖艾希 - Cloudflare, Inc. - 16
   server: 162.159.153.2
   client-fingerprint: chrome
@@ -449,22 +477,6 @@ proxies:
     headers:
       Host: vle.amclubssss.dpdns.org
     path: /?ed=2560&PROT_TYPE=trojan&NAT64=true
-- name: 美国 - 聖荷西 - Cloudflare, Inc. - 407
-  server: 216.24.57.30
-  client-fingerprint: chrome
-  delay: 2017
-  network: ws
-  password: tg-fq521free
-  port: 443
-  skip-cert-verify: false
-  sni: torjan.xn--xhq44j.eu.org
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/70.0.3538.67 Safari/537.36
-    path: /
 - name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 32
   server: 172.67.207.57
   client-fingerprint: chrome
@@ -481,24 +493,10 @@ proxies:
       User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
         like Gecko) Chrome/61.0.3163.79 Safari/537.36
     path: /
-- name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 11
-  server: 172.67.156.25
-  delay: 1114
-  network: ws
-  password: f282b878-8711-45a1-8c69-5564172123c1
-  port: 443
-  skip-cert-verify: false
-  sni: aio.zipzap.biz.id
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: aio.zipzap.biz.id
-    path: /aioproxybot/129.150.49.58-18650
-- name: 美国 - 聖荷西 - Cloudflare, Inc. - 502
-  server: 104.16.83.8
+- name: 美国 - 聖荷西 - Cloudflare, Inc. - 506
+  server: 104.16.83.43
   client-fingerprint: chrome
-  delay: 1400
+  delay: 979
   network: ws
   password: Ng35283528
   port: 443
@@ -507,9 +505,11 @@ proxies:
   type: trojan
   udp: true
   ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
     headers:
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/54.0.2840.99 Safari/537.36
+      User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/52.0.2743.116 Safari/537.36
+    max-early-data: 2560
     path: /
 - name: '🇺🇸 美国 544 #2'
   server: 104.18.2.150
