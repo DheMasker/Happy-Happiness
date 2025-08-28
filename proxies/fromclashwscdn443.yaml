@@ -1,5 +1,5 @@
 proxies:
-- name: 81e9bd1906f8474c8a1af888f2b860f1_@_@Hope_Net-join-us-on-Telegram
+- name: 7b7007059c024b0ab290cb2413f3f7f3_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: 650ab2527d6a4964bb8244907f7c0e12_@_🅼🅴🅷🅳🅸
+- name: f88d6d0dabc9450caf8ecc957cd7cbdf_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -316,23 +316,23 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-209.126.84.189-5055 | 5.993MB
-  server: v2ray.codefyinc.com
+- name: 🇺🇸US-77.83.141.171-5070 | 8.82MB
+  server: vc.fly.dev
   port: 443
   type: vmess
-  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
-  alterId: 0
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: false
-  servername: 🇺🇸US-209.126.84.189-5055 | 5.993MB
+  servername: 🇺🇸US-77.83.141.171-5070 | 8.82MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: v2ray.codefyinc.com
-- name: RELAY-205.233.181.3-0726 | 4.525MB
-  server: 205.233.181.3
+      Host: vc.fly.dev
+- name: RELAY-199.181.197.60-0749 | 0.36MB
+  server: 199.181.197.60
   port: 443
   type: vmess
   uuid: de94cc0a-0592-4969-b1fc-97ea8f0ea0b3
@@ -345,7 +345,7 @@ proxies:
     path: /
     headers:
       Host: farid.1.berozha.ir
-- name: 🇸🇬SG-103.253.26.20-0181 | 0.0MB
+- name: 🇸🇬SG-103.253.26.20-0199 | 0.0MB
   server: 103.253.26.20
   port: 443
   type: vmess
@@ -359,7 +359,7 @@ proxies:
     path: /
     headers:
       Host: zecjk.com
-- name: 🇦🇺AU-103.224.212.215-0175 | 0.0MB
+- name: 🇦🇺AU-103.224.212.215-0193 | 0.0MB
   server: vjp3.0bad.com
   port: 443
   type: vmess
@@ -373,34 +373,6 @@ proxies:
     path: /
     headers:
       Host: vjp3.0bad.com
-- name: RELAY-172.66.166.61-1591 | 112.432MB
-  server: linux.do
-  port: 443
-  type: vmess
-  uuid: 2fbe41db-0797-44f6-a3eb-9c680e5f09ce
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: designs-cycles-submission-really.trycloudflare.com
-- name: RELAY-104.17.148.22-1594 | 22.533MB
-  server: www.speedtest.net
-  port: 443
-  type: vmess
-  uuid: b7acf44f-3c3a-430c-8ed0-fb64ccc9a13a
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: BLaZE-fRA-64.BLaZECLOuD.sitE
 - name: 德国 - 德赖艾希 - Cloudflare, Inc. - 4
   server: 104.26.4.60
   delay: 1689
@@ -417,20 +389,6 @@ proxies:
       Host: zamim340.ggff.net
     max-early-data: 2560
     path: /tr
-- name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 4
-  server: 172.67.156.25
-  delay: 1178
-  network: ws
-  password: f282b878-8711-45a1-8c69-5564172123c1
-  port: 443
-  skip-cert-verify: false
-  sni: aio.zipzap.biz.id
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: aio.zipzap.biz.id
-    path: /aioproxybot/129.150.49.58-18650
 - name: 美国 - 聖荷西 - Cloudflare, Inc. - 486
   server: 198.62.62.4
   delay: 1262
@@ -445,6 +403,20 @@ proxies:
     headers:
       Host: vle.amclubssss.dpdns.org
     path: /?ed=2560&PROT_TYPE=trojan&NAT64=true
+- name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 4
+  server: 172.67.156.25
+  delay: 1178
+  network: ws
+  password: f282b878-8711-45a1-8c69-5564172123c1
+  port: 443
+  skip-cert-verify: false
+  sni: aio.zipzap.biz.id
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: aio.zipzap.biz.id
+    path: /aioproxybot/129.150.49.58-18650
 - name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 32
   server: 172.67.207.57
   client-fingerprint: chrome
