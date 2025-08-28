@@ -1,5 +1,5 @@
 proxies:
-- name: 7b7007059c024b0ab290cb2413f3f7f3_@_@Hope_Net-join-us-on-Telegram
+- name: 7ceb1f56d231415c9b3f6bd7c165863b_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: f88d6d0dabc9450caf8ecc957cd7cbdf_@_🅼🅴🅷🅳🅸
+- name: c368a6026bb44a6d9152eb6fa915665a_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -33,7 +33,7 @@ proxies:
     headers:
       host: 920f9840-4d0f-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat
     path: /920f9840-4d0f-11f0-a948-6a75f667b472?ed=2048
-- name: 14|KZ_speednode_0035
+- name: 13|KZ_speednode_0035
   server: 194.76.18.129
   network: ws
   password: tg-fq521free
@@ -316,7 +316,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-77.83.141.171-5070 | 8.82MB
+- name: 🇺🇸US-77.83.141.171-5070 | 0.378MB
   server: vc.fly.dev
   port: 443
   type: vmess
@@ -325,13 +325,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇺🇸US-77.83.141.171-5070 | 8.82MB
+  servername: 🇺🇸US-77.83.141.171-5070 | 0.378MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: vc.fly.dev
-- name: RELAY-199.181.197.60-0749 | 0.36MB
+- name: RELAY-199.181.197.60-0749 | 0.017MB
   server: 199.181.197.60
   port: 443
   type: vmess
@@ -389,6 +389,18 @@ proxies:
       Host: zamim340.ggff.net
     max-early-data: 2560
     path: /tr
+- name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 10
+  server: 172.67.181.173
+  delay: 2418
+  network: ws
+  password: f282b878-8711-45a1-8c69-5564172123c1
+  port: 443
+  sni: vpn.stupidworld.web.id
+  type: trojan
+  ws-opts:
+    headers:
+      Host: vpn.stupidworld.web.id
+    path: '%25252F%252540Hddify---%252540Hddify---%252540Hddify---%252540Hddify---%252540Hddify---%252540Hddify'
 - name: 美国 - 聖荷西 - Cloudflare, Inc. - 486
   server: 198.62.62.4
   delay: 1262
@@ -403,20 +415,6 @@ proxies:
     headers:
       Host: vle.amclubssss.dpdns.org
     path: /?ed=2560&PROT_TYPE=trojan&NAT64=true
-- name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 4
-  server: 172.67.156.25
-  delay: 1178
-  network: ws
-  password: f282b878-8711-45a1-8c69-5564172123c1
-  port: 443
-  skip-cert-verify: false
-  sni: aio.zipzap.biz.id
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: aio.zipzap.biz.id
-    path: /aioproxybot/129.150.49.58-18650
 - name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 32
   server: 172.67.207.57
   client-fingerprint: chrome
