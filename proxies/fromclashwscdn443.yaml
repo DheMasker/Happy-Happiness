@@ -1,5 +1,5 @@
 proxies:
-- name: c81a1f3a59c14f5f9e38f598dcf7b61e_@_@Hope_Net-join-us-on-Telegram
+- name: d2e55bd4c57844159e45439067268d57_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: c28bbe833cee4c30830c5289a2fa9216_@_🅼🅴🅷🅳🅸
+- name: 94894e25c7cb4e599b71854af54cfabf_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -33,7 +33,7 @@ proxies:
     headers:
       host: 920f9840-4d0f-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat
     path: /920f9840-4d0f-11f0-a948-6a75f667b472?ed=2048
-- name: 13|KZ_speednode_0035
+- name: 13|KZ_speednode_0010
   server: 194.76.18.129
   network: ws
   password: tg-fq521free
@@ -316,36 +316,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-77.83.141.171-5070 | 0.378MB
-  server: vc.fly.dev
-  port: 443
-  type: vmess
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
-  alterId: 32
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇺🇸US-77.83.141.171-5070 | 0.378MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vc.fly.dev
-- name: RELAY-199.181.197.60-0749 | 0.017MB
-  server: 199.181.197.60
-  port: 443
-  type: vmess
-  uuid: de94cc0a-0592-4969-b1fc-97ea8f0ea0b3
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: farid.1.berozha.ir
-- name: 🇸🇬SG-103.253.26.20-0199 | 0.0MB
+- name: 🇸🇬SG-103.253.26.20-0199 | 0.184MB
   server: 103.253.26.20
   port: 443
   type: vmess
@@ -359,7 +330,7 @@ proxies:
     path: /
     headers:
       Host: zecjk.com
-- name: 🇦🇺AU-103.224.212.215-0193 | 0.0MB
+- name: 🇦🇺AU-103.224.212.215-0193 | 0.096MB
   server: vjp3.0bad.com
   port: 443
   type: vmess
@@ -389,6 +360,20 @@ proxies:
       Host: zamim340.ggff.net
     max-early-data: 2560
     path: /tr
+- name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 4
+  server: 172.67.156.25
+  delay: 1178
+  network: ws
+  password: f282b878-8711-45a1-8c69-5564172123c1
+  port: 443
+  skip-cert-verify: false
+  sni: aio.zipzap.biz.id
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: aio.zipzap.biz.id
+    path: /aioproxybot/129.150.49.58-18650
 - name: 美国 - 聖荷西 - Cloudflare, Inc. - 486
   server: 198.62.62.4
   delay: 1262
@@ -403,18 +388,19 @@ proxies:
     headers:
       Host: vle.amclubssss.dpdns.org
     path: /?ed=2560&PROT_TYPE=trojan&NAT64=true
-- name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 10
-  server: 172.67.181.173
-  delay: 2418
+- name: '🇺🇸 美国 544 #2'
+  server: 104.18.2.150
   network: ws
-  password: f282b878-8711-45a1-8c69-5564172123c1
+  password: slch2024
   port: 443
-  sni: vpn.stupidworld.web.id
+  skip-cert-verify: true
+  sni: ocost-dy.wmlefl.cc
   type: trojan
+  udp: true
   ws-opts:
     headers:
-      Host: vpn.stupidworld.web.id
-    path: '%25252F%252540Hddify---%252540Hddify---%252540Hddify---%252540Hddify---%252540Hddify---%252540Hddify'
+      Host: ocost-dy.wmlefl.cc
+    path: /
 - name: 美国 - 聖荷西 - Cloudflare, Inc. - 502
   server: 104.16.83.8
   client-fingerprint: chrome
@@ -430,19 +416,6 @@ proxies:
     headers:
       User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
         like Gecko) Chrome/54.0.2840.99 Safari/537.36
-    path: /
-- name: '🇺🇸 美国 544 #2'
-  server: 104.18.2.150
-  network: ws
-  password: slch2024
-  port: 443
-  skip-cert-verify: true
-  sni: ocost-dy.wmlefl.cc
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: ocost-dy.wmlefl.cc
     path: /
 - name: 🇸🇬 新加坡 19
   server: 128.199.237.143
