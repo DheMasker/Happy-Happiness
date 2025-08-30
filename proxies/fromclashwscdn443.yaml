@@ -1,5 +1,5 @@
 proxies:
-- name: 2314b784a31644a492f1e03e794d79ad_@_@Hope_Net-join-us-on-Telegram
+- name: b720ecb7fd29455ca3286f7729dc14e9_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: bc8cd6406beb47db8a6575344273bd1a_@_🅼🅴🅷🅳🅸
+- name: 101b652c4a514530b8dfc896f12ab6ba_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -303,36 +303,22 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-172.66.168.226-1906 | 27.438MB
-  server: cloudgetservice.mcloudservice.site
+- name: 🇺🇸US-209.126.84.189-4927 | 0.178MB
+  server: v2ray.codefyinc.com
   port: 443
   type: vmess
-  uuid: 37f464cb-b826-4278-9bf8-11bdf1ec892b
+  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: false
-  servername: RELAY-172.66.168.226-1906 | 27.438MB
+  servername: 🇺🇸US-209.126.84.189-4927 | 0.178MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: Fra-Vp-123.BLaZECLOUD.Site
-- name: RELAY-104.21.41.4-0750 | 2.522MB
-  server: new1.huvicloud.com
-  port: 443
-  type: vmess
-  uuid: 0f02e02f-418d-4434-b0cf-dbdd15892333
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: new1.huvicloud.com
-- name: 🇸🇬SG-103.253.26.20-0197 | 0.048MB
+      Host: v2ray.codefyinc.com
+- name: 🇸🇬SG-103.253.26.20-0150 | 0.0MB
   server: 103.253.26.20
   port: 443
   type: vmess
@@ -346,7 +332,7 @@ proxies:
     path: /
     headers:
       Host: zecjk.com
-- name: 🇦🇺AU-103.224.212.215-0191 | 0.031MB
+- name: 🇦🇺AU-103.224.212.215-0144 | 0.0MB
   server: vjp3.0bad.com
   port: 443
   type: vmess
@@ -360,18 +346,35 @@ proxies:
     path: /
     headers:
       Host: vjp3.0bad.com
-- name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 10
-  server: 172.67.181.173
-  delay: 2418
-  network: ws
-  password: f282b878-8711-45a1-8c69-5564172123c1
+- name: RELAY-104.18.26.90-0220 | 0.0MB
+  server: cloudgetservice.mcloudservice.site
   port: 443
-  sni: vpn.stupidworld.web.id
-  type: trojan
+  type: vmess
+  uuid: 37f464cb-b826-4278-9bf8-11bdf1ec892b
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: RELAY-104.18.26.90-0220 | 0.0MB
+  network: ws
   ws-opts:
+    path: /
     headers:
-      Host: vpn.stupidworld.web.id
-    path: '%25252F%252540Hddify---%252540Hddify---%252540Hddify---%252540Hddify---%252540Hddify---%252540Hddify'
+      Host: Fra-Vp-123.BLaZECLOUD.Site
+- name: RELAY-104.17.147.22-1603 | 35.946MB
+  server: www.speedtest.net
+  port: 443
+  type: vmess
+  uuid: b7acf44f-3c3a-430c-8ed0-fb64ccc9a13a
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: BLaZE-fRA-64.BLaZECLOuD.sitE
 - name: '🇺🇸 美国 544 #2'
   server: 104.18.2.150
   network: ws
@@ -385,7 +388,21 @@ proxies:
     headers:
       Host: ocost-dy.wmlefl.cc
     path: /
-- name: xx|4800|puddincat07@Telegram
+- name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 4
+  server: 172.67.156.25
+  delay: 1178
+  network: ws
+  password: f282b878-8711-45a1-8c69-5564172123c1
+  port: 443
+  skip-cert-verify: false
+  sni: aio.zipzap.biz.id
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: aio.zipzap.biz.id
+    path: /aioproxybot/129.150.49.58-18650
+- name: xx|e2ef|puddincat07@Telegram
   server: b62a948c-faa2-4e8a-bf8a-3ff3121c875a.asoul-ava.top
   alterId: 0
   cipher: auto
