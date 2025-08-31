@@ -1,5 +1,5 @@
 proxies:
-- name: c1c17234548d44d9845849a464ee1646_@_@Hope_Net-join-us-on-Telegram
+- name: 154e5e0cad3c4f1ea955f17fd85971db_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: 6a5ce4ec76fd4dc1873efbabb63e830b_@_🅼🅴🅷🅳🅸
+- name: 2a34a768d841408a9ffa02c2987e515a_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -303,7 +303,22 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-209.126.84.189-4927 | 0.178MB
+- name: 🇺🇸US-77.83.141.171-5085 | 14.539MB
+  server: vc.fly.dev
+  port: 443
+  type: vmess
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇺🇸US-77.83.141.171-5085 | 14.539MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vc.fly.dev
+- name: 🇺🇸US-209.126.84.189-5086 | 2.084MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -312,13 +327,13 @@ proxies:
   cipher: auto
   tls: false
   skip-cert-verify: false
-  servername: 🇺🇸US-209.126.84.189-4927 | 0.178MB
+  servername: 🇺🇸US-209.126.84.189-5086 | 2.084MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: 🇸🇬SG-103.253.26.20-0150 | 0.0MB
+- name: 🇸🇬SG-103.253.26.20-0162 | 0.0MB
   server: 103.253.26.20
   port: 443
   type: vmess
@@ -332,7 +347,7 @@ proxies:
     path: /
     headers:
       Host: zecjk.com
-- name: 🇦🇺AU-103.224.212.215-0144 | 0.0MB
+- name: 🇦🇺AU-103.224.212.215-0156 | 0.0MB
   server: vjp3.0bad.com
   port: 443
   type: vmess
@@ -346,35 +361,6 @@ proxies:
     path: /
     headers:
       Host: vjp3.0bad.com
-- name: RELAY-104.18.26.90-0220 | 0.0MB
-  server: cloudgetservice.mcloudservice.site
-  port: 443
-  type: vmess
-  uuid: 37f464cb-b826-4278-9bf8-11bdf1ec892b
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: RELAY-104.18.26.90-0220 | 0.0MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: Fra-Vp-123.BLaZECLOUD.Site
-- name: RELAY-104.17.147.22-1603 | 35.946MB
-  server: www.speedtest.net
-  port: 443
-  type: vmess
-  uuid: b7acf44f-3c3a-430c-8ed0-fb64ccc9a13a
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: BLaZE-fRA-64.BLaZECLOuD.sitE
 - name: '🇺🇸 美国 544 #2'
   server: 104.18.2.150
   network: ws
@@ -388,20 +374,6 @@ proxies:
     headers:
       Host: ocost-dy.wmlefl.cc
     path: /
-- name: 荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 4
-  server: 172.67.156.25
-  delay: 1178
-  network: ws
-  password: f282b878-8711-45a1-8c69-5564172123c1
-  port: 443
-  skip-cert-verify: false
-  sni: aio.zipzap.biz.id
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: aio.zipzap.biz.id
-    path: /aioproxybot/129.150.49.58-18650
 - name: DE_1
   server: 185.146.173.158
   port: 443
