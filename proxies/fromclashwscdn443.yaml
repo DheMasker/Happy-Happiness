@@ -1,5 +1,5 @@
 proxies:
-- name: 6bf4def275f84126a13f683b9386b977_@_@Hope_Net-join-us-on-Telegram
+- name: 4af9a77bf41544e7877f30f7bba7a5d8_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: 84c70d19c7a84501bd76f3d029ecab51_@_🅼🅴🅷🅳🅸
+- name: 12322ca3733d42a9a2031fad7f78b04e_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -33,6 +33,19 @@ proxies:
     headers:
       host: 920f9840-4d0f-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat
     path: /920f9840-4d0f-11f0-a948-6a75f667b472?ed=2048
+- name: 13|US_speednode_0031
+  server: aio.proxybox.dpdns.org
+  network: ws
+  password: 318cab24-ec99-40a6-a54a-0db9c661a3d0
+  port: 443
+  skip-cert-verify: false
+  sni: aio.proxybox.dpdns.org
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: aio.proxybox.dpdns.org
+    path: /188.34.160.97-2053
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -303,6 +316,64 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
+- name: 🇺🇸US-77.83.141.171-5082 | 18.897MB
+  server: vc.fly.dev
+  port: 443
+  type: vmess
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇺🇸US-77.83.141.171-5082 | 18.897MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vc.fly.dev
+- name: 🇺🇸US-209.126.84.189-5085 | 1.523MB
+  server: v2ray.codefyinc.com
+  port: 443
+  type: vmess
+  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  servername: 🇺🇸US-209.126.84.189-5085 | 1.523MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: v2ray.codefyinc.com
+- name: RELAY-172.66.166.61-0216 | 0.0MB
+  server: linux.do
+  port: 443
+  type: vmess
+  uuid: 2fbe41db-0797-44f6-a3eb-9c680e5f09ce
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: designs-cycles-submission-really.trycloudflare.com
+- name: 🇸🇬SG-103.253.26.20-0203 | 0.0MB
+  server: 103.253.26.20
+  port: 443
+  type: vmess
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  alterId: 4
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: zecjk.com
 - name: 🇦🇺AU-103.224.212.215-0196 | 0.0MB
   server: vjp1.0bad.com
   port: 443
@@ -317,21 +388,7 @@ proxies:
     path: /
     headers:
       Host: vjp1.0bad.com
-- name: 🇸🇬SG-103.253.26.134-0198 | 0.0MB
-  server: 103.253.26.134
-  port: 443
-  type: vmess
-  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
-  alterId: 4
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: eeh7iewe.com
-- name: RELAY-104.21.41.4-2097 | 54.253MB
+- name: RELAY-104.21.41.4-2228 | 54.278MB
   server: new1.huvicloud.com
   port: 443
   type: vmess
@@ -340,39 +397,25 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-104.21.41.4-2097 | 54.253MB
+  servername: RELAY-104.21.41.4-2228 | 54.278MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: new1.huvicloud.com
-- name: RELAY-188.114.98.178-1587 | 19.561MB
-  server: 188.114.98.178
-  port: 443
-  type: vmess
-  uuid: 25a3f54d-c543-4fd1-e202-ccfc01d043d6
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: web.paRSKish.online
-- name: '🇺🇸 美国 544 #2'
+- name: 🇸🇬 新加坡 20
   server: 104.18.2.150
   network: ws
   password: slch2024
   port: 443
-  skip-cert-verify: true
+  server_url: usa.visa.com
   sni: ocost-dy.wmlefl.cc
   type: trojan
   udp: true
   ws-opts:
     headers:
       Host: ocost-dy.wmlefl.cc
-    path: /
+    path: /?ed=2560
 - name: DE_1
   server: 185.146.173.158
   port: 443
