@@ -1,5 +1,5 @@
 proxies:
-- name: 4af9a77bf41544e7877f30f7bba7a5d8_@_@Hope_Net-join-us-on-Telegram
+- name: 7a840db7fb2c48418e43f49b39ca9008_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: 12322ca3733d42a9a2031fad7f78b04e_@_🅼🅴🅷🅳🅸
+- name: 1673852b9049447fb965ad7837c0151a_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -316,22 +316,21 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-77.83.141.171-5082 | 18.897MB
-  server: vc.fly.dev
+- name: RELAY-104.21.41.4-0690 | 0.479MB
+  server: u1.huvicloud.com
   port: 443
   type: vmess
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
-  alterId: 32
+  uuid: 04ddf6fd-2d5c-46ae-aa6c-6983a8c73725
+  alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇺🇸US-77.83.141.171-5082 | 18.897MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: vc.fly.dev
-- name: 🇺🇸US-209.126.84.189-5085 | 1.523MB
+      Host: u1.huvicloud.com
+- name: 🇺🇸US-209.126.84.189-5065 | 0.462MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -340,27 +339,13 @@ proxies:
   cipher: auto
   tls: false
   skip-cert-verify: false
-  servername: 🇺🇸US-209.126.84.189-5085 | 1.523MB
+  servername: 🇺🇸US-209.126.84.189-5065 | 0.462MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: RELAY-172.66.166.61-0216 | 0.0MB
-  server: linux.do
-  port: 443
-  type: vmess
-  uuid: 2fbe41db-0797-44f6-a3eb-9c680e5f09ce
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: designs-cycles-submission-really.trycloudflare.com
-- name: 🇸🇬SG-103.253.26.20-0203 | 0.0MB
+- name: 🇸🇬SG-103.253.26.20-0158 | 0.0MB
   server: 103.253.26.20
   port: 443
   type: vmess
@@ -374,8 +359,8 @@ proxies:
     path: /
     headers:
       Host: zecjk.com
-- name: 🇦🇺AU-103.224.212.215-0196 | 0.0MB
-  server: vjp1.0bad.com
+- name: 🇦🇺AU-103.224.212.215-0152 | 0.0MB
+  server: vjp3.0bad.com
   port: 443
   type: vmess
   uuid: 927094d3-d678-4763-8591-e240d0bcae87
@@ -387,8 +372,8 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: vjp1.0bad.com
-- name: RELAY-104.21.41.4-2228 | 54.278MB
+      Host: vjp3.0bad.com
+- name: RELAY-104.21.41.4-2170 | 56.066MB
   server: new1.huvicloud.com
   port: 443
   type: vmess
@@ -397,12 +382,26 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-104.21.41.4-2228 | 54.278MB
+  servername: RELAY-104.21.41.4-2170 | 56.066MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: new1.huvicloud.com
+- name: RELAY-104.17.147.22-1658 | 35.713MB
+  server: www.speedtest.net
+  port: 443
+  type: vmess
+  uuid: b7acf44f-3c3a-430c-8ed0-fb64ccc9a13a
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: BLaZE-fRA-64.BLaZECLOuD.sitE
 - name: 🇸🇬 新加坡 20
   server: 104.18.2.150
   network: ws
