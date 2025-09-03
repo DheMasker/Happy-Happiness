@@ -1,5 +1,5 @@
 proxies:
-- name: 029d8dc8838d41788b418bd9420f330f_@_@Hope_Net-join-us-on-Telegram
+- name: dd3eac3f721442628822de60627b419f_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: 2aace0da3b234b61a3f80bcfc7e1bad5_@_🅼🅴🅷🅳🅸
+- name: 43a852bd79c24740ae56de4fe8240aee_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -316,7 +316,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-104.21.41.4-0690 | 0.479MB
+- name: RELAY-104.21.41.4-0690 | 7.005MB
   server: u1.huvicloud.com
   port: 443
   type: vmess
@@ -330,7 +330,7 @@ proxies:
     path: /
     headers:
       Host: u1.huvicloud.com
-- name: 🇺🇸US-209.126.84.189-5065 | 0.462MB
+- name: 🇺🇸US-209.126.84.189-5065 | 6.085MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -339,13 +339,13 @@ proxies:
   cipher: auto
   tls: false
   skip-cert-verify: false
-  servername: 🇺🇸US-209.126.84.189-5065 | 0.462MB
+  servername: 🇺🇸US-209.126.84.189-5065 | 6.085MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: 🇸🇬SG-103.253.26.20-0158 | 0.0MB
+- name: 🇸🇬SG-103.253.26.20-0158 | 0.038MB
   server: 103.253.26.20
   port: 443
   type: vmess
@@ -373,35 +373,6 @@ proxies:
     path: /
     headers:
       Host: vjp3.0bad.com
-- name: RELAY-104.21.41.4-2170 | 56.066MB
-  server: new1.huvicloud.com
-  port: 443
-  type: vmess
-  uuid: 0f02e02f-418d-4434-b0cf-dbdd15892333
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: RELAY-104.21.41.4-2170 | 56.066MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: new1.huvicloud.com
-- name: RELAY-104.17.147.22-1658 | 35.713MB
-  server: www.speedtest.net
-  port: 443
-  type: vmess
-  uuid: b7acf44f-3c3a-430c-8ed0-fb64ccc9a13a
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: BLaZE-fRA-64.BLaZECLOuD.sitE
 - name: 🇸🇬 新加坡 20
   server: 104.18.2.150
   network: ws
@@ -415,6 +386,20 @@ proxies:
     headers:
       Host: ocost-dy.wmlefl.cc
     path: /?ed=2560
+- name: 🇺🇸_美国_77
+  server: 104.17.148.22
+  alterId: '0'
+  cipher: auto
+  network: ws
+  port: 443
+  server_url: www.speedtest.net
+  tls: true
+  type: vmess
+  uuid: b7acf44f-3c3a-430c-8ed0-fb64ccc9a13a
+  ws-opts:
+    headers:
+      host: BLaZE-fRA-64.BLaZECLOuD.sitE
+    path: /linkvkwss
 - name: DE_1
   server: 185.146.173.158
   port: 443
