@@ -1,5 +1,5 @@
 proxies:
-- name: fd739fa0ad434a72bbcbdffe2924ce54_@_@Hope_Net-join-us-on-Telegram
+- name: ae82800eb1b744b28b151f3945ea90ea_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: e2f0dcd065ce4c74a0656f583dc383dd_@_🅼🅴🅷🅳🅸
+- name: 68c9d38b0a2c44b9a2864fe51d49115e_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -359,33 +359,19 @@ proxies:
     path: /
     headers:
       Host: vjp3.0bad.com
-- name: 🇸🇬 新加坡 20
+- name: '🇺🇸 美国 544 #2'
   server: 104.18.2.150
   network: ws
   password: slch2024
   port: 443
-  server_url: usa.visa.com
+  skip-cert-verify: true
   sni: ocost-dy.wmlefl.cc
   type: trojan
   udp: true
   ws-opts:
     headers:
       Host: ocost-dy.wmlefl.cc
-    path: /?ed=2560
-- name: '🇺🇸_美国_77 #2'
-  server: 104.17.148.22
-  alterId: '0'
-  cipher: auto
-  network: ws
-  port: 443
-  server_url: www.speedtest.net
-  tls: true
-  type: vmess
-  uuid: b7acf44f-3c3a-430c-8ed0-fb64ccc9a13a
-  ws-opts:
-    headers:
-      host: BLaZE-fRA-64.BLaZECLOuD.sitE
-    path: /linkvkwss
+    path: /
 - name: DE_1
   server: 185.146.173.158
   port: 443
