@@ -1,5 +1,5 @@
 proxies:
-- name: 1ec75e9f333146a19a5f1f6ed10c293a_@_@Hope_Net-join-us-on-Telegram
+- name: feeaf2f447c84bbc8c342094d2ee980a_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: b049b485416946b1bd9e924b8c858b53_@_🅼🅴🅷🅳🅸
+- name: 73ef22cc0124498f9784f5151252222c_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -303,7 +303,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-209.126.84.189-5122 | 0.894MB
+- name: 🇺🇸US-209.126.84.189-5166 | 0.189MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -312,13 +312,13 @@ proxies:
   cipher: auto
   tls: false
   skip-cert-verify: false
-  servername: 🇺🇸US-209.126.84.189-5122 | 0.894MB
+  servername: 🇺🇸US-209.126.84.189-5166 | 0.189MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: 🇸🇬SG-103.253.26.20-0170 | 0.21MB
+- name: 🇸🇬SG-103.253.26.20-0167 | 0.0MB
   server: 103.253.26.20
   port: 443
   type: vmess
@@ -332,7 +332,7 @@ proxies:
     path: /
     headers:
       Host: zecjk.com
-- name: 🇦🇺AU-103.224.212.215-0164 | 0.143MB
+- name: 🇦🇺AU-103.224.212.215-0161 | 0.0MB
   server: vjp3.0bad.com
   port: 443
   type: vmess
@@ -346,18 +346,6 @@ proxies:
     path: /
     headers:
       Host: vjp3.0bad.com
-- name: '[Trojan] US_speednode_0024'
-  server: 104.24.57.5
-  network: ws
-  password: trojan
-  port: 443
-  skip-cert-verify: false
-  sni: azadnet2-dl4.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: azadnet2-dl4.pages.dev
-    path: /?ed=2560
 - name: '🇺🇸 美国 544 #2'
   server: 104.18.2.150
   network: ws
@@ -382,6 +370,17 @@ proxies:
     path: /
     headers:
       Host: esetsecuritylicense.bwnsmv.workers.dev
+- name: SG_1
+  server: 103.116.7.1
+  port: 443
+  type: trojan
+  password: trojan
+  sni: wahaha.yingyangkuaixian.dpdns.org
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: wahaha.yingyangkuaixian.dpdns.org
 - name: SG_3
   server: 104.21.16.1
   port: 443
