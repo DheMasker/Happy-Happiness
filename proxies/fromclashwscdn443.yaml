@@ -1,5 +1,5 @@
 proxies:
-- name: 4198ba6bb836451ba473bf7a94004a64_@_@Hope_Net-join-us-on-Telegram
+- name: 1ec75e9f333146a19a5f1f6ed10c293a_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: 90338181e4e746268b1b560163516306_@_🅼🅴🅷🅳🅸
+- name: b049b485416946b1bd9e924b8c858b53_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -33,19 +33,6 @@ proxies:
     headers:
       host: 920f9840-4d0f-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat
     path: /920f9840-4d0f-11f0-a948-6a75f667b472?ed=2048
-- name: 14|US_speednode_0024
-  server: 104.24.57.5
-  network: ws
-  password: trojan
-  port: 443
-  skip-cert-verify: false
-  sni: azadnet2-dl4.pages.dev
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: azadnet2-dl4.pages.dev
-    path: /?ed=2560
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -316,7 +303,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-209.126.84.189-5122 | 0.121MB
+- name: 🇺🇸US-209.126.84.189-5122 | 0.894MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -325,13 +312,13 @@ proxies:
   cipher: auto
   tls: false
   skip-cert-verify: false
-  servername: 🇺🇸US-209.126.84.189-5122 | 0.121MB
+  servername: 🇺🇸US-209.126.84.189-5122 | 0.894MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: 🇸🇬SG-103.253.26.20-0170 | 0.0MB
+- name: 🇸🇬SG-103.253.26.20-0170 | 0.21MB
   server: 103.253.26.20
   port: 443
   type: vmess
@@ -345,7 +332,7 @@ proxies:
     path: /
     headers:
       Host: zecjk.com
-- name: 🇦🇺AU-103.224.212.215-0164 | 0.0MB
+- name: 🇦🇺AU-103.224.212.215-0164 | 0.143MB
   server: vjp3.0bad.com
   port: 443
   type: vmess
@@ -359,6 +346,18 @@ proxies:
     path: /
     headers:
       Host: vjp3.0bad.com
+- name: '[Trojan] US_speednode_0024'
+  server: 104.24.57.5
+  network: ws
+  password: trojan
+  port: 443
+  skip-cert-verify: false
+  sni: azadnet2-dl4.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: azadnet2-dl4.pages.dev
+    path: /?ed=2560
 - name: '🇺🇸 美国 544 #2'
   server: 104.18.2.150
   network: ws
