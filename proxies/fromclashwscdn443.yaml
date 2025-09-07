@@ -1,5 +1,5 @@
 proxies:
-- name: d40e4014ed804278bb8daca29845b436_@_@Hope_Net-join-us-on-Telegram
+- name: 1b81141c3fd4461fbbe3626954a40e21_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: 224cd454c2a44724b0e9e80081314116_@_🅼🅴🅷🅳🅸
+- name: adba7b990e07442cb8953b2d41dd1673_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -303,7 +303,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-209.126.84.189-5160 | 0.51MB
+- name: 🇺🇸US-209.126.84.189-5127 | 16.904MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -312,13 +312,13 @@ proxies:
   cipher: auto
   tls: false
   skip-cert-verify: false
-  servername: 🇺🇸US-209.126.84.189-5160 | 0.51MB
+  servername: 🇺🇸US-209.126.84.189-5127 | 16.904MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: 🇸🇬SG-103.253.26.20-0167 | 0.02MB
+- name: 🇸🇬SG-103.253.26.20-0166 | 0.0MB
   server: 103.253.26.20
   port: 443
   type: vmess
@@ -332,7 +332,7 @@ proxies:
     path: /
     headers:
       Host: zecjk.com
-- name: 🇦🇺AU-103.224.212.215-0161 | 0.0MB
+- name: 🇦🇺AU-103.224.212.215-0160 | 0.0MB
   server: vjp3.0bad.com
   port: 443
   type: vmess
@@ -346,19 +346,6 @@ proxies:
     path: /
     headers:
       Host: vjp3.0bad.com
-- name: '🇺🇸 美国 812 #2'
-  server: 104.18.3.150
-  network: ws
-  password: slch2024
-  port: 443
-  skip-cert-verify: true
-  sni: ocost-dy.wmlefl.cc
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: ocost-dy.wmlefl.cc
-    path: /
 - name: DE_1
   server: 185.146.173.158
   port: 443
@@ -381,6 +368,17 @@ proxies:
     path: /?ed=2560
     headers:
       Host: wahaha.yingyangkuaixian.dpdns.org
+- name: SG_11
+  server: 104.18.3.150
+  port: 443
+  type: trojan
+  password: slch2024
+  sni: ocost-dy.wmlefl.cc
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ocost-dy.wmlefl.cc
 - name: SG_3
   server: 104.21.16.1
   port: 443
