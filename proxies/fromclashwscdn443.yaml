@@ -1,5 +1,5 @@
 proxies:
-- name: da436e5bf8c14ff48f36edbc79247434_@_@Hope_Net-join-us-on-Telegram
+- name: 9a536c9c17d648b4a04f385766b9c12d_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: fa36ccf14dcb45c1960a53596a6bbed4_@_🅼🅴🅷🅳🅸
+- name: 615d793c049f4fb68a8058861421f9ef_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -303,23 +303,22 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-209.126.84.189-5204 | 2.053MB
-  server: v2ray.codefyinc.com
+- name: 🇦🇺AU-103.224.212.215-0210 | 0.0MB
+  server: vjp3.0bad.com
   port: 443
   type: vmess
-  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
+  uuid: 927094d3-d678-4763-8591-e240d0bcae87
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: false
-  servername: 🇺🇸US-209.126.84.189-5204 | 2.053MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: v2ray.codefyinc.com
-- name: 🇸🇬SG-103.253.26.20-0208 | 0.0MB
-  server: 103.253.26.20
+      Host: vjp3.0bad.com
+- name: 🇸🇬SG-103.253.26.134-0211 | 0.0MB
+  server: 103.253.26.134
   port: 443
   type: vmess
   uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
@@ -331,7 +330,22 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: zecjk.com
+      Host: eeh7iewe.com
+- name: 🇩🇪DE-57.129.6.73-1841 | 24.57MB
+  server: blaze-de-73.blazeserver11.site
+  port: 443
+  type: vmess
+  uuid: 2c37fd3f-45d2-4eaa-ba76-e3a65d98b611
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇩🇪DE-57.129.6.73-1841 | 24.57MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: BLazE-dE-73.BLazEseRveR11.sitE
 - name: DE_1
   server: 185.146.173.158
   port: 443
