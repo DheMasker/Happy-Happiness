@@ -1,5 +1,5 @@
 proxies:
-- name: 3525f6f6909b4ce7be999e9aeb2a83ee_@_@Hope_Net-join-us-on-Telegram
+- name: 230b284b6f6146b0bf41fb09a36c17e7_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: 647c4cb3f73c4ea489dd9658432c2096_@_🅼🅴🅷🅳🅸
+- name: fd5b7cad2e2449e295a42fb577afb493_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -303,7 +303,21 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-209.126.84.189-5313 | 0.352MB
+- name: RELAY-104.18.149.76-0777 | 3.541MB
+  server: 104.18.149.76
+  port: 443
+  type: vmess
+  uuid: de94cc0a-0592-4969-b1fc-97ea8f0ea0b3
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: us.kkp.me.eu.org
+- name: 🇺🇸US-209.126.84.189-5451 | 3.217MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -312,26 +326,42 @@ proxies:
   cipher: auto
   tls: false
   skip-cert-verify: false
-  servername: 🇺🇸US-209.126.84.189-5313 | 0.352MB
+  servername: 🇺🇸US-209.126.84.189-5451 | 3.217MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: 🇸🇬SG-103.253.26.20-0216 | 0.0MB
-  server: 103.253.26.20
+- name: 🇺🇸US-15.204.239.14-1801 | 50.336MB
+  server: 15.204.239.14
   port: 443
   type: vmess
-  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
-  alterId: 4
+  uuid: 59b0b7da-6ea6-4685-a760-0ef304aef0e3
+  alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: false
+  servername: 🇺🇸US-15.204.239.14-1801 | 50.336MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: zecjk.com
+      Host: BlaZe-Us-14.BLazECLoUdmaIN.site
+- name: 🇺🇸US-15.204.175.111-1799 | 43.588MB
+  server: 15.204.175.111
+  port: 443
+  type: vmess
+  uuid: 02993116-6406-4646-b876-2a861a2623f9
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇺🇸US-15.204.175.111-1799 | 43.588MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: BlAZe-Us-111.blazeserVeRs1.SiTe
 - name: DE_1
   server: 185.146.173.158
   port: 443
