@@ -303,7 +303,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-209.126.84.189-5503 | 6.941MB
+- name: 🇺🇸US-209.126.84.189-5353 | 0.585MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -312,13 +312,25 @@ proxies:
   cipher: auto
   tls: false
   skip-cert-verify: false
-  servername: 🇺🇸US-209.126.84.189-5503 | 6.941MB
+  servername: 🇺🇸US-209.126.84.189-5353 | 0.585MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: 🇦🇺AU-103.224.212.215-0216 | 0.0MB
+- name: 🇸🇬SG-202.79.161.192-0822 | 0.078MB
+  server: 202.79.161.192
+  port: 443
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇦🇺AU-103.224.212.215-0197 | 0.0MB
   server: vjp1.0bad.com
   port: 443
   type: vmess
@@ -332,7 +344,7 @@ proxies:
     path: /
     headers:
       Host: vjp1.0bad.com
-- name: 🇸🇬SG-103.253.26.134-0218 | 0.0MB
+- name: 🇸🇬SG-103.253.26.134-0199 | 0.0MB
   server: 103.253.26.134
   port: 443
   type: vmess
@@ -346,21 +358,19 @@ proxies:
     path: /
     headers:
       Host: eeh7iewe.com
-- name: xx|6b18|puddincat07@Telegram
-  server: vc.fly.dev
-  alterId: 32
+- name: us|d016|puddincat07@Telegram
+  server: 104.16.1.195
+  alterId: 0
   cipher: auto
-  client-fingerprint: chrome
   network: ws
   port: 443
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  udp: true
+  uuid: c8abf66a-1903-4638-a448-9c86733e4254
   ws-opts:
-    headers:
-      host: vc.fly.dev
-    path: /vc
+    path: /wss13480
 - name: DE_1
   server: 185.146.173.158
   port: 443
