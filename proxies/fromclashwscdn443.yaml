@@ -303,48 +303,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-209.126.84.189-5353 | 5.86MB
-  server: v2ray.codefyinc.com
-  port: 443
-  type: vmess
-  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  servername: 🇺🇸US-209.126.84.189-5353 | 5.86MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: v2ray.codefyinc.com
-- name: 🇸🇬SG-202.79.161.192-0822 | 0.347MB
-  server: 202.79.161.192
-  port: 443
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇦🇺AU-103.224.212.215-0197 | 0.109MB
-  server: vjp1.0bad.com
-  port: 443
-  type: vmess
-  uuid: 927094d3-d678-4763-8591-e240d0bcae87
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vjp1.0bad.com
-- name: 🇸🇬SG-103.253.26.134-0199 | 0.099MB
+- name: 🇸🇬SG-103.253.26.134-0168 | 0.0MB
   server: 103.253.26.134
   port: 443
   type: vmess
@@ -358,21 +317,20 @@ proxies:
     path: /
     headers:
       Host: eeh7iewe.com
-- name: 🇺🇸US-15.204.175.111-1447 | 44.17MB
-  server: 15.204.175.111
+- name: 🇦🇺AU-103.224.212.215-0167 | 0.0MB
+  server: vjp3.0bad.com
   port: 443
   type: vmess
-  uuid: 02993116-6406-4646-b876-2a861a2623f9
+  uuid: 927094d3-d678-4763-8591-e240d0bcae87
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇺🇸US-15.204.175.111-1447 | 44.17MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: BlAZe-Us-111.blazeserVeRs1.SiTe
+      Host: vjp3.0bad.com
 - name: DE_1
   server: 185.146.173.158
   port: 443
