@@ -303,8 +303,8 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇸🇬SG-103.253.26.134-0168 | 0.0MB
-  server: 103.253.26.134
+- name: 🇸🇬SG-103.253.26.20-0173 | 0.0MB
+  server: 103.253.26.20
   port: 443
   type: vmess
   uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
@@ -316,7 +316,7 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: eeh7iewe.com
+      Host: zecjk.com
 - name: 🇦🇺AU-103.224.212.215-0167 | 0.0MB
   server: vjp3.0bad.com
   port: 443
@@ -331,6 +331,21 @@ proxies:
     path: /
     headers:
       Host: vjp3.0bad.com
+- name: 🇺🇸US-15.204.239.14-1418 | 123.137MB
+  server: 15.204.239.14
+  port: 443
+  type: vmess
+  uuid: 59b0b7da-6ea6-4685-a760-0ef304aef0e3
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇺🇸US-15.204.239.14-1418 | 123.137MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: BlaZe-Us-14.BLazECLoUdmaIN.site
 - name: DE_1
   server: 185.146.173.158
   port: 443
