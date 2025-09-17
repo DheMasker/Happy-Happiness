@@ -303,7 +303,36 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-209.126.84.189-5131 | 3.37MB
+- name: RELAY-104.18.10.143-0923 | 8.48MB
+  server: 104.18.10.143
+  port: 443
+  type: vmess
+  uuid: 6acd1528-42cc-43cf-93a4-f36bd859f6d2
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: chichakebaxibaxi.guojiajia.dpdns.org
+- name: 🇺🇸US-77.83.141.171-5032 | 1.926MB
+  server: vc.fly.dev
+  port: 443
+  type: vmess
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇺🇸US-77.83.141.171-5032 | 1.926MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vc.fly.dev
+- name: 🇺🇸US-209.126.84.189-5022 | 0.443MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -312,13 +341,13 @@ proxies:
   cipher: auto
   tls: false
   skip-cert-verify: false
-  servername: 🇺🇸US-209.126.84.189-5131 | 3.37MB
+  servername: 🇺🇸US-209.126.84.189-5022 | 0.443MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: 🇸🇬SG-202.79.161.192-4800 | 0.079MB
+- name: 🇸🇬SG-202.79.161.192-4825 | 0.013MB
   server: 202.79.161.192
   port: 443
   type: vmess
@@ -330,36 +359,6 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇺🇸US-15.204.239.14-1370 | 113.201MB
-  server: 15.204.239.14
-  port: 443
-  type: vmess
-  uuid: 59b0b7da-6ea6-4685-a760-0ef304aef0e3
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇺🇸US-15.204.239.14-1370 | 113.201MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: BlaZe-Us-14.BLazECLoUdmaIN.site
-- name: 🇺🇸US-15.204.175.111-1368 | 98.133MB
-  server: 15.204.175.111
-  port: 443
-  type: vmess
-  uuid: 02993116-6406-4646-b876-2a861a2623f9
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇺🇸US-15.204.175.111-1368 | 98.133MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: BlAZe-Us-111.blazeserVeRs1.SiTe
 - name: DE_1
   server: 185.146.173.158
   port: 443
