@@ -33,7 +33,7 @@ proxies:
     headers:
       host: 920f9840-4d0f-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat
     path: /920f9840-4d0f-11f0-a948-6a75f667b472?ed=2048
-- name: 14|US_speednode_0029
+- name: 13|US_speednode_0029
   server: 154.29.155.249
   network: ws
   password: juzi
@@ -390,6 +390,21 @@ proxies:
     path: /
     headers:
       Host: BLaze-GERMaNy-6.bLaZeserVeRs1.Site
+- name: xx|ae88|puddincat07@Telegram
+  server: vc.fly.dev
+  alterId: 32
+  cipher: auto
+  client-fingerprint: chrome
+  network: ws
+  port: 443
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  ws-opts:
+    headers:
+      host: vc.fly.dev
+    path: /vc
 - name: DE_1
   server: 185.146.173.158
   port: 443
