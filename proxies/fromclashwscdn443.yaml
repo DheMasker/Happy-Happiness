@@ -33,6 +33,19 @@ proxies:
     headers:
       host: 920f9840-4d0f-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat
     path: /920f9840-4d0f-11f0-a948-6a75f667b472?ed=2048
+- name: 14|US_speednode_0029
+  server: 154.29.155.249
+  network: ws
+  password: juzi
+  port: 443
+  skip-cert-verify: true
+  sni: juzi8186-sr1.pages.dev
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: juzi8186-sr1.pages.dev
+    path: /?ed=2560
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -303,7 +316,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇫🇷FR-51.77.220.179-7184 | 40.114MB
+- name: 🇫🇷FR-51.77.220.179-7184 | 19.677MB
   server: 51.77.220.179
   port: 443
   type: vmess
@@ -312,28 +325,42 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇫🇷FR-51.77.220.179-7184 | 40.114MB
+  servername: 🇫🇷FR-51.77.220.179-7184 | 19.677MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: BlaZE-FR-179.BlAzeSeRvERs1.Site
-- name: 🇺🇸US-15.204.175.111-1361 | 142.9MB
-  server: 15.204.175.111
+- name: 🇺🇸US-209.126.84.189-0663 | 0.387MB
+  server: v2ray.codefyinc.com
   port: 443
   type: vmess
-  uuid: 02993116-6406-4646-b876-2a861a2623f9
+  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: false
-  servername: 🇺🇸US-15.204.175.111-1361 | 142.9MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: BlAZe-Us-111.blazeserVeRs1.SiTe
-- name: 🇫🇷FR-51.77.221.113-1357 | 36.67MB
+      Host: v2ray.codefyinc.com
+- name: 🇺🇸US-15.204.239.14-1374 | 101.356MB
+  server: 15.204.239.14
+  port: 443
+  type: vmess
+  uuid: 59b0b7da-6ea6-4685-a760-0ef304aef0e3
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇺🇸US-15.204.239.14-1374 | 101.356MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: BlaZe-Us-14.BLazECLoUdmaIN.site
+- name: 🇫🇷FR-51.77.221.113-1361 | 35.391MB
   server: 51.77.221.113
   port: 443
   type: vmess
@@ -342,12 +369,27 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇫🇷FR-51.77.221.113-1357 | 36.67MB
+  servername: 🇫🇷FR-51.77.221.113-1361 | 35.391MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: BLaZe-FR-113.BlazeseRveR12.siTe
+- name: 🇫🇷FR-51.195.91.6-1358 | 29.986MB
+  server: 51.195.91.6
+  port: 443
+  type: vmess
+  uuid: 441a06df-989f-4d06-aef0-1d90ad3f8582
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇫🇷FR-51.195.91.6-1358 | 29.986MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: BLaze-GERMaNy-6.bLaZeserVeRs1.Site
 - name: DE_1
   server: 185.146.173.158
   port: 443
