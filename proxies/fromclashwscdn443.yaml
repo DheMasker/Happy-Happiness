@@ -303,7 +303,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-209.126.84.189-0630 | 3.026MB
+- name: 🇺🇸US-209.126.84.189-0630 | 0.661MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -317,6 +317,48 @@ proxies:
     path: /
     headers:
       Host: v2ray.codefyinc.com
+- name: 🇸🇬SG-202.79.161.192-4854 | 0.0MB
+  server: 202.79.161.192
+  port: 443
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇺🇸US-15.204.175.111-1390 | 138.704MB
+  server: 15.204.175.111
+  port: 443
+  type: vmess
+  uuid: 02993116-6406-4646-b876-2a861a2623f9
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇺🇸US-15.204.175.111-1390 | 138.704MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: BlAZe-Us-111.blazeserVeRs1.SiTe
+- name: 🇺🇸US-15.204.239.14-1388 | 125.337MB
+  server: 15.204.239.14
+  port: 443
+  type: vmess
+  uuid: 59b0b7da-6ea6-4685-a760-0ef304aef0e3
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇺🇸US-15.204.239.14-1388 | 125.337MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: BlaZe-Us-14.BLazECLoUdmaIN.site
 - name: DE_1
   server: 185.146.173.158
   port: 443
