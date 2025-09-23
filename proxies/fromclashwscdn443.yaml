@@ -303,7 +303,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-77.83.141.171-5122 | 0.923MB
+- name: 🇺🇸US-77.83.141.171-5129 | 7.016MB
   server: vc.fly.dev
   port: 443
   type: vmess
@@ -312,13 +312,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇺🇸US-77.83.141.171-5122 | 0.923MB
+  servername: 🇺🇸US-77.83.141.171-5129 | 7.016MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: vc.fly.dev
-- name: 🇺🇸US-209.126.84.189-0636 | 0.117MB
+- name: 🇺🇸US-209.126.84.189-0645 | 3.989MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -332,19 +332,22 @@ proxies:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: 🇸🇬SG-202.79.161.192-4907 | 0.1MB
-  server: 202.79.161.192
+- name: 🇺🇸US-15.204.175.111-1377 | 113.758MB
+  server: 15.204.175.111
   port: 443
   type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  uuid: 02993116-6406-4646-b876-2a861a2623f9
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: false
+  servername: 🇺🇸US-15.204.175.111-1377 | 113.758MB
   network: ws
   ws-opts:
     path: /
-- name: 🇬🇧GB-51.75.160.237-1390 | 40.379MB
+    headers:
+      Host: BlAZe-Us-111.blazeserVeRs1.SiTe
+- name: 🇬🇧GB-51.75.160.237-1379 | 38.2MB
   server: 51.75.160.237
   port: 443
   type: vmess
@@ -353,27 +356,28 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇬🇧GB-51.75.160.237-1390 | 40.379MB
+  servername: 🇬🇧GB-51.75.160.237-1379 | 38.2MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: blazE-Uk-237.BLaZEsERVERs1.sItE
-- name: 🇫🇷FR-51.75.161.102-1398 | 40.155MB
-  server: 51.75.161.102
-  port: 443
-  type: vmess
-  uuid: 1805c3ae-ed84-4e7e-8ca2-fe9acd0897b0
+- name: xx|bf0c|puddincat07@Telegram
+  server: cf.877774.xyz
   alterId: 0
   cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇫🇷FR-51.75.161.102-1398 | 40.155MB
   network: ws
+  port: 443
+  servername: enlargement-decreased-directors-consensus.trycloudflare.com
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 2c833c5d-cbcc-4afb-89ba-d17dc39db6f0
   ws-opts:
-    path: /
     headers:
-      Host: bLAZe-UK-102.bLaZESErvErS1.Site
+      Host: enlargement-decreased-directors-consensus.trycloudflare.com
+    path: /vmess-argo?ed=2560
 - name: DE_1
   server: 185.146.173.158
   port: 443
