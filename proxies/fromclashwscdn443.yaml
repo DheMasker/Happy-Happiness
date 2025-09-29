@@ -303,23 +303,8 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-77.83.141.171-5550 | 26.294MB
-  server: vc.fly.dev
-  port: 443
-  type: vmess
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
-  alterId: 32
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇺🇸US-77.83.141.171-5550 | 26.294MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vc.fly.dev
-- name: 🇺🇸US-209.126.84.189-0608 | 3.176MB
-  server: v2ray.codefyinc.com
+- name: 🇺🇸US-209.126.84.189-0777 | 0.388MB
+  server: 209.126.84.189
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -331,22 +316,22 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: v2ray.codefyinc.com
-- name: 🇬🇧GB-51.75.160.237-1400 | 28.415MB
-  server: 51.75.160.237
+      Host: 209.126.84.189
+- name: 🇫🇷FR-51.77.221.113-1314 | 30.158MB
+  server: 51.77.221.113
   port: 443
   type: vmess
-  uuid: 3adba462-318f-4a6c-ad7a-2923bc74f207
+  uuid: 32b5d097-46b3-4903-87ab-382a7be859b8
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇬🇧GB-51.75.160.237-1400 | 28.415MB
+  servername: 🇫🇷FR-51.77.221.113-1314 | 30.158MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: blazE-Uk-237.BLaZEsERVERs1.sItE
+      Host: BLaZe-FR-113.BlazeseRveR12.siTe
 - name: DE_1
   server: 185.146.173.158
   port: 443
