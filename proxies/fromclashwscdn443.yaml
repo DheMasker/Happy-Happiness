@@ -303,7 +303,22 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-209.126.84.189-0777 | 0.388MB
+- name: 🇺🇸US-77.83.141.171-5417 | 16.471MB
+  server: vc.fly.dev
+  port: 443
+  type: vmess
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇺🇸US-77.83.141.171-5417 | 16.471MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vc.fly.dev
+- name: 🇺🇸US-209.126.84.189-0769 | 3.5MB
   server: 209.126.84.189
   port: 443
   type: vmess
@@ -317,21 +332,51 @@ proxies:
     path: /
     headers:
       Host: 209.126.84.189
-- name: 🇫🇷FR-51.77.221.113-1314 | 30.158MB
-  server: 51.77.221.113
+- name: 🇸🇬SG-43.159.98.32-5129 | 2.083MB
+  server: csdn.usdone.one
   port: 443
   type: vmess
-  uuid: 32b5d097-46b3-4903-87ab-382a7be859b8
+  uuid: f89a6eaf-0436-414f-8811-0cf68d793f55
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇫🇷FR-51.77.221.113-1314 | 30.158MB
+  servername: 🇸🇬SG-43.159.98.32-5129 | 2.083MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: BLaZe-FR-113.BlazeseRveR12.siTe
+      Host: csdn.usdone.one
+- name: 🇺🇸US-15.204.239.14-1346 | 174.058MB
+  server: 15.204.239.14
+  port: 443
+  type: vmess
+  uuid: 59b0b7da-6ea6-4685-a760-0ef304aef0e3
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇺🇸US-15.204.239.14-1346 | 174.058MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: BlaZe-Us-14.BLazECLoUdmaIN.site
+- name: 🇬🇧GB-51.75.160.237-1366 | 37.826MB
+  server: 51.75.160.237
+  port: 443
+  type: vmess
+  uuid: 3adba462-318f-4a6c-ad7a-2923bc74f207
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇬🇧GB-51.75.160.237-1366 | 37.826MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: blazE-Uk-237.BLaZEsERVERs1.sItE
 - name: DE_1
   server: 185.146.173.158
   port: 443
