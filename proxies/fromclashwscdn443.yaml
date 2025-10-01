@@ -303,21 +303,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-157.254.231.205-1165 | 22.703MB
-  server: xsj023-0.facai2024.com
-  port: 443
-  type: vmess
-  uuid: 5bdf2e4d-2a2e-473d-c7cc-8cd815d6c3ff
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: xsj023-0.facai2024.com
-- name: 🇺🇸US-209.126.84.189-0820 | 17.487MB
+- name: 🇺🇸US-209.126.84.189-0802 | 2.313MB
   server: 209.126.84.189
   port: 443
   type: vmess
@@ -331,7 +317,36 @@ proxies:
     path: /
     headers:
       Host: 209.126.84.189
-- name: 🇬🇧GB-51.75.160.237-1357 | 37.77MB
+- name: 🇺🇸US-77.83.141.171-0862 | 1.962MB
+  server: vc.fly.dev
+  port: 443
+  type: vmess
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vc.fly.dev
+- name: 🇺🇸US-15.204.239.14-1328 | 40.907MB
+  server: 15.204.239.14
+  port: 443
+  type: vmess
+  uuid: 59b0b7da-6ea6-4685-a760-0ef304aef0e3
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇺🇸US-15.204.239.14-1328 | 40.907MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: BlaZe-Us-14.BLazECLoUdmaIN.site
+- name: 🇬🇧GB-51.75.160.237-1286 | 34.296MB
   server: 51.75.160.237
   port: 443
   type: vmess
@@ -340,55 +355,40 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇬🇧GB-51.75.160.237-1357 | 37.77MB
+  servername: 🇬🇧GB-51.75.160.237-1286 | 34.296MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: blazE-Uk-237.BLaZEsERVERs1.sItE
-- name: hk|1195|puddincat07@Telegram
-  server: 154.21.201.83
+- name: 🇫🇷FR-51.195.91.6-1329 | 26.849MB
+  server: 51.195.91.6
+  port: 443
+  type: vmess
+  uuid: 441a06df-989f-4d06-aef0-1d90ad3f8582
   alterId: 0
   cipher: auto
-  network: ws
-  port: 443
+  tls: true
   skip-cert-verify: false
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 4bf075f5-4d5e-4d39-f5ab-b32a86250f0e
+  servername: 🇫🇷FR-51.195.91.6-1329 | 26.849MB
+  network: ws
   ws-opts:
+    path: /
     headers:
-      Host: hk.nbee.pp.ua
-    path: /aa
-- name: us|ad1a|puddincat07@Telegram
-  server: 104.21.4.6
+      Host: BLaze-GERMaNy-6.bLaZeserVeRs1.Site
+- name: xx|3ff3|puddincat07@Telegram
+  server: klo.986986.shop
   alterId: 0
   cipher: auto
   network: ws
   port: 443
-  skip-cert-verify: true
   tls: true
   type: vmess
-  udp: true
-  uuid: 1052f24e-7b09-45eb-b0c5-d858eb124192
+  uuid: b75c9731-408d-4aa6-8ae9-3857205113a1
   ws-opts:
     headers:
-      Host: glweidf.cfd
-    path: /linkws
-- name: us|130b|puddincat07@Telegram
-  server: 172.67.191.234
-  network: ws
-  password: 7f2782e1-1f1a-4c5b-b4ae-cead54b8c381
-  port: 443
-  skip-cert-verify: true
-  sni: nl1.tRojANVpN.xYZ
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: nl1.tRojANVpN.xYZ
-    path: '%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252F'
+      Host: klo.986986.shop
+    path: /nvjx6j7kbDQIQMZvbeVA9
 - name: DE_1
   server: 185.146.173.158
   port: 443
