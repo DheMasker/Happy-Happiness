@@ -303,7 +303,21 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-209.126.84.189-0769 | 0.125MB
+- name: 🇺🇸US-157.254.231.205-1165 | 22.703MB
+  server: xsj023-0.facai2024.com
+  port: 443
+  type: vmess
+  uuid: 5bdf2e4d-2a2e-473d-c7cc-8cd815d6c3ff
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: xsj023-0.facai2024.com
+- name: 🇺🇸US-209.126.84.189-0820 | 17.487MB
   server: 209.126.84.189
   port: 443
   type: vmess
@@ -317,20 +331,64 @@ proxies:
     path: /
     headers:
       Host: 209.126.84.189
-- name: 🇺🇸US-157.254.231.214-1226 | 29.763MB
-  server: xsj009-0.facai2024.com
+- name: 🇬🇧GB-51.75.160.237-1357 | 37.77MB
+  server: 51.75.160.237
   port: 443
   type: vmess
-  uuid: 748f631c-0ce0-4762-aadc-32d8fb2e412b
+  uuid: 3adba462-318f-4a6c-ad7a-2923bc74f207
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: false
+  servername: 🇬🇧GB-51.75.160.237-1357 | 37.77MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: xsj009-0.facai2024.com
+      Host: blazE-Uk-237.BLaZEsERVERs1.sItE
+- name: hk|1195|puddincat07@Telegram
+  server: 154.21.201.83
+  alterId: 0
+  cipher: auto
+  network: ws
+  port: 443
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 4bf075f5-4d5e-4d39-f5ab-b32a86250f0e
+  ws-opts:
+    headers:
+      Host: hk.nbee.pp.ua
+    path: /aa
+- name: us|ad1a|puddincat07@Telegram
+  server: 104.21.4.6
+  alterId: 0
+  cipher: auto
+  network: ws
+  port: 443
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 1052f24e-7b09-45eb-b0c5-d858eb124192
+  ws-opts:
+    headers:
+      Host: glweidf.cfd
+    path: /linkws
+- name: us|130b|puddincat07@Telegram
+  server: 172.67.191.234
+  network: ws
+  password: 7f2782e1-1f1a-4c5b-b4ae-cead54b8c381
+  port: 443
+  skip-cert-verify: true
+  sni: nl1.tRojANVpN.xYZ
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: nl1.tRojANVpN.xYZ
+    path: '%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252F'
 - name: DE_1
   server: 185.146.173.158
   port: 443
