@@ -303,7 +303,48 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-209.126.84.189-0802 | 2.313MB
+- name: RELAY-172.64.146.66-7554 | 64.827MB
+  server: cf.877774.xyz
+  port: 443
+  type: vmess
+  uuid: 2c833c5d-cbcc-4afb-89ba-d17dc39db6f0
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: RELAY-172.64.146.66-7554 | 64.827MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: enlargement-decreased-directors-consensus.trycloudflare.com
+- name: 🇺🇸US-157.254.231.31-5292 | 28.087MB
+  server: 157.254.231.31
+  port: 443
+  type: vmess
+  uuid: 56380b67-e2fe-49d1-a9dd-6c3a422b8e8c
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+- name: RELAY-172.67.200.13-1130 | 22.276MB
+  server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+  port: 443
+  type: vmess
+  uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+- name: 🇺🇸US-209.126.84.189-0825 | 7.969MB
   server: 209.126.84.189
   port: 443
   type: vmess
@@ -317,65 +358,32 @@ proxies:
     path: /
     headers:
       Host: 209.126.84.189
-- name: 🇺🇸US-77.83.141.171-0862 | 1.962MB
-  server: vc.fly.dev
-  port: 443
-  type: vmess
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
-  alterId: 32
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vc.fly.dev
-- name: 🇺🇸US-15.204.239.14-1328 | 40.907MB
-  server: 15.204.239.14
-  port: 443
-  type: vmess
-  uuid: 59b0b7da-6ea6-4685-a760-0ef304aef0e3
+- name: us|029f|puddincat07@Telegram
+  server: 154.17.227.158
   alterId: 0
   cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇺🇸US-15.204.239.14-1328 | 40.907MB
   network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: BlaZe-Us-14.BLazECLoUdmaIN.site
-- name: 🇬🇧GB-51.75.160.237-1286 | 34.296MB
-  server: 51.75.160.237
   port: 443
+  tls: true
   type: vmess
-  uuid: 3adba462-318f-4a6c-ad7a-2923bc74f207
+  uuid: de94cc0a-0592-4969-b1fc-97ea8f0ea0b3
+  ws-opts:
+    headers:
+      Host: us.nbee.pp.ua
+    path: /aa
+- name: xx|cf86|puddincat07@Telegram
+  server: klo.986986.shop
   alterId: 0
   cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇬🇧GB-51.75.160.237-1286 | 34.296MB
   network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: blazE-Uk-237.BLaZEsERVERs1.sItE
-- name: 🇫🇷FR-51.195.91.6-1329 | 26.849MB
-  server: 51.195.91.6
   port: 443
-  type: vmess
-  uuid: 441a06df-989f-4d06-aef0-1d90ad3f8582
-  alterId: 0
-  cipher: auto
   tls: true
-  skip-cert-verify: false
-  servername: 🇫🇷FR-51.195.91.6-1329 | 26.849MB
-  network: ws
+  type: vmess
+  uuid: b75c9731-408d-4aa6-8ae9-3857205113a1
   ws-opts:
-    path: /
     headers:
-      Host: BLaze-GERMaNy-6.bLaZeserVeRs1.Site
+      Host: klo.986986.shop
+    path: /nvjx6j7kbDQIQMZvbeVA9
 - name: DE_1
   server: 185.146.173.158
   port: 443
