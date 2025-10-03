@@ -303,19 +303,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-157.254.231.31-5283 | 35.102MB
-  server: 157.254.231.31
-  port: 443
-  type: vmess
-  uuid: 56380b67-e2fe-49d1-a9dd-6c3a422b8e8c
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-- name: RELAY-172.67.200.13-1150 | 32.001MB
+- name: RELAY-172.67.200.13-1150 | 1.321MB
   server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
   port: 443
   type: vmess
@@ -329,8 +317,8 @@ proxies:
     path: /
     headers:
       Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-- name: 🇺🇸US-209.126.84.189-0819 | 18.083MB
-  server: 209.126.84.189
+- name: 🇺🇸US-209.126.84.189-0650 | 0.574MB
+  server: v2ray.codefyinc.com
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -342,8 +330,50 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 209.126.84.189
-- name: us|692c|puddincat07@Telegram
+      Host: v2ray.codefyinc.com
+- name: 🇺🇸US-157.254.231.31-5283 | 0.543MB
+  server: 157.254.231.31
+  port: 443
+  type: vmess
+  uuid: 56380b67-e2fe-49d1-a9dd-6c3a422b8e8c
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇬🇧GB-51.75.160.237-1411 | 34.114MB
+  server: 51.75.160.237
+  port: 443
+  type: vmess
+  uuid: 3adba462-318f-4a6c-ad7a-2923bc74f207
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇬🇧GB-51.75.160.237-1411 | 34.114MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: blazE-Uk-237.BLaZEsERVERs1.sItE
+- name: 🇫🇷FR-51.77.221.113-1468 | 29.797MB
+  server: 51.77.221.113
+  port: 443
+  type: vmess
+  uuid: 32b5d097-46b3-4903-87ab-382a7be859b8
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇫🇷FR-51.77.221.113-1468 | 29.797MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: BLaZe-FR-113.BlazeseRveR12.siTe
+- name: us|889c|puddincat07@Telegram
   server: 154.17.227.158
   alterId: 0
   cipher: auto
