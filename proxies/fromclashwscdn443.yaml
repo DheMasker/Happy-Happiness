@@ -303,7 +303,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-104.21.21.192-1207 | 30.772MB
+- name: RELAY-104.21.21.192-1207 | 5.718MB
   server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
   port: 443
   type: vmess
@@ -317,19 +317,7 @@ proxies:
     path: /
     headers:
       Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-- name: 🇺🇸US-157.254.231.31-5497 | 27.664MB
-  server: 157.254.231.31
-  port: 443
-  type: vmess
-  uuid: 56380b67-e2fe-49d1-a9dd-6c3a422b8e8c
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇺🇸US-209.126.84.189-0596 | 6.731MB
+- name: 🇺🇸US-209.126.84.189-0596 | 0.914MB
   server: 209.126.84.189
   port: 443
   type: vmess
@@ -343,6 +331,18 @@ proxies:
     path: /
     headers:
       Host: 209.126.84.189
+- name: 🇺🇸US-157.254.231.31-5497 | 0.181MB
+  server: 157.254.231.31
+  port: 443
+  type: vmess
+  uuid: 56380b67-e2fe-49d1-a9dd-6c3a422b8e8c
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
 - name: 🇬🇧GB-51.75.160.237-1411 | 34.114MB
   server: 51.75.160.237
   port: 443
@@ -373,7 +373,7 @@ proxies:
     path: /
     headers:
       Host: BLaZe-FR-113.BlazeseRveR12.siTe
-- name: us|ac29|puddincat07@Telegram
+- name: us|1fcb|puddincat07@Telegram
   server: 154.17.227.158
   alterId: 0
   cipher: auto
