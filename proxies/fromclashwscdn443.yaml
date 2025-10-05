@@ -303,7 +303,75 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-104.21.21.192-1207 | 5.718MB
+- name: RELAY-172.67.143.87-0957 | 105.178MB
+  server: b-v1.888988866.xyz
+  port: 443
+  type: vmess
+  uuid: ab007933-7981-4267-9f33-fbc9c2575756
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: b-v1.888988866.xyz
+- name: RELAY-172.67.143.87-0958 | 83.845MB
+  server: y-v1.888988866.xyz
+  port: 443
+  type: vmess
+  uuid: a397bd18-5a5f-4a5a-bf03-ed5bc1a990eb
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: y-v1.888988866.xyz
+- name: 🇺🇸US-77.83.141.171-0909 | 26.469MB
+  server: vc.fly.dev
+  port: 443
+  type: vmess
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vc.fly.dev
+- name: 🇺🇸US-157.254.231.31-5476 | 25.472MB
+  server: 157.254.231.31
+  port: 443
+  type: vmess
+  uuid: 56380b67-e2fe-49d1-a9dd-6c3a422b8e8c
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+- name: RELAY-172.67.143.87-0956 | 22.406MB
+  server: a-v1.888988866.xyz
+  port: 443
+  type: vmess
+  uuid: 104556c9-797c-42e9-9bb7-7a6e9974b857
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: a-v1.888988866.xyz
+- name: RELAY-172.67.200.13-1211 | 20.674MB
   server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
   port: 443
   type: vmess
@@ -317,7 +385,7 @@ proxies:
     path: /
     headers:
       Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-- name: 🇺🇸US-209.126.84.189-0596 | 0.914MB
+- name: 🇺🇸US-209.126.84.189-0585 | 6.073MB
   server: 209.126.84.189
   port: 443
   type: vmess
@@ -331,18 +399,6 @@ proxies:
     path: /
     headers:
       Host: 209.126.84.189
-- name: 🇺🇸US-157.254.231.31-5497 | 0.181MB
-  server: 157.254.231.31
-  port: 443
-  type: vmess
-  uuid: 56380b67-e2fe-49d1-a9dd-6c3a422b8e8c
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
 - name: 🇬🇧GB-51.75.160.237-1411 | 34.114MB
   server: 51.75.160.237
   port: 443
@@ -373,7 +429,7 @@ proxies:
     path: /
     headers:
       Host: BLaZe-FR-113.BlazeseRveR12.siTe
-- name: us|34f9|puddincat07@Telegram
+- name: us|a0fb|puddincat07@Telegram
   server: 154.17.227.158
   alterId: 0
   cipher: auto
