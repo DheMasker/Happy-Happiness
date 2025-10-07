@@ -303,21 +303,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-104.21.95.59-1068 | 138.621MB
-  server: b-v1.888988866.xyz
-  port: 443
-  type: vmess
-  uuid: ab007933-7981-4267-9f33-fbc9c2575756
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: b-v1.888988866.xyz
-- name: RELAY-104.21.95.59-1069 | 99.611MB
+- name: RELAY-104.21.95.59-1068 | 78.714MB
   server: y-v1.888988866.xyz
   port: 443
   type: vmess
@@ -331,7 +317,7 @@ proxies:
     path: /
     headers:
       Host: y-v1.888988866.xyz
-- name: RELAY-172.67.143.87-1067 | 22.535MB
+- name: RELAY-104.21.95.59-1066 | 19.233MB
   server: a-v1.888988866.xyz
   port: 443
   type: vmess
@@ -345,7 +331,7 @@ proxies:
     path: /
     headers:
       Host: a-v1.888988866.xyz
-- name: RELAY-172.67.200.13-1340 | 16.299MB
+- name: RELAY-172.67.200.13-1356 | 16.374MB
   server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
   port: 443
   type: vmess
@@ -359,20 +345,8 @@ proxies:
     path: /
     headers:
       Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-- name: 🇺🇸US-157.254.231.31-5631 | 12.638MB
-  server: 157.254.231.31
-  port: 443
-  type: vmess
-  uuid: 56380b67-e2fe-49d1-a9dd-6c3a422b8e8c
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇺🇸US-209.126.84.189-0696 | 4.538MB
-  server: 209.126.84.189
+- name: 🇺🇸US-209.126.84.189-0820 | 2.707MB
+  server: v2ray.codefyinc.com
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -384,7 +358,35 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 209.126.84.189
+      Host: v2ray.codefyinc.com
+- name: RELAY-104.21.95.59-1229 | 138.787MB
+  server: b-v1.888988866.xyz
+  port: 443
+  type: vmess
+  uuid: ab007933-7981-4267-9f33-fbc9c2575756
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: b-v1.888988866.xyz
+- name: us|88db|puddincat07@Telegram
+  server: 172.67.161.77
+  alterId: 0
+  cipher: auto
+  network: ws
+  port: 443
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
+  ws-opts:
+    headers:
+      Host: linde06.indiavideo.sbs
+    path: /linkws
 - name: DE_1
   server: 185.146.173.158
   port: 443
