@@ -303,35 +303,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-172.67.143.87-1067 | 210.261MB
-  server: b-v1.888988866.xyz
-  port: 443
-  type: vmess
-  uuid: ab007933-7981-4267-9f33-fbc9c2575756
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: b-v1.888988866.xyz
-- name: RELAY-104.21.95.59-1068 | 71.405MB
-  server: y-v1.888988866.xyz
-  port: 443
-  type: vmess
-  uuid: a397bd18-5a5f-4a5a-bf03-ed5bc1a990eb
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: y-v1.888988866.xyz
-- name: RELAY-172.67.143.87-1066 | 36.88MB
+- name: RELAY-104.21.95.59-0950 | 18.296MB
   server: a-v1.888988866.xyz
   port: 443
   type: vmess
@@ -345,11 +317,11 @@ proxies:
     path: /
     headers:
       Host: a-v1.888988866.xyz
-- name: RELAY-172.67.200.13-1346 | 11.267MB
-  server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+- name: RELAY-104.21.95.59-0952 | 2.305MB
+  server: y-v1.888988866.xyz
   port: 443
   type: vmess
-  uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
+  uuid: a397bd18-5a5f-4a5a-bf03-ed5bc1a990eb
   alterId: 0
   cipher: auto
   tls: true
@@ -358,8 +330,8 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-- name: 🇺🇸US-209.126.84.189-0695 | 5.134MB
+      Host: y-v1.888988866.xyz
+- name: 🇺🇸US-209.126.84.189-0630 | 1.81MB
   server: 209.126.84.189
   port: 443
   type: vmess
@@ -373,12 +345,12 @@ proxies:
     path: /
     headers:
       Host: 209.126.84.189
-- name: 🇺🇸US-77.83.141.171-1019 | 2.883MB
-  server: vc.fly.dev
+- name: RELAY-104.21.95.59-1151 | 126.156MB
+  server: b-v1.888988866.xyz
   port: 443
   type: vmess
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
-  alterId: 32
+  uuid: ab007933-7981-4267-9f33-fbc9c2575756
+  alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: false
@@ -386,8 +358,22 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: vc.fly.dev
-- name: us|8dce|puddincat07@Telegram
+      Host: b-v1.888988866.xyz
+- name: RELAY-104.21.21.192-1157 | 21.139MB
+  server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+  port: 443
+  type: vmess
+  uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+- name: us|f456|puddincat07@Telegram
   server: 154.17.227.158
   alterId: 0
   cipher: auto
