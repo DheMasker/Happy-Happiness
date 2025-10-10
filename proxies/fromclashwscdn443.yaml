@@ -303,7 +303,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-172.67.143.87-1010 | 190.69MB
+- name: RELAY-172.67.143.87-1010 | 103.903MB
   server: b-v1.888988866.xyz
   port: 443
   type: vmess
@@ -317,7 +317,7 @@ proxies:
     path: /
     headers:
       Host: b-v1.888988866.xyz
-- name: RELAY-172.67.143.87-1011 | 124.26MB
+- name: RELAY-172.67.143.87-1011 | 80.381MB
   server: y-v1.888988866.xyz
   port: 443
   type: vmess
@@ -331,7 +331,22 @@ proxies:
     path: /
     headers:
       Host: y-v1.888988866.xyz
-- name: RELAY-172.67.143.87-1009 | 13.648MB
+- name: 🇺🇸US-157.254.227.2-5345 | 36.047MB
+  server: cpp007-2.facai20250909.com
+  port: 443
+  type: vmess
+  uuid: e134b5e9-4b16-4d50-b3d9-eaef652660b0
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇺🇸US-157.254.227.2-5345 | 36.047MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: cpp007-2.facai20250909.com
+- name: RELAY-172.67.143.87-1009 | 35.719MB
   server: a-v1.888988866.xyz
   port: 443
   type: vmess
@@ -345,37 +360,8 @@ proxies:
     path: /
     headers:
       Host: a-v1.888988866.xyz
-- name: 🇺🇸US-157.254.227.2-5345 | 4.954MB
-  server: cpp007-2.facai20250909.com
-  port: 443
-  type: vmess
-  uuid: e134b5e9-4b16-4d50-b3d9-eaef652660b0
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇺🇸US-157.254.227.2-5345 | 4.954MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: cpp007-2.facai20250909.com
-- name: 🇺🇸US-77.83.141.171-0966 | 0.532MB
-  server: vc.fly.dev
-  port: 443
-  type: vmess
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
-  alterId: 32
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vc.fly.dev
-- name: 🇺🇸US-209.126.84.189-0692 | 0.396MB
-  server: 209.126.84.189
+- name: 🇺🇸US-209.126.84.189-0775 | 3.647MB
+  server: v2ray.codefyinc.com
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -387,22 +373,8 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 209.126.84.189
-- name: 🇺🇸US-52.86.131.53-1155 | 52.363MB
-  server: oksl.cfapps.us10-001.hana.ondemand.com
-  port: 443
-  type: vmess
-  uuid: da1e98ce-18cf-4565-86fb-ecb79658eefe
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: oksl.cfapps.us10-001.hana.ondemand.com
-- name: us|fd73|puddincat07@Telegram
+      Host: v2ray.codefyinc.com
+- name: us|ca2e|puddincat07@Telegram
   server: 154.17.227.158
   alterId: 0
   cipher: auto
