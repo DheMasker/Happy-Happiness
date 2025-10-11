@@ -303,21 +303,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-104.21.95.59-1017 | 71.849MB
-  server: b-v1.888988866.xyz
-  port: 443
-  type: vmess
-  uuid: ab007933-7981-4267-9f33-fbc9c2575756
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: b-v1.888988866.xyz
-- name: RELAY-172.64.80.1-1018 | 59.664MB
+- name: RELAY-104.21.95.59-1031 | 125.337MB
   server: y-v1.888988866.xyz
   port: 443
   type: vmess
@@ -331,11 +317,11 @@ proxies:
     path: /
     headers:
       Host: y-v1.888988866.xyz
-- name: RELAY-172.64.80.1-1016 | 29.407MB
-  server: a-v1.888988866.xyz
+- name: RELAY-172.64.80.1-1030 | 105.322MB
+  server: b-v1.888988866.xyz
   port: 443
   type: vmess
-  uuid: 104556c9-797c-42e9-9bb7-7a6e9974b857
+  uuid: ab007933-7981-4267-9f33-fbc9c2575756
   alterId: 0
   cipher: auto
   tls: true
@@ -344,8 +330,8 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: a-v1.888988866.xyz
-- name: RELAY-172.67.200.13-1046 | 26.163MB
+      Host: b-v1.888988866.xyz
+- name: RELAY-172.67.200.13-1058 | 22.555MB
   server: 172.67.200.13
   port: 443
   type: vmess
@@ -359,8 +345,8 @@ proxies:
     path: /
     headers:
       Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-- name: 🇺🇸US-209.126.84.189-0782 | 12.091MB
-  server: v2ray.codefyinc.com
+- name: 🇺🇸US-209.126.84.189-0616 | 2.247MB
+  server: 209.126.84.189
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -372,8 +358,23 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: v2ray.codefyinc.com
-- name: us|4963|puddincat07@Telegram
+      Host: 209.126.84.189
+- name: 🇺🇸US-157.254.227.2-1368 | 27.457MB
+  server: cpp007-2.facai20250909.com
+  port: 443
+  type: vmess
+  uuid: e134b5e9-4b16-4d50-b3d9-eaef652660b0
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇺🇸US-157.254.227.2-1368 | 27.457MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: cpp007-2.facai20250909.com
+- name: us|56cb|puddincat07@Telegram
   server: 154.17.227.158
   alterId: 0
   cipher: auto
