@@ -303,7 +303,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-104.21.95.59-1031 | 125.337MB
+- name: RELAY-172.67.143.87-1031 | 84.984MB
   server: y-v1.888988866.xyz
   port: 443
   type: vmess
@@ -317,21 +317,7 @@ proxies:
     path: /
     headers:
       Host: y-v1.888988866.xyz
-- name: RELAY-172.64.80.1-1030 | 105.322MB
-  server: b-v1.888988866.xyz
-  port: 443
-  type: vmess
-  uuid: ab007933-7981-4267-9f33-fbc9c2575756
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: b-v1.888988866.xyz
-- name: RELAY-172.67.200.13-1058 | 22.555MB
+- name: RELAY-172.67.200.13-1058 | 18.65MB
   server: 172.67.200.13
   port: 443
   type: vmess
@@ -345,8 +331,23 @@ proxies:
     path: /
     headers:
       Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-- name: 🇺🇸US-209.126.84.189-0616 | 2.247MB
-  server: 209.126.84.189
+- name: 🇺🇸US-157.254.227.2-5397 | 18.364MB
+  server: cpp007-2.facai20250909.com
+  port: 443
+  type: vmess
+  uuid: e134b5e9-4b16-4d50-b3d9-eaef652660b0
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇺🇸US-157.254.227.2-5397 | 18.364MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: cpp007-2.facai20250909.com
+- name: 🇺🇸US-209.126.84.189-0796 | 3.686MB
+  server: v2ray.codefyinc.com
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -358,23 +359,23 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 209.126.84.189
-- name: 🇺🇸US-157.254.227.2-1368 | 27.457MB
-  server: cpp007-2.facai20250909.com
+      Host: v2ray.codefyinc.com
+- name: 🇸🇬SG-188.166.240.188-1107 | 0.062MB
+  server: node4.rtxconfigz.com
   port: 443
   type: vmess
-  uuid: e134b5e9-4b16-4d50-b3d9-eaef652660b0
+  uuid: 44e57485-eccc-46ef-808f-cd17ac810018
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇺🇸US-157.254.227.2-1368 | 27.457MB
+  servername: 🇸🇬SG-188.166.240.188-1107 | 0.062MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: cpp007-2.facai20250909.com
-- name: us|279d|puddincat07@Telegram
+      Host: node4.rtxconfigz.com
+- name: us|65a9|puddincat07@Telegram
   server: 154.17.227.158
   alterId: 0
   cipher: auto
