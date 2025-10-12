@@ -5,7 +5,7 @@ import yaml
 import os
 
 # Variabel untuk alamat server
-BUGCDN = "104.22.5.240"
+BUGCDN = "ava.game.naver.com"
 
 # Daftar sumber langganan
 SUB_LINKS = [
