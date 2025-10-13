@@ -303,7 +303,21 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-104.21.95.59-1024 | 43.021MB
+- name: RELAY-172.67.143.87-1040 | 180.857MB
+  server: b-v1.888988866.xyz
+  port: 443
+  type: vmess
+  uuid: ab007933-7981-4267-9f33-fbc9c2575756
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: b-v1.888988866.xyz
+- name: RELAY-104.21.95.59-1041 | 79.525MB
   server: y-v1.888988866.xyz
   port: 443
   type: vmess
@@ -317,7 +331,22 @@ proxies:
     path: /
     headers:
       Host: y-v1.888988866.xyz
-- name: RELAY-172.67.200.13-1051 | 34.551MB
+- name: 🇺🇸US-157.254.227.2-5441 | 25.551MB
+  server: cpp007-2.facai20250909.com
+  port: 443
+  type: vmess
+  uuid: e134b5e9-4b16-4d50-b3d9-eaef652660b0
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇺🇸US-157.254.227.2-5441 | 25.551MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: cpp007-2.facai20250909.com
+- name: RELAY-172.67.200.13-1068 | 17.305MB
   server: 172.67.200.13
   port: 443
   type: vmess
@@ -331,21 +360,7 @@ proxies:
     path: /
     headers:
       Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-- name: 🇺🇸US-77.83.141.171-0979 | 25.086MB
-  server: vc.fly.dev
-  port: 443
-  type: vmess
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
-  alterId: 32
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vc.fly.dev
-- name: 🇺🇸US-209.126.84.189-0789 | 10.237MB
+- name: 🇺🇸US-209.126.84.189-0806 | 1.76MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -359,7 +374,7 @@ proxies:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: RELAY-104.21.76.158-1089 | 3.321MB
+- name: RELAY-104.21.76.158-0312 | 0.329MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
@@ -373,11 +388,11 @@ proxies:
     path: /
     headers:
       Host: sy4.620720.xyz
-- name: 🇺🇸US-157.254.227.2-1231 | 25.585MB
-  server: cpp007-2.facai20250909.com
+- name: 🇸🇬SG-68.183.236.145-1114 | 0.128MB
+  server: waifu.kurumi.biz.id
   port: 443
   type: vmess
-  uuid: e134b5e9-4b16-4d50-b3d9-eaef652660b0
+  uuid: 3393cc9e-7498-4942-9bc4-c6da73080fd9
   alterId: 0
   cipher: auto
   tls: true
@@ -386,8 +401,8 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: cpp007-2.facai20250909.com
-- name: us|2619|puddincat07@Telegram
+      Host: discord.com
+- name: us|810a|puddincat07@Telegram
   server: 154.17.227.158
   alterId: 0
   cipher: auto
