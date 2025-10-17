@@ -33,6 +33,19 @@ proxies:
     headers:
       host: 920f9840-4d0f-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat
     path: /920f9840-4d0f-11f0-a948-6a75f667b472?ed=2048
+- name: 14|US_speednode_0054
+  server: 172.67.192.215
+  network: ws
+  password: d0728e94-82c2-456b-b5d4-eeab540599df
+  port: 443
+  skip-cert-verify: false
+  sni: joss.krikkrik.xyz
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: joss.krikkrik.xyz
+    path: /Free-VPN-CF-Geo-Project/AE5
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -303,21 +316,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-172.67.200.13-1062 | 21.063MB
-  server: 172.67.200.13
-  port: 443
-  type: vmess
-  uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-- name: 🇺🇸US-77.83.141.171-0990 | 17.26MB
+- name: 🇺🇸US-77.83.141.171-1002 | 22.607MB
   server: vc.fly.dev
   port: 443
   type: vmess
@@ -331,7 +330,35 @@ proxies:
     path: /
     headers:
       Host: vc.fly.dev
-- name: 🇺🇸US-209.126.84.189-0800 | 14.666MB
+- name: RELAY-172.67.200.13-1074 | 5.796MB
+  server: 172.67.200.13
+  port: 443
+  type: vmess
+  uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+- name: 🇭🇰HK-46.3.26.12-1024 | 1.594MB
+  server: 46.3.26.12
+  port: 443
+  type: vmess
+  uuid: 4bf075f5-4d5e-4d39-f5ab-b32a86250f0e
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: hk.nbee.pp.ua
+- name: 🇺🇸US-209.126.84.189-0812 | 1.359MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -345,22 +372,7 @@ proxies:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: 🇸🇬SG-188.166.240.188-5600 | 8.306MB
-  server: node4.rtxconfigz.com
-  port: 443
-  type: vmess
-  uuid: 44e57485-eccc-46ef-808f-cd17ac810018
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇸🇬SG-188.166.240.188-5600 | 8.306MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: node4.rtxconfigz.com
-- name: RELAY-104.21.76.158-0297 | 3.367MB
+- name: RELAY-104.21.76.158-0316 | 1.203MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
@@ -374,7 +386,22 @@ proxies:
     path: /
     headers:
       Host: sy4.620720.xyz
-- name: us|4adf|puddincat07@Telegram
+- name: 🇸🇬SG-188.166.240.188-5658 | 0.213MB
+  server: node4.rtxconfigz.com
+  port: 443
+  type: vmess
+  uuid: 44e57485-eccc-46ef-808f-cd17ac810018
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇸🇬SG-188.166.240.188-5658 | 0.213MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: node4.rtxconfigz.com
+- name: us|4d18|puddincat07@Telegram
   server: 154.17.227.158
   alterId: 0
   cipher: auto
