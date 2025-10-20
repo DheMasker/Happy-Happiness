@@ -303,7 +303,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-172.67.200.13-1078 | 20.092MB
+- name: RELAY-172.67.200.13-1078 | 19.125MB
   server: 172.67.200.13
   port: 443
   type: vmess
@@ -317,8 +317,37 @@ proxies:
     path: /
     headers:
       Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-- name: 🇺🇸US-209.126.84.189-0816 | 1.931MB
-  server: v2ray.codefyinc.com
+- name: 🇺🇸US-77.83.141.171-1006 | 9.28MB
+  server: vc.fly.dev
+  port: 443
+  type: vmess
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vc.fly.dev
+- name: 🇸🇬SG-188.166.240.188-5593 | 4.744MB
+  server: node4.rtxconfigz.com
+  port: 443
+  type: vmess
+  uuid: 44e57485-eccc-46ef-808f-cd17ac810018
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇸🇬SG-188.166.240.188-5593 | 4.744MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: node4.rtxconfigz.com
+- name: 🇺🇸US-209.126.84.189-0638 | 2.204MB
+  server: 209.126.84.189
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -330,8 +359,8 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: v2ray.codefyinc.com
-- name: RELAY-104.21.76.158-0291 | 1.052MB
+      Host: 209.126.84.189
+- name: RELAY-172.67.197.47-0358 | 1.019MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
@@ -345,7 +374,7 @@ proxies:
     path: /
     headers:
       Host: sy4.620720.xyz
-- name: us|dfd8|puddincat07@Telegram
+- name: us|bbc0|puddincat07@Telegram
   server: 154.17.227.158
   alterId: 0
   cipher: auto
@@ -357,19 +386,6 @@ proxies:
   ws-opts:
     headers:
       Host: us.nbee.pp.ua
-    path: /aa
-- name: ru|3ecd|puddincat07@Telegram
-  server: 46.3.26.12
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  tls: true
-  type: vmess
-  uuid: 4bf075f5-4d5e-4d39-f5ab-b32a86250f0e
-  ws-opts:
-    headers:
-      Host: hk.nbee.pp.ua
     path: /aa
 - name: DE_1
   server: 185.146.173.158
