@@ -519,19 +519,6 @@ proxies:
     headers:
       Host: maXNEtVIP-usA-VP3.nETKH3.SiTE
   udp: true
-- name: ⚡ b2n.ir/v2ray-configs | 425
-  server: ava.game.naver.com
-  port: 443
-  type: trojan
-  password: f282b878-8711-45a1-8c69-5564172123c1
-  skip-cert-verify: true
-  sni: vpn.stupidworld.web.id
-  network: ws
-  ws-opts:
-    path: /Stupid-World/103.106.228.126-2053#⚡ b2n.ir/v2ray-configs | 425
-    headers:
-      Host: vpn.stupidworld.web.id
-  udp: true
 - name: ⚜️Telegram:@IP_CF
   server: ava.game.naver.com
   port: 443
@@ -563,6 +550,19 @@ proxies:
     path: /linkvws
     headers:
       Host: aveiror.com
+  udp: true
+- name: '%E6%9C%AA%E7%9F%A53'
+  server: ava.game.naver.com
+  port: 443
+  type: trojan
+  password: f282b878-8711-45a1-8c69-5564172123c1
+  skip-cert-verify: true
+  sni: vpn.stupidworld.web.id
+  network: ws
+  ws-opts:
+    path: /Stupid-World/103.106.228.126-2053
+    headers:
+      Host: vpn.stupidworld.web.id
   udp: true
 - name: 0|--30
   server: ava.game.naver.com
@@ -686,7 +686,36 @@ proxies:
     headers:
       Host: joss.gpj2.dpdns.org
   udp: true
-- name: 4Sarina-3304
+- name: '%E2%9D%94%20XX%20%7C%20%F0%9F%94%92%20TROJAN%20%7C%20%40maradona_vpn%20%5B7%5D'
+  server: ava.game.naver.com
+  port: 443
+  type: trojan
+  password: maradona_vpn
+  skip-cert-verify: true
+  sni: teo.history-paint.art#%E2%9D%94%20XX%20%7C%20%F0%9F%94%92%20TROJAN%20%7C%20%40maradona_vpn%20%5B7%5D
+  network: ws
+  ws-opts:
+    path: /wss24142?ed=2048
+    headers:
+      Host: teo.history-paint.art
+  udp: true
+- name: 美国 CloudFlare节点
+  server: ava.game.naver.com
+  port: 443
+  type: vmess
+  uuid: 516d8a7a-3f0b-41d3-bad0-246116381516
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: sy4.620720.xyz
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: sy4.620720.xyz
+  udp: true
+- name: 4Mohsen-3305
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -699,20 +728,20 @@ proxies:
     headers:
       Host: us1.test3.net
   udp: true
-- name: 4Sarina-3311
+- name: 4Mohsen-3312
   server: ava.game.naver.com
   port: 443
   type: trojan
   password: 02XtoczO7V
   skip-cert-verify: true
-  sni: mooshali.arshiacomplus.dpdns.org#4Sarina-3311
+  sni: mooshali.arshiacomplus.dpdns.org#4Mohsen-3312
   network: ws
   ws-opts:
     path: /hishhhh123
     headers:
       Host: mooshali.arshiacomplus.dpdns.org
   udp: true
-- name: 4Sarina-3315
+- name: 4Mohsen-3316
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -725,7 +754,7 @@ proxies:
     headers:
       Host: us1.test3.net
   udp: true
-- name: 4Sarina-3339
+- name: 4Mohsen-3340
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -738,7 +767,7 @@ proxies:
     headers:
       Host: sherasheba.com
   udp: true
-- name: 4Sarina-3343
+- name: 4Mohsen-3344
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -751,20 +780,20 @@ proxies:
     headers:
       Host: se1.trojanvpn.de
   udp: true
-- name: 4Sarina-3396
+- name: 4Mohsen-3397
   server: ava.game.naver.com
   port: 443
   type: trojan
   password: 11ae0edd-2f63-4495-8683-037abbda9986
   skip-cert-verify: true
-  sni: amin.karkas1.ir#4Sarina-3396
+  sni: amin.karkas1.ir#4Mohsen-3397
   network: ws
   ws-opts:
     path: /6vuNVgOFnqUEvj0sNkGkxxW7
     headers:
       Host: amin.karkas1.ir
   udp: true
-- name: 4Sarina-3398
+- name: 4Mohsen-3399
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -777,7 +806,7 @@ proxies:
     headers:
       Host: de1.test3.net
   udp: true
-- name: 4Sarina-3407
+- name: 4Mohsen-3408
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -790,20 +819,20 @@ proxies:
     headers:
       Host: de1.test3.net
   udp: true
-- name: 4Sarina-3421
+- name: 4Mohsen-3422
   server: ava.game.naver.com
   port: 443
   type: trojan
   password: 1df684ae-6299-4170-8c96-40c4381825c8
   skip-cert-verify: true
-  sni: joss.gpj2.dpdns.org#4Sarina-3421
+  sni: joss.gpj2.dpdns.org#4Mohsen-3422
   network: ws
   ws-opts:
     path: /Free-VPN-CF-Geo-Project/AM1
     headers:
       Host: joss.gpj2.dpdns.org
   udp: true
-- name: 4Sarina-3548
+- name: 4Mohsen-3549
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -816,33 +845,33 @@ proxies:
     headers:
       Host: de1.test3.net
   udp: true
-- name: 4Sarina-3574
+- name: 4Mohsen-3575
   server: ava.game.naver.com
   port: 443
   type: trojan
   password: 318cab24-ec99-40a6-a54a-0db9c661a3d0
   skip-cert-verify: true
-  sni: aio.proxybox.dpdns.org#4Sarina-3574
+  sni: aio.proxybox.dpdns.org#4Mohsen-3575
   network: ws
   ws-opts:
     path: /188.34.160.97-2053
     headers:
       Host: aio.proxybox.dpdns.org
   udp: true
-- name: 4Sarina-3575
+- name: 4Mohsen-3576
   server: ava.game.naver.com
   port: 443
   type: trojan
   password: 318cab24-ec99-40a6-a54a-0db9c661a3d0
   skip-cert-verify: true
-  sni: aio.proxybox.dpdns.org#4Sarina-3575
+  sni: aio.proxybox.dpdns.org#4Mohsen-3576
   network: ws
   ws-opts:
     path: /188.34.160.97-2053
     headers:
-      Host: aio.proxybox.dpdns.org#4Sarina-3575
+      Host: aio.proxybox.dpdns.org#4Mohsen-3576
   udp: true
-- name: 4Sarina-3689
+- name: 4Mohsen-3690
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -851,11 +880,11 @@ proxies:
   sni: c2mk.ciscocdn1.live
   network: ws
   ws-opts:
-    path: /rDCYQta83d0oPABKBhcIX#4Sarina-3689
+    path: /rDCYQta83d0oPABKBhcIX#4Mohsen-3690
     headers:
       Host: c2mk.ciscocdn1.live
   udp: true
-- name: 4Sarina-3720
+- name: 4Mohsen-3721
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -868,7 +897,7 @@ proxies:
     headers:
       Host: de1.trojanvpn.dE
   udp: true
-- name: 4Sarina-3731
+- name: 4Mohsen-3732
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -877,11 +906,11 @@ proxies:
   sni: c3mc.ciscocdn1.live
   network: ws
   ws-opts:
-    path: /ywQ9KSLI4ZBm9wOAXUaN#4Sarina-3731
+    path: /ywQ9KSLI4ZBm9wOAXUaN#4Mohsen-3732
     headers:
       Host: c3mc.ciscocdn1.live
   udp: true
-- name: 4Sarina-3740
+- name: 4Mohsen-3741
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -894,7 +923,7 @@ proxies:
     headers:
       Host: de1.test3.net
   udp: true
-- name: 4Sarina-3744
+- name: 4Mohsen-3745
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -903,50 +932,50 @@ proxies:
   sni: c1mc.cdncisco4.co
   network: ws
   ws-opts:
-    path: /422Kdfwzf49IxeZJa#4Sarina-3744
+    path: /422Kdfwzf49IxeZJa#4Mohsen-3745
     headers:
       Host: c1mc.cdncisco4.co
   udp: true
-- name: 4Sarina-3780
+- name: 4Mohsen-3781
   server: ava.game.naver.com
   port: 443
   type: trojan
   password: 68a69d73-b871-47f1-8667-82585e07dab2
   skip-cert-verify: true
-  sni: joss.gpj2.dpdns.org#4Sarina-3780
+  sni: joss.gpj2.dpdns.org#4Mohsen-3781
   network: ws
   ws-opts:
     path: /Free-VPN-CF-Geo-Project/ES1
     headers:
       Host: joss.gpj2.dpdns.org
   udp: true
-- name: 4Sarina-3866
+- name: 4Mohsen-3867
   server: ava.game.naver.com
   port: 443
   type: trojan
   password: 7f86c366-948a-43cf-8f31-675f5ee00a89
   skip-cert-verify: true
-  sni: joss.gpj2.dpdns.org#4Sarina-3866
+  sni: joss.gpj2.dpdns.org#4Mohsen-3867
   network: ws
   ws-opts:
     path: /Free-VPN-CF-Geo-Project/AD1
     headers:
       Host: joss.gpj2.dpdns.org
   udp: true
-- name: 4Sarina-3891
+- name: 4Mohsen-3892
   server: ava.game.naver.com
   port: 443
   type: trojan
   password: 879292de-3790-4f60-8ae9-557b0df71ec7
   skip-cert-verify: true
-  sni: joss.gpj2.dpdns.org#4Sarina-3891
+  sni: joss.gpj2.dpdns.org#4Mohsen-3892
   network: ws
   ws-opts:
     path: /Free-VPN-CF-Geo-Project/CH1
     headers:
       Host: joss.gpj2.dpdns.org
   udp: true
-- name: 4Sarina-3936
+- name: 4Mohsen-3937
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -959,7 +988,7 @@ proxies:
     headers:
       Host: fr1.test3.net
   udp: true
-- name: 4Sarina-3947
+- name: 4Mohsen-3948
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -972,20 +1001,20 @@ proxies:
     headers:
       Host: de1.test3.net
   udp: true
-- name: 4Sarina-3997
+- name: 4Mohsen-3998
   server: ava.game.naver.com
   port: 443
   type: trojan
   password: 9a7b890c-0881-4a6a-ab91-580bc19acafc
   skip-cert-verify: true
-  sni: joss.gpj2.dpdns.org#4Sarina-3997
+  sni: joss.gpj2.dpdns.org#4Mohsen-3998
   network: ws
   ws-opts:
     path: /Free-VPN-CF-Geo-Project/DE3
     headers:
       Host: joss.gpj2.dpdns.org
   udp: true
-- name: 4Sarina-4082
+- name: 4Mohsen-4082
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -998,33 +1027,33 @@ proxies:
     headers:
       Host: in.ylks.xyz
   udp: true
-- name: 4Sarina-4126
+- name: 4Mohsen-4127
   server: ava.game.naver.com
   port: 443
   type: trojan
   password: ZU)0ryc$VSrG
   skip-cert-verify: true
-  sni: uk2WbO0iKx3IyI4i9WjdYU6Y-O28ET7o.pagEs.DeV#4Sarina-4126
+  sni: uk2WbO0iKx3IyI4i9WjdYU6Y-O28ET7o.pagEs.DeV#4Mohsen-4127
   network: ws
   ws-opts:
     path: /trg2dhGAnG15ULOP7i?ed=2560
     headers:
       Host: uk2wbo0ikx3iyi4i9wjdyu6y-o28et7o.pages.dev
   udp: true
-- name: 4Sarina-4138
+- name: 4Mohsen-4139
   server: ava.game.naver.com
   port: 443
   type: trojan
   password: a1b8cec4-548d-4e98-9ceb-7e80e23c9286
   skip-cert-verify: true
-  sni: joss.gpj2.dpdns.org#4Sarina-4138
+  sni: joss.gpj2.dpdns.org#4Mohsen-4139
   network: ws
   ws-opts:
     path: /Free-VPN-CF-Geo-Project/EE1
     headers:
       Host: joss.gpj2.dpdns.org
   udp: true
-- name: 4Sarina-4172
+- name: 4Mohsen-4173
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -1033,24 +1062,24 @@ proxies:
   sni: syndication-statutes-wanted-logo.trycloudflare.com
   network: ws
   ws-opts:
-    path: /argox-tr#4Sarina-4172
+    path: /argox-tr#4Mohsen-4173
     headers:
       Host: syndication-statutes-wanted-logo.trycloudflare.com
   udp: true
-- name: 4Sarina-4181
+- name: 4Mohsen-4182
   server: ava.game.naver.com
   port: 443
   type: trojan
   password: b63e5189-88c4-4eb5-9c8b-8dd997cc9b38
   skip-cert-verify: true
-  sni: joss.gpj2.dpdns.org#4Sarina-4181
+  sni: joss.gpj2.dpdns.org#4Mohsen-4182
   network: ws
   ws-opts:
     path: /Free-VPN-CF-Geo-Project/DE2
     headers:
       Host: joss.gpj2.dpdns.org
   udp: true
-- name: 4Sarina-4206
+- name: 4Mohsen-4207
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -1063,7 +1092,7 @@ proxies:
     headers:
       Host: bpb.my79801.com
   udp: true
-- name: 4Sarina-4208
+- name: 4Mohsen-4209
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -1076,20 +1105,20 @@ proxies:
     headers:
       Host: fcspring.ggff.net
   udp: true
-- name: 4Sarina-4218
+- name: 4Mohsen-4219
   server: ava.game.naver.com
   port: 443
   type: trojan
   password: c13b8217-7388-413b-b421-15580e4e267f
   skip-cert-verify: true
-  sni: joss.gpj2.dpdns.org#4Sarina-4218
+  sni: joss.gpj2.dpdns.org#4Mohsen-4219
   network: ws
   ws-opts:
     path: /Free-VPN-CF-Geo-Project/AE1
     headers:
       Host: joss.gpj2.dpdns.org
   udp: true
-- name: 4Sarina-4296
+- name: 4Mohsen-4296
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -1102,7 +1131,7 @@ proxies:
     headers:
       Host: 6us3.pqjc.buzz
   udp: true
-- name: 4Sarina-4297
+- name: 4Mohsen-4297
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -1115,7 +1144,7 @@ proxies:
     headers:
       Host: p6us4.pqjc.buzz
   udp: true
-- name: 4Sarina-4301
+- name: 4Mohsen-4301
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -1128,46 +1157,33 @@ proxies:
     headers:
       Host: pscresearch.faculty.ucdavis.edu
   udp: true
-- name: 4Sarina-4406
+- name: 4Mohsen-4408
   server: ava.game.naver.com
   port: 443
   type: trojan
   password: f282b878-8711-45a1-8c69-5564172123c1
   skip-cert-verify: true
-  sni: aio.zipzap.biz.id#4Sarina-4406
+  sni: aio.zipzap.biz.id#4Mohsen-4408
   network: ws
   ws-opts:
     path: /aioproxybot/129.150.49.58-18650
     headers:
       Host: aio.zipzap.biz.id
   udp: true
-- name: 4Sarina-4478
+- name: 4Mohsen-4480
   server: ava.game.naver.com
   port: 443
   type: trojan
   password: ff84e47c-1b2d-41cf-9610-7d55387c34c4
   skip-cert-verify: true
-  sni: joss.gpj2.dpdns.org#4Sarina-4478
+  sni: joss.gpj2.dpdns.org#4Mohsen-4480
   network: ws
   ws-opts:
     path: /Free-VPN-CF-Geo-Project/DE2
     headers:
       Host: joss.gpj2.dpdns.org
   udp: true
-- name: 4Sarina-4506
-  server: ava.game.naver.com
-  port: 443
-  type: trojan
-  password: maradona_vpn
-  skip-cert-verify: true
-  sni: teo.history-paint.art#4Sarina-4506
-  network: ws
-  ws-opts:
-    path: /wss24142?ed=2048
-    headers:
-      Host: teo.history-paint.art
-  udp: true
-- name: 4Sarina-4508
+- name: 4Mohsen-4510
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -1180,7 +1196,7 @@ proxies:
     headers:
       Host: aws-uae-1.f1cflined.com
   udp: true
-- name: 4Sarina-4509
+- name: 4Mohsen-4511
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -1193,7 +1209,7 @@ proxies:
     headers:
       Host: aws-us-oregon-1.f1cflinec.com
   udp: true
-- name: 4Sarina-4518
+- name: 4Mohsen-4520
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -1206,7 +1222,7 @@ proxies:
     headers:
       Host: aws-us-oregon-1.f1cflined.com
   udp: true
-- name: 4Sarina-4746
+- name: 4Mohsen-4747
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -1219,7 +1235,7 @@ proxies:
     headers:
       Host: aws-sg-1.f1cflineb.com
   udp: true
-- name: 4Sarina-4747
+- name: 4Mohsen-4748
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -1232,7 +1248,7 @@ proxies:
     headers:
       Host: aws-aus-sydney-1.f1cflinea.com
   udp: true
-- name: 4Sarina-4758
+- name: 4Mohsen-4759
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -1245,7 +1261,7 @@ proxies:
     headers:
       Host: aws-ge-frankfurt-1.f1cflinea.com
   udp: true
-- name: 4Sarina-4765
+- name: 4Mohsen-4766
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -1258,7 +1274,7 @@ proxies:
     headers:
       Host: aws-ar-buenosaires-1.f1cflinea.com
   udp: true
-- name: 4Sarina-4766
+- name: 4Mohsen-4767
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -1271,7 +1287,7 @@ proxies:
     headers:
       Host: aws-ca-central-1.f1cflinea.com
   udp: true
-- name: 4Sarina-4767
+- name: 4Mohsen-4768
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -1284,7 +1300,7 @@ proxies:
     headers:
       Host: aws-ca-central-1.f1cflineb.com
   udp: true
-- name: 4Sarina-4768
+- name: 4Mohsen-4769
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -1297,7 +1313,7 @@ proxies:
     headers:
       Host: aws-ch-zurich-1.f1cflineb.com
   udp: true
-- name: 4Sarina-4769
+- name: 4Mohsen-4770
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -1310,7 +1326,7 @@ proxies:
     headers:
       Host: aws-es-madrid-1.f1rocketnode.com
   udp: true
-- name: 4Sarina-4770
+- name: 4Mohsen-4771
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -1323,7 +1339,7 @@ proxies:
     headers:
       Host: aws-in-mumbai-1.f1cflinea.com
   udp: true
-- name: 4Sarina-4771
+- name: 4Mohsen-4772
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -1336,7 +1352,7 @@ proxies:
     headers:
       Host: aws-se-stockholm-1.f1cflinea.com
   udp: true
-- name: 4Sarina-4772
+- name: 4Mohsen-4773
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -1349,7 +1365,7 @@ proxies:
     headers:
       Host: aws-uae-1.f1cflineb.com
   udp: true
-- name: 4Sarina-4774
+- name: 4Mohsen-4775
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -1362,7 +1378,7 @@ proxies:
     headers:
       Host: aws-uk-london-1.f1cflinea.com
   udp: true
-- name: 4Sarina-4775
+- name: 4Mohsen-4776
   server: ava.game.naver.com
   port: 443
   type: trojan
@@ -1375,7 +1391,7 @@ proxies:
     headers:
       Host: aws-uk-london-1.f1cflineb.com
   udp: true
-- name: 4Sarina-12127
+- name: 4Mohsen-12135
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1391,7 +1407,7 @@ proxies:
     headers:
       Host: d84ee332-1284-11ee-a5c8-8213fd3be4b9.bamarambash.monster
   udp: true
-- name: 4Sarina-12159
+- name: 4Mohsen-12167
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1407,7 +1423,7 @@ proxies:
     headers:
       Host: ecc.vtcss.top
   udp: true
-- name: 4Sarina-12306
+- name: 4Mohsen-12313
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1423,7 +1439,7 @@ proxies:
     headers:
       Host: edeen.makeup
   udp: true
-- name: 4Sarina-12310
+- name: 4Mohsen-12317
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1439,7 +1455,7 @@ proxies:
     headers:
       Host: odelia.autos
   udp: true
-- name: 4Sarina-12458
+- name: 4Mohsen-12465
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1455,7 +1471,7 @@ proxies:
     headers:
       Host: octavi.cfd
   udp: true
-- name: 4Sarina-12471
+- name: 4Mohsen-12478
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1471,7 +1487,7 @@ proxies:
     headers:
       Host: oliv.beauty
   udp: true
-- name: 4Sarina-12474
+- name: 4Mohsen-12481
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1487,7 +1503,7 @@ proxies:
     headers:
       Host: alvvin.click
   udp: true
-- name: 4Sarina-12478
+- name: 4Mohsen-12485
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1503,7 +1519,7 @@ proxies:
     headers:
       Host: ophelia.mom
   udp: true
-- name: 4Sarina-12487
+- name: 4Mohsen-12494
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1519,7 +1535,7 @@ proxies:
     headers:
       Host: cf.tonyluk.link
   udp: true
-- name: 4Sarina-12512
+- name: 4Mohsen-12519
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1535,7 +1551,7 @@ proxies:
     headers:
       Host: waynn.makeup
   udp: true
-- name: 4Sarina-12513
+- name: 4Mohsen-12520
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1551,7 +1567,7 @@ proxies:
     headers:
       Host: adenc35.fixedlfoat.top
   udp: true
-- name: 4Sarina-12527
+- name: 4Mohsen-12534
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1567,7 +1583,7 @@ proxies:
     headers:
       Host: us-1.acyun.tk
   udp: true
-- name: 4Sarina-12571
+- name: 4Mohsen-12578
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1583,7 +1599,7 @@ proxies:
     headers:
       Host: Dusseldorf.kotick.site
   udp: true
-- name: 4Sarina-12605
+- name: 4Mohsen-12612
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1599,7 +1615,7 @@ proxies:
     headers:
       Host: www.17661867.xyz
   udp: true
-- name: 4Sarina-12937
+- name: 4Mohsen-12943
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1615,7 +1631,7 @@ proxies:
     headers:
       Host: www.44945510.xyz
   udp: true
-- name: 4Sarina-13051
+- name: 4Mohsen-13057
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1631,7 +1647,7 @@ proxies:
     headers:
       Host: www.44716766.xyz
   udp: true
-- name: 4Sarina-13052
+- name: 4Mohsen-13058
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1647,7 +1663,7 @@ proxies:
     headers:
       Host: www.19458162.xyz
   udp: true
-- name: 4Sarina-13058
+- name: 4Mohsen-13064
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1663,7 +1679,7 @@ proxies:
     headers:
       Host: www.29135019.xyz
   udp: true
-- name: 4Sarina-13405
+- name: 4Mohsen-13411
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1679,7 +1695,7 @@ proxies:
     headers:
       Host: schereswed.softwarenews.store
   udp: true
-- name: 4Sarina-13526
+- name: 4Mohsen-13532
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1695,7 +1711,7 @@ proxies:
     headers:
       Host: Lille.kotick.site
   udp: true
-- name: 4Sarina-13576
+- name: 4Mohsen-13582
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1711,7 +1727,7 @@ proxies:
     headers:
       Host: localhoster.ml
   udp: true
-- name: 4Sarina-13625
+- name: 4Mohsen-13631
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1727,7 +1743,7 @@ proxies:
     headers:
       Host: ming2.kiwireich.com
   udp: true
-- name: 4Sarina-13653
+- name: 4Mohsen-13659
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1743,7 +1759,7 @@ proxies:
     headers:
       Host: rlhrwtqusd.site
   udp: true
-- name: 4Sarina-13817
+- name: 4Mohsen-13823
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1759,7 +1775,7 @@ proxies:
     headers:
       Host: 72d6d25e-1b39-11ee-a5c8-8213fd3be4b9.bamarambash.monster
   udp: true
-- name: 4Sarina-14033
+- name: 4Mohsen-14039
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1775,7 +1791,7 @@ proxies:
     headers:
       Host: www.49419962.xyz
   udp: true
-- name: 4Sarina-14193
+- name: 4Mohsen-14199
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1791,7 +1807,7 @@ proxies:
     headers:
       Host: dd2.1808.cf
   udp: true
-- name: 4Sarina-14200
+- name: 4Mohsen-14206
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1807,7 +1823,7 @@ proxies:
     headers:
       Host: e.cn-db.top
   udp: true
-- name: 4Sarina-14254
+- name: 4Mohsen-14261
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1823,7 +1839,7 @@ proxies:
     headers:
       Host: 2.freek1.xyz
   udp: true
-- name: 4Sarina-14277
+- name: 4Mohsen-14284
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1839,7 +1855,7 @@ proxies:
     headers:
       Host: d.freeh1.xyz
   udp: true
-- name: 4Sarina-14280
+- name: 4Mohsen-14287
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1855,7 +1871,7 @@ proxies:
     headers:
       Host: 3.freek1.xyz
   udp: true
-- name: 4Sarina-14307
+- name: 4Mohsen-14314
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1871,7 +1887,7 @@ proxies:
     headers:
       Host: www.42088326.xyz
   udp: true
-- name: 4Sarina-14402
+- name: 4Mohsen-14409
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1887,7 +1903,7 @@ proxies:
     headers:
       Host: www.72470068.xyz
   udp: true
-- name: 4Sarina-14878
+- name: 4Mohsen-14885
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1903,7 +1919,7 @@ proxies:
     headers:
       Host: cdnca1.digisport.shop
   udp: true
-- name: 4Sarina-14904
+- name: 4Mohsen-14911
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1919,7 +1935,7 @@ proxies:
     headers:
       Host: www.62976171.xyz
   udp: true
-- name: 4Sarina-15117
+- name: 4Mohsen-15124
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1935,7 +1951,7 @@ proxies:
     headers:
       Host: bfcEb82481eEA41083b721E3D99d42c5b34AE27e4e03170FfaD8a75e948050D.wwwNaMAsha.Com
   udp: true
-- name: 4Sarina-15134
+- name: 4Mohsen-15141
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1951,7 +1967,7 @@ proxies:
     headers:
       Host: cold-dawn-9246.fly.dev
   udp: true
-- name: 4Sarina-15146
+- name: 4Mohsen-15153
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1967,7 +1983,7 @@ proxies:
     headers:
       Host: dd2.1808.cf
   udp: true
-- name: 4Sarina-15149
+- name: 4Mohsen-15156
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1983,7 +1999,7 @@ proxies:
     headers:
       Host: lo.twittei.me
   udp: true
-- name: 4Sarina-15150
+- name: 4Mohsen-15157
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -1999,7 +2015,7 @@ proxies:
     headers:
       Host: us2.twittei.me
   udp: true
-- name: 4Sarina-15151
+- name: 4Mohsen-15158
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -2015,7 +2031,7 @@ proxies:
     headers:
       Host: vceu3e.twittei.me
   udp: true
-- name: 4Sarina-15173
+- name: 4Mohsen-15180
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -2031,7 +2047,7 @@ proxies:
     headers:
       Host: us.dalazhi.eu.org
   udp: true
-- name: 4Sarina-15194
+- name: 4Mohsen-15201
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -2047,7 +2063,7 @@ proxies:
     headers:
       Host: us4.sanfencdn1.com
   udp: true
-- name: 4Sarina-15195
+- name: 4Mohsen-15202
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -2063,7 +2079,7 @@ proxies:
     headers:
       Host: us3.sanfencdn1.com
   udp: true
-- name: 4Sarina-15227
+- name: 4Mohsen-15234
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -2079,7 +2095,7 @@ proxies:
     headers:
       Host: amstd.digires.shop
   udp: true
-- name: 4Sarina-15241
+- name: 4Mohsen-15248
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -2095,7 +2111,7 @@ proxies:
     headers:
       Host: afrhms16v.bestxray.buzz
   udp: true
-- name: 4Sarina-15246
+- name: 4Mohsen-15253
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -2111,7 +2127,7 @@ proxies:
     headers:
       Host: ahsorathiyaa.fly.dev
   udp: true
-- name: 4Sarina-15250
+- name: 4Mohsen-15257
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -2127,7 +2143,7 @@ proxies:
     headers:
       Host: 1c5854ba-1b44-11ee-a146-8213fd3be4b9.bamarambash.monster
   udp: true
-- name: 4Sarina-15268
+- name: 4Mohsen-15275
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -2143,7 +2159,7 @@ proxies:
     headers:
       Host: 2.wuxianliulianng.xyz
   udp: true
-- name: 4Sarina-15287
+- name: 4Mohsen-15295
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -2159,7 +2175,7 @@ proxies:
     headers:
       Host: cdntr2.digisport.shop
   udp: true
-- name: 4Sarina-15302
+- name: 4Mohsen-15309
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -2175,7 +2191,7 @@ proxies:
     headers:
       Host: zheshiscp.com
   udp: true
-- name: 4Sarina-15310
+- name: 4Mohsen-15317
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -2191,7 +2207,7 @@ proxies:
     headers:
       Host: glweidf.cfd
   udp: true
-- name: 4Sarina-15397
+- name: 4Mohsen-15404
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -2207,7 +2223,7 @@ proxies:
     headers:
       Host: fn.mostafago.tk
   udp: true
-- name: 4Sarina-15401
+- name: 4Mohsen-15408
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -2223,7 +2239,7 @@ proxies:
     headers:
       Host: hms02.fxiaomi.sbs
   udp: true
-- name: 4Sarina-15404
+- name: 4Mohsen-15411
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -2239,7 +2255,7 @@ proxies:
     headers:
       Host: gwdef.sbs
   udp: true
-- name: 4Sarina-15451
+- name: 4Mohsen-15458
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -2255,7 +2271,7 @@ proxies:
     headers:
       Host: jahfkjha.cfd
   udp: true
-- name: 4Sarina-15494
+- name: 4Mohsen-15501
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -2271,7 +2287,7 @@ proxies:
     headers:
       Host: linde06.indiavideo.sbs
   udp: true
-- name: 4Sarina-15512
+- name: 4Mohsen-15519
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -2287,7 +2303,7 @@ proxies:
     headers:
       Host: b8767a6a-1c30-11ee-ba76-9ee097a90b8b.bamarambash.monster
   udp: true
-- name: 4Sarina-15514
+- name: 4Mohsen-15521
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -2303,7 +2319,7 @@ proxies:
     headers:
       Host: 4.saintink.eu.org
   udp: true
-- name: 4Sarina-15669
+- name: 4Mohsen-15676
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -2319,7 +2335,7 @@ proxies:
     headers:
       Host: ru1.mianfenyun012.eu.org
   udp: true
-- name: 4Sarina-15700
+- name: 4Mohsen-15707
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -2335,7 +2351,7 @@ proxies:
     headers:
       Host: sub2.saintink.eu.org
   udp: true
-- name: 4Sarina-15781
+- name: 4Mohsen-15788
   server: ava.game.naver.com
   port: 443
   type: vmess
@@ -2351,7 +2367,7 @@ proxies:
     headers:
       Host: us1.x898989.xyz
   udp: true
-- name: 4Sarina-15826
+- name: 4Mohsen-15832
   server: ava.game.naver.com
   port: 443
   type: vmess
