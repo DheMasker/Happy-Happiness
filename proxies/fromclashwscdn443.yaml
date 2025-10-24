@@ -303,7 +303,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-77.83.141.171-0991 | 10.908MB
+- name: 🇺🇸US-77.83.141.171-0991 | 12.227MB
   server: vc.fly.dev
   port: 443
   type: vmess
@@ -317,22 +317,8 @@ proxies:
     path: /
     headers:
       Host: vc.fly.dev
-- name: RELAY-172.67.200.13-1063 | 5.528MB
-  server: 172.67.200.13
-  port: 443
-  type: vmess
-  uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-- name: 🇺🇸US-209.126.84.189-0623 | 3.901MB
-  server: 209.126.84.189
+- name: 🇺🇸US-209.126.84.189-0801 | 1.927MB
+  server: v2ray.codefyinc.com
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -344,8 +330,49 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 209.126.84.189
-- name: ru|b9b6|puddincat07@Telegram
+      Host: v2ray.codefyinc.com
+- name: RELAY-104.21.76.158-0315 | 1.084MB
+  server: sy4.620720.xyz
+  port: 443
+  type: vmess
+  uuid: 516d8a7a-3f0b-41d3-bad0-246116381516
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: sy4.620720.xyz
+- name: RELAY-104.21.21.192-1643 | 70.751MB
+  server: b62a948c-faa2-4e8a-bf8a-3ff3121c875a.asoul-ava.top
+  port: 443
+  type: vmess
+  uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: b62a948c-faa2-4e8a-bf8a-3ff3121c875a.asoul-ava.top
+- name: us|44f2|puddincat07@Telegram
+  server: 154.17.227.158
+  alterId: 0
+  cipher: auto
+  network: ws
+  port: 443
+  tls: true
+  type: vmess
+  uuid: de94cc0a-0592-4969-b1fc-97ea8f0ea0b3
+  ws-opts:
+    headers:
+      Host: us.nbee.pp.ua
+    path: /aa
+- name: ru|7c3a|puddincat07@Telegram
   server: 46.3.26.12
   alterId: 0
   cipher: auto
