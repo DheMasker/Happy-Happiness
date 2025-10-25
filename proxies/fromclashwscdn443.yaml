@@ -303,7 +303,21 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-77.83.141.171-0991 | 26.119MB
+- name: RELAY-172.67.200.13-1063 | 2.642MB
+  server: 172.67.200.13
+  port: 443
+  type: vmess
+  uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+- name: 🇺🇸US-77.83.141.171-0991 | 2.488MB
   server: vc.fly.dev
   port: 443
   type: vmess
@@ -317,8 +331,8 @@ proxies:
     path: /
     headers:
       Host: vc.fly.dev
-- name: 🇺🇸US-209.126.84.189-0801 | 10.959MB
-  server: v2ray.codefyinc.com
+- name: 🇺🇸US-209.126.84.189-0623 | 0.904MB
+  server: 209.126.84.189
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -330,8 +344,8 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: v2ray.codefyinc.com
-- name: RELAY-104.21.76.158-0315 | 6.953MB
+      Host: 209.126.84.189
+- name: RELAY-172.67.197.47-1101 | 0.113MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
@@ -345,21 +359,7 @@ proxies:
     path: /
     headers:
       Host: sy4.620720.xyz
-- name: RELAY-172.67.200.13-1694 | 65.747MB
-  server: b62a948c-faa2-4e8a-bf8a-3ff3121c875a.asoul-ava.top
-  port: 443
-  type: vmess
-  uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: b62a948c-faa2-4e8a-bf8a-3ff3121c875a.asoul-ava.top
-- name: us|89c2|puddincat07@Telegram
+- name: us|ebe4|puddincat07@Telegram
   server: 154.17.227.158
   alterId: 0
   cipher: auto
@@ -372,7 +372,7 @@ proxies:
     headers:
       Host: us.nbee.pp.ua
     path: /aa
-- name: ru|64b9|puddincat07@Telegram
+- name: ru|1039|puddincat07@Telegram
   server: 46.3.26.12
   alterId: 0
   cipher: auto
