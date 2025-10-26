@@ -1,5 +1,5 @@
 proxies:
-- name: a441a82760894571b0252af3f5e02eb5_@_@Hope_Net-join-us-on-Telegram
+- name: e9ddd13ed18c455db2f9d03ee08b4285_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: 846fedf9161c40fbabbc52e20ee70e97_@_🅼🅴🅷🅳🅸
+- name: b71ab219a8c94265be23c669ba3c918b_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -303,8 +303,8 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-172.67.200.13-1457 | 30.686MB
-  server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+- name: RELAY-172.67.200.13-1066 | 1.67MB
+  server: 172.67.200.13
   port: 443
   type: vmess
   uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
@@ -317,8 +317,22 @@ proxies:
     path: /
     headers:
       Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-- name: 🇺🇸US-209.126.84.189-0626 | 10.151MB
-  server: 209.126.84.189
+- name: 🇺🇸US-77.83.141.171-0994 | 1.041MB
+  server: vc.fly.dev
+  port: 443
+  type: vmess
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vc.fly.dev
+- name: 🇺🇸US-209.126.84.189-0804 | 0.668MB
+  server: v2ray.codefyinc.com
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -330,22 +344,8 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 209.126.84.189
-- name: RELAY-104.21.76.158-0257 | 2.347MB
-  server: sy4.620720.xyz
-  port: 443
-  type: vmess
-  uuid: 516d8a7a-3f0b-41d3-bad0-246116381516
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: sy4.620720.xyz
-- name: us|2174|puddincat07@Telegram
+      Host: v2ray.codefyinc.com
+- name: us|034e|puddincat07@Telegram
   server: 154.17.227.158
   alterId: 0
   cipher: auto
@@ -358,7 +358,7 @@ proxies:
     headers:
       Host: us.nbee.pp.ua
     path: /aa
-- name: ru|7f5e|puddincat07@Telegram
+- name: ru|7d04|puddincat07@Telegram
   server: 46.3.26.12
   alterId: 0
   cipher: auto
