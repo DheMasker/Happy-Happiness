@@ -1,5 +1,5 @@
 proxies:
-- name: 98f84bf478bc43ecb57557de79bc970c_@_@Hope_Net-join-us-on-Telegram
+- name: 9da1a34a6976411780e30a03c8a31b22_@_@Hope_Net-join-us-on-Telegram
   server: d.ritchier.info
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: d.ritchier.info
     path: linkvws
-- name: dbcf3e141dac41e8b8e8815022895efb_@_🅼🅴🅷🅳🅸
+- name: abd40f74ab7f4c17a09c649dfdd069ca_@_🅼🅴🅷🅳🅸
   server: 104.25.174.85
   uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   cipher: auto
@@ -303,8 +303,36 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-172.67.200.13-1093 | 1.074MB
-  server: 172.67.200.13
+- name: 🇺🇸US-77.83.141.171-1042 | 7.099MB
+  server: vc.fly.dev
+  port: 443
+  type: vmess
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vc.fly.dev
+- name: 🇺🇸US-209.126.84.189-0852 | 4.149MB
+  server: v2ray.codefyinc.com
+  port: 443
+  type: vmess
+  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: v2ray.codefyinc.com
+- name: RELAY-172.67.200.13-1430 | 3.531MB
+  server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
   port: 443
   type: vmess
   uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
@@ -317,21 +345,21 @@ proxies:
     path: /
     headers:
       Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-- name: 🇺🇸US-209.126.84.189-0653 | 0.266MB
-  server: 209.126.84.189
+- name: RELAY-172.67.197.47-1152 | 0.615MB
+  server: sy4.620720.xyz
   port: 443
   type: vmess
-  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
+  uuid: 516d8a7a-3f0b-41d3-bad0-246116381516
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: false
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: 209.126.84.189
-- name: us|041f|puddincat07@Telegram
+      Host: sy4.620720.xyz
+- name: us|5800|puddincat07@Telegram
   server: 154.17.227.158
   alterId: 0
   cipher: auto
@@ -344,7 +372,7 @@ proxies:
     headers:
       Host: us.nbee.pp.ua
     path: /aa
-- name: ru|96b9|puddincat07@Telegram
+- name: ru|b2e0|puddincat07@Telegram
   server: 46.3.26.12
   alterId: 0
   cipher: auto
