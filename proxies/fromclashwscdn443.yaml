@@ -282,8 +282,8 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-172.67.200.13-1161 | 30.78MB
-  server: 172.67.200.13
+- name: RELAY-104.21.21.192-1412 | 16.302MB
+  server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
   port: 443
   type: vmess
   uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
@@ -296,7 +296,22 @@ proxies:
     path: /
     headers:
       Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-- name: RELAY-172.67.197.47-0371 | 9.675MB
+- name: RELAY-172.66.44.77-0284 | 8.683MB
+  server: cf.090227.xyz
+  port: 443
+  type: vmess
+  uuid: 290cc691-3ac6-4387-98a1-25c8eb8ca2ea
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: RELAY-172.66.44.77-0284 | 8.683MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: sgal.dagrate.eu.org
+- name: RELAY-104.21.76.158-0351 | 1.307MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
@@ -310,8 +325,8 @@ proxies:
     path: /
     headers:
       Host: sy4.620720.xyz
-- name: 🇺🇸US-209.126.84.189-0899 | 9.444MB
-  server: v2ray.codefyinc.com
+- name: 🇺🇸US-209.126.84.189-0650 | 1.036MB
+  server: 209.126.84.189
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -323,8 +338,22 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: v2ray.codefyinc.com
-- name: us|5b1f|puddincat07@Telegram
+      Host: 209.126.84.189
+- name: 🇸🇬SG-103.253.26.20-0172 | 0.0MB
+  server: 103.253.26.20
+  port: 443
+  type: vmess
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  alterId: 4
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: zecjk.com
+- name: us|ef9c|puddincat07@Telegram
   server: 154.17.227.158
   alterId: 0
   cipher: auto
@@ -337,7 +366,7 @@ proxies:
     headers:
       Host: us.nbee.pp.ua
     path: /aa
-- name: ru|b85b|puddincat07@Telegram
+- name: ru|ab0a|puddincat07@Telegram
   server: 46.3.26.12
   alterId: 0
   cipher: auto
@@ -350,21 +379,6 @@ proxies:
     headers:
       Host: hk.nbee.pp.ua
     path: /aa
-- name: xx|aed9|puddincat07@Telegram
-  server: vc.fly.dev
-  alterId: 32
-  cipher: auto
-  client-fingerprint: chrome
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
-  ws-opts:
-    headers:
-      host: vc.fly.dev
-    path: /vc
 - name: DE_1
   server: 185.146.173.158
   port: 443
