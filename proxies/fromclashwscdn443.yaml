@@ -1,5 +1,5 @@
 proxies:
-- name: 20f7c1127fd84d8f8a49b5ed59b37284_@_🇺🇸[openproxylist.com] vmess-US
+- name: 33418929bd374269a1c2fe3fda135fc2_@_🇺🇸[openproxylist.com] vmess-US
   server: cdns.doon.eu.org
   uuid: 270eac45-11c4-426d-af58-52e2043ceb51
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: proportion-recovery-motels-jones.trycloudflare.com
     path: /vmess-argo?ed=2560
-- name: e487d6fa91264243aa74cf747cf1901a_@_@Hope_Net-join-us-on-Telegram
+- name: 75eb60c601e74ab586b6016018065d6a_@_@Hope_Net-join-us-on-Telegram
   server: hms082.gwdef.sbs
   uuid: bc864078-dcf3-4bf4-8dbf-ca9f200b56be
   cipher: auto
@@ -30,7 +30,7 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /
-- name: 4c7e4b1f94c24adebac5a69f72ffd233_@_@Hope_Net-join-us-on-Telegram
+- name: 684a66ea2f5642eb87fab8b293dfdc2b_@_@Hope_Net-join-us-on-Telegram
   server: c.jannah.homes
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -314,8 +314,22 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-104.21.21.192-1412 | 32.468MB
-  server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+- name: 🇺🇸US-77.83.141.171-1018 | 2.561MB
+  server: vc.fly.dev
+  port: 443
+  type: vmess
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vc.fly.dev
+- name: RELAY-172.67.200.13-1090 | 1.384MB
+  server: 172.67.200.13
   port: 443
   type: vmess
   uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
@@ -328,7 +342,7 @@ proxies:
     path: /
     headers:
       Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-- name: RELAY-172.66.44.77-0284 | 24.288MB
+- name: RELAY-172.66.44.77-0284 | 1.167MB
   server: cf.090227.xyz
   port: 443
   type: vmess
@@ -337,13 +351,27 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-172.66.44.77-0284 | 24.288MB
+  servername: RELAY-172.66.44.77-0284 | 1.167MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: sgal.dagrate.eu.org
-- name: RELAY-104.21.76.158-0351 | 10.226MB
+- name: 🇺🇸US-209.126.84.189-0828 | 0.476MB
+  server: v2ray.codefyinc.com
+  port: 443
+  type: vmess
+  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: v2ray.codefyinc.com
+- name: RELAY-104.21.76.158-0351 | 0.091MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
@@ -357,35 +385,7 @@ proxies:
     path: /
     headers:
       Host: sy4.620720.xyz
-- name: 🇺🇸US-209.126.84.189-0650 | 7.933MB
-  server: 209.126.84.189
-  port: 443
-  type: vmess
-  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 209.126.84.189
-- name: 🇸🇬SG-103.253.26.20-0172 | 0.082MB
-  server: 103.253.26.20
-  port: 443
-  type: vmess
-  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
-  alterId: 4
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: zecjk.com
-- name: us|707d|puddincat07@Telegram
+- name: us|b9b7|puddincat07@Telegram
   server: 154.17.227.158
   alterId: 0
   cipher: auto
@@ -398,7 +398,7 @@ proxies:
     headers:
       Host: us.nbee.pp.ua
     path: /aa
-- name: ru|0eef|puddincat07@Telegram
+- name: ru|d4ed|puddincat07@Telegram
   server: 46.3.26.12
   alterId: 0
   cipher: auto
