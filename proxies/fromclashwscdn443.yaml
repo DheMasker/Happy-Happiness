@@ -1,37 +1,6 @@
 proxies:
-- name: 210f1397babf4b04b8e251506bfa11d6_@_🇺🇸[openproxylist.com] vmess-US
-  server: cdns.doon.eu.org
-  uuid: 270eac45-11c4-426d-af58-52e2043ceb51
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: firefox
-  servername: proportion-recovery-motels-jones.trycloudflare.com
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: proportion-recovery-motels-jones.trycloudflare.com
-    path: /vmess-argo?ed=2560
-- name: f0747c30131f4c1b8cf3413e1dc0ffb6_@_@Hope_Net-join-us-on-Telegram
-  server: hms082.gwdef.sbs
-  uuid: bc864078-dcf3-4bf4-8dbf-ca9f200b56be
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /
-- name: 51eac0b999c9474fb52b3589bba5bb3c_@_@Hope_Net-join-us-on-Telegram
-  server: c.jannah.homes
+- name: 5ffe9459250b4a74a87a583692c562c7_@_@Hope_Net-join-us-on-Telegram
+  server: p.valkinin.org
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
   alterId: 1
@@ -44,23 +13,19 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: linkvws
-- name: 82bb27e9cfbb4ad0a18862d129cfcc00_@_@Hope_Net-join-us-on-Telegram
-  server: 172.67.219.194
-  uuid: b321fd5d-e6ec-4293-a644-164e3885f52e
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
+- name: 13|JP_speednode_0020
+  server: 103.116.7.1
   network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: denc36.xtooltech.cfd
-  fingerprint: ''
+  password: trojan
+  port: 443
+  skip-cert-verify: false
+  sni: wahaha.yingyangkuaixian.dpdns.org
+  type: trojan
+  udp: true
   ws-opts:
     headers:
-      host: denc36.xtooltech.cfd
-    path: /linkws
+      Host: wahaha.yingyangkuaixian.dpdns.org
+    path: /
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -331,7 +296,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-172.67.200.13-1116 | 20.355MB
+- name: RELAY-172.67.200.13-1116 | 4.868MB
   server: 172.67.200.13
   port: 443
   type: vmess
@@ -345,7 +310,7 @@ proxies:
     path: /
     headers:
       Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-- name: 🇺🇸US-77.83.141.171-1044 | 16.592MB
+- name: 🇺🇸US-77.83.141.171-1044 | 3.234MB
   server: vc.fly.dev
   port: 443
   type: vmess
@@ -359,7 +324,7 @@ proxies:
     path: /
     headers:
       Host: vc.fly.dev
-- name: RELAY-172.66.47.179-7979 | 10.017MB
+- name: RELAY-172.66.47.179-7979 | 1.832MB
   server: cf.090227.xyz
   port: 443
   type: vmess
@@ -368,13 +333,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-172.66.47.179-7979 | 10.017MB
+  servername: RELAY-172.66.47.179-7979 | 1.832MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: sgal.dagrate.eu.org
-- name: 🇺🇸US-209.126.84.189-0854 | 3.176MB
+- name: 🇺🇸US-209.126.84.189-0854 | 0.652MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -388,7 +353,7 @@ proxies:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: RELAY-172.67.197.47-0293 | 0.897MB
+- name: RELAY-172.67.197.47-0293 | 0.355MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
@@ -402,7 +367,20 @@ proxies:
     path: /
     headers:
       Host: sy4.620720.xyz
-- name: ru|266b|puddincat07@Telegram
+- name: us|555f|puddincat07@Telegram
+  server: 154.17.227.158
+  alterId: 0
+  cipher: auto
+  network: ws
+  port: 443
+  tls: true
+  type: vmess
+  uuid: de94cc0a-0592-4969-b1fc-97ea8f0ea0b3
+  ws-opts:
+    headers:
+      Host: us.nbee.pp.ua
+    path: /aa
+- name: ru|0646|puddincat07@Telegram
   server: 46.3.26.12
   alterId: 0
   cipher: auto
@@ -415,6 +393,19 @@ proxies:
     headers:
       Host: hk.nbee.pp.ua
     path: /aa
+- name: us|289f|puddincat07@Telegram
+  server: 172.67.206.152
+  alterId: 0
+  cipher: auto
+  network: ws
+  port: 443
+  tls: true
+  type: vmess
+  uuid: e053ff61-f350-4fe8-9a45-56da927d417c
+  ws-opts:
+    headers:
+      Host: 9ef7d8c2-70ef-dcb5-39a5-5c514e43bf12.freevpnatm2025.dpdns.org
+    path: /ri9mOOVJuAimB74kgXZ
 - name: DE_1
   server: 185.146.173.158
   port: 443
@@ -426,17 +417,6 @@ proxies:
     path: /
     headers:
       Host: esetsecuritylicense.bwnsmv.workers.dev
-- name: SG_1
-  server: 103.116.7.1
-  port: 443
-  type: trojan
-  password: trojan
-  sni: wahaha.yingyangkuaixian.dpdns.org
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: wahaha.yingyangkuaixian.dpdns.org
 - name: SG_11
   server: 104.18.3.150
   port: 443
