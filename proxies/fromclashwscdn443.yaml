@@ -1,5 +1,5 @@
 proxies:
-- name: e300e719a73c480795a5263370cab54f_@_@Hope_Net-join-us-on-Telegram
+- name: b3f86d37275e43979d771e6942b8b7b4_@_@Hope_Net-join-us-on-Telegram
   server: p.valkinin.org
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -13,19 +13,6 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: linkvws
-- name: 14|JP_speednode_0020
-  server: 103.116.7.1
-  network: ws
-  password: trojan
-  port: 443
-  skip-cert-verify: false
-  sni: wahaha.yingyangkuaixian.dpdns.org
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: wahaha.yingyangkuaixian.dpdns.org
-    path: /
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -296,7 +283,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-172.67.200.13-1107 | 21.423MB
+- name: RELAY-172.67.200.13-1162 | 22.091MB
   server: 172.67.200.13
   port: 443
   type: vmess
@@ -310,7 +297,7 @@ proxies:
     path: /
     headers:
       Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-- name: RELAY-172.66.47.179-0302 | 14.864MB
+- name: RELAY-172.66.47.179-0333 | 10.188MB
   server: cf.090227.xyz
   port: 443
   type: vmess
@@ -319,27 +306,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-172.66.47.179-0302 | 14.864MB
+  servername: RELAY-172.66.47.179-0333 | 10.188MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: sgal.dagrate.eu.org
-- name: 🇺🇸US-77.83.141.171-1035 | 4.646MB
-  server: vc.fly.dev
-  port: 443
-  type: vmess
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
-  alterId: 32
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vc.fly.dev
-- name: 🇺🇸US-209.126.84.189-0667 | 4.299MB
+- name: 🇺🇸US-209.126.84.189-0722 | 3.333MB
   server: 209.126.84.189
   port: 443
   type: vmess
@@ -353,7 +326,7 @@ proxies:
     path: /
     headers:
       Host: 209.126.84.189
-- name: RELAY-172.67.197.47-0355 | 0.917MB
+- name: RELAY-104.21.76.158-0382 | 0.837MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
@@ -367,7 +340,7 @@ proxies:
     path: /
     headers:
       Host: sy4.620720.xyz
-- name: us|d7be|puddincat07@Telegram
+- name: us|f36a|puddincat07@Telegram
   server: 154.17.227.158
   alterId: 0
   cipher: auto
@@ -380,7 +353,7 @@ proxies:
     headers:
       Host: us.nbee.pp.ua
     path: /aa
-- name: ru|b84c|puddincat07@Telegram
+- name: ru|d10d|puddincat07@Telegram
   server: 46.3.26.12
   alterId: 0
   cipher: auto
@@ -404,6 +377,17 @@ proxies:
     path: /
     headers:
       Host: esetsecuritylicense.bwnsmv.workers.dev
+- name: SG_1
+  server: 103.116.7.1
+  port: 443
+  type: trojan
+  password: trojan
+  sni: wahaha.yingyangkuaixian.dpdns.org
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: wahaha.yingyangkuaixian.dpdns.org
 - name: SG_11
   server: 104.18.3.150
   port: 443
