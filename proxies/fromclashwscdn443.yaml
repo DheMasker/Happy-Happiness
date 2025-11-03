@@ -1,5 +1,5 @@
 proxies:
-- name: ef89fc072ac9465e8e361faa2bc8bfc1_@_@Hope_Net-join-us-on-Telegram
+- name: e300e719a73c480795a5263370cab54f_@_@Hope_Net-join-us-on-Telegram
   server: p.valkinin.org
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -296,7 +296,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-172.67.200.13-1116 | 4.868MB
+- name: RELAY-172.67.200.13-1107 | 21.423MB
   server: 172.67.200.13
   port: 443
   type: vmess
@@ -310,7 +310,22 @@ proxies:
     path: /
     headers:
       Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-- name: 🇺🇸US-77.83.141.171-1044 | 3.234MB
+- name: RELAY-172.66.47.179-0302 | 14.864MB
+  server: cf.090227.xyz
+  port: 443
+  type: vmess
+  uuid: 290cc691-3ac6-4387-98a1-25c8eb8ca2ea
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: RELAY-172.66.47.179-0302 | 14.864MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: sgal.dagrate.eu.org
+- name: 🇺🇸US-77.83.141.171-1035 | 4.646MB
   server: vc.fly.dev
   port: 443
   type: vmess
@@ -324,23 +339,8 @@ proxies:
     path: /
     headers:
       Host: vc.fly.dev
-- name: RELAY-172.66.47.179-7979 | 1.832MB
-  server: cf.090227.xyz
-  port: 443
-  type: vmess
-  uuid: 290cc691-3ac6-4387-98a1-25c8eb8ca2ea
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: RELAY-172.66.47.179-7979 | 1.832MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: sgal.dagrate.eu.org
-- name: 🇺🇸US-209.126.84.189-0854 | 0.652MB
-  server: v2ray.codefyinc.com
+- name: 🇺🇸US-209.126.84.189-0667 | 4.299MB
+  server: 209.126.84.189
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -352,8 +352,8 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: v2ray.codefyinc.com
-- name: RELAY-172.67.197.47-0293 | 0.355MB
+      Host: 209.126.84.189
+- name: RELAY-172.67.197.47-0355 | 0.917MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
@@ -367,7 +367,20 @@ proxies:
     path: /
     headers:
       Host: sy4.620720.xyz
-- name: ru|0a83|puddincat07@Telegram
+- name: us|d7be|puddincat07@Telegram
+  server: 154.17.227.158
+  alterId: 0
+  cipher: auto
+  network: ws
+  port: 443
+  tls: true
+  type: vmess
+  uuid: de94cc0a-0592-4969-b1fc-97ea8f0ea0b3
+  ws-opts:
+    headers:
+      Host: us.nbee.pp.ua
+    path: /aa
+- name: ru|b84c|puddincat07@Telegram
   server: 46.3.26.12
   alterId: 0
   cipher: auto
