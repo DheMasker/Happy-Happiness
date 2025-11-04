@@ -1,9 +1,9 @@
 proxies:
-- name: 77b09f1e8a29418cac49a908c405b687_@_@Hope_Net-join-us-on-Telegram
-  server: p.valkinin.org
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+- name: ad2494b830fe4cdaad305116276597b3_@_@Hope_Net-join-us-on-Telegram
+  server: xr-1.herokuapp.com
+  uuid: 17af76e1-a5d7-41ab-ae87-b48f185075d1
   cipher: auto
-  alterId: 1
+  alterId: 0
   type: vmess
   port: 443
   network: ws
@@ -12,12 +12,138 @@ proxies:
   client-fingerprint: chrome
   fingerprint: ''
   ws-opts:
-    path: linkvws
-- name: f919cf6c2d264ffa959d73bee9ebf649_@_@Hope_Net-join-us-on-Telegram
-  server: mycfwork.herokuapp.com
-  uuid: 07a3a1e3-d52e-4acc-958e-c301681b5f09
+    path: /
+- name: e09f376fcfc44876b32458719e053a12_@_@Hope_Net-join-us-on-Telegram
+  server: hohm.microsoft.com
+  uuid: 2b214122-1906-428a-bbb7-a039cbb7cd5c
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /
+- name: 7e6af2e473ff4444a6f7d42111a1a2b0_@_@Hope_Net-join-us-on-Telegram
+  server: news.microsoft.com
+  uuid: 615a1285-5848-42a1-9859-d4cb37b1fbd8
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /
+- name: a48f8d250559443dbef7d9e55835fcdd_@_@Hope_Net-join-us-on-Telegram
+  server: 202.61.141.130
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
   cipher: auto
   alterId: 4
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /
+- name: cb8003fe91284053a9961c7baafa3cd4_@_@Hope_Net-join-us-on-Telegram
+  server: 147.78.244.7
+  uuid: c2907a9a-5024-41fd-be3c-30885585e3ef
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /
+- name: b3d10ab7c1d6497faa7607c83733ace9_@_@Hope_Net-join-us-on-Telegram
+  server: tw02.nttkk.com
+  uuid: 3a9c0d0c-e0fd-3145-a414-ec265e7010b7
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: false
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /
+- name: 91a43f614341456fa0ce7e139e08202e_@_@Hope_Net-join-us-on-Telegram
+  server: 61.216.85.68
+  uuid: 5ba738e7-0abf-4935-b67e-d404a083d6a6
+  cipher: auto
+  alterId: 64
+  type: vmess
+  port: 443
+  network: ws
+  tls: false
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /
+- name: 048ebb5037e94e2ea52233f8382fc546_@_@Hope_Net-join-us-on-Telegram
+  server: 104.29.64.36
+  uuid: a2c5ba68-e86a-4959-b7f3-8f8801d6370e
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: false
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /
+- name: cc12a527c23c43c6baa728b57a97f58b_@_@Hope_Net-join-us-on-Telegram
+  server: 220.130.80.179
+  uuid: ceb8a7f4-a45b-48a7-8f8e-ca7124a5ebee
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: false
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /
+- name: 2047a835d41540e9bdd1d8cfbf5c57a0_@_@Hope_Net-join-us-on-Telegram
+  server: news.microsoft.com
+  uuid: 781be00e-1e09-4e27-a464-e14197418c8f
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /
+- name: 367a9f67a4d54ac9a678bcfbb8132bf4_@_@Hope_Net-join-us-on-Telegram
+  server: powerservice.com
+  uuid: 0764a598-82c4-4b41-ba10-551a625beed5
+  cipher: auto
+  alterId: 0
   type: vmess
   port: 443
   network: ws
@@ -129,6 +255,19 @@ proxies:
   ws-headers:
     Host: hkd1.quickerlink.xyz
   ws-path: /h6jr23x9h3lqiitg
+- name: 🏁RELAY-172.67.132.44-222_1@221
+  server: nicola.pics
+  alterId: 0
+  cipher: auto
+  network: ws
+  port: 443
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-headers:
+    Host: nicola.pics
+  ws-path: /linkvws
 - name: 美国 011_2@19
   server: 104.18.92.5
   alterId: 0
@@ -297,7 +436,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-172.67.200.13-1162 | 22.091MB
+- name: RELAY-172.67.200.13-1162 | 22.594MB
   server: 172.67.200.13
   port: 443
   type: vmess
@@ -311,7 +450,7 @@ proxies:
     path: /
     headers:
       Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-- name: RELAY-172.66.47.179-0333 | 10.188MB
+- name: RELAY-172.66.47.179-0333 | 20.723MB
   server: cf.090227.xyz
   port: 443
   type: vmess
@@ -320,13 +459,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-172.66.47.179-0333 | 10.188MB
+  servername: RELAY-172.66.47.179-0333 | 20.723MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: sgal.dagrate.eu.org
-- name: 🇺🇸US-209.126.84.189-0722 | 3.333MB
+- name: 🇺🇸US-209.126.84.189-0722 | 17.125MB
   server: 209.126.84.189
   port: 443
   type: vmess
@@ -340,7 +479,7 @@ proxies:
     path: /
     headers:
       Host: 209.126.84.189
-- name: RELAY-104.21.76.158-0382 | 0.837MB
+- name: RELAY-104.21.76.158-0382 | 7.853MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
@@ -354,7 +493,7 @@ proxies:
     path: /
     headers:
       Host: sy4.620720.xyz
-- name: us|2232|puddincat07@Telegram
+- name: us|c208|puddincat07@Telegram
   server: 154.17.227.158
   alterId: 0
   cipher: auto
@@ -366,6 +505,19 @@ proxies:
   ws-opts:
     headers:
       Host: us.nbee.pp.ua
+    path: /aa
+- name: ru|2bdd|puddincat07@Telegram
+  server: 46.3.26.12
+  alterId: 0
+  cipher: auto
+  network: ws
+  port: 443
+  tls: true
+  type: vmess
+  uuid: 4bf075f5-4d5e-4d39-f5ab-b32a86250f0e
+  ws-opts:
+    headers:
+      Host: hk.nbee.pp.ua
     path: /aa
 - name: DE_1
   server: 185.146.173.158
