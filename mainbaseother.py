@@ -82,7 +82,7 @@ SUB_LINKS = [
 
 #
 
-BUGCDN = "ava.game.naver.com"
+BUGCDN = "104.18.1.196"
 
 def ambil_langganan():
     semua_node = []
