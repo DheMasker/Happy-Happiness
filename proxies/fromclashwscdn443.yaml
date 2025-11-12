@@ -1,73 +1,5 @@
 proxies:
-- name: a72eff8d9de542daa13b49ff5bc3fcab_@_@V2ray1_Ng
-  server: 57.129.28.212
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: fapeng.org
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: fapeng.org
-    path: linkvws
-- name: 457c379c4258461095c721f836a92acb_@_@Hope_Net-join-us-on-Telegram
-  server: 188.114.96.1
-  uuid: f584de15-2034-4170-a723-f48c2bae5e0f
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: afrhms16v.bestxray.buzz
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: afrhms16v.bestxray.buzz
-    path: /linkws
-- name: 3f410bb170284ff68915ef9f825ed0e3_@_@Hope_Net-join-us-on-Telegram
-  server: 151.101.194.133
-  uuid: 3cfa48fe-c4a9-482b-82ab-e6c02fee55d2
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: firefox
-  servername: live.989bull.com
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: live.989bull.com
-    path: ws/?ed=2048
-- name: 280bfac0faf745d4838ab0de181a081e_@_@Hope_Net-join-us-on-Telegram
-  server: www.kayak.com
-  uuid: 6529ee7d-b090-4515-8595-8bbdb6227fe1
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: www.Kayak.com
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: www.Kayak.com
-    path: /racevpn?telegram-@ISVvpn-telegram-@ISVvpn-telegram-@ISVvpn
-- name: 8bfc55ce971b4fa3abd31f4370767788_@_🇺🇸[openproxylist.com] vmess-US
+- name: 157e295884404206aafbd955d35181ac_@_🇳🇱[openproxylist.com] vmess-NL
   server: 1762751541.bilibiliapp.cn
   uuid: f744cd83-ecc4-46c5-a2ad-cf3dfa9e12a0
   cipher: auto
@@ -78,11 +10,11 @@ proxies:
   tls: true
   udp: false
   client-fingerprint: chrome
-  servername: ik2a0u06k1.speed.asbafwa.cccp.useraaca.pp.ua
+  servername: v4r3y5.speed.nlsadadvsb.cccp.useraaca.pp.ua
   fingerprint: ''
   ws-opts:
     headers:
-      host: ik2a0u06k1.speed.asbafwa.cccp.useraaca.pp.ua
+      host: v4r3y5.speed.nlsadadvsb.cccp.useraaca.pp.ua
     path: /
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
@@ -186,6 +118,19 @@ proxies:
   ws-headers:
     Host: hkd1.quickerlink.xyz
   ws-path: /h6jr23x9h3lqiitg
+- name: 🏁RELAY-172.67.132.44-222_1@221
+  server: nicola.pics
+  alterId: 0
+  cipher: auto
+  network: ws
+  port: 443
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-headers:
+    Host: nicola.pics
+  ws-path: /linkvws
 - name: 美国 011_2@19
   server: 104.18.92.5
   alterId: 0
@@ -354,7 +299,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-172.67.200.13-1168 | 15.866MB
+- name: RELAY-172.67.200.13-1090 | 21.443MB
   server: 172.67.200.13
   port: 443
   type: vmess
@@ -368,7 +313,7 @@ proxies:
     path: /
     headers:
       Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-- name: RELAY-172.66.47.179-0255 | 9.352MB
+- name: RELAY-172.66.47.179-0337 | 9.633MB
   server: cf.090227.xyz
   port: 443
   type: vmess
@@ -377,26 +322,12 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-172.66.47.179-0255 | 9.352MB
+  servername: RELAY-172.66.47.179-0337 | 9.633MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: sgal.dagrate.eu.org
-- name: 🇺🇸US-209.126.84.189-0906 | 2.681MB
-  server: v2ray.codefyinc.com
-  port: 443
-  type: vmess
-  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: v2ray.codefyinc.com
 - name: DE_1
   server: 185.146.173.158
   port: 443
