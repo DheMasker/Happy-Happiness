@@ -1,5 +1,5 @@
 proxies:
-- name: 42faa92974124efd8217898d982124ae_@_@V2ray1_Ng
+- name: a72eff8d9de542daa13b49ff5bc3fcab_@_@V2ray1_Ng
   server: 57.129.28.212
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: fapeng.org
     path: linkvws
-- name: 4373fa7b73ee4b518984f6e84dc7a586_@_@Hope_Net-join-us-on-Telegram
+- name: 457c379c4258461095c721f836a92acb_@_@Hope_Net-join-us-on-Telegram
   server: 188.114.96.1
   uuid: f584de15-2034-4170-a723-f48c2bae5e0f
   cipher: auto
@@ -33,7 +33,7 @@ proxies:
     headers:
       host: afrhms16v.bestxray.buzz
     path: /linkws
-- name: face9042a3dc44f28180f48c7db1ad68_@_@Hope_Net-join-us-on-Telegram
+- name: 3f410bb170284ff68915ef9f825ed0e3_@_@Hope_Net-join-us-on-Telegram
   server: 151.101.194.133
   uuid: 3cfa48fe-c4a9-482b-82ab-e6c02fee55d2
   cipher: auto
@@ -50,7 +50,7 @@ proxies:
     headers:
       host: live.989bull.com
     path: ws/?ed=2048
-- name: 5f844047541347769ef54f6ee7358afb_@_@Hope_Net-join-us-on-Telegram
+- name: 280bfac0faf745d4838ab0de181a081e_@_@Hope_Net-join-us-on-Telegram
   server: www.kayak.com
   uuid: 6529ee7d-b090-4515-8595-8bbdb6227fe1
   cipher: auto
@@ -67,6 +67,23 @@ proxies:
     headers:
       host: www.Kayak.com
     path: /racevpn?telegram-@ISVvpn-telegram-@ISVvpn-telegram-@ISVvpn
+- name: 8bfc55ce971b4fa3abd31f4370767788_@_🇺🇸[openproxylist.com] vmess-US
+  server: 1762751541.bilibiliapp.cn
+  uuid: f744cd83-ecc4-46c5-a2ad-cf3dfa9e12a0
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: ik2a0u06k1.speed.asbafwa.cccp.useraaca.pp.ua
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: ik2a0u06k1.speed.asbafwa.cccp.useraaca.pp.ua
+    path: /
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -337,21 +354,6 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-141.101.120.85-0540 | 91.864MB
-  server: 1762751541.bilibiliapp.cn
-  port: 443
-  type: vmess
-  uuid: f744cd83-ecc4-46c5-a2ad-cf3dfa9e12a0
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: RELAY-141.101.120.85-0540 | 91.864MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ik2a0u06k1.speed.asbafwa.cccp.useraaca.pp.ua
 - name: RELAY-172.67.200.13-1168 | 15.866MB
   server: 172.67.200.13
   port: 443
@@ -395,21 +397,6 @@ proxies:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: xx|96db|puddincat07@Telegram
-  server: vjp3.0bad.com
-  alterId: 0
-  cipher: auto
-  client-fingerprint: chrome
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 927094d3-d678-4763-8591-e240d0bcae87
-  ws-opts:
-    headers:
-      host: vjp3.0bad.com
-    path: /chat
 - name: DE_1
   server: 185.146.173.158
   port: 443
