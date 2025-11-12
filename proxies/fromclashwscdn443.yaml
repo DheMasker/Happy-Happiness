@@ -1,22 +1,5 @@
 proxies:
-- name: 00ceadb49e124bedb3b8ff7caa8db972_@_🇳🇱[openproxylist.com] vmess-NL
-  server: 1762751541.bilibiliapp.cn
-  uuid: f744cd83-ecc4-46c5-a2ad-cf3dfa9e12a0
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: v4r3y5.speed.nlsadadvsb.cccp.useraaca.pp.ua
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: v4r3y5.speed.nlsadadvsb.cccp.useraaca.pp.ua
-    path: /
-- name: 13|NL_speednode_0006
+- name: 14|NL_speednode_0006
   server: 194.147.115.149
   network: ws
   password: c2d6a850-7e35-44f5-ab9f-8299f6f8c72b
@@ -312,6 +295,21 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
+- name: RELAY-141.101.120.197-0192 | 138.373MB
+  server: 1762751541.bilibiliapp.cn
+  port: 443
+  type: vmess
+  uuid: f744cd83-ecc4-46c5-a2ad-cf3dfa9e12a0
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: RELAY-141.101.120.197-0192 | 138.373MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ik2a0u06k1.speed.asbafwa.cccp.useraaca.pp.ua
 - name: 🇺🇸US-209.126.84.189-0834 | 1.342MB
   server: v2ray.codefyinc.com
   port: 443
@@ -340,32 +338,6 @@ proxies:
     path: /
     headers:
       Host: b62a948c-faa2-4e8a-bf8a-3ff3121c875a.asoul-ava.top
-- name: xx|d992|puddincat07@Telegram
-  server: vc.fly.dev
-  alterId: 32
-  cipher: auto
-  client-fingerprint: chrome
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
-  ws-opts:
-    headers:
-      host: vc.fly.dev
-    path: /vc
-- name: us|00a4|puddincat07@Telegram
-  server: 172.67.156.25
-  network: ws
-  password: f282b878-8711-45a1-8c69-5564172123c1
-  port: 443
-  sni: aio.zipzap.biz.id
-  type: trojan
-  ws-opts:
-    headers:
-      Host: aio.zipzap.biz.id
-    path: /aioproxybot/129.150.49.58-18650
 - name: DE_1
   server: 185.146.173.158
   port: 443
