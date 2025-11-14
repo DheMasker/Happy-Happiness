@@ -1,8 +1,22 @@
 proxies:
-- name: 13|BE_speednode_0001
-  server: 34.22.190.30
+- name: f0c7efc838e84d6a8dfeed681577e2a7_@_🇭🇰[openproxylist.com] vmess-HK
+  server: n1744453320.lie5d.cyou
+  uuid: 8889a08a-09f8-4c97-bed2-df31b62fcf23
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
   network: ws
-  password: 88701884-7690-4b79-ac5d-36d299e05e83
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /
+- name: 14|DK_speednode_0011
+  server: 89.28.236.243
+  network: ws
+  password: 63b8ce6d-9a30-4122-a00f-fd47f020dc27
   port: 443
   skip-cert-verify: false
   sni: joss.dus.biz.id
@@ -11,8 +25,8 @@ proxies:
   ws-opts:
     headers:
       Host: joss.dus.biz.id
-    path: /Free-VPN-CF-Geo-Project/34.22.190.30=443
-- name: 13|NL_speednode_0015
+    path: /Free-VPN-CF-Geo-Project/89.28.236.243=443
+- name: 14|NL_speednode_0036
   server: 86.107.197.239
   network: ws
   password: 5ad5fe82-6b60-4f59-977b-93910ef7a9ca
@@ -25,7 +39,7 @@ proxies:
     headers:
       Host: joss.dus.biz.id
     path: /Free-VPN-CF-Geo-Project/86.107.197.239=443
-- name: 13|SE_speednode_0020
+- name: 14|SE_speednode_0046
   server: 77.221.141.207
   network: ws
   password: edeff73d-065d-4b0a-b848-aad9d3380223
@@ -321,7 +335,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-172.67.200.13-1096 | 1.342MB
+- name: RELAY-172.67.200.13-1101 | 21.67MB
   server: 172.67.200.13
   port: 443
   type: vmess
@@ -335,7 +349,22 @@ proxies:
     path: /
     headers:
       Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-- name: 🇺🇸US-77.83.141.171-1024 | 0.311MB
+- name: RELAY-172.66.47.179-7445 | 14.947MB
+  server: cf.090227.xyz
+  port: 443
+  type: vmess
+  uuid: 290cc691-3ac6-4387-98a1-25c8eb8ca2ea
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: RELAY-172.66.47.179-7445 | 14.947MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: sgal.dagrate.eu.org
+- name: 🇺🇸US-77.83.141.171-1029 | 7.638MB
   server: vc.fly.dev
   port: 443
   type: vmess
@@ -349,7 +378,7 @@ proxies:
     path: /
     headers:
       Host: vc.fly.dev
-- name: 🇺🇸US-209.126.84.189-0834 | 0.122MB
+- name: 🇺🇸US-209.126.84.189-0839 | 5.721MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -363,22 +392,33 @@ proxies:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: RELAY-141.101.120.197-0218 | 0.0MB
-  server: 1762751541.bilibiliapp.cn
+- name: 🇺🇸US-20.9.141.27-1260 | 64.269MB
+  server: west_a.gaogroup.bid
   port: 443
   type: vmess
-  uuid: f744cd83-ecc4-46c5-a2ad-cf3dfa9e12a0
+  uuid: ef004cfa-b463-4473-97df-4f0da4473ae0
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-141.101.120.197-0218 | 0.0MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: wik19u9ey.speed.awfiulaxa.cccp.useraaca.pp.ua
-- name: nl|31bf|puddincat07@Telegram
+      Host: west_a.gaogroup.bid
+- name: be|f0c5|puddincat07@Telegram
+  server: 34.22.190.30
+  network: ws
+  password: 88701884-7690-4b79-ac5d-36d299e05e83
+  port: 443
+  skip-cert-verify: false
+  sni: joss.dus.biz.id
+  type: trojan
+  ws-opts:
+    headers:
+      Host: joss.dus.biz.id
+    path: /Free-VPN-CF-Geo-Project/34.22.190.30=443
+- name: nl|7e3e|puddincat07@Telegram
   server: 194.147.115.149
   network: ws
   password: c2d6a850-7e35-44f5-ab9f-8299f6f8c72b
