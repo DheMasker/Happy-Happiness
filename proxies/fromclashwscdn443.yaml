@@ -1,5 +1,5 @@
 proxies:
-- name: 39fb82ac86d44fb0adcdf179b377715d_@_@Hope_Net-join-us-on-Telegram
+- name: 93e0a94fc425430db570433a8ee18c7c_@_@Hope_Net-join-us-on-Telegram
   server: 141.101.114.33
   uuid: e5a88ce2-fc1b-45d1-9c5f-553721d28004
   cipher: auto
@@ -13,7 +13,7 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /dongtaiwang.com
-- name: 919b498687e542b9a61751a535905f56_@_@Hope_Net-join-us-on-Telegram
+- name: 87d03fb517a14ce6a1de814af1ec1750_@_@Hope_Net-join-us-on-Telegram
   server: 141.101.115.2
   uuid: a5ba8b2b-8fc5-4521-a35e-9281be61c1c3
   cipher: auto
@@ -27,7 +27,7 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /dongtaiwang.com
-- name: 130641009b1f42cc9ecbee4b347f0df1_@_@Hope_Net-join-us-on-Telegram
+- name: 6ffa58058678410c8918fa1a20c50e67_@_@Hope_Net-join-us-on-Telegram
   server: 172.64.155.200
   uuid: a8030afd-812a-4afe-a766-9c76ff3eddd4
   cipher: auto
@@ -41,7 +41,7 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /dongtaiwang.com
-- name: 41eec4c4ed5844ca89cd00131905ce0f_@_@Hope_Net-join-us-on-Telegram
+- name: aec84cf1b4964cfbb4865dec64d46044_@_@Hope_Net-join-us-on-Telegram
   server: 172.64.153.150
   uuid: bf4619e4-01dc-48ca-be08-0976b54968ce
   cipher: auto
@@ -55,7 +55,7 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /dongtaiwang.com
-- name: 5f09079fd67f4070a923010eafdf523a_@_@V2ray1_Ng
+- name: 4fd108e21ad340d5a389651a6a37d89c_@_@V2ray1_Ng
   server: 57.129.28.212
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -466,31 +466,21 @@ proxies:
     path: /
     headers:
       Host: west_a.gaogroup.bid
-- name: be|6e1e|puddincat07@Telegram
-  server: 34.22.190.30
+- name: xx|0ab8|puddincat07@Telegram
+  server: vc.fly.dev
+  alterId: 32
+  cipher: auto
+  client-fingerprint: chrome
   network: ws
-  password: 88701884-7690-4b79-ac5d-36d299e05e83
   port: 443
-  skip-cert-verify: false
-  sni: joss.dus.biz.id
-  type: trojan
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
   ws-opts:
     headers:
-      Host: joss.dus.biz.id
-    path: /Free-VPN-CF-Geo-Project/34.22.190.30=443
-- name: nl|e957|puddincat07@Telegram
-  server: 194.147.115.149
-  network: ws
-  password: c2d6a850-7e35-44f5-ab9f-8299f6f8c72b
-  port: 443
-  skip-cert-verify: false
-  sni: joss.dus.biz.id
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: joss.dus.biz.id
-    path: /Free-VPN-CF-Geo-Project/194.147.115.149=443
+      host: vc.fly.dev
+    path: /vc
 - name: DE_1
   server: 185.146.173.158
   port: 443
