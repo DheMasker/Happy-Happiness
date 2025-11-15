@@ -1,61 +1,5 @@
 proxies:
-- name: 93e0a94fc425430db570433a8ee18c7c_@_@Hope_Net-join-us-on-Telegram
-  server: 141.101.114.33
-  uuid: e5a88ce2-fc1b-45d1-9c5f-553721d28004
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /dongtaiwang.com
-- name: 87d03fb517a14ce6a1de814af1ec1750_@_@Hope_Net-join-us-on-Telegram
-  server: 141.101.115.2
-  uuid: a5ba8b2b-8fc5-4521-a35e-9281be61c1c3
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /dongtaiwang.com
-- name: 6ffa58058678410c8918fa1a20c50e67_@_@Hope_Net-join-us-on-Telegram
-  server: 172.64.155.200
-  uuid: a8030afd-812a-4afe-a766-9c76ff3eddd4
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /dongtaiwang.com
-- name: aec84cf1b4964cfbb4865dec64d46044_@_@Hope_Net-join-us-on-Telegram
-  server: 172.64.153.150
-  uuid: bf4619e4-01dc-48ca-be08-0976b54968ce
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /dongtaiwang.com
-- name: 4fd108e21ad340d5a389651a6a37d89c_@_@V2ray1_Ng
+- name: fc0016aff0264971b80c2e7a5e4da826_@_@V2ray1_Ng
   server: 57.129.28.212
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -72,45 +16,6 @@ proxies:
     headers:
       host: fapeng.org
     path: linkvws
-- name: 13|DK_speednode_0011
-  server: 89.28.236.243
-  network: ws
-  password: 63b8ce6d-9a30-4122-a00f-fd47f020dc27
-  port: 443
-  skip-cert-verify: false
-  sni: joss.dus.biz.id
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: joss.dus.biz.id
-    path: /Free-VPN-CF-Geo-Project/89.28.236.243=443
-- name: 13|NL_speednode_0036
-  server: 86.107.197.239
-  network: ws
-  password: 5ad5fe82-6b60-4f59-977b-93910ef7a9ca
-  port: 443
-  skip-cert-verify: false
-  sni: joss.dus.biz.id
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: joss.dus.biz.id
-    path: /Free-VPN-CF-Geo-Project/86.107.197.239=443
-- name: 13|SE_speednode_0046
-  server: 77.221.141.207
-  network: ws
-  password: edeff73d-065d-4b0a-b848-aad9d3380223
-  port: 443
-  skip-cert-verify: false
-  sni: joss.dus.biz.id
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: joss.dus.biz.id
-    path: /Free-VPN-CF-Geo-Project/77.221.141.207=443
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -381,7 +286,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-172.67.200.13-1417 | 22.147MB
+- name: RELAY-172.67.200.13-1417 | 38.66MB
   server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
   port: 443
   type: vmess
@@ -395,7 +300,7 @@ proxies:
     path: /
     headers:
       Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-- name: RELAY-172.66.47.179-0258 | 8.401MB
+- name: RELAY-172.66.47.179-0258 | 29.524MB
   server: cf.090227.xyz
   port: 443
   type: vmess
@@ -404,13 +309,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-172.66.47.179-0258 | 8.401MB
+  servername: RELAY-172.66.47.179-0258 | 29.524MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: sgal.dagrate.eu.org
-- name: 🇺🇸US-209.126.84.189-0827 | 2.148MB
+- name: 🇺🇸US-209.126.84.189-0827 | 14.837MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -424,7 +329,7 @@ proxies:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: 🇸🇬SG-103.253.26.20-0176 | 0.0MB
+- name: 🇸🇬SG-103.253.26.20-0176 | 0.239MB
   server: 103.253.26.20
   port: 443
   type: vmess
@@ -438,7 +343,7 @@ proxies:
     path: /
     headers:
       Host: zecjk.com
-- name: 🇦🇺AU-103.224.212.215-0169 | 0.0MB
+- name: 🇦🇺AU-103.224.212.215-0169 | 0.173MB
   server: vjp1.0bad.com
   port: 443
   type: vmess
@@ -452,21 +357,46 @@ proxies:
     path: /
     headers:
       Host: vjp1.0bad.com
-- name: 🇺🇸US-20.9.141.27-1376 | 44.587MB
-  server: west_a.gaogroup.bid
-  port: 443
-  type: vmess
-  uuid: ef004cfa-b463-4473-97df-4f0da4473ae0
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
+- name: DK_speednode_0011
+  server: 89.28.236.243
   network: ws
+  password: 63b8ce6d-9a30-4122-a00f-fd47f020dc27
+  port: 443
+  skip-cert-verify: false
+  sni: joss.dus.biz.id
+  type: trojan
+  udp: true
   ws-opts:
-    path: /
     headers:
-      Host: west_a.gaogroup.bid
-- name: xx|0ab8|puddincat07@Telegram
+      Host: joss.dus.biz.id
+    path: /Free-VPN-CF-Geo-Project/89.28.236.243=443
+- name: NL_speednode_0036
+  server: 86.107.197.239
+  network: ws
+  password: 5ad5fe82-6b60-4f59-977b-93910ef7a9ca
+  port: 443
+  skip-cert-verify: false
+  sni: joss.dus.biz.id
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: joss.dus.biz.id
+    path: /Free-VPN-CF-Geo-Project/86.107.197.239=443
+- name: SE_speednode_0046
+  server: 77.221.141.207
+  network: ws
+  password: edeff73d-065d-4b0a-b848-aad9d3380223
+  port: 443
+  skip-cert-verify: false
+  sni: joss.dus.biz.id
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: joss.dus.biz.id
+    path: /Free-VPN-CF-Geo-Project/77.221.141.207=443
+- name: xx|da6e|puddincat07@Telegram
   server: vc.fly.dev
   alterId: 32
   cipher: auto
@@ -481,17 +411,20 @@ proxies:
     headers:
       host: vc.fly.dev
     path: /vc
-- name: DE_1
-  server: 185.146.173.158
-  port: 443
-  type: trojan
-  password: auto
-  sni: esetsecuritylicense.bwnsmv.workers.dev
+- name: us|2b53|puddincat07@Telegram
+  server: 172.66.46.254
   network: ws
+  password: auto
+  port: 443
+  skip-cert-verify: true
+  sni: dcf741e8.epeius-2gy.pages.dev
+  tfo: true
+  type: trojan
+  udp: true
   ws-opts:
-    path: /
     headers:
-      Host: esetsecuritylicense.bwnsmv.workers.dev
+      Host: dcf741e8.epeius-2gy.pages.dev
+    path: /?ed=2560
 - name: SG_1
   server: 103.116.7.1
   port: 443
