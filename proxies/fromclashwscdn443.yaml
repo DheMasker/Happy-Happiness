@@ -1,24 +1,7 @@
 proxies:
-- name: 5a801c2d74ba4d389758988f3bf4ba6c_@_@meli_proxyy
-  server: 188.114.96.1
-  uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-    path: /azumase.ren
-- name: ec0f520acbfb415294fd4be9e88f4d4a_@_@Hope_Net-join-us-on-Telegram
-  server: cdnjs.com
-  uuid: 6b880b07-e952-4c0b-b4a3-6c9ac4cf9d3f
+- name: f9553d5f2adf4d1bbb3c0135cc911e1e_@_@Hope_Net-join-us-on-Telegram
+  server: 172.66.213.38
+  uuid: f584de15-2034-4170-a723-f48c2bae5e0f
   cipher: auto
   alterId: 0
   type: vmess
@@ -29,68 +12,9 @@ proxies:
   client-fingerprint: chrome
   fingerprint: ''
   ws-opts:
-    path: /QvtvPdDXXIlSdZMqnuxG
-- name: a3d8a0a29dba43d0965e488885116f04_@_@Hope_Net-join-us-on-Telegram
-  server: 104.19.45.42
-  uuid: b1073a65-98df-45b8-a0a9-66bba50a253f
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /b1073a65-98df-45b8-a0a9-66bba50a253f
-- name: a4d0ffa447f0460d92dda8cd2578f3cc_@_@Hope_Net-join-us-on-Telegram
-  server: 185.148.104.118
-  uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /hms02.fxiaomi.sbs/link
-- name: d67cdf19fd35474f8f2af809114de76b_@_@Hope_Net-join-us-on-Telegram
-  server: glweidf.cfd
-  uuid: 1052f24e-7b09-45eb-b0c5-d858eb124192
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /linkws
-- name: 132fcbc0430f4eecae1cd651a3fc9ba3_@_🔷🆔@v2ray_configs_pool🔷
-  server: test.0154561.xyz
-  uuid: b837aca5-fc36-4180-80a8-18d405a53e5a
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: test.0154561.xyz
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: test.0154561.xyz
-    path: /
-- name: 7da1e55d2f2340dd9d0cb76ac3805ce9_@_@Hope_Net-join-us-on-Telegram
-  server: 68.168.31.196
+    path: /afrhms16v.bestxray.buzz/linkws
+- name: 66f28e7108914651a45d2e3f9377d58f_@_@Hope_Net-join-us-on-Telegram
+  server: 158.51.121.36
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
   alterId: 0
@@ -103,6 +27,20 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /linkvws
+- name: 16889df013fc4b21b8a40db380e29467_@_@Hope_Net-join-us-on-Telegram
+  server: 172.67.174.42
+  uuid: bc864078-dcf3-4bf4-8dbf-ca9f200b56be
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /linkws
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -373,6 +311,20 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
+- name: RELAY-104.21.21.192-1415 | 19.844MB
+  server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+  port: 443
+  type: vmess
+  uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
 - name: 🇺🇸US-209.126.84.189-0645 | 2.261MB
   server: 209.126.84.189
   port: 443
@@ -415,7 +367,7 @@ proxies:
     path: /
     headers:
       Host: vjp3.0bad.com
-- name: nl|98df|puddincat07@Telegram
+- name: nl|1314|puddincat07@Telegram
   server: 89.110.116.141
   network: ws
   password: e812343b-61a1-46fd-b086-b1395d0eb7de
