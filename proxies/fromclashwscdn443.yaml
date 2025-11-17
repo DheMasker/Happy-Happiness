@@ -1,5 +1,5 @@
 proxies:
-- name: a734c3a305d44508a6bcca8a24fb0d3f_@_@Hope_Net-join-us-on-Telegram
+- name: 3c8b0dbe939649c796a764a24137a84b_@_@Hope_Net-join-us-on-Telegram
   server: fiff.ir
   uuid: 3ed9ac53-ce00-4aa5-9f7a-a2e6fab0e14a
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: Rockp.Blanku.Me
     path: /wss49406
-- name: 25867a7f94b241678364c4915c57fc27_@_telegram 🎯 dailyv2ry
+- name: ea7ad8a73a604be7ae656a8994716ded_@_telegram 🎯 dailyv2ry
   server: 57.129.28.212
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -33,7 +33,7 @@ proxies:
     headers:
       host: fapeng.org
     path: linkvws
-- name: b066da8eec53401099ec9c17bc49d251_@_@Hope_Net-join-us-on-Telegram
+- name: fe8935cd37b9434a9a1f360d730a7a34_@_@Hope_Net-join-us-on-Telegram
   server: 104.21.94.64
   uuid: 39cec18f-a439-427c-9a4e-aeb6fcdf6f53
   cipher: auto
@@ -50,7 +50,7 @@ proxies:
     headers:
       host: linja05.hwcar.sbs
     path: /linkws
-- name: 3dbcb6a051e7479296045e161b6d393a_@_@Hope_Net-join-us-on-Telegram
+- name: 8b80e2ebdd094f71b4a21f67131fc4f0_@_@Hope_Net-join-us-on-Telegram
   server: speedtest.net
   uuid: 3498c000-8e78-41db-ba47-2bdc420b2d0e
   cipher: auto
@@ -64,7 +64,7 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: ws/?ed=2048
-- name: 3a082e73f66c4f709c967f7faef786e6_@_@meli_proxyy
+- name: 65ba4053a79442808d7357a83f7b4f4a_@_@meli_proxyy
   server: 188.114.96.1
   uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
   cipher: auto
@@ -81,19 +81,6 @@ proxies:
     headers:
       host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
     path: /azumase.ren
-- name: 14|NL_speednode_0004
-  server: 89.110.116.141
-  network: ws
-  password: e812343b-61a1-46fd-b086-b1395d0eb7de
-  port: 443
-  skip-cert-verify: false
-  sni: joss.gpj.web.id
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: joss.gpj.web.id
-    path: /Free-VPN-CF-Geo-Project/89.110.116.141=443
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -364,7 +351,21 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-209.126.84.189-0709 | 1.354MB
+- name: 🇺🇸US-77.83.141.171-1013 | 15.767MB
+  server: vc.fly.dev
+  port: 443
+  type: vmess
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vc.fly.dev
+- name: 🇺🇸US-209.126.84.189-0645 | 2.231MB
   server: 209.126.84.189
   port: 443
   type: vmess
@@ -378,21 +379,19 @@ proxies:
     path: /
     headers:
       Host: 209.126.84.189
-- name: RELAY-172.66.44.77-7833 | 0.412MB
-  server: cf.090227.xyz
-  port: 443
-  type: vmess
-  uuid: 290cc691-3ac6-4387-98a1-25c8eb8ca2ea
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: RELAY-172.66.44.77-7833 | 0.412MB
+- name: nl|41d5|puddincat07@Telegram
+  server: 89.110.116.141
   network: ws
+  password: e812343b-61a1-46fd-b086-b1395d0eb7de
+  port: 443
+  skip-cert-verify: false
+  sni: joss.gpj.web.id
+  type: trojan
+  udp: true
   ws-opts:
-    path: /
     headers:
-      Host: sgal.dagrate.eu.org
+      Host: joss.gpj.web.id
+    path: /Free-VPN-CF-Geo-Project/89.110.116.141=443
 - name: DE_1
   server: 185.146.173.158
   port: 443
