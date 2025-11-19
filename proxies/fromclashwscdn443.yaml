@@ -1,19 +1,5 @@
 proxies:
-- name: 81b1df4ef1144f989b4c87c3562200e3_@_@Hope_Net-join-us-on-Telegram
-  server: 202.78.162.5
-  uuid: 2ff97c6d-8557-42a4-b43f-19c77c5959ea
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /@forwardv2ray
-- name: 79216ba49da444108a1bbcd78b878001_@_🇺🇸[openproxylist.com] vmess-US
+- name: 0deb437174ed412c91129d02399a9e5e_@_🇺🇸[openproxylist.com] vmess-US
   server: cf.fovi.tk
   uuid: bf67437e-6c90-45ca-abc2-c7240a5ce2aa
   cipher: auto
@@ -77,6 +63,19 @@ proxies:
   ws-headers:
     Host: 0320hk567.fans8.xyz
   ws-path: /ray
+- name: 🇱🇺LU-202.78.162.5-157_1@157
+  server: 202.78.162.5
+  alterId: 0
+  cipher: auto
+  network: ws
+  port: 443
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 2ff97c6d-8557-42a4-b43f-19c77c5959ea
+  ws-headers:
+    Host: irsoft.sytes.net
+  ws-path: /
 - name: 🇦🇶FASTLY-151.101.64.144-168_1@168
   server: gov.uk
   alterId: 0
@@ -367,21 +366,6 @@ proxies:
     path: /
     headers:
       Host: vjp3.0bad.com
-- name: xx|bcf7|puddincat07@Telegram
-  server: vc.fly.dev
-  alterId: 32
-  cipher: auto
-  client-fingerprint: chrome
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
-  ws-opts:
-    headers:
-      host: vc.fly.dev
-    path: /vc
 - name: DE_1
   server: 185.146.173.158
   port: 443
