@@ -1,5 +1,5 @@
 proxies:
-- name: 89a3417deab04818a8d7c6e15c8add22_@_@Hope_Net-join-us-on-Telegram
+- name: cf9e9521137f4f378aa92819d74b3971_@_@Hope_Net-join-us-on-Telegram
   server: 172.64.175.88
   uuid: c8a20941-498d-4972-9101-acd290ed594f
   cipher: auto
@@ -13,7 +13,7 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /c8a20941-498d-4972-9101-acd290ed594f
-- name: 6d6d81a305344293b6838dca26ed91f5_@_👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:28.25ms
+- name: 1baca75db2d04733ac9fbaffe0c6bdfd_@_👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:28.25ms
   server: 172.67.170.11
   uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
   cipher: auto
@@ -27,7 +27,7 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /linkws
-- name: b8c75747831045fc8eba75c68efde32a_@_@Hope_Net-join-us-on-Telegram
+- name: 8aa84a79656d49f69b8bf62c2c8a0c98_@_@Hope_Net-join-us-on-Telegram
   server: 69.50.93.90
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -41,7 +41,7 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /linkvws
-- name: 7c55b29829a04743a820c2671c8cbdad_@_👉🆔@v2ray_configs_pool📡🇺🇸®️United States©️Los
+- name: 26c7b256f6da41b695e7c43ee83fcda3_@_👉🆔@v2ray_configs_pool📡🇺🇸®️United States©️Los
     Angeles🅿️ping:185.84ms
   server: 107.174.82.102.sslip.io
   uuid: bb824a22-b7ce-427b-9ed6-1adf0751da02
@@ -59,7 +59,7 @@ proxies:
     headers:
       host: 107.174.82.102.sslip.io
     path: /Ov7HrgwlEcRugowKV
-- name: 1ef03838a94b4dafa7e19d6f25dabe44_@_@Hope_Net-join-us-on-Telegram
+- name: 08d20a282b12404d84e904689f3e67fc_@_@Hope_Net-join-us-on-Telegram
   server: 104.19.32.216
   uuid: 7f225ee6-6d1d-4bba-b524-708e65533c57
   cipher: auto
@@ -73,7 +73,7 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /7f225ee6-6d1d-4bba-b524-708e65533c57
-- name: 7e347681155042cd8b3d56c6fa9001a6_@_@Hope_Net-join-us-on-Telegram
+- name: 2270ae6c307f4918bb4923a350d65a71_@_@Hope_Net-join-us-on-Telegram
   server: 172.64.155.200
   uuid: a8030afd-812a-4afe-a766-9c76ff3eddd4
   cipher: auto
@@ -357,8 +357,22 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-209.126.84.189-0632 | 1.666MB
-  server: 209.126.84.189
+- name: RELAY-172.67.200.13-1072 | 25.054MB
+  server: 172.67.200.13
+  port: 443
+  type: vmess
+  uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+- name: 🇺🇸US-209.126.84.189-0810 | 6.177MB
+  server: v2ray.codefyinc.com
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -370,22 +384,21 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 209.126.84.189
-- name: RELAY-172.66.47.179-5623 | 0.0MB
-  server: cf.090227.xyz
+      Host: v2ray.codefyinc.com
+- name: 🇯🇵JP-8.211.171.11-1165 | 0.126MB
+  server: n1744454501.4u9ma.icu
   port: 443
   type: vmess
-  uuid: 290cc691-3ac6-4387-98a1-25c8eb8ca2ea
+  uuid: bed7b743-6bf8-46a2-b346-c60e60919220
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-172.66.47.179-5623 | 0.0MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: cf.090227.xyz
+      Host: n1744454501.4u9ma.icu
 - name: 🇸🇬SG-103.253.26.20-0160 | 0.0MB
   server: 103.253.26.20
   port: 443
@@ -414,21 +427,7 @@ proxies:
     path: /
     headers:
       Host: vjp3.0bad.com
-- name: RELAY-172.67.200.13-0217 | 0.0MB
-  server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-  port: 443
-  type: vmess
-  uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
-- name: xx|ba52|puddincat07@Telegram
+- name: xx|9314|puddincat07@Telegram
   server: vc.fly.dev
   alterId: 32
   cipher: auto
