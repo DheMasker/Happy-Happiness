@@ -1,6 +1,23 @@
 proxies:
-- name: da8932270f454c60993d00b5bf296f43_@_@Hope_Net-join-us-on-Telegram
-  server: 104.16.6.65
+- name: d9ba5a56983941d38b4d25176e2b0514_@_🇫🇷[openproxylist.com] vmess-FR
+  server: 188.114.96.1
+  uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+    path: /azumase.ren
+- name: 630187ca34f64dfba8264db38815bbb9_@_@Hope_Net-join-us-on-Telegram
+  server: 162.159.1.94
   uuid: 3ed9ac53-ce00-4aa5-9f7a-a2e6fab0e14a
   cipher: auto
   alterId: 0
@@ -9,82 +26,13 @@ proxies:
   network: ws
   tls: true
   udp: false
-  client-fingerprint: safari
+  client-fingerprint: random
   servername: Rockp.Blanku.Me
   fingerprint: ''
   ws-opts:
     headers:
       host: Rockp.Blanku.Me
     path: /wss49406
-- name: c594843fcc514243a14d9e2df6eef2a8_@_@Hope_Net-join-us-on-Telegram
-  server: indiavideo.sbs
-  uuid: 425c5e6e-30a0-4984-8a13-ee6f72053162
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: indiavideo.sbs
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: indiavideo.sbs
-    path: /linkws
-- name: 4afa281f21bf4e8aa417ccf22e9df335_@_@Hope_Net-join-us-on-Telegram
-  server: 172.67.244.191
-  uuid: bc864078-dcf3-4bf4-8dbf-ca9f200b56be
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: gwdef.sbs
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: gwdef.sbs
-    path: /linkws
-- name: ef384913dab8412d94fcf0de6fb9d2ef_@_👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Montreal
-    (Ville-Marie)🅿️ping:141.8ms
-  server: 15.235.83.228
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-    path: /linkvws
-- name: 7f821a62476e4ce7b7ef58f813796120_@_👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:27.88ms
-  server: time.is
-  uuid: b526926d-1474-4f41-985e-8b877cb840cd
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: time.is
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: time.is
-    path: /
 - name: 14|BE_speednode_0001
   server: 34.22.190.30
   network: ws
@@ -278,6 +226,19 @@ proxies:
   ws-headers:
     Host: hkd1.quickerlink.xyz
   ws-path: /h6jr23x9h3lqiitg
+- name: 🏁RELAY-172.67.132.44-222_1@221
+  server: nicola.pics
+  alterId: 0
+  cipher: auto
+  network: ws
+  port: 443
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-headers:
+    Host: nicola.pics
+  ws-path: /linkvws
 - name: 美国 011_2@19
   server: 104.18.92.5
   alterId: 0
@@ -446,20 +407,6 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-172.67.200.13-1083 | 10.894MB
-  server: 172.67.200.13
-  port: 443
-  type: vmess
-  uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
 - name: RELAY-172.66.44.77-0246 | 3.79MB
   server: cf.090227.xyz
   port: 443
@@ -517,7 +464,7 @@ proxies:
     path: /
     headers:
       Host: n1744454498.lie5d.cyou
-- name: nl|4cca|puddincat07@Telegram
+- name: nl|821d|puddincat07@Telegram
   server: 138.124.30.8
   network: ws
   password: 0311306e-56d4-4aa1-bde5-8cede7fcd3e4
@@ -529,18 +476,6 @@ proxies:
     headers:
       Host: joss.gpj1.web.id
     path: /Free-VPN-CF-Geo-Project/138.124.30.8=443
-- name: il|94a8|puddincat07@Telegram
-  server: 77.91.74.6
-  network: ws
-  password: 8f58ba37-a117-4ad3-9422-37b62e01d2e6
-  port: 443
-  skip-cert-verify: false
-  sni: joss.gpj1.web.id
-  type: trojan
-  ws-opts:
-    headers:
-      Host: joss.gpj1.web.id
-    path: /Free-VPN-CF-Geo-Project/77.91.74.6=443
 - name: DE_1
   server: 185.146.173.158
   port: 443
