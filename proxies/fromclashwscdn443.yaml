@@ -396,7 +396,21 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-172.66.44.77-7875 | 12.572MB
+- name: 🇺🇸US-77.83.141.171-1053 | 15.984MB
+  server: vc.fly.dev
+  port: 443
+  type: vmess
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vc.fly.dev
+- name: RELAY-172.66.47.179-0289 | 9.059MB
   server: cf.090227.xyz
   port: 443
   type: vmess
@@ -405,13 +419,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-172.66.44.77-7875 | 12.572MB
+  servername: RELAY-172.66.47.179-0289 | 9.059MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: sgal.dagrate.eu.org
-- name: 🇯🇵JP-8.209.255.178-1507 | 11.369MB
+- name: 🇯🇵JP-8.209.255.178-0300 | 4.003MB
   server: n1744454503.4u9ma.icu
   port: 443
   type: vmess
@@ -420,12 +434,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
+  servername: 🇯🇵JP-8.209.255.178-0300 | 4.003MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: n1744454503.4u9ma.icu
-- name: 🇺🇸US-209.126.84.189-0848 | 6.387MB
+- name: 🇺🇸US-209.126.84.189-0863 | 2.496MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -439,11 +454,11 @@ proxies:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: 🇭🇰HK-8.210.187.134-5657 | 1.579MB
-  server: n1744453320.lie5d.cyou
+- name: 🇯🇵JP-8.211.171.11-0333 | 0.314MB
+  server: n1744454501.4u9ma.icu
   port: 443
   type: vmess
-  uuid: 8889a08a-09f8-4c97-bed2-df31b62fcf23
+  uuid: bed7b743-6bf8-46a2-b346-c60e60919220
   alterId: 0
   cipher: auto
   tls: true
@@ -452,8 +467,8 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: n1744453320.lie5d.cyou
-- name: RELAY-172.67.197.47-0363 | 1.32MB
+      Host: n1744454501.4u9ma.icu
+- name: RELAY-172.67.197.47-0309 | 0.31MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
@@ -467,23 +482,22 @@ proxies:
     path: /
     headers:
       Host: sy4.620720.xyz
-- name: 🇮🇳IN-94.136.187.77-5644 | 0.567MB
-  server: node4.rtxconfigz.com
+- name: 🇯🇵JP-47.91.14.32-0367 | 0.04MB
+  server: n1744454498.lie5d.cyou
   port: 443
   type: vmess
-  uuid: 44e57485-eccc-46ef-808f-cd17ac810018
+  uuid: cd26abca-0d84-43d0-8f69-9c1143b569e9
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇮🇳IN-94.136.187.77-5644 | 0.567MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: node4.rtxconfigz.com
-- name: 🇸🇬SG-103.253.26.20-0198 | 0.0MB
-  server: 103.253.26.20
+      Host: n1744454498.lie5d.cyou
+- name: 🇸🇬SG-202.61.141.130-0212 | 0.0MB
+  server: 202.61.141.130
   port: 443
   type: vmess
   uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
@@ -495,8 +509,8 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: zecjk.com
-- name: 🇦🇺AU-103.224.212.215-0192 | 0.0MB
+      Host: 202.61.141.130
+- name: 🇦🇺AU-103.224.212.215-0207 | 0.0MB
   server: vjp3.0bad.com
   port: 443
   type: vmess
