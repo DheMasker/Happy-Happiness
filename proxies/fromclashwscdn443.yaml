@@ -396,7 +396,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-172.66.44.77-7804 | 4.358MB
+- name: RELAY-172.66.44.77-7875 | 12.572MB
   server: cf.090227.xyz
   port: 443
   type: vmess
@@ -405,13 +405,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-172.66.44.77-7804 | 4.358MB
+  servername: RELAY-172.66.44.77-7875 | 12.572MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: sgal.dagrate.eu.org
-- name: 🇯🇵JP-8.209.255.178-0300 | 2.864MB
+- name: 🇯🇵JP-8.209.255.178-1507 | 11.369MB
   server: n1744454503.4u9ma.icu
   port: 443
   type: vmess
@@ -420,13 +420,12 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇯🇵JP-8.209.255.178-0300 | 2.864MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: n1744454503.4u9ma.icu
-- name: 🇺🇸US-209.126.84.189-0848 | 1.317MB
+- name: 🇺🇸US-209.126.84.189-0848 | 6.387MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -440,21 +439,7 @@ proxies:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: RELAY-104.21.76.158-0293 | 1.154MB
-  server: sy4.620720.xyz
-  port: 443
-  type: vmess
-  uuid: 516d8a7a-3f0b-41d3-bad0-246116381516
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: sy4.620720.xyz
-- name: 🇭🇰HK-8.210.187.134-5647 | 1.027MB
+- name: 🇭🇰HK-8.210.187.134-5657 | 1.579MB
   server: n1744453320.lie5d.cyou
   port: 443
   type: vmess
@@ -468,11 +453,11 @@ proxies:
     path: /
     headers:
       Host: n1744453320.lie5d.cyou
-- name: 🇯🇵JP-8.211.171.11-0312 | 0.428MB
-  server: n1744454501.4u9ma.icu
+- name: RELAY-172.67.197.47-0363 | 1.32MB
+  server: sy4.620720.xyz
   port: 443
   type: vmess
-  uuid: bed7b743-6bf8-46a2-b346-c60e60919220
+  uuid: 516d8a7a-3f0b-41d3-bad0-246116381516
   alterId: 0
   cipher: auto
   tls: true
@@ -481,13 +466,28 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: n1744454501.4u9ma.icu
-- name: 🇯🇵JP-47.91.14.32-0366 | 0.093MB
-  server: n1744454498.lie5d.cyou
+      Host: sy4.620720.xyz
+- name: 🇮🇳IN-94.136.187.77-5644 | 0.567MB
+  server: node4.rtxconfigz.com
   port: 443
   type: vmess
-  uuid: cd26abca-0d84-43d0-8f69-9c1143b569e9
+  uuid: 44e57485-eccc-46ef-808f-cd17ac810018
   alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇮🇳IN-94.136.187.77-5644 | 0.567MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: node4.rtxconfigz.com
+- name: 🇸🇬SG-103.253.26.20-0198 | 0.0MB
+  server: 103.253.26.20
+  port: 443
+  type: vmess
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  alterId: 4
   cipher: auto
   tls: true
   skip-cert-verify: false
@@ -495,7 +495,7 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: n1744454498.lie5d.cyou
+      Host: zecjk.com
 - name: 🇦🇺AU-103.224.212.215-0192 | 0.0MB
   server: vjp3.0bad.com
   port: 443
@@ -510,20 +510,6 @@ proxies:
     path: /
     headers:
       Host: vjp3.0bad.com
-- name: 🇸🇬SG-202.61.141.130-0197 | 0.0MB
-  server: 202.61.141.130
-  port: 443
-  type: vmess
-  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
-  alterId: 4
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 202.61.141.130
 - name: RELAY-104.21.21.192-1207 | 70.837MB
   server: b62a948c-faa2-4e8a-bf8a-3ff3121c875a.asoul-ava.top
   port: 443
@@ -538,54 +524,6 @@ proxies:
     path: /
     headers:
       Host: b62a948c-faa2-4e8a-bf8a-3ff3121c875a.asoul-ava.top
-- name: ee|2c37|puddincat07@Telegram
-  server: 37.252.5.75
-  network: ws
-  password: 3208e968-b862-4e2e-ad90-2b49e7ce7afb
-  port: 443
-  skip-cert-verify: false
-  sni: joss.gpj1.web.id
-  type: trojan
-  ws-opts:
-    headers:
-      Host: joss.gpj1.web.id
-    path: /Free-VPN-CF-Geo-Project/37.252.5.75=443
-- name: gb|e5f9|puddincat07@Telegram
-  server: 109.169.76.23
-  network: ws
-  password: d69e725c-7c7e-4c75-9786-4859b4e0bbc6
-  port: 443
-  skip-cert-verify: false
-  sni: joss.gpj1.web.id
-  type: trojan
-  ws-opts:
-    headers:
-      Host: joss.gpj1.web.id
-    path: /Free-VPN-CF-Geo-Project/109.169.76.23=443
-- name: dk|aa34|puddincat07@Telegram
-  server: 89.28.236.243
-  network: ws
-  password: 5c8c8b61-9b24-4c5a-b6ad-f6560df2e9d3
-  port: 443
-  skip-cert-verify: false
-  sni: joss.gpj1.web.id
-  type: trojan
-  ws-opts:
-    headers:
-      Host: joss.gpj1.web.id
-    path: /Free-VPN-CF-Geo-Project/89.28.236.243=443
-- name: be|1f6a|puddincat07@Telegram
-  server: 34.22.190.30
-  network: ws
-  password: fea8b7a7-cc83-4a78-a3fc-bbce9cc89ddb
-  port: 443
-  skip-cert-verify: false
-  sni: joss.gpj1.web.id
-  type: trojan
-  ws-opts:
-    headers:
-      Host: joss.gpj1.web.id
-    path: /Free-VPN-CF-Geo-Project/34.22.190.30=443
 - name: DE_1
   server: 185.146.173.158
   port: 443
