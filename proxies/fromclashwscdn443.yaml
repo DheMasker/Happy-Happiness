@@ -1,39 +1,5 @@
 proxies:
-- name: 83f9ec8617364595a20ec594801fc53b_@_👉🆔@v2ray_configs_pool📡🤷‍♀️®️🤷‍♀️©️🤷‍♀️🅿️ping:179ms
-  server: yichueng.org
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: yichueng.org
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: yichueng.org
-    path: linkvws
-- name: 70f60b9dd7894487a79fe72647c38d77_@_👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:69ms
-  server: 104.17.137.127
-  uuid: 47eab0de-97f9-49be-f2f3-2e4eb17268e6
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: hk.niskakowski.ggff.net
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: hk.niskakowski.ggff.net
-    path: /aa
-- name: fb35e457d2f94acd9d8245e0fd4205a6_@_@Hope_Net-join-us-on-Telegram
+- name: 01f47d09f8b44210a839e456fca49399_@_@Hope_Net-join-us-on-Telegram
   server: 172.64.99.22
   uuid: 25d1b318-87e8-4c1e-a784-69783be4b30a
   cipher: auto
@@ -47,7 +13,7 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: dongtaiwang.com
-- name: 678554170d614c63abdfb4b65f6af959_@_🇭🇰[openproxylist.com] vmess-HK
+- name: bd4269ca512e4d4c90c6b1edd526fcc3_@_🇭🇰[openproxylist.com] vmess-HK
   server: n1747969945.xlxzzx.com
   uuid: 192217b5-fd9f-4e08-9c74-1726f83af848
   cipher: auto
@@ -241,6 +207,19 @@ proxies:
   ws-headers:
     Host: hkd1.quickerlink.xyz
   ws-path: /h6jr23x9h3lqiitg
+- name: 🏁RELAY-172.67.132.44-222_1@221
+  server: nicola.pics
+  alterId: 0
+  cipher: auto
+  network: ws
+  port: 443
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-headers:
+    Host: nicola.pics
+  ws-path: /linkvws
 - name: 美国 011_2@19
   server: 104.18.92.5
   alterId: 0
@@ -551,19 +530,7 @@ proxies:
     path: /
     headers:
       Host: b62a948c-faa2-4e8a-bf8a-3ff3121c875a.asoul-ava.top
-- name: fr|bff7|puddincat07@Telegram
-  server: 51.15.210.1
-  network: ws
-  password: e6f0e8b0-3dc5-4d53-a23a-86c02d5ba098
-  port: 443
-  skip-cert-verify: false
-  sni: joss.gpj1.web.id
-  type: trojan
-  ws-opts:
-    headers:
-      Host: joss.gpj1.web.id
-    path: /Free-VPN-CF-Geo-Project/51.15.210.1=443
-- name: nl|6ba0|puddincat07@Telegram
+- name: nl|4336|puddincat07@Telegram
   server: 89.110.120.197
   network: ws
   password: 35f8e682-54bd-42c7-b537-94a8e4c84bcd
@@ -575,7 +542,19 @@ proxies:
     headers:
       Host: joss.gpj1.web.id
     path: /Free-VPN-CF-Geo-Project/89.110.120.197=443
-- name: nl|fa74|puddincat07@Telegram
+- name: fr|e78b|puddincat07@Telegram
+  server: 51.15.210.1
+  network: ws
+  password: e6f0e8b0-3dc5-4d53-a23a-86c02d5ba098
+  port: 443
+  skip-cert-verify: false
+  sni: joss.gpj1.web.id
+  type: trojan
+  ws-opts:
+    headers:
+      Host: joss.gpj1.web.id
+    path: /Free-VPN-CF-Geo-Project/51.15.210.1=443
+- name: nl|4660|puddincat07@Telegram
   server: 81.22.132.183
   network: ws
   password: ee339912-0c35-4fac-8d85-180b65bcd49c
