@@ -1,5 +1,5 @@
 proxies:
-- name: 932aac9efbf343aca22ace52472bb57b_@_🇺🇸[openproxylist.com] vmess-US
+- name: b079db4b313e437aba7aba53fd8e322a_@_🇺🇸[openproxylist.com] vmess-US
   server: okl5i3.zeeoomboom.de
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -13,6 +13,23 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /video/pmi58yp5.m3u8
+- name: fe099a3f628c4211b2875efc26e24348_@_@Hope_Net-join-us-on-Telegram
+  server: 172.67.71.160
+  uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: obdii.cfd
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: obdii.cfd
+    path: /linkws
 - name: 14|BE_speednode_0001
   server: 34.22.190.30
   network: ws
