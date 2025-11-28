@@ -1,4 +1,18 @@
 proxies:
+- name: a47b95806e954451bd7ce1403f7d7684_@_🇸🇬[openproxylist.com] vmess-SG
+  server: singapore02.zgjok.com
+  uuid: 780c7671-e8c8-45ab-922b-4fdfc4310aa0
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /
 - name: 14|BE_speednode_0001
   server: 34.22.190.30
   network: ws
@@ -360,7 +374,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-104.19.191.28-2136 | 34.593MB
+- name: RELAY-104.19.191.28-2136 | 22.597MB
   server: us5.998998.best
   port: 443
   type: vmess
@@ -374,7 +388,7 @@ proxies:
     path: /
     headers:
       Host: 24254866-770c-41b4-9404-3f50524f425b.fasleangles.fun
-- name: 🇰🇷KR-146.56.136.237-5943 | 10.885MB
+- name: 🇰🇷KR-146.56.136.237-5943 | 2.895MB
   server: seoul02.zgjok.com
   port: 443
   type: vmess
@@ -383,13 +397,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇰🇷KR-146.56.136.237-5943 | 10.885MB
+  servername: 🇰🇷KR-146.56.136.237-5943 | 2.895MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: seoul02.zgjok.com
-- name: RELAY-172.66.44.77-8292 | 8.265MB
+- name: RELAY-172.66.44.77-8292 | 1.369MB
   server: cf.090227.xyz
   port: 443
   type: vmess
@@ -398,13 +412,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-172.66.44.77-8292 | 8.265MB
+  servername: RELAY-172.66.44.77-8292 | 1.369MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: sgal.dagrate.eu.org
-- name: 🇺🇸US-209.126.84.189-0857 | 3.891MB
+- name: 🇺🇸US-209.126.84.189-0857 | 0.308MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -418,7 +432,7 @@ proxies:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: 🇮🇳IN-94.136.187.77-6170 | 2.407MB
+- name: 🇮🇳IN-94.136.187.77-6170 | 0.146MB
   server: node4.rtxconfigz.com
   port: 443
   type: vmess
@@ -427,13 +441,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇮🇳IN-94.136.187.77-6170 | 2.407MB
+  servername: 🇮🇳IN-94.136.187.77-6170 | 0.146MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: node4.rtxconfigz.com
-- name: RELAY-172.67.197.47-0302 | 0.717MB
+- name: RELAY-172.67.197.47-0302 | 0.099MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
