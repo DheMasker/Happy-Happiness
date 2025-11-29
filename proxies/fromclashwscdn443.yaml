@@ -1,7 +1,7 @@
 proxies:
-- name: 99491ef3709345c0b80a40de63de15bd_@_🇸🇬[openproxylist.com] vmess-SG
-  server: singapore02.zgjok.com
-  uuid: 780c7671-e8c8-45ab-922b-4fdfc4310aa0
+- name: 1ddd1decb35e4cdf9ddff2ddf2edcb44_@_👉🆔@v2ray_configs_pool📡🇮🇳®️India©️Mumbai🅿️ping:147.07ms
+  server: node4.rtxconfigz.com
+  uuid: 44e57485-eccc-46ef-808f-cd17ac810018
   cipher: auto
   alterId: 0
   type: vmess
@@ -10,9 +10,12 @@ proxies:
   tls: true
   udp: false
   client-fingerprint: chrome
+  servername: aka.ms
   fingerprint: ''
   ws-opts:
-    path: /
+    headers:
+      host: aka.ms
+    path: /@Malinda6104
 - name: 14|BE_speednode_0001
   server: 34.22.190.30
   network: ws
@@ -374,7 +377,22 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-104.19.191.28-2136 | 22.597MB
+- name: RELAY-172.66.44.77-0306 | 10.677MB
+  server: cf.090227.xyz
+  port: 443
+  type: vmess
+  uuid: 290cc691-3ac6-4387-98a1-25c8eb8ca2ea
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: RELAY-172.66.44.77-0306 | 10.677MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: sgal.dagrate.eu.org
+- name: RELAY-104.19.191.28-2054 | 6.113MB
   server: us5.998998.best
   port: 443
   type: vmess
@@ -388,38 +406,8 @@ proxies:
     path: /
     headers:
       Host: 24254866-770c-41b4-9404-3f50524f425b.fasleangles.fun
-- name: 🇰🇷KR-146.56.136.237-5943 | 2.895MB
-  server: seoul02.zgjok.com
-  port: 443
-  type: vmess
-  uuid: 1a1e5196-eab4-4772-9012-65c27f19a524
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇰🇷KR-146.56.136.237-5943 | 2.895MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: seoul02.zgjok.com
-- name: RELAY-172.66.44.77-8292 | 1.369MB
-  server: cf.090227.xyz
-  port: 443
-  type: vmess
-  uuid: 290cc691-3ac6-4387-98a1-25c8eb8ca2ea
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: RELAY-172.66.44.77-8292 | 1.369MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: sgal.dagrate.eu.org
-- name: 🇺🇸US-209.126.84.189-0857 | 0.308MB
-  server: v2ray.codefyinc.com
+- name: 🇺🇸US-209.126.84.189-0679 | 1.066MB
+  server: 209.126.84.189
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -431,36 +419,7 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: v2ray.codefyinc.com
-- name: 🇮🇳IN-94.136.187.77-6170 | 0.146MB
-  server: node4.rtxconfigz.com
-  port: 443
-  type: vmess
-  uuid: 44e57485-eccc-46ef-808f-cd17ac810018
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇮🇳IN-94.136.187.77-6170 | 0.146MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: node4.rtxconfigz.com
-- name: RELAY-172.67.197.47-0302 | 0.099MB
-  server: sy4.620720.xyz
-  port: 443
-  type: vmess
-  uuid: 516d8a7a-3f0b-41d3-bad0-246116381516
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: sy4.620720.xyz
+      Host: 209.126.84.189
 - name: DE_1
   server: 185.146.173.158
   port: 443
