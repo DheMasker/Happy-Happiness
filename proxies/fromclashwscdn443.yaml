@@ -1,5 +1,5 @@
 proxies:
-- name: 1ddd1decb35e4cdf9ddff2ddf2edcb44_@_👉🆔@v2ray_configs_pool📡🇮🇳®️India©️Mumbai🅿️ping:147.07ms
+- name: d956e6bdbb2943a6968bc229f7e16188_@_👉🆔@v2ray_configs_pool📡🇮🇳®️India©️Mumbai🅿️ping:147.07ms
   server: node4.rtxconfigz.com
   uuid: 44e57485-eccc-46ef-808f-cd17ac810018
   cipher: auto
@@ -377,7 +377,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-172.66.44.77-0306 | 10.677MB
+- name: RELAY-172.66.44.77-0306 | 1.714MB
   server: cf.090227.xyz
   port: 443
   type: vmess
@@ -386,13 +386,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-172.66.44.77-0306 | 10.677MB
+  servername: RELAY-172.66.44.77-0306 | 1.714MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: sgal.dagrate.eu.org
-- name: RELAY-104.19.191.28-2054 | 6.113MB
+- name: RELAY-104.19.191.28-2054 | 0.868MB
   server: us5.998998.best
   port: 443
   type: vmess
@@ -406,7 +406,7 @@ proxies:
     path: /
     headers:
       Host: 24254866-770c-41b4-9404-3f50524f425b.fasleangles.fun
-- name: 🇺🇸US-209.126.84.189-0679 | 1.066MB
+- name: 🇺🇸US-209.126.84.189-0679 | 0.178MB
   server: 209.126.84.189
   port: 443
   type: vmess
@@ -420,6 +420,21 @@ proxies:
     path: /
     headers:
       Host: 209.126.84.189
+- name: xx|6127|puddincat07@Telegram
+  server: vc.fly.dev
+  alterId: 32
+  cipher: auto
+  client-fingerprint: chrome
+  network: ws
+  port: 443
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  ws-opts:
+    headers:
+      host: vc.fly.dev
+    path: /vc
 - name: DE_1
   server: 185.146.173.158
   port: 443
