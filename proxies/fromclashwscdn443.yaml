@@ -299,7 +299,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-172.66.44.77-0306 | 1.714MB
+- name: RELAY-172.66.47.179-0256 | 2.2MB
   server: cf.090227.xyz
   port: 443
   type: vmess
@@ -308,27 +308,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-172.66.44.77-0306 | 1.714MB
+  servername: RELAY-172.66.47.179-0256 | 2.2MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: sgal.dagrate.eu.org
-- name: RELAY-104.19.191.28-2054 | 0.868MB
-  server: us5.998998.best
-  port: 443
-  type: vmess
-  uuid: 24254866-770c-41b4-9404-3f50524f425b
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 24254866-770c-41b4-9404-3f50524f425b.fasleangles.fun
-- name: 🇺🇸US-209.126.84.189-0679 | 0.178MB
+- name: 🇺🇸US-209.126.84.189-0631 | 1.92MB
   server: 209.126.84.189
   port: 443
   type: vmess
@@ -342,6 +328,34 @@ proxies:
     path: /
     headers:
       Host: 209.126.84.189
+- name: RELAY-172.67.197.47-1109 | 0.528MB
+  server: sy4.620720.xyz
+  port: 443
+  type: vmess
+  uuid: 516d8a7a-3f0b-41d3-bad0-246116381516
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: sy4.620720.xyz
+- name: RELAY-104.19.191.28-1965 | 0.313MB
+  server: us5.998998.best
+  port: 443
+  type: vmess
+  uuid: 24254866-770c-41b4-9404-3f50524f425b
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 24254866-770c-41b4-9404-3f50524f425b.fasleangles.fun
 - name: DE_1
   server: 185.146.173.158
   port: 443

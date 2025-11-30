@@ -1,96 +1,5 @@
 proxies:
-- name: '%F0%9F%87%BA%F0%9F%87%B8US-43.153.103.203-2374'
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: 95b
-  skip-cert-verify: true
-  sni: 15212712-20f5-40a5-b9aa-8363e0130171.ee137666-1e0a-46db-bbd6-cc18f9841234.accesscam.org
-  network: ws
-  ws-opts:
-    path: /trojan-6qo.pages.dev/
-    headers:
-      Host: 15212712-20f5-40a5-b9aa-8363e0130171.ee137666-1e0a-46db-bbd6-cc18f9841234.accesscam.org
-  udp: true
-- name: '%F0%9F%87%B3%F0%9F%87%B1NL-86.107.197.239-0021'
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: e683d757-b855-44c3-b0b6-22586444914a
-  skip-cert-verify: true
-  sni: joss.gpj1.web.id
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/86.107.197.239
-    headers:
-      Host: joss.gpj1.web.id
-  udp: true
-- name: '%F0%9F%87%A8%F0%9F%87%A6CA-213.255.209.207-2477'
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: e8cb659c-d5af-4b82-a175-8f44d8972542
-  skip-cert-verify: true
-  sni: joss.gpj.web.id
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/213.255.209.207
-    headers:
-      Host: joss.gpj.web.id
-  udp: true
-- name: '%F0%9F%87%A8%F0%9F%87%A6CA-40.233.116.225-2478'
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: 279546c5-8b79-49c8-82c0-d58b086be0b7
-  skip-cert-verify: true
-  sni: joss.gpj.web.id
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/40.233.116.225
-    headers:
-      Host: joss.gpj.web.id
-  udp: true
-- name: '%F0%9F%87%AA%F0%9F%87%B8ES-45.86.229.28-0020'
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: 9ccc3e1d-3df5-4348-aa05-738310149cc3
-  skip-cert-verify: true
-  sni: joss.gpj1.web.id
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/45.86.229.28
-    headers:
-      Host: joss.gpj1.web.id
-  udp: true
-- name: '%F0%9F%87%AA%F0%9F%87%AAEE-37.252.5.75-0019'
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: 3208e968-b862-4e2e-ad90-2b49e7ce7afb
-  skip-cert-verify: true
-  sni: joss.gpj1.web.id
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/37.252.5.75
-    headers:
-      Host: joss.gpj1.web.id
-  udp: true
-- name: '%F0%9F%87%AB%F0%9F%87%B7FR-62.60.246.168-2761'
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: a25e963f-8f68-4b28-8c11-5d721f616434
-  skip-cert-verify: true
-  sni: joss.gpj.web.id
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/62.60.246.168=443
-    headers:
-      Host: joss.gpj.web.id
-  udp: true
-- name: '%F0%9F%8F%81RELAY-172.67.157.220-2789'
+- name: '%F0%9F%8F%81RELAY-172.67.157.220-2985'
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -103,174 +12,18 @@ proxies:
     headers:
       Host: 6666YHjU.777159.xYz
   udp: true
-- name: '%F0%9F%87%A8%F0%9F%87%ADCH-91.192.102.92-0018'
+- name: '%F0%9F%87%AC%F0%9F%87%AEGI-94.131.123.74-3163'
   server: 104.18.1.196
   port: 443
   type: trojan
-  password: 8d047125-8467-4724-bb62-ef64405dca78
+  password: 94a81dc7-e8e6-46e5-838d-84ca142b88b2
   skip-cert-verify: true
   sni: joss.gpj1.web.id
   network: ws
   ws-opts:
-    path: /Free-VPN-CF-Geo-Project/91.192.102.92
+    path: /Free-VPN-CF-Geo-Project/94.131.123.74=443
     headers:
       Host: joss.gpj1.web.id
-  udp: true
-- name: '%F0%9F%87%A8%F0%9F%87%A6CA-69.28.82.253-0017'
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: 8001fbf7-4b59-4415-a4bd-8bfded02c9c6
-  skip-cert-verify: true
-  sni: joss.gpj1.web.id
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/69.28.82.253
-    headers:
-      Host: joss.gpj1.web.id
-  udp: true
-- name: '%F0%9F%87%A6%F0%9F%87%B6GOOGLE-34.22.190.30-0016'
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: 29ca24a5-e8aa-4cbd-9bcb-f96aba1d6f15
-  skip-cert-verify: true
-  sni: joss.gpj1.web.id
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/34.22.190.30
-    headers:
-      Host: joss.gpj1.web.id
-  udp: true
-- name: '%F0%9F%87%A8%F0%9F%87%ADCH-176.10.124.178-3093'
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: 01b69355-17c1-4298-9e00-a266946fd977
-  skip-cert-verify: true
-  sni: joss.gpj.web.id
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/176.10.124.178
-    headers:
-      Host: joss.gpj.web.id
-  udp: true
-- name: '%F0%9F%87%B1%F0%9F%87%BALU-107.189.3.96-3111'
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: fa47cf66-c31b-4dc5-a02b-e41830918e40
-  skip-cert-verify: true
-  sni: joss.gpj.web.id
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/107.189.3.96
-    headers:
-      Host: joss.gpj.web.id
-  udp: true
-- name: '%F0%9F%87%B3%F0%9F%87%B1NL-217.144.185.153-3124'
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: 881c0d9d-6f1f-4022-b474-f8c705a758cd
-  skip-cert-verify: true
-  sni: joss.gpj.web.id
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/217.144.185.153
-    headers:
-      Host: joss.gpj.web.id
-  udp: true
-- name: '%F0%9F%87%B5%F0%9F%87%B9PT-5.182.39.243-3140'
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: e501a180-c9a4-4f49-b082-77e9b3db6407
-  skip-cert-verify: true
-  sni: joss.gpj.web.id
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/5.182.39.243
-    headers:
-      Host: joss.gpj.web.id
-  udp: true
-- name: '%F0%9F%87%AB%F0%9F%87%AEFI-185.42.163.35-3145'
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: 829a97d6-eab6-4f31-98e1-4626f5094752
-  skip-cert-verify: true
-  sni: joss.gpj.web.id
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/185.42.163.35
-    headers:
-      Host: joss.gpj.web.id
-  udp: true
-- name: '%F0%9F%87%A8%F0%9F%87%BFCZ-38.180.48.228-3177'
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: ef770b33-258e-40bf-ba16-8b9c880ec842
-  skip-cert-verify: true
-  sni: joss.gpj.web.id
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/38.180.48.228
-    headers:
-      Host: joss.gpj.web.id
-  udp: true
-- name: '%F0%9F%87%AB%F0%9F%87%AEFI-109.120.187.55-3180'
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: 1bd66fff-fca0-4028-aaa5-f83bbb9e5c2c
-  skip-cert-verify: true
-  sni: joss.gpj.web.id
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/109.120.187.55
-    headers:
-      Host: joss.gpj.web.id
-  udp: true
-- name: '%F0%9F%87%B7%F0%9F%87%BARU-185.128.106.12-3202'
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: c86e076b-b228-44ad-a4fd-ac91e3c2bc8d
-  skip-cert-verify: true
-  sni: joss.gpj.web.id
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/185.128.106.12
-    headers:
-      Host: joss.gpj.web.id
-  udp: true
-- name: '%F0%9F%87%BA%F0%9F%87%BFUZ-82.148.2.86-3303'
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: d06a636e-5aa7-4ee9-a38d-baae9c13facd
-  skip-cert-verify: true
-  sni: joss.gpj.web.id
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/82.148.2.86
-    headers:
-      Host: joss.gpj.web.id
-  udp: true
-- name: '%F0%9F%87%A9%F0%9F%87%B0DK-193.180.211.52-3492'
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: df277997-c6df-4a8c-b079-30cfd9c6572a
-  skip-cert-verify: true
-  sni: joss.gpj.web.id
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/193.180.211.52
-    headers:
-      Host: joss.gpj.web.id
   udp: true
 - name: '%F0%9F%8F%81RELAY-172.67.192.215-0576'
   server: 104.18.1.196
@@ -324,7 +77,7 @@ proxies:
     headers:
       Host: gamang.gpj2.dpdns.org
   udp: true
-- name: '%F0%9F%8F%81RELAY-172.67.152.71-0772'
+- name: '%F0%9F%8F%81RELAY-104.21.12.116-0772'
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -388,6 +141,32 @@ proxies:
     path: /tr4BCdusB84159lWnu
     headers:
       Host: sAiKOXpUbGm.ZhkinGkuRD13.WorkErs.dEV
+  udp: true
+- name: '%F0%9F%87%AB%F0%9F%87%B7FR-62.60.246.168-1973'
+  server: 104.18.1.196
+  port: 443
+  type: trojan
+  password: a25e963f-8f68-4b28-8c11-5d721f616434
+  skip-cert-verify: true
+  sni: joss.gpj.web.id
+  network: ws
+  ws-opts:
+    path: /Free-VPN-CF-Geo-Project/62.60.246.168=443
+    headers:
+      Host: joss.gpj.web.id
+  udp: true
+- name: '%F0%9F%87%BA%F0%9F%87%B8US-107.174.82.102-1982'
+  server: 104.18.1.196
+  port: 443
+  type: trojan
+  password: bb824a22-b7ce-427b-9ed6-1adf0751da02
+  skip-cert-verify: true
+  sni: 107.174.82.102.sslip.io
+  network: ws
+  ws-opts:
+    path: /gXKGj8a1tp1nNbZEcRugowKV
+    headers:
+      Host: 107.174.82.102.sslip.io
   udp: true
 - name: 🇺🇸美国11 | ⬇️ 2.8MB/s
   server: 104.18.1.196
@@ -597,59 +376,33 @@ proxies:
     headers:
       Host: maXNEtVIP-usA-VP3.nETKH3.SiTE
   udp: true
-- name: ⚡ b2n.ir/v2ray-configs | 360
+- name: ⚡ b2n.ir/v2ray-configs | 921
   server: 104.18.1.196
   port: 443
   type: trojan
-  password: f1b5925b-eb26-4a2c-90fa-0d48157dd4b9
+  password: 829a97d6-eab6-4f31-98e1-4626f5094752
   skip-cert-verify: true
-  sni: joss.gpj.web.id#⚡ b2n.ir/v2ray-configs | 360
+  sni: joss.gpj.web.id#⚡ b2n.ir/v2ray-configs | 921
   network: ws
   ws-opts:
-    path: /Free-VPN-CF-Geo-Project/46.20.106.162=443
+    path: /Free-VPN-CF-Geo-Project/185.42.163.35=443
     headers:
       Host: joss.gpj.web.id
   udp: true
-- name: ⚡ b2n.ir/v2ray-configs | 249
+- name: ⚡ b2n.ir/v2ray-configs | 356
   server: 104.18.1.196
   port: 443
   type: trojan
-  password: 881c0d9d-6f1f-4022-b474-f8c705a758cd
+  password: 0b65bb06-6b28-487a-8e3c-820dda51e977
   skip-cert-verify: true
-  sni: joss.gpj.web.id#⚡ b2n.ir/v2ray-configs | 249
+  sni: series-v1.samanehha.co
   network: ws
   ws-opts:
-    path: /Free-VPN-CF-Geo-Project/217.144.185.153=443
+    path: /43xf5zgeApzDAfhOHq
     headers:
-      Host: joss.gpj.web.id
+      Host: series-v1.samanehha.co
   udp: true
-- name: ⚡ b2n.ir/v2ray-configs | 635
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: 8d047125-8467-4724-bb62-ef64405dca78
-  skip-cert-verify: true
-  sni: joss.gpj1.web.id
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/91.192.102.92
-    headers:
-      Host: joss.gpj1.web.id
-  udp: true
-- name: ⚡ b2n.ir/v2ray-configs | 999
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: 8001fbf7-4b59-4415-a4bd-8bfded02c9c6
-  skip-cert-verify: true
-  sni: joss.gpj1.web.id
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/69.28.82.253
-    headers:
-      Host: joss.gpj1.web.id
-  udp: true
-- name: ⚡ b2n.ir/v2ray-configs | 796
+- name: ⚡ b2n.ir/v2ray-configs | 33
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -662,7 +415,111 @@ proxies:
     headers:
       Host: joss.gpj1.web.id
   udp: true
-- name: ⚡ b2n.ir/v2ray-configs | 665
+- name: ⚡ b2n.ir/v2ray-configs | 485
+  server: 104.18.1.196
+  port: 443
+  type: trojan
+  password: e35026da-e985-49ca-b43b-276062a535a6
+  skip-cert-verify: true
+  sni: notdirect.howhealthyistoomajreally.homes
+  network: ws
+  ws-opts:
+    path: /ilb9fuWfuqWDjlQrGCkIH66kMFPa
+    headers:
+      Host: notdirect.howhealthyistoomajreally.homes
+  udp: true
+- name: ⚡ b2n.ir/v2ray-configs | 952
+  server: 104.18.1.196
+  port: 443
+  type: trojan
+  password: 279546c5-8b79-49c8-82c0-d58b086be0b7
+  skip-cert-verify: true
+  sni: joss.gpj.web.id
+  network: ws
+  ws-opts:
+    path: /Free-VPN-CF-Geo-Project/40.233.116.225
+    headers:
+      Host: joss.gpj.web.id
+  udp: true
+- name: ⚡ b2n.ir/v2ray-configs | 278
+  server: 104.18.1.196
+  port: 443
+  type: trojan
+  password: 11ae0edd-2f63-4495-8683-037abbda9986
+  skip-cert-verify: true
+  sni: amin.karkas1.ir
+  network: ws
+  ws-opts:
+    path: /6vuNVgOFnqUEvj0sNkGkxxW7
+    headers:
+      Host: amin.karkas1.ir
+  udp: true
+- name: ⚡ b2n.ir/v2ray-configs | 689
+  server: 104.18.1.196
+  port: 443
+  type: trojan
+  password: 8d047125-8467-4724-bb62-ef64405dca78
+  skip-cert-verify: true
+  sni: joss.gpj1.web.id
+  network: ws
+  ws-opts:
+    path: /Free-VPN-CF-Geo-Project/91.192.102.92
+    headers:
+      Host: joss.gpj1.web.id
+  udp: true
+- name: ⚡ b2n.ir/v2ray-configs | 551
+  server: 104.18.1.196
+  port: 443
+  type: trojan
+  password: 8001fbf7-4b59-4415-a4bd-8bfded02c9c6
+  skip-cert-verify: true
+  sni: joss.gpj1.web.id
+  network: ws
+  ws-opts:
+    path: /Free-VPN-CF-Geo-Project/69.28.82.253
+    headers:
+      Host: joss.gpj1.web.id
+  udp: true
+- name: ⚡ b2n.ir/v2ray-configs | 410
+  server: 104.18.1.196
+  port: 443
+  type: trojan
+  password: df277997-c6df-4a8c-b079-30cfd9c6572a
+  skip-cert-verify: true
+  sni: joss.gpj.web.id#⚡ b2n.ir/v2ray-configs | 410
+  network: ws
+  ws-opts:
+    path: /Free-VPN-CF-Geo-Project/193.180.211.52=443
+    headers:
+      Host: joss.gpj.web.id
+  udp: true
+- name: ⚡ b2n.ir/v2ray-configs | 816
+  server: 104.18.1.196
+  port: 443
+  type: trojan
+  password: 29ca24a5-e8aa-4cbd-9bcb-f96aba1d6f15
+  skip-cert-verify: true
+  sni: joss.gpj1.web.id
+  network: ws
+  ws-opts:
+    path: /Free-VPN-CF-Geo-Project/34.22.190.30
+    headers:
+      Host: joss.gpj1.web.id
+  udp: true
+- name: ⚡ b2n.ir/v2ray-configs | 730
+  server: 104.18.1.196
+  port: 443
+  type: trojan
+  password: c269f7f5-e9c6-4d5e-a93b-4d5f9f713b7a
+  skip-cert-verify: true
+  sni: joss.gpj.web.id#⚡ b2n.ir/v2ray-configs | 730
+  network: ws
+  ws-opts:
+    path: /Free-VPN-CF-Geo-Project/82.148.2.86=443
+    headers:
+      Host: joss.gpj.web.id
+  udp: true
+- name: ⚡ b2n.ir/v2ray-configs | 885
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -674,6 +531,97 @@ proxies:
     path: /Free-VPN-CF-Geo-Project/45.86.229.28
     headers:
       Host: joss.gpj1.web.id
+  udp: true
+- name: ⚡ b2n.ir/v2ray-configs | 638
+  server: 104.18.1.196
+  port: 443
+  type: trojan
+  password: e683d757-b855-44c3-b0b6-22586444914a
+  skip-cert-verify: true
+  sni: joss.gpj1.web.id
+  network: ws
+  ws-opts:
+    path: /Free-VPN-CF-Geo-Project/86.107.197.239
+    headers:
+      Host: joss.gpj1.web.id
+  udp: true
+- name: ⚡ b2n.ir/v2ray-configs | 296
+  server: 104.18.1.196
+  port: 443
+  type: trojan
+  password: f1b5925b-eb26-4a2c-90fa-0d48157dd4b9
+  skip-cert-verify: true
+  sni: joss.gpj.web.id#⚡ b2n.ir/v2ray-configs | 296
+  network: ws
+  ws-opts:
+    path: /Free-VPN-CF-Geo-Project/46.20.106.162=443
+    headers:
+      Host: joss.gpj.web.id
+  udp: true
+- name: ⚡ b2n.ir/v2ray-configs | 872
+  server: 104.18.1.196
+  port: 443
+  type: trojan
+  password: e8cb659c-d5af-4b82-a175-8f44d8972542
+  skip-cert-verify: true
+  sni: joss.gpj.web.id#⚡ b2n.ir/v2ray-configs | 872
+  network: ws
+  ws-opts:
+    path: /Free-VPN-CF-Geo-Project/213.255.209.207=443
+    headers:
+      Host: joss.gpj.web.id
+  udp: true
+- name: ⚡ b2n.ir/v2ray-configs | 583
+  server: 104.18.1.196
+  port: 443
+  type: trojan
+  password: c86e076b-b228-44ad-a4fd-ac91e3c2bc8d
+  skip-cert-verify: true
+  sni: joss.gpj.web.id
+  network: ws
+  ws-opts:
+    path: /Free-VPN-CF-Geo-Project/185.128.106.12
+    headers:
+      Host: joss.gpj.web.id
+  udp: true
+- name: ⚡ b2n.ir/v2ray-configs | 925
+  server: 104.18.1.196
+  port: 443
+  type: trojan
+  password: 1bd66fff-fca0-4028-aaa5-f83bbb9e5c2c
+  skip-cert-verify: true
+  sni: joss.gpj.web.id#⚡ b2n.ir/v2ray-configs | 925
+  network: ws
+  ws-opts:
+    path: /Free-VPN-CF-Geo-Project/109.120.187.55=443
+    headers:
+      Host: joss.gpj.web.id
+  udp: true
+- name: ⚡ b2n.ir/v2ray-configs | 637
+  server: 104.18.1.196
+  port: 443
+  type: trojan
+  password: a0514d9b-d109-47fd-b173-1e7f83268f21
+  skip-cert-verify: true
+  sni: tws23.kallepache.store
+  network: ws
+  ws-opts:
+    path: /update#⚡ b2n.ir/v2ray-configs | 637
+    headers:
+      Host: tws23.kallepache.store
+  udp: true
+- name: ⚡ b2n.ir/v2ray-configs | 474
+  server: 104.18.1.196
+  port: 443
+  type: trojan
+  password: fa47cf66-c31b-4dc5-a02b-e41830918e40
+  skip-cert-verify: true
+  sni: joss.gpj.web.id#⚡ b2n.ir/v2ray-configs | 474
+  network: ws
+  ws-opts:
+    path: /Free-VPN-CF-Geo-Project/107.189.3.96=443
+    headers:
+      Host: joss.gpj.web.id
   udp: true
 - name: 👉🆔@v2ray_configs_pool📡🇮🇳®️India©️Mumbai🅿️ping:147.07ms
   server: 104.18.1.196
@@ -691,162 +639,6 @@ proxies:
     headers:
       Host: node4.rtxconfigz.com
   udp: true
-- name: ⚡ b2n.ir/v2ray-configs | 105
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: df277997-c6df-4a8c-b079-30cfd9c6572a
-  skip-cert-verify: true
-  sni: joss.gpj.web.id#⚡ b2n.ir/v2ray-configs | 105
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/193.180.211.52=443
-    headers:
-      Host: joss.gpj.web.id
-  udp: true
-- name: ⚡ b2n.ir/v2ray-configs | 483
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: c86e076b-b228-44ad-a4fd-ac91e3c2bc8d
-  skip-cert-verify: true
-  sni: joss.gpj.web.id#⚡ b2n.ir/v2ray-configs | 483
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/185.128.106.12=443
-    headers:
-      Host: joss.gpj.web.id
-  udp: true
-- name: ⚡ b2n.ir/v2ray-configs | 164
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: 01b69355-17c1-4298-9e00-a266946fd977
-  skip-cert-verify: true
-  sni: joss.gpj.web.id#⚡ b2n.ir/v2ray-configs | 164
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/176.10.124.178=443
-    headers:
-      Host: joss.gpj.web.id
-  udp: true
-- name: ⚡ b2n.ir/v2ray-configs | 554
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: a0514d9b-d109-47fd-b173-1e7f83268f21
-  skip-cert-verify: true
-  sni: tws23.kallepache.store
-  network: ws
-  ws-opts:
-    path: /update
-    headers:
-      Host: tws23.kallepache.store
-  udp: true
-- name: ⚡ b2n.ir/v2ray-configs | 973
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: e683d757-b855-44c3-b0b6-22586444914a
-  skip-cert-verify: true
-  sni: joss.gpj1.web.id
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/86.107.197.239
-    headers:
-      Host: joss.gpj1.web.id
-  udp: true
-- name: ⚡ b2n.ir/v2ray-configs | 330
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: 0b65bb06-6b28-487a-8e3c-820dda51e977
-  skip-cert-verify: true
-  sni: series-v1.samanehha.co
-  network: ws
-  ws-opts:
-    path: /43xf5zgeApzDAfhOHq
-    headers:
-      Host: series-v1.samanehha.co
-  udp: true
-- name: ⚡ b2n.ir/v2ray-configs | 744
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: 279546c5-8b79-49c8-82c0-d58b086be0b7
-  skip-cert-verify: true
-  sni: joss.gpj.web.id#⚡ b2n.ir/v2ray-configs | 744
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/40.233.116.225=443
-    headers:
-      Host: joss.gpj.web.id
-  udp: true
-- name: ⚡ b2n.ir/v2ray-configs | 614
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: 29ca24a5-e8aa-4cbd-9bcb-f96aba1d6f15
-  skip-cert-verify: true
-  sni: joss.gpj1.web.id
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/34.22.190.30
-    headers:
-      Host: joss.gpj1.web.id
-  udp: true
-- name: ⚡ b2n.ir/v2ray-configs | 877
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: e501a180-c9a4-4f49-b082-77e9b3db6407
-  skip-cert-verify: true
-  sni: joss.gpj.web.id
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/5.182.39.243
-    headers:
-      Host: joss.gpj.web.id
-  udp: true
-- name: ⚡ b2n.ir/v2ray-configs | 178
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: 11ae0edd-2f63-4495-8683-037abbda9986
-  skip-cert-verify: true
-  sni: amin.karkas1.ir
-  network: ws
-  ws-opts:
-    path: /6vuNVgOFnqUEvj0sNkGkxxW7#⚡ b2n.ir/v2ray-configs | 178
-    headers:
-      Host: amin.karkas1.ir
-  udp: true
-- name: '%40v2FreeHub%20%F0%9F%87%BA%F0%9F%87%BF'
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: c269f7f5-e9c6-4d5e-a93b-4d5f9f713b7a
-  skip-cert-verify: true
-  sni: joss.gpj.web.id#%40v2FreeHub%20%F0%9F%87%BA%F0%9F%87%BF
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/82.148.2.86=443
-    headers:
-      Host: joss.gpj.web.id
-  udp: true
-- name: '%40v2FreeHub%20%F0%9F%87%B7%F0%9F%87%BA'
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: 1bd66fff-fca0-4028-aaa5-f83bbb9e5c2c
-  skip-cert-verify: true
-  sni: joss.gpj.web.id#%40v2FreeHub%20%F0%9F%87%B7%F0%9F%87%BA
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/109.120.187.55=443
-    headers:
-      Host: joss.gpj.web.id
-  udp: true
 - name: '%40v2FreeHub%20%F0%9F%87%A8%F0%9F%87%BF'
   server: 104.18.1.196
   port: 443
@@ -860,16 +652,29 @@ proxies:
     headers:
       Host: joss.gpj.web.id
   udp: true
-- name: '%40v2FreeHub%20%F0%9F%87%AB%F0%9F%87%AE'
+- name: '%40v2FreeHub%20%F0%9F%87%A8%F0%9F%87%AD`'
   server: 104.18.1.196
   port: 443
   type: trojan
-  password: 829a97d6-eab6-4f31-98e1-4626f5094752
+  password: 01b69355-17c1-4298-9e00-a266946fd977
   skip-cert-verify: true
-  sni: joss.gpj.web.id#%40v2FreeHub%20%F0%9F%87%AB%F0%9F%87%AE
+  sni: joss.gpj.web.id#%40v2FreeHub%20%F0%9F%87%A8%F0%9F%87%AD`
   network: ws
   ws-opts:
-    path: /Free-VPN-CF-Geo-Project/185.42.163.35=443
+    path: /Free-VPN-CF-Geo-Project/176.10.124.178=443
+    headers:
+      Host: joss.gpj.web.id
+  udp: true
+- name: '%40v2FreeHub%20%F0%9F%87%B5%F0%9F%87%B9'
+  server: 104.18.1.196
+  port: 443
+  type: trojan
+  password: e501a180-c9a4-4f49-b082-77e9b3db6407
+  skip-cert-verify: true
+  sni: joss.gpj.web.id#%40v2FreeHub%20%F0%9F%87%B5%F0%9F%87%B9
+  network: ws
+  ws-opts:
+    path: /Free-VPN-CF-Geo-Project/5.182.39.243=443
     headers:
       Host: joss.gpj.web.id
   udp: true
@@ -886,44 +691,18 @@ proxies:
     headers:
       Host: joss.gpj.web.id
   udp: true
-- name: '%40v2FreeHub%20%F0%9F%87%A8%F0%9F%87%AD'
+- name: '%40v2FreeHub%20%F0%9F%87%B3%F0%9F%87%B1'
   server: 104.18.1.196
   port: 443
   type: trojan
-  password: fa47cf66-c31b-4dc5-a02b-e41830918e40
+  password: 881c0d9d-6f1f-4022-b474-f8c705a758cd
   skip-cert-verify: true
-  sni: joss.gpj.web.id#%40v2FreeHub%20%F0%9F%87%A8%F0%9F%87%AD
+  sni: joss.gpj.web.id#%40v2FreeHub%20%F0%9F%87%B3%F0%9F%87%B1
   network: ws
   ws-opts:
-    path: /Free-VPN-CF-Geo-Project/107.189.3.96=443
+    path: /Free-VPN-CF-Geo-Project/217.144.185.153=443
     headers:
       Host: joss.gpj.web.id
-  udp: true
-- name: '%40v2FreeHub%20%F0%9F%87%A8%F0%9F%87%A6`'
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: e8cb659c-d5af-4b82-a175-8f44d8972542
-  skip-cert-verify: true
-  sni: joss.gpj.web.id#%40v2FreeHub%20%F0%9F%87%A8%F0%9F%87%A6`
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/213.255.209.207=443
-    headers:
-      Host: joss.gpj.web.id
-  udp: true
-- name: '%E6%9C%AA%E7%9F%A5152'
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: e35026da-e985-49ca-b43b-276062a535a6
-  skip-cert-verify: true
-  sni: notdirect.howhealthyistoomajreally.homes
-  network: ws
-  ws-opts:
-    path: /ilb9fuWfuqWDjlQrGCkIH66kMFPa#未知152
-    headers:
-      Host: notdirect.howhealthyistoomajreally.homes
   udp: true
 - name: 0|-https://t.me/MrXbin-97
   server: 104.18.1.196
@@ -1053,7 +832,7 @@ proxies:
     headers:
       Host: baradiha.com
   udp: true
-- name: 4Mohsen-3430
+- name: 4FreeIran-3422
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1066,7 +845,7 @@ proxies:
     headers:
       Host: us1.test3.net
   udp: true
-- name: 4Mohsen-3436
+- name: 4FreeIran-3429
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1079,33 +858,7 @@ proxies:
     headers:
       Host: us1.test3.net
   udp: true
-- name: 4Mohsen-3456
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: 063bfa6d-c68f-4955-9b33-7555b95988bc
-  skip-cert-verify: true
-  sni: joss.gpj1.web.id#4Mohsen-3456
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/45.144.51.81
-    headers:
-      Host: joss.gpj1.web.id
-  udp: true
-- name: 4Mohsen-3460
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: '0'
-  skip-cert-verify: true
-  sni: c03237cb.ba73fe85.netlib.re
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: c03237cb.ba73fe85.netlib.re
-  udp: true
-- name: 4Mohsen-3465
+- name: 4FreeIran-3458
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1118,20 +871,20 @@ proxies:
     headers:
       Host: se1.trojanvpn.de
   udp: true
-- name: 4Mohsen-3534
+- name: 4FreeIran-3527
   server: 104.18.1.196
   port: 443
   type: trojan
   password: 11ae0edd-2f63-4495-8683-037abbda9986
   skip-cert-verify: true
-  sni: amin.karkas1.ir#4Mohsen-3534
+  sni: amin.karkas1.ir#4FreeIran-3527
   network: ws
   ws-opts:
     path: /6vuNVgOFnqUEvj0sNkGkxxW7
     headers:
       Host: amin.karkas1.ir
   udp: true
-- name: 4Mohsen-3536
+- name: 4FreeIran-3529
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1144,7 +897,7 @@ proxies:
     headers:
       Host: de1.test3.net
   udp: true
-- name: 4Mohsen-3545
+- name: 4FreeIran-3539
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1157,7 +910,7 @@ proxies:
     headers:
       Host: de1.test3.net
   udp: true
-- name: 4Mohsen-3696
+- name: 4FreeIran-3692
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1170,46 +923,33 @@ proxies:
     headers:
       Host: de1.test3.net
   udp: true
-- name: 4Mohsen-3780
+- name: 4FreeIran-3785
   server: 104.18.1.196
   port: 443
   type: trojan
   password: 2f211aae-3678-47a6-b231-46304443772f
   skip-cert-verify: true
-  sni: cdir-0203.wlfvip.com#4Mohsen-3780
+  sni: cdir-0203.wlfvip.com#4FreeIran-3785
   network: ws
   ws-opts:
     path: /trojanws?ed=2048
     headers:
       Host: cdir-0203.wlfvip.com
   udp: true
-- name: 4Mohsen-3790
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: 35f8e682-54bd-42c7-b537-94a8e4c84bcd
-  skip-cert-verify: true
-  sni: joss.gpj1.web.id#4Mohsen-3790
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/89.110.120.197
-    headers:
-      Host: joss.gpj1.web.id
-  udp: true
-- name: 4Mohsen-3806
+- name: 4FreeIran-3811
   server: 104.18.1.196
   port: 443
   type: trojan
   password: 3c6c2cac-7e0a-462b-ae19-2e5e264d7fdf
   skip-cert-verify: true
-  sni: joss.gpj1.web.id#4Mohsen-3806
+  sni: joss.gpj1.web.id#4FreeIran-3811
   network: ws
   ws-opts:
     path: /Free-VPN-CF-Geo-Project/46.183.186.57
     headers:
       Host: joss.gpj1.web.id
   udp: true
-- name: 4Mohsen-3905
+- name: 4FreeIran-3910
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1218,11 +958,11 @@ proxies:
   sni: c2mk.ciscocdn1.live
   network: ws
   ws-opts:
-    path: /rDCYQta83d0oPABKBhcIX#4Mohsen-3905
+    path: /rDCYQta83d0oPABKBhcIX#4FreeIran-3910
     headers:
       Host: c2mk.ciscocdn1.live
   udp: true
-- name: 4Mohsen-3917
+- name: 4FreeIran-3921
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1235,20 +975,20 @@ proxies:
     headers:
       Host: de1.trojanvpn.dE
   udp: true
-- name: 4Mohsen-3927
+- name: 4FreeIran-3931
   server: 104.18.1.196
   port: 443
   type: trojan
   password: 5a5d1112-4ae7-431f-bdde-0d008fb473dd
   skip-cert-verify: true
-  sni: 90.tAIpEI108.dpDnS.orG#4Mohsen-3927
+  sni: 90.tAIpEI108.dpDnS.orG#4FreeIran-3931
   network: ws
   ws-opts:
     path: /685uFbiRrgAsHzTP8d
     headers:
       Host: 90.taipei108.dpdns.org
   udp: true
-- name: 4Mohsen-3930
+- name: 4FreeIran-3934
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1257,11 +997,11 @@ proxies:
   sni: c3mc.ciscocdn1.live
   network: ws
   ws-opts:
-    path: /ywQ9KSLI4ZBm9wOAXUaN#4Mohsen-3930
+    path: /ywQ9KSLI4ZBm9wOAXUaN#4FreeIran-3934
     headers:
       Host: c3mc.ciscocdn1.live
   udp: true
-- name: 4Mohsen-3939
+- name: 4FreeIran-3943
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1274,7 +1014,7 @@ proxies:
     headers:
       Host: de1.test3.net
   udp: true
-- name: 4Mohsen-3943
+- name: 4FreeIran-3947
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1283,24 +1023,24 @@ proxies:
   sni: c1mc.cdncisco4.co
   network: ws
   ws-opts:
-    path: /422Kdfwzf49IxeZJa#4Mohsen-3943
+    path: /422Kdfwzf49IxeZJa#4FreeIran-3947
     headers:
       Host: c1mc.cdncisco4.co
   udp: true
-- name: 4Mohsen-3990
+- name: 4FreeIran-3994
   server: 104.18.1.196
   port: 443
   type: trojan
   password: 669d0ac7b5b64ebbb1abb75d5d540a5c
   skip-cert-verify: true
-  sni: bangladeshipatri.com#4Mohsen-3990
+  sni: bangladeshipatri.com#4FreeIran-3994
   network: ws
   ws-opts:
     path: /6b777a91
     headers:
       Host: bangladeshipatri.com
   udp: true
-- name: 4Mohsen-4154
+- name: 4FreeIran-4158
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1313,7 +1053,7 @@ proxies:
     headers:
       Host: fr1.test3.net
   udp: true
-- name: 4Mohsen-4164
+- name: 4FreeIran-4168
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1326,20 +1066,7 @@ proxies:
     headers:
       Host: de1.test3.net
   udp: true
-- name: 4Mohsen-4171
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: 94a81dc7-e8e6-46e5-838d-84ca142b88b2
-  skip-cert-verify: true
-  sni: joss.gpj1.web.id#4Mohsen-4171
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/94.131.123.74
-    headers:
-      Host: joss.gpj1.web.id
-  udp: true
-- name: 4Mohsen-4421
+- name: 4FreeIran-4429
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1348,11 +1075,11 @@ proxies:
   sni: joss.gpj.web.id
   network: ws
   ws-opts:
-    path: /Free-VPN-CF-Geo-Project/62.60.246.168=443#4Mohsen-4421
+    path: /Free-VPN-CF-Geo-Project/62.60.246.168=443#4FreeIran-4429
     headers:
       Host: joss.gpj.web.id
   udp: true
-- name: 4Mohsen-4460
+- name: 4FreeIran-4468
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1361,24 +1088,24 @@ proxies:
   sni: syndication-statutes-wanted-logo.trycloudflare.com
   network: ws
   ws-opts:
-    path: /argox-tr#4Mohsen-4460
+    path: /argox-tr#4FreeIran-4468
     headers:
       Host: syndication-statutes-wanted-logo.trycloudflare.com
   udp: true
-- name: 4Mohsen-4467
+- name: 4FreeIran-4475
   server: 104.18.1.196
   port: 443
   type: trojan
   password: b4e8771997c94732acbc9ec4d19c2589
   skip-cert-verify: true
-  sni: bangladeshipatri.com#4Mohsen-4467
+  sni: bangladeshipatri.com#4FreeIran-4475
   network: ws
   ws-opts:
     path: /6b777a91
     headers:
       Host: bangladeshipatri.com
   udp: true
-- name: 4Mohsen-4482
+- name: 4FreeIran-4490
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1387,11 +1114,11 @@ proxies:
   sni: 107.174.82.102.sslip.io
   network: ws
   ws-opts:
-    path: /gXKGj8a1tp1nNbZEcRugowKV#4Mohsen-4482
+    path: /gXKGj8a1tp1nNbZEcRugowKV#4FreeIran-4490
     headers:
       Host: 107.174.82.102.sslip.io
   udp: true
-- name: 4Mohsen-4579
+- name: 4FreeIran-4587
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1404,7 +1131,7 @@ proxies:
     headers:
       Host: 6us3.pqjc.buzz
   udp: true
-- name: 4Mohsen-4580
+- name: 4FreeIran-4588
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1417,59 +1144,59 @@ proxies:
     headers:
       Host: p6us4.pqjc.buzz
   udp: true
-- name: 4Mohsen-4584
+- name: 4FreeIran-4592
   server: 104.18.1.196
   port: 443
   type: trojan
   password: d69e725c-7c7e-4c75-9786-4859b4e0bbc6
   skip-cert-verify: true
-  sni: joss.gpj1.web.id#4Mohsen-4584
+  sni: joss.gpj1.web.id#4FreeIran-4592
   network: ws
   ws-opts:
     path: /Free-VPN-CF-Geo-Project/109.169.76.23
     headers:
       Host: joss.gpj1.web.id
   udp: true
-- name: 4Mohsen-4673
+- name: 4FreeIran-4678
   server: 104.18.1.196
   port: 443
   type: trojan
   password: f0b09670-9e9a-48f2-acd5-5b6cc33c83c5
   skip-cert-verify: true
-  sni: cdir-0303.wlfvip.shop#4Mohsen-4673
+  sni: cdir-0303.wlfvip.shop#4FreeIran-4678
   network: ws
   ws-opts:
     path: /trojanws?ed=2048
     headers:
       Host: cdir-0303.wlfvip.shop
   udp: true
-- name: 4Mohsen-4679
+- name: 4FreeIran-4684
   server: 104.18.1.196
   port: 443
   type: trojan
   password: f282b878-8711-45a1-8c69-5564172123c1
   skip-cert-verify: true
-  sni: aio.zipzap.biz.id#4Mohsen-4679
+  sni: aio.zipzap.biz.id#4FreeIran-4684
   network: ws
   ws-opts:
     path: /aioproxybot/129.150.49.58-18650
     headers:
       Host: aio.zipzap.biz.id
   udp: true
-- name: 4Mohsen-4785
+- name: 4FreeIran-4789
   server: 104.18.1.196
   port: 443
   type: trojan
   password: maradona_vpn
   skip-cert-verify: true
-  sni: teo.history-paint.art#4Mohsen-4785
+  sni: teo.history-paint.art#4FreeIran-4789
   network: ws
   ws-opts:
     path: /wss24142?ed=2048
     headers:
       Host: teo.history-paint.art
   udp: true
-- name: 4Mohsen-4787
+- name: 4FreeIran-4791
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1482,7 +1209,7 @@ proxies:
     headers:
       Host: aws-uae-1.f1cflined.com
   udp: true
-- name: 4Mohsen-4788
+- name: 4FreeIran-4792
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1495,7 +1222,7 @@ proxies:
     headers:
       Host: aws-us-oregon-1.f1cflinec.com
   udp: true
-- name: 4Mohsen-4798
+- name: 4FreeIran-4802
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1508,7 +1235,7 @@ proxies:
     headers:
       Host: aws-us-oregon-1.f1cflined.com
   udp: true
-- name: 4Mohsen-5065
+- name: 4FreeIran-5066
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1521,7 +1248,7 @@ proxies:
     headers:
       Host: aws-sg-1.f1cflineb.com
   udp: true
-- name: 4Mohsen-5066
+- name: 4FreeIran-5067
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1534,7 +1261,7 @@ proxies:
     headers:
       Host: aws-aus-sydney-1.f1cflinea.com
   udp: true
-- name: 4Mohsen-5077
+- name: 4FreeIran-5078
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1547,7 +1274,7 @@ proxies:
     headers:
       Host: aws-ge-frankfurt-1.f1cflinea.com
   udp: true
-- name: 4Mohsen-5084
+- name: 4FreeIran-5085
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1560,7 +1287,7 @@ proxies:
     headers:
       Host: aws-ar-buenosaires-1.f1cflinea.com
   udp: true
-- name: 4Mohsen-5085
+- name: 4FreeIran-5086
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1573,7 +1300,7 @@ proxies:
     headers:
       Host: aws-ca-central-1.f1cflinea.com
   udp: true
-- name: 4Mohsen-5086
+- name: 4FreeIran-5087
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1586,7 +1313,7 @@ proxies:
     headers:
       Host: aws-ca-central-1.f1cflineb.com
   udp: true
-- name: 4Mohsen-5087
+- name: 4FreeIran-5088
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1599,7 +1326,7 @@ proxies:
     headers:
       Host: aws-ch-zurich-1.f1cflineb.com
   udp: true
-- name: 4Mohsen-5088
+- name: 4FreeIran-5089
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1612,7 +1339,7 @@ proxies:
     headers:
       Host: aws-es-madrid-1.f1rocketnode.com
   udp: true
-- name: 4Mohsen-5089
+- name: 4FreeIran-5090
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1625,7 +1352,7 @@ proxies:
     headers:
       Host: aws-in-mumbai-1.f1cflinea.com
   udp: true
-- name: 4Mohsen-5090
+- name: 4FreeIran-5091
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1638,7 +1365,7 @@ proxies:
     headers:
       Host: aws-se-stockholm-1.f1cflinea.com
   udp: true
-- name: 4Mohsen-5091
+- name: 4FreeIran-5092
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1651,7 +1378,7 @@ proxies:
     headers:
       Host: aws-uae-1.f1cflineb.com
   udp: true
-- name: 4Mohsen-5093
+- name: 4FreeIran-5094
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1664,7 +1391,7 @@ proxies:
     headers:
       Host: aws-uk-london-1.f1cflinea.com
   udp: true
-- name: 4Mohsen-5094
+- name: 4FreeIran-5095
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1757,7 +1484,7 @@ proxies:
     headers:
       Host: sssssssxxxx.2032.pp.ua
   udp: true
-- name: 4Mohsen-13139
+- name: 4FreeIran-13249
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1773,7 +1500,7 @@ proxies:
     headers:
       Host: d84ee332-1284-11ee-a5c8-8213fd3be4b9.bamarambash.monster
   udp: true
-- name: 4Mohsen-13172
+- name: 4FreeIran-13282
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1789,7 +1516,7 @@ proxies:
     headers:
       Host: ecc.vtcss.top
   udp: true
-- name: 4Mohsen-13344
+- name: 4FreeIran-13455
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1805,7 +1532,7 @@ proxies:
     headers:
       Host: edeen.makeup
   udp: true
-- name: 4Mohsen-13349
+- name: 4FreeIran-13460
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1821,7 +1548,7 @@ proxies:
     headers:
       Host: odelia.autos
   udp: true
-- name: 4Mohsen-13497
+- name: 4FreeIran-13608
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1837,7 +1564,7 @@ proxies:
     headers:
       Host: octavi.cfd
   udp: true
-- name: 4Mohsen-13515
+- name: 4FreeIran-13626
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1853,7 +1580,7 @@ proxies:
     headers:
       Host: oliv.beauty
   udp: true
-- name: 4Mohsen-13523
+- name: 4FreeIran-13634
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1869,7 +1596,7 @@ proxies:
     headers:
       Host: alvvin.click
   udp: true
-- name: 4Mohsen-13528
+- name: 4FreeIran-13639
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1885,7 +1612,7 @@ proxies:
     headers:
       Host: ophelia.mom
   udp: true
-- name: 4Mohsen-13540
+- name: 4FreeIran-13651
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1901,7 +1628,7 @@ proxies:
     headers:
       Host: cf.tonyluk.link
   udp: true
-- name: 4Mohsen-13572
+- name: 4FreeIran-13683
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1917,7 +1644,7 @@ proxies:
     headers:
       Host: waynn.makeup
   udp: true
-- name: 4Mohsen-13573
+- name: 4FreeIran-13684
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1933,7 +1660,7 @@ proxies:
     headers:
       Host: adenc35.fixedlfoat.top
   udp: true
-- name: 4Mohsen-13588
+- name: 4FreeIran-13699
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1949,7 +1676,7 @@ proxies:
     headers:
       Host: us-1.acyun.tk
   udp: true
-- name: 4Mohsen-13632
+- name: 4FreeIran-13743
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1965,7 +1692,7 @@ proxies:
     headers:
       Host: Dusseldorf.kotick.site
   udp: true
-- name: 4Mohsen-13681
+- name: 4FreeIran-13792
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1981,7 +1708,7 @@ proxies:
     headers:
       Host: www.17661867.xyz
   udp: true
-- name: 4Mohsen-14036
+- name: 4FreeIran-14146
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1997,7 +1724,7 @@ proxies:
     headers:
       Host: 149.7.16.248
   udp: true
-- name: 4Mohsen-14054
+- name: 4FreeIran-14164
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2013,7 +1740,7 @@ proxies:
     headers:
       Host: www.44945510.xyz
   udp: true
-- name: 4Mohsen-14193
+- name: 4FreeIran-14303
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2029,7 +1756,7 @@ proxies:
     headers:
       Host: www.44716766.xyz
   udp: true
-- name: 4Mohsen-14194
+- name: 4FreeIran-14304
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2045,7 +1772,7 @@ proxies:
     headers:
       Host: www.19458162.xyz
   udp: true
-- name: 4Mohsen-14199
+- name: 4FreeIran-14309
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2061,7 +1788,7 @@ proxies:
     headers:
       Host: www.29135019.xyz
   udp: true
-- name: 4Mohsen-14589
+- name: 4FreeIran-14704
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2077,7 +1804,7 @@ proxies:
     headers:
       Host: schereswed.softwarenews.store
   udp: true
-- name: 4Mohsen-14722
+- name: 4FreeIran-14837
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2093,7 +1820,7 @@ proxies:
     headers:
       Host: Lille.kotick.site
   udp: true
-- name: 4Mohsen-14789
+- name: 4FreeIran-14904
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2109,7 +1836,7 @@ proxies:
     headers:
       Host: localhoster.ml
   udp: true
-- name: 4Mohsen-14842
+- name: 4FreeIran-14957
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2125,7 +1852,7 @@ proxies:
     headers:
       Host: ming2.kiwireich.com
   udp: true
-- name: 4Mohsen-14875
+- name: 4FreeIran-14990
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2141,7 +1868,7 @@ proxies:
     headers:
       Host: rlhrwtqusd.site
   udp: true
-- name: 4Mohsen-15081
+- name: 4FreeIran-15203
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2157,7 +1884,7 @@ proxies:
     headers:
       Host: 72d6d25e-1b39-11ee-a5c8-8213fd3be4b9.bamarambash.monster
   udp: true
-- name: 4Mohsen-15363
+- name: 4FreeIran-15493
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2173,7 +1900,7 @@ proxies:
     headers:
       Host: www.49419962.xyz
   udp: true
-- name: 4Mohsen-15562
+- name: 4FreeIran-15703
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2189,7 +1916,7 @@ proxies:
     headers:
       Host: dd2.1808.cf
   udp: true
-- name: 4Mohsen-15576
+- name: 4FreeIran-15717
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2205,7 +1932,7 @@ proxies:
     headers:
       Host: e.cn-db.top
   udp: true
-- name: 4Mohsen-15641
+- name: 4FreeIran-15782
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2221,7 +1948,7 @@ proxies:
     headers:
       Host: 2.freek1.xyz
   udp: true
-- name: 4Mohsen-15665
+- name: 4FreeIran-15806
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2237,7 +1964,7 @@ proxies:
     headers:
       Host: d.freeh1.xyz
   udp: true
-- name: 4Mohsen-15668
+- name: 4FreeIran-15809
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2253,7 +1980,7 @@ proxies:
     headers:
       Host: 3.freek1.xyz
   udp: true
-- name: 4Mohsen-15703
+- name: 4FreeIran-15850
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2269,7 +1996,7 @@ proxies:
     headers:
       Host: www.42088326.xyz
   udp: true
-- name: 4Mohsen-15858
+- name: 4FreeIran-16010
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2285,7 +2012,7 @@ proxies:
     headers:
       Host: www.72470068.xyz
   udp: true
-- name: 4Mohsen-16366
+- name: 4FreeIran-16530
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2301,7 +2028,7 @@ proxies:
     headers:
       Host: cdnca1.digisport.shop
   udp: true
-- name: 4Mohsen-16416
+- name: 4FreeIran-16590
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2317,7 +2044,7 @@ proxies:
     headers:
       Host: www.62976171.xyz
   udp: true
-- name: 4Mohsen-16635
+- name: 4FreeIran-16828
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2333,7 +2060,7 @@ proxies:
     headers:
       Host: bfcEb82481eEA41083b721E3D99d42c5b34AE27e4e03170FfaD8a75e948050D.wwwNaMAsha.Com
   udp: true
-- name: 4Mohsen-16655
+- name: 4FreeIran-16848
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2349,7 +2076,7 @@ proxies:
     headers:
       Host: cold-dawn-9246.fly.dev
   udp: true
-- name: 4Mohsen-16666
+- name: 4FreeIran-16859
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2365,7 +2092,7 @@ proxies:
     headers:
       Host: dd2.1808.cf
   udp: true
-- name: 4Mohsen-16669
+- name: 4FreeIran-16862
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2381,7 +2108,7 @@ proxies:
     headers:
       Host: lo.twittei.me
   udp: true
-- name: 4Mohsen-16670
+- name: 4FreeIran-16863
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2397,7 +2124,7 @@ proxies:
     headers:
       Host: us2.twittei.me
   udp: true
-- name: 4Mohsen-16671
+- name: 4FreeIran-16864
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2413,7 +2140,7 @@ proxies:
     headers:
       Host: vceu3e.twittei.me
   udp: true
-- name: 4Mohsen-16695
+- name: 4FreeIran-16888
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2429,7 +2156,7 @@ proxies:
     headers:
       Host: us.dalazhi.eu.org
   udp: true
-- name: 4Mohsen-16715
+- name: 4FreeIran-16908
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2445,7 +2172,7 @@ proxies:
     headers:
       Host: us4.sanfencdn1.com
   udp: true
-- name: 4Mohsen-16716
+- name: 4FreeIran-16909
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2461,7 +2188,7 @@ proxies:
     headers:
       Host: us3.sanfencdn1.com
   udp: true
-- name: 4Mohsen-16754
+- name: 4FreeIran-16947
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2477,7 +2204,7 @@ proxies:
     headers:
       Host: amstd.digires.shop
   udp: true
-- name: 4Mohsen-16773
+- name: 4FreeIran-16968
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2493,7 +2220,7 @@ proxies:
     headers:
       Host: afrhms16v.bestxray.buzz
   udp: true
-- name: 4Mohsen-16779
+- name: 4FreeIran-16974
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2509,7 +2236,7 @@ proxies:
     headers:
       Host: ahsorathiyaa.fly.dev
   udp: true
-- name: 4Mohsen-16789
+- name: 4FreeIran-16984
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2525,7 +2252,7 @@ proxies:
     headers:
       Host: 1c5854ba-1b44-11ee-a146-8213fd3be4b9.bamarambash.monster
   udp: true
-- name: 4Mohsen-16807
+- name: 4FreeIran-17002
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2541,7 +2268,7 @@ proxies:
     headers:
       Host: 2.wuxianliulianng.xyz
   udp: true
-- name: 4Mohsen-16830
+- name: 4FreeIran-17028
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2557,7 +2284,7 @@ proxies:
     headers:
       Host: cdntr2.digisport.shop
   udp: true
-- name: 4Mohsen-16852
+- name: 4FreeIran-17054
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2573,7 +2300,7 @@ proxies:
     headers:
       Host: zheshiscp.com
   udp: true
-- name: 4Mohsen-16979
+- name: 4FreeIran-17189
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2589,7 +2316,7 @@ proxies:
     headers:
       Host: fn.mostafago.tk
   udp: true
-- name: 4Mohsen-16983
+- name: 4FreeIran-17193
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2605,7 +2332,7 @@ proxies:
     headers:
       Host: hms02.fxiaomi.sbs
   udp: true
-- name: 4Mohsen-16986
+- name: 4FreeIran-17196
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2621,7 +2348,7 @@ proxies:
     headers:
       Host: gwdef.sbs
   udp: true
-- name: 4Mohsen-17037
+- name: 4FreeIran-17247
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2637,7 +2364,7 @@ proxies:
     headers:
       Host: jahfkjha.cfd
   udp: true
-- name: 4Mohsen-17087
+- name: 4FreeIran-17297
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2653,7 +2380,7 @@ proxies:
     headers:
       Host: linde06.indiavideo.sbs
   udp: true
-- name: 4Mohsen-17105
+- name: 4FreeIran-17315
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2669,7 +2396,7 @@ proxies:
     headers:
       Host: b8767a6a-1c30-11ee-ba76-9ee097a90b8b.bamarambash.monster
   udp: true
-- name: 4Mohsen-17107
+- name: 4FreeIran-17317
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2685,7 +2412,7 @@ proxies:
     headers:
       Host: 4.saintink.eu.org
   udp: true
-- name: 4Mohsen-17245
+- name: 4FreeIran-17453
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2701,7 +2428,7 @@ proxies:
     headers:
       Host: telegram----cassiusvpn----11.timive8509.workers.dev
   udp: true
-- name: 4Mohsen-17263
+- name: 4FreeIran-17471
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2717,7 +2444,7 @@ proxies:
     headers:
       Host: ru1.mianfenyun012.eu.org
   udp: true
-- name: 4Mohsen-17313
+- name: 4FreeIran-17503
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2733,7 +2460,7 @@ proxies:
     headers:
       Host: sub2.saintink.eu.org
   udp: true
-- name: 4Mohsen-17405
+- name: 4FreeIran-17595
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2749,7 +2476,7 @@ proxies:
     headers:
       Host: us1.x898989.xyz
   udp: true
-- name: 4Mohsen-17458
+- name: 4FreeIran-17655
   server: 104.18.1.196
   port: 443
   type: vmess
