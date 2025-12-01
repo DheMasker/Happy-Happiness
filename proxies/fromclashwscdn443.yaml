@@ -299,7 +299,21 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-209.126.84.189-0820 | 10.879MB
+- name: RELAY-104.19.191.28-1985 | 1.831MB
+  server: us5.998998.best
+  port: 443
+  type: vmess
+  uuid: 24254866-770c-41b4-9404-3f50524f425b
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 24254866-770c-41b4-9404-3f50524f425b.fasleangles.fun
+- name: 🇺🇸US-209.126.84.189-0820 | 1.406MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -313,7 +327,7 @@ proxies:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: RELAY-104.21.76.158-0265 | 3.137MB
+- name: RELAY-104.21.76.158-0326 | 0.26MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
