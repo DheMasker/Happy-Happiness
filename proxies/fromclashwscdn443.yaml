@@ -299,11 +299,11 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: RELAY-104.19.191.28-1985 | 1.831MB
-  server: us5.998998.best
+- name: 🇺🇸US-107.173.31.37-2064 | 50.957MB
+  server: 107.173.31.37
   port: 443
   type: vmess
-  uuid: 24254866-770c-41b4-9404-3f50524f425b
+  uuid: be8771bd-10b9-4766-ad44-87971ba1fba4
   alterId: 0
   cipher: auto
   tls: true
@@ -312,9 +312,23 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 24254866-770c-41b4-9404-3f50524f425b.fasleangles.fun
-- name: 🇺🇸US-209.126.84.189-0820 | 1.406MB
-  server: v2ray.codefyinc.com
+      Host: proxy.gelindejia.asia
+- name: 🇺🇸US-77.83.141.171-1056 | 16.612MB
+  server: vc.fly.dev
+  port: 443
+  type: vmess
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vc.fly.dev
+- name: 🇺🇸US-209.126.84.189-0688 | 3.91MB
+  server: 209.126.84.189
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -326,8 +340,8 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: v2ray.codefyinc.com
-- name: RELAY-104.21.76.158-0326 | 0.26MB
+      Host: 209.126.84.189
+- name: RELAY-104.21.76.158-0331 | 1.337MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
