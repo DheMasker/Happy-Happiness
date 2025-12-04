@@ -325,35 +325,19 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-77.83.141.171-1064 | 4.257MB
-  server: vc.fly.dev
+- name: 🇺🇸US-107.173.31.37-6317 | 75.677MB
+  server: 107.173.31.37
   port: 443
   type: vmess
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
-  alterId: 32
+  uuid: be8771bd-10b9-4766-ad44-87971ba1fba4
+  alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: false
   network: ws
   ws-opts:
     path: /
-    headers:
-      Host: vc.fly.dev
-- name: 🇺🇸US-209.126.84.189-0696 | 0.839MB
-  server: 209.126.84.189
-  port: 443
-  type: vmess
-  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 209.126.84.189
-- name: RELAY-104.21.76.158-0362 | 0.154MB
+- name: RELAY-172.67.197.47-0405 | 3.152MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
@@ -367,21 +351,48 @@ proxies:
     path: /
     headers:
       Host: sy4.620720.xyz
-- name: RELAY-172.66.44.77-8500 | 0.061MB
-  server: cf.090227.xyz
+- name: 🇺🇸US-209.126.84.189-0735 | 1.867MB
+  server: 209.126.84.189
   port: 443
   type: vmess
-  uuid: 290cc691-3ac6-4387-98a1-25c8eb8ca2ea
+  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: false
-  servername: RELAY-172.66.44.77-8500 | 0.061MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: sgal.dagrate.eu.org
+      Host: 209.126.84.189
+- name: xx|8e7e|puddincat07@Telegram
+  server: vc.fly.dev
+  alterId: 32
+  cipher: auto
+  client-fingerprint: chrome
+  network: ws
+  port: 443
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  ws-opts:
+    headers:
+      host: vc.fly.dev
+    path: /vc
+- name: us|00dd|puddincat07@Telegram
+  server: 104.17.61.4
+  network: ws
+  password: 984e400bf5d541b7b0815913fe0c432a
+  port: 443
+  skip-cert-verify: true
+  sni: jobsapplyworld.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: jobsapplyworld.com
+    path: 6b777a91
 - name: DE_1
   server: 185.146.173.158
   port: 443
