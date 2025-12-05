@@ -299,7 +299,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-107.173.31.37-6758 | 52.95MB
+- name: 🇺🇸US-107.173.31.37-7319 | 78.794MB
   server: 107.173.31.37
   port: 443
   type: vmess
@@ -311,7 +311,21 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇺🇸US-209.126.84.189-0735 | 9.51MB
+- name: 🇺🇸US-77.83.141.171-1103 | 7.847MB
+  server: vc.fly.dev
+  port: 443
+  type: vmess
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vc.fly.dev
+- name: 🇺🇸US-209.126.84.189-0735 | 0.293MB
   server: 209.126.84.189
   port: 443
   type: vmess
@@ -325,6 +339,21 @@ proxies:
     path: /
     headers:
       Host: 209.126.84.189
+- name: RELAY-172.66.47.179-0464 | 0.0MB
+  server: cf.090227.xyz
+  port: 443
+  type: vmess
+  uuid: 290cc691-3ac6-4387-98a1-25c8eb8ca2ea
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: RELAY-172.66.47.179-0464 | 0.0MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: sgal.dagrate.eu.org
 - name: DE_1
   server: 185.146.173.158
   port: 443
