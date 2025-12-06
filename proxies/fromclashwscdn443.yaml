@@ -299,7 +299,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-107.173.31.37-7319 | 78.794MB
+- name: 🇺🇸US-107.173.31.37-7542 | 58.875MB
   server: 107.173.31.37
   port: 443
   type: vmess
@@ -311,21 +311,22 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇺🇸US-77.83.141.171-1103 | 7.847MB
-  server: vc.fly.dev
+- name: 🇰🇷KR-146.56.177.166-7324 | 22.908MB
+  server: seoul03.zgjok.com
   port: 443
   type: vmess
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
-  alterId: 32
+  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
+  alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: false
+  servername: 🇰🇷KR-146.56.177.166-7324 | 22.908MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: vc.fly.dev
-- name: 🇺🇸US-209.126.84.189-0735 | 0.293MB
+      Host: seoul03.zgjok.com
+- name: 🇺🇸US-209.126.84.189-0735 | 16.269MB
   server: 209.126.84.189
   port: 443
   type: vmess
@@ -339,7 +340,7 @@ proxies:
     path: /
     headers:
       Host: 209.126.84.189
-- name: RELAY-172.66.47.179-0464 | 0.0MB
+- name: RELAY-172.66.47.179-9687 | 0.221MB
   server: cf.090227.xyz
   port: 443
   type: vmess
@@ -348,7 +349,7 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-172.66.47.179-0464 | 0.0MB
+  servername: RELAY-172.66.47.179-9687 | 0.221MB
   network: ws
   ws-opts:
     path: /
