@@ -282,19 +282,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-107.173.31.37-7573 | 40.344MB
-  server: 107.173.31.37
-  port: 443
-  type: vmess
-  uuid: be8771bd-10b9-4766-ad44-87971ba1fba4
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇰🇷KR-146.56.177.166-7355 | 8.677MB
+- name: 🇰🇷KR-146.56.177.166-0270 | 29.889MB
   server: seoul03.zgjok.com
   port: 443
   type: vmess
@@ -303,28 +291,14 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇰🇷KR-146.56.177.166-7355 | 8.677MB
+  servername: 🇰🇷KR-146.56.177.166-0270 | 29.889MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: seoul03.zgjok.com
-- name: 🇺🇸US-77.83.141.171-1103 | 1.693MB
-  server: vc.fly.dev
-  port: 443
-  type: vmess
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
-  alterId: 32
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vc.fly.dev
-- name: 🇺🇸US-209.126.84.189-0913 | 1.11MB
-  server: v2ray.codefyinc.com
+- name: 🇺🇸US-209.126.84.189-0685 | 6.081MB
+  server: 209.126.84.189
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -336,19 +310,7 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: v2ray.codefyinc.com
-- name: us|e27d|puddincat07@Telegram
-  server: 172.67.192.215
-  network: ws
-  password: d0728e94-82c2-456b-b5d4-eeab540599df
-  port: 443
-  skip-cert-verify: false
-  sni: joss.krikkrik.xyz
-  type: trojan
-  ws-opts:
-    headers:
-      Host: joss.krikkrik.xyz
-    path: /Free-VPN-CF-Geo-Project/AE5
+      Host: 209.126.84.189
 - name: DE_1
   server: 185.146.173.158
   port: 443
