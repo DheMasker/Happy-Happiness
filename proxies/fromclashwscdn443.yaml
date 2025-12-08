@@ -282,7 +282,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇰🇷KR-146.56.177.166-0279 | 28.757MB
+- name: 🇰🇷KR-146.56.177.166-0264 | 17.632MB
   server: seoul03.zgjok.com
   port: 443
   type: vmess
@@ -291,14 +291,14 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇰🇷KR-146.56.177.166-0279 | 28.757MB
+  servername: 🇰🇷KR-146.56.177.166-0264 | 17.632MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: seoul03.zgjok.com
-- name: 🇺🇸US-209.126.84.189-0696 | 0.205MB
-  server: 209.126.84.189
+- name: 🇺🇸US-209.126.84.189-0858 | 0.438MB
+  server: v2ray.codefyinc.com
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -310,7 +310,19 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 209.126.84.189
+      Host: v2ray.codefyinc.com
+- name: xx|e65e|puddincat07@Telegram
+  server: cf.zhetengsha.eu.org
+  network: ws
+  password: 87d1bfd4-574e-4c96-ad42-0426f27461ff
+  port: 443
+  skip-cert-verify: false
+  sni: _acme-challenge.2go.cloudns.be
+  type: trojan
+  ws-opts:
+    headers:
+      Host: _acme-challenge.2go.cloudns.be
+    path: /?ed=2560
 - name: DE_1
   server: 185.146.173.158
   port: 443
