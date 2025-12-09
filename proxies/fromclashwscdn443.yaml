@@ -325,18 +325,6 @@ proxies:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: xx|3756|puddincat07@Telegram
-  server: cf.zhetengsha.eu.org
-  network: ws
-  password: 87d1bfd4-574e-4c96-ad42-0426f27461ff
-  port: 443
-  skip-cert-verify: false
-  sni: _acme-challenge.2go.cloudns.be
-  type: trojan
-  ws-opts:
-    headers:
-      Host: _acme-challenge.2go.cloudns.be
-    path: /?ed=2560
 - name: DE_1
   server: 185.146.173.158
   port: 443
