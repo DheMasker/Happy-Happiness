@@ -282,7 +282,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇰🇷KR-146.56.177.166-0264 | 17.632MB
+- name: 🇰🇷KR-146.56.177.166-0277 | 18.583MB
   server: seoul03.zgjok.com
   port: 443
   type: vmess
@@ -291,13 +291,28 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇰🇷KR-146.56.177.166-0264 | 17.632MB
+  servername: 🇰🇷KR-146.56.177.166-0277 | 18.583MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: seoul03.zgjok.com
-- name: 🇺🇸US-209.126.84.189-0858 | 0.438MB
+- name: 🇮🇳IN-94.136.187.77-7537 | 1.78MB
+  server: node4.rtxconfigz.com
+  port: 443
+  type: vmess
+  uuid: 44e57485-eccc-46ef-808f-cd17ac810018
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇮🇳IN-94.136.187.77-7537 | 1.78MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: node4.rtxconfigz.com
+- name: 🇺🇸US-209.126.84.189-0869 | 1.409MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -311,21 +326,18 @@ proxies:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: xx|73e1|puddincat07@Telegram
-  server: vc.fly.dev
-  alterId: 32
-  cipher: auto
-  client-fingerprint: chrome
+- name: xx|ae75|puddincat07@Telegram
+  server: cf.zhetengsha.eu.org
   network: ws
+  password: 87d1bfd4-574e-4c96-ad42-0426f27461ff
   port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  skip-cert-verify: false
+  sni: _acme-challenge.2go.cloudns.be
+  type: trojan
   ws-opts:
     headers:
-      host: vc.fly.dev
-    path: /vc
+      Host: _acme-challenge.2go.cloudns.be
+    path: /?ed=2560
 - name: DE_1
   server: 185.146.173.158
   port: 443
