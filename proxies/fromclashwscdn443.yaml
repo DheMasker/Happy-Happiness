@@ -282,36 +282,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-77.83.141.171-1059 | 33.736MB
-  server: vc.fly.dev
-  port: 443
-  type: vmess
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
-  alterId: 32
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vc.fly.dev
-- name: 🇰🇷KR-146.56.177.166-0277 | 28.625MB
-  server: seoul03.zgjok.com
-  port: 443
-  type: vmess
-  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇰🇷KR-146.56.177.166-0277 | 28.625MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: seoul03.zgjok.com
-- name: 🇺🇸US-209.126.84.189-0869 | 4.34MB
+- name: 🇺🇸US-209.126.84.189-0863 | 1.153MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
