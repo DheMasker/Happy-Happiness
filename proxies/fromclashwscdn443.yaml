@@ -282,19 +282,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-45.150.52.40-6971 | 26.572MB
-  server: 45.150.52.40
-  port: 443
-  type: vmess
-  uuid: c31777a1-2ee6-4864-db4c-a79fcbc8188b
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇰🇷KR-146.56.177.166-0313 | 10.061MB
+- name: 🇰🇷KR-146.56.177.166-0261 | 19.742MB
   server: seoul03.zgjok.com
   port: 443
   type: vmess
@@ -303,14 +291,14 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇰🇷KR-146.56.177.166-0313 | 10.061MB
+  servername: 🇰🇷KR-146.56.177.166-0261 | 19.742MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: seoul03.zgjok.com
-- name: 🇺🇸US-209.126.84.189-2729 | 5.293MB
-  server: 209.126.84.189
+- name: 🇺🇸US-209.126.84.189-2791 | 2.433MB
+  server: v2ray.codefyinc.com
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -322,22 +310,21 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 209.126.84.189
-- name: 🇮🇳IN-94.136.187.77-6891 | 0.718MB
-  server: node4.rtxconfigz.com
+      Host: v2ray.codefyinc.com
+- name: 🇦🇺AU-103.224.212.215-0203 | 0.0MB
+  server: vjp1.0bad.com
   port: 443
   type: vmess
-  uuid: 44e57485-eccc-46ef-808f-cd17ac810018
+  uuid: 927094d3-d678-4763-8591-e240d0bcae87
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇮🇳IN-94.136.187.77-6891 | 0.718MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: node4.rtxconfigz.com
+      Host: vjp1.0bad.com
 - name: DE_1
   server: 185.146.173.158
   port: 443
