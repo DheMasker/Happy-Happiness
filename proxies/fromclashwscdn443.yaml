@@ -282,19 +282,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-45.150.52.40-7008 | 12.853MB
-  server: 45.150.52.40
-  port: 443
-  type: vmess
-  uuid: c31777a1-2ee6-4864-db4c-a79fcbc8188b
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇰🇷KR-146.56.177.166-0308 | 3.003MB
+- name: 🇰🇷KR-146.56.177.166-4825 | 15.643MB
   server: seoul03.zgjok.com
   port: 443
   type: vmess
@@ -303,14 +291,14 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇰🇷KR-146.56.177.166-0308 | 3.003MB
+  servername: 🇰🇷KR-146.56.177.166-4825 | 15.643MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: seoul03.zgjok.com
-- name: 🇺🇸US-209.126.84.189-2797 | 0.481MB
-  server: 209.126.84.189
+- name: 🇺🇸US-209.126.84.189-0841 | 3.585MB
+  server: v2ray.codefyinc.com
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -322,8 +310,8 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 209.126.84.189
-- name: 🇮🇳IN-94.136.187.77-6936 | 0.108MB
+      Host: v2ray.codefyinc.com
+- name: 🇮🇳IN-94.136.187.77-5037 | 0.372MB
   server: node4.rtxconfigz.com
   port: 443
   type: vmess
@@ -332,38 +320,12 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇮🇳IN-94.136.187.77-6936 | 0.108MB
+  servername: 🇮🇳IN-94.136.187.77-5037 | 0.372MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: node4.rtxconfigz.com
-- name: us|0be3|puddincat07@Telegram
-  server: 172.67.191.234
-  network: ws
-  password: 7f2782e1-1f1a-4c5b-b4ae-cead54b8c381
-  port: 443
-  skip-cert-verify: true
-  sni: nl1.tRojANVpN.xYZ
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: nl1.tRojANVpN.xYZ
-    path: '%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252F'
-- name: us|ffc3|puddincat07@Telegram
-  server: 104.16.159.2
-  network: ws
-  password: cb1f26aa437d4bfa9b841d28503ce8cc
-  port: 443
-  skip-cert-verify: true
-  sni: jobscareerforstudent.com
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: jobscareerforstudent.com
-    path: 6b777a91
 - name: DE_1
   server: 185.146.173.158
   port: 443
