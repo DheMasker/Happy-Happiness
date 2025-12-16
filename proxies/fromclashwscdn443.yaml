@@ -1,67 +1,5 @@
 proxies:
-- name: a759c0ee06bf421381427c1f58e759ff_@_@Hope_Net-join-us-on-Telegram
-  server: 188.114.96.6
-  uuid: f584de15-2034-4170-a723-f48c2bae5e0f
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: afrhms16v.bestxray.buzz
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: afrhms16v.bestxray.buzz
-    path: /linkws
-- name: 5afd4c9d779c4528906b825f3a3b0fd3_@_@Hope_Net-join-us-on-Telegram
-  server: 202.78.162.5
-  uuid: 118287d2-e968-42e1-80d0-12fa2f5d38d6
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /@forwardv2ray
-- name: fe8c6ee6d31e405d8842b5d6f19d34dd_@_@Hope_Net-join-us-on-Telegram
-  server: 202.78.162.5
-  uuid: 2ff97c6d-8557-42a4-b43f-19c77c5959ea
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /@forwardv2ray
-- name: 5d2c549cd0974a53bbf886758c9e0eb9_@_@Hope_Net-join-us-on-Telegram
-  server: speedtest.net
-  uuid: 46b656e7-71f3-414f-a86b-87537faadebd
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: firefox
-  servername: speedtest.net
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: speedtest.net
-    path: ws/?ed=2048
-- name: 36895d528b574197add7fcaa798d096b_@_@Hope_Net-join-us-on-Telegram
+- name: f913044fc90c4f979484040cecd6cc7e_@_@Hope_Net-join-us-on-Telegram
   server: 104.21.52.103
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -78,6 +16,23 @@ proxies:
     headers:
       host: aveiror.com
     path: /linkvws
+- name: e68e4ac0731948539a94aa6b036eb620_@_@Hope_Net-join-us-on-Telegram
+  server: 104.21.82.17
+  uuid: bc864078-dcf3-4bf4-8dbf-ca9f200b56be
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: gwdef.sbs
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: gwdef.sbs
+    path: /linkws
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -128,6 +83,19 @@ proxies:
   ws-headers:
     Host: 0320hk567.fans8.xyz
   ws-path: /ray
+- name: 🇱🇺LU-202.78.162.5-157_1@157
+  server: 202.78.162.5
+  alterId: 0
+  cipher: auto
+  network: ws
+  port: 443
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 2ff97c6d-8557-42a4-b43f-19c77c5959ea
+  ws-headers:
+    Host: irsoft.sytes.net
+  ws-path: /
 - name: 🇦🇶FASTLY-151.101.64.144-168_1@168
   server: gov.uk
   alterId: 0
@@ -378,19 +346,6 @@ proxies:
     path: /
     headers:
       Host: node4.rtxconfigz.com
-- name: us|fd4f|puddincat07@Telegram
-  server: 104.17.147.11
-  network: ws
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  skip-cert-verify: true
-  sni: jobscareerfortoday.com
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: jobscareerfortoday.com
-    path: 6b777a91
 - name: DE_1
   server: 185.146.173.158
   port: 443
