@@ -1,4 +1,35 @@
 proxies:
+- name: dcf09e028ed3463780c0690eb3cf6e8b_@_@Hope_Net-join-us-on-Telegram
+  server: 188.114.96.6
+  uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: afrhms16v.bestxray.buzz
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: afrhms16v.bestxray.buzz
+    path: /linkws
+- name: 22f017b5ca604ff7a8c89821451a918f_@_@Hope_Net-join-us-on-Telegram
+  server: 202.78.162.5
+  uuid: 118287d2-e968-42e1-80d0-12fa2f5d38d6
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /@forwardv2ray
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
