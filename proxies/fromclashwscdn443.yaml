@@ -1,5 +1,5 @@
 proxies:
-- name: d59d29cfe9344409a7b62d0dbdaa3aa1_@_@Hope_Net-join-us-on-Telegram
+- name: 18985803397349f6a7eb4569c8a6de44_@_@Hope_Net-join-us-on-Telegram
   server: 104.21.52.103
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: aveiror.com
     path: /linkvws
-- name: 25288320166e463e9323734ce5bbba17_@_@Hope_Net-join-us-on-Telegram
+- name: 0f2cdbd114104a7c8976b8b924a8a6ed_@_@Hope_Net-join-us-on-Telegram
   server: 104.21.82.17
   uuid: bc864078-dcf3-4bf4-8dbf-ca9f200b56be
   cipher: auto
@@ -33,6 +33,40 @@ proxies:
     headers:
       host: gwdef.sbs
     path: /linkws
+- name: 5829193d046e47a6a2f120bd4e9d7af5_@_@Hope_Net-join-us-on-Telegram
+  server: 172.67.183.220
+  uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: jahfkjha.cfd
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: jahfkjha.cfd
+    path: /linkws
+- name: 62b7fc5efa104bc2bf269fabc229f3ae_@_@Hope_Net-join-us-on-Telegram
+  server: speedtest.net
+  uuid: 4e359aba-21bc-434a-8afd-f3ea28c17fed
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: firefox
+  servername: speedtest.net
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: speedtest.net
+    path: ws/?ed=2048
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -303,22 +337,23 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-77.83.141.171-0904 | 7.808MB
-  server: vc.fly.dev
+- name: 🇰🇷KR-146.56.177.166-0290 | 14.847MB
+  server: seoul03.zgjok.com
   port: 443
   type: vmess
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
-  alterId: 32
+  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
+  alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: false
+  servername: 🇰🇷KR-146.56.177.166-0290 | 14.847MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: vc.fly.dev
-- name: 🇺🇸US-209.126.84.189-0859 | 0.202MB
-  server: v2ray.codefyinc.com
+      Host: seoul03.zgjok.com
+- name: 🇺🇸US-209.126.84.189-0860 | 3.63MB
+  server: 209.126.84.189
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -330,8 +365,8 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: v2ray.codefyinc.com
-- name: 🇮🇳IN-94.136.187.77-5037 | 0.164MB
+      Host: 209.126.84.189
+- name: 🇮🇳IN-94.136.187.77-5045 | 1.074MB
   server: node4.rtxconfigz.com
   port: 443
   type: vmess
@@ -340,12 +375,26 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇮🇳IN-94.136.187.77-5037 | 0.164MB
+  servername: 🇮🇳IN-94.136.187.77-5045 | 1.074MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: node4.rtxconfigz.com
+- name: RELAY-104.18.40.152-0884 | 0.284MB
+  server: yg1.ygkkk.dpdns.org
+  port: 443
+  type: vmess
+  uuid: 7a88d322-eb4a-4a59-8c62-8c60d76abf4b
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: jporacleyg.336697.xyz
 - name: DE_1
   server: 185.146.173.158
   port: 443
