@@ -1,56 +1,5 @@
 proxies:
-- name: 18985803397349f6a7eb4569c8a6de44_@_@Hope_Net-join-us-on-Telegram
-  server: 104.21.52.103
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: aveiror.com
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: aveiror.com
-    path: /linkvws
-- name: 0f2cdbd114104a7c8976b8b924a8a6ed_@_@Hope_Net-join-us-on-Telegram
-  server: 104.21.82.17
-  uuid: bc864078-dcf3-4bf4-8dbf-ca9f200b56be
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: gwdef.sbs
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: gwdef.sbs
-    path: /linkws
-- name: 5829193d046e47a6a2f120bd4e9d7af5_@_@Hope_Net-join-us-on-Telegram
-  server: 172.67.183.220
-  uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: jahfkjha.cfd
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: jahfkjha.cfd
-    path: /linkws
-- name: 62b7fc5efa104bc2bf269fabc229f3ae_@_@Hope_Net-join-us-on-Telegram
+- name: 56a84f85188844ee89660bf6d94ef10d_@_@Hope_Net-join-us-on-Telegram
   server: speedtest.net
   uuid: 4e359aba-21bc-434a-8afd-f3ea28c17fed
   cipher: auto
@@ -169,6 +118,19 @@ proxies:
   ws-headers:
     Host: hkd1.quickerlink.xyz
   ws-path: /h6jr23x9h3lqiitg
+- name: 🏁RELAY-172.67.132.44-222_1@221
+  server: nicola.pics
+  alterId: 0
+  cipher: auto
+  network: ws
+  port: 443
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-headers:
+    Host: nicola.pics
+  ws-path: /linkvws
 - name: 美国 011_2@19
   server: 104.18.92.5
   alterId: 0
@@ -337,7 +299,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇰🇷KR-146.56.177.166-0290 | 14.847MB
+- name: 🇰🇷KR-146.56.177.166-0290 | 11.985MB
   server: seoul03.zgjok.com
   port: 443
   type: vmess
@@ -346,42 +308,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇰🇷KR-146.56.177.166-0290 | 14.847MB
+  servername: 🇰🇷KR-146.56.177.166-0290 | 11.985MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: seoul03.zgjok.com
-- name: 🇺🇸US-209.126.84.189-0860 | 3.63MB
-  server: 209.126.84.189
-  port: 443
-  type: vmess
-  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 209.126.84.189
-- name: 🇮🇳IN-94.136.187.77-5045 | 1.074MB
-  server: node4.rtxconfigz.com
-  port: 443
-  type: vmess
-  uuid: 44e57485-eccc-46ef-808f-cd17ac810018
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇮🇳IN-94.136.187.77-5045 | 1.074MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: node4.rtxconfigz.com
-- name: RELAY-104.18.40.152-0884 | 0.284MB
+- name: RELAY-104.18.40.152-0884 | 3.597MB
   server: yg1.ygkkk.dpdns.org
   port: 443
   type: vmess
@@ -395,6 +328,34 @@ proxies:
     path: /
     headers:
       Host: jporacleyg.336697.xyz
+- name: 🇺🇸US-209.126.84.189-0854 | 2.234MB
+  server: v2ray.codefyinc.com
+  port: 443
+  type: vmess
+  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: v2ray.codefyinc.com
+- name: 🇸🇬SG-103.253.26.20-0213 | 0.0MB
+  server: 103.253.26.20
+  port: 443
+  type: vmess
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  alterId: 4
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: zecjk.com
 - name: DE_1
   server: 185.146.173.158
   port: 443
