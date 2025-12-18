@@ -1,5 +1,5 @@
 proxies:
-- name: 02c5fb000b2444cf8ee17dc88e9629cd_@_@Hope_Net-join-us-on-Telegram
+- name: 9becec840c294c469020a57392ae6b22_@_@Hope_Net-join-us-on-Telegram
   server: speedtest.net
   uuid: 4e359aba-21bc-434a-8afd-f3ea28c17fed
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: speedtest.net
     path: ws/?ed=2048
-- name: 604d6846a06246c9b9960ba3dd31cdc4_@_@Hope_Net-join-us-on-Telegram
+- name: 55508c1c84d64d2a8962fa555b1335fb_@_@Hope_Net-join-us-on-Telegram
   server: 172.67.170.11
   uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
   cipher: auto
@@ -316,7 +316,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇰🇷KR-146.56.177.166-0290 | 11.985MB
+- name: 🇰🇷KR-146.56.177.166-0297 | 15.162MB
   server: seoul03.zgjok.com
   port: 443
   type: vmess
@@ -325,28 +325,14 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇰🇷KR-146.56.177.166-0290 | 11.985MB
+  servername: 🇰🇷KR-146.56.177.166-0297 | 15.162MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: seoul03.zgjok.com
-- name: RELAY-104.18.40.152-0884 | 3.597MB
-  server: yg1.ygkkk.dpdns.org
-  port: 443
-  type: vmess
-  uuid: 7a88d322-eb4a-4a59-8c62-8c60d76abf4b
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: jporacleyg.336697.xyz
-- name: 🇺🇸US-209.126.84.189-0854 | 2.234MB
-  server: v2ray.codefyinc.com
+- name: 🇺🇸US-209.126.84.189-0873 | 1.934MB
+  server: 209.126.84.189
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -358,21 +344,22 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: v2ray.codefyinc.com
-- name: 🇸🇬SG-103.253.26.20-0213 | 0.0MB
-  server: 103.253.26.20
+      Host: 209.126.84.189
+- name: 🇮🇳IN-94.136.187.77-5067 | 0.412MB
+  server: node4.rtxconfigz.com
   port: 443
   type: vmess
-  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
-  alterId: 4
+  uuid: 44e57485-eccc-46ef-808f-cd17ac810018
+  alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: false
+  servername: 🇮🇳IN-94.136.187.77-5067 | 0.412MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: zecjk.com
+      Host: node4.rtxconfigz.com
 - name: DE_1
   server: 185.146.173.158
   port: 443
