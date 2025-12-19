@@ -1,5 +1,5 @@
 proxies:
-- name: bb46f79f4cf74087ae40754788efb97f_@_@Hope_Net-join-us-on-Telegram
+- name: 418d69f5c9404cf1bd86256f711c1f61_@_@Hope_Net-join-us-on-Telegram
   server: speedtest.net
   uuid: 4e359aba-21bc-434a-8afd-f3ea28c17fed
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: speedtest.net
     path: ws/?ed=2048
-- name: 42d6b81adc8b4692abf843bea119ffad_@_@Hope_Net-join-us-on-Telegram
+- name: 2fe4450dae354991a9bb497e7a41f2e9_@_@Hope_Net-join-us-on-Telegram
   server: 172.67.170.11
   uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
   cipher: auto
@@ -316,7 +316,19 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇰🇷KR-146.56.177.166-0297 | 26.285MB
+- name: 🇺🇸US-45.150.52.40-5117 | 15.589MB
+  server: 45.150.52.40
+  port: 443
+  type: vmess
+  uuid: c31777a1-2ee6-4864-db4c-a79fcbc8188b
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇰🇷KR-146.56.177.166-0315 | 0.938MB
   server: seoul03.zgjok.com
   port: 443
   type: vmess
@@ -325,13 +337,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇰🇷KR-146.56.177.166-0297 | 26.285MB
+  servername: 🇰🇷KR-146.56.177.166-0315 | 0.938MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: seoul03.zgjok.com
-- name: 🇺🇸US-209.126.84.189-0867 | 22.369MB
+- name: 🇺🇸US-209.126.84.189-0883 | 0.192MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -345,7 +357,7 @@ proxies:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: 🇮🇳IN-94.136.187.77-5067 | 1.35MB
+- name: 🇮🇳IN-94.136.187.77-5012 | 0.054MB
   server: node4.rtxconfigz.com
   port: 443
   type: vmess
@@ -354,26 +366,12 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇮🇳IN-94.136.187.77-5067 | 1.35MB
+  servername: 🇮🇳IN-94.136.187.77-5012 | 0.054MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: node4.rtxconfigz.com
-- name: 🇸🇬SG-202.61.141.130-0230 | 0.386MB
-  server: 202.61.141.130
-  port: 443
-  type: vmess
-  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
-  alterId: 4
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 202.61.141.130
 - name: DE_1
   server: 185.146.173.158
   port: 443
