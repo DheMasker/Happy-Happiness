@@ -1,5 +1,5 @@
 proxies:
-- name: 1aecfadfa08e4b2d90ac1d096556683f_@_@Hope_Net-join-us-on-Telegram
+- name: bb46f79f4cf74087ae40754788efb97f_@_@Hope_Net-join-us-on-Telegram
   server: speedtest.net
   uuid: 4e359aba-21bc-434a-8afd-f3ea28c17fed
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: speedtest.net
     path: ws/?ed=2048
-- name: b29358a5252c4b8bbe1dc7af921f74a0_@_@Hope_Net-join-us-on-Telegram
+- name: 42d6b81adc8b4692abf843bea119ffad_@_@Hope_Net-join-us-on-Telegram
   server: 172.67.170.11
   uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
   cipher: auto
@@ -316,7 +316,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇰🇷KR-146.56.177.166-0297 | 1.041MB
+- name: 🇰🇷KR-146.56.177.166-0297 | 26.285MB
   server: seoul03.zgjok.com
   port: 443
   type: vmess
@@ -325,14 +325,14 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇰🇷KR-146.56.177.166-0297 | 1.041MB
+  servername: 🇰🇷KR-146.56.177.166-0297 | 26.285MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: seoul03.zgjok.com
-- name: 🇺🇸US-209.126.84.189-0873 | 0.112MB
-  server: 209.126.84.189
+- name: 🇺🇸US-209.126.84.189-0867 | 22.369MB
+  server: v2ray.codefyinc.com
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -344,8 +344,8 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 209.126.84.189
-- name: 🇮🇳IN-94.136.187.77-5067 | 0.03MB
+      Host: v2ray.codefyinc.com
+- name: 🇮🇳IN-94.136.187.77-5067 | 1.35MB
   server: node4.rtxconfigz.com
   port: 443
   type: vmess
@@ -354,12 +354,26 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇮🇳IN-94.136.187.77-5067 | 0.03MB
+  servername: 🇮🇳IN-94.136.187.77-5067 | 1.35MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: node4.rtxconfigz.com
+- name: 🇸🇬SG-202.61.141.130-0230 | 0.386MB
+  server: 202.61.141.130
+  port: 443
+  type: vmess
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  alterId: 4
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 202.61.141.130
 - name: DE_1
   server: 185.146.173.158
   port: 443
