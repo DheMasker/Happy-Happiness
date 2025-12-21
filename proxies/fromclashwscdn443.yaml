@@ -1,38 +1,4 @@
 proxies:
-- name: 98fc04b1b61d4c77a4b016a0740831ff_@_@Hope_Net-join-us-on-Telegram
-  server: speedtest.net
-  uuid: 4e359aba-21bc-434a-8afd-f3ea28c17fed
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: firefox
-  servername: speedtest.net
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: speedtest.net
-    path: ws/?ed=2048
-- name: f5317a29679e4941b53bd8e413a9231d_@_@Hope_Net-join-us-on-Telegram
-  server: 172.67.170.11
-  uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: linde06.indiavideo.sbs
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: linde06.indiavideo.sbs
-    path: /linkws
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
