@@ -1,5 +1,5 @@
 proxies:
-- name: 798b0fb817054729abea99a203ebf081_@_@Hope_Net-join-us-on-Telegram
+- name: 76f668c395c140769019570f12719bdc_@_@Hope_Net-join-us-on-Telegram
   server: 104.21.83.115
   uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a
   cipher: auto
@@ -16,15 +16,45 @@ proxies:
     headers:
       host: hms02.fxiaomi.sbs
     path: /link
-- name: 14|RU_speednode_0026
-  server: freeyx.cloudflare88.eu.org
+- name: 9c0364b14fa24adcb8bba7622215821a_@_👉🆔 @v2ray_configs_pool 📡 🇲🇩MD_4 🧭 4.4MB/s
+  server: 94.131.108.36
+  uuid: 9855f1f0-a800-40d4-8b38-c7d3eb79302d
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: false
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /
+- name: d291cacbf14340059a4474d448d9f560_@_👉🆔 @v2ray_configs_pool 📡 🇦🇹AT_1 🧭 5.0MB/s
+  server: 172.66.40.99
+  uuid: 305e9e74-dc3a-11f0-84da-abeeaa5a5248
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: turkye.looloolooloo.com
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: turkye.looloolooloo.com
+    path: /vpnjantit?telegram-id---v2box-v2/www.speedtest.net:443?ed=2048
+- name: 12|🇹🇼 台湾|@ripaojiedian
+  server: one.cf.cdn.hyli.xyz
   network: ws
   password: 5a2c16f9
   port: 443
   skip-cert-verify: false
   sni: snippets.kkii.eu.org
   type: trojan
-  udp: true
   ws-opts:
     headers:
       Host: snippets.kkii.eu.org
@@ -312,8 +342,23 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-209.126.84.189-0887 | 0.309MB
-  server: v2ray.codefyinc.com
+- name: 🇰🇷KR-146.56.177.166-4850 | 12.474MB
+  server: seoul03.zgjok.com
+  port: 443
+  type: vmess
+  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇰🇷KR-146.56.177.166-4850 | 12.474MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: seoul03.zgjok.com
+- name: 🇺🇸US-209.126.84.189-0896 | 6.444MB
+  server: 209.126.84.189
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -325,7 +370,22 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: v2ray.codefyinc.com
+      Host: 209.126.84.189
+- name: 🇭🇰HK-154.38.116.8-1753 | 1.014MB
+  server: 154.38.116.8
+  port: 443
+  type: vmess
+  uuid: 4bf075f5-4d5e-4d39-f5ab-b32a86250f0e
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇭🇰HK-154.38.116.8-1753 | 1.014MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: hk.nbee.pp.ua
 - name: DE_1
   server: 185.146.173.158
   port: 443
