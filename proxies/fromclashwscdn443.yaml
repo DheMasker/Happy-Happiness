@@ -1,24 +1,21 @@
 proxies:
-- name: 7b23f145d2bc4c8a993c485e433e6d2f_@_👉🆔 @v2ray_configs_pool 📡 🇦🇹AT_1 🧭 4.8MB/s
-  server: 172.66.40.99
-  uuid: 305e9e74-dc3a-11f0-84da-abeeaa5a5248
+- name: 31edce92f4604ee58320b3acbb754afe_@_👉🆔 @v2ray_configs_pool 📡 🇲🇩MD_1 🧭 4.9MB/s
+  server: 94.131.108.36
+  uuid: 9855f1f0-a800-40d4-8b38-c7d3eb79302d
   cipher: auto
   alterId: 0
   type: vmess
   port: 443
   network: ws
-  tls: true
+  tls: false
   udp: false
   client-fingerprint: chrome
-  servername: turkye.looloolooloo.com
   fingerprint: ''
   ws-opts:
-    headers:
-      host: turkye.looloolooloo.com
-    path: /vpnjantit?telegram-id---v2box-v2/www.speedtest.net:443?ed=2048
-- name: 2f430e95f7cd44589d11ec24c1e34d63_@_🇭🇰[openproxylist.com] vmess-HK
-  server: n1747624280.lie5d.cyou
-  uuid: 49dcf4b4-81eb-4fe2-91d3-86dc2e27ced5
+    path: /
+- name: 1633b8a4ae644e8c9a624ad28e794334_@_@Hope_Net-join-us-on-Telegram
+  server: 104.21.61.246
+  uuid: f9ccede9-ca9c-4719-b105-e494742499e3
   cipher: auto
   alterId: 0
   type: vmess
@@ -30,8 +27,8 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /
-- name: 8e0917eaa52a412797339dbdf7f8850e_@_@V2ray1_Ng
-  server: 57.129.28.212
+- name: 5033c2e66f2b4d22b5ac01784b6d7f15_@_@Hope_Net-join-us-on-Telegram
+  server: 158.51.121.36
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
   alterId: 0
@@ -41,51 +38,18 @@ proxies:
   tls: true
   udp: false
   client-fingerprint: chrome
-  servername: fapeng.org
   fingerprint: ''
   ws-opts:
-    headers:
-      host: fapeng.org
-    path: linkvws
-- name: 72ceb26633b148ef9bac6e9f96942e61_@_🇭🇰[openproxylist.com] vmess-HK
-  server: n1761214911.74qxv.top
-  uuid: 372c1939-299d-4946-9633-5ffa971f8b67
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /
-- name: b0944498c462464391a84c1ab0e0d431_@_@Hope_Net-join-us-on-Telegram
-  server: 104.21.74.239
-  uuid: a1655f51-1e20-4a92-8a11-b7ca30a7a353
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: afrhms07.xfixedfloat.cfd
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: afrhms07.xfixedfloat.cfd
-    path: /linkws
-- name: 12|🇹🇼 台湾|@ripaojiedian
-  server: one.cf.cdn.hyli.xyz
+    path: /linkvws
+- name: 13|RU_speednode_0018
+  server: cf.130519.xyz
   network: ws
   password: 5a2c16f9
   port: 443
   skip-cert-verify: false
   sni: snippets.kkii.eu.org
   type: trojan
+  udp: true
   ws-opts:
     headers:
       Host: snippets.kkii.eu.org
@@ -360,7 +324,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇰🇷KR-146.56.177.166-4850 | 0.937MB
+- name: 🇰🇷KR-146.56.177.166-4850 | 29.61MB
   server: seoul03.zgjok.com
   port: 443
   type: vmess
@@ -369,13 +333,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇰🇷KR-146.56.177.166-4850 | 0.937MB
+  servername: 🇰🇷KR-146.56.177.166-4850 | 29.61MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: seoul03.zgjok.com
-- name: 🇺🇸US-209.126.84.189-0896 | 0.41MB
+- name: 🇺🇸US-209.126.84.189-0896 | 14.033MB
   server: 209.126.84.189
   port: 443
   type: vmess
@@ -389,33 +353,31 @@ proxies:
     path: /
     headers:
       Host: 209.126.84.189
-- name: 🇭🇰HK-154.38.116.8-1753 | 0.099MB
-  server: 154.38.116.8
+- name: RELAY-104.21.76.158-0644 | 1.383MB
+  server: sy4.620720.xyz
   port: 443
   type: vmess
-  uuid: 4bf075f5-4d5e-4d39-f5ab-b32a86250f0e
+  uuid: 516d8a7a-3f0b-41d3-bad0-246116381516
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇭🇰HK-154.38.116.8-1753 | 0.099MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: hk.nbee.pp.ua
-- name: xx|b280|puddincat07@Telegram
-  server: cf.zhetengsha.eu.org
-  network: ws
-  password: 87d1bfd4-574e-4c96-ad42-0426f27461ff
+      Host: sy4.620720.xyz
+- name: RELAY-172.67.214.41-8736 | 0.082MB
+  server: 172.67.214.41
   port: 443
+  type: vmess
+  uuid: 824c58b1-65ba-4680-a609-663a000dbb92
+  alterId: 0
+  cipher: auto
+  tls: true
   skip-cert-verify: false
-  sni: _acme-challenge.2go.cloudns.be
-  type: trojan
-  udp: true
+  network: ws
   ws-opts:
-    headers:
-      Host: _acme-challenge.2go.cloudns.be
     path: /
 - name: DE_1
   server: 185.146.173.158
