@@ -1,5 +1,5 @@
 proxies:
-- name: 31edce92f4604ee58320b3acbb754afe_@_👉🆔 @v2ray_configs_pool 📡 🇲🇩MD_1 🧭 4.9MB/s
+- name: 6273b365d9624e298e865e3bce8badd8_@_👉🆔 @v2ray_configs_pool 📡 🇲🇩MD_1 🧭 4.9MB/s
   server: 94.131.108.36
   uuid: 9855f1f0-a800-40d4-8b38-c7d3eb79302d
   cipher: auto
@@ -13,7 +13,7 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /
-- name: 1633b8a4ae644e8c9a624ad28e794334_@_@Hope_Net-join-us-on-Telegram
+- name: eb402718013e4eabb9541e5a967ddb68_@_@Hope_Net-join-us-on-Telegram
   server: 104.21.61.246
   uuid: f9ccede9-ca9c-4719-b105-e494742499e3
   cipher: auto
@@ -27,7 +27,7 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /
-- name: 5033c2e66f2b4d22b5ac01784b6d7f15_@_@Hope_Net-join-us-on-Telegram
+- name: 4c9344dff1424ab79ac025141cfffec4_@_@Hope_Net-join-us-on-Telegram
   server: 158.51.121.36
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -41,7 +41,21 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /linkvws
-- name: 13|RU_speednode_0018
+- name: b8f975cf534d461bac604036fb733aad_@_@Hope_Net-join-us-on-Telegram
+  server: upload.ir
+  uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /linkws
+- name: 14|RU_speednode_0018
   server: cf.130519.xyz
   network: ws
   password: 5a2c16f9
@@ -324,7 +338,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇰🇷KR-146.56.177.166-4850 | 29.61MB
+- name: 🇰🇷KR-146.56.177.166-0317 | 12.967MB
   server: seoul03.zgjok.com
   port: 443
   type: vmess
@@ -333,14 +347,14 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇰🇷KR-146.56.177.166-4850 | 29.61MB
+  servername: 🇰🇷KR-146.56.177.166-0317 | 12.967MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: seoul03.zgjok.com
-- name: 🇺🇸US-209.126.84.189-0896 | 14.033MB
-  server: 209.126.84.189
+- name: 🇺🇸US-209.126.84.189-0892 | 2.093MB
+  server: v2ray.codefyinc.com
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -352,8 +366,22 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 209.126.84.189
-- name: RELAY-104.21.76.158-0644 | 1.383MB
+      Host: v2ray.codefyinc.com
+- name: 🇭🇰HK-154.38.116.8-0911 | 0.313MB
+  server: 154.38.116.8
+  port: 443
+  type: vmess
+  uuid: 4bf075f5-4d5e-4d39-f5ab-b32a86250f0e
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: hk.nbee.pp.ua
+- name: RELAY-172.67.197.47-0971 | 0.121MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
@@ -367,18 +395,6 @@ proxies:
     path: /
     headers:
       Host: sy4.620720.xyz
-- name: RELAY-172.67.214.41-8736 | 0.082MB
-  server: 172.67.214.41
-  port: 443
-  type: vmess
-  uuid: 824c58b1-65ba-4680-a609-663a000dbb92
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
 - name: DE_1
   server: 185.146.173.158
   port: 443
