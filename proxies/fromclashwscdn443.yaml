@@ -1,34 +1,6 @@
 proxies:
-- name: 6273b365d9624e298e865e3bce8badd8_@_👉🆔 @v2ray_configs_pool 📡 🇲🇩MD_1 🧭 4.9MB/s
-  server: 94.131.108.36
-  uuid: 9855f1f0-a800-40d4-8b38-c7d3eb79302d
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: false
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /
-- name: eb402718013e4eabb9541e5a967ddb68_@_@Hope_Net-join-us-on-Telegram
-  server: 104.21.61.246
-  uuid: f9ccede9-ca9c-4719-b105-e494742499e3
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /
-- name: 4c9344dff1424ab79ac025141cfffec4_@_@Hope_Net-join-us-on-Telegram
-  server: 158.51.121.36
+- name: 4f6978ad21004a93a762d2a88463d0a5_@_@FarazV2ray
+  server: 148.113.176.192
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
   alterId: 0
@@ -38,10 +10,13 @@ proxies:
   tls: true
   udp: false
   client-fingerprint: chrome
+  servername: fapeng.org
   fingerprint: ''
   ws-opts:
-    path: /linkvws
-- name: b8f975cf534d461bac604036fb733aad_@_@Hope_Net-join-us-on-Telegram
+    headers:
+      host: fapeng.org
+    path: linkvws
+- name: 39040293096843f5b70c1c0aed207071_@_@Hope_Net-join-us-on-Telegram
   server: upload.ir
   uuid: f584de15-2034-4170-a723-f48c2bae5e0f
   cipher: auto
