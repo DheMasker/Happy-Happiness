@@ -1,5 +1,5 @@
 proxies:
-- name: 706663d4d41c4d0890b926646488af62_@_@FarazV2ray
+- name: baa5cac333c340669a1e22ed63d67326_@_@FarazV2ray
   server: 148.113.176.192
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,9 +16,9 @@ proxies:
     headers:
       host: fapeng.org
     path: linkvws
-- name: 048d645d06ae4a6c8da2f4c1c3462cc1_@_@Hope_Net-join-us-on-Telegram
-  server: upload.ir
-  uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+- name: cdd7397bec1144b58637a33848568b86_@_@Hope_Net-join-us-on-Telegram
+  server: cf.naixii.top
+  uuid: 5e6f7d1f-ae22-48b4-9d73-88314de4d4a7
   cipher: auto
   alterId: 0
   type: vmess
@@ -29,10 +29,10 @@ proxies:
   client-fingerprint: chrome
   fingerprint: ''
   ws-opts:
-    path: /linkws
-- name: 693982320d8a44a185b013d20c13a4cd_@_@Hope_Net-join-us-on-Telegram
-  server: indiavideo.sbs
-  uuid: 425c5e6e-30a0-4984-8a13-ee6f72053162
+    path: /qvFvfAfHvz
+- name: 45274e17c45a44df83ad31129962dcc4_@_@Hope_Net-join-us-on-Telegram
+  server: speedtest.net
+  uuid: c34c6a1f-0602-4b69-946e-89b5192e985e
   cipher: auto
   alterId: 0
   type: vmess
@@ -40,60 +40,15 @@ proxies:
   network: ws
   tls: true
   udp: false
-  client-fingerprint: chrome
-  servername: indiavideo.sbs
+  client-fingerprint: firefox
+  servername: speedtest.net
   fingerprint: ''
   ws-opts:
     headers:
-      host: indiavideo.sbs
-    path: /linkws
-- name: fe072b568a174aeaa77313faa58a91bd_@_@Hope_Net-join-us-on-Telegram
-  server: gt021.bestforxray.buzz
-  uuid: c1fd780a-3408-4f48-a932-5832a28ce9f6
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: ausgt02.bestforxray.buzz
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: ausgt02.bestforxray.buzz
-    path: /linkws
-- name: 3f10dd9f41f74c77bf51190c715c47fb_@_🇯🇵[openproxylist.com] vmess-JP
-  server: n1753598452.wpg27.xyz
-  uuid: 4f23eb7c-ef2f-43b0-90dd-f2b8a75954a5
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /
-- name: fccad256e72346a9892034544d14ee52_@_👉🆔 @v2ray_configs_pool 📡 🇲🇩MD_1 🧭 7.8MB/s
-  server: 94.131.108.36
-  uuid: 9855f1f0-a800-40d4-8b38-c7d3eb79302d
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: false
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /
-- name: 14|RU_speednode_0018
-  server: cf.130519.xyz
+      host: speedtest.net
+    path: ws/?ed=2048
+- name: 14|RU_speednode_0009
+  server: freeyx.cloudflare88.eu.org
   network: ws
   password: 5a2c16f9
   port: 443
@@ -375,7 +330,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇰🇷KR-146.56.177.166-0321 | 15.094MB
+- name: 🇰🇷KR-146.56.177.166-0321 | 13.198MB
   server: seoul03.zgjok.com
   port: 443
   type: vmess
@@ -384,14 +339,14 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇰🇷KR-146.56.177.166-0321 | 15.094MB
+  servername: 🇰🇷KR-146.56.177.166-0321 | 13.198MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: seoul03.zgjok.com
-- name: 🇺🇸US-209.126.84.189-0906 | 7.011MB
-  server: 209.126.84.189
+- name: 🇺🇸US-209.126.84.189-0900 | 2.825MB
+  server: v2ray.codefyinc.com
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -403,7 +358,36 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 209.126.84.189
+      Host: v2ray.codefyinc.com
+- name: RELAY-172.67.197.47-0405 | 1.276MB
+  server: sy4.620720.xyz
+  port: 443
+  type: vmess
+  uuid: 516d8a7a-3f0b-41d3-bad0-246116381516
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: sy4.620720.xyz
+- name: 🇭🇰HK-8.210.166.22-5003 | 0.024MB
+  server: n1761214911.74qxv.top
+  port: 443
+  type: vmess
+  uuid: 372c1939-299d-4946-9633-5ffa971f8b67
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇭🇰HK-8.210.166.22-5003 | 0.024MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: n1761214911.74qxv.top
 - name: DE_1
   server: 185.146.173.158
   port: 443
