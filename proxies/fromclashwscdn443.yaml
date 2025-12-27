@@ -1,5 +1,5 @@
 proxies:
-- name: 23a27105fca943a49798d8a6a9df9cad_@_@Hope_Net-join-us-on-Telegram
+- name: 8f2a1ea3a4414a74adb321d39164e083_@_@Hope_Net-join-us-on-Telegram
   server: 104.26.13.72
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -357,6 +357,21 @@ proxies:
     path: /
     headers:
       Host: n1761214911.74qxv.top
+- name: xx|34a3|puddincat07@Telegram
+  server: vc.fly.dev
+  alterId: 32
+  cipher: auto
+  client-fingerprint: chrome
+  network: ws
+  port: 443
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  ws-opts:
+    headers:
+      host: vc.fly.dev
+    path: /vc
 - name: DE_1
   server: 185.146.173.158
   port: 443
