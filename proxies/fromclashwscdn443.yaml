@@ -1,5 +1,5 @@
 proxies:
-- name: fde552dd00764d478650e4c8453e29f2_@_@FarazV2ray
+- name: 912bce59299a48a7b5249d67375ed127_@_@FarazV2ray
   server: 148.113.176.192
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: fapeng.org
     path: linkvws
-- name: 4ea81db812d74a029d8a999043d33113_@_👉🆔 @v2ray_configs_pool 📡 🇲🇩MD_4 🧭 7.8MB/s
+- name: a4c680c842e249899a1a1617c30fbdca_@_👉🆔 @v2ray_configs_pool 📡 🇲🇩MD_4 🧭 7.8MB/s
   server: 94.131.108.36
   uuid: 9855f1f0-a800-40d4-8b38-c7d3eb79302d
   cipher: auto
@@ -29,19 +29,6 @@ proxies:
   client-fingerprint: chrome
   fingerprint: ''
   ws-opts:
-    path: /
-- name: 14|RU_speednode_0004
-  server: freeyx.cloudflare88.eu.org
-  network: ws
-  password: 5a2c16f9
-  port: 443
-  skip-cert-verify: false
-  sni: snippets.kkii.eu.org
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: snippets.kkii.eu.org
     path: /
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
@@ -313,7 +300,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇰🇷KR-146.56.177.166-0321 | 24.515MB
+- name: 🇰🇷KR-146.56.177.166-0356 | 2.007MB
   server: seoul03.zgjok.com
   port: 443
   type: vmess
@@ -322,14 +309,14 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇰🇷KR-146.56.177.166-0321 | 24.515MB
+  servername: 🇰🇷KR-146.56.177.166-0356 | 2.007MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: seoul03.zgjok.com
-- name: 🇺🇸US-209.126.84.189-0900 | 12.342MB
-  server: v2ray.codefyinc.com
+- name: 🇺🇸US-209.126.84.189-0893 | 0.283MB
+  server: 209.126.84.189
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -341,8 +328,8 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: v2ray.codefyinc.com
-- name: RELAY-172.67.197.47-0405 | 10.684MB
+      Host: 209.126.84.189
+- name: RELAY-172.67.197.47-0894 | 0.098MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
@@ -356,36 +343,19 @@ proxies:
     path: /
     headers:
       Host: sy4.620720.xyz
-- name: 🇭🇰HK-8.210.166.22-5003 | 0.167MB
-  server: n1761214911.74qxv.top
+- name: xx|f331|puddincat07@Telegram
+  server: cf.130519.xyz
+  network: ws
+  password: 5a2c16f9
   port: 443
-  type: vmess
-  uuid: 372c1939-299d-4946-9633-5ffa971f8b67
-  alterId: 0
-  cipher: auto
-  tls: true
   skip-cert-verify: false
-  servername: 🇭🇰HK-8.210.166.22-5003 | 0.167MB
-  network: ws
+  sni: snippets.kkii.eu.org
+  type: trojan
+  udp: true
   ws-opts:
+    headers:
+      Host: snippets.kkii.eu.org
     path: /
-    headers:
-      Host: n1761214911.74qxv.top
-- name: xx|e73b|puddincat07@Telegram
-  server: vc.fly.dev
-  alterId: 32
-  cipher: auto
-  client-fingerprint: chrome
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
-  ws-opts:
-    headers:
-      host: vc.fly.dev
-    path: /vc
 - name: DE_1
   server: 185.146.173.158
   port: 443
