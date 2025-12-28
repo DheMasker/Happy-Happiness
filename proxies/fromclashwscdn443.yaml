@@ -1,4 +1,55 @@
 proxies:
+- name: 80fc053c9fa242e7a3105e98a1da4e9d_@_@Hope_Net-join-us-on-Telegram
+  server: 172.67.71.160
+  uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: obdii.cfd
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: obdii.cfd
+    path: /linkws
+- name: 96bac972410a400296ccf5045aaabecc_@_@Hope_Net-join-us-on-Telegram
+  server: 172.67.170.11
+  uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: linde06.indiavideo.sbs
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: linde06.indiavideo.sbs
+    path: /linkws
+- name: c2279ddaf8b249d3a300c430a83eb1cb_@_@V2ray1_Ng
+  server: 57.129.28.212
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: fapeng.org
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: fapeng.org
+    path: linkvws
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -101,19 +152,6 @@ proxies:
   ws-headers:
     Host: hkd1.quickerlink.xyz
   ws-path: /h6jr23x9h3lqiitg
-- name: 🏁RELAY-172.67.132.44-222_1@221
-  server: nicola.pics
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-headers:
-    Host: nicola.pics
-  ws-path: /linkvws
 - name: 美国 011_2@19
   server: 104.18.92.5
   alterId: 0
@@ -337,21 +375,6 @@ proxies:
     path: '%25252F%25252F'
     headers:
       Host: snippets.kkii.eu.org
-- name: xx|0d59|puddincat07@Telegram
-  server: vc.fly.dev
-  alterId: 32
-  cipher: auto
-  client-fingerprint: chrome
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
-  ws-opts:
-    headers:
-      host: vc.fly.dev
-    path: /vc
 - name: DE_1
   server: 185.146.173.158
   port: 443
