@@ -1,5 +1,5 @@
 proxies:
-- name: 8e09b8bb4a674e189eeb8d3aab8c548c_@_@Hope_Net-join-us-on-Telegram
+- name: 97ee5e5737cd4b4d80912fc0ec45a866_@_@Hope_Net-join-us-on-Telegram
   server: 172.67.192.57
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -329,7 +329,22 @@ proxies:
     path: /
     headers:
       Host: sy4.620720.xyz
-- name: xx|a93c|puddincat07@Telegram
+- name: xx|023e|puddincat07@Telegram
+  server: vc.fly.dev
+  alterId: 32
+  cipher: auto
+  client-fingerprint: chrome
+  network: ws
+  port: 443
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  ws-opts:
+    headers:
+      host: vc.fly.dev
+    path: /vc
+- name: xx|2abc|puddincat07@Telegram
   server: cf.130519.xyz
   network: ws
   password: 5a2c16f9
@@ -342,6 +357,19 @@ proxies:
     headers:
       Host: snippets.kkii.eu.org
     path: /
+- name: us|49b5|puddincat07@Telegram
+  server: 104.17.147.10
+  network: ws
+  password: 669d0ac7b5b64ebbb1abb75d5d540a5c
+  port: 443
+  skip-cert-verify: true
+  sni: jobsapplyworld.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: jobsapplyworld.com
+    path: 6b777a91
 - name: DE_1
   server: 185.146.173.158
   port: 443
