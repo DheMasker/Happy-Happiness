@@ -1,5 +1,5 @@
 proxies:
-- name: 38be6cb3eeca4458b4f4d45a0cfcd19c_@_@V2ray1_Ng
+- name: 88f45c795ece489aa8f80fde04c4e9d9_@_@V2ray1_Ng
   server: 57.129.28.212
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,6 +16,40 @@ proxies:
     headers:
       host: fapeng.org
     path: linkvws
+- name: 2caba33d73d64b22be8ccfcfca8750ed_@_@Hope_Net-join-us-on-Telegram
+  server: 172.67.170.11
+  uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: linde06.indiavideo.sbs
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: linde06.indiavideo.sbs
+    path: /linkws
+- name: 93d130e2549d45c59ef00440138a790a_@_@Hope_Net-join-us-on-Telegram
+  server: 104.21.94.64
+  uuid: 39cec18f-a439-427c-9a4e-aeb6fcdf6f53
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: linja05.hwcar.sbs
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: linja05.hwcar.sbs
+    path: /linkws
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
