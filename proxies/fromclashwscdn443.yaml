@@ -1,7 +1,7 @@
 proxies:
-- name: 3f4c99c578fb41108b5c4f8ff06bf523_@_@Hope_Net-join-us-on-Telegram
-  server: 172.67.220.83
-  uuid: 39cec18f-a439-427c-9a4e-aeb6fcdf6f53
+- name: 6736bd69d39d4f37886d802f83be3238_@_@Hope_Net-join-us-on-Telegram
+  server: 104.21.52.103
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
   alterId: 0
   type: vmess
@@ -10,13 +10,13 @@ proxies:
   tls: true
   udp: false
   client-fingerprint: chrome
-  servername: linja05.hwcar.sbs
+  servername: aveiror.com
   fingerprint: ''
   ws-opts:
     headers:
-      host: linja05.hwcar.sbs
-    path: /linkws
-- name: 73acb3eba5e24f4dae6051d00fa902b2_@_👉🆔 @v2ray_configs_pool 📡 🇲🇩MD_1 🧭 4.4MB/s
+      host: aveiror.com
+    path: /linkvws
+- name: 80472678e45e44918d86a8604cedb37a_@_👉🆔 @v2ray_configs_pool 📡 🇲🇩MD_1 🧭 4.6MB/s
   server: 94.131.108.36
   uuid: 9855f1f0-a800-40d4-8b38-c7d3eb79302d
   cipher: auto
@@ -29,6 +29,36 @@ proxies:
   client-fingerprint: chrome
   fingerprint: ''
   ws-opts:
+    path: /
+- name: 7077fbc525d1458f84a08a2975c38bc5_@_@Hope_Net-join-us-on-Telegram
+  server: 151.101.194.219
+  uuid: 2052dca2-008b-4f54-9bbb-dbac90dd54a5
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: speedtest.net
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: speedtest.net
+    path: ws/?ed=2048
+- name: 14|US_speednode_0042
+  server: 104.19.220.22
+  network: ws
+  password: 5a2c16f9
+  port: 443
+  skip-cert-verify: false
+  sni: snippets.kkii.eu.org
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: snippets.kkii.eu.org
     path: /
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
@@ -132,19 +162,6 @@ proxies:
   ws-headers:
     Host: hkd1.quickerlink.xyz
   ws-path: /h6jr23x9h3lqiitg
-- name: 🏁RELAY-172.67.132.44-222_1@221
-  server: nicola.pics
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-headers:
-    Host: nicola.pics
-  ws-path: /linkvws
 - name: 美国 011_2@19
   server: 104.18.92.5
   alterId: 0
@@ -313,7 +330,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇰🇷KR-146.56.177.166-4850 | 12.468MB
+- name: 🇰🇷KR-146.56.177.166-4850 | 0.919MB
   server: seoul03.zgjok.com
   port: 443
   type: vmess
@@ -322,13 +339,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇰🇷KR-146.56.177.166-4850 | 12.468MB
+  servername: 🇰🇷KR-146.56.177.166-4850 | 0.919MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: seoul03.zgjok.com
-- name: 🇺🇸US-209.126.84.189-0897 | 1.609MB
+- name: 🇺🇸US-209.126.84.189-0897 | 0.123MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -342,7 +359,7 @@ proxies:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: RELAY-172.67.197.47-0390 | 1.271MB
+- name: RELAY-172.67.197.47-0390 | 0.106MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
@@ -356,19 +373,36 @@ proxies:
     path: /
     headers:
       Host: sy4.620720.xyz
-- name: xx|4f51|puddincat07@Telegram
-  server: cf.130519.xyz
+- name: xx|2cd6|puddincat07@Telegram
+  server: vc.fly.dev
+  alterId: 32
+  cipher: auto
+  client-fingerprint: chrome
   network: ws
-  password: 5a2c16f9
   port: 443
-  skip-cert-verify: false
-  sni: snippets.kkii.eu.org
-  type: trojan
-  udp: true
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
   ws-opts:
     headers:
-      Host: snippets.kkii.eu.org
-    path: /
+      host: vc.fly.dev
+    path: /vc
+- name: xx|33c1|puddincat07@Telegram
+  server: vjp3.0bad.com
+  alterId: 0
+  cipher: auto
+  client-fingerprint: chrome
+  network: ws
+  port: 443
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 927094d3-d678-4763-8591-e240d0bcae87
+  ws-opts:
+    headers:
+      host: vjp3.0bad.com
+    path: /chat
 - name: DE_1
   server: 185.146.173.158
   port: 443
