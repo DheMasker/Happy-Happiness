@@ -1,5 +1,5 @@
 proxies:
-- name: d87b6327b2404e5491c72088a4690748_@_@Hope_Net-join-us-on-Telegram
+- name: f734e74c0fe2465f9698ae5cb23a49c6_@_@Hope_Net-join-us-on-Telegram
   server: 151.101.194.219
   uuid: 2052dca2-008b-4f54-9bbb-dbac90dd54a5
   cipher: auto
@@ -16,6 +16,20 @@ proxies:
     headers:
       host: speedtest.net
     path: ws/?ed=2048
+- name: d432f4bbbc004f9295af39446181625e_@_👉🆔 @v2ray_configs_pool 📡 🇲🇩MD_1 🧭 5.6MB/s
+  server: 94.131.108.36
+  uuid: 9855f1f0-a800-40d4-8b38-c7d3eb79302d
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: false
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /
 - name: 14|US_speednode_0042
   server: 104.19.220.22
   network: ws
@@ -312,7 +326,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇰🇷KR-146.56.177.166-4850 | 0.919MB
+- name: 🇰🇷KR-146.56.177.166-0347 | 11.982MB
   server: seoul03.zgjok.com
   port: 443
   type: vmess
@@ -321,14 +335,29 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇰🇷KR-146.56.177.166-4850 | 0.919MB
+  servername: 🇰🇷KR-146.56.177.166-0347 | 11.982MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: seoul03.zgjok.com
-- name: 🇺🇸US-209.126.84.189-0897 | 0.123MB
-  server: v2ray.codefyinc.com
+- name: 🇭🇰HK-8.210.166.22-0462 | 7.407MB
+  server: n1761214911.74qxv.top
+  port: 443
+  type: vmess
+  uuid: 372c1939-299d-4946-9633-5ffa971f8b67
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇭🇰HK-8.210.166.22-0462 | 7.407MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: n1761214911.74qxv.top
+- name: 🇺🇸US-209.126.84.189-0903 | 3.706MB
+  server: 209.126.84.189
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -340,36 +369,7 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: v2ray.codefyinc.com
-- name: RELAY-172.67.197.47-0390 | 0.106MB
-  server: sy4.620720.xyz
-  port: 443
-  type: vmess
-  uuid: 516d8a7a-3f0b-41d3-bad0-246116381516
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: sy4.620720.xyz
-- name: xx|9a78|puddincat07@Telegram
-  server: vc.fly.dev
-  alterId: 32
-  cipher: auto
-  client-fingerprint: chrome
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
-  ws-opts:
-    headers:
-      host: vc.fly.dev
-    path: /vc
+      Host: 209.126.84.189
 - name: DE_1
   server: 185.146.173.158
   port: 443
