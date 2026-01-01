@@ -1,5 +1,5 @@
 proxies:
-- name: 9a4e198af0274bd4b54b3a626b1091df_@_@Hope_Net-join-us-on-Telegram
+- name: 03286314d4a74a40a1b7d82d20680a82_@_@Hope_Net-join-us-on-Telegram
   server: 151.101.194.219
   uuid: 2052dca2-008b-4f54-9bbb-dbac90dd54a5
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: speedtest.net
     path: ws/?ed=2048
-- name: b5add27abe114e6fb4db4c8ae12d22fa_@_@Hope_Net-join-us-on-Telegram
+- name: 8b5100aac9704acfb5f6ac6b6d70ae67_@_@Hope_Net-join-us-on-Telegram
   server: 172.67.170.11
   uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
   cipher: auto
@@ -33,7 +33,7 @@ proxies:
     headers:
       host: linde06.indiavideo.sbs
     path: /linkws
-- name: de4fe9bfec7244b2b0e4567ee46ea194_@_@Hope_Net-join-us-on-Telegram
+- name: 66cc4379fe354600897f9bc20207061a_@_@Hope_Net-join-us-on-Telegram
   server: 104.26.13.72
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -50,7 +50,7 @@ proxies:
     headers:
       host: cake.capellare.com
     path: /linkvws
-- name: b40d3961be0548108889fdef7da72ce3_@_@Hope_Net-join-us-on-Telegram
+- name: 694b13be911a4df6aea8b3770c75f3f3_@_@Hope_Net-join-us-on-Telegram
   server: 172.67.220.83
   uuid: 39cec18f-a439-427c-9a4e-aeb6fcdf6f53
   cipher: auto
@@ -67,6 +67,51 @@ proxies:
     headers:
       host: linja05.hwcar.sbs
     path: /linkws
+- name: 3f388fe4a4a94f1ea994c2dd42f7037f_@_🇺🇸[openproxylist.com] vmess-US
+  server: cg1c07.waimaojd.com
+  uuid: be8e3136-b874-4085-bd23-ec3699300490
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /api/v1/graphql
+- name: 4c086de540254b4e8434e1dd492cc37b_@_🇯🇵[openproxylist.com] vmess-JP
+  server: n1753598448.74qxv.top
+  uuid: 3cd6f849-078e-4da9-8080-a2791b51b766
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: n1753598448.74qxv.top
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: n1753598448.74qxv.top
+    path: /
+- name: 415262fc44ff44f6b1069e585a7a23c1_@_🇬🇧[openproxylist.com] vmess-GB
+  server: cg1c16.waimaojd.com
+  uuid: 6fc84fd2-0442-405f-baa7-6daf66b81a10
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /api/v1/graphql
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -377,21 +422,6 @@ proxies:
     headers:
       Host: snippets.kkii.eu.org
     path: '%2F'
-- name: sg|8454|puddincat07@Telegram
-  server: 103.253.26.134
-  alterId: 4
-  cipher: auto
-  client-fingerprint: chrome
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
-  ws-opts:
-    headers:
-      host: eeh7iewe.com
-    path: /ws
 - name: DE_1
   server: 185.146.173.158
   port: 443
