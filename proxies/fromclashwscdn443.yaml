@@ -1,21 +1,18 @@
 proxies:
-- name: 93ec801ed1e6424fbb5018c0422e4c1d_@_@Hope_Net-join-us-on-Telegram
-  server: 172.67.220.83
-  uuid: 39cec18f-a439-427c-9a4e-aeb6fcdf6f53
+- name: ac6b0e11532d4817844a20c08204c232_@_👉🆔 @v2ray_configs_pool 📡 🇲🇩MD_1 🧭 5.4MB/s
+  server: 94.131.108.36
+  uuid: 9855f1f0-a800-40d4-8b38-c7d3eb79302d
   cipher: auto
   alterId: 0
   type: vmess
   port: 443
   network: ws
-  tls: true
+  tls: false
   udp: false
   client-fingerprint: chrome
-  servername: linja05.hwcar.sbs
   fingerprint: ''
   ws-opts:
-    headers:
-      host: linja05.hwcar.sbs
-    path: /linkws
+    path: /
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -299,37 +296,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇯🇵JP-47.74.1.191-1855 | 23.302MB
-  server: n1753598451.74qxv.top
-  port: 443
-  type: vmess
-  uuid: 9798678f-5b8c-4ff1-bbdd-b9b5c1539de0
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇯🇵JP-47.74.1.191-1855 | 23.302MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: n1753598451.74qxv.top
-- name: 🇰🇷KR-146.56.177.166-4955 | 22.957MB
-  server: seoul03.zgjok.com
-  port: 443
-  type: vmess
-  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇰🇷KR-146.56.177.166-4955 | 22.957MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: seoul03.zgjok.com
-- name: 🇺🇸US-209.126.84.189-0886 | 17.238MB
+- name: 🇺🇸US-209.126.84.189-0899 | 1.158MB
   server: 209.126.84.189
   port: 443
   type: vmess
@@ -343,7 +310,7 @@ proxies:
     path: /
     headers:
       Host: 209.126.84.189
-- name: RELAY-104.21.76.158-0367 | 14.808MB
+- name: RELAY-172.67.197.47-0378 | 0.527MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
@@ -357,21 +324,21 @@ proxies:
     path: /
     headers:
       Host: sy4.620720.xyz
-- name: 🇨🇳CN-43.100.32.23-1854 | 1.11MB
-  server: n1747624280.lie5d.cyou
+- name: 🇨🇳CN-43.100.32.6-1950 | 0.086MB
+  server: n1747624267.4u9ma.icu
   port: 443
   type: vmess
-  uuid: 49dcf4b4-81eb-4fe2-91d3-86dc2e27ced5
+  uuid: 8c5d150c-b046-4440-8230-e84506a065a3
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇨🇳CN-43.100.32.23-1854 | 1.11MB
+  servername: 🇨🇳CN-43.100.32.6-1950 | 0.086MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: n1747624280.lie5d.cyou
+      Host: n1747624267.4u9ma.icu
 - name: '#024 GB3 CF5'
   server: 5.144.182.188
   network: ws
