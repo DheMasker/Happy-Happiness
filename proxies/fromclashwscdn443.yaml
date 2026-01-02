@@ -1,78 +1,5 @@
 proxies:
-- name: 4283d8a1a82b4f35bdb8573107669bdd_@_🇬🇧[openproxylist.com] vmess-GB
-  server: cg1c16.waimaojd.com
-  uuid: 6fc84fd2-0442-405f-baa7-6daf66b81a10
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /api/v1/graphql
-- name: ec9665a8eb764dcd9a1f8b89eecc451c_@_@Hope_Net-join-us-on-Telegram
-  server: sareikela.com
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /linkvws
-- name: 3e1290294d43458aae39a2bd24b517e3_@_@Hope_Net-join-us-on-Telegram
-  server: 145.724064.xyz
-  uuid: 5de1ff44-aaf8-4790-b0fb-e55aab062622
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: 145.724064.xyz
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: 145.724064.xyz
-    path: /zrqrvws
-- name: ec6ee0d27aed4517bb100c219a82fa0a_@_@Hope_Net-join-us-on-Telegram
-  server: hms082.gwdef.sbs
-  uuid: bc864078-dcf3-4bf4-8dbf-ca9f200b56be
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /linkws
-- name: f0c12df655af41d392b6e5097552e577_@_@Hope_Net-join-us-on-Telegram
-  server: upload.ir
-  uuid: f584de15-2034-4170-a723-f48c2bae5e0f
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /linkws
-- name: f2675bcfeaa243ad993b326111829f91_@_@Hope_Net-join-us-on-Telegram
+- name: 93ec801ed1e6424fbb5018c0422e4c1d_@_@Hope_Net-join-us-on-Telegram
   server: 172.67.220.83
   uuid: 39cec18f-a439-427c-9a4e-aeb6fcdf6f53
   cipher: auto
@@ -191,6 +118,19 @@ proxies:
   ws-headers:
     Host: hkd1.quickerlink.xyz
   ws-path: /h6jr23x9h3lqiitg
+- name: 🏁RELAY-172.67.132.44-222_1@221
+  server: nicola.pics
+  alterId: 0
+  cipher: auto
+  network: ws
+  port: 443
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-headers:
+    Host: nicola.pics
+  ws-path: /linkvws
 - name: 美国 011_2@19
   server: 104.18.92.5
   alterId: 0
@@ -359,7 +299,22 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇰🇷KR-146.56.177.166-4955 | 1.39MB
+- name: 🇯🇵JP-47.74.1.191-1855 | 23.302MB
+  server: n1753598451.74qxv.top
+  port: 443
+  type: vmess
+  uuid: 9798678f-5b8c-4ff1-bbdd-b9b5c1539de0
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇯🇵JP-47.74.1.191-1855 | 23.302MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: n1753598451.74qxv.top
+- name: 🇰🇷KR-146.56.177.166-4955 | 22.957MB
   server: seoul03.zgjok.com
   port: 443
   type: vmess
@@ -368,43 +323,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇰🇷KR-146.56.177.166-4955 | 1.39MB
+  servername: 🇰🇷KR-146.56.177.166-4955 | 22.957MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: seoul03.zgjok.com
-- name: 🇯🇵JP-47.74.52.195-1856 | 1.14MB
-  server: n1753598448.74qxv.top
-  port: 443
-  type: vmess
-  uuid: 3cd6f849-078e-4da9-8080-a2791b51b766
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇯🇵JP-47.74.52.195-1856 | 1.14MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: n1753598448.74qxv.top
-- name: 🇭🇰HK-8.210.166.22-4997 | 0.59MB
-  server: n1761214911.74qxv.top
-  port: 443
-  type: vmess
-  uuid: 372c1939-299d-4946-9633-5ffa971f8b67
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇭🇰HK-8.210.166.22-4997 | 0.59MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: n1761214911.74qxv.top
-- name: 🇺🇸US-209.126.84.189-0886 | 0.127MB
+- name: 🇺🇸US-209.126.84.189-0886 | 17.238MB
   server: 209.126.84.189
   port: 443
   type: vmess
@@ -418,6 +343,35 @@ proxies:
     path: /
     headers:
       Host: 209.126.84.189
+- name: RELAY-104.21.76.158-0367 | 14.808MB
+  server: sy4.620720.xyz
+  port: 443
+  type: vmess
+  uuid: 516d8a7a-3f0b-41d3-bad0-246116381516
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: sy4.620720.xyz
+- name: 🇨🇳CN-43.100.32.23-1854 | 1.11MB
+  server: n1747624280.lie5d.cyou
+  port: 443
+  type: vmess
+  uuid: 49dcf4b4-81eb-4fe2-91d3-86dc2e27ced5
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇨🇳CN-43.100.32.23-1854 | 1.11MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: n1747624280.lie5d.cyou
 - name: '#024 GB3 CF5'
   server: 5.144.182.188
   network: ws
@@ -430,21 +384,6 @@ proxies:
     headers:
       Host: snippets.kkii.eu.org
     path: '%2F'
-- name: sg|1174|puddincat07@Telegram
-  server: 103.253.26.20
-  alterId: 4
-  cipher: auto
-  client-fingerprint: chrome
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
-  ws-opts:
-    headers:
-      host: zecjk.com
-    path: /ws
 - name: DE_1
   server: 185.146.173.158
   port: 443
