@@ -1,5 +1,5 @@
 proxies:
-- name: ac6b0e11532d4817844a20c08204c232_@_👉🆔 @v2ray_configs_pool 📡 🇲🇩MD_1 🧭 5.4MB/s
+- name: 5aa8542d07e54087afa6ecb20663d033_@_👉🆔 @v2ray_configs_pool 📡 🇲🇩MD_1 🧭 5.4MB/s
   server: 94.131.108.36
   uuid: 9855f1f0-a800-40d4-8b38-c7d3eb79302d
   cipher: auto
@@ -339,8 +339,8 @@ proxies:
     path: /
     headers:
       Host: n1747624267.4u9ma.icu
-- name: '#024 GB3 CF5'
-  server: 5.144.182.188
+- name: '#059 JP10 CF3'
+  server: 103.53.81.139
   network: ws
   password: 5a2c16f9
   port: 443
@@ -350,7 +350,18 @@ proxies:
   ws-opts:
     headers:
       Host: snippets.kkii.eu.org
-    path: '%2F'
+    path: '%2FTelegram%F0%9F%87%A8%F0%9F%87%B3WangCai2'
+- name: xx|8048|puddincat07@Telegram
+  server: tronblue.qzz.io
+  alterId: 0
+  network: ws
+  password: 3d24de45-e38a-49c2-a963-ba8271c62d2b
+  port: 443
+  skip-cert-verify: true
+  sni: tronblue.qzz.io
+  tls: true
+  type: trojan
+  udp: true
 - name: DE_1
   server: 185.146.173.158
   port: 443
