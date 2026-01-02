@@ -1,5 +1,5 @@
 proxies:
-- name: 398be313e2f64b3eaa81e3a556cb1136_@_🇬🇧[openproxylist.com] vmess-GB
+- name: 4283d8a1a82b4f35bdb8573107669bdd_@_🇬🇧[openproxylist.com] vmess-GB
   server: cg1c16.waimaojd.com
   uuid: 6fc84fd2-0442-405f-baa7-6daf66b81a10
   cipher: auto
@@ -13,7 +13,7 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /api/v1/graphql
-- name: 022aee04ed0d480b827f891437f64f5b_@_@Hope_Net-join-us-on-Telegram
+- name: ec9665a8eb764dcd9a1f8b89eecc451c_@_@Hope_Net-join-us-on-Telegram
   server: sareikela.com
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -27,7 +27,7 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /linkvws
-- name: 352a13d210fa4231b97926bc513b2572_@_@Hope_Net-join-us-on-Telegram
+- name: 3e1290294d43458aae39a2bd24b517e3_@_@Hope_Net-join-us-on-Telegram
   server: 145.724064.xyz
   uuid: 5de1ff44-aaf8-4790-b0fb-e55aab062622
   cipher: auto
@@ -44,7 +44,7 @@ proxies:
     headers:
       host: 145.724064.xyz
     path: /zrqrvws
-- name: 54193c6a95bf4ffd9c630647bebc7574_@_@Hope_Net-join-us-on-Telegram
+- name: ec6ee0d27aed4517bb100c219a82fa0a_@_@Hope_Net-join-us-on-Telegram
   server: hms082.gwdef.sbs
   uuid: bc864078-dcf3-4bf4-8dbf-ca9f200b56be
   cipher: auto
@@ -58,7 +58,7 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /linkws
-- name: 392d961d78d940f08affde6dc8e39f5b_@_@Hope_Net-join-us-on-Telegram
+- name: f0c12df655af41d392b6e5097552e577_@_@Hope_Net-join-us-on-Telegram
   server: upload.ir
   uuid: f584de15-2034-4170-a723-f48c2bae5e0f
   cipher: auto
@@ -71,6 +71,23 @@ proxies:
   client-fingerprint: chrome
   fingerprint: ''
   ws-opts:
+    path: /linkws
+- name: f2675bcfeaa243ad993b326111829f91_@_@Hope_Net-join-us-on-Telegram
+  server: 172.67.220.83
+  uuid: 39cec18f-a439-427c-9a4e-aeb6fcdf6f53
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: linja05.hwcar.sbs
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: linja05.hwcar.sbs
     path: /linkws
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
@@ -413,6 +430,21 @@ proxies:
     headers:
       Host: snippets.kkii.eu.org
     path: '%2F'
+- name: sg|1174|puddincat07@Telegram
+  server: 103.253.26.20
+  alterId: 4
+  cipher: auto
+  client-fingerprint: chrome
+  network: ws
+  port: 443
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  ws-opts:
+    headers:
+      host: zecjk.com
+    path: /ws
 - name: DE_1
   server: 185.146.173.158
   port: 443
