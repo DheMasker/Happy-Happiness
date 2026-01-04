@@ -308,7 +308,36 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-209.126.84.189-0879 | 22.256MB
+- name: 🇯🇵JP-47.245.42.92-4866 | 0.519MB
+  server: n1753598452.wpg27.xyz
+  port: 443
+  type: vmess
+  uuid: 4f23eb7c-ef2f-43b0-90dd-f2b8a75954a5
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇯🇵JP-47.245.42.92-4866 | 0.519MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: n1753598452.wpg27.xyz
+- name: 🇭🇰HK-8.218.45.250-0917 | 0.311MB
+  server: n1761214905.wpg27.xyz
+  port: 443
+  type: vmess
+  uuid: b1d3007c-441a-42d5-84b5-20301c46fa2c
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: n1761214905.wpg27.xyz
+- name: 🇺🇸US-209.126.84.189-0879 | 0.159MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -322,7 +351,7 @@ proxies:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: RELAY-172.67.197.47-0386 | 19.359MB
+- name: RELAY-104.21.76.158-0408 | 0.13MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
@@ -336,27 +365,57 @@ proxies:
     path: /
     headers:
       Host: sy4.620720.xyz
-- name: 🇨🇳CN-43.100.32.6-0442 | 0.306MB
-  server: n1747624267.4u9ma.icu
+- name: 🇯🇵JP-47.74.52.195-0332 | 0.126MB
+  server: n1753598448.74qxv.top
   port: 443
   type: vmess
-  uuid: 8c5d150c-b046-4440-8230-e84506a065a3
+  uuid: 3cd6f849-078e-4da9-8080-a2791b51b766
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇨🇳CN-43.100.32.6-0442 | 0.306MB
+  servername: 🇯🇵JP-47.74.52.195-0332 | 0.126MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: n1747624267.4u9ma.icu
-- name: 🇸🇬SG-202.61.141.130-0244 | 0.096MB
-  server: 202.61.141.130
+      Host: n1753598448.74qxv.top
+- name: 🇯🇵JP-47.74.1.191-0436 | 0.084MB
+  server: n1753598451.74qxv.top
   port: 443
   type: vmess
-  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
-  alterId: 4
+  uuid: 9798678f-5b8c-4ff1-bbdd-b9b5c1539de0
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇯🇵JP-47.74.1.191-0436 | 0.084MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: n1753598451.74qxv.top
+- name: 🇨🇳CN-43.100.32.23-0449 | 0.038MB
+  server: n1747624280.lie5d.cyou
+  port: 443
+  type: vmess
+  uuid: 49dcf4b4-81eb-4fe2-91d3-86dc2e27ced5
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇨🇳CN-43.100.32.23-0449 | 0.038MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: n1747624280.lie5d.cyou
+- name: 🇨🇳CN-43.100.32.11-0915 | 0.031MB
+  server: n1747624271.lie5d.cyou
+  port: 443
+  type: vmess
+  uuid: a231ba8b-8871-416c-813b-e2240bc66bb2
+  alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: false
@@ -364,9 +423,9 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 202.61.141.130
-- name: '#019 JP5 CF1'
-  server: 103.53.81.139
+      Host: n1747624271.lie5d.cyou
+- name: '#001 DE1 CF1'
+  server: 193.23.197.183
   network: ws
   password: 5a2c16f9
   port: 443
@@ -377,7 +436,7 @@ proxies:
     headers:
       Host: snippets.kkii.eu.org
     path: '%2FTelegram%F0%9F%87%A8%F0%9F%87%B3WangCai2'
-- name: '#179 JP10'
+- name: cf|5ebe|puddincat07@Telegram
   server: 23.227.38.33
   network: ws
   password: aff9928f-7ba3-45fb-b56d-4dec45653ca9
