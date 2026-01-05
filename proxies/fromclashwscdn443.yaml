@@ -436,7 +436,7 @@ proxies:
     headers:
       Host: snippets.kkii.eu.org
     path: '%2FTelegram%F0%9F%87%A8%F0%9F%87%B3WangCai2'
-- name: cf|6536|puddincat07@Telegram
+- name: cf|a25a|puddincat07@Telegram
   server: 23.227.38.33
   network: ws
   password: aff9928f-7ba3-45fb-b56d-4dec45653ca9
@@ -446,6 +446,19 @@ proxies:
   type: trojan
   ws-opts:
     path: '%2Fimages'
+- name: us|94fd|puddincat07@Telegram
+  server: 104.17.147.10
+  network: ws
+  password: 669d0ac7b5b64ebbb1abb75d5d540a5c
+  port: 443
+  skip-cert-verify: true
+  sni: jobsapplyworld.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: jobsapplyworld.com
+    path: 6b777a91
 - name: DE_1
   server: 185.146.173.158
   port: 443
