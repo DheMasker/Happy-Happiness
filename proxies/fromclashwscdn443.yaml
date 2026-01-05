@@ -308,7 +308,22 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇯🇵JP-47.245.42.92-4866 | 0.519MB
+- name: 🇯🇵JP-47.74.1.191-0382 | 21.04MB
+  server: n1753598451.74qxv.top
+  port: 443
+  type: vmess
+  uuid: 9798678f-5b8c-4ff1-bbdd-b9b5c1539de0
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇯🇵JP-47.74.1.191-0382 | 21.04MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: n1753598451.74qxv.top
+- name: 🇯🇵JP-47.245.42.92-0316 | 20.988MB
   server: n1753598452.wpg27.xyz
   port: 443
   type: vmess
@@ -317,28 +332,29 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇯🇵JP-47.245.42.92-4866 | 0.519MB
+  servername: 🇯🇵JP-47.245.42.92-0316 | 20.988MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: n1753598452.wpg27.xyz
-- name: 🇭🇰HK-8.218.45.250-0917 | 0.311MB
-  server: n1761214905.wpg27.xyz
+- name: 🇺🇸US-77.83.141.171-5115 | 5.809MB
+  server: vc.fly.dev
   port: 443
   type: vmess
-  uuid: b1d3007c-441a-42d5-84b5-20301c46fa2c
-  alterId: 0
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
   cipher: auto
   tls: true
   skip-cert-verify: false
+  servername: 🇺🇸US-77.83.141.171-5115 | 5.809MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: n1761214905.wpg27.xyz
-- name: 🇺🇸US-209.126.84.189-0879 | 0.159MB
-  server: v2ray.codefyinc.com
+      Host: vc.fly.dev
+- name: 🇺🇸US-209.126.84.189-0829 | 4.663MB
+  server: 209.126.84.189
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -350,8 +366,8 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: v2ray.codefyinc.com
-- name: RELAY-104.21.76.158-0408 | 0.13MB
+      Host: 209.126.84.189
+- name: RELAY-104.21.76.158-0354 | 1.107MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
@@ -365,7 +381,7 @@ proxies:
     path: /
     headers:
       Host: sy4.620720.xyz
-- name: 🇯🇵JP-47.74.52.195-0332 | 0.126MB
+- name: 🇯🇵JP-47.74.52.195-0358 | 0.041MB
   server: n1753598448.74qxv.top
   port: 443
   type: vmess
@@ -374,56 +390,12 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇯🇵JP-47.74.52.195-0332 | 0.126MB
+  servername: 🇯🇵JP-47.74.52.195-0358 | 0.041MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: n1753598448.74qxv.top
-- name: 🇯🇵JP-47.74.1.191-0436 | 0.084MB
-  server: n1753598451.74qxv.top
-  port: 443
-  type: vmess
-  uuid: 9798678f-5b8c-4ff1-bbdd-b9b5c1539de0
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇯🇵JP-47.74.1.191-0436 | 0.084MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: n1753598451.74qxv.top
-- name: 🇨🇳CN-43.100.32.23-0449 | 0.038MB
-  server: n1747624280.lie5d.cyou
-  port: 443
-  type: vmess
-  uuid: 49dcf4b4-81eb-4fe2-91d3-86dc2e27ced5
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇨🇳CN-43.100.32.23-0449 | 0.038MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: n1747624280.lie5d.cyou
-- name: 🇨🇳CN-43.100.32.11-0915 | 0.031MB
-  server: n1747624271.lie5d.cyou
-  port: 443
-  type: vmess
-  uuid: a231ba8b-8871-416c-813b-e2240bc66bb2
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: n1747624271.lie5d.cyou
 - name: '#001 DE1 CF1'
   server: 193.23.197.183
   network: ws
@@ -436,7 +408,7 @@ proxies:
     headers:
       Host: snippets.kkii.eu.org
     path: '%2FTelegram%F0%9F%87%A8%F0%9F%87%B3WangCai2'
-- name: cf|a25a|puddincat07@Telegram
+- name: cf|fb8f|puddincat07@Telegram
   server: 23.227.38.33
   network: ws
   password: aff9928f-7ba3-45fb-b56d-4dec45653ca9
@@ -446,19 +418,6 @@ proxies:
   type: trojan
   ws-opts:
     path: '%2Fimages'
-- name: us|94fd|puddincat07@Telegram
-  server: 104.17.147.10
-  network: ws
-  password: 669d0ac7b5b64ebbb1abb75d5d540a5c
-  port: 443
-  skip-cert-verify: true
-  sni: jobsapplyworld.com
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: jobsapplyworld.com
-    path: 6b777a91
 - name: DE_1
   server: 185.146.173.158
   port: 443
