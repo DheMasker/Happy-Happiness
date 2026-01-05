@@ -308,7 +308,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇯🇵JP-47.74.1.191-0382 | 21.04MB
+- name: 🇯🇵JP-47.74.1.191-0382 | 10.079MB
   server: n1753598451.74qxv.top
   port: 443
   type: vmess
@@ -317,13 +317,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇯🇵JP-47.74.1.191-0382 | 21.04MB
+  servername: 🇯🇵JP-47.74.1.191-0382 | 10.079MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: n1753598451.74qxv.top
-- name: 🇯🇵JP-47.245.42.92-0316 | 20.988MB
+- name: 🇯🇵JP-47.245.42.92-0316 | 9.108MB
   server: n1753598452.wpg27.xyz
   port: 443
   type: vmess
@@ -332,13 +332,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇯🇵JP-47.245.42.92-0316 | 20.988MB
+  servername: 🇯🇵JP-47.245.42.92-0316 | 9.108MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: n1753598452.wpg27.xyz
-- name: 🇺🇸US-77.83.141.171-5115 | 5.809MB
+- name: 🇺🇸US-77.83.141.171-5115 | 0.65MB
   server: vc.fly.dev
   port: 443
   type: vmess
@@ -347,13 +347,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇺🇸US-77.83.141.171-5115 | 5.809MB
+  servername: 🇺🇸US-77.83.141.171-5115 | 0.65MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: vc.fly.dev
-- name: 🇺🇸US-209.126.84.189-0829 | 4.663MB
+- name: 🇺🇸US-209.126.84.189-0829 | 0.587MB
   server: 209.126.84.189
   port: 443
   type: vmess
@@ -367,7 +367,7 @@ proxies:
     path: /
     headers:
       Host: 209.126.84.189
-- name: RELAY-104.21.76.158-0354 | 1.107MB
+- name: RELAY-104.21.76.158-0354 | 0.294MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
@@ -381,7 +381,7 @@ proxies:
     path: /
     headers:
       Host: sy4.620720.xyz
-- name: 🇯🇵JP-47.74.52.195-0358 | 0.041MB
+- name: 🇯🇵JP-47.74.52.195-0358 | 0.105MB
   server: n1753598448.74qxv.top
   port: 443
   type: vmess
@@ -390,14 +390,14 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇯🇵JP-47.74.52.195-0358 | 0.041MB
+  servername: 🇯🇵JP-47.74.52.195-0358 | 0.105MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: n1753598448.74qxv.top
-- name: '#001 DE1 CF1'
-  server: 193.23.197.183
+- name: us|20f8|puddincat07@Telegram
+  server: 162.159.24.131
   network: ws
   password: 5a2c16f9
   port: 443
@@ -405,19 +405,22 @@ proxies:
   sni: snippets.kkii.eu.org
   type: trojan
   ws-opts:
-    headers:
-      Host: snippets.kkii.eu.org
-    path: '%2FTelegram%F0%9F%87%A8%F0%9F%87%B3WangCai2'
-- name: cf|fb8f|puddincat07@Telegram
-  server: 23.227.38.33
+    path: '%2F'
+- name: xx|0ae6|puddincat07@Telegram
+  server: vjp1.0bad.com
+  alterId: 0
+  cipher: auto
+  client-fingerprint: chrome
   network: ws
-  password: aff9928f-7ba3-45fb-b56d-4dec45653ca9
   port: 443
   skip-cert-verify: true
-  sni: z9mifq7ujufk56im.jptimecsgo.xyz
-  type: trojan
+  tls: true
+  type: vmess
+  uuid: 927094d3-d678-4763-8591-e240d0bcae87
   ws-opts:
-    path: '%2Fimages'
+    headers:
+      host: vjp1.0bad.com
+    path: /chat
 - name: DE_1
   server: 185.146.173.158
   port: 443
