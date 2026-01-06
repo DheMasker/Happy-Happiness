@@ -1,5 +1,5 @@
 proxies:
-- name: 2c3e769be8d344aaa480e33e97fce8af_@_@Hope_Net-join-us-on-Telegram
+- name: e39d6f469dd9471fa75a9b75b0c272e4_@_@Hope_Net-join-us-on-Telegram
   server: 104.26.13.72
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: cake.capellare.com
     path: /linkvws
-- name: 06e43f7da0fb47128e88d2d45d5dddb9_@_@Hope_Net-join-us-on-Telegram
+- name: 9a8c4000ed994b318bb6887fdcc32a46_@_@Hope_Net-join-us-on-Telegram
   server: germany-dusseldorf.mah3hoet.com
   uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
   cipher: auto
@@ -30,7 +30,7 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /ws
-- name: 57f11efc31ab49d696eb279340491f25_@_@Hope_Net-join-us-on-Telegram
+- name: 5134e89bc51e49a6ac9d9aa28f30da99_@_@Hope_Net-join-us-on-Telegram
   server: 128.199.188.214
   uuid: 3f724115-8ca2-4aa4-b8cc-eb72d9b6b1ef
   cipher: auto
@@ -44,7 +44,7 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /cctv13/hd.m3u8
-- name: ac847500d7154487a9034a674d50d81e_@_@Hope_Net-join-us-on-Telegram
+- name: 29986c6840d948a9b68c28fc83c3427f_@_@Hope_Net-join-us-on-Telegram
   server: 113.142.205.92
   uuid: 2fb8c800-89c1-44dd-a425-b37bc0bb2a0a
   cipher: auto
@@ -58,32 +58,71 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /f65a148681c42/
-- name: 14|DE_speednode_0003
-  server: 193.23.197.183
-  network: ws
-  password: 554f139b-f31f-41c4-99f9-73d60647db26
+- name: 3ba76dd6710548c9b5044cd151b02214_@_@Hope_Net-join-us-on-Telegram
+  server: jklahblog.com
+  uuid: 96edbdf0-c8b8-49f2-839e-940698bbf83d
+  cipher: auto
+  alterId: 2
+  type: vmess
   port: 443
-  skip-cert-verify: true
-  sni: snippets.kkii.eu.org
-  type: trojan
-  udp: true
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /af81144dc252b94/
+- name: 9fb4a33b632e4f14a4db3f7461244f3f_@_@Hope_Net-join-us-on-Telegram
+  server: indiavideo.sbs
+  uuid: 425c5e6e-30a0-4984-8a13-ee6f72053162
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: indiavideo.sbs
+  fingerprint: ''
   ws-opts:
     headers:
-      Host: snippets.kkii.eu.org
-    path: /Telegram🇨🇳WangCai2
-- name: 14|US_speednode_0015
-  server: 64.181.227.82
-  network: ws
-  password: ff1dbbc9-ddf2-4d6c-a315-61ecd4223bc0
+      host: indiavideo.sbs
+    path: /linkws
+- name: 246a060da6554a12a9458539a593b9e0_@_@Hope_Net-join-us-on-Telegram
+  server: 104.21.74.239
+  uuid: a1655f51-1e20-4a92-8a11-b7ca30a7a353
+  cipher: auto
+  alterId: 0
+  type: vmess
   port: 443
-  skip-cert-verify: true
-  sni: snippets.kkii.eu.org
-  type: trojan
-  udp: true
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: afrhms07.xfixedfloat.cfd
+  fingerprint: ''
   ws-opts:
     headers:
-      Host: snippets.kkii.eu.org
-    path: /Telegram🇨🇳WangCai2
+      host: afrhms07.xfixedfloat.cfd
+    path: /linkws
+- name: 5ad0cf866de244b5bdec076c582c9bd5_@_@Hope_Net-join-us-on-Telegram
+  server: 104.21.94.64
+  uuid: 39cec18f-a439-427c-9a4e-aeb6fcdf6f53
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: linja05.hwcar.sbs
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: linja05.hwcar.sbs
+    path: /linkws
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -354,7 +393,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇰🇷KR-146.56.177.166-4791 | 11.721MB
+- name: 🇰🇷KR-146.56.177.166-4791 | 0.683MB
   server: seoul03.zgjok.com
   port: 443
   type: vmess
@@ -363,13 +402,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇰🇷KR-146.56.177.166-4791 | 11.721MB
+  servername: 🇰🇷KR-146.56.177.166-4791 | 0.683MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: seoul03.zgjok.com
-- name: 🇭🇰HK-8.210.166.22-4835 | 6.199MB
+- name: 🇭🇰HK-8.210.166.22-4835 | 0.407MB
   server: n1761214911.74qxv.top
   port: 443
   type: vmess
@@ -378,13 +417,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇭🇰HK-8.210.166.22-4835 | 6.199MB
+  servername: 🇭🇰HK-8.210.166.22-4835 | 0.407MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: n1761214911.74qxv.top
-- name: 🇺🇸US-209.126.84.189-0871 | 2.366MB
+- name: 🇺🇸US-209.126.84.189-0871 | 0.134MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -398,7 +437,7 @@ proxies:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: RELAY-172.67.197.47-0403 | 0.773MB
+- name: RELAY-172.67.197.47-0403 | 0.097MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
@@ -412,31 +451,32 @@ proxies:
     path: /
     headers:
       Host: sy4.620720.xyz
-- name: us|1ae2|puddincat07@Telegram
-  server: 162.159.24.131
+- name: DE_speednode_0003
+  server: 193.23.197.183
   network: ws
-  password: 5a2c16f9
+  password: 554f139b-f31f-41c4-99f9-73d60647db26
   port: 443
   skip-cert-verify: true
   sni: snippets.kkii.eu.org
   type: trojan
-  ws-opts:
-    path: '%2F'
-- name: xx|6ad1|puddincat07@Telegram
-  server: vc.fly.dev
-  alterId: 32
-  cipher: auto
-  client-fingerprint: chrome
-  network: ws
-  port: 443
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  udp: true
   ws-opts:
     headers:
-      host: vc.fly.dev
-    path: /vc
+      Host: snippets.kkii.eu.org
+    path: /Telegram🇨🇳WangCai2
+- name: US_speednode_0015
+  server: 64.181.227.82
+  network: ws
+  password: ff1dbbc9-ddf2-4d6c-a315-61ecd4223bc0
+  port: 443
+  skip-cert-verify: true
+  sni: snippets.kkii.eu.org
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: snippets.kkii.eu.org
+    path: /Telegram🇨🇳WangCai2
 - name: DE_1
   server: 185.146.173.158
   port: 443
