@@ -1,5 +1,5 @@
 proxies:
-- name: ae3f194e33ba4c52a06373eda6092811_@_@Hope_Net-join-us-on-Telegram
+- name: 16f5954d3e1d4127a60c173184295df7_@_@Hope_Net-join-us-on-Telegram
   server: sareikela.com
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,19 +16,23 @@ proxies:
     headers:
       host: sareikela.com
     path: /linkvws
-- name: 14|SG_speednode_0024
-  server: 34.143.159.175
-  network: ws
-  password: 97e79a62-f686-4b91-87a7-be39c9e57658
+- name: cbfeb4e1635047559c92849efdd262a1_@_@Hope_Net-join-us-on-Telegram
+  server: 172.232.43.29
+  uuid: b321fd5d-e6ec-4293-a644-164e3885f52e
+  cipher: auto
+  alterId: 0
+  type: vmess
   port: 443
-  skip-cert-verify: false
-  sni: page.anjue39.qzz.io
-  type: trojan
-  udp: true
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: adenc36v.xtooltech.cfd
+  fingerprint: ''
   ws-opts:
     headers:
-      Host: page.anjue39.qzz.io
-    path: /
+      host: adenc36v.xtooltech.cfd
+    path: /linkws
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -299,7 +303,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇰🇷KR-146.56.177.166-4738 | 15.239MB
+- name: 🇰🇷KR-146.56.177.166-4738 | 2.298MB
   server: seoul03.zgjok.com
   port: 443
   type: vmess
@@ -308,13 +312,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇰🇷KR-146.56.177.166-4738 | 15.239MB
+  servername: 🇰🇷KR-146.56.177.166-4738 | 2.298MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: seoul03.zgjok.com
-- name: 🇺🇸US-209.126.84.189-0872 | 3.414MB
+- name: 🇺🇸US-209.126.84.189-0872 | 0.299MB
   server: 209.126.84.189
   port: 443
   type: vmess
@@ -328,7 +332,7 @@ proxies:
     path: /
     headers:
       Host: 209.126.84.189
-- name: RELAY-172.67.197.47-0369 | 1.165MB
+- name: RELAY-172.67.197.47-0369 | 0.125MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
