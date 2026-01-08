@@ -1,72 +1,4 @@
 proxies:
-- name: 0c1e680214b045c385be825920af7cc0_@_@Hope_Net-join-us-on-Telegram
-  server: sareikela.com
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: sareikela.com
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: sareikela.com
-    path: /linkvws
-- name: 52f249a2a64f4639ab1cba9c0ac83b56_@_@Hope_Net-join-us-on-Telegram
-  server: 172.232.43.29
-  uuid: b321fd5d-e6ec-4293-a644-164e3885f52e
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: adenc36v.xtooltech.cfd
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: adenc36v.xtooltech.cfd
-    path: /linkws
-- name: f13c21f3ffb646d29dd101bdd3083964_@_@Hope_Net-join-us-on-Telegram
-  server: 172.67.220.83
-  uuid: 39cec18f-a439-427c-9a4e-aeb6fcdf6f53
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: linja05.hwcar.sbs
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: linja05.hwcar.sbs
-    path: /linkws
-- name: 584db593e18a46168720d336f17cb9da_@_@Hope_Net-join-us-on-Telegram
-  server: 104.21.82.17
-  uuid: bc864078-dcf3-4bf4-8dbf-ca9f200b56be
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: gwdef.sbs
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: gwdef.sbs
-    path: /linkws
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -169,6 +101,19 @@ proxies:
   ws-headers:
     Host: hkd1.quickerlink.xyz
   ws-path: /h6jr23x9h3lqiitg
+- name: 🏁RELAY-172.67.132.44-222_1@221
+  server: nicola.pics
+  alterId: 0
+  cipher: auto
+  network: ws
+  port: 443
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-headers:
+    Host: nicola.pics
+  ws-path: /linkvws
 - name: 美国 011_2@19
   server: 104.18.92.5
   alterId: 0
@@ -337,7 +282,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇰🇷KR-146.56.177.166-4738 | 2.298MB
+- name: 🇰🇷KR-146.56.177.166-0355 | 19.712MB
   server: seoul03.zgjok.com
   port: 443
   type: vmess
@@ -346,13 +291,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇰🇷KR-146.56.177.166-4738 | 2.298MB
+  servername: 🇰🇷KR-146.56.177.166-0355 | 19.712MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: seoul03.zgjok.com
-- name: 🇺🇸US-209.126.84.189-0872 | 0.299MB
+- name: 🇺🇸US-209.126.84.189-0873 | 1.608MB
   server: 209.126.84.189
   port: 443
   type: vmess
@@ -366,7 +311,7 @@ proxies:
     path: /
     headers:
       Host: 209.126.84.189
-- name: RELAY-172.67.197.47-0369 | 0.125MB
+- name: RELAY-172.67.197.47-0410 | 0.634MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
