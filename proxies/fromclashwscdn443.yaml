@@ -1,5 +1,5 @@
 proxies:
-- name: 59af20072fac44caa010344c4d4a39fe_@_@Hope_Net-join-us-on-Telegram
+- name: da3002b0587845fab50a2fd3ce13e8e5_@_@Hope_Net-join-us-on-Telegram
   server: 172.67.161.77
   uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
   cipher: auto
@@ -16,6 +16,37 @@ proxies:
     headers:
       host: linde06.indiavideo.sbs
     path: /linkws
+- name: ac5038ec93324585851efeeba35016b3_@_@Hope_Net-join-us-on-Telegram
+  server: 172.67.71.160
+  uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: obdii.cfd
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: obdii.cfd
+    path: /linkws
+- name: 1979f571d35047f7b77442ee6a22a87c_@_@Hope_Net-join-us-on-Telegram
+  server: uk-manchester.eiw2eemo.com
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  cipher: auto
+  alterId: 4
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /ws
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -299,7 +330,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇰🇷KR-146.56.177.166-0306 | 19.13MB
+- name: 🇰🇷KR-146.56.177.166-0314 | 18.678MB
   server: seoul03.zgjok.com
   port: 443
   type: vmess
@@ -308,14 +339,29 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇰🇷KR-146.56.177.166-0306 | 19.13MB
+  servername: 🇰🇷KR-146.56.177.166-0314 | 18.678MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: seoul03.zgjok.com
-- name: 🇺🇸US-209.126.84.189-0860 | 2.447MB
-  server: v2ray.codefyinc.com
+- name: 🇺🇸US-77.83.141.171-4928 | 6.179MB
+  server: vc.fly.dev
+  port: 443
+  type: vmess
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇺🇸US-77.83.141.171-4928 | 6.179MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vc.fly.dev
+- name: 🇺🇸US-209.126.84.189-0868 | 2.444MB
+  server: 209.126.84.189
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -327,8 +373,8 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: v2ray.codefyinc.com
-- name: RELAY-172.67.197.47-0362 | 0.359MB
+      Host: 209.126.84.189
+- name: RELAY-172.67.197.47-0410 | 0.73MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
