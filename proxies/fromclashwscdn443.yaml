@@ -1,5 +1,5 @@
 proxies:
-- name: da3002b0587845fab50a2fd3ce13e8e5_@_@Hope_Net-join-us-on-Telegram
+- name: 1e2f03aed7204701b05e5930881a8499_@_@Hope_Net-join-us-on-Telegram
   server: 172.67.161.77
   uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: linde06.indiavideo.sbs
     path: /linkws
-- name: ac5038ec93324585851efeeba35016b3_@_@Hope_Net-join-us-on-Telegram
+- name: 6aae35aee8e7412387d4eaa7a980b6f3_@_@Hope_Net-join-us-on-Telegram
   server: 172.67.71.160
   uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
   cipher: auto
@@ -33,7 +33,7 @@ proxies:
     headers:
       host: obdii.cfd
     path: /linkws
-- name: 1979f571d35047f7b77442ee6a22a87c_@_@Hope_Net-join-us-on-Telegram
+- name: 3892582d78494a398cd36356ce42c5bb_@_@Hope_Net-join-us-on-Telegram
   server: uk-manchester.eiw2eemo.com
   uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
   cipher: auto
@@ -47,6 +47,54 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /ws
+- name: 98cb37a1e106402d9046eb3454fa423d_@_@Hope_Net-join-us-on-Telegram
+  server: 172.67.193.108
+  uuid: bc864078-dcf3-4bf4-8dbf-ca9f200b56be
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: gwdef.sbs
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: gwdef.sbs
+    path: /linkws
+- name: 217c24e502e2463e8c5c154351007b0a_@_@Hope_Net-join-us-on-Telegram
+  server: 172.232.43.29
+  uuid: b321fd5d-e6ec-4293-a644-164e3885f52e
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: adenc36v.xtooltech.cfd
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: adenc36v.xtooltech.cfd
+    path: /linkws
+- name: 63fef18ea80846eea0d9c5ae16a8ffaf_@_@Hope_Net-join-us-on-Telegram
+  server: aop.ssfree.ru
+  uuid: ed478f20-0a3b-11ed-9420-000017022008
+  cipher: auto
+  alterId: 64
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /getweather
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -330,7 +378,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇰🇷KR-146.56.177.166-0314 | 18.678MB
+- name: 🇰🇷KR-146.56.177.166-0303 | 15.112MB
   server: seoul03.zgjok.com
   port: 443
   type: vmess
@@ -339,28 +387,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇰🇷KR-146.56.177.166-0314 | 18.678MB
+  servername: 🇰🇷KR-146.56.177.166-0303 | 15.112MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: seoul03.zgjok.com
-- name: 🇺🇸US-77.83.141.171-4928 | 6.179MB
-  server: vc.fly.dev
-  port: 443
-  type: vmess
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
-  alterId: 32
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇺🇸US-77.83.141.171-4928 | 6.179MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vc.fly.dev
-- name: 🇺🇸US-209.126.84.189-0868 | 2.444MB
+- name: 🇺🇸US-209.126.84.189-0849 | 3.666MB
   server: 209.126.84.189
   port: 443
   type: vmess
@@ -374,7 +407,7 @@ proxies:
     path: /
     headers:
       Host: 209.126.84.189
-- name: RELAY-172.67.197.47-0410 | 0.73MB
+- name: RELAY-104.21.76.158-0395 | 0.465MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
@@ -388,6 +421,21 @@ proxies:
     path: /
     headers:
       Host: sy4.620720.xyz
+- name: xx|d18e|puddincat07@Telegram
+  server: vc.fly.dev
+  alterId: 32
+  cipher: auto
+  client-fingerprint: chrome
+  network: ws
+  port: 443
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  ws-opts:
+    headers:
+      host: vc.fly.dev
+    path: /vc
 - name: DE_1
   server: 185.146.173.158
   port: 443
