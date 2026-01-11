@@ -1,5 +1,5 @@
 proxies:
-- name: 49875c804c7d4f1aa150cbfdd8c3f5f8_@_@Hope_Net-join-us-on-Telegram
+- name: 72a35d4d566f47f0ac3ff1b04bf99682_@_@Hope_Net-join-us-on-Telegram
   server: az05.beyondy.cfd
   uuid: 3f638f34-8dba-4186-bc43-2716a7ddd4be
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: az05.beyondy.cfd
     path: /link
-- name: 195bb0ea246145498d48a49f169116cd_@_@Hope_Net-join-us-on-Telegram
+- name: 14ab16d549c9469ba3ce9b89e4388e52_@_@Hope_Net-join-us-on-Telegram
   server: 188.114.97.3
   uuid: f584de15-2034-4170-a723-f48c2bae5e0f
   cipher: auto
@@ -33,7 +33,7 @@ proxies:
     headers:
       host: afrhms16v.bestxray.buzz
     path: /linkws
-- name: b0c73de00e674c038676be97bfc126cc_@_@Hope_Net-join-us-on-Telegram
+- name: 4152b191729c4ba4a9b22e517f0dec58_@_@Hope_Net-join-us-on-Telegram
   server: 156.724064.xyz
   uuid: 8c7c927a-ab08-40e7-8b00-f479435934dd
   cipher: auto
@@ -47,7 +47,7 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /rjtnvws
-- name: 340b11ce001b4721a9a0dedab8c7f243_@_@Hope_Net-join-us-on-Telegram
+- name: 005743b1d68f49e38eb128ad47c0b51f_@_@Hope_Net-join-us-on-Telegram
   server: indiavideo.sbs
   uuid: 425c5e6e-30a0-4984-8a13-ee6f72053162
   cipher: auto
@@ -344,7 +344,52 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-209.126.84.189-0858 | 10.092MB
+- name: 🇰🇷KR-146.56.177.166-0309 | 8.96MB
+  server: seoul03.zgjok.com
+  port: 443
+  type: vmess
+  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇰🇷KR-146.56.177.166-0309 | 8.96MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: seoul03.zgjok.com
+- name: 🇯🇵JP-47.245.42.92-4896 | 6.012MB
+  server: n1753598452.wpg27.xyz
+  port: 443
+  type: vmess
+  uuid: 4f23eb7c-ef2f-43b0-90dd-f2b8a75954a5
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇯🇵JP-47.245.42.92-4896 | 6.012MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: n1753598452.wpg27.xyz
+- name: 🇭🇰HK-47.243.244.164-1853 | 2.651MB
+  server: n1761214908.wpg27.xyz
+  port: 443
+  type: vmess
+  uuid: 3514a93f-bb26-4442-8f99-971b2ff3388a
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇭🇰HK-47.243.244.164-1853 | 2.651MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: n1761214908.wpg27.xyz
+- name: 🇺🇸US-209.126.84.189-0858 | 0.621MB
   server: 209.126.84.189
   port: 443
   type: vmess
@@ -358,7 +403,7 @@ proxies:
     path: /
     headers:
       Host: 209.126.84.189
-- name: RELAY-172.67.197.47-0415 | 0.361MB
+- name: RELAY-172.67.197.47-0415 | 0.275MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
@@ -372,7 +417,7 @@ proxies:
     path: /
     headers:
       Host: sy4.620720.xyz
-- name: xx|36ae|puddincat07@Telegram
+- name: xx|1234|puddincat07@Telegram
   server: vc.fly.dev
   alterId: 32
   cipher: auto
@@ -387,6 +432,19 @@ proxies:
     headers:
       host: vc.fly.dev
     path: /vc
+- name: us|2aae|puddincat07@Telegram
+  server: 104.16.159.5
+  network: ws
+  password: 984e400bf5d541b7b0815913fe0c432a
+  port: 443
+  skip-cert-verify: true
+  sni: bangladeshipatri.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: bangladeshipatri.com
+    path: 6b777a91
 - name: DE_1
   server: 185.146.173.158
   port: 443
