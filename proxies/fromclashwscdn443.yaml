@@ -344,7 +344,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇰🇷KR-146.56.177.166-0309 | 8.96MB
+- name: 🇰🇷KR-146.56.177.166-0326 | 18.901MB
   server: seoul03.zgjok.com
   port: 443
   type: vmess
@@ -353,43 +353,28 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇰🇷KR-146.56.177.166-0309 | 8.96MB
+  servername: 🇰🇷KR-146.56.177.166-0326 | 18.901MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: seoul03.zgjok.com
-- name: 🇯🇵JP-47.245.42.92-4896 | 6.012MB
-  server: n1753598452.wpg27.xyz
+- name: 🇭🇰HK-47.243.205.58-1872 | 10.351MB
+  server: n1761214912.wpg27.xyz
   port: 443
   type: vmess
-  uuid: 4f23eb7c-ef2f-43b0-90dd-f2b8a75954a5
+  uuid: 4f86a909-836d-4643-b650-d812144a1fa9
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇯🇵JP-47.245.42.92-4896 | 6.012MB
+  servername: 🇭🇰HK-47.243.205.58-1872 | 10.351MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: n1753598452.wpg27.xyz
-- name: 🇭🇰HK-47.243.244.164-1853 | 2.651MB
-  server: n1761214908.wpg27.xyz
-  port: 443
-  type: vmess
-  uuid: 3514a93f-bb26-4442-8f99-971b2ff3388a
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇭🇰HK-47.243.244.164-1853 | 2.651MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: n1761214908.wpg27.xyz
-- name: 🇺🇸US-209.126.84.189-0858 | 0.621MB
+      Host: n1761214912.wpg27.xyz
+- name: 🇺🇸US-209.126.84.189-0868 | 2.4MB
   server: 209.126.84.189
   port: 443
   type: vmess
@@ -403,21 +388,7 @@ proxies:
     path: /
     headers:
       Host: 209.126.84.189
-- name: RELAY-172.67.197.47-0415 | 0.275MB
-  server: sy4.620720.xyz
-  port: 443
-  type: vmess
-  uuid: 516d8a7a-3f0b-41d3-bad0-246116381516
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: sy4.620720.xyz
-- name: xx|9a38|puddincat07@Telegram
+- name: xx|6fa1|puddincat07@Telegram
   server: vc.fly.dev
   alterId: 32
   cipher: auto
