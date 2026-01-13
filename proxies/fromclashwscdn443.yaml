@@ -1,5 +1,5 @@
 proxies:
-- name: e565476ab176439fb12c49be8ec70bab_@_@Hope_Net-join-us-on-Telegram
+- name: 2ab78b95404a433996a66918758f2445_@_@Hope_Net-join-us-on-Telegram
   server: az05.beyondy.cfd
   uuid: 3f638f34-8dba-4186-bc43-2716a7ddd4be
   cipher: auto
@@ -13,7 +13,7 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /link
-- name: a74869cfffb949a6a3e01ece5f6c7148_@_🇭🇰[openproxylist.com] vmess-HK
+- name: 7bb0eec9c03a4350a0f847ce00b838e1_@_🇭🇰[openproxylist.com] vmess-HK
   server: sv2.wy888.us
   uuid: cda69512-ad1b-4f85-b547-b1d545e7cc90
   cipher: auto
@@ -27,6 +27,23 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /vmess
+- name: 9d626154acfc42659409920baa59a1a5_@_@Hope_Net-join-us-on-Telegram
+  server: zula.ir
+  uuid: 4e0ffe46-79da-4173-869e-a959529ff020
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: re.kalepacheh.monster
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: re.kalepacheh.monster
+    path: /9f264ded-e3c1-4b90-c503-4f40eb00fa11
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -310,21 +327,36 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-77.83.141.171-0894 | 23.706MB
-  server: vc.fly.dev
+- name: 🇰🇷KR-146.56.177.166-5046 | 15.753MB
+  server: seoul03.zgjok.com
   port: 443
   type: vmess
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
-  alterId: 32
+  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
+  alterId: 0
   cipher: auto
   tls: true
+  skip-cert-verify: false
+  servername: 🇰🇷KR-146.56.177.166-5046 | 15.753MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: seoul03.zgjok.com
+- name: 🇺🇸US-209.126.84.189-0863 | 3.247MB
+  server: v2ray.codefyinc.com
+  port: 443
+  type: vmess
+  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
+  alterId: 0
+  cipher: auto
+  tls: false
   skip-cert-verify: false
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: vc.fly.dev
-- name: RELAY-172.67.197.47-0368 | 6.793MB
+      Host: v2ray.codefyinc.com
+- name: RELAY-172.67.197.47-0383 | 1.053MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
