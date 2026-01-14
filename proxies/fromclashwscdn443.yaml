@@ -1,100 +1,4 @@
 proxies:
-- name: ca369290daab407dba9fdff407cfeaa3_@_@Hope_Net-join-us-on-Telegram
-  server: az05.beyondy.cfd
-  uuid: 3f638f34-8dba-4186-bc43-2716a7ddd4be
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /link
-- name: 6cbbe40c032242389c47acfc5b6d5c41_@_🇭🇰[openproxylist.com] vmess-HK
-  server: sv2.wy888.us
-  uuid: cda69512-ad1b-4f85-b547-b1d545e7cc90
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /vmess
-- name: b4ec85cc713e4a14a6c8e472080ab065_@_@Hope_Net-join-us-on-Telegram
-  server: zula.ir
-  uuid: 4e0ffe46-79da-4173-869e-a959529ff020
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: re.kalepacheh.monster
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: re.kalepacheh.monster
-    path: /9f264ded-e3c1-4b90-c503-4f40eb00fa11
-- name: b4971a549fb94c00824aa589d4028215_@_@Hope_Net-join-us-on-Telegram
-  server: 188.114.99.205
-  uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: linde06.indiavideo.sbs
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: linde06.indiavideo.sbs
-    path: /linkws
-- name: 35689245efbf47e4bf1097371a8959e8_@_@Hope_Net-join-us-on-Telegram
-  server: beyonddbc.sbs
-  uuid: 8d90c129-4156-4d6c-9115-24df25f26a02
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: beyonddbc.sbs
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: beyonddbc.sbs
-    path: /linkws
-- name: 152622fe9f154f9580cedb1ab9f1902b_@_@Hope_Net-join-us-on-Telegram
-  server: hms082.gwdef.sbs
-  uuid: bc864078-dcf3-4bf4-8dbf-ca9f200b56be
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: gwdef.sbs
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: gwdef.sbs
-    path: /linkws
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -407,6 +311,21 @@ proxies:
     path: /
     headers:
       Host: 209.126.84.189
+- name: xx|af44|puddincat07@Telegram
+  server: vc.fly.dev
+  alterId: 32
+  cipher: auto
+  client-fingerprint: chrome
+  network: ws
+  port: 443
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  ws-opts:
+    headers:
+      host: vc.fly.dev
+    path: /vc
 - name: DE_1
   server: 185.146.173.158
   port: 443
