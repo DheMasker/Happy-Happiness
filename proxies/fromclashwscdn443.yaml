@@ -1,5 +1,5 @@
 proxies:
-- name: 3cfb9b2ea4b4468096d0d8ff4c8395ae_@_@Hope_Net-join-us-on-Telegram
+- name: e4e53bbea88a4e738c08ce75a80ac535_@_@Hope_Net-join-us-on-Telegram
   server: 104.21.24.170
   uuid: b321fd5d-e6ec-4293-a644-164e3885f52e
   cipher: auto
@@ -16,7 +16,7 @@ proxies:
     headers:
       host: adenc36v.xtooltech.cfd
     path: /linkws
-- name: 8c83456a6e304d789361093bc22fde09_@_@Hope_Net-join-us-on-Telegram
+- name: 98af2de94c824144b06190eddc4e2dc2_@_@Hope_Net-join-us-on-Telegram
   server: obdii.cfd
   uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
   cipher: auto
@@ -30,7 +30,7 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /linkws
-- name: d02e56f3eadd43d386395fb98480d0e6_@_@Hope_Net-join-us-on-Telegram
+- name: 77d30252168843bb84161ed0ba89c3f8_@_@Hope_Net-join-us-on-Telegram
   server: bluehost.com
   uuid: 6b880b07-e952-4c0b-b4a3-6c9ac4cf9d3f
   cipher: auto
@@ -330,22 +330,21 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇰🇷KR-146.56.177.166-0357 | 2.376MB
-  server: seoul03.zgjok.com
+- name: 🇺🇸US-77.83.141.171-0931 | 44.339MB
+  server: vc.fly.dev
   port: 443
   type: vmess
-  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
-  alterId: 0
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇰🇷KR-146.56.177.166-0357 | 2.376MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: seoul03.zgjok.com
-- name: 🇺🇸US-209.126.84.189-0876 | 0.416MB
+      Host: vc.fly.dev
+- name: 🇺🇸US-209.126.84.189-0889 | 9.723MB
   server: 209.126.84.189
   port: 443
   type: vmess
@@ -359,21 +358,20 @@ proxies:
     path: /
     headers:
       Host: 209.126.84.189
-- name: xx|2181|puddincat07@Telegram
-  server: vc.fly.dev
-  alterId: 32
-  cipher: auto
-  client-fingerprint: chrome
-  network: ws
+- name: RELAY-172.67.197.47-0890 | 8.629MB
+  server: sy4.620720.xyz
   port: 443
-  skip-cert-verify: true
-  tls: true
   type: vmess
-  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  uuid: 516d8a7a-3f0b-41d3-bad0-246116381516
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
   ws-opts:
+    path: /
     headers:
-      host: vc.fly.dev
-    path: /vc
+      Host: sy4.620720.xyz
 - name: DE_1
   server: 185.146.173.158
   port: 443
