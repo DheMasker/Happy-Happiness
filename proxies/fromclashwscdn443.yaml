@@ -1,69 +1,4 @@
 proxies:
-- name: 810607fa67684b0a996d2b1ee3bb966d_@_🇩🇪[openproxylist.com] vmess-DE
-  server: 104.18.32.47
-  uuid: 52c7f779-2cbc-4ec9-d4eb-7f62964e4a4e
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /ABC
-- name: 51a808289e094694b058fcadc3936451_@_✅سرورها بیشتردرکانال:prrofile_purple@✅
-  server: 8.6.112.0
-  uuid: 4bf075f5-4d5e-4d39-f5ab-b32a86250f0e
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: hk.nbee.pp.ua
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: hk.nbee.pp.ua
-    path: /aa
-- name: be636ee6a6e04ab685111ee68c5c09ce_@_✅سرورها بیشتردرکانال:prrofile_purple@✅
-  server: 162.159.152.4
-  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: v2ray.codefyinc.com
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: v2ray.codefyinc.com
-    path: /vmessws
-- name: ea3f5c0e25754c8c8eb18abc80b0e3ff_@_🇩🇪[openproxylist.com] vmess-DE
-  server: chatgpt.com
-  uuid: ac158da9-7ec9-4e23-a6d7-80836da39895
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: dl3.hupcloud.com
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: dl3.hupcloud.com
-    path: ?ed=2048
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -347,7 +282,21 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: MO-45.64.22.22-0000 | 12.718MB
+- name: ZA-4.253.33.155-0868 | 0.0MB
+  server: boogeyman.chomba.tech
+  port: 443
+  type: vmess
+  uuid: 9b6a87ed-9949-49f6-ab6f-cf9ab15177d7
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: boogeyman.chomba.tech
+- name: MO-45.64.22.22-0000 | 0.0MB
   server: 45.64.22.22
   port: 443
   type: vmess
@@ -528,20 +477,6 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: ZA-4.253.33.155-0210 | 0.0MB
-  server: boogeyman.chomba.tech
-  port: 443
-  type: vmess
-  uuid: 9b6a87ed-9949-49f6-ab6f-cf9ab15177d7
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: boogeyman.chomba.tech
 - name: RELAY-23.227.38.100-0211 | 0.0MB
   server: 23.227.38.100
   port: 443
@@ -556,18 +491,18 @@ proxies:
     path: /
     headers:
       Host: v2ray1.zhujicn2.org
-- name: US158｜机房｜低风险
-  server: bpbg.anguswen.top
-  alpn:
-  - http/1.1
+- name: US172｜机房｜高风险 (黑名单)
+  server: blackshadow.dpdns.org
   network: ws
-  password: '123456'
+  password: 2bcfbfba-b446-4ad5-93ad-72af9e008f61
   port: 443
   skip-cert-verify: true
-  sni: bPbG.ANguswen.tOP
+  sni: blackshadow.dpdns.org
   type: trojan
   ws-opts:
-    path: '%2FeyJqdW5rIjoidmNzMWVlWHpNTVh4M2siLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19%3Fed%3D2560'
+    headers:
+      Host: blackshadow.dpdns.org
+    path: '%2F195.123.218.174-443'
 - name: DE_1
   server: 185.146.173.158
   port: 443
