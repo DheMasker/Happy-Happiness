@@ -1,5 +1,5 @@
 proxies:
-- name: f96db05b844a4b6c8aff9356bd0baff4_@_@Hope_Net-join-us-on-Telegram
+- name: 318d3d3d1a044a2989351df285c6df4c_@_@Hope_Net-join-us-on-Telegram
   server: s.marktred.com
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -16,6 +16,20 @@ proxies:
     headers:
       host: aveiror.com
     path: /linkvws
+- name: 90cbc4ea82e34dedaffaed366c757531_@_@Hope_Net-join-us-on-Telegram
+  server: 104.21.69.44
+  uuid: 7b308755-1135-4fed-828f-8e48ca1603ad
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /6mHwql1HSSV5FOZe0UV1BYvuQ
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
