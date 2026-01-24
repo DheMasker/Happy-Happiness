@@ -1,5 +1,5 @@
 proxies:
-- name: db456cbdabd2438183e0a4a10b45f9a1_@_@Hope_Net-join-us-on-Telegram
+- name: f96db05b844a4b6c8aff9356bd0baff4_@_@Hope_Net-join-us-on-Telegram
   server: s.marktred.com
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   cipher: auto
@@ -286,7 +286,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇭🇰HK-207.46.147.148-0004 | 0.0MB
+- name: 🇭🇰HK-207.46.147.148-0003 | 0.0MB
   server: fullaccesstohongkongnet.azurewebsites.net
   port: 443
   type: vmess
@@ -300,8 +300,20 @@ proxies:
     path: /
     headers:
       Host: fullaccesstohongkongnet.azurewebsites.net
-- name: 🇺🇸US-172.239.57.117-0026 | 0.0MB
-  server: vjp3.0bad.com
+- name: 🇯🇵JP-45.76.49.237-0014 | 0.0MB
+  server: 45.76.49.237
+  port: 443
+  type: vmess
+  uuid: 2ab56f70-39e3-4422-bb2e-dbfe59cb01f8
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇺🇸US-172.234.24.211-0016 | 0.0MB
+  server: vjp1.0bad.com
   port: 443
   type: vmess
   uuid: 927094d3-d678-4763-8591-e240d0bcae87
@@ -313,8 +325,22 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: vjp3.0bad.com
-- name: RELAY-23.227.38.100-0033 | 0.0MB
+      Host: vjp1.0bad.com
+- name: 🇺🇸US-92.112.198.63-0034 | 0.0MB
+  server: v2ray.online
+  port: 443
+  type: vmess
+  uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: Vienna.v2ray.online
+- name: RELAY-23.227.38.100-0035 | 0.0MB
   server: 23.227.38.100
   port: 443
   type: vmess
@@ -328,7 +354,7 @@ proxies:
     path: /
     headers:
       Host: v2ray1.zhujicn2.org
-- name: RELAY-172.67.199.34-0034 | 0.0MB
+- name: RELAY-172.67.199.34-0055 | 0.0MB
   server: 172.67.199.34
   port: 443
   type: vmess
@@ -342,50 +368,7 @@ proxies:
     path: /
     headers:
       Host: la.awsbest.com
-- name: 🇺🇸US-148.135.128.5-0038 | 0.0MB
-  server: v2ray.online
-  port: 443
-  type: vmess
-  uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: LosAngeles.v2ray.online
-- name: 🇺🇸US-49.51.180.214-0055 | 0.0MB
-  server: 136.175.178.176mgmg.xhtk.cc
-  port: 443
-  type: vmess
-  uuid: 23b3724b-3d90-2074-a5bf-09388a9806b7
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇺🇸US-49.51.180.214-0055 | 0.0MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 136.175.178.176mgmg.xhtk.cc
-- name: RELAY-172.66.0.218-0056 | 0.0MB
-  server: speed.cloudflare.com
-  port: 443
-  type: vmess
-  uuid: ffffffff-ffff-ffff-ffff-ffffffffffff
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: v2.chigua.tk
-- name: RELAY-198.41.212.122-0068 | 0.0MB
+- name: RELAY-198.41.212.122-0071 | 0.0MB
   server: 198.41.212.122
   port: 443
   type: vmess
@@ -399,8 +382,22 @@ proxies:
     path: /
     headers:
       Host: fr1.trump2023.org
-- name: 🇺🇸US-96.16.241.23-0070 | 0.0MB
-  server: cacerts.digicert.com
+- name: RELAY-141.193.213.10-0073 | 0.0MB
+  server: 141.193.213.10
+  port: 443
+  type: vmess
+  uuid: 20e92881-5fb4-4b05-bc77-57929476dc69
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: sg-gcore.sharecentre.online
+- name: RELAY-172.67.199.34-0080 | 0.0MB
+  server: 172.67.199.34
   port: 443
   type: vmess
   uuid: 6fea1649-425b-4092-bf53-29792152c925
@@ -413,7 +410,36 @@ proxies:
     path: /
     headers:
       Host: us-lb.sshkit.org
-- name: BR-209.209.112.27-0071 | 0.0MB
+- name: 🇺🇸US-49.51.180.214-0083 | 0.0MB
+  server: 136.175.178.176mgmg.xhtk.cc
+  port: 443
+  type: vmess
+  uuid: 23b3724b-3d90-2074-a5bf-09388a9806b7
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇺🇸US-49.51.180.214-0083 | 0.0MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 136.175.178.176mgmg.xhtk.cc
+- name: RELAY-162.159.140.220-0094 | 0.0MB
+  server: speed.cloudflare.com
+  port: 443
+  type: vmess
+  uuid: ffffffff-ffff-ffff-ffff-ffffffffffff
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: v2.chigua.tk
+- name: BR-209.209.112.27-0103 | 0.0MB
   server: 209.209.112.27
   port: 443
   type: vmess
@@ -427,21 +453,7 @@ proxies:
     path: /
     headers:
       Host: jhrus01.if68.com
-- name: RELAY-172.67.199.34-0078 | 0.0MB
-  server: 172.67.199.34
-  port: 443
-  type: vmess
-  uuid: 20e92881-5fb4-4b05-bc77-57929476dc69
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: sg-gcore.sharecentre.online
-- name: RELAY-172.66.44.197-0097 | 0.0MB
+- name: RELAY-172.66.44.197-0120 | 0.0MB
   server: 172.66.44.197
   port: 443
   type: vmess
@@ -455,7 +467,21 @@ proxies:
     path: /
     headers:
       Host: d.pgypgykmoljklj.xyz
-- name: 🇺🇸US-192.96.204.250-0122 | 0.0MB
+- name: 🇩🇪DE-64.190.63.222-0126 | 0.0MB
+  server: cvywfavasdc.cymlr.xyz
+  port: 443
+  type: vmess
+  uuid: 23f4bc80-3b0a-4aa3-cbe5-b8be4e8c32fc
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: cvywfavasdc.cymlr.xyz
+- name: 🇺🇸US-192.96.204.250-0139 | 0.0MB
   server: 192.96.204.250
   port: 443
   type: vmess
