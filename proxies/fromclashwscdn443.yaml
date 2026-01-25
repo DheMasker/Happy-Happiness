@@ -1,4 +1,21 @@
 proxies:
+- name: 024086a251014a18a5e45615520203ad_@_@Hope_Net-join-us-on-Telegram
+  server: 104.21.61.246
+  uuid: f9ccede9-ca9c-4719-b105-e494742499e3
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: kmz3.sassanidempire.com
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: kmz3.sassanidempire.com
+    path: /
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
