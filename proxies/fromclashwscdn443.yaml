@@ -1,5 +1,5 @@
 proxies:
-- name: 4d912d6b0312472ebcbf1e8948e9509d_@_🇯🇵[openproxylist.com] vmess-JP
+- name: e35167baedda4b7fbcffdf5c2240d829_@_🇯🇵[openproxylist.com] vmess-JP
   server: n1753598445.74qxv.top
   uuid: f53b95dc-3ec3-49a2-803a-510e614ae577
   cipher: auto
@@ -313,7 +313,7 @@ proxies:
     path: /
     headers:
       Host: la.awsbest.com
-- name: 🇺🇸US-191.101.104.228-0012 | 0.0MB
+- name: 🇺🇸US-92.112.198.89-0012 | 0.0MB
   server: v2ray.online
   port: 443
   type: vmess
@@ -383,7 +383,7 @@ proxies:
     path: /
     headers:
       Host: v2ray1.zhujicn2.org
-- name: 🇺🇸US-172.234.24.211-0046 | 0.0MB
+- name: 🇺🇸US-172.239.57.117-0046 | 0.0MB
   server: vjp1.0bad.com
   port: 443
   type: vmess
@@ -492,6 +492,21 @@ proxies:
     headers:
       Host: 2new.ssdxz.cn
     path: '%2F'
+- name: xx|b2b6|puddincat07@Telegram
+  server: v2ray.codefyinc.com
+  alterId: 0
+  cipher: auto
+  client-fingerprint: chrome
+  network: ws
+  port: 443
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
+  ws-opts:
+    headers:
+      host: v2ray.codefyinc.com
+    path: /vmessws
 - name: DE_1
   server: 185.146.173.158
   port: 443
