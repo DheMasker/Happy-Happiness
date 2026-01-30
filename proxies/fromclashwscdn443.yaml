@@ -1,7 +1,7 @@
 proxies:
-- name: 0ab1ae50e93f42e68075bf7bd51765ca_@_[🏁]t.me/ConfigsHub
-  server: nl-cdn2.nigtgemshopnew.org
-  uuid: 31b7fbb4-2511-4e96-8461-be5ae7b6c56a
+- name: 6a13a9141bb54c0b86308a6263a586f7_@_[🏁]t.me/ConfigsHub
+  server: 8.210.165.109
+  uuid: b141803a-209c-47bd-be6e-14d6bc1e96be
   cipher: auto
   alterId: 0
   type: vmess
@@ -10,15 +10,15 @@ proxies:
   tls: true
   udp: false
   client-fingerprint: chrome
-  servername: nl-cdn.nigtgemshopnew.org
+  servername: n1761214918.74qxv.top
   fingerprint: ''
   ws-opts:
     headers:
-      host: nl-cdn.nigtgemshopnew.org
+      host: n1761214918.74qxv.top
     path: /
-- name: 6f380d66fd1c42d68c719b51712ee42a_@_🇰🇷[openproxylist.com] vmess-KR
-  server: seoul03.zgjok.com
-  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
+- name: 844744c0d08c44f5a1f43f0000f231cc_@_@Hope_Net-join-us-on-Telegram
+  server: zula.ir
+  uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
   cipher: auto
   alterId: 0
   type: vmess
@@ -27,11 +27,39 @@ proxies:
   tls: true
   udp: false
   client-fingerprint: chrome
-  servername: seoul03.zgjok.com
+  servername: jahfkjha.cfd
   fingerprint: ''
   ws-opts:
     headers:
-      host: seoul03.zgjok.com
+      host: jahfkjha.cfd
+    path: /linkws
+- name: b9bdece020364e10943a4e5f7e275536_@_🇩🇪[openproxylist.com] vmess-DE
+  server: frankfurt01.zgjok.com
+  uuid: b71579b1-6593-426d-90ac-f002fa96ade1
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /
+- name: 1f38b5c45654423293fc885c8423892d_@_🇩🇪[openproxylist.com] vmess-DE
+  server: frankfurt02.zgjok.com
+  uuid: 90d50c62-13b4-4f9c-b5d8-0168d30b423a
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
     path: /
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
@@ -316,6 +344,21 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
+- name: 🇰🇷KR-146.56.177.166-0312 | 0.942MB
+  server: seoul03.zgjok.com
+  port: 443
+  type: vmess
+  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇰🇷KR-146.56.177.166-0312 | 0.942MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: seoul03.zgjok.com
 - name: 🇺🇸US-209.126.84.189-0866 | 0.131MB
   server: 209.126.84.189
   port: 443
