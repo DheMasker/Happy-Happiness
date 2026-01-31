@@ -1,39 +1,5 @@
 proxies:
-- name: 07b21c72da09424b833b86009c3ce4bd_@_[🏁]t.me/ConfigsHub
-  server: 8.210.165.109
-  uuid: b141803a-209c-47bd-be6e-14d6bc1e96be
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: n1761214918.74qxv.top
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: n1761214918.74qxv.top
-    path: /
-- name: 05a3f8a29ebf49b0b51fefe7caefe6c5_@_@Hope_Net-join-us-on-Telegram
-  server: zula.ir
-  uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: jahfkjha.cfd
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: jahfkjha.cfd
-    path: /linkws
-- name: c10388dffb704bb387f6455d6b08cfdc_@_🇩🇪[openproxylist.com] vmess-DE
+- name: d9e5178b37804e478af73c2f2ef8f02f_@_🇩🇪[openproxylist.com] vmess-DE
   server: frankfurt01.zgjok.com
   uuid: b71579b1-6593-426d-90ac-f002fa96ade1
   cipher: auto
@@ -47,11 +13,25 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /
-- name: 9c88a4aa0dca40209388559c8cef2559_@_🇩🇪[openproxylist.com] vmess-DE
+- name: 5841ff7dae3c499e8b1b55634049e697_@_🇩🇪[openproxylist.com] vmess-DE
   server: frankfurt02.zgjok.com
   uuid: 90d50c62-13b4-4f9c-b5d8-0168d30b423a
   cipher: auto
   alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /
+- name: 39fe20f8fe13492eba95e731932ad17a_@_@Hope_Net-join-us-on-Telegram
+  server: lc-hk01-direct01.lc-hk01.lc-node.com
+  uuid: ec736482-173e-3eff-9114-b49df8056e7d
+  cipher: auto
+  alterId: 2
   type: vmess
   port: 443
   network: ws
@@ -344,7 +324,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇰🇷KR-146.56.177.166-0312 | 0.942MB
+- name: 🇰🇷KR-146.56.177.166-0299 | 23.514MB
   server: seoul03.zgjok.com
   port: 443
   type: vmess
@@ -353,14 +333,14 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇰🇷KR-146.56.177.166-0312 | 0.942MB
+  servername: 🇰🇷KR-146.56.177.166-0299 | 23.514MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: seoul03.zgjok.com
-- name: 🇺🇸US-209.126.84.189-0866 | 0.131MB
-  server: 209.126.84.189
+- name: 🇺🇸US-209.126.84.189-0861 | 3.921MB
+  server: v2ray.codefyinc.com
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -372,12 +352,12 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 209.126.84.189
-- name: 🇭🇰HK-47.243.244.164-0428 | 0.0MB
-  server: n1761214908.wpg27.xyz
+      Host: v2ray.codefyinc.com
+- name: 🇺🇸US-172.234.24.211-0223 | 0.0MB
+  server: vjp1.0bad.com
   port: 443
   type: vmess
-  uuid: 3514a93f-bb26-4442-8f99-971b2ff3388a
+  uuid: 927094d3-d678-4763-8591-e240d0bcae87
   alterId: 0
   cipher: auto
   tls: true
@@ -386,58 +366,13 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: n1761214908.wpg27.xyz
-- name: 🇯🇵JP-47.245.42.92-4756 | 0.0MB
-  server: n1753598452.wpg27.xyz
+      Host: vjp1.0bad.com
+- name: 🇸🇬SG-103.253.26.134-0225 | 0.0MB
+  server: 103.253.26.134
   port: 443
   type: vmess
-  uuid: 4f23eb7c-ef2f-43b0-90dd-f2b8a75954a5
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇯🇵JP-47.245.42.92-4756 | 0.0MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: n1753598452.wpg27.xyz
-- name: RELAY-104.18.42.98-7135 | 0.0MB
-  server: cf.090227.xyz
-  port: 443
-  type: vmess
-  uuid: 290cc691-3ac6-4387-98a1-25c8eb8ca2ea
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: RELAY-104.18.42.98-7135 | 0.0MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: sgal.dagrate.eu.org
-- name: 🇭🇰HK-8.210.166.22-0418 | 0.0MB
-  server: n1761214911.74qxv.top
-  port: 443
-  type: vmess
-  uuid: 372c1939-299d-4946-9633-5ffa971f8b67
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇭🇰HK-8.210.166.22-0418 | 0.0MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: n1761214911.74qxv.top
-- name: RELAY-104.19.173.68-0925 | 0.0MB
-  server: www.digitalocean.com
-  port: 443
-  type: vmess
-  uuid: 3a3e263d-223f-49cc-bbdb-f7e07a55e6fe
-  alterId: 0
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  alterId: 4
   cipher: auto
   tls: true
   skip-cert-verify: false
@@ -445,7 +380,7 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: by.6111.online
+      Host: eeh7iewe.com
 - name: DE_1
   server: 185.146.173.158
   port: 443
