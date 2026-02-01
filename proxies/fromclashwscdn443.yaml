@@ -1,5 +1,5 @@
 proxies:
-- name: 46170052cf9c4c97abab485042d0cad4_@_[🏁]t.me/ConfigsHub
+- name: b44328c4e79641808d19d452257fadda_@_[🏁]t.me/ConfigsHub
   server: d2fog4flcfgb8c.cloudfront.net
   uuid: e070e567-7996-45a9-9016-0143420946ef
   cipher: auto
@@ -13,6 +13,37 @@ proxies:
   fingerprint: ''
   ws-opts:
     path: /8536cb1926c24bbc99d7bd93350ec564
+- name: e05ed4b678334dafb6c65d7f799cad0a_@_[🏁]t.me/ConfigsHub
+  server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+  uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /azumase.ren
+- name: cf73ffd3b05144ebb9d4e886116e654f_@_[🏁]t.me/ConfigsHub
+  server: seoul03.zgjok.com
+  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: seoul03.zgjok.com
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: seoul03.zgjok.com
+    path: /
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -296,21 +327,6 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇰🇷KR-152.70.88.177-0306 | 15.498MB
-  server: seoul03.zgjok.com
-  port: 443
-  type: vmess
-  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇰🇷KR-152.70.88.177-0306 | 15.498MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: seoul03.zgjok.com
 - name: 🇺🇸US-209.126.84.189-0859 | 1.61MB
   server: v2ray.codefyinc.com
   port: 443
