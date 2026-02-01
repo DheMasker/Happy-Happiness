@@ -1,4 +1,18 @@
 proxies:
+- name: 46170052cf9c4c97abab485042d0cad4_@_[🏁]t.me/ConfigsHub
+  server: d2fog4flcfgb8c.cloudfront.net
+  uuid: e070e567-7996-45a9-9016-0143420946ef
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /8536cb1926c24bbc99d7bd93350ec564
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -282,7 +296,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇰🇷KR-152.70.88.177-0256 | 19.199MB
+- name: 🇰🇷KR-152.70.88.177-0306 | 15.498MB
   server: seoul03.zgjok.com
   port: 443
   type: vmess
@@ -291,13 +305,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇰🇷KR-152.70.88.177-0256 | 19.199MB
+  servername: 🇰🇷KR-152.70.88.177-0306 | 15.498MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: seoul03.zgjok.com
-- name: 🇺🇸US-209.126.84.189-0815 | 5.602MB
+- name: 🇺🇸US-209.126.84.189-0859 | 1.61MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -311,7 +325,50 @@ proxies:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: 🇯🇵JP-47.74.52.195-4629 | 0.0MB
+- name: 🇰🇷KR-146.56.136.237-4923 | 0.727MB
+  server: seoul02.zgjok.com
+  port: 443
+  type: vmess
+  uuid: 1a1e5196-eab4-4772-9012-65c27f19a524
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇰🇷KR-146.56.136.237-4923 | 0.727MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: seoul02.zgjok.com
+- name: 🇸🇬SG-158.178.230.34-4907 | 0.57MB
+  server: singapore02.zgjok.com
+  port: 443
+  type: vmess
+  uuid: 780c7671-e8c8-45ab-922b-4fdfc4310aa0
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: singapore02.zgjok.com
+- name: RELAY-104.21.76.158-0866 | 0.444MB
+  server: sy4.620720.xyz
+  port: 443
+  type: vmess
+  uuid: 516d8a7a-3f0b-41d3-bad0-246116381516
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: sy4.620720.xyz
+- name: 🇯🇵JP-47.74.52.195-0413 | 0.065MB
   server: n1753598448.74qxv.top
   port: 443
   type: vmess
@@ -320,13 +377,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇯🇵JP-47.74.52.195-4629 | 0.0MB
+  servername: 🇯🇵JP-47.74.52.195-0413 | 0.065MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: n1753598448.74qxv.top
-- name: 🇯🇵JP-47.245.15.239-1676 | 0.0MB
+- name: 🇯🇵JP-47.245.15.239-0420 | 0.023MB
   server: n1753598446.wpg27.xyz
   port: 443
   type: vmess
@@ -335,13 +392,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇯🇵JP-47.245.15.239-1676 | 0.0MB
+  servername: 🇯🇵JP-47.245.15.239-0420 | 0.023MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: n1753598446.wpg27.xyz
-- name: 🇸🇬SG-103.253.26.20-0182 | 0.0MB
+- name: 🇸🇬SG-103.253.26.20-0228 | 0.0MB
   server: 103.253.26.20
   port: 443
   type: vmess
@@ -355,19 +412,6 @@ proxies:
     path: /
     headers:
       Host: zecjk.com
-- name: us|6cc8|puddincat07@Telegram
-  server: 104.17.147.11
-  network: ws
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  skip-cert-verify: true
-  sni: jobscareerfortoday.com
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: jobscareerfortoday.com
-    path: 6b777a91
 - name: DE_1
   server: 185.146.173.158
   port: 443
