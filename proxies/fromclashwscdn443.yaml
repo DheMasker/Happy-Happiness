@@ -1,5 +1,5 @@
 proxies:
-- name: f2403a102dcd44cb8abf4b6955f9e67c_@_[🏁]t.me/ConfigsHub
+- name: 9feaba8f6c1b477085c9fa1d2b9421bf_@_[🏁]t.me/ConfigsHub
   server: seoul03.zgjok.com
   uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
   cipher: auto
@@ -16,6 +16,37 @@ proxies:
     headers:
       host: seoul03.zgjok.com
     path: /
+- name: c254474d225d477199dae5bb7ad98c36_@_🇰🇷[openproxylist.com] vmess-KR
+  server: seoul02.zgjok.com
+  uuid: 1a1e5196-eab4-4772-9012-65c27f19a524
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: seoul02.zgjok.com
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: seoul02.zgjok.com
+    path: /
+- name: b10b2b068b5d4cd49365915caa66c267_@_@Hope_Net-join-us-on-Telegram
+  server: 66.241.124.229
+  uuid: ea4909ef-7ca6-4b46-bf2e-6c07896ef338
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /ea4909ef-7ca6-4b46-bf2e-6c07896ef338-vm
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -299,7 +330,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇺🇸US-209.126.84.189-0859 | 1.61MB
+- name: 🇺🇸US-209.126.84.189-0859 | 4.795MB
   server: v2ray.codefyinc.com
   port: 443
   type: vmess
@@ -313,22 +344,7 @@ proxies:
     path: /
     headers:
       Host: v2ray.codefyinc.com
-- name: 🇰🇷KR-146.56.136.237-4923 | 0.727MB
-  server: seoul02.zgjok.com
-  port: 443
-  type: vmess
-  uuid: 1a1e5196-eab4-4772-9012-65c27f19a524
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇰🇷KR-146.56.136.237-4923 | 0.727MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: seoul02.zgjok.com
-- name: 🇸🇬SG-158.178.230.34-4907 | 0.57MB
+- name: 🇸🇬SG-158.178.230.34-4907 | 2.821MB
   server: singapore02.zgjok.com
   port: 443
   type: vmess
@@ -342,7 +358,7 @@ proxies:
     path: /
     headers:
       Host: singapore02.zgjok.com
-- name: RELAY-104.21.76.158-0866 | 0.444MB
+- name: RELAY-104.21.76.158-0866 | 1.486MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
@@ -356,7 +372,7 @@ proxies:
     path: /
     headers:
       Host: sy4.620720.xyz
-- name: 🇯🇵JP-47.74.52.195-0413 | 0.065MB
+- name: 🇯🇵JP-47.74.52.195-0413 | 0.091MB
   server: n1753598448.74qxv.top
   port: 443
   type: vmess
@@ -365,13 +381,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇯🇵JP-47.74.52.195-0413 | 0.065MB
+  servername: 🇯🇵JP-47.74.52.195-0413 | 0.091MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: n1753598448.74qxv.top
-- name: 🇯🇵JP-47.245.15.239-0420 | 0.023MB
+- name: 🇯🇵JP-47.245.15.239-0420 | 0.005MB
   server: n1753598446.wpg27.xyz
   port: 443
   type: vmess
@@ -380,7 +396,7 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇯🇵JP-47.245.15.239-0420 | 0.023MB
+  servername: 🇯🇵JP-47.245.15.239-0420 | 0.005MB
   network: ws
   ws-opts:
     path: /
@@ -400,6 +416,18 @@ proxies:
     path: /
     headers:
       Host: zecjk.com
+- name: 🇬🇧GB-45.89.111.142-1624 | 26.357MB
+  server: 45.89.111.142
+  port: 443
+  type: trojan
+  password: 7LBbob9IutFObLxLf9Svc1HaV
+  sni: hl-freedom-1.undef.network
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /f2fc2a1f
+    headers:
+      Host: hl-freedom-1.undef.network
 - name: DE_1
   server: 185.146.173.158
   port: 443
