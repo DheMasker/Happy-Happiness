@@ -47,7 +47,33 @@ proxies:
     headers:
       Host: nightgemshop.sep-vpn.site
   udp: true
-- name: '%F0%9F%87%BA%F0%9F%87%B8US-216.24.57.250-1630'
+- name: '%F0%9F%8F%81RELAY-104.21.40.34-1611'
+  server: 104.18.1.196
+  port: 443
+  type: trojan
+  password: humanity
+  skip-cert-verify: true
+  sni: www.gossipglove.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.gossipglove.com
+  udp: true
+- name: '%F0%9F%8F%81RELAY-104.21.88.77-0906'
+  server: 104.18.1.196
+  port: 443
+  type: trojan
+  password: 2bcfbfba-b446-4ad5-93ad-72af9e008f61
+  skip-cert-verify: true
+  sni: blackshadow.dpdns.org
+  network: ws
+  ws-opts:
+    path: /195.123.218.174-443
+    headers:
+      Host: blackshadow.dpdns.org
+  udp: true
+- name: '%F0%9F%87%BA%F0%9F%87%B8US-216.24.57.250-0940'
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -60,33 +86,7 @@ proxies:
     headers:
       Host: afrcloud1.mmv.kr
   udp: true
-- name: '%F0%9F%8F%81RELAY-172.64.152.23-1986'
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: humanity
-  skip-cert-verify: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-  udp: true
-- name: '%F0%9F%8F%81RELAY-188.114.97.3-2125'
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: Puj01Rc8UcA9IzcFcYOs8KMOhCz6aX2Q
-  skip-cert-verify: true
-  sni: mfyousheng.nl.eu.org
-  network: ws
-  ws-opts:
-    path: /tjwsLhx0SFASG4l9FERJ1g
-    headers:
-      Host: mfyousheng.nl.eu.org
-  udp: true
-- name: '%F0%9F%8F%81RELAY-172.67.131.245-8045'
+- name: '%F0%9F%8F%81RELAY-172.67.131.245-8019'
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -99,7 +99,7 @@ proxies:
     headers:
       Host: series-v1.samanehha.co
   udp: true
-- name: '%F0%9F%87%AB%F0%9F%87%B7FR-146.70.158.111-8868'
+- name: '%F0%9F%87%AB%F0%9F%87%B7FR-146.70.158.111-8842'
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -112,7 +112,7 @@ proxies:
     headers:
       Host: amin.karkas1.ir
   udp: true
-- name: '%F0%9F%8F%81RELAY-104.21.79.246-9068'
+- name: '%F0%9F%8F%81RELAY-104.21.79.246-9042'
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -125,7 +125,7 @@ proxies:
     headers:
       Host: notdirect.howhealthyistoomajreally.homes
   udp: true
-- name: '%F0%9F%8F%81RELAY-104.16.183.101-9130'
+- name: '%F0%9F%8F%81RELAY-104.16.183.101-9104'
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -138,31 +138,18 @@ proxies:
     headers:
       Host: tws23.kallepache.store
   udp: true
-- name: '[🇨🇭] [tr-tl-ws] [260203-083657.908]'
+- name: '[🇨🇭] [tr-tl-ws] [260203-171549.733]'
   server: 104.18.1.196
   port: 443
   type: trojan
   password: Puj01Rc8UcA9IzcFcYOs8KMOhCz6aX2Q
   skip-cert-verify: true
-  sni: mfyousheng.nl.eu.org#[🇨🇭] [tr-tl-ws] [260203-083657.908]
+  sni: mfyousheng.nl.eu.org#[🇨🇭] [tr-tl-ws] [260203-171549.733]
   network: ws
   ws-opts:
     path: /tjwsLhx0SFASG4l9FERJ1g
     headers:
       Host: mfyousheng.nl.eu.org
-  udp: true
-- name: '[🇬🇧] [tr-tl-ws] [260203-083655.138]'
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: 76yTlnTIsjCTlmqnUJ5Tzc1rM
-  skip-cert-verify: true
-  sni: hl-freedom-0.undef.network
-  network: ws
-  ws-opts:
-    path: /f2fc2a1f
-    headers:
-      Host: hl-freedom-0.undef.network
   udp: true
 - name: 🇺🇸美国11 | ⬇️ 2.8MB/s
   server: 104.18.1.196
@@ -526,6 +513,19 @@ proxies:
     headers:
       Host: www.calmlunch.com
   udp: true
+- name: shankamil
+  server: 104.18.1.196
+  port: 443
+  type: trojan
+  password: humanity
+  skip-cert-verify: true
+  sni: www.creationlong.org#shankamil
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.creationlong.org
+  udp: true
 - name: '%40ho3ino00%F0%9F%A4%A3+%D8%A2%D8%AE%D9%88%D9%86%D8%AF%DB%8C+%D8%AF%D8%B1+%D8%AC%D8%B2%D8%A7%DB%8C%D8%B1+%D8%A7%D8%B3%DA%A9%D8%A7%D9%86%D8%AF%DB%8C%D9%86%D8%A7%D9%88%DB%8C'
   server: 104.18.1.196
   port: 443
@@ -538,19 +538,6 @@ proxies:
     path: /trojanws?ed=2048
     headers:
       Host: cdir-0203.wlfvip.com
-  udp: true
-- name: '%3E%3E%40v2nodes%3A%3APL'
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: humanity
-  skip-cert-verify: true
-  sni: www.creationlong.org#%3E%3E%40v2nodes%3A%3APL
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.creationlong.org
   udp: true
 - name: '%3E%3E%40DailyV2RY%3A%3AUS'
   server: 104.18.1.196
@@ -565,7 +552,7 @@ proxies:
     headers:
       Host: 004.electrocellco-cf-004.workers.dev
   udp: true
-- name: 4FreeIran-3324
+- name: 4Sarina-3323
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -578,7 +565,7 @@ proxies:
     headers:
       Host: us1.test3.net
   udp: true
-- name: 4FreeIran-3334
+- name: 4Sarina-3334
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -591,7 +578,7 @@ proxies:
     headers:
       Host: us1.test3.net
   udp: true
-- name: 4FreeIran-3367
+- name: 4Sarina-3367
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -604,7 +591,7 @@ proxies:
     headers:
       Host: se1.trojanvpn.de
   udp: true
-- name: 4FreeIran-3426
+- name: 4Sarina-3427
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -617,7 +604,7 @@ proxies:
     headers:
       Host: de1.test3.net
   udp: true
-- name: 4FreeIran-3436
+- name: 4Sarina-3437
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -630,7 +617,7 @@ proxies:
     headers:
       Host: de1.test3.net
   udp: true
-- name: 4FreeIran-3503
+- name: 4Sarina-3504
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -643,7 +630,7 @@ proxies:
     headers:
       Host: de1.test3.net
   udp: true
-- name: 4FreeIran-3510
+- name: 4Sarina-3511
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -652,11 +639,11 @@ proxies:
   sni: blackshadow.dpdns.org
   network: ws
   ws-opts:
-    path: /195.123.218.174-443#4FreeIran-3510
+    path: /195.123.218.174-443#4Sarina-3511
     headers:
       Host: blackshadow.dpdns.org
   udp: true
-- name: 4FreeIran-3647
+- name: 4Sarina-3649
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -665,11 +652,11 @@ proxies:
   sni: c2mk.ciscocdn1.live
   network: ws
   ws-opts:
-    path: /rDCYQta83d0oPABKBhcIX#4FreeIran-3647
+    path: /rDCYQta83d0oPABKBhcIX#4Sarina-3649
     headers:
       Host: c2mk.ciscocdn1.live
   udp: true
-- name: 4FreeIran-3664
+- name: 4Sarina-3667
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -682,20 +669,20 @@ proxies:
     headers:
       Host: de1.trojanvpn.dE
   udp: true
-- name: 4FreeIran-3676
+- name: 4Sarina-3679
   server: 104.18.1.196
   port: 443
   type: trojan
   password: 5a2c16f9
   skip-cert-verify: true
-  sni: snippets.kkii.eu.org#4FreeIran-3676
+  sni: snippets.kkii.eu.org#4Sarina-3679
   network: ws
   ws-opts:
     path: Telegram@V2rayAlpha
     headers:
       Host: snippets.kkii.eu.org
   udp: true
-- name: 4FreeIran-3681
+- name: 4Sarina-3684
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -704,11 +691,11 @@ proxies:
   sni: c3mc.ciscocdn1.live
   network: ws
   ws-opts:
-    path: /ywQ9KSLI4ZBm9wOAXUaN#4FreeIran-3681
+    path: /ywQ9KSLI4ZBm9wOAXUaN#4Sarina-3684
     headers:
       Host: c3mc.ciscocdn1.live
   udp: true
-- name: 4FreeIran-3690
+- name: 4Sarina-3693
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -721,7 +708,7 @@ proxies:
     headers:
       Host: de1.test3.net
   udp: true
-- name: 4FreeIran-3694
+- name: 4Sarina-3697
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -730,11 +717,11 @@ proxies:
   sni: c1mc.cdncisco4.co
   network: ws
   ws-opts:
-    path: /422Kdfwzf49IxeZJa#4FreeIran-3694
+    path: /422Kdfwzf49IxeZJa#4Sarina-3697
     headers:
       Host: c1mc.cdncisco4.co
   udp: true
-- name: 4FreeIran-3873
+- name: 4Sarina-3868
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -747,7 +734,7 @@ proxies:
     headers:
       Host: _acme-challenge.2go.cloudns.be
   udp: true
-- name: 4FreeIran-3907
+- name: 4Sarina-3901
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -760,7 +747,7 @@ proxies:
     headers:
       Host: fr1.test3.net
   udp: true
-- name: 4FreeIran-3919
+- name: 4Sarina-3911
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -773,20 +760,20 @@ proxies:
     headers:
       Host: de1.test3.net
   udp: true
-- name: 4FreeIran-4072
+- name: 4Sarina-4059
   server: 104.18.1.196
   port: 443
   type: trojan
   password: POORIARED
   skip-cert-verify: true
-  sni: reDfRee8.REDFree8.ir#4FreeIran-4072
+  sni: reDfRee8.REDFree8.ir#4Sarina-4059
   network: ws
   ws-opts:
     path: /eyJqdW5rIjoiVUl6eXhLZkkwUTJ3ZzkiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed=2560
     headers:
-      Host: reDfRee8.REDFree8.ir#4FreeIran-4072
+      Host: reDfRee8.REDFree8.ir#4Sarina-4059
   udp: true
-- name: 4FreeIran-4150
+- name: 4Sarina-4144
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -795,37 +782,11 @@ proxies:
   sni: syndication-statutes-wanted-logo.trycloudflare.com
   network: ws
   ws-opts:
-    path: /argox-tr#4FreeIran-4150
+    path: /argox-tr#4Sarina-4144
     headers:
       Host: syndication-statutes-wanted-logo.trycloudflare.com
   udp: true
-- name: 4FreeIran-4191
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: bpb-trojan
-  skip-cert-verify: true
-  sni: singbox.lu567890.us.kg
-  network: ws
-  ws-opts:
-    path: /tr
-    headers:
-      Host: singbox.lu567890.us.kg
-  udp: true
-- name: 4FreeIran-4194
-  server: 104.18.1.196
-  port: 443
-  type: trojan
-  password: bpb-trojan
-  skip-cert-verify: true
-  sni: singbox.lu567890.us.kg
-  network: ws
-  ws-opts:
-    path: /tr
-    headers:
-      Host: singbox.lu567890.us.kg
-  udp: true
-- name: 4FreeIran-4295
+- name: 4Sarina-4286
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -838,7 +799,7 @@ proxies:
     headers:
       Host: 6us3.pqjc.buzz
   udp: true
-- name: 4FreeIran-4296
+- name: 4Sarina-4287
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -851,33 +812,33 @@ proxies:
     headers:
       Host: p6us4.pqjc.buzz
   udp: true
-- name: 4FreeIran-4363
+- name: 4Sarina-4354
   server: 104.18.1.196
   port: 443
   type: trojan
   password: f0b09670-9e9a-48f2-acd5-5b6cc33c83c5
   skip-cert-verify: true
-  sni: cdir-0303.wlfvip.shop#4FreeIran-4363
+  sni: cdir-0303.wlfvip.shop#4Sarina-4354
   network: ws
   ws-opts:
     path: /trojanws?ed=2048
     headers:
       Host: cdir-0303.wlfvip.shop
   udp: true
-- name: 4FreeIran-4449
+- name: 4Sarina-4454
   server: 104.18.1.196
   port: 443
   type: trojan
   password: humanity
   skip-cert-verify: true
-  sni: www.multiplydose.com
+  sni: www.multiplydose.com#4Sarina-4454
   network: ws
   ws-opts:
-    path: /assignment#4FreeIran-4449
+    path: /assignment
     headers:
       Host: www.multiplydose.com
   udp: true
-- name: 4FreeIran-4532
+- name: 4Sarina-4523
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -890,7 +851,7 @@ proxies:
     headers:
       Host: aws-uae-1.f1cflined.com
   udp: true
-- name: 4FreeIran-4533
+- name: 4Sarina-4524
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -903,7 +864,7 @@ proxies:
     headers:
       Host: aws-us-oregon-1.f1cflinec.com
   udp: true
-- name: 4FreeIran-4543
+- name: 4Sarina-4534
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -916,7 +877,7 @@ proxies:
     headers:
       Host: aws-us-oregon-1.f1cflined.com
   udp: true
-- name: 4FreeIran-4748
+- name: 4Sarina-4749
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -929,7 +890,7 @@ proxies:
     headers:
       Host: aws-sg-1.f1cflineb.com
   udp: true
-- name: 4FreeIran-4749
+- name: 4Sarina-4750
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -942,7 +903,7 @@ proxies:
     headers:
       Host: aws-aus-sydney-1.f1cflinea.com
   udp: true
-- name: 4FreeIran-4760
+- name: 4Sarina-4761
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -955,7 +916,7 @@ proxies:
     headers:
       Host: aws-ge-frankfurt-1.f1cflinea.com
   udp: true
-- name: 4FreeIran-4767
+- name: 4Sarina-4768
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -968,7 +929,7 @@ proxies:
     headers:
       Host: aws-ar-buenosaires-1.f1cflinea.com
   udp: true
-- name: 4FreeIran-4768
+- name: 4Sarina-4769
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -981,7 +942,7 @@ proxies:
     headers:
       Host: aws-ca-central-1.f1cflinea.com
   udp: true
-- name: 4FreeIran-4769
+- name: 4Sarina-4770
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -994,7 +955,7 @@ proxies:
     headers:
       Host: aws-ca-central-1.f1cflineb.com
   udp: true
-- name: 4FreeIran-4770
+- name: 4Sarina-4771
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1007,7 +968,7 @@ proxies:
     headers:
       Host: aws-ch-zurich-1.f1cflineb.com
   udp: true
-- name: 4FreeIran-4771
+- name: 4Sarina-4772
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1020,7 +981,7 @@ proxies:
     headers:
       Host: aws-es-madrid-1.f1rocketnode.com
   udp: true
-- name: 4FreeIran-4772
+- name: 4Sarina-4773
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1033,7 +994,7 @@ proxies:
     headers:
       Host: aws-in-mumbai-1.f1cflinea.com
   udp: true
-- name: 4FreeIran-4773
+- name: 4Sarina-4774
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1046,7 +1007,7 @@ proxies:
     headers:
       Host: aws-se-stockholm-1.f1cflinea.com
   udp: true
-- name: 4FreeIran-4774
+- name: 4Sarina-4775
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1059,7 +1020,7 @@ proxies:
     headers:
       Host: aws-uae-1.f1cflineb.com
   udp: true
-- name: 4FreeIran-4776
+- name: 4Sarina-4777
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1072,7 +1033,7 @@ proxies:
     headers:
       Host: aws-uk-london-1.f1cflinea.com
   udp: true
-- name: 4FreeIran-4777
+- name: 4Sarina-4778
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1085,7 +1046,7 @@ proxies:
     headers:
       Host: aws-uk-london-1.f1cflineb.com
   udp: true
-- name: 4FreeIran-4781
+- name: 4Sarina-4782
   server: 104.18.1.196
   port: 443
   type: trojan
@@ -1098,7 +1059,7 @@ proxies:
     headers:
       Host: vahidqaz-7o61u7.vahidqaz.workers.dev
   udp: true
-- name: 4FreeIran-9599
+- name: 4Sarina-9796
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1114,7 +1075,7 @@ proxies:
     headers:
       Host: d84ee332-1284-11ee-a5c8-8213fd3be4b9.bamarambash.monster
   udp: true
-- name: 4FreeIran-9620
+- name: 4Sarina-9817
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1130,7 +1091,7 @@ proxies:
     headers:
       Host: ecc.vtcss.top
   udp: true
-- name: 4FreeIran-9631
+- name: 4Sarina-9828
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1146,7 +1107,7 @@ proxies:
     headers:
       Host: vmess.lionandsunflag.com
   udp: true
-- name: 4FreeIran-9761
+- name: 4Sarina-9953
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1162,7 +1123,7 @@ proxies:
     headers:
       Host: edeen.makeup
   udp: true
-- name: 4FreeIran-9764
+- name: 4Sarina-9956
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1178,7 +1139,7 @@ proxies:
     headers:
       Host: odelia.autos
   udp: true
-- name: 4FreeIran-9907
+- name: 4Sarina-10099
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1194,7 +1155,7 @@ proxies:
     headers:
       Host: octavi.cfd
   udp: true
-- name: 4FreeIran-9921
+- name: 4Sarina-10113
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1210,7 +1171,7 @@ proxies:
     headers:
       Host: oliv.beauty
   udp: true
-- name: 4FreeIran-9927
+- name: 4Sarina-10119
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1226,7 +1187,7 @@ proxies:
     headers:
       Host: alvvin.click
   udp: true
-- name: 4FreeIran-9931
+- name: 4Sarina-10123
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1242,7 +1203,7 @@ proxies:
     headers:
       Host: ophelia.mom
   udp: true
-- name: 4FreeIran-9949
+- name: 4Sarina-10141
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1258,7 +1219,7 @@ proxies:
     headers:
       Host: cf.tonyluk.link
   udp: true
-- name: 4FreeIran-9978
+- name: 4Sarina-10170
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1274,7 +1235,7 @@ proxies:
     headers:
       Host: waynn.makeup
   udp: true
-- name: 4FreeIran-9979
+- name: 4Sarina-10171
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1290,7 +1251,7 @@ proxies:
     headers:
       Host: adenc35.fixedlfoat.top
   udp: true
-- name: 4FreeIran-9991
+- name: 4Sarina-10184
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1306,7 +1267,7 @@ proxies:
     headers:
       Host: us-1.acyun.tk
   udp: true
-- name: 4FreeIran-10035
+- name: 4Sarina-10228
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1322,7 +1283,7 @@ proxies:
     headers:
       Host: Dusseldorf.kotick.site
   udp: true
-- name: 4FreeIran-10076
+- name: 4Sarina-10269
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1338,7 +1299,7 @@ proxies:
     headers:
       Host: www.17661867.xyz
   udp: true
-- name: 4FreeIran-10398
+- name: 4Sarina-10598
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1354,7 +1315,7 @@ proxies:
     headers:
       Host: www.44945510.xyz
   udp: true
-- name: 4FreeIran-10525
+- name: 4Sarina-10727
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1370,7 +1331,7 @@ proxies:
     headers:
       Host: www.44716766.xyz
   udp: true
-- name: 4FreeIran-10526
+- name: 4Sarina-10728
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1386,7 +1347,7 @@ proxies:
     headers:
       Host: www.19458162.xyz
   udp: true
-- name: 4FreeIran-10531
+- name: 4Sarina-10733
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1402,7 +1363,7 @@ proxies:
     headers:
       Host: www.29135019.xyz
   udp: true
-- name: 4FreeIran-10804
+- name: 4Sarina-11005
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1418,7 +1379,7 @@ proxies:
     headers:
       Host: v2ray.codefyinc.com
   udp: true
-- name: 4FreeIran-10929
+- name: 4Sarina-11131
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1434,7 +1395,7 @@ proxies:
     headers:
       Host: schereswed.softwarenews.store
   udp: true
-- name: 4FreeIran-11043
+- name: 4Sarina-11244
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1450,7 +1411,7 @@ proxies:
     headers:
       Host: Lille.kotick.site
   udp: true
-- name: 4FreeIran-11104
+- name: 4Sarina-11305
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1466,7 +1427,7 @@ proxies:
     headers:
       Host: localhoster.ml
   udp: true
-- name: 4FreeIran-11165
+- name: 4Sarina-11361
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1482,7 +1443,7 @@ proxies:
     headers:
       Host: ming2.kiwireich.com
   udp: true
-- name: 4FreeIran-11224
+- name: 4Sarina-11420
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1498,7 +1459,7 @@ proxies:
     headers:
       Host: rlhrwtqusd.site
   udp: true
-- name: 4FreeIran-11387
+- name: 4Sarina-11585
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1514,7 +1475,7 @@ proxies:
     headers:
       Host: 72d6d25e-1b39-11ee-a5c8-8213fd3be4b9.bamarambash.monster
   udp: true
-- name: 4FreeIran-11636
+- name: 4Sarina-11837
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1530,7 +1491,7 @@ proxies:
     headers:
       Host: www.49419962.xyz
   udp: true
-- name: 4FreeIran-11676
+- name: 4Sarina-11877
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1546,7 +1507,7 @@ proxies:
     headers:
       Host: 209.126.84.189
   udp: true
-- name: 4FreeIran-11880
+- name: 4Sarina-12081
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1562,7 +1523,7 @@ proxies:
     headers:
       Host: dd2.1808.cf
   udp: true
-- name: 4FreeIran-11895
+- name: 4Sarina-12096
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1578,7 +1539,7 @@ proxies:
     headers:
       Host: e.cn-db.top
   udp: true
-- name: 4FreeIran-11952
+- name: 4Sarina-12154
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1594,7 +1555,7 @@ proxies:
     headers:
       Host: 2.freek1.xyz
   udp: true
-- name: 4FreeIran-11972
+- name: 4Sarina-12174
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1610,7 +1571,7 @@ proxies:
     headers:
       Host: d.freeh1.xyz
   udp: true
-- name: 4FreeIran-11975
+- name: 4Sarina-12177
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1626,7 +1587,7 @@ proxies:
     headers:
       Host: 3.freek1.xyz
   udp: true
-- name: 4FreeIran-12008
+- name: 4Sarina-12210
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1642,7 +1603,7 @@ proxies:
     headers:
       Host: www.42088326.xyz
   udp: true
-- name: 4FreeIran-12153
+- name: 4Sarina-12353
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1658,7 +1619,7 @@ proxies:
     headers:
       Host: www.72470068.xyz
   udp: true
-- name: 4FreeIran-12584
+- name: 4Sarina-12792
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1674,7 +1635,7 @@ proxies:
     headers:
       Host: cdnca1.digisport.shop
   udp: true
-- name: 4FreeIran-12619
+- name: 4Sarina-12829
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1690,7 +1651,7 @@ proxies:
     headers:
       Host: www.62976171.xyz
   udp: true
-- name: 4FreeIran-12893
+- name: 4Sarina-13105
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1706,7 +1667,7 @@ proxies:
     headers:
       Host: bfcEb82481eEA41083b721E3D99d42c5b34AE27e4e03170FfaD8a75e948050D.wwwNaMAsha.Com
   udp: true
-- name: 4FreeIran-12911
+- name: 4Sarina-13125
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1722,7 +1683,7 @@ proxies:
     headers:
       Host: cold-dawn-9246.fly.dev
   udp: true
-- name: 4FreeIran-12925
+- name: 4Sarina-13137
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1738,7 +1699,7 @@ proxies:
     headers:
       Host: dd2.1808.cf
   udp: true
-- name: 4FreeIran-12928
+- name: 4Sarina-13140
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1754,7 +1715,7 @@ proxies:
     headers:
       Host: lo.twittei.me
   udp: true
-- name: 4FreeIran-12929
+- name: 4Sarina-13141
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1770,7 +1731,7 @@ proxies:
     headers:
       Host: us2.twittei.me
   udp: true
-- name: 4FreeIran-12930
+- name: 4Sarina-13142
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1786,7 +1747,7 @@ proxies:
     headers:
       Host: vceu3e.twittei.me
   udp: true
-- name: 4FreeIran-12955
+- name: 4Sarina-13165
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1802,7 +1763,7 @@ proxies:
     headers:
       Host: us.dalazhi.eu.org
   udp: true
-- name: 4FreeIran-12972
+- name: 4Sarina-13183
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1818,7 +1779,7 @@ proxies:
     headers:
       Host: us4.sanfencdn1.com
   udp: true
-- name: 4FreeIran-12973
+- name: 4Sarina-13184
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1834,7 +1795,7 @@ proxies:
     headers:
       Host: us3.sanfencdn1.com
   udp: true
-- name: 4FreeIran-13014
+- name: 4Sarina-13222
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1850,7 +1811,7 @@ proxies:
     headers:
       Host: amstd.digires.shop
   udp: true
-- name: 4FreeIran-13027
+- name: 4Sarina-13235
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1866,7 +1827,7 @@ proxies:
     headers:
       Host: afrhms16v.bestxray.buzz
   udp: true
-- name: 4FreeIran-13033
+- name: 4Sarina-13241
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1882,7 +1843,7 @@ proxies:
     headers:
       Host: ahsorathiyaa.fly.dev
   udp: true
-- name: 4FreeIran-13041
+- name: 4Sarina-13249
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1898,7 +1859,7 @@ proxies:
     headers:
       Host: 1c5854ba-1b44-11ee-a146-8213fd3be4b9.bamarambash.monster
   udp: true
-- name: 4FreeIran-13051
+- name: 4Sarina-13259
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1914,7 +1875,7 @@ proxies:
     headers:
       Host: 2.wuxianliulianng.xyz
   udp: true
-- name: 4FreeIran-13068
+- name: 4Sarina-13275
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1930,7 +1891,7 @@ proxies:
     headers:
       Host: cdntr2.digisport.shop
   udp: true
-- name: 4FreeIran-13082
+- name: 4Sarina-13289
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1946,7 +1907,7 @@ proxies:
     headers:
       Host: zheshiscp.com
   udp: true
-- name: 4FreeIran-13091
+- name: 4Sarina-13299
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1962,7 +1923,7 @@ proxies:
     headers:
       Host: glweidf.cfd
   udp: true
-- name: 4FreeIran-13188
+- name: 4Sarina-13397
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1978,7 +1939,7 @@ proxies:
     headers:
       Host: fn.mostafago.tk
   udp: true
-- name: 4FreeIran-13192
+- name: 4Sarina-13401
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -1994,7 +1955,7 @@ proxies:
     headers:
       Host: hms02.fxiaomi.sbs
   udp: true
-- name: 4FreeIran-13195
+- name: 4Sarina-13404
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2010,7 +1971,7 @@ proxies:
     headers:
       Host: gwdef.sbs
   udp: true
-- name: 4FreeIran-13243
+- name: 4Sarina-13452
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2026,7 +1987,7 @@ proxies:
     headers:
       Host: jahfkjha.cfd
   udp: true
-- name: 4FreeIran-13279
+- name: 4Sarina-13489
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2042,7 +2003,7 @@ proxies:
     headers:
       Host: linde06.indiavideo.sbs
   udp: true
-- name: 4FreeIran-13290
+- name: 4Sarina-13502
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2058,7 +2019,7 @@ proxies:
     headers:
       Host: b8767a6a-1c30-11ee-ba76-9ee097a90b8b.bamarambash.monster
   udp: true
-- name: 4FreeIran-13292
+- name: 4Sarina-13504
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2074,7 +2035,7 @@ proxies:
     headers:
       Host: 4.saintink.eu.org
   udp: true
-- name: 4FreeIran-13312
+- name: 4Sarina-13524
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2090,7 +2051,7 @@ proxies:
     headers:
       Host: n1744454498.lie5d.cyou
   udp: true
-- name: 4FreeIran-13314
+- name: 4Sarina-13526
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2106,7 +2067,7 @@ proxies:
     headers:
       Host: n1744454501.4u9ma.icu
   udp: true
-- name: 4FreeIran-13326
+- name: 4Sarina-13537
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2122,7 +2083,7 @@ proxies:
     headers:
       Host: n1761214919.mv7wh.tech
   udp: true
-- name: 4FreeIran-13356
+- name: 4Sarina-13568
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2138,7 +2099,7 @@ proxies:
     headers:
       Host: seoul02.zgjok.com
   udp: true
-- name: 4FreeIran-13358
+- name: 4Sarina-13571
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2154,7 +2115,7 @@ proxies:
     headers:
       Host: seoul03.zgjok.com
   udp: true
-- name: 4FreeIran-13395
+- name: 4Sarina-13608
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2170,7 +2131,7 @@ proxies:
     headers:
       Host: singapore02.zgjok.com
   udp: true
-- name: 4FreeIran-13421
+- name: 4Sarina-13634
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2186,7 +2147,7 @@ proxies:
     headers:
       Host: sy4.620720.xyz
   udp: true
-- name: 4FreeIran-13445
+- name: 4Sarina-13658
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2202,7 +2163,7 @@ proxies:
     headers:
       Host: ru1.mianfenyun012.eu.org
   udp: true
-- name: 4FreeIran-13468
+- name: 4Sarina-13681
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2218,7 +2179,7 @@ proxies:
     headers:
       Host: sub2.saintink.eu.org
   udp: true
-- name: 4FreeIran-13532
+- name: 4Sarina-13748
   server: 104.18.1.196
   port: 443
   type: vmess
@@ -2234,7 +2195,7 @@ proxies:
     headers:
       Host: us1.x898989.xyz
   udp: true
-- name: 4FreeIran-13603
+- name: 4Sarina-13817
   server: 104.18.1.196
   port: 443
   type: vmess
