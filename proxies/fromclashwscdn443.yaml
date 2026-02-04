@@ -1,4 +1,49 @@
 proxies:
+- name: c253300ca8ad4bcaabd791d83103eb86_@_[🏁]t.me/ConfigsHub
+  server: cdn-nightgemshop.sep-vpn.site
+  uuid: 9c668def-56ac-42eb-a400-501d2079a405
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: nightgemshop.sep-vpn.site
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: nightgemshop.sep-vpn.site
+    path: /JOIN:@NIGHTGEMSHOP
+- name: 09d1e85ed7b34c259ef6524d4753dd61_@_@Hope_Net-join-us-on-Telegram
+  server: jahfkjha.cfd
+  uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /linkws
+- name: 7c321f48fe484f9c99e72b89b4a2e31e_@_[🏁]t.me/ConfigsHub
+  server: v2ray.codefyinc.com
+  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: false
+  udp: false
+  client-fingerprint: chrome
+  fingerprint: ''
+  ws-opts:
+    path: /vmessws
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -312,20 +357,6 @@ proxies:
     path: /
     headers:
       Host: seoul02.zgjok.com
-- name: 🇺🇸US-209.126.84.189-0869 | 0.429MB
-  server: 209.126.84.189
-  port: 443
-  type: vmess
-  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 209.126.84.189
 - name: 🇸🇬SG-158.178.230.34-0359 | 0.166MB
   server: singapore02.zgjok.com
   port: 443
@@ -384,33 +415,18 @@ proxies:
     path: /
     headers:
       Host: n1761214919.mv7wh.tech
-- name: sg|08a9|puddincat07@Telegram
-  server: 103.253.26.20
-  alterId: 4
-  cipher: auto
-  client-fingerprint: chrome
+- name: us|904d|puddincat07@Telegram
+  server: 104.17.61.4
   network: ws
+  password: 984e400bf5d541b7b0815913fe0c432a
   port: 443
   skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
-  ws-opts:
-    headers:
-      host: zecjk.com
-    path: /ws
-- name: us|2d3c|puddincat07@Telegram
-  server: 104.16.159.2
-  network: ws
-  password: cb1f26aa437d4bfa9b841d28503ce8cc
-  port: 443
-  skip-cert-verify: true
-  sni: jobscareerforstudent.com
+  sni: jobsapplyworld.com
   type: trojan
   udp: true
   ws-opts:
     headers:
-      Host: jobscareerforstudent.com
+      Host: jobsapplyworld.com
     path: 6b777a91
 - name: DE_1
   server: 185.146.173.158
