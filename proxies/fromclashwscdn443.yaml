@@ -1,38 +1,4 @@
 proxies:
-- name: 547f402649594a02a5762d7a130ea892_@_[🏁]t.me/ConfigsHub
-  server: seoul03.zgjok.com
-  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: seoul03.zgjok.com
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: seoul03.zgjok.com
-    path: /
-- name: 1ebfc1155f5540e394701dca4dd19f22_@_🇬🇧[openproxylist.com] vmess-GB
-  server: www.visa.com.hk
-  uuid: 95037be4-a578-4d31-a0a0-951cb09c746f
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: choice-poetry-mug-bluetooth.trycloudflare.com
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: choice-poetry-mug-bluetooth.trycloudflare.com
-    path: /95037be4-a578-4d31-a0a0-951cb09c746f-vm
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -330,6 +296,21 @@ proxies:
     path: /
     headers:
       Host: vc.fly.dev
+- name: 🇰🇷KR-152.70.88.177-0308 | 2.711MB
+  server: seoul03.zgjok.com
+  port: 443
+  type: vmess
+  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇰🇷KR-152.70.88.177-0308 | 2.711MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: seoul03.zgjok.com
 - name: 🇰🇷KR-146.56.136.237-0317 | 2.478MB
   server: seoul02.zgjok.com
   port: 443
