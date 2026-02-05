@@ -1,21 +1,4 @@
 proxies:
-- name: 56e9d3af69444350afbeb16cc963a53b_@_@Hope_Net-join-us-on-Telegram
-  server: 172.67.164.164
-  uuid: a1655f51-1e20-4a92-8a11-b7ca30a7a353
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: afrhms07.xfixedfloat.cfd
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: afrhms07.xfixedfloat.cfd
-    path: /linkws
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -299,7 +282,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇰🇷KR-152.70.88.177-0264 | 12.781MB
+- name: 🇰🇷KR-152.70.88.177-4715 | 19.512MB
   server: seoul03.zgjok.com
   port: 443
   type: vmess
@@ -308,42 +291,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇰🇷KR-152.70.88.177-0264 | 12.781MB
+  servername: 🇰🇷KR-152.70.88.177-4715 | 19.512MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: seoul03.zgjok.com
-- name: 🇰🇷KR-146.56.136.237-0266 | 8.785MB
-  server: seoul02.zgjok.com
-  port: 443
-  type: vmess
-  uuid: 1a1e5196-eab4-4772-9012-65c27f19a524
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇰🇷KR-146.56.136.237-0266 | 8.785MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: seoul02.zgjok.com
-- name: 🇸🇬SG-158.178.230.34-0329 | 4.522MB
-  server: singapore02.zgjok.com
-  port: 443
-  type: vmess
-  uuid: 780c7671-e8c8-45ab-922b-4fdfc4310aa0
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: singapore02.zgjok.com
-- name: 🇺🇸US-209.126.84.189-0812 | 3.472MB
+- name: 🇺🇸US-209.126.84.189-0881 | 2.599MB
   server: 209.126.84.189
   port: 443
   type: vmess
@@ -357,7 +311,21 @@ proxies:
     path: /
     headers:
       Host: 209.126.84.189
-- name: RELAY-104.21.76.158-0349 | 0.884MB
+- name: 🇸🇬SG-158.178.230.34-4698 | 1.206MB
+  server: singapore02.zgjok.com
+  port: 443
+  type: vmess
+  uuid: 780c7671-e8c8-45ab-922b-4fdfc4310aa0
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: singapore02.zgjok.com
+- name: RELAY-104.21.76.158-0882 | 0.269MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
@@ -371,7 +339,22 @@ proxies:
     path: /
     headers:
       Host: sy4.620720.xyz
-- name: 🇯🇵JP-47.74.52.195-4640 | 0.114MB
+- name: 🇯🇵JP-47.245.42.92-0439 | 0.045MB
+  server: n1753598452.wpg27.xyz
+  port: 443
+  type: vmess
+  uuid: 4f23eb7c-ef2f-43b0-90dd-f2b8a75954a5
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇯🇵JP-47.245.42.92-0439 | 0.045MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: n1753598452.wpg27.xyz
+- name: 🇯🇵JP-47.74.52.195-0433 | 0.008MB
   server: n1753598448.74qxv.top
   port: 443
   type: vmess
@@ -380,44 +363,14 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇯🇵JP-47.74.52.195-4640 | 0.114MB
+  servername: 🇯🇵JP-47.74.52.195-0433 | 0.008MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: n1753598448.74qxv.top
-- name: 🇭🇰HK-47.243.63.35-0381 | 0.072MB
-  server: n1761214919.mv7wh.tech
-  port: 443
-  type: vmess
-  uuid: c592f040-faff-47dc-a464-9bccf2dd4e7b
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇭🇰HK-47.243.63.35-0381 | 0.072MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: n1761214919.mv7wh.tech
-- name: 🇭🇰HK-47.242.31.79-0377 | 0.06MB
-  server: n1761214904.wpg27.xyz
-  port: 443
-  type: vmess
-  uuid: 7f6f64ae-3778-434c-adfc-95cb67ee8b73
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇭🇰HK-47.242.31.79-0377 | 0.06MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: n1761214904.wpg27.xyz
-- name: 🇸🇬SG-103.253.26.20-0176 | 0.0MB
-  server: 103.253.26.20
+- name: 🇸🇬SG-103.253.26.134-0238 | 0.0MB
+  server: 103.253.26.134
   port: 443
   type: vmess
   uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
@@ -429,7 +382,7 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: zecjk.com
+      Host: eeh7iewe.com
 - name: DE_1
   server: 185.146.173.158
   port: 443
