@@ -1,4 +1,21 @@
 proxies:
+- name: 7b8bfd41ecb44bb183329e8195ca33ed_@_[🏁]t.me/ConfigsHub
+  server: seoul03.zgjok.com
+  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: seoul03.zgjok.com
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: seoul03.zgjok.com
+    path: /
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -282,21 +299,6 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇰🇷KR-152.70.88.177-4715 | 19.512MB
-  server: seoul03.zgjok.com
-  port: 443
-  type: vmess
-  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇰🇷KR-152.70.88.177-4715 | 19.512MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: seoul03.zgjok.com
 - name: 🇺🇸US-209.126.84.189-0881 | 2.599MB
   server: 209.126.84.189
   port: 443
@@ -383,19 +385,6 @@ proxies:
     path: /
     headers:
       Host: eeh7iewe.com
-- name: us|498d|puddincat07@Telegram
-  server: 104.19.171.5
-  network: ws
-  password: cb1f26aa437d4bfa9b841d28503ce8cc
-  port: 443
-  skip-cert-verify: true
-  sni: jobscareerforlawyers.com
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: jobscareerforlawyers.com
-    path: 6b777a91
 - name: DE_1
   server: 185.146.173.158
   port: 443
