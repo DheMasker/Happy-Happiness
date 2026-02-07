@@ -1,5 +1,5 @@
 proxies:
-- name: 83a6e5dd374b4e72b3f0f2457c54313f_@_🇦🇪[openproxylist.com] vmess-AE
+- name: 1bb26f4919c14c88b79d43b67a4e35f3_@_🇦🇪[openproxylist.com] vmess-AE
   server: ::ffff:ac40:9bd1
   uuid: ffece2a9-0296-46a9-8db8-742d29d240ff
   cipher: auto
@@ -16,6 +16,23 @@ proxies:
     headers:
       host: bedrid.denizhosting.me
     path: ISwpYVR8SjxXcUZEUzVfNURTUC8lV29DXSgsKH1SN0g1JVpDHU1cWigKAC8QRltMCi86ABw4JV14HVMn
+- name: a9b60aac8bba4f80a735f98968be926c_@_⚡Telegram = @prrofile_purple
+  server: seoul03.zgjok.com
+  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: seoul03.zgjok.com
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: seoul03.zgjok.com
+    path: /
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -299,21 +316,6 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇰🇷KR-152.70.88.177-0349 | 3.962MB
-  server: seoul03.zgjok.com
-  port: 443
-  type: vmess
-  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇰🇷KR-152.70.88.177-0349 | 3.962MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: seoul03.zgjok.com
 - name: 🇰🇷KR-146.56.136.237-0352 | 3.146MB
   server: seoul02.zgjok.com
   port: 443
@@ -386,19 +388,19 @@ proxies:
     path: /
     headers:
       Host: eeh7iewe.com
-- name: us|b353|puddincat07@Telegram
-  server: 104.19.171.5
+- name: us|51ab|puddincat07@Telegram
+  server: 172.67.191.234
   network: ws
-  password: cb1f26aa437d4bfa9b841d28503ce8cc
+  password: 7f2782e1-1f1a-4c5b-b4ae-cead54b8c381
   port: 443
   skip-cert-verify: true
-  sni: jobscareerforlawyers.com
+  sni: nl1.tRojANVpN.xYZ
   type: trojan
   udp: true
   ws-opts:
     headers:
-      Host: jobscareerforlawyers.com
-    path: 6b777a91
+      Host: nl1.tRojANVpN.xYZ
+    path: '%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252F'
 - name: DE_1
   server: 185.146.173.158
   port: 443
