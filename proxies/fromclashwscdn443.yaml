@@ -1,5 +1,22 @@
 proxies:
-- name: b1fbd02946984537bf42206efd3b4a20_@_[🏁]t.me/ConfigsHub
+- name: fb9510e7e2704a978a86b7e47a21bf05_@_[🏁]t.me/ConfigsHub
+  server: ::ffff:ac40:9bd1
+  uuid: ffece2a9-0296-46a9-8db8-742d29d240ff
+  cipher: auto
+  alterId: 0
+  type: vmess
+  port: 443
+  network: ws
+  tls: true
+  udp: false
+  client-fingerprint: chrome
+  servername: bedrid.denizhosting.me
+  fingerprint: ''
+  ws-opts:
+    headers:
+      host: bedrid.denizhosting.me
+    path: ISwpYVR8SjxXcUZEUzVfNURTUC8lV29DXSgsKH1SN0g1JVpDHU1cWigKAC8QRltMCi86ABw4JV14HVMn
+- name: ef5596c4edc64783be8decb98edf0ed1_@_[🏁]t.me/ConfigsHub
   server: chatgpt.com
   uuid: c536cef5-0421-4021-a2cf-29e3759a7463
   cipher: auto
@@ -299,7 +316,36 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇸🇬SG-158.178.230.34-4775 | 9.671MB
+- name: 🇰🇷KR-152.70.88.177-4748 | 17.817MB
+  server: seoul03.zgjok.com
+  port: 443
+  type: vmess
+  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇰🇷KR-152.70.88.177-4748 | 17.817MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: seoul03.zgjok.com
+- name: 🇩🇪DE-158.101.170.154-4914 | 5.159MB
+  server: frankfurt02.zgjok.com
+  port: 443
+  type: vmess
+  uuid: 90d50c62-13b4-4f9c-b5d8-0168d30b423a
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: frankfurt02.zgjok.com
+- name: 🇸🇬SG-158.178.230.34-0302 | 2.889MB
   server: singapore02.zgjok.com
   port: 443
   type: vmess
@@ -313,23 +359,8 @@ proxies:
     path: /
     headers:
       Host: singapore02.zgjok.com
-- name: 🇰🇷KR-146.56.136.237-0359 | 1.664MB
-  server: seoul02.zgjok.com
-  port: 443
-  type: vmess
-  uuid: 1a1e5196-eab4-4772-9012-65c27f19a524
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇰🇷KR-146.56.136.237-0359 | 1.664MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: seoul02.zgjok.com
-- name: 🇺🇸US-209.126.84.189-0929 | 0.659MB
-  server: 209.126.84.189
+- name: 🇺🇸US-209.126.84.189-0876 | 1.692MB
+  server: v2ray.codefyinc.com
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -341,27 +372,42 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 209.126.84.189
-- name: 🇭🇰HK-47.242.31.79-4867 | 0.124MB
-  server: n1761214904.wpg27.xyz
+      Host: v2ray.codefyinc.com
+- name: 🇭🇰HK-47.243.63.35-4789 | 0.071MB
+  server: n1761214919.mv7wh.tech
   port: 443
   type: vmess
-  uuid: 7f6f64ae-3778-434c-adfc-95cb67ee8b73
+  uuid: c592f040-faff-47dc-a464-9bccf2dd4e7b
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇭🇰HK-47.242.31.79-4867 | 0.124MB
+  servername: 🇭🇰HK-47.243.63.35-4789 | 0.071MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: n1761214904.wpg27.xyz
-- name: 🇭🇰HK-47.243.244.164-4820 | 0.077MB
-  server: n1761214908.wpg27.xyz
+      Host: n1761214919.mv7wh.tech
+- name: 🇯🇵JP-47.74.52.195-4747 | 0.056MB
+  server: n1753598448.74qxv.top
   port: 443
   type: vmess
-  uuid: 3514a93f-bb26-4442-8f99-971b2ff3388a
+  uuid: 3cd6f849-078e-4da9-8080-a2791b51b766
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇯🇵JP-47.74.52.195-4747 | 0.056MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: n1753598448.74qxv.top
+- name: 🇺🇸US-172.234.24.211-0223 | 0.0MB
+  server: vjp1.0bad.com
+  port: 443
+  type: vmess
+  uuid: 927094d3-d678-4763-8591-e240d0bcae87
   alterId: 0
   cipher: auto
   tls: true
@@ -370,22 +416,21 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: n1761214908.wpg27.xyz
-- name: sg|60c2|puddincat07@Telegram
+      Host: vjp1.0bad.com
+- name: 🇸🇬SG-103.253.26.134-0225 | 0.0MB
   server: 103.253.26.134
-  alterId: 4
-  cipher: auto
-  client-fingerprint: chrome
-  network: ws
   port: 443
-  skip-cert-verify: true
-  tls: true
   type: vmess
   uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  alterId: 4
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
   ws-opts:
+    path: /
     headers:
-      host: eeh7iewe.com
-    path: /ws
+      Host: eeh7iewe.com
 - name: DE_1
   server: 185.146.173.158
   port: 443
