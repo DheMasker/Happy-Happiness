@@ -1,32 +1,4 @@
 proxies:
-- name: 740922617fcd4073ad88ea2ca20e1d22_@_@Hope_Net-join-us-on-Telegram
-  server: 185.250.220.130
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  cipher: auto
-  alterId: 64
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /path/350432191028
-- name: db008c2bbabd44be9038ba226ce8d130_@_@Hope_Net-join-us-on-Telegram
-  server: beyonddsz.cfd
-  uuid: 9b456c2a-f2c1-45e1-87a9-b7628b04bb24
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  fingerprint: ''
-  ws-opts:
-    path: /linkws
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -310,7 +282,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇩🇪DE-132.226.203.26-4687 | 26.997MB
+- name: 🇩🇪DE-132.226.203.26-0243 | 19.597MB
   server: frankfurt01.zgjok.com
   port: 443
   type: vmess
@@ -324,7 +296,7 @@ proxies:
     path: /
     headers:
       Host: frankfurt01.zgjok.com
-- name: 🇰🇷KR-152.70.88.177-0242 | 12.458MB
+- name: 🇰🇷KR-152.70.88.177-0257 | 15.833MB
   server: seoul03.zgjok.com
   port: 443
   type: vmess
@@ -333,14 +305,14 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇰🇷KR-152.70.88.177-0242 | 12.458MB
+  servername: 🇰🇷KR-152.70.88.177-0257 | 15.833MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: seoul03.zgjok.com
-- name: 🇺🇸US-209.126.84.189-0822 | 1.971MB
-  server: 209.126.84.189
+- name: 🇺🇸US-209.126.84.189-0816 | 1.239MB
+  server: v2ray.codefyinc.com
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -352,8 +324,22 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 209.126.84.189
-- name: RELAY-104.21.76.158-0297 | 0.58MB
+      Host: v2ray.codefyinc.com
+- name: 🇸🇬SG-158.178.230.34-4666 | 0.938MB
+  server: singapore02.zgjok.com
+  port: 443
+  type: vmess
+  uuid: 780c7671-e8c8-45ab-922b-4fdfc4310aa0
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: singapore02.zgjok.com
+- name: RELAY-172.67.197.47-0318 | 0.176MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
@@ -367,36 +353,21 @@ proxies:
     path: /
     headers:
       Host: sy4.620720.xyz
-- name: 🇯🇵JP-47.74.52.195-0323 | 0.075MB
-  server: n1753598448.74qxv.top
+- name: RELAY-172.64.145.158-7052 | 0.062MB
+  server: cf.090227.xyz
   port: 443
   type: vmess
-  uuid: 3cd6f849-078e-4da9-8080-a2791b51b766
+  uuid: 290cc691-3ac6-4387-98a1-25c8eb8ca2ea
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇯🇵JP-47.74.52.195-0323 | 0.075MB
+  servername: RELAY-172.64.145.158-7052 | 0.062MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: n1753598448.74qxv.top
-- name: 🇭🇰HK-47.242.31.79-4757 | 0.03MB
-  server: n1761214904.wpg27.xyz
-  port: 443
-  type: vmess
-  uuid: 7f6f64ae-3778-434c-adfc-95cb67ee8b73
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇭🇰HK-47.242.31.79-4757 | 0.03MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: n1761214904.wpg27.xyz
+      Host: sgal.dagrate.eu.org
 - name: 🇺🇸US-172.234.24.211-0179 | 0.0MB
   server: vjp1.0bad.com
   port: 443
