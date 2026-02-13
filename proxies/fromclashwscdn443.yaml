@@ -1,21 +1,4 @@
 proxies:
-- name: 9d953660067b412b8552d0756e729bb4_@_[🏁]t.me/ConfigsHub
-  server: frankfurt01.zgjok.com
-  uuid: b71579b1-6593-426d-90ac-f002fa96ade1
-  cipher: auto
-  alterId: 0
-  type: vmess
-  port: 443
-  network: ws
-  tls: true
-  udp: false
-  client-fingerprint: chrome
-  servername: frankfurt01.zgjok.com
-  fingerprint: ''
-  ws-opts:
-    headers:
-      host: frankfurt01.zgjok.com
-    path: /
 - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_0@38
   server: 23.227.38.11
   network: ws
@@ -314,6 +297,20 @@ proxies:
     path: /
     headers:
       Host: seoul03.zgjok.com
+- name: 🇩🇪DE-132.226.203.26-0203 | 16.678MB
+  server: frankfurt01.zgjok.com
+  port: 443
+  type: vmess
+  uuid: b71579b1-6593-426d-90ac-f002fa96ade1
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: frankfurt01.zgjok.com
 - name: 🇩🇪DE-158.101.170.154-4856 | 4.987MB
   server: frankfurt02.zgjok.com
   port: 443
