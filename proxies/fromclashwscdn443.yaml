@@ -282,22 +282,7 @@ proxies:
     headers:
       Host: fi1.xv2ray.net
     path: /vmess
-- name: 🇰🇷KR-152.70.88.177-0210 | 18.961MB
-  server: seoul03.zgjok.com
-  port: 443
-  type: vmess
-  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: 🇰🇷KR-152.70.88.177-0210 | 18.961MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: seoul03.zgjok.com
-- name: 🇩🇪DE-132.226.203.26-0203 | 16.678MB
+- name: 🇩🇪DE-132.226.203.26-0242 | 16.394MB
   server: frankfurt01.zgjok.com
   port: 443
   type: vmess
@@ -311,7 +296,7 @@ proxies:
     path: /
     headers:
       Host: frankfurt01.zgjok.com
-- name: 🇩🇪DE-158.101.170.154-4856 | 4.987MB
+- name: 🇩🇪DE-158.101.170.154-0259 | 4.994MB
   server: frankfurt02.zgjok.com
   port: 443
   type: vmess
@@ -325,8 +310,8 @@ proxies:
     path: /
     headers:
       Host: frankfurt02.zgjok.com
-- name: 🇺🇸US-209.126.84.189-0799 | 2.204MB
-  server: 209.126.84.189
+- name: 🇺🇸US-209.126.84.189-0832 | 3.009MB
+  server: v2ray.codefyinc.com
   port: 443
   type: vmess
   uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
@@ -338,22 +323,8 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 209.126.84.189
-- name: 🇸🇬SG-158.178.230.34-0255 | 1.329MB
-  server: singapore02.zgjok.com
-  port: 443
-  type: vmess
-  uuid: 780c7671-e8c8-45ab-922b-4fdfc4310aa0
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: singapore02.zgjok.com
-- name: RELAY-172.67.197.47-0275 | 0.917MB
+      Host: v2ray.codefyinc.com
+- name: RELAY-104.21.76.158-0275 | 0.646MB
   server: sy4.620720.xyz
   port: 443
   type: vmess
@@ -367,7 +338,37 @@ proxies:
     path: /
     headers:
       Host: sy4.620720.xyz
-- name: 🇯🇵JP-47.245.42.92-4702 | 0.015MB
+- name: 🇭🇰HK-47.243.63.35-4725 | 0.118MB
+  server: n1761214919.mv7wh.tech
+  port: 443
+  type: vmess
+  uuid: c592f040-faff-47dc-a464-9bccf2dd4e7b
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇭🇰HK-47.243.63.35-4725 | 0.118MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: n1761214919.mv7wh.tech
+- name: 🇭🇰HK-47.243.95.187-1748 | 0.102MB
+  server: n1761214906.wpg27.xyz
+  port: 443
+  type: vmess
+  uuid: c28a6258-7baa-40fc-8a51-87f59c847cd7
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇭🇰HK-47.243.95.187-1748 | 0.102MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: n1761214906.wpg27.xyz
+- name: 🇯🇵JP-47.245.42.92-0323 | 0.096MB
   server: n1753598452.wpg27.xyz
   port: 443
   type: vmess
@@ -376,13 +377,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: 🇯🇵JP-47.245.42.92-4702 | 0.015MB
+  servername: 🇯🇵JP-47.245.42.92-0323 | 0.096MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: n1753598452.wpg27.xyz
-- name: 🇭🇰HK-47.243.244.164-4703 | 0.006MB
+- name: 🇭🇰HK-47.243.244.164-0326 | 0.032MB
   server: n1761214908.wpg27.xyz
   port: 443
   type: vmess
@@ -396,7 +397,22 @@ proxies:
     path: /
     headers:
       Host: n1761214908.wpg27.xyz
-- name: 🇺🇸US-172.234.24.211-0153 | 0.0MB
+- name: 🇭🇰HK-47.242.31.79-4791 | 0.03MB
+  server: n1761214904.wpg27.xyz
+  port: 443
+  type: vmess
+  uuid: 7f6f64ae-3778-434c-adfc-95cb67ee8b73
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: 🇭🇰HK-47.242.31.79-4791 | 0.03MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: n1761214904.wpg27.xyz
+- name: 🇺🇸US-172.239.57.117-0192 | 0.0MB
   server: vjp1.0bad.com
   port: 443
   type: vmess
@@ -410,7 +426,7 @@ proxies:
     path: /
     headers:
       Host: vjp1.0bad.com
-- name: 🇸🇬SG-103.253.26.134-0155 | 0.0MB
+- name: 🇸🇬SG-103.253.26.134-0194 | 0.0MB
   server: 103.253.26.134
   port: 443
   type: vmess
